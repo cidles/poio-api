@@ -81,6 +81,21 @@ class NodeId:
         return "{0}{1}r{2}".format(self.prefix, GRAFSEPARATOR, self.index)
 
 
+class PrimaryData:
+    """This class represents the primary data of a
+    GrAF object.
+
+    """
+
+    (TEXT, AUDIO, VIDEO, NONE) = range(4)
+
+    def __init__(self, type, external_link=None, filename=None, content=None):
+        self.type = type
+        self.external_link = external_link
+        self.filename = filename
+        self.content = content
+
+
 class BaseParser(object):
     """This class is a base class to the
     parser classes in order to create
@@ -205,6 +220,23 @@ class BaseParser(object):
         See also
         --------
         Annotation
+
+        """
+
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def region_for_annotation(self, annotation):
+        """Method to get the primary data of the GrAF file.
+
+        Returns
+        -------
+        primaryData : object
+            Object type of PrimaryData class.
+
+        See also
+        --------
+        PrimaryData
 
         """
 
