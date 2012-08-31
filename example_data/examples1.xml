@@ -1,0 +1,4388 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<interlinear-text>
+<item type="title">
+Examples 1
+</item>
+<item type="description">
+some examples, glosses by W.Schulze, 2004
+</item>
+<item type="text">
+LGRTXT
+k'xis ti'imlktx cixnascx
+k'x-i-s ti-'imlk-tx ci-xnas-cx
+see-3SG:O-3SG:A REF:PROX:M-man-$ REF:PROX:F-woman-$
+The man sees the woman.
+
+sp'tis ti'isimṃɬkitx wawac'uksc
+sp'-ti-s ti-'isimṃɬki-tx wa-wac'-uks-c
+hit-3PL:O-3SG:A REF:PROX:M-boy-$ REF:PROX:PL-dog-PL-$
+The boy is hitting the dog.
+
+naptis cixnascx wa'imlkuksc xtismɬktx
+nap-ti-s ci-xnas-cx wa-'imlk-uks-c x-ti-smɬk-tx
+give-3PL:O-3SG:A REF:PROX:F-woman-$ REF:PROX:PL-man-PL-$ DIR-REF:PROX:M-fish-$
+The woman is giving the men the fish.
+
+sp'is cixnascx ti'imlktx xtistntx
+sp'-i-s ci-xnas-cx ti-'imlk-tx x-ti-stn-tx
+hit-3SG:O-3SG:A REF:PROX:F-woman-$ REF:PROX:M-man-$ DIR-REF:PROX:M-stick-$
+The woman hits the men with the stick.
+
+λ'apaw waλ'mstac
+λ'ap-aw wa-λ'msta-c
+go-3PL:S REF:PROX:PL-person-$
+The people are going.
+
+staltmxaw wa'imlkuksc
+staltmx-aw wa-'imlk-uks-c
+be=chief-3PL:S REF:PROX:PL-man-PL-$
+The men are chiefs.
+
+waks tiλ'aptx
+wak-s ti-λ'ap-tx
+be=who-3SG:S:GTOP REF:PROX:M-go-$
+Who is going? (it's who the going one?)
+
+λ'ap ti'imlktx
+λ'ap ti-'imlk-tx
+go:3SG:S REF:PROX:M-man-$
+The man is going.
+
+ti'imlktx tiλ'ap
+ti-'imlk-tx ti-λ'ap
+REF:PROX:M-man-$ REF:PROX:M-go
+The one who is going is the man.
+
+waks tisp'is cixnascx
+wak-s ti-sp'-i-s ci-xnas-cx
+be=who-3SG:S:GTOP REF:PROX:M-hit-3SG:O-3SG:A REF:PROX:M-woman-$
+Whom is hitting the woman?
+
+ti'imlktx tisp'is cixnascx
+ti'-imlk-tx ti-sp'i-s ci-xnas-cx
+REF:PROX:M-man-$ REF:PROX:M-hit-3SG:O-3SG:A REF:PROX:F-woman-$
+It is the man who is hitting the woman.
+
+sp'is cixnascx ti'imlktx
+sp'-i-s ci-xnas-cx ti-'imlk-tx
+hit-3SG:O-3SG:A REF:PROX:F-woman-$ REF:PROX:M-man-$
+The woman is hitting the man.
+
+k'xic tiya ti'imlktx
+k'x-i-c ti-ya ti-'imlk-tx
+see-3SG:O-1SG:A REF:PROX:M-be=good REF:PROX:M-man-$
+I see the good man.
+
+k'xic ti'imlktx tiyatx
+k'x-i-c ti-'imlk-tx ti-ya-tx
+see-3SG:O-1SG:A REF:PROX:M-man-$ REF:PROX:M-be=good-$
+I see the man, the good one.
+
+k'xic tiya ticacti ti'imlktx
+k'x-i-c ti-ya ti-cacti ti-'imlk-tx
+see-3SG:O-1SG:A REF:PROX:M-be=good REF:PROX:M-be=young REF:PROX:M-man-$
+I see the good, young man.
+
+k'xic tiλ'ap tiλ'mstatx
+k'x-i-c ti-λ'ap ti-λ'msta-tx
+see-3SG:O-1SG:A REF:PROX:M-go REF:PROX:M-man-$
+I see the man who is going.
+
+k'xic tiλ'mstatx tiλ'aptx
+k'x-i-c ti-λ'msta-tx ti-λ'ap-tx
+see-3SG:O-1SG:A REF:PROX:M-man-$ REF:PROX:M-go-$
+I see the man who is going.
+
+k'xic tiλ'msta tiλ'ap 'aɬcixnascx
+k'x-i-c ti-λ'msta ti-λ'ap 'aɬ-ci-xnas-cx
+see-3SG:O-1SG:A REF:PROX:M-man REF:PROX:M-go DIR-REF:PROX:F-woman-$
+I see the man who is going with the woman.
+
+k'xic tistlmx ti'imlktx
+k'x-i-c ti-stlmx ti-'imlk-tx
+see-3SG:O-1SG:A REF:PROX:M-be=chief REF:PROX:M-man-$
+I see the man who is chief.
+
+k'xiɬ cixnascx 'n wa'imlkuksc
+k'x-i-ɬ ci-xnas-cx 'n wa-'imlk-uks-c
+see-3SG:O-1PL:A REF:PROX:F-woman-$ and REF:PROX:PL-man-PL-$
+We see the woman and the men.
+
+k'xtiɬ wa'imlkuksc 'n cixnascx
+k'x-ti-ɬ wa-'imlk-uks-c 'n ci-xnas-cx
+see-3PL:O-1PL:A REF:PROX:PL-man-PL-$ and REF:PROX:F-woman-$
+Wee see the men and the woman.
+
+'aɬk'yukic ti'imlk ti'aɬpstucwtx
+'aɬk'yuk-i-c ti-'imlk ti-'aɬps-tu-cw-tx
+know-3SG:O-1SG:A REF:PROX:M-man REF:PROX:M-eat-CAUS-2SG:A-$
+I know the man whom you feed.
+
+'aɬk'yuktic wa'imlkuks wa'aɬpstutit waxnasuksc
+'aɬk'yuk-ti-c wa-'imlk-uks wa-'aɬps-tu-ti-t wa-xnas-uks-c
+know-3PL:O-1SG:A REF:PROX:PL-man-PL REF:PROX:PL-eat-CAUS-3PL:O-3PL:A REF:PROX:PL-woman-PL-$
+I know the men who are feeding the woman.
+
+'aɬk'yukic tisp'cstx
+'aɬk'yuk-i-c ti-sp'-c-s-tx
+know-3SG:O-1SG:A REF:PROX:M-hit-1SG:O-3SG:A-$
+I know who is  hitting me.
+
+'aɬk'yukic tisp'cttx
+'aɬk'yuk-i-c ti-sp'-ct-tx
+know-3SG:O-1SG:A REF:PROX:M-hit-2SG:O-$
+I know who is hitting you. (by whom you are hit)
+
+'aɬk'yukic ti'imlk tisp'ictx
+'aɬk'yuk-i-c ti-'imlk ti-sp'-i-c-tx
+know-3SG:O-1SG:A REF:PROX:M-man REF:PROX:M-hit-3SG:O-1SG:A-$
+I know the man whom I am hitting.
+
+txis 'aleks tiq'lsxʷtx
+tx-i-s 'aleks ti-q'lsxʷ-tx
+cut-3SG:O-3SG:A Alex REF:PROX:M-rope-$
+Alex cuts the rope.
+
+txa 'aleks tiq'lsxʷtx
+tx-a 'aleks ti-q'lsxʷ-tx
+cut-INTR:3SG:S Alex DIR-REF:PROX:M-rope-$
+Alex is cutting the rope.
+
+qaXla nik
+qaXla nik
+drink:3SG:S Nick
+Nick is drinking.
+
+qaXlamkis nik tistilwatx
+qaXla-mk-i-s nik ti-stilwa-tx
+drink-TRANS-3SG:O-3SG:A Nick REF:PROX:M-broth-$
+Nick drinks the broth.
+
+qaXlatus klis nik
+qaXla-tu-s klis nik
+drink-CAUS-3SG:A Chris Nick
+Chris makes Nick drink.
+
+txaynixis 'aleks tiq'lsxʷtx
+tx-ay-nix-i-s 'aleks ti-q'lsxʷ-tx
+cut-AUX-LC-3SG:O-3SG:A Alex REF:PROX:M-rope-$
+Alex accidentally cuts / finally manages to cut the rope.
+
+txanixis pat 'aleks xtiq'lsxʷtx
+tx-a-nix-i-s pat 'aleks x-ti-q'lsxʷ-tx
+cut-INDIR-LC-3SG:O-3SG:A Pat Alex DIR-REF:PROX:M-rope-$
+Pat thinks that Alex is cutting a rope.
+
+nuyamɬamkis gieg tisiyutnutx
+nuyamɬ-amk-i-s gieg ti-siyut-nu-tx
+sing-TRANS-3SG:O-3SG:A Greg REF:PROX:M-be=singing-2SG:S-$
+Greg sings your song.
+
+wilaXis vans tistilwatx
+wil-aX-i-s vans ti-stilwa-tx
+pour-floor-3SG:O-3SG:A Vance REF:PROX:M-broth-$
+Vance pours the broth on the floor.
+
+wilaXaynixis vans tistilwatx
+wil-aX-ay-nix-i-s vans ti-stilwa-tx
+pour-floor-AUX-LC-3SG:O-3SG:A Vance REF:PROX:M-broth-$
+Vance accidentally pours the broth on the floor.
+
+wilaXlayx vans xtistilwatx
+wil-aX-layx vans x-ti-stilwa-tx
+pour-floor-NC:3SG:S Vance DIR-REF:PROX:M-broth-$
+Vance spills the broth on the floor.
+
+λ'apskʷc' tanumaw tacactitX
+λ'ap-s-kʷ-c' ta-nu-maw ta-cacti-tX
+go-3SG:S:GTOP-QUOT-PERF REF:DIST:M-human-one REF:DIST:M-be=young-$
+A certain young man went, they say.
+
+kʷanataw tuxixnasitXʷ 'aɬtXʷ
+kʷanat-aw tu-xixnas-i-tXʷ 'aɬ-tXʷ
+cry-3PL:S REF:DIST:F-woman:RED-DIM-$ DIR-DIST
+The young lady cried then.
+
+slaXakʷtu wamamncis tananmk'tX
+slaX-a-kʷ-tu wa-mamnc-i-s ta-nanmk'-tX
+be=many-3PL:S-QUOT-ASS REF:PROX:PL-child:RED-DIM-3SG:S REF:DIST:PL-animal-$
+The animal has a lot of children. (His children manied that animal.)
+
+λ'apskʷc' tanumawtX skaqaXlas 'uɬtaqlatXʷ
+λ'ap-s-kʷ-c' ta-nu-maw-tX s-ka-qaXla-s 'uɬ-ta-qla-tXʷ
+go-3SG:GTOP-QUOT-PERF REF:DIST:M-human-one-$ NOM-IRR-drink-3SG:GTOP DIR:CONT-REF:DIST:PL-water-$
+One of them went to get a drink of water.
+
+sqʷ'nayaXikuciskʷc' taxʷnaɬtX
+sqʷ'nay-aX-ik-uc-i-s-kʷ-c' ta-xʷnaɬ-tX
+kneel-behind-long=hor=axis-edge-3SG:O-3SG:A-QUOT-PERF REF:DIST:M-spring-$
+He knelt on the ground next to the spring.
+
+λ'apskʷc' c'ayx 'aɬaac ska'mtis
+λ'ap-s-kʷ-c' c'ayx 'aɬ-a-ac s-ka-'mt-i-s
+go-3SG:S:GTOP-QUOT-PERF DX:PROX DIR-PROX-now NOM-IRR-sit-DIM-3SG:S
+She went then and sat down.
+
+ka'aɬ'ayaksc' xac 'uɬaniXʷc
+ka-'aɬ-'ay-ak-s-c' x-ac 'uɬ-a-niXʷ-c
+IRR-RES-do-hand-3SG:S-PERF DIR-now DIR:CONT-REF:PROX-fire-$
+She would (=and she) now put her hand into the fire.
+
+kukʷis 'aɬta'astxʷtXʷ
+kukʷ-i-s 'aɬ-ta-'as-txʷ-tXʷ
+cook-3SG:O-3SG:A DIR-REF:DIST:PL-location-inside-$
+He cooked it inside his locations (> house).
+
+</item>
+<item type="gls">
+-
+</item>
+<item type="language">
+NuXalk
+</item>
+
+<phrases>
+<phrase>
+<item type="number">
+0
+</item>
+<item type="text">
+k'xis ti'imlktx cixnascx
+</item>
+<item type="TR" full="Translation">The man sees the woman.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ti'imlktx</item>
+<item type="FUNC" full="Agentive">A</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cixnascx</item>
+<item type="FUNC" full="Objective">O</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="feminin">F</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+1
+</item>
+<item type="text">
+sp'tis ti'isimṃɬkitx wawac'uksc
+</item>
+<item type="TR" full="Translation">The boy is hitting the dog.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sp'tis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="FUNC" full="Objective">O</item>
+<item type="ABBR" full="third person plural">3PL</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ti'isimṃɬkitx</item>
+<item type="FUNC" full="Agentive">A</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'isimṃɬki</item>
+<item type="GL" full="None">boy</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">wawac'uksc</item>
+<item type="FUNC" full="Objective">O</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">wac'</item>
+<item type="GL" full="None">dog</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+2
+</item>
+<item type="text">
+naptis cixnascx wa'imlkuksc xtismɬktx
+</item>
+<item type="TR" full="Translation">The woman is giving the men the fish.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">naptis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">nap</item>
+<item type="GL" full="None">give</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="FUNC" full="Objective">O</item>
+<item type="ABBR" full="third person plural">3PL</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">cixnascx</item>
+<item type="FUNC" full="Agentive">A</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="feminin">F</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">wa'imlkuksc</item>
+<item type="FUNC" full="Objective">O</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">xtismɬktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">x</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">smɬk</item>
+<item type="GL" full="None">fish</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+3
+</item>
+<item type="text">
+sp'is cixnascx ti'imlktx xtistntx
+</item>
+<item type="TR" full="Translation">The woman hits the men with the stick.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sp'is</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="FUNC" full="Agentive">A</item>
+<item type="ABBR" full="third person singular">3SG</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">cixnascx</item>
+<item type="FUNC" full="Agentive">A</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="feminin">F</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ti'imlktx</item>
+<item type="FUNC" full="Objective">O</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">xtistntx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">x</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">stn</item>
+<item type="GL" full="None">stick</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+4
+</item>
+<item type="text">
+λ'apaw waλ'mstac
+</item>
+<item type="TR" full="Translation">The people are going.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'apaw</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">aw</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">waλ'mstac</item>
+<item type="FUNC" full="Subjective">S</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'msta</item>
+<item type="GL" full="None">person</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+5
+</item>
+<item type="text">
+staltmxaw wa'imlkuksc
+</item>
+<item type="TR" full="Translation">The men are chiefs.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">staltmxaw</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">staltmx</item>
+<item type="GL" full="None">be=chief</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">aw</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">wa'imlkuksc</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+6
+</item>
+<item type="text">
+waks tiλ'aptx
+</item>
+<item type="TR" full="Translation">Who is going? (it's who the going one?)</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">waks</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wak</item>
+<item type="GL" full="None">be=who</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="ABBR" full="given topic">GTOP</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiλ'aptx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+7
+</item>
+<item type="text">
+λ'ap ti'imlktx
+</item>
+<item type="TR" full="Translation">The man is going.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+8
+</item>
+<item type="text">
+ti'imlktx tiλ'ap
+</item>
+<item type="TR" full="Translation">The one who is going is the man.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiλ'ap</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+9
+</item>
+<item type="text">
+waks tisp'is cixnascx
+</item>
+<item type="TR" full="Translation">Whom is hitting the woman?</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">waks</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wak</item>
+<item type="GL" full="None">be=who</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="ABBR" full="given topic">GTOP</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tisp'is</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cixnascx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+10
+</item>
+<item type="text">
+ti'imlktx tisp'is cixnascx
+</item>
+<item type="TR" full="Translation">It is the man who is hitting the woman.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti'</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tisp'is</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">sp'i</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cixnascx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="feminin">F</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+11
+</item>
+<item type="text">
+sp'is cixnascx ti'imlktx
+</item>
+<item type="TR" full="Translation">The woman is hitting the man.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sp'is</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">cixnascx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="feminin">F</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+12
+</item>
+<item type="text">
+k'xic tiya ti'imlktx
+</item>
+<item type="TR" full="Translation">I see the good man.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="FUNC" full="Agentive">A</item>
+<item type="ABBR" full="first person singular">1SG</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiya</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ya</item>
+<item type="GL" full="None">be=good</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+13
+</item>
+<item type="text">
+k'xic ti'imlktx tiyatx
+</item>
+<item type="TR" full="Translation">I see the man, the good one.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiyatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ya</item>
+<item type="GL" full="None">be=good</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+14
+</item>
+<item type="text">
+k'xic tiya ticacti ti'imlktx
+</item>
+<item type="TR" full="Translation">I see the good, young man.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiya</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ya</item>
+<item type="GL" full="None">be=good</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ticacti</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">cacti</item>
+<item type="GL" full="None">be=young</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+15
+</item>
+<item type="text">
+k'xic tiλ'ap tiλ'mstatx
+</item>
+<item type="TR" full="Translation">I see the man who is going.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiλ'ap</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiλ'mstatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'msta</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+16
+</item>
+<item type="text">
+k'xic tiλ'mstatx tiλ'aptx
+</item>
+<item type="TR" full="Translation">I see the man who is going.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiλ'mstatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'msta</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiλ'aptx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+17
+</item>
+<item type="text">
+k'xic tiλ'msta tiλ'ap 'aɬcixnascx
+</item>
+<item type="TR" full="Translation">I see the man who is going with the woman.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tiλ'msta</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'msta</item>
+<item type="GL" full="None">man</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiλ'ap</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">'aɬcixnascx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">'aɬ</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ci</item>
+<item type="ABBR" full="feminin">F</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+18
+</item>
+<item type="text">
+k'xic tistlmx ti'imlktx
+</item>
+<item type="TR" full="Translation">I see the man who is chief.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tistlmx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">stlmx</item>
+<item type="GL" full="None">be=chief</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ti'imlktx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+19
+</item>
+<item type="text">
+k'xiɬ cixnascx 'n wa'imlkuksc
+</item>
+<item type="TR" full="Translation">We see the woman and the men.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xiɬ</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">ɬ</item>
+<item type="ABBR" full="first person plural">1PL</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">cixnascx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="feminin">F</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'n</item>
+<item type="GL" full="None">and</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'n</item>
+<item type="GL" full="None">and</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">wa'imlkuksc</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+20
+</item>
+<item type="text">
+k'xtiɬ wa'imlkuksc 'n cixnascx
+</item>
+<item type="TR" full="Translation">Wee see the men and the woman.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'xtiɬ</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">k'x</item>
+<item type="GL" full="None">see</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">ɬ</item>
+<item type="ABBR" full="first person plural">1PL</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">wa'imlkuksc</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'n</item>
+<item type="GL" full="None">and</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'n</item>
+<item type="GL" full="None">and</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">cixnascx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ci</item>
+<item type="ABBR" full="feminin">F</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">cx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+21
+</item>
+<item type="text">
+'aɬk'yukic ti'imlk ti'aɬpstucwtx
+</item>
+<item type="TR" full="Translation">I know the man whom you feed.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yukic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yuk</item>
+<item type="GL" full="None">know</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ti'imlk</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ti'aɬpstucwtx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aɬps</item>
+<item type="GL" full="None">eat</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">tu</item>
+<item type="ABBR" full="Causative">CAUS</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">cw</item>
+<item type="ABBR" full="second person singular">2SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">4</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+22
+</item>
+<item type="text">
+'aɬk'yuktic wa'imlkuks wa'aɬpstutit waxnasuksc
+</item>
+<item type="TR" full="Translation">I know the men who are feeding the woman.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yuktic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yuk</item>
+<item type="GL" full="None">know</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="FUNC" full="Agentive">A</item>
+<item type="ABBR" full="first person singular">1SG</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">wa'imlkuks</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">wa'aɬpstutit</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="plural">PL</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aɬps</item>
+<item type="GL" full="None">eat</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">tu</item>
+<item type="ABBR" full="Causative">CAUS</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">ti</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">t</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">waxnasuksc</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xnas</item>
+<item type="GL" full="None">woman</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">uks</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+23
+</item>
+<item type="text">
+'aɬk'yukic tisp'cstx
+</item>
+<item type="TR" full="Translation">I know who is  hitting me.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yukic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yuk</item>
+<item type="GL" full="None">know</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tisp'cstx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">4</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+24
+</item>
+<item type="text">
+'aɬk'yukic tisp'cttx
+</item>
+<item type="TR" full="Translation">I know who is hitting you. (by whom you are hit)</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yukic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yuk</item>
+<item type="GL" full="None">know</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tisp'cttx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">ct</item>
+<item type="ABBR" full="second person singular">2SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+25
+</item>
+<item type="text">
+'aɬk'yukic ti'imlk tisp'ictx
+</item>
+<item type="TR" full="Translation">I know the man whom I am hitting.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yukic</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">'aɬk'yuk</item>
+<item type="GL" full="None">know</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ti'imlk</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'imlk</item>
+<item type="GL" full="None">man</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tisp'ictx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">sp'</item>
+<item type="GL" full="None">hit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="ABBR" full="first person singular">1SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">4</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+26
+</item>
+<item type="text">
+txis 'aleks tiq'lsxʷtx
+</item>
+<item type="TR" full="Translation">Alex cuts the rope.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">txis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">tx</item>
+<item type="GL" full="None">cut</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiq'lsxʷtx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">q'lsxʷ</item>
+<item type="GL" full="None">rope</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+27
+</item>
+<item type="text">
+txa 'aleks tiq'lsxʷtx
+</item>
+<item type="TR" full="Translation">Alex is cutting the rope.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">txa</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">tx</item>
+<item type="GL" full="None">cut</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">a</item>
+<item type="ABBR" full="intransitive marker">INTR</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiq'lsxʷtx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">q'lsxʷ</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">rope</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+28
+</item>
+<item type="text">
+qaXla nik
+</item>
+<item type="TR" full="Translation">Nick is drinking.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">qaXla</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="GL" full="None">drink</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">qaXla</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="GL" full="None">drink</item>
+<item type="ABBR" full="third person singular">3SG</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nik</item>
+<item type="GL" full="None">Nick</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nik</item>
+<item type="GL" full="None">Nick</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+29
+</item>
+<item type="text">
+qaXlamkis nik tistilwatx
+</item>
+<item type="TR" full="Translation">Nick drinks the broth.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">qaXlamkis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">qaXla</item>
+<item type="GL" full="None">drink</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">mk</item>
+<item type="FUNC" full="Translativ">TRANS</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nik</item>
+<item type="GL" full="None">Nick</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nik</item>
+<item type="GL" full="None">Nick</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tistilwatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">stilwa</item>
+<item type="GL" full="None">broth</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+30
+</item>
+<item type="text">
+qaXlatus klis nik
+</item>
+<item type="TR" full="Translation">Chris makes Nick drink.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">qaXlatus</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">qaXla</item>
+<item type="GL" full="None">drink</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">tu</item>
+<item type="ABBR" full="Causative">CAUS</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">klis</item>
+<item type="GL" full="None">Chris</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">klis</item>
+<item type="GL" full="None">Chris</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">nik</item>
+<item type="GL" full="None">Nick</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">nik</item>
+<item type="GL" full="None">Nick</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+31
+</item>
+<item type="text">
+txaynixis 'aleks tiq'lsxʷtx
+</item>
+<item type="TR" full="Translation">Alex accidentally cuts / finally manages to cut the rope.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">txaynixis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">tx</item>
+<item type="GL" full="None">cut</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ay</item>
+<item type="ABBR" full="Auxiliary morpheme">AUX</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">nix</item>
+<item type="ABBR" full="low control">LC</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">i</item>
+<item type="FUNC" full="Objective">O</item>
+<item type="ABBR" full="third person singular">3SG</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tiq'lsxʷtx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">q'lsxʷ</item>
+<item type="GL" full="None">rope</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+32
+</item>
+<item type="text">
+txanixis pat 'aleks xtiq'lsxʷtx
+</item>
+<item type="TR" full="Translation">Pat thinks that Alex is cutting a rope.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">txanixis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">tx</item>
+<item type="GL" full="None">cut</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">a</item>
+<item type="ABBR" full="not defined">INDIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">nix</item>
+<item type="ABBR" full="low control">LC</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">pat</item>
+<item type="GL" full="None">Pat</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">pat</item>
+<item type="GL" full="None">Pat</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'aleks</item>
+<item type="GL" full="None">Alex</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">xtiq'lsxʷtx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">x</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">q'lsxʷ</item>
+<item type="GL" full="None">rope</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+33
+</item>
+<item type="text">
+nuyamɬamkis gieg tisiyutnutx
+</item>
+<item type="TR" full="Translation">Greg sings your song.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">nuyamɬamkis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">nuyamɬ</item>
+<item type="GL" full="None">sing</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">amk</item>
+<item type="FUNC" full="Translativ">TRANS</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">gieg</item>
+<item type="GL" full="None">Greg</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">gieg</item>
+<item type="GL" full="None">Greg</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tisiyutnutx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">siyut</item>
+<item type="GL" full="None">be=singing</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">nu</item>
+<item type="ABBR" full="second person singular">2SG</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+34
+</item>
+<item type="text">
+wilaXis vans tistilwatx
+</item>
+<item type="TR" full="Translation">Vance pours the broth on the floor.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wilaXis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wil</item>
+<item type="GL" full="None">pour</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">aX</item>
+<item type="GL" full="None">floor</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">vans</item>
+<item type="GL" full="None">Vance</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">vans</item>
+<item type="GL" full="None">Vance</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tistilwatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">stilwa</item>
+<item type="GL" full="None">broth</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+35
+</item>
+<item type="text">
+wilaXaynixis vans tistilwatx
+</item>
+<item type="TR" full="Translation">Vance accidentally pours the broth on the floor.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wilaXaynixis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wil</item>
+<item type="GL" full="None">pour</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">aX</item>
+<item type="GL" full="None">floor</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">ay</item>
+<item type="ABBR" full="Auxiliary morpheme">AUX</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">nix</item>
+<item type="ABBR" full="low control">LC</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">5</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">vans</item>
+<item type="GL" full="None">Vance</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">vans</item>
+<item type="GL" full="None">Vance</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tistilwatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">stilwa</item>
+<item type="GL" full="None">broth</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+36
+</item>
+<item type="text">
+wilaXlayx vans xtistilwatx
+</item>
+<item type="TR" full="Translation">Vance spills the broth on the floor.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wilaXlayx</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">wil</item>
+<item type="GL" full="None">pour</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">aX</item>
+<item type="GL" full="None">floor</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">layx</item>
+<item type="ABBR" full="no control">NC</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">vans</item>
+<item type="GL" full="None">Vance</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">vans</item>
+<item type="GL" full="None">Vance</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">xtistilwatx</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">x</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ti</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">stilwa</item>
+<item type="GL" full="None">broth</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tx</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+37
+</item>
+<item type="text">
+λ'apskʷc' tanumaw tacactitX
+</item>
+<item type="TR" full="Translation">A certain young man went, they say.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'apskʷc'</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="ABBR" full="given topic">GTOP</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">kʷ</item>
+<item type="ABBR" full="Quotative">QUOT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">c'</item>
+<item type="ABBR" full="Perfective">PERF</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tanumaw</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ta</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nu</item>
+<item type="GL" full="None">human</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">maw</item>
+<item type="GL" full="None">one</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tacactitX</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ta</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">cacti</item>
+<item type="GL" full="None">be=young</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tX</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+38
+</item>
+<item type="text">
+kʷanataw tuxixnasitXʷ 'aɬtXʷ
+</item>
+<item type="TR" full="Translation">The young lady cried then.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">kʷanataw</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">kʷanat</item>
+<item type="GL" full="None">cry</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">aw</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tuxixnasitXʷ</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">tu</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="feminin">F</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xixnas</item>
+<item type="GL" full="None">woman</item>
+<item type="ABBR" full="Reduplication">RED</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="not defined">DIM</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tXʷ</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'aɬtXʷ</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">'aɬ</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">tXʷ</item>
+<item type="ABBR" full="Distal">DIST</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+39
+</item>
+<item type="text">
+slaXakʷtu wamamncis tananmk'tX
+</item>
+<item type="TR" full="Translation">The animal has a lot of children. (His children manied that animal.)</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">slaXakʷtu</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">slaX</item>
+<item type="GL" full="None">be=many</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">a</item>
+<item type="ABBR" full="third person plural">3PL</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">kʷ</item>
+<item type="ABBR" full="Quotative">QUOT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">tu</item>
+<item type="ABBR" full="not defined">ASS</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">wamamncis</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">wa</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">mamnc</item>
+<item type="GL" full="None">child</item>
+<item type="ABBR" full="Reduplication">RED</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">i</item>
+<item type="ABBR" full="not defined">DIM</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tananmk'tX</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ta</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nanmk'</item>
+<item type="GL" full="None">animal</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tX</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+40
+</item>
+<item type="text">
+λ'apskʷc' tanumawtX skaqaXlas 'uɬtaqlatXʷ
+</item>
+<item type="TR" full="Translation">One of them went to get a drink of water.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'apskʷc'</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="ABBR" full="given topic">GTOP</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">kʷ</item>
+<item type="ABBR" full="Quotative">QUOT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">c'</item>
+<item type="ABBR" full="Perfective">PERF</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">tanumawtX</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ta</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="masculin">M</item>
+<item type="ABBR" full="Reference">REF</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">nu</item>
+<item type="GL" full="None">human</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">maw</item>
+<item type="GL" full="None">one</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tX</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">skaqaXlas</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">s</item>
+<item type="ABBR" full="Nominativ">NOM</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ka</item>
+<item type="ABBR" full="Irrealis">IRR</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">qaXla</item>
+<item type="GL" full="None">drink</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="ABBR" full="given topic">GTOP</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">'uɬtaqlatXʷ</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">'uɬ</item>
+<item type="ABBR" full="Directive">DIR</item>
+<item type="ABBR" full="not defined">CONT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ta</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="plural">PL</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">qla</item>
+<item type="GL" full="None">water</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">tXʷ</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+41
+</item>
+<item type="text">
+sqʷ'nayaXikuciskʷc' taxʷnaɬtX
+</item>
+<item type="TR" full="Translation">He knelt on the ground next to the spring.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sqʷ'nayaXikuciskʷc'</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">sqʷ'nay</item>
+<item type="GL" full="None">kneel</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">aX</item>
+<item type="GL" full="None">behind</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ik</item>
+<item type="GL" full="None">long=hor=axis</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">uc</item>
+<item type="GL" full="None">edge</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">5</item>
+<item type="text">s</item>
+<item type="FUNC" full="Agentive">A</item>
+<item type="ABBR" full="third person singular">3SG</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">6</item>
+<item type="text">kʷ</item>
+<item type="ABBR" full="Quotative">QUOT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">7</item>
+<item type="text">c'</item>
+<item type="ABBR" full="Perfective">PERF</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">taxʷnaɬtX</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ta</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Distal">DIST</item>
+<item type="ABBR" full="masculin">M</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xʷnaɬ</item>
+<item type="GL" full="None">spring</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">tX</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+42
+</item>
+<item type="text">
+λ'apskʷc' c'ayx 'aɬaac ska'mtis
+</item>
+<item type="TR" full="Translation">She went then and sat down.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'apskʷc'</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">λ'ap</item>
+<item type="GL" full="None">go</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="ABBR" full="given topic">GTOP</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">kʷ</item>
+<item type="ABBR" full="Quotative">QUOT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">c'</item>
+<item type="ABBR" full="Perfective">PERF</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">c'ayx</item>
+<item type="ABBR" full="Deixis">DX</item>
+<item type="ABBR" full="Proximal">PROX</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">c'ayx</item>
+<item type="ABBR" full="Deixis">DX</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'aɬaac</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">'aɬ</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">a</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">ac</item>
+<item type="GL" full="None">now</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">ska'mtis</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">s</item>
+<item type="ABBR" full="Nominativ">NOM</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ka</item>
+<item type="ABBR" full="Irrealis">IRR</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'mt</item>
+<item type="GL" full="None">sit</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">3</item>
+<item type="text">i</item>
+<item type="ABBR" full="not defined">DIM</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">s</item>
+<item type="FUNC" full="Subjective">S</item>
+<item type="ABBR" full="third person singular">3SG</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+43
+</item>
+<item type="text">
+ka'aɬ'ayaksc' xac 'uɬaniXʷc
+</item>
+<item type="TR" full="Translation">She would (=and she) now put her hand into the fire.</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">ka'aɬ'ayaksc'</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">ka</item>
+<item type="ABBR" full="Irrealis">IRR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">'aɬ</item>
+<item type="ABBR" full="Resultative">RES</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'ay</item>
+<item type="GL" full="None">do</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">ak</item>
+<item type="GL" full="None">hand</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">4</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Subjective">S</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">5</item>
+<item type="text">c'</item>
+<item type="ABBR" full="Perfective">PERF</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">xac</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">x</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">ac</item>
+<item type="GL" full="None">now</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'uɬaniXʷc</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">'uɬ</item>
+<item type="ABBR" full="Directive">DIR</item>
+<item type="ABBR" full="not defined">CONT</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">a</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Proximal">PROX</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">niXʷ</item>
+<item type="GL" full="None">fire</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">c</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+<phrase>
+<item type="number">
+44
+</item>
+<item type="text">
+kukʷis 'aɬta'astxʷtXʷ
+</item>
+<item type="TR" full="Translation">He cooked it inside his locations (> house).</item>
+<words>
+<word>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">kukʷis</item>
+<morphemes>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">0</item>
+<item type="text">kukʷ</item>
+<item type="GL" full="None">cook</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">i</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Objective">O</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">2</item>
+<item type="text">s</item>
+<item type="ABBR" full="third person singular">3SG</item>
+<item type="FUNC" full="Agentive">A</item>
+</morph>
+</morphemes>
+</word>
+<word>
+<item type="typ">FORM</item>
+<item type="number">1</item>
+<item type="text">'aɬta'astxʷtXʷ</item>
+<morphemes>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">0</item>
+<item type="text">'aɬ</item>
+<item type="ABBR" full="Directive">DIR</item>
+</morph>
+<morph>
+<item type="typ">MORPHEME</item>
+<item type="number">1</item>
+<item type="text">ta</item>
+<item type="ABBR" full="plural">PL</item>
+<item type="ABBR" full="Reference">REF</item>
+<item type="ABBR" full="Distal">DIST</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">2</item>
+<item type="text">'as</item>
+<item type="GL" full="None">location</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">3</item>
+<item type="text">txʷ</item>
+<item type="GL" full="None">inside</item>
+</morph>
+<morph>
+<item type="typ">FORM</item>
+<item type="number">4</item>
+<item type="text">tXʷ</item>
+<item type="GL" full="None">$</item>
+</morph>
+</morphemes>
+</word>
+</words>
+</phrase>
+</phrases>
+</interlinear-text>
