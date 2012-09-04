@@ -40,8 +40,8 @@ BASIC USAGE
 Here are a few examples what you can do with Poio API. All the examples
 process Elan files which are stored in one directory, the directory here is
 "example_data" which is part of the package you downloaded. The package also
-contains a sample script "example1.py" that runs all the commands presented
-here, so you might just call "python example1.py" and see all the results on
+contains a sample script "poioapiexample.py" that runs all the commands presented
+here, so you might just call "python poioapisearch.py" and see all the results on
 your own computer at once. First, start a python interpreter and import
 pyanntation for Elan::
 
