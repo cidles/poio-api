@@ -19,7 +19,7 @@ Wto read and write files.
 
 from __future__ import unicode_literals
 
-import poioapi.data as data
+from poioapi import data
 import pickle
 import regex
 import operator
