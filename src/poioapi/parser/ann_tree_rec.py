@@ -92,12 +92,17 @@ def main():
         # Initialize the variables
         il_elements = list()
         il_clauses = list()
+        il_wfw = list()
         words = []
         clause_units = []
+        wfws = []
         last_pos = -1
 
         # Getting the utterance
         utterance = line.rstrip('\n')
+
+        i+=1
+        il_wfw = get_wfw(i)
 
         # Anchors in the regions
         # Parse the words from which line
@@ -119,13 +124,21 @@ def main():
                     break
 
         for w in words:
+            try:
+                wfw = il_wfw[0]
+            except:
+                wfw = ''
+
             il_elements.append([
                     { 'id' : annotation_tree.next_annotation_id,
                       'annotation' :  w },
                     { 'id' : annotation_tree.next_annotation_id,
-                      'annotation' : '' },
+                      'annotation' : wfw },
                     { 'id' : annotation_tree.next_annotation_id,
                       'annotation' : '' }])
+
+            if not wfw == '':
+                del il_wfw[0]
 
         # Reset the last position
         last_pos = -1
@@ -150,18 +163,33 @@ def main():
                 except:
                     break
 
+        aux_count = 0
         for clause in clause_units:
-            il_clauses.append([{
-                     'id' : annotation_tree.next_annotation_id,
-                      'annotation' :  str(clause)},
-                il_elements,
-                    { 'id' : annotation_tree.next_annotation_id,
-                      'annotation' : 'GRAID2' }])
-        #elements = [ [
-            #,
-            #il_elements,
-                #{ 'id' : annotation_tree.next_annotation_id,
-                  #'annotation' : 'GRAID2' }] ]
+            if(aux_count == 0):
+                il_clauses.append([{
+                         'id' : annotation_tree.next_annotation_id,
+                          'annotation' :  str(clause)},
+                    il_elements,
+                        { 'id' : annotation_tree.next_annotation_id,
+                          'annotation' : 'GRAID2' }])
+            else:
+                il_elements = list()
+                il_elements.append([
+                        { 'id' : annotation_tree.next_annotation_id,
+                          'annotation' :  '' },
+                        { 'id' : annotation_tree.next_annotation_id,
+                          'annotation' : '' },
+                        { 'id' : annotation_tree.next_annotation_id,
+                          'annotation' : '' }])
+
+                il_clauses.append([{
+                    'id' : annotation_tree.next_annotation_id,
+                    'annotation' :  str(clause)},
+                    il_elements,
+                        { 'id' : annotation_tree.next_annotation_id,
+                          'annotation' : 'GRAID2' }])
+
+            aux_count+=1
 
         utterance = [ { 'id' : annotation_tree.next_annotation_id,
                         'annotation' : utterance },
@@ -184,3 +212,38 @@ def main():
     f_pickle = open(file,'wb')
     pickle.dump(tree, f_pickle)
     f_pickle.close()
+
+def get_wfw(line_number):
+    """ Getting the wfw by the
+    correct order.
+
+    Parameter
+    ---------
+    line_number: int
+
+    """
+
+    id = line_number
+
+    wfw_list = list()
+
+    # Open the raw file
+    file = os.path.abspath('/home/alopes/tests/wfw_raw.txt')
+    wfw_raw = open(file, 'r')
+
+    # Getting the raw content
+    content = wfw_raw.readlines()
+
+    for line in content:
+        try:
+            if ('[id:' + str(id) + ']') in line:
+                st = line.split('[id:' + str(id) + ']')
+                wfw_list.append(st[0])
+        except:
+            break
+
+    wfw_raw.close()
+
+    return wfw_list
+
+

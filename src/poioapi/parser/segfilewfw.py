@@ -62,14 +62,29 @@ class CreateSegWFW:
                 for el in wfw_el[1]:
                     st = el[1].get('annotation')
 
-            for char in st:
-                counter+=1
+                    for char in st:
+                        counter+=1
 
-                if char == ' ':
+                        if char == ' ':
+                            region = doc.createElement("region")
+                            region.setAttribute("xml:id", "seg-r"
+                            + str(seg_count)) # Region
+                            region.setAttribute("anchors",
+                                str(last_counter) + " " +
+                                str(counter - 1)) # Anchors
+
+                            graph.appendChild(region)
+
+                            # Update the last_counter
+                            last_counter = counter
+
+                            seg_count+=1
+
                     region = doc.createElement("region")
-                    region.setAttribute("xml:id", "seg-r" + str(seg_count)) # Region
+                    region.setAttribute("xml:id", "seg-r" +
+                                                  str(seg_count)) # Region
                     region.setAttribute("anchors",
-                        str(last_counter) + " " + str(counter - 1)) # Anchors
+                        str(last_counter) + " " + str(counter)) # Anchors
 
                     graph.appendChild(region)
 
@@ -77,18 +92,6 @@ class CreateSegWFW:
                     last_counter = counter
 
                     seg_count+=1
-
-            region = doc.createElement("region")
-            region.setAttribute("xml:id", "seg-r" + str(seg_count)) # Region
-            region.setAttribute("anchors",
-                str(last_counter) + " " + str(counter)) # Anchors
-
-            graph.appendChild(region)
-
-            # Update the last_counter
-            last_counter = counter
-
-            seg_count+=1
 
         # Write the content in XML file
         f.write(doc.toprettyxml(indent="  "))
@@ -112,19 +115,20 @@ class CreateSegWFW:
         file = os.path.abspath('/home/alopes/tests/wfw_raw.txt')
         f = codecs.open(file,'w', 'utf-8') # Need the encode
 
+        id_counter = 0
+
         # Verify the elements
         for element in annotation_tree.elements():
 
-        # Get the utterance
+            # Get the utterance
             utterance = element[1]
 
             for wfw_el in utterance:
+                id_counter+=1
                 for el in wfw_el[1]:
                     st = el[1].get('annotation')
                     # Write the content to the txt file
-                    f.write(st + '\n')
-
-
+                    f.write(st + '[id:'+ str(id_counter) + ']\n')
 
         # Close txt file
         f.close()
