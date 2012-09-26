@@ -7,7 +7,7 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the regions
-of the WFW one by one
+of the GRAID 2
 """
 from xml.dom.minidom import Document
 from poioapi import annotationtree
@@ -17,12 +17,12 @@ import os
 import pickle
 import codecs
 
-class CreateWfwFile:
+class Creategraid2File:
 
     def __init__(self, filepath):
         self.filepath = filepath
 
-    def create_wfw_xml(self):
+    def create_graid2_xml(self):
 
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
@@ -44,19 +44,19 @@ class CreateWfwFile:
 
         dependencies = doc.createElement('dependencies')
         dependson = doc.createElement('dependsOn')
-        dependson.setAttribute('f.id','word')
+        dependson.setAttribute('f.id','clause')
         dependencies.appendChild(dependson)
         graphheader.appendChild(dependencies)
 
         ann_spaces = doc.createElement('annotationSpaces')
         ann_space = doc.createElement('annotationSpace')
-        ann_space.setAttribute('as.id','wfw')
+        ann_space.setAttribute('as.id','graid2')
         ann_spaces.appendChild(ann_space)
         graphheader.appendChild(ann_spaces)
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-wfw.xml')
+        file = os.path.abspath(basename[0] + '-graid2.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -67,49 +67,48 @@ class CreateWfwFile:
             # Get the utterance
             utterance = element[1]
 
-            for wfw_el in utterance:
-                for el in wfw_el[1]:
-                    st = el[1].get('annotation')
+            for graid2_el in utterance:
+                st = graid2_el[2].get('annotation')
 
-                    if (st == ''):
-                        id_counter+=1
-                        continue
-
-                    # Creating the node with link
-                    node = doc.createElement("node")
-                    node.setAttribute("xml:id", "wfw-n"
-                    + str(id_counter)) # Node number
-
-                    # Creating the node
-                    link = doc.createElement("link")
-                    link.setAttribute("targets", "word-r"
-                    + str(id_counter)) # ref
-                    node.appendChild(link)
-
-                    graph.appendChild(node)
-
-                    # Creating the features and the linkage
-                    a = doc.createElement("a")
-                    a.setAttribute("xml:id", "wfw-"
-                    + str(id_counter)) # id
-                    a.setAttribute("label", "wfw") # label
-                    a.setAttribute("ref", "wfw-n"
-                    + str(id_counter)) # ref
-                    a.setAttribute("as", "wfw") # as
-
-                    # Feature structure
-                    feature_st = doc.createElement("fs")
-                    feature = doc.createElement("f")
-                    feature.setAttribute("name","wfw")
-                    feature.setAttribute("value",st)
-                    value = doc.createTextNode(st) # Value
-                    feature.appendChild(value)
-                    feature_st.appendChild(feature)
-
-                    a.appendChild(feature_st)
-                    graph.appendChild(a)
-
+                if (st == ''):
                     id_counter+=1
+                    continue
+
+                # Creating the node with link
+                node = doc.createElement("node")
+                node.setAttribute("xml:id", "graid2-n"
+                + str(id_counter)) # Node number
+
+                # Creating the node
+                link = doc.createElement("link")
+                link.setAttribute("targets", "clause-r"
+                + str(id_counter)) # ref
+                node.appendChild(link)
+
+                graph.appendChild(node)
+
+                # Creating the features and the linkage
+                a = doc.createElement("a")
+                a.setAttribute("xml:id", "graid2-"
+                + str(id_counter)) # id
+                a.setAttribute("label", "graid2") # label
+                a.setAttribute("ref", "graid2-n"
+                + str(id_counter)) # ref
+                a.setAttribute("as", "graid2") # as
+
+                # Feature structure
+                feature_st = doc.createElement("fs")
+                feature = doc.createElement("f")
+                feature.setAttribute("name","graid2")
+                feature.setAttribute("value",st)
+                value = doc.createTextNode(st) # Value
+                feature.appendChild(value)
+                feature_st.appendChild(feature)
+
+                a.appendChild(feature_st)
+                graph.appendChild(a)
+
+                id_counter+=1
 
         # Write the content in XML file
         f.write(doc.toprettyxml(indent="  "))

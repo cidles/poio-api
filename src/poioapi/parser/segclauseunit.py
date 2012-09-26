@@ -16,6 +16,7 @@ from poioapi import data
 
 import os
 import pickle
+import codecs
 
 class CreateSegClauseUnits:
 
@@ -36,7 +37,7 @@ class CreateSegClauseUnits:
         graph.setAttribute("xmlns:graf", "http://www.xces.org/ns/GrAF/1.0/")
         doc.appendChild(graph)
 
-        # Not need for this seg
+        # Header
         graphheader = doc.createElement("graphHeader")
         labelsdecl = doc.createElement("labelsDecl")
         graphheader.appendChild(labelsdecl)
@@ -44,40 +45,34 @@ class CreateSegClauseUnits:
 
         # Auxiliary variables
         seg_count = 0
-        counter = 0
         last_counter = 0
-        words = []
 
         # Start XML file
-        file = os.path.abspath('/home/alopes/tests/seg-clause.xml')
-        f = open(file,'w')
+        basename = self.filepath.split('.pickle')
+        file = os.path.abspath(basename[0] + '-clause.xml')
+        f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
         for element in annotation_tree.elements():
 
             # Get the clause unit
             clause_units = element[1]
-            i = 0
 
-            # Get the clause units
-            while i < int(len(clause_units)):
-                clause_unit = clause_units[i]
-                for char in clause_unit[0].get('annotation'):
-                    counter+=1
-
+            for clause in clause_units:
+                st = clause[0].get('annotation')
                 region = doc.createElement("region")
-                region.setAttribute("xml:id", "seg-r" + str(seg_count)) # Region
+                region.setAttribute("xml:id",
+                    "clause-r" + str(seg_count)) # Region
                 region.setAttribute("anchors",
-                    str(last_counter) + " " + str(counter + 1)) # Anchors
+                    str(last_counter) + " "
+                    + str(last_counter + len(st))) # Anchors
 
                 graph.appendChild(region)
 
                 # Update the last_counter
-                last_counter = counter + 1
+                last_counter += len(st)
 
                 seg_count+=1
-
-                i+=1
 
         # Write the content in XML file
         f.write(doc.toprettyxml(indent="  "))

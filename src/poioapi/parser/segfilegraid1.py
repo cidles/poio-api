@@ -7,7 +7,7 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the regions
-of the WFW one by one
+of the GRAID 1 - linked to words
 """
 from xml.dom.minidom import Document
 from poioapi import annotationtree
@@ -17,12 +17,12 @@ import os
 import pickle
 import codecs
 
-class CreateWfwFile:
+class Creategraid1File:
 
     def __init__(self, filepath):
         self.filepath = filepath
 
-    def create_wfw_xml(self):
+    def create_graid1_xml(self):
 
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
@@ -50,13 +50,13 @@ class CreateWfwFile:
 
         ann_spaces = doc.createElement('annotationSpaces')
         ann_space = doc.createElement('annotationSpace')
-        ann_space.setAttribute('as.id','wfw')
+        ann_space.setAttribute('as.id','graid1')
         ann_spaces.appendChild(ann_space)
         graphheader.appendChild(ann_spaces)
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-wfw.xml')
+        file = os.path.abspath(basename[0] + '-graid1.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -67,9 +67,9 @@ class CreateWfwFile:
             # Get the utterance
             utterance = element[1]
 
-            for wfw_el in utterance:
-                for el in wfw_el[1]:
-                    st = el[1].get('annotation')
+            for graid1_el in utterance:
+                for el in graid1_el[1]:
+                    st = el[2].get('annotation')
 
                     if (st == ''):
                         id_counter+=1
@@ -77,7 +77,7 @@ class CreateWfwFile:
 
                     # Creating the node with link
                     node = doc.createElement("node")
-                    node.setAttribute("xml:id", "wfw-n"
+                    node.setAttribute("xml:id", "graid1-n"
                     + str(id_counter)) # Node number
 
                     # Creating the node
@@ -90,17 +90,17 @@ class CreateWfwFile:
 
                     # Creating the features and the linkage
                     a = doc.createElement("a")
-                    a.setAttribute("xml:id", "wfw-"
+                    a.setAttribute("xml:id", "graid1-"
                     + str(id_counter)) # id
-                    a.setAttribute("label", "wfw") # label
-                    a.setAttribute("ref", "wfw-n"
+                    a.setAttribute("label", "graid1") # label
+                    a.setAttribute("ref", "graid1-n"
                     + str(id_counter)) # ref
-                    a.setAttribute("as", "wfw") # as
+                    a.setAttribute("as", "graid1") # as
 
                     # Feature structure
                     feature_st = doc.createElement("fs")
                     feature = doc.createElement("f")
-                    feature.setAttribute("name","wfw")
+                    feature.setAttribute("name","graid1")
                     feature.setAttribute("value",st)
                     value = doc.createTextNode(st) # Value
                     feature.appendChild(value)
