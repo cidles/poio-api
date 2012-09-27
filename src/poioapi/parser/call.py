@@ -10,7 +10,7 @@ import segfilecomment
 import xmltograf
 
 filepath = '/home/alopes/tests/pi_2.pickle'
-"""
+
 # AnnotationTree (pickle) to GrAF annotations
 raw = txtrawfile.CreateRawFile(filepath)
 raw.create_raw_file()
@@ -38,13 +38,7 @@ comment.create_cmts_xml()
 
 # XML (in GrAF) to AnnotationTree (pickle)
 ann_tree_rec.main(filepath)
-"""
+
 # AnnotationTree (XML) to GrAF
-# Only will get the ref to text
-# Only works in Python2.x because of the nltk
-graf = xmltograf.TestGrAF(filepath)
-graf.get_wfw() # Getting wfw
-graf.create_graf() # Creting a rendered GrAF
-#graf.get_graid1() # Getting Graid1
-#graf.get_graid2() # Getting Graid2
-#graf.get_trans() # Getting translations
+graf = xmltograf.RendToGrAF(filepath)
+graf.parse_xml_graf('wfw')

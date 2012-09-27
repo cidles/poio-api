@@ -350,7 +350,7 @@ def main(filepath):
     f_raw.close()
 
     # Create the pickle file
-    file = os.path.abspath('/home/alopes/tests/pick.pickle')
+    file = os.path.abspath(basename[0]+'-new.pickle')
     f_pickle = open(file,'wb')
     pickle.dump(tree, f_pickle)
     f_pickle.close()
