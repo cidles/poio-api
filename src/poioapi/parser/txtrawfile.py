@@ -7,8 +7,12 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the raw txt
-file form the pickle file
+file form the pickle file.
+
+Note: The comments are exactly the sames for
+each on of the types of data hierarchies.
 """
+
 from xml.dom.minidom import Document
 from poioapi import annotationtree
 from poioapi import data
@@ -18,13 +22,42 @@ import os
 import pickle
 
 class CreateRawFile:
+    """
+    Class responsible to create a raw file from
+    the Annotation Tree.
+
+    There are created to files. One of them is a
+    txt file that is the data from the AnnotationTree
+    file converted to text and the other file is
+    a xml that contain the regions of each sentence in
+    the txt file.
+    """
 
     def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
         self.filepath = filepath
 
     def create_raw_file(self):
+        """Creates an txt file with the data in the
+        Annotation Tree file. Passing only the sentences.
+
+        See Also
+        --------
+        create_raw_xml : Function the converts the data
+        to an xml only with the regions.
+
+        """
+
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
+        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
         # Open the file
         file = open(self.filepath, "rb")
@@ -47,9 +80,20 @@ class CreateRawFile:
         # Close txt file
         f.close()
 
-        self.create_raw_seg()
+        self.create_raw_xml()
 
-    def create_raw_seg(self):
+    def create_raw_xml(self):
+        """Creates an xml file with the regions of the data
+        in the Annotation Tree file.
+
+        See Also
+        --------
+        create_raw_file : Function the converts the data
+        to an txt with the sentences from the Annotation
+        Tree file.
+
+        """
+
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
 

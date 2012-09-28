@@ -7,8 +7,9 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the regions
-of the GRAID 1 - linked to words
+of the GRAID 1 - linked to words.
 """
+
 from xml.dom.minidom import Document
 from poioapi import annotationtree
 from poioapi import data
@@ -17,15 +18,41 @@ import os
 import pickle
 import codecs
 
-class Creategraid1File:
+class CreateGraid1File:
+    """
+    Class responsible to retrieve the graid 1 words
+    from the Annotation Tree.
+
+    The data hierarchy set in the Annotation Tree
+    must be the GRAID hierarchy.
+
+    """
 
     def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
         self.filepath = filepath
 
     def create_graid1_xml(self):
+        """Creates an xml file with all the graid 1 of the
+        Annotation Tree file.
+
+        See Also
+        --------
+        poioapi.data : Here you can find more about the data
+        hierarchies.
+
+        """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
+        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
         # Open the file
         file = open(self.filepath, "rb")

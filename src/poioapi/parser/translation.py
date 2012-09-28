@@ -7,8 +7,12 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the regions
-of the Comments
+of the Translation.
+
+Note: The comments are exactly the sames for
+each on of the types of data hierarchies.
 """
+
 from xml.dom.minidom import Document
 from poioapi import annotationtree
 from poioapi import data
@@ -17,15 +21,38 @@ import os
 import pickle
 import codecs
 
-class CreateCommentFile:
+class CreateTransFile:
+    """
+    Class responsible to retrieve the translations of each
+    sentence from the Annotation Tree.
+
+    """
 
     def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
         self.filepath = filepath
 
-    def create_cmts_xml(self):
+    def create_trans_xml(self):
+        """Creates an xml file with all the translations of the
+        Annotation Tree file.
+
+        See Also
+        --------
+        poioapi.data : Here you can find more about the data
+        hierarchies.
+
+        """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
+        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
         # Open the file
         file = open(self.filepath, "rb")
@@ -50,13 +77,13 @@ class CreateCommentFile:
 
         ann_spaces = doc.createElement('annotationSpaces')
         ann_space = doc.createElement('annotationSpace')
-        ann_space.setAttribute('as.id','cmt')
+        ann_space.setAttribute('as.id','trs')
         ann_spaces.appendChild(ann_space)
         graphheader.appendChild(ann_spaces)
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-cmt.xml')
+        file = os.path.abspath(basename[0] + '-trans.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -65,7 +92,7 @@ class CreateCommentFile:
         for element in annotation_tree.elements():
 
             # Get the utterance
-            utterance = element[3]
+            utterance = element[2]
 
             st = utterance.get('annotation')
 
@@ -75,7 +102,7 @@ class CreateCommentFile:
 
             # Creating the node with link
             node = doc.createElement("node")
-            node.setAttribute("xml:id", "cmt-n"
+            node.setAttribute("xml:id", "trans-n"
             + str(id_counter)) # Node number
 
             # Creating the node
@@ -89,17 +116,17 @@ class CreateCommentFile:
             # Creating the features and the linkage
             # a stands for annotation
             a = doc.createElement("a")
-            a.setAttribute("xml:id", "cmt-n" +
+            a.setAttribute("xml:id", "trs-n" +
             str(id_counter)) # id
-            a.setAttribute("label", "comment") # label
-            a.setAttribute("ref", "cmt-n"
+            a.setAttribute("label", "trans") # label
+            a.setAttribute("ref", "trans-n"
             + str(id_counter)) # ref
             a.setAttribute("as", "trs") # as
 
             # Feature structure
             feature_st = doc.createElement("fs")
             feature = doc.createElement("f")
-            feature.setAttribute("name","cmt")
+            feature.setAttribute("name","trans")
             feature.setAttribute("value",st)
             value = doc.createTextNode(st) # Value
             feature.appendChild(value)
@@ -109,7 +136,6 @@ class CreateCommentFile:
             graph.appendChild(a)
 
             id_counter+=1
-
 
         # Write the content in XML file
         f.write(doc.toprettyxml(indent="  "))

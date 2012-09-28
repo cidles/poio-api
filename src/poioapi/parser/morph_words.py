@@ -7,7 +7,8 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This document is to create the regions
-of the words in the clause units one by one
+of the words in the utterance in a Morphsyntax
+data hierarchy.
 """
 
 from xml.dom.minidom import Document
@@ -18,15 +19,41 @@ import os
 import pickle
 import codecs
 
-class CreateSegClauseUnits:
+class CreateMorphWordsFile:
+    """
+    Class responsible to retrieve the words
+    from the Annotation Tree.
+
+    The data hierarchy set in the Annotation Tree
+    must be the MORPHSYNT (Morphsyntax) hierarchy.
+
+    """
 
     def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
         self.filepath = filepath
 
-    def create_clause_units_file(self):
+    def create_words_file(self):
+        """Creates an xml file with all the words of the
+        Annotation Tree file.
+
+        See Also
+        --------
+        poioapi.data : Here you can find more about the data
+        hierarchies.
+
+        """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
+        annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
 
         # Open the file
         file = open(self.filepath, "rb")
@@ -49,20 +76,20 @@ class CreateSegClauseUnits:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-clause.xml')
+        file = os.path.abspath(basename[0] + '-morphword.xml')
         f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
         for element in annotation_tree.elements():
 
             # Get the clause unit
-            clause_units = element[1]
+            words = element[1]
 
-            for clause in clause_units:
-                st = clause[0].get('annotation')
+            for word in words:
+                st = word[0].get('annotation')
                 region = doc.createElement("region")
                 region.setAttribute("xml:id",
-                    "clause-r" + str(seg_count)) # Region
+                    "word-r" + str(seg_count)) # Region
                 region.setAttribute("anchors",
                     str(last_counter) + " "
                     + str(last_counter + len(st))) # Anchors

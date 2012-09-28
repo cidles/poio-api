@@ -7,7 +7,8 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the regions
-of the words one by one
+of the morphemes one by one in a Morphsyntax
+data hierarchy.
 """
 
 from xml.dom.minidom import Document
@@ -16,18 +17,43 @@ from poioapi import data
 
 import os
 import pickle
-import re
 import codecs
 
-class CreateSegWords:
+class CreateMorphemesFile:
+    """
+    Class responsible to retrieve the morphemes
+    from the Annotation Tree.
+
+    The data hierarchy set in the Annotation Tree
+    must be the MORPHSYNT (Morphsyntax) hierarchy.
+
+    """
 
     def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
         self.filepath = filepath
 
-    def create_words_file(self):
+    def create_morphs_file(self):
+        """Creates an xml file with all the morphemes of the
+        Annotation Tree file.
+
+        See Also
+        --------
+        poioapi.data : Here you can find more about the data
+        hierarchies.
+
+        """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
+        annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
 
         # Open the file
         file = open(self.filepath, "rb")
@@ -50,7 +76,7 @@ class CreateSegWords:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-word.xml')
+        file = os.path.abspath(basename[0] + '-morph.xml')
         f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
@@ -59,14 +85,14 @@ class CreateSegWords:
             # Get the utterance
             utterance = element[1]
 
-            for wfw_el in utterance:
-                for el in wfw_el[1]:
+            for morphs in utterance:
+                for el in morphs[1]:
 
                     st = el[0].get('annotation')
 
                     region = doc.createElement("region")
                     region.setAttribute("xml:id",
-                        "word-r" + str(seg_count)) # Region
+                        "morph-r" + str(seg_count)) # Region
                     region.setAttribute("anchors",
                         str(last_counter) + " "
                         + str(last_counter + len(st))) # Anchors
