@@ -1,0 +1,866 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>xmltoanntree &mdash; Poio API 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Poio API 1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Poio API 1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for xmltoanntree</h1><div class="highlight"><pre>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c">#</span>
+<span class="c"># Poio Tools for Linguists</span>
+<span class="c">#</span>
+<span class="c"># Copyright (C) 2009-2012 Poio Project</span>
+<span class="c"># Author: António Lopes &lt;alopes@cidles.eu&gt;</span>
+<span class="c"># URL: &lt;http://www.cidles.eu/ltll/poio&gt;</span>
+<span class="c"># For license information, see LICENSE.TXT</span>
+<span class="sd">&quot;&quot;&quot; This module is to create the raw txt</span>
+<span class="sd">file form the pickle file to an Annotation</span>
+<span class="sd">Tree file.</span>
+
+<span class="sd">Note: That the Annotation Tree file is a pickle</span>
+<span class="sd">that works in Poio GUI.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">poioapi</span> <span class="kn">import</span> <span class="n">annotationtree</span>
+<span class="kn">from</span> <span class="nn">poioapi</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">xml.sax</span> <span class="kn">import</span> <span class="n">make_parser</span>
+<span class="kn">from</span> <span class="nn">xml.sax.handler</span> <span class="kn">import</span> <span class="n">ContentHandler</span>
+<span class="kn">from</span> <span class="nn">xml.dom</span> <span class="kn">import</span> <span class="n">minidom</span>
+
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="XmlHandler"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlHandler">[docs]</a><span class="k">class</span> <span class="nc">XmlHandler</span><span class="p">(</span><span class="n">ContentHandler</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that handles the XML parsing.</span>
+
+<span class="sd">    The class uses the ContentHandler from</span>
+<span class="sd">    SAX XML.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_id</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regions</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="XmlHandler.startElement"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlHandler.startElement">[docs]</a>    <span class="k">def</span> <span class="nf">startElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method from ContentHandler Class.</span>
+
+<span class="sd">        Need each line of the xml file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        `name` : str</span>
+<span class="sd">            Name of the tag.</span>
+<span class="sd">        attrs : SAX type</span>
+<span class="sd">            Instance of a line of the xml.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">&#39;region&#39;</span><span class="p">:</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s">&#39;xml:id&#39;</span><span class="p">)</span>
+            <span class="n">att</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s">&#39;anchors&#39;</span><span class="p">)</span>
+            <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">att</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">)</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-r&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">token_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">id</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">&#39;link&#39;</span><span class="p">:</span>
+            <span class="n">att</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s">&#39;targets&#39;</span><span class="p">)</span>
+            <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">att</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-r&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+</div>
+    <span class="k">def</span> <span class="nf">characters</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ch</span><span class="p">):</span>
+        <span class="k">return</span>
+
+    <span class="k">def</span> <span class="nf">endElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span>
+
+<div class="viewcode-block" id="XmlHandler.get_tokenizer"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlHandler.get_tokenizer">[docs]</a>    <span class="k">def</span> <span class="nf">get_tokenizer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the token of each element in the</span>
+<span class="sd">        xml file.</span>
+
+<span class="sd">        Each token is composed by start and the end</span>
+<span class="sd">        of a region.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span>
+</div>
+<div class="viewcode-block" id="XmlHandler.get_token_id"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlHandler.get_token_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_token_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the id token of each element in the</span>
+<span class="sd">        xml file.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">token_id</span>
+</div></div>
+<div class="viewcode-block" id="ProcessContent"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.ProcessContent">[docs]</a><span class="k">class</span> <span class="nc">ProcessContent</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that handles the XML parsing.</span>
+
+<span class="sd">    The class uses the ContentHandler from</span>
+<span class="sd">    SAX XML.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metafile</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Class&#39;s constructor.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        metafile : str</span>
+<span class="sd">            Path of the file to manipulate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_id</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metafile</span> <span class="o">=</span> <span class="n">metafile</span>
+
+<div class="viewcode-block" id="ProcessContent.process"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.ProcessContent.process">[docs]</a>    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the tokens of the regions parsed</span>
+<span class="sd">        by the class XmlHandler.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">parser</span> <span class="o">=</span> <span class="n">make_parser</span><span class="p">()</span>
+        <span class="n">curHandler</span> <span class="o">=</span> <span class="n">XmlHandler</span><span class="p">()</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">setContentHandler</span><span class="p">(</span><span class="n">curHandler</span><span class="p">)</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metafile</span><span class="p">)</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">curHandler</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_id</span> <span class="o">=</span> <span class="n">curHandler</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="ProcessContent.get_tokenizer"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.ProcessContent.get_tokenizer">[docs]</a>    <span class="k">def</span> <span class="nf">get_tokenizer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the token of each element in the</span>
+<span class="sd">        xml file.</span>
+
+<span class="sd">        Each token is composed by start and the end</span>
+<span class="sd">        of a region.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span>
+</div>
+<div class="viewcode-block" id="ProcessContent.get_token_id"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.ProcessContent.get_token_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_token_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the id token of each element in the</span>
+<span class="sd">        xml file.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">token_id</span>
+</div></div>
+<div class="viewcode-block" id="XmlToAnnTree"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlToAnnTree">[docs]</a><span class="k">class</span> <span class="nc">XmlToAnnTree</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that handles the parsing of the xml files</span>
+<span class="sd">    to a Annotation Tree.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="XmlToAnnTree.graid_hierarchy"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlToAnnTree.graid_hierarchy">[docs]</a>    <span class="k">def</span> <span class="nf">graid_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the a Annotation Tree file (pickle)</span>
+<span class="sd">        with the the GRAID data hierarchy.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            File path of the raw file (txt).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># Initialize the variable</span>
+        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">GRAID</span><span class="p">)</span>
+
+        <span class="c"># Open the raw file</span>
+        <span class="n">basename</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;.txt&#39;</span><span class="p">)</span>
+        <span class="n">f_raw</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+
+        <span class="c"># Getting the raw content</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">f_raw</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+        <span class="c"># This tree i&#39;ll contain the elements to</span>
+        <span class="c"># the pickle file</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c"># Getting the words</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-word.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">word_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">word_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
+
+        <span class="c"># Getting the clause units</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-clause.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">clause_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">clause_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
+
+        <span class="c"># Getting the wfw</span>
+        <span class="n">wfw_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-wfw.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-wfw.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">wfw_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">wfw_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">wfw_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">wfw_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">wfw_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c"># Getting the graid1</span>
+        <span class="n">graid1_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid1.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid1.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">graid1_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">graid1_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">graid1_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">graid1_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">graid1_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c"># Getting the graid2</span>
+        <span class="n">graid2_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid2.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid2.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">graid2_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">graid2_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">graid2_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">graid2_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">graid2_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c"># Getting the translations</span>
+        <span class="n">trans_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">trans_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">trans_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">trans_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">trans_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trans_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c"># Getting the comments</span>
+        <span class="n">cmts_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">cmts_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">cmts_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">cmts_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">cmts_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cmts_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+
+            <span class="c"># Initialize the variables</span>
+            <span class="n">il_elements</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">il_clauses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">clause_units</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">wfws</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">graid1s</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">graid2s</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="n">last_pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c"># Getting the utterance</span>
+            <span class="n">utterance</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+            <span class="c"># Anchors in the regions</span>
+            <span class="c"># Parse the words from which line</span>
+            <span class="k">while</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">utterance</span><span class="p">)):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">w</span> <span class="o">=</span> <span class="n">word_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="n">word_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">first_pos</span> <span class="o">=</span> <span class="n">last_pos</span>
+                <span class="n">last_pos</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">first_pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utterance</span><span class="p">[</span><span class="n">first_pos</span><span class="p">:</span><span class="n">last_pos</span><span class="p">])</span>
+
+                <span class="k">for</span> <span class="n">wfw_v</span> <span class="ow">in</span> <span class="n">wfw_values</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">wfw_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+                        <span class="n">wfws</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">wfw_v</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="k">break</span>
+
+                <span class="k">for</span> <span class="n">graid1_v</span> <span class="ow">in</span> <span class="n">graid1_values</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">graid1_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+                        <span class="n">graid1s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">graid1_v</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="k">break</span>
+
+                <span class="c"># Remove the word of the range to not look</span>
+                <span class="c"># for it again</span>
+                <span class="k">if</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">del</span> <span class="n">word_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="k">del</span> <span class="n">word_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">break</span>
+
+            <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">w</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">wfw</span> <span class="o">=</span> <span class="n">wfws</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">wfw</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">graid1</span> <span class="o">=</span> <span class="n">graid1s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">graid1</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+                <span class="n">il_elements</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                        <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                          <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="n">w</span> <span class="p">},</span>
+                        <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                          <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">wfw</span> <span class="p">},</span>
+                        <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                          <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">graid1</span> <span class="p">}])</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">wfw</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">wfws</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">graid1</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">graid1s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c"># Reset the last position</span>
+            <span class="n">last_pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c"># Anchors in the regions</span>
+            <span class="c"># Parse the clause units from which line</span>
+            <span class="k">while</span> <span class="n">last_pos</span> <span class="o">&lt;</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">utterance</span><span class="p">)):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">clause_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="n">clause_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">first_pos</span> <span class="o">=</span> <span class="n">last_pos</span>
+                <span class="n">last_pos</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">first_pos</span><span class="p">)</span>
+                <span class="n">st</span> <span class="o">=</span> <span class="n">utterance</span><span class="p">[</span><span class="n">first_pos</span><span class="p">:</span><span class="n">last_pos</span><span class="p">]</span>
+                <span class="n">clause_units</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">graid2_v</span> <span class="ow">in</span> <span class="n">graid2_values</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">graid2_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+                        <span class="n">graid2s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">graid2_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+                        <span class="k">break</span>
+
+                <span class="c"># Remove the word of the range to not look</span>
+                <span class="c"># for it again</span>
+                <span class="k">if</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">del</span> <span class="n">clause_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="k">del</span> <span class="n">clause_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">break</span>
+
+            <span class="n">aux_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">for</span> <span class="n">clause</span> <span class="ow">in</span> <span class="n">clause_units</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">graid2</span> <span class="o">=</span> <span class="n">graid2s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">graid2</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">aux_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                    <span class="n">il_clauses</span><span class="o">.</span><span class="n">append</span><span class="p">([{</span>
+                             <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                              <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="n">clause</span><span class="p">},</span>
+                        <span class="n">il_elements</span><span class="p">,</span>
+                            <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                              <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">graid2</span> <span class="p">}])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">il_elements</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="n">il_elements</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                            <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                              <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="s">&#39;&#39;</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                              <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="s">&#39;&#39;</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                              <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="s">&#39;&#39;</span> <span class="p">}])</span>
+
+                    <span class="n">il_clauses</span><span class="o">.</span><span class="n">append</span><span class="p">([{</span>
+                        <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                        <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="n">clause</span><span class="p">},</span>
+                        <span class="n">il_elements</span><span class="p">,</span>
+                            <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                              <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">graid2</span> <span class="p">}])</span>
+
+                <span class="n">aux_count</span><span class="o">+=</span><span class="mi">1</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">graid2</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">graid2s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="n">translation</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">trans_v</span> <span class="ow">in</span> <span class="n">trans_values</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">trans_v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">translation</span> <span class="o">=</span> <span class="n">trans_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">translation</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+            <span class="n">comment</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">cmts_v</span> <span class="ow">in</span> <span class="n">cmts_values</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">cmts_v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">comment</span> <span class="o">=</span> <span class="n">cmts_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">comment</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+            <span class="n">utterance</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                            <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">utterance</span> <span class="p">},</span>
+                <span class="n">il_clauses</span><span class="p">,</span>
+                    <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                      <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">translation</span> <span class="p">},</span>
+                    <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                      <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">comment</span> <span class="p">}</span> <span class="p">]</span>
+
+            <span class="n">annotation_tree</span><span class="o">.</span><span class="n">append_element</span><span class="p">(</span><span class="n">utterance</span><span class="p">)</span>
+
+            <span class="n">tree</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utterance</span><span class="p">)</span>
+
+        <span class="c"># Close XML file</span>
+        <span class="n">f_raw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c"># Create the pickle file</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">&#39;-graid.pickle&#39;</span><span class="p">)</span>
+        <span class="n">f_pickle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="s">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">f_pickle</span><span class="p">)</span>
+        <span class="n">f_pickle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="XmlToAnnTree.morph_hierarchy"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlToAnnTree.morph_hierarchy">[docs]</a>    <span class="k">def</span> <span class="nf">morph_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the a Annotation Tree file (pickle)</span>
+<span class="sd">        with the the MORPHSYN data hierarchy.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            File path of the raw file (txt).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># Initialize the variable</span>
+        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">MORPHSYNT</span><span class="p">)</span>
+
+        <span class="c"># Open the raw file</span>
+        <span class="n">basename</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;.txt&#39;</span><span class="p">)</span>
+        <span class="n">f_raw</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+
+        <span class="c"># Getting the raw content</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">f_raw</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+        <span class="c"># This tree i&#39;ll contain the elements to</span>
+        <span class="c"># the pickle file</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c"># Getting the words</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-morphword.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">word_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">word_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
+
+        <span class="c"># Getting the morphemes</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-morph.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">morph_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">morph_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
+
+        <span class="c"># Getting the gloss</span>
+        <span class="n">gloss_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-gloss.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-gloss.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">gloss_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">gloss_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">gloss_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">gloss_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gloss_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c"># Getting the translations</span>
+        <span class="n">trans_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">trans_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">trans_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">trans_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">trans_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trans_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="c"># Getting the comments</span>
+        <span class="n">cmts_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">cmts_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">cmts_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">cmts_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">cmts_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cmts_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+
+            <span class="c"># Initialize the variables</span>
+            <span class="n">il_elements</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">il_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">morphs</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">glosss</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="n">last_pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c"># Getting the utterance</span>
+            <span class="n">utterance</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+            <span class="c"># Anchors in the regions</span>
+            <span class="c"># Parse the morphemes from which line</span>
+            <span class="k">while</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">utterance</span><span class="p">)):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">m</span> <span class="o">=</span> <span class="n">morph_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="n">morph_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">first_pos</span> <span class="o">=</span> <span class="n">last_pos</span>
+                <span class="n">last_pos</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">first_pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">morphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utterance</span><span class="p">[</span><span class="n">first_pos</span><span class="p">:</span><span class="n">last_pos</span><span class="p">])</span>
+
+                <span class="k">for</span> <span class="n">gloss_v</span> <span class="ow">in</span> <span class="n">gloss_values</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">gloss_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+                        <span class="n">glosss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gloss_v</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="k">break</span>
+
+                <span class="c"># Remove the morpheme of the range to not look</span>
+                <span class="c"># for it again</span>
+                <span class="k">if</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">del</span> <span class="n">morph_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="k">del</span> <span class="n">morph_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">break</span>
+
+            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">morphs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">gloss</span> <span class="o">=</span> <span class="n">glosss</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">gloss</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+                <span class="n">il_elements</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                        <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                          <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="n">m</span> <span class="p">},</span>
+                        <span class="p">[{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                          <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">gloss</span> <span class="p">}]])</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">gloss</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">glosss</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c"># Reset the last position</span>
+            <span class="n">last_pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c"># Anchors in the regions</span>
+            <span class="c"># Parse the words from which line</span>
+            <span class="k">while</span> <span class="n">last_pos</span> <span class="o">&lt;</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">utterance</span><span class="p">)):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">w</span> <span class="o">=</span> <span class="n">word_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="n">word_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">first_pos</span> <span class="o">=</span> <span class="n">last_pos</span>
+                <span class="n">last_pos</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">first_pos</span><span class="p">)</span>
+                <span class="n">st</span> <span class="o">=</span> <span class="n">utterance</span><span class="p">[</span><span class="n">first_pos</span><span class="p">:</span><span class="n">last_pos</span><span class="p">]</span>
+                <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+
+                <span class="c"># Remove the word of the range to not look</span>
+                <span class="c"># for it again</span>
+                <span class="k">if</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">del</span> <span class="n">word_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="k">del</span> <span class="n">word_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">break</span>
+
+            <span class="n">aux_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                <span class="n">il_words</span><span class="o">.</span><span class="n">append</span><span class="p">([{</span>
+                    <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                    <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="n">word</span><span class="p">},</span>
+                    <span class="n">il_elements</span><span class="p">])</span>
+
+            <span class="n">translation</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">trans_v</span> <span class="ow">in</span> <span class="n">trans_values</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">trans_v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">translation</span> <span class="o">=</span> <span class="n">trans_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">translation</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+            <span class="n">comment</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">cmts_v</span> <span class="ow">in</span> <span class="n">cmts_values</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">cmts_v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">comment</span> <span class="o">=</span> <span class="n">cmts_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">comment</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+            <span class="n">utterance</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                            <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">utterance</span> <span class="p">},</span>
+                <span class="n">il_words</span><span class="p">,</span>
+                    <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                      <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">translation</span> <span class="p">},</span>
+                    <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                      <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">comment</span> <span class="p">}</span> <span class="p">]</span>
+
+            <span class="n">annotation_tree</span><span class="o">.</span><span class="n">append_element</span><span class="p">(</span><span class="n">utterance</span><span class="p">)</span>
+
+            <span class="n">tree</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utterance</span><span class="p">)</span>
+
+        <span class="c"># Close XML file</span>
+        <span class="n">f_raw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c"># Create the pickle file</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">&#39;-morph.pickle&#39;</span><span class="p">)</span>
+        <span class="n">f_pickle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="s">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">f_pickle</span><span class="p">)</span>
+        <span class="n">f_pickle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="XmlToAnnTree.word_hierarchy"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlToAnnTree.word_hierarchy">[docs]</a>    <span class="k">def</span> <span class="nf">word_hierarchy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the a Annotation Tree file (pickle)</span>
+<span class="sd">        with the the WORD data hierarchy.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            File path of the raw file (txt).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># Initialize the variable</span>
+        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">MORPHSYNT</span><span class="p">)</span>
+
+        <span class="c"># Open the raw file</span>
+        <span class="n">basename</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;.txt&#39;</span><span class="p">)</span>
+        <span class="n">f_raw</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+
+        <span class="c"># Getting the raw content</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">f_raw</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+        <span class="c"># This tree i&#39;ll contain the elements to</span>
+        <span class="c"># the pickle file</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c"># Getting the words</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-word.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">word_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+
+        <span class="c"># Getting the translations</span>
+        <span class="n">trans_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="n">trans_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">xmldoc</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">):</span>
+            <span class="n">trans_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">firstChild</span><span class="o">.</span><span class="n">nodeValue</span><span class="p">,</span> <span class="n">trans_link</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">trans_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trans_range</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+
+            <span class="c"># Initialize the variables</span>
+            <span class="n">il_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+            <span class="c"># Getting the utterance</span>
+            <span class="n">utterance</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+            <span class="c"># Reset the last position</span>
+            <span class="n">last_pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c"># Anchors in the regions</span>
+            <span class="c"># Parse the words from which line</span>
+            <span class="k">while</span> <span class="n">last_pos</span> <span class="o">&lt;</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">utterance</span><span class="p">)):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">w</span> <span class="o">=</span> <span class="n">word_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">first_pos</span> <span class="o">=</span> <span class="n">last_pos</span>
+                <span class="n">last_pos</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">first_pos</span><span class="p">)</span>
+                <span class="n">st</span> <span class="o">=</span> <span class="n">utterance</span><span class="p">[</span><span class="n">first_pos</span><span class="p">:</span><span class="n">last_pos</span><span class="p">]</span>
+                <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+
+                <span class="c"># Remove the word of the range to not look</span>
+                <span class="c"># for it again</span>
+                <span class="k">if</span> <span class="n">last_pos</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">del</span> <span class="n">word_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">break</span>
+
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                <span class="n">il_words</span><span class="o">.</span><span class="n">append</span><span class="p">([{</span>
+                    <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                    <span class="s">&#39;annotation&#39;</span> <span class="p">:</span>  <span class="n">word</span><span class="p">}])</span>
+
+            <span class="n">translation</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">trans_v</span> <span class="ow">in</span> <span class="n">trans_values</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">trans_v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">translation</span> <span class="o">=</span> <span class="n">trans_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">translation</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+            <span class="n">utterance</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                            <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">utterance</span> <span class="p">},</span>
+                <span class="n">il_words</span><span class="p">,</span>
+                    <span class="p">{</span> <span class="s">&#39;id&#39;</span> <span class="p">:</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">next_annotation_id</span><span class="p">,</span>
+                      <span class="s">&#39;annotation&#39;</span> <span class="p">:</span> <span class="n">translation</span> <span class="p">}</span> <span class="p">]</span>
+
+            <span class="n">annotation_tree</span><span class="o">.</span><span class="n">append_element</span><span class="p">(</span><span class="n">utterance</span><span class="p">)</span>
+
+            <span class="n">tree</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utterance</span><span class="p">)</span>
+
+        <span class="c"># Close XML file</span>
+        <span class="n">f_raw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c"># Create the pickle file</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">&#39;-word.pickle&#39;</span><span class="p">)</span>
+        <span class="n">f_pickle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="s">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">f_pickle</span><span class="p">)</span>
+        <span class="n">f_pickle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Poio API 1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Peter Bouda.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

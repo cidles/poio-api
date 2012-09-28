@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Poio API Module - xmltoanntree.py &mdash; Poio API 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Poio API 1 documentation" href="index.html" />
+    <link rel="next" title="Poio API Module - xmltograf.py" href="xmltograf.html" />
+    <link rel="prev" title="Poio API Module - txtrawfile.py" href="txtraw.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="xmltograf.html" title="Poio API Module - xmltograf.py"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="txtraw.html" title="Poio API Module - txtrawfile.py"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Poio API 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-xmltoanntree">
+<span id="poio-api-module-xmltoanntree-py"></span><h1>Poio API Module - <cite>xmltoanntree.py</cite><a class="headerlink" href="#module-xmltoanntree" title="Permalink to this headline">¶</a></h1>
+<p>This module is to create the raw txt
+file form the pickle file to an Annotation
+Tree file.</p>
+<p>Note: That the Annotation Tree file is a pickle
+that works in Poio GUI.</p>
+<dl class="class">
+<dt id="xmltoanntree.ProcessContent">
+<em class="property">class </em><tt class="descclassname">xmltoanntree.</tt><tt class="descname">ProcessContent</tt><big>(</big><em>metafile</em><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#ProcessContent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.ProcessContent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that handles the XML parsing.</p>
+<p>The class uses the ContentHandler from
+SAX XML.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="xmltoanntree.ProcessContent.get_token_id">
+<tt class="descname">get_token_id</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#ProcessContent.get_token_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.ProcessContent.get_token_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the id token of each element in the
+xml file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="xmltoanntree.ProcessContent.get_tokenizer">
+<tt class="descname">get_tokenizer</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#ProcessContent.get_tokenizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.ProcessContent.get_tokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the token of each element in the
+xml file.</p>
+<p>Each token is composed by start and the end
+of a region.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="xmltoanntree.ProcessContent.process">
+<tt class="descname">process</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#ProcessContent.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.ProcessContent.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the tokens of the regions parsed
+by the class XmlHandler.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="xmltoanntree.XmlHandler">
+<em class="property">class </em><tt class="descclassname">xmltoanntree.</tt><tt class="descname">XmlHandler</tt><a class="reference internal" href="_modules/xmltoanntree.html#XmlHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that handles the XML parsing.</p>
+<p>The class uses the ContentHandler from
+SAX XML.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="xmltoanntree.XmlHandler.get_token_id">
+<tt class="descname">get_token_id</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#XmlHandler.get_token_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlHandler.get_token_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the id token of each element in the
+xml file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="xmltoanntree.XmlHandler.get_tokenizer">
+<tt class="descname">get_tokenizer</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#XmlHandler.get_tokenizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlHandler.get_tokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the token of each element in the
+xml file.</p>
+<p>Each token is composed by start and the end
+of a region.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="xmltoanntree.XmlHandler.startElement">
+<tt class="descname">startElement</tt><big>(</big><em>name</em>, <em>attrs</em><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#XmlHandler.startElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlHandler.startElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method from ContentHandler Class.</p>
+<p>Need each line of the xml file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>`name`</strong> : str</p>
+<blockquote>
+<div><p>Name of the tag.</p>
+</div></blockquote>
+<p><strong>attrs</strong> : SAX type</p>
+<blockquote class="last">
+<div><p>Instance of a line of the xml.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="xmltoanntree.XmlToAnnTree">
+<em class="property">class </em><tt class="descclassname">xmltoanntree.</tt><tt class="descname">XmlToAnnTree</tt><a class="reference internal" href="_modules/xmltoanntree.html#XmlToAnnTree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlToAnnTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that handles the parsing of the xml files
+to a Annotation Tree.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="xmltoanntree.XmlToAnnTree.graid_hierarchy">
+<tt class="descname">graid_hierarchy</tt><big>(</big><em>filepath</em><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#XmlToAnnTree.graid_hierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlToAnnTree.graid_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the a Annotation Tree file (pickle)
+with the the GRAID data hierarchy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>filepath</strong> : str</p>
+<blockquote class="last">
+<div><p>File path of the raw file (txt).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="xmltoanntree.XmlToAnnTree.morph_hierarchy">
+<tt class="descname">morph_hierarchy</tt><big>(</big><em>filepath</em><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#XmlToAnnTree.morph_hierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlToAnnTree.morph_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the a Annotation Tree file (pickle)
+with the the MORPHSYN data hierarchy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>filepath</strong> : str</p>
+<blockquote class="last">
+<div><p>File path of the raw file (txt).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="xmltoanntree.XmlToAnnTree.word_hierarchy">
+<tt class="descname">word_hierarchy</tt><big>(</big><em>filepath</em><big>)</big><a class="reference internal" href="_modules/xmltoanntree.html#XmlToAnnTree.word_hierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xmltoanntree.XmlToAnnTree.word_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the a Annotation Tree file (pickle)
+with the the WORD data hierarchy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>filepath</strong> : str</p>
+<blockquote class="last">
+<div><p>File path of the raw file (txt).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Poio API Module - <cite>xmltoanntree.py</cite></a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="txtraw.html"
+                        title="previous chapter">Poio API Module - <cite>txtrawfile.py</cite></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="xmltograf.html"
+                        title="next chapter">Poio API Module - <cite>xmltograf.py</cite></a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/xmltoanntree.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="xmltograf.html" title="Poio API Module - xmltograf.py"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="txtraw.html" title="Poio API Module - txtrawfile.py"
+             >previous</a> |</li>
+        <li><a href="index.html">Poio API 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Peter Bouda.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

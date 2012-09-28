@@ -9,11 +9,28 @@ Welcome to Poio API's documentation!
 
 **Contents**
 
+Modules
+```````
 .. toctree::
    :maxdepth: 3
 
    data
    annotationtree
+   comment
+   clauseunit
+   graid1
+   graid2
+   words
+   mwords
+   gloss
+   morphemes
+   translation
+   txtraw
+   xmltoanntree
+   xmltograf
+
+Tests
+`````
     
 Indices and tables
 ==================
