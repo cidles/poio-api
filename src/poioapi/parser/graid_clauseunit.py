@@ -54,6 +54,10 @@ class CreateClauseUnitsFile:
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeGraid.data_hierarchy[1]
+        clause_aux = word[0].replace(' ', '_')
+
         # Open the file
         file = open(self.filepath, "rb")
         annotation_tree.tree = pickle.load(file)
@@ -75,7 +79,7 @@ class CreateClauseUnitsFile:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-clause.xml')
+        file = os.path.abspath(basename[0] + '-' + clause_aux + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
@@ -88,7 +92,7 @@ class CreateClauseUnitsFile:
                 st = clause[0].get('annotation')
                 region = doc.createElement("region")
                 region.setAttribute("xml:id",
-                    "clause-r" + str(seg_count)) # Region
+                    clause_aux + "-r" + str(seg_count)) # Region
                 region.setAttribute("anchors",
                     str(last_counter) + " "
                     + str(last_counter + len(st))) # Anchors

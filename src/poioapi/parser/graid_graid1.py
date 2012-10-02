@@ -54,6 +54,12 @@ class CreateGraid1File:
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeGraid.data_hierarchy[1]
+        word = word[1]
+        graid1 = word[2]
+        word = word[0]
+
         # Open the file
         file = open(self.filepath, "rb")
         annotation_tree.tree = pickle.load(file)
@@ -71,19 +77,19 @@ class CreateGraid1File:
 
         dependencies = doc.createElement('dependencies')
         dependson = doc.createElement('dependsOn')
-        dependson.setAttribute('f.id','word')
+        dependson.setAttribute('f.id',word)
         dependencies.appendChild(dependson)
         graphheader.appendChild(dependencies)
 
         ann_spaces = doc.createElement('annotationSpaces')
         ann_space = doc.createElement('annotationSpace')
-        ann_space.setAttribute('as.id','graid1')
+        ann_space.setAttribute('as.id',graid1)
         ann_spaces.appendChild(ann_space)
         graphheader.appendChild(ann_spaces)
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-graid1.xml')
+        file = os.path.abspath(basename[0] + '-' + graid1 + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -104,12 +110,12 @@ class CreateGraid1File:
 
                     # Creating the node with link
                     node = doc.createElement("node")
-                    node.setAttribute("xml:id", "graid1-n"
+                    node.setAttribute("xml:id", graid1 + "-n"
                     + str(id_counter)) # Node number
 
                     # Creating the node
                     link = doc.createElement("link")
-                    link.setAttribute("targets", "word-r"
+                    link.setAttribute("targets", word + "-r"
                     + str(id_counter)) # ref
                     node.appendChild(link)
 
@@ -117,18 +123,17 @@ class CreateGraid1File:
 
                     # Creating the features and the linkage
                     a = doc.createElement("a")
-                    a.setAttribute("xml:id", "graid1-"
+                    a.setAttribute("xml:id", graid1 + "-"
                     + str(id_counter)) # id
-                    a.setAttribute("label", "graid1") # label
-                    a.setAttribute("ref", "graid1-n"
+                    a.setAttribute("label", graid1) # label
+                    a.setAttribute("ref", graid1 + "-n"
                     + str(id_counter)) # ref
-                    a.setAttribute("as", "graid1") # as
+                    a.setAttribute("as", graid1) # as
 
                     # Feature structure
                     feature_st = doc.createElement("fs")
                     feature = doc.createElement("f")
-                    feature.setAttribute("name","graid1")
-                    feature.setAttribute("value",st)
+                    feature.setAttribute("name",graid1)
                     value = doc.createTextNode(st) # Value
                     feature.appendChild(value)
                     feature_st.appendChild(feature)

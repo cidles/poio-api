@@ -54,6 +54,10 @@ class CreateTransFile:
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
+        # Getting the label in data hierarchy
+        trs = data.DataStructureTypeGraid.data_hierarchy[2]
+        utt = data.DataStructureTypeGraid.data_hierarchy[0]
+
         # Open the file
         file = open(self.filepath, "rb")
         annotation_tree.tree = pickle.load(file)
@@ -71,19 +75,19 @@ class CreateTransFile:
 
         dependencies = doc.createElement('dependencies')
         dependson = doc.createElement('dependsOn')
-        dependson.setAttribute('f.id','utt')
+        dependson.setAttribute('f.id',utt)
         dependencies.appendChild(dependson)
         graphheader.appendChild(dependencies)
 
         ann_spaces = doc.createElement('annotationSpaces')
         ann_space = doc.createElement('annotationSpace')
-        ann_space.setAttribute('as.id','trs')
+        ann_space.setAttribute('as.id',trs)
         ann_spaces.appendChild(ann_space)
         graphheader.appendChild(ann_spaces)
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-trans.xml')
+        file = os.path.abspath(basename[0] + '-' + trs + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -102,12 +106,12 @@ class CreateTransFile:
 
             # Creating the node with link
             node = doc.createElement("node")
-            node.setAttribute("xml:id", "trans-n"
+            node.setAttribute("xml:id", trs + "-n"
             + str(id_counter)) # Node number
 
             # Creating the node
             link = doc.createElement("link")
-            link.setAttribute("targets", "utt-r"
+            link.setAttribute("targets", utt + "-r"
             + str(id_counter)) # ref
             node.appendChild(link)
 
@@ -116,18 +120,17 @@ class CreateTransFile:
             # Creating the features and the linkage
             # a stands for annotation
             a = doc.createElement("a")
-            a.setAttribute("xml:id", "trs-n" +
+            a.setAttribute("xml:id", trs + "-n" +
             str(id_counter)) # id
-            a.setAttribute("label", "trans") # label
-            a.setAttribute("ref", "trans-n"
+            a.setAttribute("label", trs) # label
+            a.setAttribute("ref", trs + "-n"
             + str(id_counter)) # ref
-            a.setAttribute("as", "trs") # as
+            a.setAttribute("as", trs) # as
 
             # Feature structure
             feature_st = doc.createElement("fs")
             feature = doc.createElement("f")
-            feature.setAttribute("name","trans")
-            feature.setAttribute("value",st)
+            feature.setAttribute("name",trs)
             value = doc.createTextNode(st) # Value
             feature.appendChild(value)
             feature_st.appendChild(feature)

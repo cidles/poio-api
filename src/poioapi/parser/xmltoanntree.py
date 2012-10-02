@@ -26,7 +26,7 @@ import os
 
 class XmlHandler(ContentHandler):
     """
-    Class that handles the XML parsing.
+    Class that handles the XML test_split.
 
     The class uses the ContentHandler from
     SAX XML.
@@ -91,7 +91,7 @@ class XmlHandler(ContentHandler):
 
 class ProcessContent:
     """
-    Class that handles the XML parsing.
+    Class that handles the XML test_split.
 
     The class uses the ContentHandler from
     SAX XML.
@@ -147,7 +147,7 @@ class ProcessContent:
 
 class XmlToAnnTree():
     """
-    Class that handles the parsing of the xml files
+    Class that handles the test_split of the xml files
     to a Annotation Tree.
 
     """
@@ -166,6 +166,17 @@ class XmlToAnnTree():
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeGraid.data_hierarchy[1]
+        clause = word[0].replace(' ', '_')
+        graid2 = word[2]
+        word = word[1]
+        wfw = word[1]
+        graid1 = word[2]
+        word = word[0]
+        trans = data.DataStructureTypeMorphsynt.data_hierarchy[2]
+        cmt = data.DataStructureTypeMorphsynt.data_hierarchy[3]
+
         # Open the raw file
         basename = filepath.split('.pickle')
         file = os.path.abspath(basename[0] + '.txt')
@@ -179,22 +190,22 @@ class XmlToAnnTree():
         tree = []
 
         # Getting the words
-        procContent = ProcessContent(basename[0] + '-word.xml')
+        procContent = ProcessContent(basename[0] + '-' + word + '.xml')
         procContent.process()
         word_range = procContent.get_tokenizer()
         word_ids = procContent.get_token_id()
 
         # Getting the clause units
-        procContent = ProcessContent(basename[0] + '-clause.xml')
+        procContent = ProcessContent(basename[0] + '-' + clause + '.xml')
         procContent.process()
         clause_range = procContent.get_tokenizer()
         clause_ids = procContent.get_token_id()
 
         # Getting the wfw
         wfw_values = []
-        xmldoc = minidom.parse(basename[0] + '-wfw.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + wfw + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-wfw.xml')
+        procContent = ProcessContent(basename[0] + '-' + wfw + '.xml')
         procContent.process()
         wfw_link = procContent.get_tokenizer()
         i = 0
@@ -206,9 +217,9 @@ class XmlToAnnTree():
 
         # Getting the graid1
         graid1_values = []
-        xmldoc = minidom.parse(basename[0] + '-graid1.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + graid1 + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-graid1.xml')
+        procContent = ProcessContent(basename[0] + '-' + graid1 + '.xml')
         procContent.process()
         graid1_link = procContent.get_tokenizer()
         i = 0
@@ -220,9 +231,9 @@ class XmlToAnnTree():
 
         # Getting the graid2
         graid2_values = []
-        xmldoc = minidom.parse(basename[0] + '-graid2.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + graid2 + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-graid2.xml')
+        procContent = ProcessContent(basename[0] + '-' + graid2 + '.xml')
         procContent.process()
         graid2_link = procContent.get_tokenizer()
         i = 0
@@ -234,9 +245,9 @@ class XmlToAnnTree():
 
         # Getting the translations
         trans_values = []
-        xmldoc = minidom.parse(basename[0] + '-trans.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + trans + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-trans.xml')
+        procContent = ProcessContent(basename[0] + '-' + trans + '.xml')
         procContent.process()
         trans_link = procContent.get_tokenizer()
         i = 0
@@ -248,9 +259,9 @@ class XmlToAnnTree():
 
         # Getting the comments
         cmts_values = []
-        xmldoc = minidom.parse(basename[0] + '-cmt.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + cmt + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-cmt.xml')
+        procContent = ProcessContent(basename[0] + '-' + cmt + '.xml')
         procContent.process()
         cmts_link = procContent.get_tokenizer()
         i = 0
@@ -456,6 +467,17 @@ class XmlToAnnTree():
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeMorphsynt.data_hierarchy[1]
+        morph = word[1]
+        morph = morph[0]
+        gloss = word[1]
+        gloss = gloss[1]
+        gloss = gloss[0]
+        word = word[0]
+        trans = data.DataStructureTypeMorphsynt.data_hierarchy[2]
+        cmt = data.DataStructureTypeMorphsynt.data_hierarchy[3]
+
         # Open the raw file
         basename = filepath.split('.pickle')
         file = os.path.abspath(basename[0] + '.txt')
@@ -469,22 +491,22 @@ class XmlToAnnTree():
         tree = []
 
         # Getting the words
-        procContent = ProcessContent(basename[0] + '-morphword.xml')
+        procContent = ProcessContent(basename[0] + '-m' + word + '.xml')
         procContent.process()
         word_range = procContent.get_tokenizer()
         word_ids = procContent.get_token_id()
 
         # Getting the morphemes
-        procContent = ProcessContent(basename[0] + '-morph.xml')
+        procContent = ProcessContent(basename[0] + '-' + morph + '.xml')
         procContent.process()
         morph_range = procContent.get_tokenizer()
         morph_ids = procContent.get_token_id()
 
         # Getting the gloss
         gloss_values = []
-        xmldoc = minidom.parse(basename[0] + '-gloss.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + gloss + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-gloss.xml')
+        procContent = ProcessContent(basename[0] + '-' + gloss + '.xml')
         procContent.process()
         gloss_link = procContent.get_tokenizer()
         i = 0
@@ -496,9 +518,9 @@ class XmlToAnnTree():
 
         # Getting the translations
         trans_values = []
-        xmldoc = minidom.parse(basename[0] + '-trans.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + trans + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-trans.xml')
+        procContent = ProcessContent(basename[0] + '-' + trans + '.xml')
         procContent.process()
         trans_link = procContent.get_tokenizer()
         i = 0
@@ -510,9 +532,9 @@ class XmlToAnnTree():
 
         # Getting the comments
         cmts_values = []
-        xmldoc = minidom.parse(basename[0] + '-cmt.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + cmt + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-cmt.xml')
+        procContent = ProcessContent(basename[0] + '-' + cmt + '.xml')
         procContent.process()
         cmts_link = procContent.get_tokenizer()
         i = 0
@@ -665,7 +687,12 @@ class XmlToAnnTree():
         """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
+        annotation_tree = annotationtree.AnnotationTree(data.WORDS)
+
+        # Getting the label in data hierarchy
+        word = data.DataStructureType.data_hierarchy[1]
+        word = word[0]
+        trans = data.DataStructureTypeMorphsynt.data_hierarchy[2]
 
         # Open the raw file
         basename = filepath.split('.pickle')
@@ -680,15 +707,15 @@ class XmlToAnnTree():
         tree = []
 
         # Getting the words
-        procContent = ProcessContent(basename[0] + '-word.xml')
+        procContent = ProcessContent(basename[0] + '-' + word + '.xml')
         procContent.process()
         word_range = procContent.get_tokenizer()
 
         # Getting the translations
         trans_values = []
-        xmldoc = minidom.parse(basename[0] + '-trans.xml')
+        xmldoc = minidom.parse(basename[0] + '-' + trans + '.xml')
 
-        procContent = ProcessContent(basename[0] + '-trans.xml')
+        procContent = ProcessContent(basename[0] + '-' + trans + '.xml')
         procContent.process()
         trans_link = procContent.get_tokenizer()
         i = 0

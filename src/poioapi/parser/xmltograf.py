@@ -16,7 +16,7 @@ import os
 
 class RendToGrAF():
     """
-    Class to rend the parsing files from
+    Class to rend the test_split files from
     the Annotation Tree to GrAF.
 
     """

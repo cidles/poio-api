@@ -54,6 +54,12 @@ class CreateGraid2File:
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeGraid.data_hierarchy[1]
+        clause_aux = word[0]
+        clause = str(clause_aux).replace(' ', '_')
+        graid2 = word[2]
+
         # Open the file
         file = open(self.filepath, "rb")
         annotation_tree.tree = pickle.load(file)
@@ -71,7 +77,7 @@ class CreateGraid2File:
 
         dependencies = doc.createElement('dependencies')
         dependson = doc.createElement('dependsOn')
-        dependson.setAttribute('f.id','clause')
+        dependson.setAttribute('f.id',clause)
         dependencies.appendChild(dependson)
         graphheader.appendChild(dependencies)
 
@@ -83,7 +89,7 @@ class CreateGraid2File:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-graid2.xml')
+        file = os.path.abspath(basename[0] + '-' + graid2 + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -103,12 +109,12 @@ class CreateGraid2File:
 
                 # Creating the node with link
                 node = doc.createElement("node")
-                node.setAttribute("xml:id", "graid2-n"
+                node.setAttribute("xml:id", graid2 + "-n"
                 + str(id_counter)) # Node number
 
                 # Creating the node
                 link = doc.createElement("link")
-                link.setAttribute("targets", "clause-r"
+                link.setAttribute("targets", clause + "-r"
                 + str(id_counter)) # ref
                 node.appendChild(link)
 
@@ -116,18 +122,17 @@ class CreateGraid2File:
 
                 # Creating the features and the linkage
                 a = doc.createElement("a")
-                a.setAttribute("xml:id", "graid2-"
+                a.setAttribute("xml:id", graid2 + "-"
                 + str(id_counter)) # id
-                a.setAttribute("label", "graid2") # label
-                a.setAttribute("ref", "graid2-n"
+                a.setAttribute("label", graid2) # label
+                a.setAttribute("ref", graid2 + "-n"
                 + str(id_counter)) # ref
-                a.setAttribute("as", "graid2") # as
+                a.setAttribute("as", graid2) # as
 
                 # Feature structure
                 feature_st = doc.createElement("fs")
                 feature = doc.createElement("f")
-                feature.setAttribute("name","graid2")
-                feature.setAttribute("value",st)
+                feature.setAttribute("name",graid2)
                 value = doc.createTextNode(st) # Value
                 feature.appendChild(value)
                 feature_st.appendChild(feature)

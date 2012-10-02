@@ -95,7 +95,10 @@ class CreateRawFile:
         """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
+        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
+
+        # Getting the label in data hierarchy
+        utt = data.DataStructureTypeGraid.data_hierarchy[0]
 
         # Open the file
         file = open(self.filepath, "rb")
@@ -118,7 +121,7 @@ class CreateRawFile:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-utt.xml')
+        file = os.path.abspath(basename[0] + '-' + utt + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
@@ -132,7 +135,7 @@ class CreateRawFile:
             last_counter += len(utterance.get('annotation'))
 
             region = doc.createElement("region")
-            region.setAttribute("xml:id", "utt-r"
+            region.setAttribute("xml:id", utt + "-r"
             + str(seg_count)) # Region
             region.setAttribute("anchors",
                 str(counter) + " " +

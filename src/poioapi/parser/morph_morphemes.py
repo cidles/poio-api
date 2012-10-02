@@ -55,6 +55,11 @@ class CreateMorphemesFile:
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeMorphsynt.data_hierarchy[1]
+        word = word[1]
+        morph = word[0]
+
         # Open the file
         file = open(self.filepath, "rb")
         annotation_tree.tree = pickle.load(file)
@@ -76,7 +81,7 @@ class CreateMorphemesFile:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-morph.xml')
+        file = os.path.abspath(basename[0] + '-' + morph + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
@@ -92,7 +97,7 @@ class CreateMorphemesFile:
 
                     region = doc.createElement("region")
                     region.setAttribute("xml:id",
-                        "morph-r" + str(seg_count)) # Region
+                        morph + "-r" + str(seg_count)) # Region
                     region.setAttribute("anchors",
                         str(last_counter) + " "
                         + str(last_counter + len(st))) # Anchors

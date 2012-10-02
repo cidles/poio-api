@@ -49,3 +49,5 @@ graf = xmltograf.RendToGrAF(filepath)
 
 # Choose a type of GrAF Graid1/2, WfW or Gloss
 graf.parse_xml_graf('wfw')
+graf.parse_xml_graf('graid1')
+graf.parse_xml_graf('word')

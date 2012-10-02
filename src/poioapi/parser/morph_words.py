@@ -55,6 +55,10 @@ class CreateMorphWordsFile:
         # Initialize the variable
         annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
 
+        # Getting the label in data hierarchy
+        word = data.DataStructureTypeMorphsynt.data_hierarchy[1]
+        word = word[0]
+
         # Open the file
         file = open(self.filepath, "rb")
         annotation_tree.tree = pickle.load(file)
@@ -76,7 +80,7 @@ class CreateMorphWordsFile:
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-morphword.xml')
+        file = os.path.abspath(basename[0] + '-m' + word + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         # Verify the elements
@@ -85,11 +89,11 @@ class CreateMorphWordsFile:
             # Get the clause unit
             words = element[1]
 
-            for word in words:
-                st = word[0].get('annotation')
+            for word_el in words:
+                st = word_el[0].get('annotation')
                 region = doc.createElement("region")
                 region.setAttribute("xml:id",
-                    "word-r" + str(seg_count)) # Region
+                    word + "-r" + str(seg_count)) # Region
                 region.setAttribute("anchors",
                     str(last_counter) + " "
                     + str(last_counter + len(st))) # Anchors

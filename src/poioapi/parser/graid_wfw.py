@@ -7,8 +7,7 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 """ This module is to create the regions
-of the gloss one by one in a Morphsyntax
-data hierarchy.
+of the WFW one by one.
 """
 
 from xml.dom.minidom import Document
@@ -19,13 +18,13 @@ import os
 import pickle
 import codecs
 
-class CreateMorphGlossFile:
+class CreateWfwFile:
     """
-    Class responsible to retrieve the gloss words
+    Class responsible to retrieve the wfw words
     from the Annotation Tree.
 
     The data hierarchy set in the Annotation Tree
-    must be the MORPHSYNT (Morphsyntax) hierarchy.
+    must be the GRAID hierarchy.
 
     """
 
@@ -41,8 +40,8 @@ class CreateMorphGlossFile:
 
         self.filepath = filepath
 
-    def create_gloss_xml(self):
-        """Creates an xml file with all the gloss words of the
+    def create_wfw_xml(self):
+        """Creates an xml file with all the wfw of the
         Annotation Tree file.
 
         See Also
@@ -53,14 +52,13 @@ class CreateMorphGlossFile:
         """
 
         # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.MORPHSYNT)
+        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
 
         # Getting the label in data hierarchy
-        word = data.DataStructureTypeMorphsynt.data_hierarchy[1]
+        word = data.DataStructureTypeGraid.data_hierarchy[1]
         word = word[1]
-        morph = word[0]
-        gloss = word[1]
-        gloss = gloss[0]
+        wfw = word[1]
+        word = word[0]
 
         # Open the file
         file = open(self.filepath, "rb")
@@ -79,19 +77,19 @@ class CreateMorphGlossFile:
 
         dependencies = doc.createElement('dependencies')
         dependson = doc.createElement('dependsOn')
-        dependson.setAttribute('f.id',morph)
+        dependson.setAttribute('f.id',word)
         dependencies.appendChild(dependson)
         graphheader.appendChild(dependencies)
 
         ann_spaces = doc.createElement('annotationSpaces')
         ann_space = doc.createElement('annotationSpace')
-        ann_space.setAttribute('as.id',gloss)
+        ann_space.setAttribute('as.id',wfw)
         ann_spaces.appendChild(ann_space)
         graphheader.appendChild(ann_spaces)
 
         # Start XML file
         basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-' + gloss + '.xml')
+        file = os.path.abspath(basename[0] + '-' + wfw + '.xml')
         f = codecs.open(file,'w','utf-8')
 
         id_counter = 0
@@ -102,10 +100,9 @@ class CreateMorphGlossFile:
             # Get the utterance
             utterance = element[1]
 
-            for gloss_el in utterance:
-                for el in gloss_el[1]:
-
-                    st = el[0].get('annotation')
+            for wfw_el in utterance:
+                for el in wfw_el[1]:
+                    st = el[1].get('annotation')
 
                     if (st == ''):
                         id_counter+=1
@@ -113,12 +110,12 @@ class CreateMorphGlossFile:
 
                     # Creating the node with link
                     node = doc.createElement("node")
-                    node.setAttribute("xml:id", gloss + "-n"
+                    node.setAttribute("xml:id", wfw + "-n"
                     + str(id_counter)) # Node number
 
                     # Creating the node
                     link = doc.createElement("link")
-                    link.setAttribute("targets", morph + "-r"
+                    link.setAttribute("targets", word + "-r"
                     + str(id_counter)) # ref
                     node.appendChild(link)
 
@@ -126,17 +123,17 @@ class CreateMorphGlossFile:
 
                     # Creating the features and the linkage
                     a = doc.createElement("a")
-                    a.setAttribute("xml:id", gloss + "-"
+                    a.setAttribute("xml:id", wfw + "-"
                     + str(id_counter)) # id
-                    a.setAttribute("label", gloss) # label
-                    a.setAttribute("ref", gloss + "-n"
+                    a.setAttribute("label", wfw) # label
+                    a.setAttribute("ref", wfw + "-n"
                     + str(id_counter)) # ref
-                    a.setAttribute("as", gloss) # as
+                    a.setAttribute("as", wfw) # as
 
                     # Feature structure
                     feature_st = doc.createElement("fs")
                     feature = doc.createElement("f")
-                    feature.setAttribute("name",gloss)
+                    feature.setAttribute("name",wfw)
                     value = doc.createTextNode(st) # Value
                     feature.appendChild(value)
                     feature_st.appendChild(feature)
