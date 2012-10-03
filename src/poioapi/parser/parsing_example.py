@@ -11,33 +11,63 @@ import graid_graid2
 import morph_gloss
 import morph_morphemes
 import morph_words
+import header
 
 filepath = '/home/alopes/tests/pi_2.pickle'
 
+header = header.CreateHeaderFile(filepath)
+header.author = 'Asd qwe'
+
 # AnnotationTree (pickle) to GrAF annotations
-txtrawfile.CreateRawFile(filepath).create_raw_file()
+txt =  txtrawfile.CreateRawFile(filepath)
+txt.create_raw_file()
+header.filename = txt.filename
+header.primaryfile = txt.file
 
-translation.CreateTransFile(filepath).create_trans_xml()
+trs = translation.CreateTransFile(filepath)
+trs.create_trans_xml()
+header.add_annotation(trs.loc, trs.fid)
 
-comment.CreateCommentFile(filepath).create_cmts_xml()
+cmt = comment.CreateCommentFile(filepath)
+cmt.create_cmts_xml()
+header.add_annotation(cmt.loc, cmt.fid)
 
 # GRAID data hierarchy
-graid_clauseunit.CreateClauseUnitsFile(filepath).create_clause_units_file()
+clause = graid_clauseunit.CreateClauseUnitsFile(filepath)
+clause.create_clause_units_file()
+header.add_annotation(clause.loc, clause.fid)
 
-graid_words.CreateGraidWordsFile(filepath).create_words_file()
+words = graid_words.CreateGraidWordsFile(filepath)
+words.create_words_file()
+header.add_annotation(words.loc, words.fid)
+header.unitcount = words.wordcount
 
-graid_wfw.CreateWfwFile(filepath).create_wfw_xml()
+wfw = graid_wfw.CreateWfwFile(filepath)
+wfw.create_wfw_xml()
+header.add_annotation(wfw.loc, wfw.fid)
 
-graid_graid1.CreateGraid1File(filepath).create_graid1_xml()
+graid1 = graid_graid1.CreateGraid1File(filepath)
+graid1.create_graid1_xml()
+header.add_annotation(graid1.loc, graid1.fid)
 
-graid_graid2.CreateGraid2File(filepath).create_graid2_xml()
+graid2 = graid_graid2.CreateGraid2File(filepath)
+graid2.create_graid2_xml()
+header.add_annotation(graid2.loc, graid2.fid)
 
 # Morphemsyntax data hierarchy
-morph_words.CreateMorphWordsFile(filepath).create_words_file()
+morphw = morph_words.CreateMorphWordsFile(filepath)
+morphw.create_words_file()
+header.add_annotation(morphw.loc, morphw.fid)
 
-morph_morphemes.CreateMorphemesFile(filepath).create_morphs_file()
+morphemes = morph_morphemes.CreateMorphemesFile(filepath)
+morphemes.create_morphs_file()
+header.add_annotation(morphemes.loc, morphemes.fid)
 
-morph_gloss.CreateMorphGlossFile(filepath).create_gloss_xml()
+gloss = morph_gloss.CreateMorphGlossFile(filepath)
+gloss.create_gloss_xml()
+header.add_annotation(gloss.loc, gloss.fid)
+
+header.create_header()
 
 # XML (in GrAF) to AnnotationTree (pickle)
 xmltoanntree.XmlToAnnTree().graid_hierarchy(filepath) # GRAID

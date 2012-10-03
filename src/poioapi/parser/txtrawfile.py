@@ -44,6 +44,8 @@ class CreateRawFile:
         """
 
         self.filepath = filepath
+        self.filename = ''
+        self.file = ''
 
     def create_raw_file(self):
         """Creates an txt file with the data in the
@@ -67,6 +69,9 @@ class CreateRawFile:
         basename = self.filepath.split('.pickle')
         file = os.path.abspath(basename[0] + '.txt')
         f = codecs.open(file,'w', 'utf-8') # Need the encode
+
+        self.file = os.path.basename(file)
+        self.filename = os.path.basename(basename[0])
 
         # Verify the elements
         for element in annotation_tree.elements():
@@ -106,7 +111,7 @@ class CreateRawFile:
 
         doc = Document()
         graph = doc.createElement("graph")
-        graph.setAttribute("xmlns:graf", "http://www.xces.org/ns/GrAF/1.0/")
+        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
         doc.appendChild(graph)
 
         # Not need for this seg

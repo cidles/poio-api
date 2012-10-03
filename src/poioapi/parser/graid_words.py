@@ -39,6 +39,9 @@ class CreateGraidWordsFile:
         """
 
         self.filepath = filepath
+        self.loc = ''
+        self.fid = ''
+        self.wordcount = 0
 
     def create_words_file(self):
         """Creates an xml file with all the words of the
@@ -65,7 +68,7 @@ class CreateGraidWordsFile:
 
         doc = Document()
         graph = doc.createElement("graph")
-        graph.setAttribute("xmlns:graf", "http://www.xces.org/ns/GrAF/1.0/")
+        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
         doc.appendChild(graph)
 
         # Header
@@ -82,6 +85,9 @@ class CreateGraidWordsFile:
         basename = self.filepath.split('.pickle')
         file = os.path.abspath(basename[0] + '-' + word + '.xml')
         f = codecs.open(file,'w','utf-8')
+
+        self.loc = os.path.basename(file)
+        self.fid = word
 
         # Verify the elements
         for element in annotation_tree.elements():
@@ -107,6 +113,9 @@ class CreateGraidWordsFile:
                     last_counter += len(st)
 
                     seg_count+=1
+
+        # Set the number of words
+        self.wordcount = seg_count
 
         # Write the content in XML file
         f.write(doc.toprettyxml(indent="  "))

@@ -39,6 +39,8 @@ class CreateWfwFile:
         """
 
         self.filepath = filepath
+        self.loc = ''
+        self.fid = ''
 
     def create_wfw_xml(self):
         """Creates an xml file with all the wfw of the
@@ -66,7 +68,7 @@ class CreateWfwFile:
 
         doc = Document()
         graph = doc.createElement("graph")
-        graph.setAttribute("xmlns:graf", "http://www.xces.org/ns/GrAF/1.0/")
+        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
         doc.appendChild(graph)
 
         # Header
@@ -91,6 +93,9 @@ class CreateWfwFile:
         basename = self.filepath.split('.pickle')
         file = os.path.abspath(basename[0] + '-' + wfw + '.xml')
         f = codecs.open(file,'w','utf-8')
+
+        self.loc = os.path.basename(file)
+        self.fid = wfw
 
         id_counter = 0
 

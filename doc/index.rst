@@ -20,6 +20,7 @@ Modules
    clauseunit
    graid1
    graid2
+   header
    words
    mwords
    gloss

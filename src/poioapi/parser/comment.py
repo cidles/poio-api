@@ -39,6 +39,8 @@ class CreateCommentFile:
         """
 
         self.filepath = filepath
+        self.loc = ''
+        self.fid = ''
 
     def create_cmts_xml(self):
         """Creates an xml file with all the comments of the
@@ -64,7 +66,7 @@ class CreateCommentFile:
 
         doc = Document()
         graph = doc.createElement("graph")
-        graph.setAttribute("xmlns:graf", "http://www.xces.org/ns/GrAF/1.0/")
+        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
         doc.appendChild(graph)
 
         # Header
@@ -89,6 +91,9 @@ class CreateCommentFile:
         basename = self.filepath.split('.pickle')
         file = os.path.abspath(basename[0] + '-' + cmt + '.xml')
         f = codecs.open(file,'w','utf-8')
+
+        self.loc = os.path.basename(file)
+        self.fid = cmt
 
         id_counter = 0
 
