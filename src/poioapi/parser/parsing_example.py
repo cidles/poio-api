@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+#
+# Poio Tools for Linguists
+#
+# Copyright (C) 2009-2012 Poio Project
+# Author: António Lopes <alopes@cidles.eu>
+# URL: <http://www.cidles.eu/ltll/poio>
+
 import xmltoanntree
 import xmltograf
 import txtrawfile
@@ -79,5 +87,5 @@ graf = xmltograf.RendToGrAF(filepath)
 
 # Choose a type of GrAF Graid1/2, WfW or Gloss
 graf.parse_xml_graf('wfw')
-graf.parse_xml_graf('graid1')
-graf.parse_xml_graf('word')
+#graf.parse_xml_graf('graid1')
+#graf.parse_xml_graf('word')
