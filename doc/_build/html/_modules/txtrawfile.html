@@ -98,6 +98,8 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="n">filepath</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
 
 <div class="viewcode-block" id="CreateRawFile.create_raw_file"><a class="viewcode-back" href="../txtraw.html#txtrawfile.CreateRawFile.create_raw_file">[docs]</a>    <span class="k">def</span> <span class="nf">create_raw_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Creates an txt file with the data in the</span>
@@ -121,6 +123,9 @@
         <span class="n">basename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
         <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;.txt&#39;</span><span class="p">)</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span><span class="p">)</span> <span class="c"># Need the encode</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
         <span class="c"># Verify the elements</span>
         <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">annotation_tree</span><span class="o">.</span><span class="n">elements</span><span class="p">():</span>
@@ -149,7 +154,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="c"># Initialize the variable</span>
-        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">GLOSS</span><span class="p">)</span>
+        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">GRAID</span><span class="p">)</span>
+
+        <span class="c"># Getting the label in data hierarchy</span>
+        <span class="n">utt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeGraid</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
         <span class="c"># Open the file</span>
         <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">)</span>
@@ -157,7 +165,7 @@
 
         <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">()</span>
         <span class="n">graph</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">&quot;graph&quot;</span><span class="p">)</span>
-        <span class="n">graph</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;xmlns:graf&quot;</span><span class="p">,</span> <span class="s">&quot;http://www.xces.org/ns/GrAF/1.0/&quot;</span><span class="p">)</span>
+        <span class="n">graph</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;xmlns&quot;</span><span class="p">,</span> <span class="s">&quot;http://www.xces.org/ns/GrAF/1.0/&quot;</span><span class="p">)</span>
         <span class="n">doc</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
 
         <span class="c"># Not need for this seg</span>
@@ -172,7 +180,7 @@
 
         <span class="c"># Start XML file</span>
         <span class="n">basename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
-        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-utt.xml&#39;</span><span class="p">)</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">utt</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
 
         <span class="c"># Verify the elements</span>
@@ -186,7 +194,7 @@
             <span class="n">last_counter</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">utterance</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;annotation&#39;</span><span class="p">))</span>
 
             <span class="n">region</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">&quot;region&quot;</span><span class="p">)</span>
-            <span class="n">region</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;xml:id&quot;</span><span class="p">,</span> <span class="s">&quot;utt-r&quot;</span>
+            <span class="n">region</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;xml:id&quot;</span><span class="p">,</span> <span class="n">utt</span> <span class="o">+</span> <span class="s">&quot;-r&quot;</span>
             <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">seg_count</span><span class="p">))</span> <span class="c"># Region</span>
             <span class="n">region</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;anchors&quot;</span><span class="p">,</span>
                 <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span>

@@ -1,6 +1,6 @@
-=============================
-Poio API Module - `header.py`
-=============================
+===========
+`header.py`
+===========
    
 .. automodule:: header
    :members:

@@ -1,0 +1,237 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>search.py &mdash; Poio API 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Poio API 1 documentation" href="index.html" />
+    <link rel="up" title="PoioAPI Parser" href="parser.html" />
+    <link rel="next" title="PoioAPI Tests" href="tests.html" />
+    <link rel="prev" title="xmltograf.py" href="xmltograf.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tests.html" title="PoioAPI Tests"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="xmltograf.html" title="xmltograf.py"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Poio API 1 documentation</a> &raquo;</li>
+          <li><a href="parser.html" accesskey="U">PoioAPI Parser</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-search_replace">
+<span id="search-py"></span><h1><cite>search.py</cite><a class="headerlink" href="#module-search_replace" title="Permalink to this headline">¶</a></h1>
+<p>This module is to make the search in the
+GrAF files.</p>
+<dl class="class">
+<dt id="search_replace.SearchReplace">
+<em class="property">class </em><tt class="descclassname">search_replace.</tt><tt class="descname">SearchReplace</tt><big>(</big><em>filepath</em><big>)</big><a class="reference internal" href="_modules/search_replace.html#SearchReplace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#search_replace.SearchReplace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that allows to search and replace
+in the XML GrAF file.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="search_replace.SearchReplace._write_file">
+<tt class="descname">_write_file</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/search_replace.html#SearchReplace._write_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#search_replace.SearchReplace._write_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that will write the changes in the
+XML file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="search_replace.SearchReplace.find_word">
+<tt class="descname">find_word</tt><big>(</big><em>word</em>, <em>case_sensitive=True</em>, <em>whole_word=False</em><big>)</big><a class="reference internal" href="_modules/search_replace.html#SearchReplace.find_word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#search_replace.SearchReplace.find_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method look for the given reference node to
+replace the word by the new word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>word</strong> : str</p>
+<blockquote>
+<div><p>Word to be find.</p>
+</div></blockquote>
+<p><strong>case_sensitive</strong> : bool</p>
+<blockquote>
+<div><p>Is to find the exact word.</p>
+</div></blockquote>
+<p><strong>whole_word</strong> : bool</p>
+<blockquote class="last">
+<div><p>Find the word in sentences or words.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="search_replace.SearchReplace.replace_all">
+<tt class="descname">replace_all</tt><big>(</big><em>word</em>, <em>new_word</em><big>)</big><a class="reference internal" href="_modules/search_replace.html#SearchReplace.replace_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#search_replace.SearchReplace.replace_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method look for the given word in all the
+feature tags and then replace it by the new word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>word</strong> : str</p>
+<blockquote>
+<div><p>Word to be replaced.</p>
+</div></blockquote>
+<p><strong>new_word</strong> : str</p>
+<blockquote class="last">
+<div><p>Word to replace the one that is being searched.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="search_replace.SearchReplace.replace_word">
+<tt class="descname">replace_word</tt><big>(</big><em>word</em>, <em>new_word</em>, <em>ref_node</em><big>)</big><a class="reference internal" href="_modules/search_replace.html#SearchReplace.replace_word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#search_replace.SearchReplace.replace_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method look for the given reference node to
+replace the word by the new word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>word</strong> : str</p>
+<blockquote>
+<div><p>Word to be replaced.</p>
+</div></blockquote>
+<p><strong>new_word</strong> : str</p>
+<blockquote>
+<div><p>Word to replace the one that is being searched.</p>
+</div></blockquote>
+<p><strong>ref_node</strong> : str</p>
+<blockquote class="last">
+<div><p>Reference to the node that contains the word to be replaced.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>search.py</cite></a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="xmltograf.html"
+                        title="previous chapter"><cite>xmltograf.py</cite></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tests.html"
+                        title="next chapter">PoioAPI Tests</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/search_parser.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tests.html" title="PoioAPI Tests"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="xmltograf.html" title="xmltograf.py"
+             >previous</a> |</li>
+        <li><a href="index.html">Poio API 1 documentation</a> &raquo;</li>
+          <li><a href="parser.html" >PoioAPI Parser</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Peter Bouda.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

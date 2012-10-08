@@ -1,6 +1,6 @@
-==============================
-Poio API Module - `comment.py`
-==============================
+============
+`comment.py`
+============
    
 .. automodule:: comment
    :members:

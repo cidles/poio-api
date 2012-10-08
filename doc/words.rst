@@ -1,6 +1,6 @@
-===================================
-Poio API Module - `graid_words.py`
-===================================
+================
+`graid_words.py`
+================
    
 .. automodule:: graid_words
    :members:

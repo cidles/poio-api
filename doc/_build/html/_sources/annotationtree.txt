@@ -1,6 +1,6 @@
-=====================================
-Poio API Module - `annotationtree.py`
-=====================================
+===================
+`annotationtree.py`
+===================
 
 .. automodule:: annotationtree
    :members:

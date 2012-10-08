@@ -33,17 +33,21 @@ annotationtree_class = annotationtree.AnnotationTree(data_class)
 anntreefilter_class = annotationtree.AnnotationTreeFilter(data_class)
 
 # Open the file and set it to the AnnotationTree
-filepath = 'C:\TESTS\Balochi Text1.pickle'
+filepath = '/home/alopes/tests/pi_2.pickle'
 file = open(filepath, "rb")
 annotationtree_class.tree = pickle.load(file)
 
 class TestAnnotationTree:
+    """
+    This class contain the test methods to the
+    class annotation.py.
 
-    # Is the setter
+    """
+
     def test_next_annotation_id(self):
         """Raise an assertion if the next id isn't correct.
 
-        Returns the next annotation id..
+        Returns the next annotation id.
 
         Raises
         ------
@@ -91,11 +95,11 @@ class TestAnnotationTree:
         """
 
         # If the filepath variable value equal like this
-        filepath = 'C:\TESTS\save_test_file.pickle'
+        filepath = 'save_test_file.pickle'
 
         error_message = 'Fail - Save pickle as tree'
 
-        assert(annotationtree_class.save_tree_as_pickle(filepath),error_message)
+        assert annotationtree_class.save_tree_as_pickle(filepath), error_message
 
     def test_load_tree_from_pickle(self):
         """Raise an assertion if can't load the file.
@@ -111,12 +115,11 @@ class TestAnnotationTree:
         """
 
         # If the filepath variable value equal like this
-        filepath = 'C:\TESTS\Balochi Text1.pickle'
+        filepath = '/home/alopes/tests/pi_2.pickle'
 
         error_message = 'Fail - Load the tree from pickle file'
 
-        assert(annotationtree_class.load_tree_from_pickle(filepath),
-               error_message)
+        assert annotationtree_class.load_tree_from_pickle(filepath), error_message
 
     def test_append_element(self):
         """Raise an assertion if can't append the element.
@@ -136,8 +139,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Can not append'
 
-        assert(annotationtree_class.append_element(element, update_ids),
-            error_message)
+        assert annotationtree_class.append_element(element, update_ids), error_message
 
     def test__update_ids_of_element(self):
         """Raise an assertion if can't update the element ids.
@@ -163,8 +165,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Can not append elements'
 
-        assert(annotationtree_class._update_ids_of_element(element),
-            error_message)
+        assert annotationtree_class._update_ids_of_element(element), error_message
 
     def test_empty_element(self):
         """Raise an assertion if the array have no elements.
@@ -193,7 +194,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Empty element'
 
-        assert(annotationtree_class.empty_element(), error_message)
+        assert annotationtree_class.empty_element(), error_message
 
     def test_append_empty_element(self):
         """Raise an assertion if can't append the element
@@ -213,8 +214,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Can not append elements'
 
-        assert(annotationtree_class.append_empty_element(),
-            error_message)
+        assert annotationtree_class.append_empty_element(), error_message
 
     def test_elements(self):
         """Raise an assertion if can't retrieve any element.
@@ -321,8 +321,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Can not append the filter'
 
-        assert(annotationtree_class.append_filter(filter),
-            error_message)
+        assert annotationtree_class.append_filter(filter), error_message
 
     def test_last_filter(self):
         """Raise an assertion if can't return the
@@ -401,8 +400,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Initialize the filters'
 
-        assert(annotationtree_class.init_filters(),
-            error_message)
+        assert annotationtree_class.init_filters(), error_message
 
     def test_reset_filters(self):
         """Raise an assertion if there's no tree.
@@ -418,8 +416,7 @@ class TestAnnotationTree:
 
         error_message = 'Fail - Resetting the filters'
 
-        assert(annotationtree_class.reset_filters(),
-               error_message)
+        assert annotationtree_class.reset_filters(), error_message
 
     def test_as_html(self, filtered = False, html_frame = True):
         """Raise an assertion if can't create the html page.
@@ -437,7 +434,7 @@ class TestAnnotationTree:
         annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
 
         # Open the file and set it to the AnnotationTree
-        filepath = 'C:\TESTS\Balochi Text1.pickle'
+        filepath = '/home/alopes/tests/pi_2.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 
@@ -446,8 +443,7 @@ class TestAnnotationTree:
         html_frame = True
 
         error_message = 'Fail - To create html file'
-        assert(annotationtree_class.as_html(filtered, html_frame),
-            error_message)
+        assert annotationtree_class.as_html(filtered, html_frame), error_message
 
     def test__element_as_table(self):
         """Raise an assertion if can't insert an element into
@@ -466,7 +462,7 @@ class TestAnnotationTree:
         annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
 
         # Open the file and set it to the AnnotationTree
-        filepath = 'C:\TESTS\Balochi Text1.pickle'
+        filepath = '/home/alopes/tests/pi_2.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 
@@ -518,8 +514,7 @@ class TestAnnotationTreeFilter:
 
         error_message = 'Fail - Resetting the match object'
 
-        assert(anntreefilter_class.reset_match_object(),
-               error_message)
+        assert anntreefilter_class.reset_match_object(), error_message
 
     def test_set_filter_for_type(self):
         """Raise an assertion if can't set the filter.
@@ -539,8 +534,8 @@ class TestAnnotationTreeFilter:
 
         error_message = 'Fail - Setting the filter type'
 
-        assert(anntreefilter_class.set_filter_for_type(
-            ann_type,filter_string), error_message)
+        assert anntreefilter_class.set_filter_for_type(
+            ann_type,filter_string), error_message
 
     def test_set_inverted_filter(self):
         """Raise an assertion if can't set the filter.
@@ -559,8 +554,7 @@ class TestAnnotationTreeFilter:
 
         error_message = 'Fail - Setting the inverted filter'
 
-        assert(anntreefilter_class.set_inverted_filter(inverted),
-               error_message)
+        assert anntreefilter_class.set_inverted_filter(inverted), error_message
 
     def test_set_contained_matches(self):
         """Raise an assertion if can't set the filter.
@@ -579,8 +573,8 @@ class TestAnnotationTreeFilter:
 
         error_message = 'Fail - Setting the contained matches'
 
-        assert(anntreefilter_class.set_contained_matches(
-            contained_matches),error_message)
+        assert anntreefilter_class.set_contained_matches(
+            contained_matches), error_message
 
     def test_set_boolean_operation(self):
         """Raise an assertion if can't set the filter.
@@ -599,8 +593,7 @@ class TestAnnotationTreeFilter:
 
         error_message = 'Fail - Setting the boolean operation'
 
-        assert(anntreefilter_class.set_boolean_operation(type),
-            error_message)
+        assert anntreefilter_class.set_boolean_operation(type), error_message
 
     def test_element_passes_filter(self):
         """Raise an assertion if can't pass the filter.
@@ -616,7 +609,7 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        filepath = 'C:\TESTS\Balochi Text1.pickle'
+        filepath = '/home/alopes/tests/pi_2.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 
@@ -650,7 +643,7 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        filepath = 'C:\TESTS\Balochi Text1.pickle'
+        filepath = '/home/alopes/tests/pi_2.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 

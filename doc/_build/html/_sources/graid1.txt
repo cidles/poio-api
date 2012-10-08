@@ -1,6 +1,6 @@
-===================================
-Poio API Module - `graid_graid1.py`
-===================================
+=================
+`graid_graid1.py`
+=================
    
 .. automodule:: graid_graid1
    :members:

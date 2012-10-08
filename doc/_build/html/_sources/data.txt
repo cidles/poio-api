@@ -1,6 +1,6 @@
-===========================
-Poio API Module - `data.py`
-===========================
+=========
+`data.py`
+=========
    
 .. automodule:: data
    :members:

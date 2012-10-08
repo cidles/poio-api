@@ -1,6 +1,6 @@
-===================================
-Poio API Module - `xmltoanntree.py`
-===================================
+=================
+`xmltoanntree.py`
+=================
    
 .. automodule:: xmltoanntree
    :members:

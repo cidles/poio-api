@@ -1,6 +1,6 @@
-==================================
-Poio API Module - `morph_gloss.py`
-==================================
+================
+`morph_gloss.py`
+================
    
 .. automodule:: morph_gloss
    :members:

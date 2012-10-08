@@ -1,6 +1,6 @@
-==================================
-Poio API Module - `translation.py`
-==================================
+================
+`translation.py`
+================
    
 .. automodule:: translation
    :members:

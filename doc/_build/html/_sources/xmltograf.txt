@@ -1,6 +1,6 @@
-================================
-Poio API Module - `xmltograf.py`
-================================
+==============
+`xmltograf.py`
+==============
    
 .. automodule:: xmltograf
    :members:

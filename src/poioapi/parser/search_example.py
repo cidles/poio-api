@@ -6,7 +6,7 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 
-import search
+import search_replace
 
 filepath = '/home/alopes/tests/pi_2-rend.xml'
 

@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>test_data &mdash; Poio API 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Poio API 1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Poio API 1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for test_data</h1><div class="highlight"><pre>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c">#</span>
+<span class="c"># Poio Tools for Linguists</span>
+<span class="c">#</span>
+<span class="c"># Copyright (C) 2009-2012 Poio Project</span>
+<span class="c"># Author: António Lopes &lt;alopes@cidles.eu&gt;</span>
+<span class="c"># URL: &lt;http://www.cidles.eu/ltll/poio&gt;</span>
+<span class="c"># For license information, see LICENSE.TXT</span>
+<span class="sd">&quot;&quot;&quot;This module contains the tests to the class</span>
+<span class="sd">DataStrutctureType in data.py module.</span>
+
+<span class="sd">This test serves to ensure the viability of the methods of</span>
+<span class="sd">the class DataStructureType in data.py.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">poioapi</span> <span class="kn">import</span> <span class="n">data</span>
+
+<span class="c"># Initialize the DataStructureType class</span>
+<span class="n">data_class</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureType</span><span class="p">()</span>
+
+<div class="viewcode-block" id="TestDataStructureType"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType">[docs]</a><span class="k">class</span> <span class="nc">TestDataStructureType</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class contain the test methods to the</span>
+<span class="sd">    class data.py.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TestDataStructureType.test_get_siblings_of_type"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType.test_get_siblings_of_type">[docs]</a>    <span class="k">def</span> <span class="nf">test_get_siblings_of_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raise an assertion if there&#39;s no siblings to return.</span>
+
+<span class="sd">        Return all the siblings of a given type in the hierarchy</span>
+<span class="sd">        including the given type itself.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If the results there aren&#39;t the expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># If the ann_type value equal like this</span>
+        <span class="n">ann_type</span> <span class="o">=</span> <span class="s">&#39;utterance&#39;</span>
+
+        <span class="c"># The result expected should be</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;utterance&#39;</span><span class="p">,</span><span class="s">&#39;translation&#39;</span><span class="p">]</span>
+
+        <span class="k">assert</span><span class="p">(</span><span class="n">data_class</span><span class="o">.</span><span class="n">get_siblings_of_type</span><span class="p">(</span><span class="n">ann_type</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDataStructureType.test_get_parents_of_type"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType.test_get_parents_of_type">[docs]</a>    <span class="k">def</span> <span class="nf">test_get_parents_of_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raise an assertion if there&#39;s no parents to return.</span>
+
+<span class="sd">        Returns all the elements that are above a given type in the type</span>
+<span class="sd">        hierarchy.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If the results there aren&#39;t the expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># If the ann_type value equal like this</span>
+        <span class="n">ann_type</span> <span class="o">=</span> <span class="s">&#39;utterance&#39;</span>
+
+        <span class="c"># The result expected should be</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;utterance&#39;</span><span class="p">,</span> <span class="s">&#39;translation&#39;</span><span class="p">]</span>
+
+        <span class="k">assert</span><span class="p">(</span><span class="n">data_class</span><span class="o">.</span><span class="n">get_parents_of_type</span><span class="p">(</span><span class="n">ann_type</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDataStructureType.test__get_parents_of_type_helper"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType.test__get_parents_of_type_helper">[docs]</a>    <span class="k">def</span> <span class="nf">test__get_parents_of_type_helper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raise an assertion if there&#39;s no elements to return.</span>
+
+<span class="sd">        Helper function for get_parents_of_type.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If the results there aren&#39;t the expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># If the ann_type and hierarchy values equal like this</span>
+        <span class="n">ann_type</span> <span class="o">=</span> <span class="s">&#39;clause unit&#39;</span>
+        <span class="n">hierarchy</span> <span class="o">=</span>\
+                  <span class="p">[</span> <span class="s">&#39;utterance&#39;</span><span class="p">,</span>
+                   <span class="p">[</span> <span class="s">&#39;clause unit&#39;</span><span class="p">,</span>
+                       <span class="p">[</span> <span class="s">&#39;word&#39;</span><span class="p">,</span> <span class="s">&#39;wfw&#39;</span><span class="p">,</span> <span class="s">&#39;graid1&#39;</span> <span class="p">],</span>
+                   <span class="s">&#39;graid2&#39;</span> <span class="p">],</span>
+                   <span class="s">&#39;translation&#39;</span><span class="p">,</span> <span class="s">&#39;comment&#39;</span> <span class="p">]</span>
+
+        <span class="c"># The result expected should be a {tuple}</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;utterance&#39;</span><span class="p">,</span> <span class="s">&#39;translation&#39;</span><span class="p">,</span> <span class="s">&#39;comment&#39;</span><span class="p">])</span>
+
+        <span class="k">assert</span><span class="p">(</span><span class="n">data_class</span><span class="o">.</span><span class="n">_get_parents_of_type_helper</span><span class="p">(</span><span class="n">ann_type</span><span class="p">,</span> <span class="n">hierarchy</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDataStructureType.test_empty_element"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType.test_empty_element">[docs]</a>    <span class="k">def</span> <span class="nf">test_empty_element</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raise an assertion if there&#39;s no elements to return.</span>
+
+<span class="sd">        Return the appended list of a certain data hierarchy.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If the results there aren&#39;t the expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># The expected result to the define data hierarchy</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;annotation&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">},</span>
+                            <span class="p">[[{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;annotation&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">}]],</span>
+                              <span class="p">{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;annotation&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">}]</span>
+
+        <span class="k">assert</span><span class="p">(</span><span class="n">data_class</span><span class="o">.</span><span class="n">empty_element</span><span class="p">()</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDataStructureType.test__append_list"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType.test__append_list">[docs]</a>    <span class="k">def</span> <span class="nf">test__append_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raise an assertion if the elements list is invalid.</span>
+
+<span class="sd">        Append element values and it&#39;s ids to the data structure elements.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If the results there aren&#39;t the expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># If the element value equal like this</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;word&#39;</span><span class="p">,</span> <span class="s">&#39;wfw&#39;</span><span class="p">,</span> <span class="s">&#39;graid1&#39;</span><span class="p">]</span>
+
+        <span class="c"># The result expected should be</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;annotation&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">},</span>
+                <span class="p">{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;annotation&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">},</span>
+                <span class="p">{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;annotation&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">}]</span>
+
+        <span class="k">assert</span><span class="p">(</span><span class="n">data_class</span><span class="o">.</span><span class="n">_append_list</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDataStructureType.test_test_flatten_hierarchy_elements"><a class="viewcode-back" href="../testdata.html#test_data.TestDataStructureType.test_test_flatten_hierarchy_elements">[docs]</a>    <span class="k">def</span> <span class="nf">test_test_flatten_hierarchy_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raise an assertion if the elements aren&#39;t correct.</span>
+
+<span class="sd">        Flat the elements appended to a new list of elements.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If the results there aren&#39;t the expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># If the elements value equal like this</span>
+        <span class="n">elements</span> <span class="o">=</span>\
+           <span class="p">[</span> <span class="s">&#39;utterance&#39;</span><span class="p">,</span>
+               <span class="p">[</span> <span class="s">&#39;clause unit&#39;</span><span class="p">,</span>
+                   <span class="p">[</span> <span class="s">&#39;word&#39;</span><span class="p">,</span> <span class="s">&#39;wfw&#39;</span><span class="p">,</span> <span class="s">&#39;graid1&#39;</span> <span class="p">],</span>
+                 <span class="s">&#39;graid2&#39;</span> <span class="p">],</span>
+             <span class="s">&#39;translation&#39;</span><span class="p">,</span> <span class="s">&#39;comment&#39;</span> <span class="p">]</span>
+
+        <span class="c"># The result expected should be</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;utterance&#39;</span><span class="p">,</span>
+                           <span class="s">&#39;clause unit&#39;</span><span class="p">,</span>
+                           <span class="s">&#39;word&#39;</span><span class="p">,</span> <span class="s">&#39;wfw&#39;</span><span class="p">,</span> <span class="s">&#39;graid1&#39;</span><span class="p">,</span>
+                           <span class="s">&#39;graid2&#39;</span><span class="p">,</span>
+                           <span class="s">&#39;translation&#39;</span><span class="p">,</span>
+                           <span class="s">&#39;comment&#39;</span><span class="p">]</span>
+
+        <span class="k">assert</span><span class="p">(</span><span class="n">data_class</span><span class="o">.</span><span class="n">_flatten_hierarchy_elements</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Poio API 1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Peter Bouda.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

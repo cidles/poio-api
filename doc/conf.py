@@ -18,6 +18,7 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../src/poioapi/'))
 sys.path.insert(1, os.path.abspath('../src/poioapi/parser/'))
+sys.path.insert(2, os.path.abspath('../src/poioapi/tests/'))
 
 # -- General configuration -----------------------------------------------------
 

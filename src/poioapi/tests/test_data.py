@@ -19,6 +19,11 @@ from poioapi import data
 data_class = data.DataStructureType()
 
 class TestDataStructureType:
+    """
+    This class contain the test methods to the
+    class data.py.
+
+    """
 
     def test_get_siblings_of_type(self):
         """Raise an assertion if there's no siblings to return.

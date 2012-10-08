@@ -80,7 +80,7 @@
 
 <div class="viewcode-block" id="XmlHandler"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlHandler">[docs]</a><span class="k">class</span> <span class="nc">XmlHandler</span><span class="p">(</span><span class="n">ContentHandler</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Class that handles the XML parsing.</span>
+<span class="sd">    Class that handles the XML test_split.</span>
 
 <span class="sd">    The class uses the ContentHandler from</span>
 <span class="sd">    SAX XML.</span>
@@ -145,7 +145,7 @@
 </div></div>
 <div class="viewcode-block" id="ProcessContent"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.ProcessContent">[docs]</a><span class="k">class</span> <span class="nc">ProcessContent</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Class that handles the XML parsing.</span>
+<span class="sd">    Class that handles the XML test_split.</span>
 
 <span class="sd">    The class uses the ContentHandler from</span>
 <span class="sd">    SAX XML.</span>
@@ -201,7 +201,7 @@
 </div></div>
 <div class="viewcode-block" id="XmlToAnnTree"><a class="viewcode-back" href="../xmltoanntree.html#xmltoanntree.XmlToAnnTree">[docs]</a><span class="k">class</span> <span class="nc">XmlToAnnTree</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Class that handles the parsing of the xml files</span>
+<span class="sd">    Class that handles the test_split of the xml files</span>
 <span class="sd">    to a Annotation Tree.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -220,6 +220,17 @@
         <span class="c"># Initialize the variable</span>
         <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">GRAID</span><span class="p">)</span>
 
+        <span class="c"># Getting the label in data hierarchy</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeGraid</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">clause</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="s">&#39;_&#39;</span><span class="p">)</span>
+        <span class="n">graid2</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">wfw</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">graid1</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">trans</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeMorphsynt</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">cmt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeMorphsynt</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
         <span class="c"># Open the raw file</span>
         <span class="n">basename</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
         <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;.txt&#39;</span><span class="p">)</span>
@@ -233,22 +244,22 @@
         <span class="n">tree</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c"># Getting the words</span>
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-word.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">word_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">word_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
 
         <span class="c"># Getting the clause units</span>
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-clause.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">clause</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">clause_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">clause_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
 
         <span class="c"># Getting the wfw</span>
         <span class="n">wfw_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-wfw.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">wfw</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-wfw.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">wfw</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">wfw_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -260,9 +271,9 @@
 
         <span class="c"># Getting the graid1</span>
         <span class="n">graid1_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid1.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">graid1</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid1.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">graid1</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">graid1_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -274,9 +285,9 @@
 
         <span class="c"># Getting the graid2</span>
         <span class="n">graid2_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid2.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">graid2</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-graid2.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">graid2</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">graid2_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -288,9 +299,9 @@
 
         <span class="c"># Getting the translations</span>
         <span class="n">trans_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">trans</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">trans</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">trans_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -302,9 +313,9 @@
 
         <span class="c"># Getting the comments</span>
         <span class="n">cmts_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">cmt</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">cmt</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">cmts_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -510,6 +521,17 @@
         <span class="c"># Initialize the variable</span>
         <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">MORPHSYNT</span><span class="p">)</span>
 
+        <span class="c"># Getting the label in data hierarchy</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeMorphsynt</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">morph</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">morph</span> <span class="o">=</span> <span class="n">morph</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">gloss</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">gloss</span> <span class="o">=</span> <span class="n">gloss</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">gloss</span> <span class="o">=</span> <span class="n">gloss</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">trans</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeMorphsynt</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">cmt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeMorphsynt</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
         <span class="c"># Open the raw file</span>
         <span class="n">basename</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
         <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;.txt&#39;</span><span class="p">)</span>
@@ -523,22 +545,22 @@
         <span class="n">tree</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c"># Getting the words</span>
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-morphword.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-m&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">word_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">word_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
 
         <span class="c"># Getting the morphemes</span>
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-morph.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">morph</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">morph_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">morph_ids</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_token_id</span><span class="p">()</span>
 
         <span class="c"># Getting the gloss</span>
         <span class="n">gloss_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-gloss.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">gloss</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-gloss.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">gloss</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">gloss_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -550,9 +572,9 @@
 
         <span class="c"># Getting the translations</span>
         <span class="n">trans_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">trans</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">trans</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">trans_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -564,9 +586,9 @@
 
         <span class="c"># Getting the comments</span>
         <span class="n">cmts_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">cmt</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-cmt.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">cmt</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">cmts_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -719,7 +741,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="c"># Initialize the variable</span>
-        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">MORPHSYNT</span><span class="p">)</span>
+        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">WORDS</span><span class="p">)</span>
+
+        <span class="c"># Getting the label in data hierarchy</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureType</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">trans</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeMorphsynt</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 
         <span class="c"># Open the raw file</span>
         <span class="n">basename</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
@@ -734,15 +761,15 @@
         <span class="n">tree</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c"># Getting the words</span>
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-word.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">word_range</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
 
         <span class="c"># Getting the translations</span>
         <span class="n">trans_values</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">xmldoc</span> <span class="o">=</span> <span class="n">minidom</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">trans</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
 
-        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-trans.xml&#39;</span><span class="p">)</span>
+        <span class="n">procContent</span> <span class="o">=</span> <span class="n">ProcessContent</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-&#39;</span> <span class="o">+</span> <span class="n">trans</span> <span class="o">+</span> <span class="s">&#39;.xml&#39;</span><span class="p">)</span>
         <span class="n">procContent</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
         <span class="n">trans_link</span> <span class="o">=</span> <span class="n">procContent</span><span class="o">.</span><span class="n">get_tokenizer</span><span class="p">()</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>

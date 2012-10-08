@@ -38,7 +38,7 @@ class TestCreateCommentFile:
         """
 
         # Initialize values
-        filepath = 'D:/tests/pi_2.pickle'
+        filepath = '/home/alopes/tests/pi_2.pickle'
 
         comment.CreateCommentFile(filepath).create_cmts_xml()
 
@@ -65,6 +65,6 @@ class TestCreateCommentFile:
 
         xml_file.close()
 
-        assert(xml_content, expected_result)
+        assert(xml_content == expected_result)
 
 

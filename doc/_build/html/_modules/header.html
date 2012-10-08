@@ -164,22 +164,10 @@
 <span class="sd">        add_language</span>
 <span class="sd">        add_participant</span>
 <span class="sd">        add_setting</span>
-<span class="sd">        http://en.wikipedia.org/wiki/ISO_8601 : More information</span>
-<span class="sd">        about the ISO 8601 data format.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="c"># Initialize the variable</span>
-        <span class="n">annotation_tree</span> <span class="o">=</span> <span class="n">annotationtree</span><span class="o">.</span><span class="n">AnnotationTree</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">GRAID</span><span class="p">)</span>
-
-        <span class="c"># Getting the label in data hierarchy</span>
-        <span class="n">cmt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeGraid</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-        <span class="n">utt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataStructureTypeGraid</span><span class="o">.</span><span class="n">data_hierarchy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-        <span class="c"># Open the file</span>
-        <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">)</span>
-        <span class="n">annotation_tree</span><span class="o">.</span><span class="n">tree</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
-
+        <span class="c"># Start the Header file</span>
         <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">()</span>
 
         <span class="n">doc_header</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">&quot;documentHeader&quot;</span><span class="p">)</span> <span class="c"># Required</span>
@@ -410,7 +398,7 @@
 
         <span class="c"># Start XML file</span>
         <span class="n">basename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;.pickle&#39;</span><span class="p">)</span>
-        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-header.xml&#39;</span><span class="p">)</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">basename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;-header.hdr&#39;</span><span class="p">)</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
 
         <span class="c"># Write the content in XML file</span>
@@ -473,11 +461,6 @@
 <span class="sd">        language_code : str</span>
 <span class="sd">            ISO 639 code(s) for the language(s) of the primary data.</span>
 
-<span class="sd">        See Also</span>
-<span class="sd">        --------</span>
-<span class="sd">        http://en.wikipedia.org/wiki/ISO_639 : Information about the</span>
-<span class="sd">        ISO 639 standards.</span>
-
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">annotation_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">language_code</span><span class="p">)</span>
@@ -496,11 +479,11 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        `name` : str</span>
+<span class="sd">        name : str</span>
 <span class="sd">            ISO 639 code(s) for the language(s) of the primary data.</span>
 <span class="sd">        id : str</span>
 <span class="sd">            Identifier for reference from annotation documents.</span>
-<span class="sd">        age ; int</span>
+<span class="sd">        age : int</span>
 <span class="sd">            Age of the speaker.</span>
 <span class="sd">        role : str</span>
 <span class="sd">            Role of the speaker in the discourse.</span>
@@ -528,7 +511,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        who : str</span>
 <span class="sd">            Reference to person IDs involved in this interaction.</span>
-<span class="sd">        time ; str</span>
+<span class="sd">        time : str</span>
 <span class="sd">            Time of the interaction.</span>
 <span class="sd">        activity : str</span>
 <span class="sd">            What a participant in a language interaction is doing</span>
@@ -539,8 +522,8 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">annotation_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">who</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">activity</span><span class="p">,</span> <span class="n">locale</span><span class="p">)</span>
-</pre></div></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">annotation_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">who</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">activity</span><span class="p">,</span> <span class="n">locale</span><span class="p">)</span></div></div>
+</pre></div>
 
           </div>
         </div>
