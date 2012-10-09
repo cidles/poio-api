@@ -5,26 +5,29 @@
 # Copyright (C) 2009-2012 Poio Project
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
+"""This module contains a simple example 
+how to use the PoioAPI Parser.
+"""
 
-import xmltoanntree
-import xmltograf
-import txtrawfile
-import translation
-import comment
-import graid_clauseunit
-import graid_words
-import graid_wfw
-import graid_graid1
-import graid_graid2
-import morph_gloss
-import morph_morphemes
-import morph_words
-import header
+from poioapi.parser import xmltoanntree
+from poioapi.parser import xmltograf
+from poioapi.parser import txtrawfile
+from poioapi.parser import translation
+from poioapi.parser import comment
+from poioapi.parser import graid_clauseunit
+from poioapi.parser import graid_words
+from poioapi.parser import graid_wfw
+from poioapi.parser import graid_graid1
+from poioapi.parser import graid_graid2
+from poioapi.parser import morph_gloss
+from poioapi.parser import morph_morphemes
+from poioapi.parser import morph_words
+from poioapi.parser import header
 
-filepath = '/home/alopes/tests/pi_2.pickle'
+filepath = 'Balochi Text1.pickle'
 
 header = header.CreateHeaderFile(filepath)
-header.author = 'Asd qwe'
+header.author = 'Author'
 
 # AnnotationTree (pickle) to GrAF annotations
 txt =  txtrawfile.CreateRawFile(filepath)

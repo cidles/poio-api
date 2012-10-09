@@ -1,0 +1,900 @@
+<?xml version="1.0" ?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="utterance"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="translation"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="translation-n0">
+    <link targets="utterance-r0"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n0" xml:id="translation-n0">
+    <fs>
+      <f name="translation">They say:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n1">
+    <link targets="utterance-r1"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n1" xml:id="translation-n1">
+    <fs>
+      <f name="translation">that there was a king.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n2">
+    <link targets="utterance-r2"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n2" xml:id="translation-n2">
+    <fs>
+      <f name="translation">This king had a light post in the centre of his town</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n3">
+    <link targets="utterance-r3"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n3" xml:id="translation-n3">
+    <fs>
+      <f name="translation">and whatever phone wires there were,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n4">
+    <link targets="utterance-r4"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n4" xml:id="translation-n4">
+    <fs>
+      <f name="translation">they were connected to this (light post)</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n5">
+    <link targets="utterance-r5"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n5" xml:id="translation-n5">
+    <fs>
+      <f name="translation">anyone who had a petition,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n6">
+    <link targets="utterance-r6"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n6" xml:id="translation-n6">
+    <fs>
+      <f name="translation">when he shook this (light post),</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n7">
+    <link targets="utterance-r7"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n7" xml:id="translation-n7">
+    <fs>
+      <f name="translation">the king was informed there (in his palace).</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n8">
+    <link targets="utterance-r8"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n8" xml:id="translation-n8">
+    <fs>
+      <f name="translation">One day he noticed</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n9">
+    <link targets="utterance-r9"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n9" xml:id="translation-n9">
+    <fs>
+      <f name="translation">that a dragon had come and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n10">
+    <link targets="utterance-r10"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n10" xml:id="translation-n10">
+    <fs>
+      <f name="translation">was shaking this (light post).</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n11">
+    <link targets="utterance-r11"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n11" xml:id="translation-n11">
+    <fs>
+      <f name="translation">The king sent a person</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n12">
+    <link targets="utterance-r12"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n12" xml:id="translation-n12">
+    <fs>
+      <f name="translation">(to check) what this was.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n13">
+    <link targets="utterance-r13"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n13" xml:id="translation-n13">
+    <fs>
+      <f name="translation">They (the ones whom the king had sent) came (back),</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n14">
+    <link targets="utterance-r14"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n14" xml:id="translation-n14">
+    <fs>
+      <f name="translation">he (one of them) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n15">
+    <link targets="utterance-r15"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n15" xml:id="translation-n15">
+    <fs>
+      <f name="translation">Lord king, it is a dragon.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n16">
+    <link targets="utterance-r16"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n16" xml:id="translation-n16">
+    <fs>
+      <f name="translation">He (the king) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n17">
+    <link targets="utterance-r17"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n17" xml:id="translation-n17">
+    <fs>
+      <f name="translation">Oh… this dragon has something to say,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n18">
+    <link targets="utterance-r18"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n18" xml:id="translation-n18">
+    <fs>
+      <f name="translation">it has a petition,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n19">
+    <link targets="utterance-r19"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n19" xml:id="translation-n19">
+    <fs>
+      <f name="translation">who can bring its petition to me,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n20">
+    <link targets="utterance-r20"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n20" xml:id="translation-n20">
+    <fs>
+      <f name="translation">as for me, I don't know</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n21">
+    <link targets="utterance-r21"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n21" xml:id="translation-n21">
+    <fs>
+      <f name="translation">it cannot talk.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n22">
+    <link targets="utterance-r22"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n22" xml:id="translation-n22">
+    <fs>
+      <f name="translation">A carpenter said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n23">
+    <link targets="utterance-r23"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n23" xml:id="translation-n23">
+    <fs>
+      <f name="translation">I know (what the dragon wants).</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n24">
+    <link targets="utterance-r24"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n24" xml:id="translation-n24">
+    <fs>
+      <f name="translation">He (the king) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n25">
+    <link targets="utterance-r25"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n25" xml:id="translation-n25">
+    <fs>
+      <f name="translation">(If) you know</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n26">
+    <link targets="utterance-r26"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n26" xml:id="translation-n26">
+    <fs>
+      <f name="translation">(and if) you bring its petition,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n27">
+    <link targets="utterance-r27"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n27" xml:id="translation-n27">
+    <fs>
+      <f name="translation">I will give you this much reward.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n28">
+    <link targets="utterance-r28"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n28" xml:id="translation-n28">
+    <fs>
+      <f name="translation">He (the carpenter) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n29">
+    <link targets="utterance-r29"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n29" xml:id="translation-n29">
+    <fs>
+      <f name="translation">Very well.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n30">
+    <link targets="utterance-r30"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n30" xml:id="translation-n30">
+    <fs>
+      <f name="translation">When the carpenter came with blades and saws,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n31">
+    <link targets="utterance-r31"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n31" xml:id="translation-n31">
+    <fs>
+      <f name="translation">the dragon released (the light post) and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n32">
+    <link targets="utterance-r32"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n32" xml:id="translation-n32">
+    <fs>
+      <f name="translation">set out and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n33">
+    <link targets="utterance-r33"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n33" xml:id="translation-n33">
+    <fs>
+      <f name="translation">the dragon gave the carpenter one hint after another and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n34">
+    <link targets="utterance-r34"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n34" xml:id="translation-n34">
+    <fs>
+      <f name="translation">went into the mountain.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n35">
+    <link targets="utterance-r35"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n35" xml:id="translation-n35">
+    <fs>
+      <f name="translation">When he went there,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n36">
+    <link targets="utterance-r36"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n36" xml:id="translation-n36">
+    <fs>
+      <f name="translation">good heavens ohhh ... this dragon has a mother as well.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n37">
+    <link targets="utterance-r37"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n37" xml:id="translation-n37">
+    <fs>
+      <f name="translation">Its mother, there are this kind of wild mountain goats with big horns,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n38">
+    <link targets="utterance-r38"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n38" xml:id="translation-n38">
+    <fs>
+      <f name="translation">it has caught (one) of them and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n39">
+    <link targets="utterance-r39"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n39" xml:id="translation-n39">
+    <fs>
+      <f name="translation">its horns have got stuck in its (the mother’s) throat and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n40">
+    <link targets="utterance-r40"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n40" xml:id="translation-n40">
+    <fs>
+      <f name="translation">it is short of breath,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n41">
+    <link targets="utterance-r41"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n41" xml:id="translation-n41">
+    <fs>
+      <f name="translation">it (the dragon) has come here</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n42">
+    <link targets="utterance-r42"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n42" xml:id="translation-n42">
+    <fs>
+      <f name="translation">(and) it has informed the king.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n43">
+    <link targets="utterance-r43"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n43" xml:id="translation-n43">
+    <fs>
+      <f name="translation">It (the dragon) gave a hint and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n44">
+    <link targets="utterance-r44"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n44" xml:id="translation-n44">
+    <fs>
+      <f name="translation">he (the carpenter) sawed the wild goat's horns and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n45">
+    <link targets="utterance-r45"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n45" xml:id="translation-n45">
+    <fs>
+      <f name="translation">it was rescued,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n46">
+    <link targets="utterance-r46"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n46" xml:id="translation-n46">
+    <fs>
+      <f name="translation">(and) became free.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n47">
+    <link targets="utterance-r47"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n47" xml:id="translation-n47">
+    <fs>
+      <f name="translation">This dragon went to another place and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n48">
+    <link targets="utterance-r48"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n48" xml:id="translation-n48">
+    <fs>
+      <f name="translation">it gave him (the carpenter) a big rewards, jewelry.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n49">
+    <link targets="utterance-r49"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n49" xml:id="translation-n49">
+    <fs>
+      <f name="translation">Then when he (the carpenter) went a little</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n50">
+    <link targets="utterance-r50"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n50" xml:id="translation-n50">
+    <fs>
+      <f name="translation">again it (the dragon) gave him a hint.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n51">
+    <link targets="utterance-r51"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n51" xml:id="translation-n51">
+    <fs>
+      <f name="translation">He (the carpenter) stopped.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n52">
+    <link targets="utterance-r52"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n52" xml:id="translation-n52">
+    <fs>
+      <f name="translation">It (the dragon) took a seed of such a size and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n53">
+    <link targets="utterance-r53"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n53" xml:id="translation-n53">
+    <fs>
+      <f name="translation">from its mouth threw it among the jewels, inside his bag.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n54">
+    <link targets="utterance-r54"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n54" xml:id="translation-n54">
+    <fs>
+      <f name="translation">When he came (back to the king),</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n55">
+    <link targets="utterance-r55"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n55" xml:id="translation-n55">
+    <fs>
+      <f name="translation">the king said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n56">
+    <link targets="utterance-r56"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n56" xml:id="translation-n56">
+    <fs>
+      <f name="translation">What petition did it (the dragon) have?</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n57">
+    <link targets="utterance-r57"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n57" xml:id="translation-n57">
+    <fs>
+      <f name="translation">He (the carpenter) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n58">
+    <link targets="utterance-r58"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n58" xml:id="translation-n58">
+    <fs>
+      <f name="translation">Actually, its mother was strangled in this way and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n59">
+    <link targets="utterance-r59"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n59" xml:id="translation-n59">
+    <fs>
+      <f name="translation">it (the dragon) came and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n60">
+    <link targets="utterance-r60"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n60" xml:id="translation-n60">
+    <fs>
+      <f name="translation">I freed (and I rescued it) and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n61">
+    <link targets="utterance-r61"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n61" xml:id="translation-n61">
+    <fs>
+      <f name="translation">then it gave me this much jewelry and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n62">
+    <link targets="utterance-r62"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n62" xml:id="translation-n62">
+    <fs>
+      <f name="translation">this very seed, it also gave me this,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n63">
+    <link targets="utterance-r63"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n63" xml:id="translation-n63">
+    <fs>
+      <f name="translation">it threw it from its mouth.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n64">
+    <link targets="utterance-r64"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n64" xml:id="translation-n64">
+    <fs>
+      <f name="translation">He (the king) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n65">
+    <link targets="utterance-r65"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n65" xml:id="translation-n65">
+    <fs>
+      <f name="translation">Well, this is certainly jewelry,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n66">
+    <link targets="utterance-r66"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n66" xml:id="translation-n66">
+    <fs>
+      <f name="translation">(but) we don't know this.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n67">
+    <link targets="utterance-r67"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n67" xml:id="translation-n67">
+    <fs>
+      <f name="translation">They (the king and his consultants) consulted,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n68">
+    <link targets="utterance-r68"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n68" xml:id="translation-n68">
+    <fs>
+      <f name="translation">(and) they said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n69">
+    <link targets="utterance-r69"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n69" xml:id="translation-n69">
+    <fs>
+      <f name="translation">Let's sow this.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n70">
+    <link targets="utterance-r70"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n70" xml:id="translation-n70">
+    <fs>
+      <f name="translation">They sowed it in a good place, in a garden, in a plot and in (fertile) and soft soil and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n71">
+    <link targets="utterance-r71"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n71" xml:id="translation-n71">
+    <fs>
+      <f name="translation">a melon bush grew up and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n72">
+    <link targets="utterance-r72"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n72" xml:id="translation-n72">
+    <fs>
+      <f name="translation">it gave so many melons.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n73">
+    <link targets="utterance-r73"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n73" xml:id="translation-n73">
+    <fs>
+      <f name="translation">Nobody ate these melons out of fear</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n74">
+    <link targets="utterance-r74"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n74" xml:id="translation-n74">
+    <fs>
+      <f name="translation">since they were from the mouth of the dragon,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n75">
+    <link targets="utterance-r75"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n75" xml:id="translation-n75">
+    <fs>
+      <f name="translation">they were snake's poison.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n76">
+    <link targets="utterance-r76"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n76" xml:id="translation-n76">
+    <fs>
+      <f name="translation">They (the melons) produce so many seeds and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n77">
+    <link targets="utterance-r77"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n77" xml:id="translation-n77">
+    <fs>
+      <f name="translation">they (the king’s servants) went (and told the king),</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n78">
+    <link targets="utterance-r78"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n78" xml:id="translation-n78">
+    <fs>
+      <f name="translation">the king sowed a large melon-bed and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n79">
+    <link targets="utterance-r79"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n79" xml:id="translation-n79">
+    <fs>
+      <f name="translation">made an old man the gardener.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n80">
+    <link targets="utterance-r80"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n80" xml:id="translation-n80">
+    <fs>
+      <f name="translation">It began, this melon-bed, to grow melons and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n81">
+    <link targets="utterance-r81"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n81" xml:id="translation-n81">
+    <fs>
+      <f name="translation">produced a lot of melons.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n82">
+    <link targets="utterance-r82"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n82" xml:id="translation-n82">
+    <fs>
+      <f name="translation">The old man didn't do, you know, at first,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n83">
+    <link targets="utterance-r83"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n83" xml:id="translation-n83">
+    <fs>
+      <f name="translation">he didn't trust and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n84">
+    <link targets="utterance-r84"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n84" xml:id="translation-n84">
+    <fs>
+      <f name="translation">and he had a little donkey,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n85">
+    <link targets="utterance-r85"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n85" xml:id="translation-n85">
+    <fs>
+      <f name="translation">first, he cut these very melons to pieces in front of the donkey and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n86">
+    <link targets="utterance-r86"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n86" xml:id="translation-n86">
+    <fs>
+      <f name="translation">gave (them to the donkey).</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n87">
+    <link targets="utterance-r87"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n87" xml:id="translation-n87">
+    <fs>
+      <f name="translation">So this donkey became strong.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n88">
+    <link targets="utterance-r88"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n88" xml:id="translation-n88">
+    <fs>
+      <f name="translation">The old man began to eat,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n89">
+    <link targets="utterance-r89"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n89" xml:id="translation-n89">
+    <fs>
+      <f name="translation">Wow, what (good) things these are.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n90">
+    <link targets="utterance-r90"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n90" xml:id="translation-n90">
+    <fs>
+      <f name="translation">The old man became strong as well.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n91">
+    <link targets="utterance-r91"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n91" xml:id="translation-n91">
+    <fs>
+      <f name="translation">One day when the king came,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n92">
+    <link targets="utterance-r92"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n92" xml:id="translation-n92">
+    <fs>
+      <f name="translation">he (the king) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n93">
+    <link targets="utterance-r93"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n93" xml:id="translation-n93">
+    <fs>
+      <f name="translation">(Dear) old man what are these?</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n94">
+    <link targets="utterance-r94"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n94" xml:id="translation-n94">
+    <fs>
+      <f name="translation">He (the old man) said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n95">
+    <link targets="utterance-r95"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n95" xml:id="translation-n95">
+    <fs>
+      <f name="translation">These are very good things,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n96">
+    <link targets="utterance-r96"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n96" xml:id="translation-n96">
+    <fs>
+      <f name="translation">I have also eaten (from them),</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n97">
+    <link targets="utterance-r97"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n97" xml:id="translation-n97">
+    <fs>
+      <f name="translation">I have also given (them) to this donkey and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n98">
+    <link targets="utterance-r98"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n98" xml:id="translation-n98">
+    <fs>
+      <f name="translation">you, too, (should) eat (it).</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n99">
+    <link targets="utterance-r99"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n99" xml:id="translation-n99">
+    <fs>
+      <f name="translation">The vizier said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n100">
+    <link targets="utterance-r100"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n100" xml:id="translation-n100">
+    <fs>
+      <f name="translation">No, first I will eat,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n101">
+    <link targets="utterance-r101"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n101" xml:id="translation-n101">
+    <fs>
+      <f name="translation">don't eat, oh king!</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n102">
+    <link targets="utterance-r102"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n102" xml:id="translation-n102">
+    <fs>
+      <f name="translation">The vizier ate,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n103">
+    <link targets="utterance-r103"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n103" xml:id="translation-n103">
+    <fs>
+      <f name="translation">wow what tasty things are these.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n104">
+    <link targets="utterance-r104"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n104" xml:id="translation-n104">
+    <fs>
+      <f name="translation">They ate and</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n105">
+    <link targets="utterance-r105"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n105" xml:id="translation-n105">
+    <fs>
+      <f name="translation">when they had eaten,</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n106">
+    <link targets="utterance-r106"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n106" xml:id="translation-n106">
+    <fs>
+      <f name="translation">now they said:</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n107">
+    <link targets="utterance-r107"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n107" xml:id="translation-n107">
+    <fs>
+      <f name="translation">Let’s give it a name.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n108">
+    <link targets="utterance-r108"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n108" xml:id="translation-n108">
+    <fs>
+      <f name="translation">Then they named the melon 'xarmizza' (which means donkey-taste),</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n109">
+    <link targets="utterance-r109"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n109" xml:id="translation-n109">
+    <fs>
+      <f name="translation">because for the first time it was the donkey that tasted it.</f>
+    </fs>
+  </a>
+  <node xml:id="translation-n110">
+    <link targets="utterance-r110"/>
+  </node>
+  <a as="translation" label="translation" ref="translation-n110" xml:id="translation-n110">
+    <fs>
+      <f name="translation">(the name) xarmizza remained from there</f>
+    </fs>
+  </a>
+</graph>

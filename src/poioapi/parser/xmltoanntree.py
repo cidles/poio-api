@@ -147,8 +147,8 @@ class ProcessContent:
 
 class XmlToAnnTree():
     """
-    Class that handles the test_split of the xml files
-    to a Annotation Tree.
+    Class that handles the split of the xml files
+    in GrAF format to a Annotation Tree.
 
     """
 

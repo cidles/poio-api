@@ -62,18 +62,280 @@ and methods that PoioAPI parser uses. Including the
 parser to the three data hierarchies, GRAID,
 MORPHSYN and WORD.</p>
 <p>Note: This module it&#8217;ll test the modules that
-generates a XML file.</p>
+generates a XML file.
+In order to drive this test the pickle file used is
+the Balochi Text1.pickle.</p>
 <dl class="class">
-<dt id="test_parsing.TestCreateCommentFile">
-<em class="property">class </em><tt class="descclassname">test_parsing.</tt><tt class="descname">TestCreateCommentFile</tt><a class="reference internal" href="_modules/test_parsing.html#TestCreateCommentFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestCreateCommentFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class contain the test methods to the
-class comment.py.</p>
+<dt id="test_parsing.TestCreateElementFile">
+<em class="property">class </em><tt class="descclassname">test_parsing.</tt><tt class="descname">TestCreateElementFile</tt><a class="reference internal" href="_modules/test_parsing.html#TestCreateElementFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestCreateElementFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class contain the test methods to the classes
+that parse the elements from a data structure
+hierarchy to a XML file which means to the GrAF.</p>
+<p>The test describe in this class can be used for the
+parsing of comments, translation and the creation of
+the raw file. Although is need to change some of
+the code lines. Thoses lines are the file_parsed is
+need to change the suffix to e. g. &#8216;-translation&#8217;.
+This is because of the retrieving process of the
+data hierarchy structures be identical in the three
+existing ones.
+The same will work to the rest of the elements in the
+data hierarchy. E. g. in Morph data structure the
+element word will generate a file with a suffix &#8216;-word&#8217;
+to the original file name or in GRAID structure graid1
+generate a &#8216;-graid1&#8217; suffix.</p>
+<p>Note: Is important to know that the suffix depends
+on the names that the structures of the Annotation Tree
+have.</p>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">poioapi.data</span></tt></dt>
+<dd>Module that contains the data structures of a Annotation Tree.</dd>
+</dl>
+</div>
 <p class="rubric">Methods</p>
 <dl class="method">
-<dt id="test_parsing.TestCreateCommentFile.test_create_cmts_xml">
-<tt class="descname">test_create_cmts_xml</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestCreateCommentFile.test_create_cmts_xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestCreateCommentFile.test_create_cmts_xml" title="Permalink to this definition">¶</a></dt>
+<dt id="test_parsing.TestCreateElementFile.test_create_element_xml">
+<tt class="descname">test_create_element_xml</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestCreateElementFile.test_create_element_xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestCreateElementFile.test_create_element_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raise an assertion if can&#8217;t retrieve the file.</p>
-<p>Return given file(s) as a single string.</p>
+<p>Return given file as a single string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="test_parsing.TestRendToGrAF">
+<em class="property">class </em><tt class="descclassname">test_parsing.</tt><tt class="descname">TestRendToGrAF</tt><a class="reference internal" href="_modules/test_parsing.html#TestRendToGrAF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestRendToGrAF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that test the rendering the files from the
+Annotation Tree to GrAF.</p>
+<p>The file to be rendering is generate according to
+a given type. The type is the the element in data
+structure hierarchy. For example the elements in
+the GRAID structure are WFW, graid1, graid2, etc,
+this are the element that will rendered.</p>
+<p>Note: Is important to know that the rendering is
+is done with the help of the Graf-python.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="test_parsing.TestRendToGrAF.test_parse_xml_graf">
+<tt class="descname">test_parse_xml_graf</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestRendToGrAF.test_parse_xml_graf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestRendToGrAF.test_parse_xml_graf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t retrieve the file.</p>
+<p>The file that result&#8217;s from the parsing is
+complemented by the suffix &#8216;-rend.xml&#8217;.
+This example test will use the GRAID hierarchy and
+the rendered file will be generated with the &#8216;wfw&#8217;
+type.</p>
+<p>Return given file as a single string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="test_parsing.TestSearchReplace">
+<em class="property">class </em><tt class="descclassname">test_parsing.</tt><tt class="descname">TestSearchReplace</tt><a class="reference internal" href="_modules/test_parsing.html#TestSearchReplace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestSearchReplace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that test the possibility to search and replace
+in the XML GrAF file.</p>
+<p>The test will be done upon the results generated by
+the method that parses to XML to GrAF. The files will
+be as base the &#8216;wfw&#8217; elements. So every results of
+the search will on the file rend.xml in sample_files
+folder.</p>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">test_parse_xml_graf</span></tt></dt>
+<dd>Parsing XML to GrAF.</dd>
+</dl>
+</div>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="test_parsing.TestSearchReplace.test_find_word">
+<tt class="descname">test_find_word</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestSearchReplace.test_find_word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestSearchReplace.test_find_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t element.</p>
+<p>The result of a finding is an list of elements.
+Depending in the parameters. There are two:
+case_sensitive is to find the exact word and
+whole_word is to find the word in sentences or
+words.
+In this test case will use the whole_word parameter
+as True.</p>
+<p>Return element of the list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="docutils">
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">poioapi.parser.search_replace.find_word</span></tt></dt>
+<dd>Here is more</dd>
+</dl>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">information</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="test_parsing.TestSearchReplace.test_replace_all">
+<tt class="descname">test_replace_all</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestSearchReplace.test_replace_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestSearchReplace.test_replace_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t retrieve element.</p>
+<p>This test case is to find the words and replace it
+by the new one.</p>
+<p>Return element of the list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="docutils">
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">poioapi.parser.search_replace.find_word</span></tt></dt>
+<dd>Here is more</dd>
+</dl>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">information</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="test_parsing.TestSearchReplace.test_replace_word">
+<tt class="descname">test_replace_word</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestSearchReplace.test_replace_word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestSearchReplace.test_replace_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t retrieve element.</p>
+<p>This test case is to find a specific word and then
+replace it. To see the results will use the
+find_word method from the same module.
+To run this method is need to give the reference node.
+This reference is in the GrAF file and it&#8217;s the link
+to the word, clause unit or other element in the data
+structure hierarchy.</p>
+<p>Return element of the list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="docutils">
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">poioapi.parser.search_replace.find_word</span></tt></dt>
+<dd>Here is more</dd>
+</dl>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">information</span></tt></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="test_parsing.TestXmlToAnnTree">
+<em class="property">class </em><tt class="descclassname">test_parsing.</tt><tt class="descname">TestXmlToAnnTree</tt><a class="reference internal" href="_modules/test_parsing.html#TestXmlToAnnTree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestXmlToAnnTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that test the parsing of the GrAF files to
+the Annotation Tree format.</p>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">poioapi.data</span></tt></dt>
+<dd>Module that contains the data structures of a Annotation Tree.</dd>
+<dt><tt class="xref py py-obj docutils literal"><span class="pre">poioapi.annotationtree</span></tt></dt>
+<dd>Module that contains the instance of a Annotation Tree.</dd>
+</dl>
+</div>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="test_parsing.TestXmlToAnnTree.test_graid_hierarchy">
+<tt class="descname">test_graid_hierarchy</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestXmlToAnnTree.test_graid_hierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestXmlToAnnTree.test_graid_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t retrieve the file.</p>
+<p>The file that result&#8217;s from the parsing is
+complemented by the suffix &#8216;-graid.pickle&#8217;.</p>
+<p>Return given file as a single string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="test_parsing.TestXmlToAnnTree.test_morph_hierarchy">
+<tt class="descname">test_morph_hierarchy</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestXmlToAnnTree.test_morph_hierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestXmlToAnnTree.test_morph_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t retrieve the file.</p>
+<p>The file that result&#8217;s from the parsing is
+complemented by the suffix &#8216;-morph.pickle&#8217;.</p>
+<p>Return given file as a single string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>AssertionError</strong> :</p>
+<blockquote class="last">
+<div><p>If can&#8217;t retrieve a string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="test_parsing.TestXmlToAnnTree.test_word_hierarchy">
+<tt class="descname">test_word_hierarchy</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/test_parsing.html#TestXmlToAnnTree.test_word_hierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test_parsing.TestXmlToAnnTree.test_word_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an assertion if can&#8217;t retrieve the file.</p>
+<p>The file that result&#8217;s from the parsing is
+complemented by the suffix &#8216;-word.pickle&#8217;.</p>
+<p>Return given file as a single string.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

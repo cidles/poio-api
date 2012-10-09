@@ -5,12 +5,16 @@
 # Copyright (C) 2009-2012 Poio Project
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
+"""This module contains a simple example 
+how to use the PoioAPI Parser Search in 
+GrAF.
+"""
 
-import search_replace
+from poioapi.parser import search_replace
 
-filepath = '/home/alopes/tests/pi_2-rend.xml'
+filepath = 'Balochi Text1-rend.xml'
 
-search_replace = search.SearchReplace(filepath)
+search_replace = search_replace.SearchReplace(filepath)
 
 # Replace the exact word in the node 339 SUB by SUBS
 search_replace.replace_word('SUBS','SUB','wfw-n339')

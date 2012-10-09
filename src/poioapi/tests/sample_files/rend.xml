@@ -1,0 +1,3572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+    <header>
+        <tagsDecl>
+            <tagUsage gi="wfw" occurs="396"/>
+        </tagsDecl>
+    </header>
+    <region xml:id="word-r279" anchors="AnchorOffset = 1396 AnchorOffset = 1403"/>
+    <region xml:id="word-r278" anchors="AnchorOffset = 1390 AnchorOffset = 1396"/>
+    <region xml:id="word-r372" anchors="AnchorOffset = 1877 AnchorOffset = 1884"/>
+    <region xml:id="word-r373" anchors="AnchorOffset = 1884 AnchorOffset = 1894"/>
+    <region xml:id="word-r374" anchors="AnchorOffset = 1894 AnchorOffset = 1896"/>
+    <region xml:id="word-r375" anchors="AnchorOffset = 1896 AnchorOffset = 1904"/>
+    <region xml:id="word-r376" anchors="AnchorOffset = 1904 AnchorOffset = 1907"/>
+    <region xml:id="word-r371" anchors="AnchorOffset = 1865 AnchorOffset = 1877"/>
+    <region xml:id="word-r271" anchors="AnchorOffset = 1345 AnchorOffset = 1355"/>
+    <region xml:id="word-r270" anchors="AnchorOffset = 1344 AnchorOffset = 1345"/>
+    <region xml:id="word-r273" anchors="AnchorOffset = 1362 AnchorOffset = 1364"/>
+    <region xml:id="word-r272" anchors="AnchorOffset = 1355 AnchorOffset = 1362"/>
+    <region xml:id="word-r275" anchors="AnchorOffset = 1366 AnchorOffset = 1378"/>
+    <region xml:id="word-r274" anchors="AnchorOffset = 1364 AnchorOffset = 1366"/>
+    <region xml:id="word-r277" anchors="AnchorOffset = 1384 AnchorOffset = 1390"/>
+    <region xml:id="word-r276" anchors="AnchorOffset = 1378 AnchorOffset = 1384"/>
+    <region xml:id="word-r377" anchors="AnchorOffset = 1907 AnchorOffset = 1915"/>
+    <region xml:id="word-r378" anchors="AnchorOffset = 1915 AnchorOffset = 1921"/>
+    <region xml:id="word-r208" anchors="AnchorOffset = 1022 AnchorOffset = 1023"/>
+    <region xml:id="word-r209" anchors="AnchorOffset = 1023 AnchorOffset = 1027"/>
+    <region xml:id="word-r379" anchors="AnchorOffset = 1921 AnchorOffset = 1926"/>
+    <region xml:id="word-r204" anchors="AnchorOffset = 1004 AnchorOffset = 1008"/>
+    <region xml:id="word-r205" anchors="AnchorOffset = 1008 AnchorOffset = 1014"/>
+    <region xml:id="word-r206" anchors="AnchorOffset = 1014 AnchorOffset = 1020"/>
+    <region xml:id="word-r207" anchors="AnchorOffset = 1020 AnchorOffset = 1022"/>
+    <region xml:id="word-r200" anchors="AnchorOffset = 994 AnchorOffset = 996"/>
+    <region xml:id="word-r201" anchors="AnchorOffset = 996 AnchorOffset = 997"/>
+    <region xml:id="word-r202" anchors="AnchorOffset = 997 AnchorOffset = 999"/>
+    <region xml:id="word-r203" anchors="AnchorOffset = 999 AnchorOffset = 1004"/>
+    <region xml:id="word-r370" anchors="AnchorOffset = 1858 AnchorOffset = 1865"/>
+    <region xml:id="word-r70" anchors="AnchorOffset = 374 AnchorOffset = 376"/>
+    <region xml:id="word-r155" anchors="AnchorOffset = 788 AnchorOffset = 792"/>
+    <region xml:id="word-r72" anchors="AnchorOffset = 385 AnchorOffset = 386"/>
+    <region xml:id="word-r73" anchors="AnchorOffset = 386 AnchorOffset = 396"/>
+    <region xml:id="word-r74" anchors="AnchorOffset = 396 AnchorOffset = 400"/>
+    <region xml:id="word-r75" anchors="AnchorOffset = 400 AnchorOffset = 408"/>
+    <region xml:id="word-r76" anchors="AnchorOffset = 408 AnchorOffset = 410"/>
+    <region xml:id="word-r77" anchors="AnchorOffset = 410 AnchorOffset = 415"/>
+    <region xml:id="word-r78" anchors="AnchorOffset = 415 AnchorOffset = 421"/>
+    <region xml:id="word-r79" anchors="AnchorOffset = 421 AnchorOffset = 427"/>
+    <region xml:id="word-r158" anchors="AnchorOffset = 799 AnchorOffset = 803"/>
+    <region xml:id="word-r159" anchors="AnchorOffset = 803 AnchorOffset = 805"/>
+    <region xml:id="word-r235" anchors="AnchorOffset = 1141 AnchorOffset = 1147"/>
+    <region xml:id="word-r234" anchors="AnchorOffset = 1136 AnchorOffset = 1141"/>
+    <region xml:id="word-r237" anchors="AnchorOffset = 1148 AnchorOffset = 1154"/>
+    <region xml:id="word-r236" anchors="AnchorOffset = 1147 AnchorOffset = 1148"/>
+    <region xml:id="word-r231" anchors="AnchorOffset = 1121 AnchorOffset = 1126"/>
+    <region xml:id="word-r230" anchors="AnchorOffset = 1119 AnchorOffset = 1121"/>
+    <region xml:id="word-r233" anchors="AnchorOffset = 1132 AnchorOffset = 1136"/>
+    <region xml:id="word-r232" anchors="AnchorOffset = 1126 AnchorOffset = 1132"/>
+    <region xml:id="word-r239" anchors="AnchorOffset = 1164 AnchorOffset = 1171"/>
+    <region xml:id="word-r238" anchors="AnchorOffset = 1154 AnchorOffset = 1164"/>
+    <region xml:id="word-r197" anchors="AnchorOffset = 985 AnchorOffset = 987"/>
+    <region xml:id="word-r121" anchors="AnchorOffset = 599 AnchorOffset = 605"/>
+    <region xml:id="word-r120" anchors="AnchorOffset = 598 AnchorOffset = 599"/>
+    <region xml:id="word-r123" anchors="AnchorOffset = 609 AnchorOffset = 614"/>
+    <region xml:id="word-r122" anchors="AnchorOffset = 605 AnchorOffset = 609"/>
+    <region xml:id="word-r125" anchors="AnchorOffset = 620 AnchorOffset = 621"/>
+    <region xml:id="word-r124" anchors="AnchorOffset = 614 AnchorOffset = 620"/>
+    <region xml:id="word-r127" anchors="AnchorOffset = 627 AnchorOffset = 633"/>
+    <region xml:id="word-r126" anchors="AnchorOffset = 621 AnchorOffset = 627"/>
+    <region xml:id="word-r129" anchors="AnchorOffset = 639 AnchorOffset = 644"/>
+    <region xml:id="word-r128" anchors="AnchorOffset = 633 AnchorOffset = 639"/>
+    <region xml:id="word-r349" anchors="AnchorOffset = 1762 AnchorOffset = 1768"/>
+    <region xml:id="word-r348" anchors="AnchorOffset = 1755 AnchorOffset = 1762"/>
+    <region xml:id="word-r341" anchors="AnchorOffset = 1723 AnchorOffset = 1727"/>
+    <region xml:id="word-r340" anchors="AnchorOffset = 1715 AnchorOffset = 1723"/>
+    <region xml:id="word-r343" anchors="AnchorOffset = 1728 AnchorOffset = 1737"/>
+    <region xml:id="word-r342" anchors="AnchorOffset = 1727 AnchorOffset = 1728"/>
+    <region xml:id="word-r345" anchors="AnchorOffset = 1743 AnchorOffset = 1744"/>
+    <region xml:id="word-r344" anchors="AnchorOffset = 1737 AnchorOffset = 1743"/>
+    <region xml:id="word-r347" anchors="AnchorOffset = 1748 AnchorOffset = 1755"/>
+    <region xml:id="word-r346" anchors="AnchorOffset = 1744 AnchorOffset = 1748"/>
+    <region xml:id="word-r338" anchors="AnchorOffset = 1707 AnchorOffset = 1713"/>
+    <region xml:id="word-r339" anchors="AnchorOffset = 1713 AnchorOffset = 1715"/>
+    <region xml:id="word-r334" anchors="AnchorOffset = 1695 AnchorOffset = 1698"/>
+    <region xml:id="word-r335" anchors="AnchorOffset = 1698 AnchorOffset = 1703"/>
+    <region xml:id="word-r336" anchors="AnchorOffset = 1703 AnchorOffset = 1705"/>
+    <region xml:id="word-r337" anchors="AnchorOffset = 1705 AnchorOffset = 1707"/>
+    <region xml:id="word-r330" anchors="AnchorOffset = 1671 AnchorOffset = 1682"/>
+    <region xml:id="word-r331" anchors="AnchorOffset = 1682 AnchorOffset = 1688"/>
+    <region xml:id="word-r332" anchors="AnchorOffset = 1688 AnchorOffset = 1690"/>
+    <region xml:id="word-r333" anchors="AnchorOffset = 1690 AnchorOffset = 1695"/>
+    <region xml:id="word-r152" anchors="AnchorOffset = 767 AnchorOffset = 768"/>
+    <region xml:id="word-r38" anchors="AnchorOffset = 207 AnchorOffset = 211"/>
+    <region xml:id="word-r39" anchors="AnchorOffset = 211 AnchorOffset = 222"/>
+    <region xml:id="word-r34" anchors="AnchorOffset = 193 AnchorOffset = 196"/>
+    <region xml:id="word-r35" anchors="AnchorOffset = 196 AnchorOffset = 201"/>
+    <region xml:id="word-r36" anchors="AnchorOffset = 201 AnchorOffset = 205"/>
+    <region xml:id="word-r37" anchors="AnchorOffset = 205 AnchorOffset = 207"/>
+    <region xml:id="word-r30" anchors="AnchorOffset = 174 AnchorOffset = 180"/>
+    <region xml:id="word-r31" anchors="AnchorOffset = 180 AnchorOffset = 183"/>
+    <region xml:id="word-r32" anchors="AnchorOffset = 183 AnchorOffset = 190"/>
+    <region xml:id="word-r33" anchors="AnchorOffset = 190 AnchorOffset = 193"/>
+    <region xml:id="word-r4" anchors="AnchorOffset = 26 AnchorOffset = 27"/>
+    <region xml:id="word-r5" anchors="AnchorOffset = 27 AnchorOffset = 33"/>
+    <region xml:id="word-r284" anchors="AnchorOffset = 1422 AnchorOffset = 1429"/>
+    <region xml:id="word-r285" anchors="AnchorOffset = 1429 AnchorOffset = 1437"/>
+    <region xml:id="word-r286" anchors="AnchorOffset = 1437 AnchorOffset = 1444"/>
+    <region xml:id="word-r287" anchors="AnchorOffset = 1444 AnchorOffset = 1449"/>
+    <region xml:id="word-r169" anchors="AnchorOffset = 847 AnchorOffset = 858"/>
+    <region xml:id="word-r168" anchors="AnchorOffset = 839 AnchorOffset = 847"/>
+    <region xml:id="word-r282" anchors="AnchorOffset = 1409 AnchorOffset = 1412"/>
+    <region xml:id="word-r283" anchors="AnchorOffset = 1412 AnchorOffset = 1422"/>
+    <region xml:id="word-r165" anchors="AnchorOffset = 823 AnchorOffset = 830"/>
+    <region xml:id="word-r164" anchors="AnchorOffset = 819 AnchorOffset = 823"/>
+    <region xml:id="word-r167" anchors="AnchorOffset = 835 AnchorOffset = 839"/>
+    <region xml:id="word-r166" anchors="AnchorOffset = 830 AnchorOffset = 835"/>
+    <region xml:id="word-r161" anchors="AnchorOffset = 809 AnchorOffset = 812"/>
+    <region xml:id="word-r160" anchors="AnchorOffset = 805 AnchorOffset = 809"/>
+    <region xml:id="word-r163" anchors="AnchorOffset = 813 AnchorOffset = 819"/>
+    <region xml:id="word-r162" anchors="AnchorOffset = 812 AnchorOffset = 813"/>
+    <region xml:id="word-r8" anchors="AnchorOffset = 44 AnchorOffset = 50"/>
+    <region xml:id="word-r304" anchors="AnchorOffset = 1531 AnchorOffset = 1538"/>
+    <region xml:id="word-r268" anchors="AnchorOffset = 1331 AnchorOffset = 1338"/>
+    <region xml:id="word-r269" anchors="AnchorOffset = 1338 AnchorOffset = 1344"/>
+    <region xml:id="word-r301" anchors="AnchorOffset = 1514 AnchorOffset = 1516"/>
+    <region xml:id="word-r300" anchors="AnchorOffset = 1509 AnchorOffset = 1514"/>
+    <region xml:id="word-r303" anchors="AnchorOffset = 1527 AnchorOffset = 1531"/>
+    <region xml:id="word-r302" anchors="AnchorOffset = 1516 AnchorOffset = 1527"/>
+    <region xml:id="word-r0" anchors="AnchorOffset = 0 AnchorOffset = 7"/>
+    <region xml:id="word-r1" anchors="AnchorOffset = 7 AnchorOffset = 9"/>
+    <region xml:id="word-r2" anchors="AnchorOffset = 9 AnchorOffset = 12"/>
+    <region xml:id="word-r3" anchors="AnchorOffset = 12 AnchorOffset = 26"/>
+    <region xml:id="word-r266" anchors="AnchorOffset = 1327 AnchorOffset = 1329"/>
+    <region xml:id="word-r267" anchors="AnchorOffset = 1329 AnchorOffset = 1331"/>
+    <region xml:id="word-r6" anchors="AnchorOffset = 33 AnchorOffset = 39"/>
+    <region xml:id="word-r265" anchors="AnchorOffset = 1322 AnchorOffset = 1327"/>
+    <region xml:id="word-r92" anchors="AnchorOffset = 486 AnchorOffset = 489"/>
+    <region xml:id="word-r93" anchors="AnchorOffset = 489 AnchorOffset = 490"/>
+    <region xml:id="word-r90" anchors="AnchorOffset = 479 AnchorOffset = 481"/>
+    <region xml:id="word-r91" anchors="AnchorOffset = 481 AnchorOffset = 486"/>
+    <region xml:id="word-r96" anchors="AnchorOffset = 498 AnchorOffset = 500"/>
+    <region xml:id="word-r97" anchors="AnchorOffset = 500 AnchorOffset = 502"/>
+    <region xml:id="word-r94" anchors="AnchorOffset = 490 AnchorOffset = 496"/>
+    <region xml:id="word-r95" anchors="AnchorOffset = 496 AnchorOffset = 498"/>
+    <region xml:id="word-r66" anchors="AnchorOffset = 349 AnchorOffset = 352"/>
+    <region xml:id="word-r68" anchors="AnchorOffset = 361 AnchorOffset = 371"/>
+    <region xml:id="word-r47" anchors="AnchorOffset = 257 AnchorOffset = 266"/>
+    <region xml:id="word-r191" anchors="AnchorOffset = 954 AnchorOffset = 958"/>
+    <region xml:id="word-r63" anchors="AnchorOffset = 334 AnchorOffset = 340"/>
+    <region xml:id="word-r62" anchors="AnchorOffset = 329 AnchorOffset = 334"/>
+    <region xml:id="word-r61" anchors="AnchorOffset = 323 AnchorOffset = 329"/>
+    <region xml:id="word-r60" anchors="AnchorOffset = 318 AnchorOffset = 323"/>
+    <region xml:id="word-r67" anchors="AnchorOffset = 352 AnchorOffset = 361"/>
+    <region xml:id="word-r259" anchors="AnchorOffset = 1289 AnchorOffset = 1298"/>
+    <region xml:id="word-r65" anchors="AnchorOffset = 344 AnchorOffset = 349"/>
+    <region xml:id="word-r64" anchors="AnchorOffset = 340 AnchorOffset = 344"/>
+    <region xml:id="word-r69" anchors="AnchorOffset = 371 AnchorOffset = 374"/>
+    <region xml:id="word-r258" anchors="AnchorOffset = 1282 AnchorOffset = 1289"/>
+    <region xml:id="word-r226" anchors="AnchorOffset = 1103 AnchorOffset = 1113"/>
+    <region xml:id="word-r227" anchors="AnchorOffset = 1113 AnchorOffset = 1116"/>
+    <region xml:id="word-r224" anchors="AnchorOffset = 1091 AnchorOffset = 1095"/>
+    <region xml:id="word-r225" anchors="AnchorOffset = 1095 AnchorOffset = 1103"/>
+    <region xml:id="word-r222" anchors="AnchorOffset = 1080 AnchorOffset = 1086"/>
+    <region xml:id="word-r223" anchors="AnchorOffset = 1086 AnchorOffset = 1091"/>
+    <region xml:id="word-r189" anchors="AnchorOffset = 947 AnchorOffset = 952"/>
+    <region xml:id="word-r221" anchors="AnchorOffset = 1076 AnchorOffset = 1080"/>
+    <region xml:id="word-r187" anchors="AnchorOffset = 939 AnchorOffset = 945"/>
+    <region xml:id="word-r186" anchors="AnchorOffset = 934 AnchorOffset = 939"/>
+    <region xml:id="word-r185" anchors="AnchorOffset = 932 AnchorOffset = 934"/>
+    <region xml:id="word-r184" anchors="AnchorOffset = 926 AnchorOffset = 932"/>
+    <region xml:id="word-r183" anchors="AnchorOffset = 921 AnchorOffset = 926"/>
+    <region xml:id="word-r182" anchors="AnchorOffset = 910 AnchorOffset = 921"/>
+    <region xml:id="word-r181" anchors="AnchorOffset = 905 AnchorOffset = 910"/>
+    <region xml:id="word-r229" anchors="AnchorOffset = 1117 AnchorOffset = 1119"/>
+    <region xml:id="word-r251" anchors="AnchorOffset = 1236 AnchorOffset = 1243"/>
+    <region xml:id="word-r250" anchors="AnchorOffset = 1232 AnchorOffset = 1236"/>
+    <region xml:id="word-r132" anchors="AnchorOffset = 658 AnchorOffset = 661"/>
+    <region xml:id="word-r133" anchors="AnchorOffset = 661 AnchorOffset = 671"/>
+    <region xml:id="word-r130" anchors="AnchorOffset = 644 AnchorOffset = 653"/>
+    <region xml:id="word-r131" anchors="AnchorOffset = 653 AnchorOffset = 658"/>
+    <region xml:id="word-r136" anchors="AnchorOffset = 684 AnchorOffset = 688"/>
+    <region xml:id="word-r137" anchors="AnchorOffset = 688 AnchorOffset = 694"/>
+    <region xml:id="word-r134" anchors="AnchorOffset = 671 AnchorOffset = 676"/>
+    <region xml:id="word-r135" anchors="AnchorOffset = 676 AnchorOffset = 684"/>
+    <region xml:id="word-r138" anchors="AnchorOffset = 694 AnchorOffset = 698"/>
+    <region xml:id="word-r139" anchors="AnchorOffset = 698 AnchorOffset = 704"/>
+    <region xml:id="word-r358" anchors="AnchorOffset = 1814 AnchorOffset = 1816"/>
+    <region xml:id="word-r359" anchors="AnchorOffset = 1816 AnchorOffset = 1820"/>
+    <region xml:id="word-r352" anchors="AnchorOffset = 1776 AnchorOffset = 1783"/>
+    <region xml:id="word-r353" anchors="AnchorOffset = 1783 AnchorOffset = 1793"/>
+    <region xml:id="word-r350" anchors="AnchorOffset = 1768 AnchorOffset = 1775"/>
+    <region xml:id="word-r351" anchors="AnchorOffset = 1775 AnchorOffset = 1776"/>
+    <region xml:id="word-r356" anchors="AnchorOffset = 1807 AnchorOffset = 1812"/>
+    <region xml:id="word-r357" anchors="AnchorOffset = 1812 AnchorOffset = 1814"/>
+    <region xml:id="word-r354" anchors="AnchorOffset = 1793 AnchorOffset = 1800"/>
+    <region xml:id="word-r355" anchors="AnchorOffset = 1800 AnchorOffset = 1807"/>
+    <region xml:id="word-r220" anchors="AnchorOffset = 1073 AnchorOffset = 1076"/>
+    <region xml:id="word-r188" anchors="AnchorOffset = 945 AnchorOffset = 947"/>
+    <region xml:id="word-r228" anchors="AnchorOffset = 1116 AnchorOffset = 1117"/>
+    <region xml:id="word-r180" anchors="AnchorOffset = 903 AnchorOffset = 905"/>
+    <region xml:id="word-r29" anchors="AnchorOffset = 168 AnchorOffset = 174"/>
+    <region xml:id="word-r28" anchors="AnchorOffset = 163 AnchorOffset = 168"/>
+    <region xml:id="word-r27" anchors="AnchorOffset = 161 AnchorOffset = 163"/>
+    <region xml:id="word-r26" anchors="AnchorOffset = 153 AnchorOffset = 161"/>
+    <region xml:id="word-r25" anchors="AnchorOffset = 144 AnchorOffset = 153"/>
+    <region xml:id="word-r24" anchors="AnchorOffset = 139 AnchorOffset = 144"/>
+    <region xml:id="word-r23" anchors="AnchorOffset = 137 AnchorOffset = 139"/>
+    <region xml:id="word-r22" anchors="AnchorOffset = 132 AnchorOffset = 137"/>
+    <region xml:id="word-r21" anchors="AnchorOffset = 121 AnchorOffset = 132"/>
+    <region xml:id="word-r20" anchors="AnchorOffset = 114 AnchorOffset = 121"/>
+    <region xml:id="word-r98" anchors="AnchorOffset = 502 AnchorOffset = 507"/>
+    <region xml:id="word-r99" anchors="AnchorOffset = 507 AnchorOffset = 515"/>
+    <region xml:id="word-r178" anchors="AnchorOffset = 889 AnchorOffset = 893"/>
+    <region xml:id="word-r179" anchors="AnchorOffset = 893 AnchorOffset = 903"/>
+    <region xml:id="word-r176" anchors="AnchorOffset = 882 AnchorOffset = 885"/>
+    <region xml:id="word-r177" anchors="AnchorOffset = 885 AnchorOffset = 889"/>
+    <region xml:id="word-r174" anchors="AnchorOffset = 872 AnchorOffset = 880"/>
+    <region xml:id="word-r175" anchors="AnchorOffset = 880 AnchorOffset = 882"/>
+    <region xml:id="word-r172" anchors="AnchorOffset = 867 AnchorOffset = 871"/>
+    <region xml:id="word-r173" anchors="AnchorOffset = 871 AnchorOffset = 872"/>
+    <region xml:id="word-r170" anchors="AnchorOffset = 858 AnchorOffset = 861"/>
+    <region xml:id="word-r171" anchors="AnchorOffset = 861 AnchorOffset = 867"/>
+    <region xml:id="word-r316" anchors="AnchorOffset = 1613 AnchorOffset = 1620"/>
+    <region xml:id="word-r317" anchors="AnchorOffset = 1620 AnchorOffset = 1623"/>
+    <region xml:id="word-r314" anchors="AnchorOffset = 1598 AnchorOffset = 1609"/>
+    <region xml:id="word-r315" anchors="AnchorOffset = 1609 AnchorOffset = 1613"/>
+    <region xml:id="word-r312" anchors="AnchorOffset = 1588 AnchorOffset = 1592"/>
+    <region xml:id="word-r313" anchors="AnchorOffset = 1592 AnchorOffset = 1598"/>
+    <region xml:id="word-r310" anchors="AnchorOffset = 1574 AnchorOffset = 1578"/>
+    <region xml:id="word-r311" anchors="AnchorOffset = 1578 AnchorOffset = 1588"/>
+    <region xml:id="word-r257" anchors="AnchorOffset = 1275 AnchorOffset = 1282"/>
+    <region xml:id="word-r256" anchors="AnchorOffset = 1265 AnchorOffset = 1275"/>
+    <region xml:id="word-r255" anchors="AnchorOffset = 1263 AnchorOffset = 1265"/>
+    <region xml:id="word-r254" anchors="AnchorOffset = 1255 AnchorOffset = 1263"/>
+    <region xml:id="word-r253" anchors="AnchorOffset = 1250 AnchorOffset = 1255"/>
+    <region xml:id="word-r252" anchors="AnchorOffset = 1243 AnchorOffset = 1250"/>
+    <region xml:id="word-r318" anchors="AnchorOffset = 1623 AnchorOffset = 1624"/>
+    <region xml:id="word-r319" anchors="AnchorOffset = 1624 AnchorOffset = 1629"/>
+    <region xml:id="word-r389" anchors="AnchorOffset = 1978 AnchorOffset = 1987"/>
+    <region xml:id="word-r388" anchors="AnchorOffset = 1976 AnchorOffset = 1978"/>
+    <region xml:id="word-r385" anchors="AnchorOffset = 1954 AnchorOffset = 1961"/>
+    <region xml:id="word-r384" anchors="AnchorOffset = 1950 AnchorOffset = 1954"/>
+    <region xml:id="word-r387" anchors="AnchorOffset = 1968 AnchorOffset = 1976"/>
+    <region xml:id="word-r386" anchors="AnchorOffset = 1961 AnchorOffset = 1968"/>
+    <region xml:id="word-r381" anchors="AnchorOffset = 1931 AnchorOffset = 1936"/>
+    <region xml:id="word-r380" anchors="AnchorOffset = 1926 AnchorOffset = 1931"/>
+    <region xml:id="word-r383" anchors="AnchorOffset = 1944 AnchorOffset = 1950"/>
+    <region xml:id="word-r382" anchors="AnchorOffset = 1936 AnchorOffset = 1944"/>
+    <region xml:id="word-r148" anchors="AnchorOffset = 747 AnchorOffset = 750"/>
+    <region xml:id="word-r280" anchors="AnchorOffset = 1403 AnchorOffset = 1404"/>
+    <region xml:id="word-r281" anchors="AnchorOffset = 1404 AnchorOffset = 1409"/>
+    <region xml:id="word-r288" anchors="AnchorOffset = 1449 AnchorOffset = 1455"/>
+    <region xml:id="word-r289" anchors="AnchorOffset = 1455 AnchorOffset = 1459"/>
+    <region xml:id="word-r154" anchors="AnchorOffset = 776 AnchorOffset = 788"/>
+    <region xml:id="word-r71" anchors="AnchorOffset = 376 AnchorOffset = 385"/>
+    <region xml:id="word-r156" anchors="AnchorOffset = 792 AnchorOffset = 798"/>
+    <region xml:id="word-r157" anchors="AnchorOffset = 798 AnchorOffset = 799"/>
+    <region xml:id="word-r150" anchors="AnchorOffset = 756 AnchorOffset = 761"/>
+    <region xml:id="word-r151" anchors="AnchorOffset = 761 AnchorOffset = 767"/>
+    <region xml:id="word-r56" anchors="AnchorOffset = 306 AnchorOffset = 308"/>
+    <region xml:id="word-r57" anchors="AnchorOffset = 308 AnchorOffset = 311"/>
+    <region xml:id="word-r54" anchors="AnchorOffset = 291 AnchorOffset = 295"/>
+    <region xml:id="word-r55" anchors="AnchorOffset = 295 AnchorOffset = 306"/>
+    <region xml:id="word-r52" anchors="AnchorOffset = 282 AnchorOffset = 286"/>
+    <region xml:id="word-r53" anchors="AnchorOffset = 286 AnchorOffset = 291"/>
+    <region xml:id="word-r50" anchors="AnchorOffset = 269 AnchorOffset = 276"/>
+    <region xml:id="word-r51" anchors="AnchorOffset = 276 AnchorOffset = 282"/>
+    <region xml:id="word-r153" anchors="AnchorOffset = 768 AnchorOffset = 776"/>
+    <region xml:id="word-r58" anchors="AnchorOffset = 311 AnchorOffset = 312"/>
+    <region xml:id="word-r59" anchors="AnchorOffset = 312 AnchorOffset = 318"/>
+    <region xml:id="word-r190" anchors="AnchorOffset = 952 AnchorOffset = 954"/>
+    <region xml:id="word-r305" anchors="AnchorOffset = 1538 AnchorOffset = 1543"/>
+    <region xml:id="word-r192" anchors="AnchorOffset = 958 AnchorOffset = 969"/>
+    <region xml:id="word-r193" anchors="AnchorOffset = 969 AnchorOffset = 971"/>
+    <region xml:id="word-r194" anchors="AnchorOffset = 971 AnchorOffset = 975"/>
+    <region xml:id="word-r195" anchors="AnchorOffset = 975 AnchorOffset = 983"/>
+    <region xml:id="word-r196" anchors="AnchorOffset = 983 AnchorOffset = 985"/>
+    <region xml:id="word-r9" anchors="AnchorOffset = 50 AnchorOffset = 60"/>
+    <region xml:id="word-r198" anchors="AnchorOffset = 987 AnchorOffset = 989"/>
+    <region xml:id="word-r199" anchors="AnchorOffset = 989 AnchorOffset = 994"/>
+    <region xml:id="word-r307" anchors="AnchorOffset = 1551 AnchorOffset = 1560"/>
+    <region xml:id="word-r306" anchors="AnchorOffset = 1543 AnchorOffset = 1551"/>
+    <region xml:id="word-r107" anchors="AnchorOffset = 547 AnchorOffset = 555"/>
+    <region xml:id="word-r262" anchors="AnchorOffset = 1308 AnchorOffset = 1314"/>
+    <region xml:id="word-r105" anchors="AnchorOffset = 536 AnchorOffset = 541"/>
+    <region xml:id="word-r104" anchors="AnchorOffset = 532 AnchorOffset = 536"/>
+    <region xml:id="word-r103" anchors="AnchorOffset = 526 AnchorOffset = 532"/>
+    <region xml:id="word-r102" anchors="AnchorOffset = 522 AnchorOffset = 526"/>
+    <region xml:id="word-r101" anchors="AnchorOffset = 516 AnchorOffset = 522"/>
+    <region xml:id="word-r263" anchors="AnchorOffset = 1314 AnchorOffset = 1316"/>
+    <region xml:id="word-r260" anchors="AnchorOffset = 1298 AnchorOffset = 1304"/>
+    <region xml:id="word-r109" anchors="AnchorOffset = 560 AnchorOffset = 565"/>
+    <region xml:id="word-r108" anchors="AnchorOffset = 555 AnchorOffset = 560"/>
+    <region xml:id="word-r261" anchors="AnchorOffset = 1304 AnchorOffset = 1308"/>
+    <region xml:id="word-r369" anchors="AnchorOffset = 1857 AnchorOffset = 1858"/>
+    <region xml:id="word-r368" anchors="AnchorOffset = 1855 AnchorOffset = 1857"/>
+    <region xml:id="word-r367" anchors="AnchorOffset = 1851 AnchorOffset = 1855"/>
+    <region xml:id="word-r366" anchors="AnchorOffset = 1846 AnchorOffset = 1851"/>
+    <region xml:id="word-r365" anchors="AnchorOffset = 1840 AnchorOffset = 1846"/>
+    <region xml:id="word-r364" anchors="AnchorOffset = 1835 AnchorOffset = 1840"/>
+    <region xml:id="word-r363" anchors="AnchorOffset = 1833 AnchorOffset = 1835"/>
+    <region xml:id="word-r362" anchors="AnchorOffset = 1831 AnchorOffset = 1833"/>
+    <region xml:id="word-r361" anchors="AnchorOffset = 1825 AnchorOffset = 1831"/>
+    <region xml:id="word-r360" anchors="AnchorOffset = 1820 AnchorOffset = 1825"/>
+    <region xml:id="word-r264" anchors="AnchorOffset = 1316 AnchorOffset = 1322"/>
+    <region xml:id="word-r7" anchors="AnchorOffset = 39 AnchorOffset = 44"/>
+    <region xml:id="word-r219" anchors="AnchorOffset = 1069 AnchorOffset = 1073"/>
+    <region xml:id="word-r218" anchors="AnchorOffset = 1060 AnchorOffset = 1069"/>
+    <region xml:id="word-r213" anchors="AnchorOffset = 1035 AnchorOffset = 1039"/>
+    <region xml:id="word-r212" anchors="AnchorOffset = 1034 AnchorOffset = 1035"/>
+    <region xml:id="word-r211" anchors="AnchorOffset = 1031 AnchorOffset = 1034"/>
+    <region xml:id="word-r210" anchors="AnchorOffset = 1027 AnchorOffset = 1031"/>
+    <region xml:id="word-r217" anchors="AnchorOffset = 1056 AnchorOffset = 1060"/>
+    <region xml:id="word-r216" anchors="AnchorOffset = 1053 AnchorOffset = 1056"/>
+    <region xml:id="word-r215" anchors="AnchorOffset = 1049 AnchorOffset = 1053"/>
+    <region xml:id="word-r214" anchors="AnchorOffset = 1039 AnchorOffset = 1049"/>
+    <region xml:id="word-r12" anchors="AnchorOffset = 69 AnchorOffset = 75"/>
+    <region xml:id="word-r13" anchors="AnchorOffset = 75 AnchorOffset = 79"/>
+    <region xml:id="word-r10" anchors="AnchorOffset = 60 AnchorOffset = 64"/>
+    <region xml:id="word-r11" anchors="AnchorOffset = 64 AnchorOffset = 69"/>
+    <region xml:id="word-r16" anchors="AnchorOffset = 86 AnchorOffset = 90"/>
+    <region xml:id="word-r17" anchors="AnchorOffset = 90 AnchorOffset = 102"/>
+    <region xml:id="word-r14" anchors="AnchorOffset = 79 AnchorOffset = 81"/>
+    <region xml:id="word-r15" anchors="AnchorOffset = 81 AnchorOffset = 86"/>
+    <region xml:id="word-r18" anchors="AnchorOffset = 102 AnchorOffset = 112"/>
+    <region xml:id="word-r19" anchors="AnchorOffset = 112 AnchorOffset = 114"/>
+    <region xml:id="word-r143" anchors="AnchorOffset = 725 AnchorOffset = 733"/>
+    <region xml:id="word-r142" anchors="AnchorOffset = 720 AnchorOffset = 725"/>
+    <region xml:id="word-r141" anchors="AnchorOffset = 707 AnchorOffset = 720"/>
+    <region xml:id="word-r140" anchors="AnchorOffset = 704 AnchorOffset = 707"/>
+    <region xml:id="word-r89" anchors="AnchorOffset = 473 AnchorOffset = 479"/>
+    <region xml:id="word-r146" anchors="AnchorOffset = 740 AnchorOffset = 742"/>
+    <region xml:id="word-r145" anchors="AnchorOffset = 737 AnchorOffset = 740"/>
+    <region xml:id="word-r144" anchors="AnchorOffset = 733 AnchorOffset = 737"/>
+    <region xml:id="word-r85" anchors="AnchorOffset = 452 AnchorOffset = 455"/>
+    <region xml:id="word-r84" anchors="AnchorOffset = 444 AnchorOffset = 452"/>
+    <region xml:id="word-r87" anchors="AnchorOffset = 458 AnchorOffset = 462"/>
+    <region xml:id="word-r86" anchors="AnchorOffset = 455 AnchorOffset = 458"/>
+    <region xml:id="word-r81" anchors="AnchorOffset = 429 AnchorOffset = 435"/>
+    <region xml:id="word-r80" anchors="AnchorOffset = 427 AnchorOffset = 429"/>
+    <region xml:id="word-r83" anchors="AnchorOffset = 439 AnchorOffset = 444"/>
+    <region xml:id="word-r82" anchors="AnchorOffset = 435 AnchorOffset = 439"/>
+    <region xml:id="word-r240" anchors="AnchorOffset = 1171 AnchorOffset = 1176"/>
+    <region xml:id="word-r241" anchors="AnchorOffset = 1176 AnchorOffset = 1185"/>
+    <region xml:id="word-r242" anchors="AnchorOffset = 1185 AnchorOffset = 1186"/>
+    <region xml:id="word-r243" anchors="AnchorOffset = 1186 AnchorOffset = 1193"/>
+    <region xml:id="word-r244" anchors="AnchorOffset = 1193 AnchorOffset = 1201"/>
+    <region xml:id="word-r245" anchors="AnchorOffset = 1201 AnchorOffset = 1209"/>
+    <region xml:id="word-r246" anchors="AnchorOffset = 1209 AnchorOffset = 1215"/>
+    <region xml:id="word-r247" anchors="AnchorOffset = 1215 AnchorOffset = 1219"/>
+    <region xml:id="word-r248" anchors="AnchorOffset = 1219 AnchorOffset = 1227"/>
+    <region xml:id="word-r249" anchors="AnchorOffset = 1227 AnchorOffset = 1232"/>
+    <region xml:id="word-r394" anchors="AnchorOffset = 2006 AnchorOffset = 2011"/>
+    <region xml:id="word-r395" anchors="AnchorOffset = 2011 AnchorOffset = 2015"/>
+    <region xml:id="word-r392" anchors="AnchorOffset = 1994 AnchorOffset = 1998"/>
+    <region xml:id="word-r393" anchors="AnchorOffset = 1998 AnchorOffset = 2006"/>
+    <region xml:id="word-r390" anchors="AnchorOffset = 1987 AnchorOffset = 1991"/>
+    <region xml:id="word-r391" anchors="AnchorOffset = 1991 AnchorOffset = 1994"/>
+    <region xml:id="word-r100" anchors="AnchorOffset = 515 AnchorOffset = 516"/>
+    <region xml:id="word-r106" anchors="AnchorOffset = 541 AnchorOffset = 547"/>
+    <region xml:id="word-r329" anchors="AnchorOffset = 1664 AnchorOffset = 1671"/>
+    <region xml:id="word-r328" anchors="AnchorOffset = 1662 AnchorOffset = 1664"/>
+    <region xml:id="word-r323" anchors="AnchorOffset = 1645 AnchorOffset = 1649"/>
+    <region xml:id="word-r322" anchors="AnchorOffset = 1637 AnchorOffset = 1645"/>
+    <region xml:id="word-r321" anchors="AnchorOffset = 1635 AnchorOffset = 1637"/>
+    <region xml:id="word-r320" anchors="AnchorOffset = 1629 AnchorOffset = 1635"/>
+    <region xml:id="word-r327" anchors="AnchorOffset = 1661 AnchorOffset = 1662"/>
+    <region xml:id="word-r326" anchors="AnchorOffset = 1659 AnchorOffset = 1661"/>
+    <region xml:id="word-r325" anchors="AnchorOffset = 1651 AnchorOffset = 1659"/>
+    <region xml:id="word-r324" anchors="AnchorOffset = 1649 AnchorOffset = 1651"/>
+    <region xml:id="word-r293" anchors="AnchorOffset = 1481 AnchorOffset = 1482"/>
+    <region xml:id="word-r292" anchors="AnchorOffset = 1479 AnchorOffset = 1481"/>
+    <region xml:id="word-r299" anchors="AnchorOffset = 1505 AnchorOffset = 1509"/>
+    <region xml:id="word-r309" anchors="AnchorOffset = 1570 AnchorOffset = 1574"/>
+    <region xml:id="word-r298" anchors="AnchorOffset = 1496 AnchorOffset = 1505"/>
+    <region xml:id="word-r49" anchors="AnchorOffset = 268 AnchorOffset = 269"/>
+    <region xml:id="word-r48" anchors="AnchorOffset = 266 AnchorOffset = 268"/>
+    <region xml:id="word-r41" anchors="AnchorOffset = 228 AnchorOffset = 235"/>
+    <region xml:id="word-r40" anchors="AnchorOffset = 222 AnchorOffset = 228"/>
+    <region xml:id="word-r43" anchors="AnchorOffset = 242 AnchorOffset = 246"/>
+    <region xml:id="word-r42" anchors="AnchorOffset = 235 AnchorOffset = 242"/>
+    <region xml:id="word-r45" anchors="AnchorOffset = 251 AnchorOffset = 254"/>
+    <region xml:id="word-r44" anchors="AnchorOffset = 246 AnchorOffset = 251"/>
+    <region xml:id="word-r308" anchors="AnchorOffset = 1560 AnchorOffset = 1570"/>
+    <region xml:id="word-r46" anchors="AnchorOffset = 254 AnchorOffset = 257"/>
+    <region xml:id="word-r147" anchors="AnchorOffset = 742 AnchorOffset = 747"/>
+    <region xml:id="word-r88" anchors="AnchorOffset = 462 AnchorOffset = 473"/>
+    <region xml:id="word-r118" anchors="AnchorOffset = 592 AnchorOffset = 594"/>
+    <region xml:id="word-r119" anchors="AnchorOffset = 594 AnchorOffset = 598"/>
+    <region xml:id="word-r291" anchors="AnchorOffset = 1472 AnchorOffset = 1479"/>
+    <region xml:id="word-r290" anchors="AnchorOffset = 1459 AnchorOffset = 1472"/>
+    <region xml:id="word-r297" anchors="AnchorOffset = 1494 AnchorOffset = 1496"/>
+    <region xml:id="word-r296" anchors="AnchorOffset = 1489 AnchorOffset = 1494"/>
+    <region xml:id="word-r295" anchors="AnchorOffset = 1488 AnchorOffset = 1489"/>
+    <region xml:id="word-r294" anchors="AnchorOffset = 1482 AnchorOffset = 1488"/>
+    <region xml:id="word-r110" anchors="AnchorOffset = 565 AnchorOffset = 572"/>
+    <region xml:id="word-r111" anchors="AnchorOffset = 572 AnchorOffset = 574"/>
+    <region xml:id="word-r112" anchors="AnchorOffset = 574 AnchorOffset = 579"/>
+    <region xml:id="word-r113" anchors="AnchorOffset = 579 AnchorOffset = 581"/>
+    <region xml:id="word-r114" anchors="AnchorOffset = 581 AnchorOffset = 584"/>
+    <region xml:id="word-r115" anchors="AnchorOffset = 584 AnchorOffset = 587"/>
+    <region xml:id="word-r116" anchors="AnchorOffset = 587 AnchorOffset = 589"/>
+    <region xml:id="word-r117" anchors="AnchorOffset = 589 AnchorOffset = 592"/>
+    <region xml:id="word-r149" anchors="AnchorOffset = 750 AnchorOffset = 756"/>
+    <node xml:id="wfw-n180">
+        <link targets="word-r180"/>
+    </node>
+    <a label="wfw" ref="wfw-n180" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n181">
+        <link targets="word-r181"/>
+    </node>
+    <a label="wfw" ref="wfw-n181" as="graf">
+        <fs>
+            <f name="wfw">stand.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n182">
+        <link targets="word-r182"/>
+    </node>
+    <a label="wfw" ref="wfw-n182" as="graf">
+        <fs>
+            <f name="wfw">EMPH-such-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n183">
+        <link targets="word-r183"/>
+    </node>
+    <a label="wfw" ref="wfw-n183" as="graf">
+        <fs>
+            <f name="wfw">seed-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n184">
+        <link targets="word-r184"/>
+    </node>
+    <a label="wfw" ref="wfw-n184" as="graf">
+        <fs>
+            <f name="wfw">seize.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n185">
+        <link targets="word-r185"/>
+    </node>
+    <a label="wfw" ref="wfw-n185" as="graf">
+        <fs>
+            <f name="wfw">from</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n186">
+        <link targets="word-r186"/>
+    </node>
+    <a label="wfw" ref="wfw-n186" as="graf">
+        <fs>
+            <f name="wfw">RFL-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n187">
+        <link targets="word-r187"/>
+    </node>
+    <a label="wfw" ref="wfw-n187" as="graf">
+        <fs>
+            <f name="wfw">mouth-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n188">
+        <link targets="word-r188"/>
+    </node>
+    <a label="wfw" ref="wfw-n188" as="graf">
+        <fs>
+            <f name="wfw">inside</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n189">
+        <link targets="word-r189"/>
+    </node>
+    <a label="wfw" ref="wfw-n189" as="graf">
+        <fs>
+            <f name="wfw">throw.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n98">
+        <link targets="word-r98"/>
+    </node>
+    <a label="wfw" ref="wfw-n98" as="graf">
+        <fs>
+            <f name="wfw">blade=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n348">
+        <link targets="word-r348"/>
+    </node>
+    <a label="wfw" ref="wfw-n348" as="graf">
+        <fs>
+            <f name="wfw">thing=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n349">
+        <link targets="word-r349"/>
+    </node>
+    <a label="wfw" ref="wfw-n349" as="graf">
+        <fs>
+            <f name="wfw">I=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n346">
+        <link targets="word-r346"/>
+    </node>
+    <a label="wfw" ref="wfw-n346" as="graf">
+        <fs>
+            <f name="wfw">entirely</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n347">
+        <link targets="word-r347"/>
+    </node>
+    <a label="wfw" ref="wfw-n347" as="graf">
+        <fs>
+            <f name="wfw">good-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n344">
+        <link targets="word-r344"/>
+    </node>
+    <a label="wfw" ref="wfw-n344" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n345">
+        <link targets="word-r345"/>
+    </node>
+    <a label="wfw" ref="wfw-n345" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n342">
+        <link targets="word-r342"/>
+    </node>
+    <a label="wfw" ref="wfw-n342" as="graf">
+        <fs>
+            <f name="wfw">D</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n343">
+        <link targets="word-r343"/>
+    </node>
+    <a label="wfw" ref="wfw-n343" as="graf">
+        <fs>
+            <f name="wfw">what=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n340">
+        <link targets="word-r340"/>
+    </node>
+    <a label="wfw" ref="wfw-n340" as="graf">
+        <fs>
+            <f name="wfw">old.man</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n341">
+        <link targets="word-r341"/>
+    </node>
+    <a label="wfw" ref="wfw-n341" as="graf">
+        <fs>
+            <f name="wfw">father</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n91">
+        <link targets="word-r91"/>
+    </node>
+    <a label="wfw" ref="wfw-n91" as="graf">
+        <fs>
+            <f name="wfw">very</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n90">
+        <link targets="word-r90"/>
+    </node>
+    <a label="wfw" ref="wfw-n90" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n119">
+        <link targets="word-r119"/>
+    </node>
+    <a label="wfw" ref="wfw-n119" as="graf">
+        <fs>
+            <f name="wfw">ohhhh...</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n118">
+        <link targets="word-r118"/>
+    </node>
+    <a label="wfw" ref="wfw-n118" as="graf">
+        <fs>
+            <f name="wfw">FOC</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n113">
+        <link targets="word-r113"/>
+    </node>
+    <a label="wfw" ref="wfw-n113" as="graf">
+        <fs>
+            <f name="wfw">in</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n112">
+        <link targets="word-r112"/>
+    </node>
+    <a label="wfw" ref="wfw-n112" as="graf">
+        <fs>
+            <f name="wfw">mountain-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n111">
+        <link targets="word-r111"/>
+    </node>
+    <a label="wfw" ref="wfw-n111" as="graf">
+        <fs>
+            <f name="wfw">to</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n110">
+        <link targets="word-r110"/>
+    </node>
+    <a label="wfw" ref="wfw-n110" as="graf">
+        <fs>
+            <f name="wfw">hint=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n117">
+        <link targets="word-r117"/>
+    </node>
+    <a label="wfw" ref="wfw-n117" as="graf">
+        <fs>
+            <f name="wfw">go.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n116">
+        <link targets="word-r116"/>
+    </node>
+    <a label="wfw" ref="wfw-n116" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n115">
+        <link targets="word-r115"/>
+    </node>
+    <a label="wfw" ref="wfw-n115" as="graf">
+        <fs>
+            <f name="wfw">there</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n114">
+        <link targets="word-r114"/>
+    </node>
+    <a label="wfw" ref="wfw-n114" as="graf">
+        <fs>
+            <f name="wfw">go.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n59">
+        <link targets="word-r59"/>
+    </node>
+    <a label="wfw" ref="wfw-n59" as="graf">
+        <fs>
+            <f name="wfw">dragon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n58">
+        <link targets="word-r58"/>
+    </node>
+    <a label="wfw" ref="wfw-n58" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n53">
+        <link targets="word-r53"/>
+    </node>
+    <a label="wfw" ref="wfw-n53" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n52">
+        <link targets="word-r52"/>
+    </node>
+    <a label="wfw" ref="wfw-n52" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n51">
+        <link targets="word-r51"/>
+    </node>
+    <a label="wfw" ref="wfw-n51" as="graf">
+        <fs>
+            <f name="wfw">come.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n50">
+        <link targets="word-r50"/>
+    </node>
+    <a label="wfw" ref="wfw-n50" as="graf">
+        <fs>
+            <f name="wfw">what-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n57">
+        <link targets="word-r57"/>
+    </node>
+    <a label="wfw" ref="wfw-n57" as="graf">
+        <fs>
+            <f name="wfw">oh…</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n56">
+        <link targets="word-r56"/>
+    </node>
+    <a label="wfw" ref="wfw-n56" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n55">
+        <link targets="word-r55"/>
+    </node>
+    <a label="wfw" ref="wfw-n55" as="graf">
+        <fs>
+            <f name="wfw">dragon-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n54">
+        <link targets="word-r54"/>
+    </node>
+    <a label="wfw" ref="wfw-n54" as="graf">
+        <fs>
+            <f name="wfw">master</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n236">
+        <link targets="word-r236"/>
+    </node>
+    <a label="wfw" ref="wfw-n236" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n237">
+        <link targets="word-r237"/>
+    </node>
+    <a label="wfw" ref="wfw-n237" as="graf">
+        <fs>
+            <f name="wfw">other=TOP</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n234">
+        <link targets="word-r234"/>
+    </node>
+    <a label="wfw" ref="wfw-n234" as="graf">
+        <fs>
+            <f name="wfw">throw.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n235">
+        <link targets="word-r235"/>
+    </node>
+    <a label="wfw" ref="wfw-n235" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n232">
+        <link targets="word-r232"/>
+    </node>
+    <a label="wfw" ref="wfw-n232" as="graf">
+        <fs>
+            <f name="wfw">mouth-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n233">
+        <link targets="word-r233"/>
+    </node>
+    <a label="wfw" ref="wfw-n233" as="graf">
+        <fs>
+            <f name="wfw">inside=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n230">
+        <link targets="word-r230"/>
+    </node>
+    <a label="wfw" ref="wfw-n230" as="graf">
+        <fs>
+            <f name="wfw">from</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n231">
+        <link targets="word-r231"/>
+    </node>
+    <a label="wfw" ref="wfw-n231" as="graf">
+        <fs>
+            <f name="wfw">RFL-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n238">
+        <link targets="word-r238"/>
+    </node>
+    <a label="wfw" ref="wfw-n238" as="graf">
+        <fs>
+            <f name="wfw">jwelery=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n239">
+        <link targets="word-r239"/>
+    </node>
+    <a label="wfw" ref="wfw-n239" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n388">
+        <link targets="word-r388"/>
+    </node>
+    <a label="wfw" ref="wfw-n388" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n308">
+        <link targets="word-r308"/>
+    </node>
+    <a label="wfw" ref="wfw-n308" as="graf">
+        <fs>
+            <f name="wfw">donkey-DIM-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n309">
+        <link targets="word-r309"/>
+    </node>
+    <a label="wfw" ref="wfw-n309" as="graf">
+        <fs>
+            <f name="wfw">have.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n302">
+        <link targets="word-r302"/>
+    </node>
+    <a label="wfw" ref="wfw-n302" as="graf">
+        <fs>
+            <f name="wfw">old.man=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n303">
+        <link targets="word-r303"/>
+    </node>
+    <a label="wfw" ref="wfw-n303" as="graf">
+        <fs>
+            <f name="wfw">first</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n300">
+        <link targets="word-r300"/>
+    </node>
+    <a label="wfw" ref="wfw-n300" as="graf">
+        <fs>
+            <f name="wfw">melon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n301">
+        <link targets="word-r301"/>
+    </node>
+    <a label="wfw" ref="wfw-n301" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n306">
+        <link targets="word-r306"/>
+    </node>
+    <a label="wfw" ref="wfw-n306" as="graf">
+        <fs>
+            <f name="wfw">trust=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n307">
+        <link targets="word-r307"/>
+    </node>
+    <a label="wfw" ref="wfw-n307" as="graf">
+        <fs>
+            <f name="wfw">NEG-do.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n304">
+        <link targets="word-r304"/>
+    </node>
+    <a label="wfw" ref="wfw-n304" as="graf">
+        <fs>
+            <f name="wfw">what=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n305">
+        <link targets="word-r305"/>
+    </node>
+    <a label="wfw" ref="wfw-n305" as="graf">
+        <fs>
+            <f name="wfw">NEG-do.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n157">
+        <link targets="word-r157"/>
+    </node>
+    <a label="wfw" ref="wfw-n157" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n156">
+        <link targets="word-r156"/>
+    </node>
+    <a label="wfw" ref="wfw-n156" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n155">
+        <link targets="word-r155"/>
+    </node>
+    <a label="wfw" ref="wfw-n155" as="graf">
+        <fs>
+            <f name="wfw">saw</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n154">
+        <link targets="word-r154"/>
+    </node>
+    <a label="wfw" ref="wfw-n154" as="graf">
+        <fs>
+            <f name="wfw">wild.goat-GEN-PL=OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n153">
+        <link targets="word-r153"/>
+    </node>
+    <a label="wfw" ref="wfw-n153" as="graf">
+        <fs>
+            <f name="wfw">horn-PL-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n152">
+        <link targets="word-r152"/>
+    </node>
+    <a label="wfw" ref="wfw-n152" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n151">
+        <link targets="word-r151"/>
+    </node>
+    <a label="wfw" ref="wfw-n151" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n150">
+        <link targets="word-r150"/>
+    </node>
+    <a label="wfw" ref="wfw-n150" as="graf">
+        <fs>
+            <f name="wfw">hint</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n97">
+        <link targets="word-r97"/>
+    </node>
+    <a label="wfw" ref="wfw-n97" as="graf">
+        <fs>
+            <f name="wfw">with</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n96">
+        <link targets="word-r96"/>
+    </node>
+    <a label="wfw" ref="wfw-n96" as="graf">
+        <fs>
+            <f name="wfw">come.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n95">
+        <link targets="word-r95"/>
+    </node>
+    <a label="wfw" ref="wfw-n95" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n94">
+        <link targets="word-r94"/>
+    </node>
+    <a label="wfw" ref="wfw-n94" as="graf">
+        <fs>
+            <f name="wfw">carpenter</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n93">
+        <link targets="word-r93"/>
+    </node>
+    <a label="wfw" ref="wfw-n93" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n92">
+        <link targets="word-r92"/>
+    </node>
+    <a label="wfw" ref="wfw-n92" as="graf">
+        <fs>
+            <f name="wfw">well</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n159">
+        <link targets="word-r159"/>
+    </node>
+    <a label="wfw" ref="wfw-n159" as="graf">
+        <fs>
+            <f name="wfw">become.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n158">
+        <link targets="word-r158"/>
+    </node>
+    <a label="wfw" ref="wfw-n158" as="graf">
+        <fs>
+            <f name="wfw">finished</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n272">
+        <link targets="word-r272"/>
+    </node>
+    <a label="wfw" ref="wfw-n272" as="graf">
+        <fs>
+            <f name="wfw">NEG-eat.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n273">
+        <link targets="word-r273"/>
+    </node>
+    <a label="wfw" ref="wfw-n273" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n270">
+        <link targets="word-r270"/>
+    </node>
+    <a label="wfw" ref="wfw-n270" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n271">
+        <link targets="word-r271"/>
+    </node>
+    <a label="wfw" ref="wfw-n271" as="graf">
+        <fs>
+            <f name="wfw">melon-PL-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n276">
+        <link targets="word-r276"/>
+    </node>
+    <a label="wfw" ref="wfw-n276" as="graf">
+        <fs>
+            <f name="wfw">mouth-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n277">
+        <link targets="word-r277"/>
+    </node>
+    <a label="wfw" ref="wfw-n277" as="graf">
+        <fs>
+            <f name="wfw">in=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n274">
+        <link targets="word-r274"/>
+    </node>
+    <a label="wfw" ref="wfw-n274" as="graf">
+        <fs>
+            <f name="wfw">from</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n275">
+        <link targets="word-r275"/>
+    </node>
+    <a label="wfw" ref="wfw-n275" as="graf">
+        <fs>
+            <f name="wfw">dragon-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n391">
+        <link targets="word-r391"/>
+    </node>
+    <a label="wfw" ref="wfw-n391" as="graf">
+        <fs>
+            <f name="wfw">donkey</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n278">
+        <link targets="word-r278"/>
+    </node>
+    <a label="wfw" ref="wfw-n278" as="graf">
+        <fs>
+            <f name="wfw">snake-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n279">
+        <link targets="word-r279"/>
+    </node>
+    <a label="wfw" ref="wfw-n279" as="graf">
+        <fs>
+            <f name="wfw">poison=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n390">
+        <link targets="word-r390"/>
+    </node>
+    <a label="wfw" ref="wfw-n390" as="graf">
+        <fs>
+            <f name="wfw">first</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n193">
+        <link targets="word-r193"/>
+    </node>
+    <a label="wfw" ref="wfw-n193" as="graf">
+        <fs>
+            <f name="wfw">inside</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n192">
+        <link targets="word-r192"/>
+    </node>
+    <a label="wfw" ref="wfw-n192" as="graf">
+        <fs>
+            <f name="wfw">jewel-PL.OBL-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n191">
+        <link targets="word-r191"/>
+    </node>
+    <a label="wfw" ref="wfw-n191" as="graf">
+        <fs>
+            <f name="wfw">EMPH.DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n190">
+        <link targets="word-r190"/>
+    </node>
+    <a label="wfw" ref="wfw-n190" as="graf">
+        <fs>
+            <f name="wfw">in</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n197">
+        <link targets="word-r197"/>
+    </node>
+    <a label="wfw" ref="wfw-n197" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n196">
+        <link targets="word-r196"/>
+    </node>
+    <a label="wfw" ref="wfw-n196" as="graf">
+        <fs>
+            <f name="wfw">in</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n195">
+        <link targets="word-r195"/>
+    </node>
+    <a label="wfw" ref="wfw-n195" as="graf">
+        <fs>
+            <f name="wfw">woolen.shoulder.bag-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n194">
+        <link targets="word-r194"/>
+    </node>
+    <a label="wfw" ref="wfw-n194" as="graf">
+        <fs>
+            <f name="wfw">DEM-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n199">
+        <link targets="word-r199"/>
+    </node>
+    <a label="wfw" ref="wfw-n199" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n198">
+        <link targets="word-r198"/>
+    </node>
+    <a label="wfw" ref="wfw-n198" as="graf">
+        <fs>
+            <f name="wfw">come.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n298">
+        <link targets="word-r298"/>
+    </node>
+    <a label="wfw" ref="wfw-n298" as="graf">
+        <fs>
+            <f name="wfw">melon-OBL=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n299">
+        <link targets="word-r299"/>
+    </node>
+    <a label="wfw" ref="wfw-n299" as="graf">
+        <fs>
+            <f name="wfw">entirely</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n353">
+        <link targets="word-r353"/>
+    </node>
+    <a label="wfw" ref="wfw-n353" as="graf">
+        <fs>
+            <f name="wfw">give.PST-PP=COP.PRS.1SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n352">
+        <link targets="word-r352"/>
+    </node>
+    <a label="wfw" ref="wfw-n352" as="graf">
+        <fs>
+            <f name="wfw">donkey-OBJ=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n355">
+        <link targets="word-r355"/>
+    </node>
+    <a label="wfw" ref="wfw-n355" as="graf">
+        <fs>
+            <f name="wfw">SUBJ.eat.PRS-2PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n354">
+        <link targets="word-r354"/>
+    </node>
+    <a label="wfw" ref="wfw-n354" as="graf">
+        <fs>
+            <f name="wfw">you.PL=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n357">
+        <link targets="word-r357"/>
+    </node>
+    <a label="wfw" ref="wfw-n357" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n356">
+        <link targets="word-r356"/>
+    </node>
+    <a label="wfw" ref="wfw-n356" as="graf">
+        <fs>
+            <f name="wfw">vizier</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n290">
+        <link targets="word-r290"/>
+    </node>
+    <a label="wfw" ref="wfw-n290" as="graf">
+        <fs>
+            <f name="wfw">old.man-IND-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n291">
+        <link targets="word-r291"/>
+    </node>
+    <a label="wfw" ref="wfw-n291" as="graf">
+        <fs>
+            <f name="wfw">gardener</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n292">
+        <link targets="word-r292"/>
+    </node>
+    <a label="wfw" ref="wfw-n292" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n293">
+        <link targets="word-r293"/>
+    </node>
+    <a label="wfw" ref="wfw-n293" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n294">
+        <link targets="word-r294"/>
+    </node>
+    <a label="wfw" ref="wfw-n294" as="graf">
+        <fs>
+            <f name="wfw">hit.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n295">
+        <link targets="word-r295"/>
+    </node>
+    <a label="wfw" ref="wfw-n295" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n296">
+        <link targets="word-r296"/>
+    </node>
+    <a label="wfw" ref="wfw-n296" as="graf">
+        <fs>
+            <f name="wfw">melon.bed</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n297">
+        <link targets="word-r297"/>
+    </node>
+    <a label="wfw" ref="wfw-n297" as="graf">
+        <fs>
+            <f name="wfw">to</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n62">
+        <link targets="word-r62"/>
+    </node>
+    <a label="wfw" ref="wfw-n62" as="graf">
+        <fs>
+            <f name="wfw">petition-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n63">
+        <link targets="word-r63"/>
+    </node>
+    <a label="wfw" ref="wfw-n63" as="graf">
+        <fs>
+            <f name="wfw">have.PRS-3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n146">
+        <link targets="word-r146"/>
+    </node>
+    <a label="wfw" ref="wfw-n146" as="graf">
+        <fs>
+            <f name="wfw">to</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n61">
+        <link targets="word-r61"/>
+    </node>
+    <a label="wfw" ref="wfw-n61" as="graf">
+        <fs>
+            <f name="wfw">have.PRS-3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n66">
+        <link targets="word-r66"/>
+    </node>
+    <a label="wfw" ref="wfw-n66" as="graf">
+        <fs>
+            <f name="wfw">who</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n141">
+        <link targets="word-r141"/>
+    </node>
+    <a label="wfw" ref="wfw-n141" as="graf">
+        <fs>
+            <f name="wfw">do.PST-PP=COP.PRS.3PL=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n64">
+        <link targets="word-r64"/>
+    </node>
+    <a label="wfw" ref="wfw-n64" as="graf">
+        <fs>
+            <f name="wfw">DEM-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n65">
+        <link targets="word-r65"/>
+    </node>
+    <a label="wfw" ref="wfw-n65" as="graf">
+        <fs>
+            <f name="wfw">petition-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n128">
+        <link targets="word-r128"/>
+    </node>
+    <a label="wfw" ref="wfw-n128" as="graf">
+        <fs>
+            <f name="wfw">mountain-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n129">
+        <link targets="word-r129"/>
+    </node>
+    <a label="wfw" ref="wfw-n129" as="graf">
+        <fs>
+            <f name="wfw">wild.goat</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n126">
+        <link targets="word-r126"/>
+    </node>
+    <a label="wfw" ref="wfw-n126" as="graf">
+        <fs>
+            <f name="wfw">mother=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n127">
+        <link targets="word-r127"/>
+    </node>
+    <a label="wfw" ref="wfw-n127" as="graf">
+        <fs>
+            <f name="wfw">from=EMPH-DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n124">
+        <link targets="word-r124"/>
+    </node>
+    <a label="wfw" ref="wfw-n124" as="graf">
+        <fs>
+            <f name="wfw">have.PRS-3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n125">
+        <link targets="word-r125"/>
+    </node>
+    <a label="wfw" ref="wfw-n125" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n122">
+        <link targets="word-r122"/>
+    </node>
+    <a label="wfw" ref="wfw-n122" as="graf">
+        <fs>
+            <f name="wfw">other</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n123">
+        <link targets="word-r123"/>
+    </node>
+    <a label="wfw" ref="wfw-n123" as="graf">
+        <fs>
+            <f name="wfw">mother-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n120">
+        <link targets="word-r120"/>
+    </node>
+    <a label="wfw" ref="wfw-n120" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n121">
+        <link targets="word-r121"/>
+    </node>
+    <a label="wfw" ref="wfw-n121" as="graf">
+        <fs>
+            <f name="wfw">dragon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n48">
+        <link targets="word-r48"/>
+    </node>
+    <a label="wfw" ref="wfw-n48" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n49">
+        <link targets="word-r49"/>
+    </node>
+    <a label="wfw" ref="wfw-n49" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n40">
+        <link targets="word-r40"/>
+    </node>
+    <a label="wfw" ref="wfw-n40" as="graf">
+        <fs>
+            <f name="wfw">come.PST-PP(=COP.PRS.3SG)=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n41">
+        <link targets="word-r41"/>
+    </node>
+    <a label="wfw" ref="wfw-n41" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n42">
+        <link targets="word-r42"/>
+    </node>
+    <a label="wfw" ref="wfw-n42" as="graf">
+        <fs>
+            <f name="wfw">shake=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n43">
+        <link targets="word-r43"/>
+    </node>
+    <a label="wfw" ref="wfw-n43" as="graf">
+        <fs>
+            <f name="wfw">give.PRS.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n44">
+        <link targets="word-r44"/>
+    </node>
+    <a label="wfw" ref="wfw-n44" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n45">
+        <link targets="word-r45"/>
+    </node>
+    <a label="wfw" ref="wfw-n45" as="graf">
+        <fs>
+            <f name="wfw">face</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n46">
+        <link targets="word-r46"/>
+    </node>
+    <a label="wfw" ref="wfw-n46" as="graf">
+        <fs>
+            <f name="wfw">give.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n47">
+        <link targets="word-r47"/>
+    </node>
+    <a label="wfw" ref="wfw-n47" as="graf">
+        <fs>
+            <f name="wfw">one-IND-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n319">
+        <link targets="word-r319"/>
+    </node>
+    <a label="wfw" ref="wfw-n319" as="graf">
+        <fs>
+            <f name="wfw">donkey=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n318">
+        <link targets="word-r318"/>
+    </node>
+    <a label="wfw" ref="wfw-n318" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n315">
+        <link targets="word-r315"/>
+    </node>
+    <a label="wfw" ref="wfw-n315" as="graf">
+        <fs>
+            <f name="wfw">in.front.of</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n314">
+        <link targets="word-r314"/>
+    </node>
+    <a label="wfw" ref="wfw-n314" as="graf">
+        <fs>
+            <f name="wfw">donkey-DIM-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n317">
+        <link targets="word-r317"/>
+    </node>
+    <a label="wfw" ref="wfw-n317" as="graf">
+        <fs>
+            <f name="wfw">give.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n316">
+        <link targets="word-r316"/>
+    </node>
+    <a label="wfw" ref="wfw-n316" as="graf">
+        <fs>
+            <f name="wfw">cut.to.pieces.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n311">
+        <link targets="word-r311"/>
+    </node>
+    <a label="wfw" ref="wfw-n311" as="graf">
+        <fs>
+            <f name="wfw">melon-PL-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n310">
+        <link targets="word-r310"/>
+    </node>
+    <a label="wfw" ref="wfw-n310" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n313">
+        <link targets="word-r313"/>
+    </node>
+    <a label="wfw" ref="wfw-n313" as="graf">
+        <fs>
+            <f name="wfw">to=EMPH-DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n312">
+        <link targets="word-r312"/>
+    </node>
+    <a label="wfw" ref="wfw-n312" as="graf">
+        <fs>
+            <f name="wfw">before</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n326">
+        <link targets="word-r326"/>
+    </node>
+    <a label="wfw" ref="wfw-n326" as="graf">
+        <fs>
+            <f name="wfw">FOC</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n229">
+        <link targets="word-r229"/>
+    </node>
+    <a label="wfw" ref="wfw-n229" as="graf">
+        <fs>
+            <f name="wfw">give.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n228">
+        <link targets="word-r228"/>
+    </node>
+    <a label="wfw" ref="wfw-n228" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n380">
+        <link targets="word-r380"/>
+    </node>
+    <a label="wfw" ref="wfw-n380" as="graf">
+        <fs>
+            <f name="wfw">for=DEM-OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n327">
+        <link targets="word-r327"/>
+    </node>
+    <a label="wfw" ref="wfw-n327" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n386">
+        <link targets="word-r386"/>
+    </node>
+    <a label="wfw" ref="wfw-n386" as="graf">
+        <fs>
+            <f name="wfw">leave.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n387">
+        <link targets="word-r387"/>
+    </node>
+    <a label="wfw" ref="wfw-n387" as="graf">
+        <fs>
+            <f name="wfw">xarmizza</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n384">
+        <link targets="word-r384"/>
+    </node>
+    <a label="wfw" ref="wfw-n384" as="graf">
+        <fs>
+            <f name="wfw">then</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n385">
+        <link targets="word-r385"/>
+    </node>
+    <a label="wfw" ref="wfw-n385" as="graf">
+        <fs>
+            <f name="wfw">melon-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n221">
+        <link targets="word-r221"/>
+    </node>
+    <a label="wfw" ref="wfw-n221" as="graf">
+        <fs>
+            <f name="wfw">this.much</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n220">
+        <link targets="word-r220"/>
+    </node>
+    <a label="wfw" ref="wfw-n220" as="graf">
+        <fs>
+            <f name="wfw">I.OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n223">
+        <link targets="word-r223"/>
+    </node>
+    <a label="wfw" ref="wfw-n223" as="graf">
+        <fs>
+            <f name="wfw">give.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n222">
+        <link targets="word-r222"/>
+    </node>
+    <a label="wfw" ref="wfw-n222" as="graf">
+        <fs>
+            <f name="wfw">jewelry</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n225">
+        <link targets="word-r225"/>
+    </node>
+    <a label="wfw" ref="wfw-n225" as="graf">
+        <fs>
+            <f name="wfw">seed-OBJ=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n224">
+        <link targets="word-r224"/>
+    </node>
+    <a label="wfw" ref="wfw-n224" as="graf">
+        <fs>
+            <f name="wfw">EMPH.DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n227">
+        <link targets="word-r227"/>
+    </node>
+    <a label="wfw" ref="wfw-n227" as="graf">
+        <fs>
+            <f name="wfw">I.OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n226">
+        <link targets="word-r226"/>
+    </node>
+    <a label="wfw" ref="wfw-n226" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM-OBJ=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n168">
+        <link targets="word-r168"/>
+    </node>
+    <a label="wfw" ref="wfw-n168" as="graf">
+        <fs>
+            <f name="wfw">big-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n169">
+        <link targets="word-r169"/>
+    </node>
+    <a label="wfw" ref="wfw-n169" as="graf">
+        <fs>
+            <f name="wfw">reward-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n162">
+        <link targets="word-r162"/>
+    </node>
+    <a label="wfw" ref="wfw-n162" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n163">
+        <link targets="word-r163"/>
+    </node>
+    <a label="wfw" ref="wfw-n163" as="graf">
+        <fs>
+            <f name="wfw">dragon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n160">
+        <link targets="word-r160"/>
+    </node>
+    <a label="wfw" ref="wfw-n160" as="graf">
+        <fs>
+            <f name="wfw">free</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n161">
+        <link targets="word-r161"/>
+    </node>
+    <a label="wfw" ref="wfw-n161" as="graf">
+        <fs>
+            <f name="wfw">become.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n166">
+        <link targets="word-r166"/>
+    </node>
+    <a label="wfw" ref="wfw-n166" as="graf">
+        <fs>
+            <f name="wfw">go.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n167">
+        <link targets="word-r167"/>
+    </node>
+    <a label="wfw" ref="wfw-n167" as="graf">
+        <fs>
+            <f name="wfw">DEM-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n164">
+        <link targets="word-r164"/>
+    </node>
+    <a label="wfw" ref="wfw-n164" as="graf">
+        <fs>
+            <f name="wfw">other</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n165">
+        <link targets="word-r165"/>
+    </node>
+    <a label="wfw" ref="wfw-n165" as="graf">
+        <fs>
+            <f name="wfw">place-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n368">
+        <link targets="word-r368"/>
+    </node>
+    <a label="wfw" ref="wfw-n368" as="graf">
+        <fs>
+            <f name="wfw">FOC</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n369">
+        <link targets="word-r369"/>
+    </node>
+    <a label="wfw" ref="wfw-n369" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n88">
+        <link targets="word-r88"/>
+    </node>
+    <a label="wfw" ref="wfw-n88" as="graf">
+        <fs>
+            <f name="wfw">reward=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n89">
+        <link targets="word-r89"/>
+    </node>
+    <a label="wfw" ref="wfw-n89" as="graf">
+        <fs>
+            <f name="wfw">give.PRS-1SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n84">
+        <link targets="word-r84"/>
+    </node>
+    <a label="wfw" ref="wfw-n84" as="graf">
+        <fs>
+            <f name="wfw">bring.PST.SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n85">
+        <link targets="word-r85"/>
+    </node>
+    <a label="wfw" ref="wfw-n85" as="graf">
+        <fs>
+            <f name="wfw">I</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n86">
+        <link targets="word-r86"/>
+    </node>
+    <a label="wfw" ref="wfw-n86" as="graf">
+        <fs>
+            <f name="wfw">you.SG.OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n87">
+        <link targets="word-r87"/>
+    </node>
+    <a label="wfw" ref="wfw-n87" as="graf">
+        <fs>
+            <f name="wfw">this.much</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n80">
+        <link targets="word-r80"/>
+    </node>
+    <a label="wfw" ref="wfw-n80" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n81">
+        <link targets="word-r81"/>
+    </node>
+    <a label="wfw" ref="wfw-n81" as="graf">
+        <fs>
+            <f name="wfw">know.PRS-2SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n82">
+        <link targets="word-r82"/>
+    </node>
+    <a label="wfw" ref="wfw-n82" as="graf">
+        <fs>
+            <f name="wfw">DEM-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n83">
+        <link targets="word-r83"/>
+    </node>
+    <a label="wfw" ref="wfw-n83" as="graf">
+        <fs>
+            <f name="wfw">petition-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n99">
+        <link targets="word-r99"/>
+    </node>
+    <a label="wfw" ref="wfw-n99" as="graf">
+        <fs>
+            <f name="wfw">saw-PL.OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n328">
+        <link targets="word-r328"/>
+    </node>
+    <a label="wfw" ref="wfw-n328" as="graf">
+        <fs>
+            <f name="wfw">what</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n329">
+        <link targets="word-r329"/>
+    </node>
+    <a label="wfw" ref="wfw-n329" as="graf">
+        <fs>
+            <f name="wfw">thing=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n31">
+        <link targets="word-r31"/>
+    </node>
+    <a label="wfw" ref="wfw-n31" as="graf">
+        <fs>
+            <f name="wfw">there</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n30">
+        <link targets="word-r30"/>
+    </node>
+    <a label="wfw" ref="wfw-n30" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n33">
+        <link targets="word-r33"/>
+    </node>
+    <a label="wfw" ref="wfw-n33" as="graf">
+        <fs>
+            <f name="wfw">become.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n32">
+        <link targets="word-r32"/>
+    </node>
+    <a label="wfw" ref="wfw-n32" as="graf">
+        <fs>
+            <f name="wfw">informed=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n35">
+        <link targets="word-r35"/>
+    </node>
+    <a label="wfw" ref="wfw-n35" as="graf">
+        <fs>
+            <f name="wfw">day-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n34">
+        <link targets="word-r34"/>
+    </node>
+    <a label="wfw" ref="wfw-n34" as="graf">
+        <fs>
+            <f name="wfw">one</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n37">
+        <link targets="word-r37"/>
+    </node>
+    <a label="wfw" ref="wfw-n37" as="graf">
+        <fs>
+            <f name="wfw">FOC</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n36">
+        <link targets="word-r36"/>
+    </node>
+    <a label="wfw" ref="wfw-n36" as="graf">
+        <fs>
+            <f name="wfw">see.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n39">
+        <link targets="word-r39"/>
+    </node>
+    <a label="wfw" ref="wfw-n39" as="graf">
+        <fs>
+            <f name="wfw">dragon-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n38">
+        <link targets="word-r38"/>
+    </node>
+    <a label="wfw" ref="wfw-n38" as="graf">
+        <fs>
+            <f name="wfw">EMPH.DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n210">
+        <link targets="word-r210"/>
+    </node>
+    <a label="wfw" ref="wfw-n210" as="graf">
+        <fs>
+            <f name="wfw">DEM-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n211">
+        <link targets="word-r211"/>
+    </node>
+    <a label="wfw" ref="wfw-n211" as="graf">
+        <fs>
+            <f name="wfw">mother</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n212">
+        <link targets="word-r212"/>
+    </node>
+    <a label="wfw" ref="wfw-n212" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n213">
+        <link targets="word-r213"/>
+    </node>
+    <a label="wfw" ref="wfw-n213" as="graf">
+        <fs>
+            <f name="wfw">manner</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n214">
+        <link targets="word-r214"/>
+    </node>
+    <a label="wfw" ref="wfw-n214" as="graf">
+        <fs>
+            <f name="wfw">strangled=COP.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n215">
+        <link targets="word-r215"/>
+    </node>
+    <a label="wfw" ref="wfw-n215" as="graf">
+        <fs>
+            <f name="wfw">come.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n216">
+        <link targets="word-r216"/>
+    </node>
+    <a label="wfw" ref="wfw-n216" as="graf">
+        <fs>
+            <f name="wfw">I</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n217">
+        <link targets="word-r217"/>
+    </node>
+    <a label="wfw" ref="wfw-n217" as="graf">
+        <fs>
+            <f name="wfw">free</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n218">
+        <link targets="word-r218"/>
+    </node>
+    <a label="wfw" ref="wfw-n218" as="graf">
+        <fs>
+            <f name="wfw">do.PST-1SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n219">
+        <link targets="word-r219"/>
+    </node>
+    <a label="wfw" ref="wfw-n219" as="graf">
+        <fs>
+            <f name="wfw">then</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n265">
+        <link targets="word-r265"/>
+    </node>
+    <a label="wfw" ref="wfw-n265" as="graf">
+        <fs>
+            <f name="wfw">melon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n264">
+        <link targets="word-r264"/>
+    </node>
+    <a label="wfw" ref="wfw-n264" as="graf">
+        <fs>
+            <f name="wfw">so.many</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n267">
+        <link targets="word-r267"/>
+    </node>
+    <a label="wfw" ref="wfw-n267" as="graf">
+        <fs>
+            <f name="wfw">from</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n266">
+        <link targets="word-r266"/>
+    </node>
+    <a label="wfw" ref="wfw-n266" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n261">
+        <link targets="word-r261"/>
+    </node>
+    <a label="wfw" ref="wfw-n261" as="graf">
+        <fs>
+            <f name="wfw">green</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n260">
+        <link targets="word-r260"/>
+    </node>
+    <a label="wfw" ref="wfw-n260" as="graf">
+        <fs>
+            <f name="wfw">melon.bush-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n263">
+        <link targets="word-r263"/>
+    </node>
+    <a label="wfw" ref="wfw-n263" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n262">
+        <link targets="word-r262"/>
+    </node>
+    <a label="wfw" ref="wfw-n262" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n269">
+        <link targets="word-r269"/>
+    </node>
+    <a label="wfw" ref="wfw-n269" as="graf">
+        <fs>
+            <f name="wfw">person-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n268">
+        <link targets="word-r268"/>
+    </node>
+    <a label="wfw" ref="wfw-n268" as="graf">
+        <fs>
+            <f name="wfw">fear-OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n324">
+        <link targets="word-r324"/>
+    </node>
+    <a label="wfw" ref="wfw-n324" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n325">
+        <link targets="word-r325"/>
+    </node>
+    <a label="wfw" ref="wfw-n325" as="graf">
+        <fs>
+            <f name="wfw">eat.INF-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n289">
+        <link targets="word-r289"/>
+    </node>
+    <a label="wfw" ref="wfw-n289" as="graf">
+        <fs>
+            <f name="wfw">one</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n288">
+        <link targets="word-r288"/>
+    </node>
+    <a label="wfw" ref="wfw-n288" as="graf">
+        <fs>
+            <f name="wfw">sow.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n320">
+        <link targets="word-r320"/>
+    </node>
+    <a label="wfw" ref="wfw-n320" as="graf">
+        <fs>
+            <f name="wfw">strong</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n321">
+        <link targets="word-r321"/>
+    </node>
+    <a label="wfw" ref="wfw-n321" as="graf">
+        <fs>
+            <f name="wfw">become.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n322">
+        <link targets="word-r322"/>
+    </node>
+    <a label="wfw" ref="wfw-n322" as="graf">
+        <fs>
+            <f name="wfw">old.man</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n323">
+        <link targets="word-r323"/>
+    </node>
+    <a label="wfw" ref="wfw-n323" as="graf">
+        <fs>
+            <f name="wfw">start</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n283">
+        <link targets="word-r283"/>
+    </node>
+    <a label="wfw" ref="wfw-n283" as="graf">
+        <fs>
+            <f name="wfw">do.PST-3PL=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n282">
+        <link targets="word-r282"/>
+    </node>
+    <a label="wfw" ref="wfw-n282" as="graf">
+        <fs>
+            <f name="wfw">seed</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n281">
+        <link targets="word-r281"/>
+    </node>
+    <a label="wfw" ref="wfw-n281" as="graf">
+        <fs>
+            <f name="wfw">so.many</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n280">
+        <link targets="word-r280"/>
+    </node>
+    <a label="wfw" ref="wfw-n280" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n287">
+        <link targets="word-r287"/>
+    </node>
+    <a label="wfw" ref="wfw-n287" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n286">
+        <link targets="word-r286"/>
+    </node>
+    <a label="wfw" ref="wfw-n286" as="graf">
+        <fs>
+            <f name="wfw">melon.bed-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n285">
+        <link targets="word-r285"/>
+    </node>
+    <a label="wfw" ref="wfw-n285" as="graf">
+        <fs>
+            <f name="wfw">huge-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n284">
+        <link targets="word-r284"/>
+    </node>
+    <a label="wfw" ref="wfw-n284" as="graf">
+        <fs>
+            <f name="wfw">go.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n382">
+        <link targets="word-r382"/>
+    </node>
+    <a label="wfw" ref="wfw-n382" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-leave.PRS-1PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n383">
+        <link targets="word-r383"/>
+    </node>
+    <a label="wfw" ref="wfw-n383" as="graf">
+        <fs>
+            <f name="wfw">name=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n381">
+        <link targets="word-r381"/>
+    </node>
+    <a label="wfw" ref="wfw-n381" as="graf">
+        <fs>
+            <f name="wfw">name=IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n75">
+        <link targets="word-r75"/>
+    </node>
+    <a label="wfw" ref="wfw-n75" as="graf">
+        <fs>
+            <f name="wfw">carpenter-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n74">
+        <link targets="word-r74"/>
+    </node>
+    <a label="wfw" ref="wfw-n74" as="graf">
+        <fs>
+            <f name="wfw">one</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n77">
+        <link targets="word-r77"/>
+    </node>
+    <a label="wfw" ref="wfw-n77" as="graf">
+        <fs>
+            <f name="wfw">I=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n76">
+        <link targets="word-r76"/>
+    </node>
+    <a label="wfw" ref="wfw-n76" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n71">
+        <link targets="word-r71"/>
+    </node>
+    <a label="wfw" ref="wfw-n71" as="graf">
+        <fs>
+            <f name="wfw">NEG-know.PRS-1SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n70">
+        <link targets="word-r70"/>
+    </node>
+    <a label="wfw" ref="wfw-n70" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n73">
+        <link targets="word-r73"/>
+    </node>
+    <a label="wfw" ref="wfw-n73" as="graf">
+        <fs>
+            <f name="wfw">without-tongue-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n72">
+        <link targets="word-r72"/>
+    </node>
+    <a label="wfw" ref="wfw-n72" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n139">
+        <link targets="word-r139"/>
+    </node>
+    <a label="wfw" ref="wfw-n139" as="graf">
+        <fs>
+            <f name="wfw">throat-OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n138">
+        <link targets="word-r138"/>
+    </node>
+    <a label="wfw" ref="wfw-n138" as="graf">
+        <fs>
+            <f name="wfw">DEM-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n79">
+        <link targets="word-r79"/>
+    </node>
+    <a label="wfw" ref="wfw-n79" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n78">
+        <link targets="word-r78"/>
+    </node>
+    <a label="wfw" ref="wfw-n78" as="graf">
+        <fs>
+            <f name="wfw">know.PRS-1SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n131">
+        <link targets="word-r131"/>
+    </node>
+    <a label="wfw" ref="wfw-n131" as="graf">
+        <fs>
+            <f name="wfw">big</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n389">
+        <link targets="word-r389"/>
+    </node>
+    <a label="wfw" ref="wfw-n389" as="graf">
+        <fs>
+            <f name="wfw">taste-ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n130">
+        <link targets="word-r130"/>
+    </node>
+    <a label="wfw" ref="wfw-n130" as="graf">
+        <fs>
+            <f name="wfw">NEG-COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n133">
+        <link targets="word-r133"/>
+    </node>
+    <a label="wfw" ref="wfw-n133" as="graf">
+        <fs>
+            <f name="wfw">from=EMPH-DEM-PL.OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n132">
+        <link targets="word-r132"/>
+    </node>
+    <a label="wfw" ref="wfw-n132" as="graf">
+        <fs>
+            <f name="wfw">horn</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n135">
+        <link targets="word-r135"/>
+    </node>
+    <a label="wfw" ref="wfw-n135" as="graf">
+        <fs>
+            <f name="wfw">do.PST-PP(=COP.PRS.3SG)=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n134">
+        <link targets="word-r134"/>
+    </node>
+    <a label="wfw" ref="wfw-n134" as="graf">
+        <fs>
+            <f name="wfw">hunting</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n137">
+        <link targets="word-r137"/>
+    </node>
+    <a label="wfw" ref="wfw-n137" as="graf">
+        <fs>
+            <f name="wfw">horn=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n136">
+        <link targets="word-r136"/>
+    </node>
+    <a label="wfw" ref="wfw-n136" as="graf">
+        <fs>
+            <f name="wfw">EMPH.DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n360">
+        <link targets="word-r360"/>
+    </node>
+    <a label="wfw" ref="wfw-n360" as="graf">
+        <fs>
+            <f name="wfw">I=IMF</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n361">
+        <link targets="word-r361"/>
+    </node>
+    <a label="wfw" ref="wfw-n361" as="graf">
+        <fs>
+            <f name="wfw">eat.PRS-1SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n362">
+        <link targets="word-r362"/>
+    </node>
+    <a label="wfw" ref="wfw-n362" as="graf">
+        <fs>
+            <f name="wfw">you.SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n363">
+        <link targets="word-r363"/>
+    </node>
+    <a label="wfw" ref="wfw-n363" as="graf">
+        <fs>
+            <f name="wfw">VOC</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n364">
+        <link targets="word-r364"/>
+    </node>
+    <a label="wfw" ref="wfw-n364" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n365">
+        <link targets="word-r365"/>
+    </node>
+    <a label="wfw" ref="wfw-n365" as="graf">
+        <fs>
+            <f name="wfw">PROH-eat.PRS</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n395">
+        <link targets="word-r395"/>
+    </node>
+    <a label="wfw" ref="wfw-n395" as="graf">
+        <fs>
+            <f name="wfw">remain.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n394">
+        <link targets="word-r394"/>
+    </node>
+    <a label="wfw" ref="wfw-n394" as="graf">
+        <fs>
+            <f name="wfw">from=there</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n258">
+        <link targets="word-r258"/>
+    </node>
+    <a label="wfw" ref="wfw-n258" as="graf">
+        <fs>
+            <f name="wfw">soft-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n259">
+        <link targets="word-r259"/>
+    </node>
+    <a label="wfw" ref="wfw-n259" as="graf">
+        <fs>
+            <f name="wfw">plot-IND=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n393">
+        <link targets="word-r393"/>
+    </node>
+    <a label="wfw" ref="wfw-n393" as="graf">
+        <fs>
+            <f name="wfw">xarmizza</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n392">
+        <link targets="word-r392"/>
+    </node>
+    <a label="wfw" ref="wfw-n392" as="graf">
+        <fs>
+            <f name="wfw">take.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n254">
+        <link targets="word-r254"/>
+    </node>
+    <a label="wfw" ref="wfw-n254" as="graf">
+        <fs>
+            <f name="wfw">plot-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n255">
+        <link targets="word-r255"/>
+    </node>
+    <a label="wfw" ref="wfw-n255" as="graf">
+        <fs>
+            <f name="wfw">inside</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n256">
+        <link targets="word-r256"/>
+    </node>
+    <a label="wfw" ref="wfw-n256" as="graf">
+        <fs>
+            <f name="wfw">sow.PST-3PL=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n257">
+        <link targets="word-r257"/>
+    </node>
+    <a label="wfw" ref="wfw-n257" as="graf">
+        <fs>
+            <f name="wfw">good-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n250">
+        <link targets="word-r250"/>
+    </node>
+    <a label="wfw" ref="wfw-n250" as="graf">
+        <fs>
+            <f name="wfw">DEM-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n251">
+        <link targets="word-r251"/>
+    </node>
+    <a label="wfw" ref="wfw-n251" as="graf">
+        <fs>
+            <f name="wfw">good-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n252">
+        <link targets="word-r252"/>
+    </node>
+    <a label="wfw" ref="wfw-n252" as="graf">
+        <fs>
+            <f name="wfw">place-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n253">
+        <link targets="word-r253"/>
+    </node>
+    <a label="wfw" ref="wfw-n253" as="graf">
+        <fs>
+            <f name="wfw">garden-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n179">
+        <link targets="word-r179"/>
+    </node>
+    <a label="wfw" ref="wfw-n179" as="graf">
+        <fs>
+            <f name="wfw">hint-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n178">
+        <link targets="word-r178"/>
+    </node>
+    <a label="wfw" ref="wfw-n178" as="graf">
+        <fs>
+            <f name="wfw">DEM-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n175">
+        <link targets="word-r175"/>
+    </node>
+    <a label="wfw" ref="wfw-n175" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n174">
+        <link targets="word-r174"/>
+    </node>
+    <a label="wfw" ref="wfw-n174" as="graf">
+        <fs>
+            <f name="wfw">bit-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n177">
+        <link targets="word-r177"/>
+    </node>
+    <a label="wfw" ref="wfw-n177" as="graf">
+        <fs>
+            <f name="wfw">back</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n176">
+        <link targets="word-r176"/>
+    </node>
+    <a label="wfw" ref="wfw-n176" as="graf">
+        <fs>
+            <f name="wfw">go.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n171">
+        <link targets="word-r171"/>
+    </node>
+    <a label="wfw" ref="wfw-n171" as="graf">
+        <fs>
+            <f name="wfw">jewelry</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n170">
+        <link targets="word-r170"/>
+    </node>
+    <a label="wfw" ref="wfw-n170" as="graf">
+        <fs>
+            <f name="wfw">give.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n173">
+        <link targets="word-r173"/>
+    </node>
+    <a label="wfw" ref="wfw-n173" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n172">
+        <link targets="word-r172"/>
+    </node>
+    <a label="wfw" ref="wfw-n172" as="graf">
+        <fs>
+            <f name="wfw">then</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n379">
+        <link targets="word-r379"/>
+    </node>
+    <a label="wfw" ref="wfw-n379" as="graf">
+        <fs>
+            <f name="wfw">we.INCL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n378">
+        <link targets="word-r378"/>
+    </node>
+    <a label="wfw" ref="wfw-n378" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-come.PRS</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n373">
+        <link targets="word-r373"/>
+    </node>
+    <a label="wfw" ref="wfw-n373" as="graf">
+        <fs>
+            <f name="wfw">eat.PST-3PL=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n372">
+        <link targets="word-r372"/>
+    </node>
+    <a label="wfw" ref="wfw-n372" as="graf">
+        <fs>
+            <f name="wfw">thing=COP.PRS.3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n371">
+        <link targets="word-r371"/>
+    </node>
+    <a label="wfw" ref="wfw-n371" as="graf">
+        <fs>
+            <f name="wfw">tasty-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n370">
+        <link targets="word-r370"/>
+    </node>
+    <a label="wfw" ref="wfw-n370" as="graf">
+        <fs>
+            <f name="wfw">strange-ATTR</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n377">
+        <link targets="word-r377"/>
+    </node>
+    <a label="wfw" ref="wfw-n377" as="graf">
+        <fs>
+            <f name="wfw">say.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n376">
+        <link targets="word-r376"/>
+    </node>
+    <a label="wfw" ref="wfw-n376" as="graf">
+        <fs>
+            <f name="wfw">now</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n375">
+        <link targets="word-r375"/>
+    </node>
+    <a label="wfw" ref="wfw-n375" as="graf">
+        <fs>
+            <f name="wfw">eat.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n374">
+        <link targets="word-r374"/>
+    </node>
+    <a label="wfw" ref="wfw-n374" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n351">
+        <link targets="word-r351"/>
+    </node>
+    <a label="wfw" ref="wfw-n351" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n350">
+        <link targets="word-r350"/>
+    </node>
+    <a label="wfw" ref="wfw-n350" as="graf">
+        <fs>
+            <f name="wfw">eat.PST-PP(=COP.PRS.1SG)</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n108">
+        <link targets="word-r108"/>
+    </node>
+    <a label="wfw" ref="wfw-n108" as="graf">
+        <fs>
+            <f name="wfw">hint</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n109">
+        <link targets="word-r109"/>
+    </node>
+    <a label="wfw" ref="wfw-n109" as="graf">
+        <fs>
+            <f name="wfw">give.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n358">
+        <link targets="word-r358"/>
+    </node>
+    <a label="wfw" ref="wfw-n358" as="graf">
+        <fs>
+            <f name="wfw">no</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n100">
+        <link targets="word-r100"/>
+    </node>
+    <a label="wfw" ref="wfw-n100" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n101">
+        <link targets="word-r101"/>
+    </node>
+    <a label="wfw" ref="wfw-n101" as="graf">
+        <fs>
+            <f name="wfw">dragon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n102">
+        <link targets="word-r102"/>
+    </node>
+    <a label="wfw" ref="wfw-n102" as="graf">
+        <fs>
+            <f name="wfw">released</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n103">
+        <link targets="word-r103"/>
+    </node>
+    <a label="wfw" ref="wfw-n103" as="graf">
+        <fs>
+            <f name="wfw">do.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n104">
+        <link targets="word-r104"/>
+    </node>
+    <a label="wfw" ref="wfw-n104" as="graf">
+        <fs>
+            <f name="wfw">en.route</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n105">
+        <link targets="word-r105"/>
+    </node>
+    <a label="wfw" ref="wfw-n105" as="graf">
+        <fs>
+            <f name="wfw">become.PST.3SG=and</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n106">
+        <link targets="word-r106"/>
+    </node>
+    <a label="wfw" ref="wfw-n106" as="graf">
+        <fs>
+            <f name="wfw">dragon</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n107">
+        <link targets="word-r107"/>
+    </node>
+    <a label="wfw" ref="wfw-n107" as="graf">
+        <fs>
+            <f name="wfw">carpenter-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n28">
+        <link targets="word-r28"/>
+    </node>
+    <a label="wfw" ref="wfw-n28" as="graf">
+        <fs>
+            <f name="wfw">shake</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n29">
+        <link targets="word-r29"/>
+    </node>
+    <a label="wfw" ref="wfw-n29" as="graf">
+        <fs>
+            <f name="wfw">SUBJ.give.PST-PSUBJ.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n26">
+        <link targets="word-r26"/>
+    </node>
+    <a label="wfw" ref="wfw-n26" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM.OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n27">
+        <link targets="word-r27"/>
+    </node>
+    <a label="wfw" ref="wfw-n27" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n24">
+        <link targets="word-r24"/>
+    </node>
+    <a label="wfw" ref="wfw-n24" as="graf">
+        <fs>
+            <f name="wfw">petition-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n25">
+        <link targets="word-r25"/>
+    </node>
+    <a label="wfw" ref="wfw-n25" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-have.PST-PSUBJ.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n22">
+        <link targets="word-r22"/>
+    </node>
+    <a label="wfw" ref="wfw-n22" as="graf">
+        <fs>
+            <f name="wfw">whoever</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n23">
+        <link targets="word-r23"/>
+    </node>
+    <a label="wfw" ref="wfw-n23" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n20">
+        <link targets="word-r20"/>
+    </node>
+    <a label="wfw" ref="wfw-n20" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM-OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n21">
+        <link targets="word-r21"/>
+    </node>
+    <a label="wfw" ref="wfw-n21" as="graf">
+        <fs>
+            <f name="wfw">connected=COP.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n7">
+        <link targets="word-r7"/>
+    </node>
+    <a label="wfw" ref="wfw-n7" as="graf">
+        <fs>
+            <f name="wfw">RFL-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n6">
+        <link targets="word-r6"/>
+    </node>
+    <a label="wfw" ref="wfw-n6" as="graf">
+        <fs>
+            <f name="wfw">in=EMPH-DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n5">
+        <link targets="word-r5"/>
+    </node>
+    <a label="wfw" ref="wfw-n5" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n4">
+        <link targets="word-r4"/>
+    </node>
+    <a label="wfw" ref="wfw-n4" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n3">
+        <link targets="word-r3"/>
+    </node>
+    <a label="wfw" ref="wfw-n3" as="graf">
+        <fs>
+            <f name="wfw">king=IND=COP.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n2">
+        <link targets="word-r2"/>
+    </node>
+    <a label="wfw" ref="wfw-n2" as="graf">
+        <fs>
+            <f name="wfw">one</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n1">
+        <link targets="word-r1"/>
+    </node>
+    <a label="wfw" ref="wfw-n1" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n0">
+        <link targets="word-r0"/>
+    </node>
+    <a label="wfw" ref="wfw-n0" as="graf">
+        <fs>
+            <f name="wfw">say.PRS-3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n9">
+        <link targets="word-r9"/>
+    </node>
+    <a label="wfw" ref="wfw-n9" as="graf">
+        <fs>
+            <f name="wfw">middle-OBL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n8">
+        <link targets="word-r8"/>
+    </node>
+    <a label="wfw" ref="wfw-n8" as="graf">
+        <fs>
+            <f name="wfw">town-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n203">
+        <link targets="word-r203"/>
+    </node>
+    <a label="wfw" ref="wfw-n203" as="graf">
+        <fs>
+            <f name="wfw">petition-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n202">
+        <link targets="word-r202"/>
+    </node>
+    <a label="wfw" ref="wfw-n202" as="graf">
+        <fs>
+            <f name="wfw">what</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n201">
+        <link targets="word-r201"/>
+    </node>
+    <a label="wfw" ref="wfw-n201" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n200">
+        <link targets="word-r200"/>
+    </node>
+    <a label="wfw" ref="wfw-n200" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n207">
+        <link targets="word-r207"/>
+    </node>
+    <a label="wfw" ref="wfw-n207" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n206">
+        <link targets="word-r206"/>
+    </node>
+    <a label="wfw" ref="wfw-n206" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-come.PRS</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n205">
+        <link targets="word-r205"/>
+    </node>
+    <a label="wfw" ref="wfw-n205" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n204">
+        <link targets="word-r204"/>
+    </node>
+    <a label="wfw" ref="wfw-n204" as="graf">
+        <fs>
+            <f name="wfw">have.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n209">
+        <link targets="word-r209"/>
+    </node>
+    <a label="wfw" ref="wfw-n209" as="graf">
+        <fs>
+            <f name="wfw">manner</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n208">
+        <link targets="word-r208"/>
+    </node>
+    <a label="wfw" ref="wfw-n208" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n337">
+        <link targets="word-r337"/>
+    </node>
+    <a label="wfw" ref="wfw-n337" as="graf">
+        <fs>
+            <f name="wfw">come.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n336">
+        <link targets="word-r336"/>
+    </node>
+    <a label="wfw" ref="wfw-n336" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n335">
+        <link targets="word-r335"/>
+    </node>
+    <a label="wfw" ref="wfw-n335" as="graf">
+        <fs>
+            <f name="wfw">day-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n334">
+        <link targets="word-r334"/>
+    </node>
+    <a label="wfw" ref="wfw-n334" as="graf">
+        <fs>
+            <f name="wfw">one</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n333">
+        <link targets="word-r333"/>
+    </node>
+    <a label="wfw" ref="wfw-n333" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n332">
+        <link targets="word-r332"/>
+    </node>
+    <a label="wfw" ref="wfw-n332" as="graf">
+        <fs>
+            <f name="wfw">become.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n331">
+        <link targets="word-r331"/>
+    </node>
+    <a label="wfw" ref="wfw-n331" as="graf">
+        <fs>
+            <f name="wfw">strong</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n330">
+        <link targets="word-r330"/>
+    </node>
+    <a label="wfw" ref="wfw-n330" as="graf">
+        <fs>
+            <f name="wfw">old.man=also</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n339">
+        <link targets="word-r339"/>
+    </node>
+    <a label="wfw" ref="wfw-n339" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n338">
+        <link targets="word-r338"/>
+    </node>
+    <a label="wfw" ref="wfw-n338" as="graf">
+        <fs>
+            <f name="wfw">say.PST.3SG=ENC.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n144">
+        <link targets="word-r144"/>
+    </node>
+    <a label="wfw" ref="wfw-n144" as="graf">
+        <fs>
+            <f name="wfw">come.PST-PP(=COP.PRS.3SG)</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n145">
+        <link targets="word-r145"/>
+    </node>
+    <a label="wfw" ref="wfw-n145" as="graf">
+        <fs>
+            <f name="wfw">here</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n60">
+        <link targets="word-r60"/>
+    </node>
+    <a label="wfw" ref="wfw-n60" as="graf">
+        <fs>
+            <f name="wfw">order-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n147">
+        <link targets="word-r147"/>
+    </node>
+    <a label="wfw" ref="wfw-n147" as="graf">
+        <fs>
+            <f name="wfw">king</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n140">
+        <link targets="word-r140"/>
+    </node>
+    <a label="wfw" ref="wfw-n140" as="graf">
+        <fs>
+            <f name="wfw">captive</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n67">
+        <link targets="word-r67"/>
+    </node>
+    <a label="wfw" ref="wfw-n67" as="graf">
+        <fs>
+            <f name="wfw">for=I</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n142">
+        <link targets="word-r142"/>
+    </node>
+    <a label="wfw" ref="wfw-n142" as="graf">
+        <fs>
+            <f name="wfw">breath</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n143">
+        <link targets="word-r143"/>
+    </node>
+    <a label="wfw" ref="wfw-n143" as="graf">
+        <fs>
+            <f name="wfw">narrow=COP.PRS.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n68">
+        <link targets="word-r68"/>
+    </node>
+    <a label="wfw" ref="wfw-n68" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-bring.PRS-3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n69">
+        <link targets="word-r69"/>
+    </node>
+    <a label="wfw" ref="wfw-n69" as="graf">
+        <fs>
+            <f name="wfw">I</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n148">
+        <link targets="word-r148"/>
+    </node>
+    <a label="wfw" ref="wfw-n148" as="graf">
+        <fs>
+            <f name="wfw">petition</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n149">
+        <link targets="word-r149"/>
+    </node>
+    <a label="wfw" ref="wfw-n149" as="graf">
+        <fs>
+            <f name="wfw">do.PST-PP(=COP.PRS.3SG)</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n17">
+        <link targets="word-r17"/>
+    </node>
+    <a label="wfw" ref="wfw-n17" as="graf">
+        <fs>
+            <f name="wfw">telephone-PL-GEN</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n16">
+        <link targets="word-r16"/>
+    </node>
+    <a label="wfw" ref="wfw-n16" as="graf">
+        <fs>
+            <f name="wfw">EMPH-DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n15">
+        <link targets="word-r15"/>
+    </node>
+    <a label="wfw" ref="wfw-n15" as="graf">
+        <fs>
+            <f name="wfw">whatever</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n14">
+        <link targets="word-r14"/>
+    </node>
+    <a label="wfw" ref="wfw-n14" as="graf">
+        <fs>
+            <f name="wfw">SUB</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n13">
+        <link targets="word-r13"/>
+    </node>
+    <a label="wfw" ref="wfw-n13" as="graf">
+        <fs>
+            <f name="wfw">have.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n12">
+        <link targets="word-r12"/>
+    </node>
+    <a label="wfw" ref="wfw-n12" as="graf">
+        <fs>
+            <f name="wfw">electricity-IND</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n11">
+        <link targets="word-r11"/>
+    </node>
+    <a label="wfw" ref="wfw-n11" as="graf">
+        <fs>
+            <f name="wfw">pole=IZ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n10">
+        <link targets="word-r10"/>
+    </node>
+    <a label="wfw" ref="wfw-n10" as="graf">
+        <fs>
+            <f name="wfw">one</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n19">
+        <link targets="word-r19"/>
+    </node>
+    <a label="wfw" ref="wfw-n19" as="graf">
+        <fs>
+            <f name="wfw">to</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n18">
+        <link targets="word-r18"/>
+    </node>
+    <a label="wfw" ref="wfw-n18" as="graf">
+        <fs>
+            <f name="wfw">wire=COP.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n366">
+        <link targets="word-r366"/>
+    </node>
+    <a label="wfw" ref="wfw-n366" as="graf">
+        <fs>
+            <f name="wfw">vizier</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n359">
+        <link targets="word-r359"/>
+    </node>
+    <a label="wfw" ref="wfw-n359" as="graf">
+        <fs>
+            <f name="wfw">before</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n367">
+        <link targets="word-r367"/>
+    </node>
+    <a label="wfw" ref="wfw-n367" as="graf">
+        <fs>
+            <f name="wfw">eat.PST.3SG</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n249">
+        <link targets="word-r249"/>
+    </node>
+    <a label="wfw" ref="wfw-n249" as="graf">
+        <fs>
+            <f name="wfw">we.INCL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n248">
+        <link targets="word-r248"/>
+    </node>
+    <a label="wfw" ref="wfw-n248" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-sow.PRS-1PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n247">
+        <link targets="word-r247"/>
+    </node>
+    <a label="wfw" ref="wfw-n247" as="graf">
+        <fs>
+            <f name="wfw">DEM-OBJ</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n246">
+        <link targets="word-r246"/>
+    </node>
+    <a label="wfw" ref="wfw-n246" as="graf">
+        <fs>
+            <f name="wfw">SUBJ-come.PRS</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n245">
+        <link targets="word-r245"/>
+    </node>
+    <a label="wfw" ref="wfw-n245" as="graf">
+        <fs>
+            <f name="wfw">say.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n244">
+        <link targets="word-r244"/>
+    </node>
+    <a label="wfw" ref="wfw-n244" as="graf">
+        <fs>
+            <f name="wfw">do.PST-3PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n243">
+        <link targets="word-r243"/>
+    </node>
+    <a label="wfw" ref="wfw-n243" as="graf">
+        <fs>
+            <f name="wfw">consultation</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n242">
+        <link targets="word-r242"/>
+    </node>
+    <a label="wfw" ref="wfw-n242" as="graf">
+        <fs>
+            <f name="wfw">DEM</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n241">
+        <link targets="word-r241"/>
+    </node>
+    <a label="wfw" ref="wfw-n241" as="graf">
+        <fs>
+            <f name="wfw">NEG-know.PRS-1PL</f>
+        </fs>
+    </a>
+    <node xml:id="wfw-n240">
+        <link targets="word-r240"/>
+    </node>
+    <a label="wfw" ref="wfw-n240" as="graf">
+        <fs>
+            <f name="wfw">we.INCL</f>
+        </fs>
+    </a>
+</graph>
