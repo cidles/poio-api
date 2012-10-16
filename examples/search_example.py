@@ -10,7 +10,7 @@ how to use the PoioAPI Parser Search in
 GrAF.
 """
 
-from poioapi.parser import search_replace
+from poioapi.parser.graf import search_replace
 
 filepath = 'Balochi Text1-rend.xml'
 

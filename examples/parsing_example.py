@@ -9,20 +9,20 @@
 how to use the PoioAPI Parser.
 """
 
-from poioapi.parser import xmltoanntree
-from poioapi.parser import xmltograf
-from poioapi.parser import txtrawfile
-from poioapi.parser import translation
-from poioapi.parser import comment
-from poioapi.parser import graid_clauseunit
-from poioapi.parser import graid_words
-from poioapi.parser import graid_wfw
-from poioapi.parser import graid_graid1
-from poioapi.parser import graid_graid2
-from poioapi.parser import morph_gloss
-from poioapi.parser import morph_morphemes
-from poioapi.parser import morph_words
-from poioapi.parser import header
+from poioapi.parser.graf import xmltoanntree
+from poioapi.parser.graf import xmltograf
+from poioapi.parser.graf import txtrawfile
+from poioapi.parser.graf import translation
+from poioapi.parser.graf import comment
+from poioapi.parser.graf import graid_clauseunit
+from poioapi.parser.graf import graid_words
+from poioapi.parser.graf import graid_wfw
+from poioapi.parser.graf import graid_graid1
+from poioapi.parser.graf import graid_graid2
+from poioapi.parser.graf import morph_gloss
+from poioapi.parser.graf import morph_morphemes
+from poioapi.parser.graf import morph_words
+from poioapi.parser.graf import header
 
 filepath = 'Balochi Text1.pickle'
 
