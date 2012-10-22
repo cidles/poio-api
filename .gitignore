@@ -1,0 +1,7 @@
+.DS_STORE
+*.pyc
+.idea
+dist/
+build/
+doc/_build/
+src/Poio_API.egg-info/

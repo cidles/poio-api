@@ -1,12 +1,63 @@
-from distutils.core import setup
-setup(name='poioapi',
-      version='0.3.0',
-      description='Python Linguistic Annotation Library',
-      long_description='PoioAPI is a Python Library to access and manipulate linguistically annotated corpus files. Supported file format is currently Elan XML, Kura XML and Toolbox files. A Corpus Reader API is provided to support statistical analysis within the Natural Language Toolkit. ',
-      author='Peter Bouda',
-      author_email='pbouda@cidles.eu',
-      url='http://ltll.cidles.eu/poio/poio-api/',
-      packages=[ 'poioapi', 'poioapi.tests' ],
-      package_dir={'poioapi': 'src/poioapi'},
-      package_data={'poioapi': ['xsl/*.xsl', 'xsd/*.xsd']},
-      )
+# -*- coding: utf-8 -*-
+#
+# Poio Tools for Linguists
+#
+# Copyright (C) 2001-2012 Poio Project
+# Author: Peter Bouda <pbouda@cidles.eu>
+# URL: <http://www.cidles.eu/ltll/poio>
+# For license information, see LICENSE.TXT
+
+import os
+
+# Use the VERSION file to get version
+version_file = os.path.join(os.path.dirname(__file__), 'src', 'poioapi', 'VERSION')
+with open(version_file) as fh:
+    poioapi_version = fh.read().strip()
+
+import distribute_setup
+distribute_setup.use_setuptools()
+
+from setuptools import setup, find_packages
+
+setup(
+    name = "Poio API",
+    description = "A Python Library to access and manipulate linguistically annotated corpus files.",
+    version = poioapi_version,
+    url = "https://github.com/cidles/poio-api",
+    download_url = "https://github.com/downloads/cidles/poio-api/poio-api-{0}.tar.gz".format(poioapi_version),
+    #long_description = "Python implementation of the Graph Annotation Framework. (http://www.americannationalcorpus.org/graf-wiki)",
+    license = "Apache License, Version 2.0",
+    keywords = ['NLP', 'CL', 'natural language processing',
+                'computational linguistics', 'parsing', 'tagging',
+                'annotation', 'linguistics', 'language',
+                'natural language', "language documentation"],
+    maintainer = "Peter Bouda",
+    maintainer_email = "pbouda@cidles.eu",
+    author = "Peter Bouda",
+    author_email = "pbouda@cidles.eu",
+    classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Education',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3.2',
+    'Programming Language :: Python :: 3.3',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Human Machine Interfaces',
+    'Topic :: Scientific/Engineering :: Information Analysis',
+    'Topic :: Text Processing',
+    'Topic :: Text Processing :: General',
+    'Topic :: Text Processing :: Indexing',
+    'Topic :: Text Processing :: Linguistic',
+    ],
+    packages = [ 'poioapi' ],
+    package_dir = { '': 'src' },
+    package_data = { 'poioapi': ['VERSION'] },
+    #install_requires=['PyYAML>=3.09'],
+    #test_suite = 'graf.test.simple',
+)
