@@ -9,8 +9,8 @@ Natural Language Toolkit.
 The software is licensed under the Apache License Version 2.0. 
 
 
-REQUIREMENTS
-============
+Requirements
+------------
 You need to install the following packages:
 
 - Python: http://python.org/download
@@ -18,13 +18,13 @@ You need to install the following packages:
 - If you want to process data with NLTK: http://www.nltk.org/download
 
 
-API DOCUMENTATION
-=================
+API Documentation
+-----------------
 http://cidles.github.com/poio-api
 
 
-SITE
-====
+Site
+----
 The website of this project is:
 
 http://ltll.cidles.eu/poio/poio-api/
