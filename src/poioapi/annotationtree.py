@@ -20,7 +20,6 @@ Wto read and write files.
 from __future__ import unicode_literals
 
 from poioapi import data
-from poioapi.parser.graf import parser
 import pickle
 import regex
 import operator
@@ -121,7 +120,7 @@ class AnnotationTree():
         self.tree = pickle.load(file)
         file.close()
 
-    def save_tree_as_graf(self, filepath):
+    #def save_tree_as_graf(self, filepath):
         """Save the project into the GrAF
         specifications.
 
@@ -132,7 +131,7 @@ class AnnotationTree():
 
         """
 
-        parser.GrafParser(filepath).parsing(self.data_structure_type)
+     #   parser.GrafParer(filepath).parsing(self.data_structure_type)
 
     def append_element(self, element, update_ids = False):
         """Append an element to the annotation tree.
