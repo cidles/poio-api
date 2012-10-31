@@ -14,14 +14,15 @@ from xml.dom.minidom import Document
 from xml.dom import minidom
 from poioapi import annotationtree
 from poioapi import data
-from xmltoanntree import ProcessContent
+from poioapi.io.xmltoanntree import ProcessContent
+from poioapi.io import txtrawfile
+from poioapi.io import header
+from poioapi.io import xmltograf
 
-import txtrawfile
 import pickle
 import codecs
-import header
 import os
-import xmltograf
+
 
 class Parser():
 
