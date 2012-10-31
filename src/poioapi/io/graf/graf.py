@@ -9,22 +9,21 @@
 """ This document is to create the regions
 of the words in the clause units one by one.
 """
-import os
-
 from xml.sax._exceptions import SAXParseException
-from poioapi import annotationtree
-from poioapi import data
-import txtrawfile
-from xmltoanntree import ProcessContent
 from xml.dom.minidom import Document
 from xml.dom import minidom
+from poioapi import annotationtree
+from poioapi import data
+from xmltoanntree import ProcessContent
 
+import txtrawfile
 import pickle
 import codecs
 import header
+import os
 import xmltograf
 
-class GrafParser():
+class Parser():
 
     def __init__(self, filepath):
         """Class's constructor.
@@ -42,15 +41,9 @@ class GrafParser():
         self.header = header.CreateHeaderFile(filepath)
         self.level_map = []
 
-    def parsing(self, data_hierarchy):
+    def parsing(self, data_hierarchy, annotation_tree):
 
         self.data_structure_type = data_hierarchy
-
-        annotation_tree = annotationtree.AnnotationTree(self.data_structure_type.data_hierarchy)
-
-        # Open the file
-        file = open(self.filepath, "rb")
-        annotation_tree.tree = pickle.load(file)
 
         txt =  txtrawfile.CreateRawFile(self.filepath)
         txt.create_raw_file()
@@ -59,45 +52,88 @@ class GrafParser():
         self.header.filename = txt.filename
         self.header.primaryfile = txt.file
 
-        self.seektags(self.data_structure_type.data_hierarchy, 0)
+        self.seek_tags(self.data_structure_type.data_hierarchy, 0)
 
         # Verify the elements
         for element in annotation_tree.elements():
-            self.seek_elements(element, self.data_structure_type.data_hierarchy, '')
+            self.seek_elements(element, self.data_structure_type.data_hierarchy, 0)
 
         self.header.create_header()
 
-        #self.add_element_xml('ann','ann_value','depends_b')
-        graf = xmltograf.RendToGrAF(self.filepath)
-        # Choose a type of GrAF Graid1/2, WfW or Gloss
-        graf.parse_xml_graf('graid1')
-
-    def seektags(self, hierarchy, level):
+    def seek_tags(self, hierarchy, level):
         level+=1
         for index in range(len(hierarchy)):
             if isinstance(hierarchy[index],list):
-                self.seektags(hierarchy[index], level)
+                self.seek_tags(hierarchy[index], level)
             else:
-                level_list = (level, hierarchy[index])
+                level_list = (level, hierarchy[index], 0)
                 self.level_map.append(level_list)
 
-    def seek_elements(self, element, label, depends_on):
-        for index in range(len(element)):
-            if index == 1:
-                depends_on = label[index-1]
-            if isinstance(element[index],list):
-                try:
-                    if isinstance(label[index], list):
-                        self.seek_elements(element[index], label[index], depends_on)
-                    else:
-                        self.seek_elements(element[index], label, depends_on)
-                except IndexError as indexError:
-                    self.seek_elements(element[index], label, depends_on)
+    def seek_elements(self, elements, labels, level):
+        index = 0
+        level+=1
+        for element in elements:
+            if isinstance(element, list):
+                if isinstance(labels[index], list):
+                    self.seek_elements(element, labels[index], level)
+                else:
+                    self.seek_elements(element, labels, level)
             else:
-                self.add_element_xml(label[index],
-                    element[index].get('annotation'), depends_on)
+                if isinstance(labels[index], list):
+                    label = labels[index + 1]
+                else:
+                    label = labels[index]
 
-    def add_element_xml(self, annotation, annotation_value, depends):
+                index_map = 0
+                need_increment = False
+
+                # Get first element of hierarchy
+                if level == 1 and index >= 1:
+                    hierarchy_element = self.level_map[0]
+                    depends_on = hierarchy_element[1]
+                    increment = hierarchy_element[2] - 1
+
+                    if element == elements[-1]:
+                        label = labels[-1]
+
+                elif level == 1:
+                    depends_on = ''
+                    hierarchy_element = self.level_map[0]
+                    increment = hierarchy_element[2] - 1
+                    need_increment = True
+                else:
+                    for item in self.level_map:
+                        if label==item[1]:
+                            hierarchy_level = item[0]
+                            if index >= 1:
+                                for item in self.level_map:
+                                    if hierarchy_level==item[0]:
+                                        depends_on = item[1]
+                                        increment = item[2] - 1
+                                        break
+                            else:
+                                hierarchy_element = self.level_map[index_map-1]
+                                depends_on = hierarchy_element[1]
+                                increment = hierarchy_element[2] - 1
+                                need_increment = True
+                        index_map+=1
+
+                self.add_element(label,
+                    element.get('annotation'), depends_on, increment)
+
+                # Increment the dependency
+                if need_increment:
+                    for idx, item in enumerate(self.level_map):
+                        if item[1] == label:
+                            new_value = item[2] + 1
+                            self.level_map[idx] = (item[0], item[1], new_value)
+                            need_increment = False
+                            break
+                    need_increment = False
+
+                index+=1
+
+    def add_element(self, annotation, annotation_value, depends, increment):
 
         # See if the file exist
         # First see if the header is created and then do the rest
@@ -135,14 +171,13 @@ class GrafParser():
 
         graph = doc.getElementsByTagName('graph').item(0)
 
-        if depends != '' and level > 2 and annotation != 'word' \
-        or (annotation == 'translation' or annotation == 'comment'
-            or annotation == 'graid2'):
+        if level > 2 and annotation != 'word' \
+        or (annotation == 'translation' or annotation == 'comment' or annotation == 'graid2'):
             doc = self.create_dependent_node(doc, graph,
-                annotation, annotation_value, depends)
+                annotation, annotation_value, depends, increment)
         else:
-            doc = self.create_node_region(doc, graph, annotation,
-                annotation_value, filepath)
+            doc = self.create_node_region(doc, graph, depends, annotation,
+                annotation_value, increment, filepath)
 
         if new_file:
             # Write the content in XML file
@@ -168,30 +203,17 @@ class GrafParser():
             file.close()
 
     def create_dependent_node(self, doc, graph, annotation,
-                              annotation_value, depends):
+                              annotation_value, depends, depends_n):
 
         id_counter = len(doc.getElementsByTagName('a'))
-
-        # Creating the node with link
-        node = doc.createElement("node")
-        node.setAttribute("xml:id", annotation + "-n"
-        + str(id_counter)) # Node number
-
-        # Creating the node
-        link = doc.createElement("link")
-        link.setAttribute("targets", depends + "-r"
-        + str(id_counter)) # ref
-        node.appendChild(link)
-
-        graph.appendChild(node)
 
         # Creating the features and the linkage
         a = doc.createElement("a")
         a.setAttribute("xml:id", annotation + "-"
         + str(id_counter)) # id
         a.setAttribute("label", annotation) # label
-        a.setAttribute("ref", annotation + "-n"
-        + str(id_counter)) # ref
+        a.setAttribute("ref", depends + "-n"
+        + str(depends_n)) # ref
         a.setAttribute("as", annotation) # as
 
         # Feature structure
@@ -207,7 +229,8 @@ class GrafParser():
 
         return doc
 
-    def create_node_region(self, doc, graph, annotation, annotation_value, filepath):
+    def create_node_region(self, doc, graph, depends, annotation, annotation_value, increment, filepath):
+
         try:
             procContent = ProcessContent(filepath)
             procContent.process()
@@ -216,7 +239,7 @@ class GrafParser():
             index = len(ranges) - 1
             range = ranges[index]
 
-            last_counter = int(range[0])
+            last_counter = int(range[1])
         except SAXParseException as sax_error:
             last_counter = 0
 
@@ -225,6 +248,28 @@ class GrafParser():
         last_counter += len(annotation_value)
 
         seg_count = len(doc.getElementsByTagName('region'))
+
+        # Creating the node with link
+        node = doc.createElement("node")
+        node.setAttribute("xml:id", annotation + "-n"
+        + str(seg_count)) # Node number
+
+        if depends != '':
+            # Creating the link node
+            link = doc.createElement("link")
+            link.setAttribute("targets", depends + "-r"
+            + str(increment)) # ref
+            node.appendChild(link)
+
+            # Creating the edge node
+            edge = doc.createElement("edge")
+            edge.setAttribute("from", depends + "-r"
+            + str(increment)) # from node
+            edge.setAttribute("to", annotation + "-r"
+            + str(seg_count)) # to node
+            graph.appendChild(edge)
+
+        graph.appendChild(node)
 
         region = doc.createElement("region")
         region.setAttribute("xml:id", annotation + "-r"
@@ -265,9 +310,27 @@ class GrafParser():
 
         return doc
 
-    def coiso(self):
+class Render():
+
+    def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
+        self.filepath = filepath
+        basename = self.filepath.split('-header')
+        self.basedirname = basename[0]
+        self.basedir = os.path.dirname(self.filepath)
+        self.level_map = []
+
+    def writer(self):
         # read header file
-        doc = minidom.parse('/home/alopes/tests/pi_2-header.hdr')
+        doc = minidom.parse(self.filepath)
 
         primary_data = doc.getElementsByTagName('primaryData')[0].getAttribute('loc')
 
@@ -277,19 +340,18 @@ class GrafParser():
             loc = annotation.getAttribute('loc') # File name
             fid = annotation.getAttribute('f.id') # File id
 
-        file = open('/home/alopes/tests/pi_2.txt', 'r')
+        file = open(str(self.basedir)+ '/' + str(primary_data), 'r')
         res = file.readlines()
         file.close()
 
         i=0
 
         # Map the structure elements
-        self.seektags(data.DataStructureTypeGraid().data_hierarchy, 0)
-
+        self.seek_tags(data.DataStructureTypeGraid().data_hierarchy, 0)
         values_list = []
 
         for strct_elem in self.level_map:
-            file = '/home/alopes/tests/pi_2-'+str(strct_elem[1])+'.xml'
+            file = self.basedirname+'-'+str(strct_elem[1])+'.xml'
             doc = minidom.parse(file)
 
             regions = doc.getElementsByTagName('region')
@@ -300,7 +362,7 @@ class GrafParser():
             tokens = procContent.get_tokenizer()
             ids = procContent.get_token_id()
 
-            if len(regions)==0:
+            if len(regions) is 0:
                 i = 0
                 for node in doc.getElementsByTagName('f'):
                     nodes_value = (strct_elem[1],tokens[i],
@@ -318,9 +380,6 @@ class GrafParser():
         DataStructureTypeGraid.data_hierarchy)
 
         self.utterance_list = []
-
-        for z in values_list:
-            print(z)
 
         self.first_element = True
         first_range = True
@@ -351,6 +410,7 @@ class GrafParser():
             self.annotation_tree.append_element(self.utterance_list)
 
             value_index+=1
+
 
         for element in self.annotation_tree.elements():
             print(element)
@@ -388,5 +448,24 @@ class GrafParser():
         else:
             self.utterance_list.append([new_list])
 
-#GrafParser('/home/alopes/tests/pi_2.pickle').parsing(data.DataStructureTypeGraid())
-GrafParser('/home/alopes/tests/pi_2.pickle').coiso()
+    def seek_tags(self, hierarchy, level):
+        level+=1
+        for index in range(len(hierarchy)):
+            if isinstance(hierarchy[index],list):
+                self.seek_tags(hierarchy[index], level)
+            else:
+                level_list = (level, hierarchy[index], 0)
+                self.level_map.append(level_list)
+
+#------------------------------------
+#filepath = '/home/alopes/tests/pi.pickle'
+#annotation_tree = annotationtree.AnnotationTree(data.DataStructureTypeGraid())
+
+# Open the file
+#file = open(filepath, "rb")
+#annotation_tree.tree = pickle.load(file)
+
+#Parser(filepath).parsing(data.DataStructureTypeGraid(), annotation_tree)
+#------------------------------------
+headerfile = '/home/alopes/tests/pi-header.hdr'
+Render(headerfile).writer()
