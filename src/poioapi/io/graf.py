@@ -14,15 +14,13 @@ from xml.dom.minidom import Document
 from xml.dom import minidom
 from poioapi import annotationtree
 from poioapi import data
-from poioapi.io.xmltoanntree import ProcessContent
-from poioapi.io import txtrawfile
-from poioapi.io import header
-from poioapi.io import xmltograf
+from analyzer import ProcessContent
 
+import txtrawfile
 import pickle
 import codecs
+import header
 import os
-
 
 class Parser():
 
@@ -46,18 +44,24 @@ class Parser():
 
         self.data_structure_type = data_hierarchy
 
-        txt =  txtrawfile.CreateRawFile(self.filepath)
+        txt =  txtrawfile.CreateRawFile(self.basedirname,
+            annotation_tree, self.data_structure_type.data_hierarchy)
         txt.create_raw_file()
 
         self.header.author = 'CIDLeS'
         self.header.filename = txt.filename
-        self.header.primaryfile = txt.file
+        self.header.primaryfile = txt.txt_file
 
+        # Create the first annotation file
+        self.header.add_annotation(txt.loc, txt.fid)
+
+        # Map the elements in the data structure type
         self.seek_tags(self.data_structure_type.data_hierarchy, 0)
 
         # Verify the elements
         for element in annotation_tree.elements():
-            self.seek_elements(element, self.data_structure_type.data_hierarchy, 0)
+            self.seek_elements(element,
+                self.data_structure_type.data_hierarchy, 0)
 
         self.header.create_header()
 
@@ -67,7 +71,8 @@ class Parser():
             if isinstance(hierarchy[index],list):
                 self.seek_tags(hierarchy[index], level)
             else:
-                level_list = (level, hierarchy[index], 0)
+                level_list = (level,
+                              hierarchy[index].replace(' ','_'), 0)
                 self.level_map.append(level_list)
 
     def seek_elements(self, elements, labels, level):
@@ -84,6 +89,8 @@ class Parser():
                     label = labels[index + 1]
                 else:
                     label = labels[index]
+
+                label = label.replace(' ', '_')
 
                 index_map = 0
                 need_increment = False
@@ -113,7 +120,8 @@ class Parser():
                                         increment = item[2] - 1
                                         break
                             else:
-                                hierarchy_element = self.level_map[index_map-1]
+                                hierarchy_element =\
+                                self.level_map[index_map-1]
                                 depends_on = hierarchy_element[1]
                                 increment = hierarchy_element[2] - 1
                                 need_increment = True
@@ -127,14 +135,16 @@ class Parser():
                     for idx, item in enumerate(self.level_map):
                         if item[1] == label:
                             new_value = item[2] + 1
-                            self.level_map[idx] = (item[0], item[1], new_value)
+                            self.level_map[idx] = (item[0], item[1],
+                                                   new_value)
                             need_increment = False
                             break
                     need_increment = False
 
                 index+=1
 
-    def add_element(self, annotation, annotation_value, depends, increment):
+    def add_element(self, annotation, annotation_value, depends,
+                    increment):
 
         # See if the file exist
         # First see if the header is created and then do the rest
@@ -172,7 +182,7 @@ class Parser():
 
         graph = doc.getElementsByTagName('graph').item(0)
 
-        if level > 2 and annotation != 'word' \
+        if level > 2 and annotation != 'word'\
         or (annotation == 'translation' or annotation == 'comment' or annotation == 'graid2'):
             doc = self.create_dependent_node(doc, graph,
                 annotation, annotation_value, depends, increment)
@@ -210,7 +220,7 @@ class Parser():
 
         # Creating the features and the linkage
         a = doc.createElement("a")
-        a.setAttribute("xml:id", annotation + "-"
+        a.setAttribute("xml:id", annotation + "-a"
         + str(id_counter)) # id
         a.setAttribute("label", annotation) # label
         a.setAttribute("ref", depends + "-n"
@@ -255,20 +265,19 @@ class Parser():
         node.setAttribute("xml:id", annotation + "-n"
         + str(seg_count)) # Node number
 
-        if depends != '':
-            # Creating the link node
-            link = doc.createElement("link")
-            link.setAttribute("targets", depends + "-r"
-            + str(increment)) # ref
-            node.appendChild(link)
+        # Creating the link node
+        link = doc.createElement("link")
+        link.setAttribute("targets", annotation + "-r"
+        + str(increment)) # ref
+        node.appendChild(link)
 
-            # Creating the edge node
-            edge = doc.createElement("edge")
-            edge.setAttribute("from", depends + "-r"
-            + str(increment)) # from node
-            edge.setAttribute("to", annotation + "-r"
-            + str(seg_count)) # to node
-            graph.appendChild(edge)
+        # Creating the edge node
+        edge = doc.createElement("edge")
+        edge.setAttribute("from", depends + "-n"
+        + str(increment)) # from node
+        edge.setAttribute("to", annotation + "-n"
+        + str(seg_count)) # to node
+        graph.appendChild(edge)
 
         graph.appendChild(node)
 
@@ -280,6 +289,29 @@ class Parser():
             str(last_counter)) # Anchors
 
         graph.appendChild(region)
+
+        id_counter = len(doc.getElementsByTagName('a'))
+
+        # Creating the features and the linkage
+        a = doc.createElement("a")
+        a.setAttribute("xml:id", annotation + "-a"
+        + str(id_counter)) # id
+        a.setAttribute("label", annotation) # label
+        a.setAttribute("ref", annotation + "-n"
+        + str(seg_count)) # ref
+        a.setAttribute("as", annotation) # as
+
+        # Feature structure
+        feature_st = doc.createElement("fs")
+        feature = doc.createElement("f")
+        feature.setAttribute("name",'string')
+        value = doc.createTextNode(annotation_value) # Value
+        feature.appendChild(value)
+        feature_st.appendChild(feature)
+
+        a.appendChild(feature_st)
+
+        graph.appendChild(a)
 
         return doc
 
@@ -310,163 +342,3 @@ class Parser():
             graphheader.appendChild(ann_spaces)
 
         return doc
-
-class Render():
-
-    def __init__(self, filepath):
-        """Class's constructor.
-
-        Parameters
-        ----------
-        filepath : str
-            Path of the file to manipulate.
-
-        """
-
-        self.filepath = filepath
-        basename = self.filepath.split('-header')
-        self.basedirname = basename[0]
-        self.basedir = os.path.dirname(self.filepath)
-        self.level_map = []
-
-    def writer(self):
-        # read header file
-        doc = minidom.parse(self.filepath)
-
-        primary_data = doc.getElementsByTagName('primaryData')[0].getAttribute('loc')
-
-        annotatios_files = doc.getElementsByTagName('annotation')
-
-        for annotation in annotatios_files:
-            loc = annotation.getAttribute('loc') # File name
-            fid = annotation.getAttribute('f.id') # File id
-
-        file = open(str(self.basedir)+ '/' + str(primary_data), 'r')
-        res = file.readlines()
-        file.close()
-
-        i=0
-
-        # Map the structure elements
-        self.seek_tags(data.DataStructureTypeGraid().data_hierarchy, 0)
-        values_list = []
-
-        for strct_elem in self.level_map:
-            file = self.basedirname+'-'+str(strct_elem[1])+'.xml'
-            doc = minidom.parse(file)
-
-            regions = doc.getElementsByTagName('region')
-
-            procContent = ProcessContent(file)
-            procContent.process()
-
-            tokens = procContent.get_tokenizer()
-            ids = procContent.get_token_id()
-
-            if len(regions) is 0:
-                i = 0
-                for node in doc.getElementsByTagName('f'):
-                    nodes_value = (strct_elem[1],tokens[i],
-                                   node.firstChild.nodeValue)
-                    values_list.append(nodes_value)
-                    i+=1
-            else:
-                for i in range(len(ids)):
-                    nodes = (strct_elem[1], ids[i], tokens[i])
-                    values_list.append(nodes)
-
-        value_index=0
-
-        self.annotation_tree = annotationtree.AnnotationTree(data.
-        DataStructureTypeGraid.data_hierarchy)
-
-        self.utterance_list = []
-
-        self.first_element = True
-        first_range = True
-
-        for line in res:
-            self.line = line
-            for element in data.DataStructureTypeGraid().data_hierarchy:
-                if isinstance(element, list):
-                    self.dive_element(element, value_index, values_list, list(), 0)
-                else:
-                    for el in values_list:
-                        if el[0] == element and el[1]== str(value_index):
-                            if isinstance(el[2], list):
-                                if first_range:
-                                    self.range = el[2]
-                                    first_range = False
-                                utterance = {  'id' : self.annotation_tree.next_annotation_id,
-                                                'annotation' :  el[2]}
-                            else:
-                                utterance = {  'id' : self.annotation_tree.next_annotation_id,
-                                    'annotation' :  el[2]}
-
-                    self.utterance_list.append(utterance)
-
-            if self.first_element:
-                self.first_element = False
-
-            self.annotation_tree.append_element(self.utterance_list)
-
-            value_index+=1
-
-
-        for element in self.annotation_tree.elements():
-            print(element)
-            print("\n")
-
-    def dive_element(self, element, i, values_list, new_list, level):
-
-        level+=1
-
-        for index in range(len(element)):
-            if isinstance(element[index],list):
-              utterance = self.dive_element(element[index], i, values_list, list(), level)
-            else:
-                for el in values_list:
-                    if el[0] == element[index] and el[1]== str(i):
-                        if isinstance(el[2], list):
-                            ranges = el[2]
-                            if self.first_element:
-                                begin = int(ranges[0])
-                                end = int(ranges[1])
-                            else:
-                                begin = int(ranges[0]) - int(self.range[0])
-                                end =  int(self.range[1]) - int(ranges[1]) \
-                                       + (int(ranges[1]) - int(ranges[0])) + begin
-                            value = self.line[begin:end]
-                            utterance = {  'id' : self.annotation_tree.next_annotation_id,
-                                            'annotation' :  value}
-                        else:
-                            utterance = {  'id' : self.annotation_tree.next_annotation_id,
-                                            'annotation' :  el[2]}
-            new_list.append(utterance)
-
-        if level > 1:
-            return new_list
-        else:
-            self.utterance_list.append([new_list])
-
-    def seek_tags(self, hierarchy, level):
-        level+=1
-        for index in range(len(hierarchy)):
-            if isinstance(hierarchy[index],list):
-                self.seek_tags(hierarchy[index], level)
-            else:
-                level_list = (level, hierarchy[index], 0)
-                self.level_map.append(level_list)
-
-#------------------------------------
-#filepath = '/home/alopes/tests/pi.pickle'
-#annotation_tree = annotationtree.AnnotationTree(data.DataStructureTypeGraid())
-
-# Open the file
-#file = open(filepath, "rb")
-#annotation_tree.tree = pickle.load(file)
-
-#Parser(filepath).parsing(data.DataStructureTypeGraid(), annotation_tree)
-#------------------------------------
-headerfile = '/home/alopes/tests/pi-header.hdr'
-Render(headerfile).writer()
