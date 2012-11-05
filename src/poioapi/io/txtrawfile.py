@@ -14,12 +14,9 @@ each on of the types of data hierarchies.
 """
 
 from xml.dom.minidom import Document
-from poioapi import annotationtree
-from poioapi import data
 
 import codecs
 import os
-import pickle
 
 class CreateRawFile:
     """
@@ -33,7 +30,7 @@ class CreateRawFile:
     the txt file.
     """
 
-    def __init__(self, filepath):
+    def __init__(self, basename, annotation_tree, data_hierarchy):
         """Class's constructor.
 
         Parameters
@@ -43,9 +40,13 @@ class CreateRawFile:
 
         """
 
-        self.filepath = filepath
+        self.basename = basename
+        self.annotation_tree = annotation_tree
+        self.data_hierarchy = data_hierarchy
         self.filename = ''
-        self.file = ''
+        self.txt_file = ''
+        self.loc = ''
+        self.fid = ''
 
     def create_raw_file(self):
         """Creates an txt file with the data in the
@@ -58,23 +59,15 @@ class CreateRawFile:
 
         """
 
-        # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
-
-        # Open the file
-        file = open(self.filepath, "rb")
-        annotation_tree.tree = pickle.load(file)
-
-        # Start the txt file
-        basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '.txt')
+        file = os.path.abspath(self.basename + '.txt')
         f = codecs.open(file,'w', 'utf-8') # Need the encode
 
-        self.file = os.path.basename(file)
-        self.filename = os.path.basename(basename[0])
+        self.txt_file = os.path.basename(self.basename + '.txt')
+        self.filename = self.txt_file.split('.')
+        self.filename = self.filename[0]
 
         # Verify the elements
-        for element in annotation_tree.elements():
+        for element in self.annotation_tree.elements():
 
             # Get the utterance
             utterance = element[0]
@@ -99,15 +92,8 @@ class CreateRawFile:
 
         """
 
-        # Initialize the variable
-        annotation_tree = annotationtree.AnnotationTree(data.GRAID)
-
         # Getting the label in data hierarchy
-        utt = data.DataStructureTypeGraid.data_hierarchy[0]
-
-        # Open the file
-        file = open(self.filepath, "rb")
-        annotation_tree.tree = pickle.load(file)
+        utt = self.data_hierarchy[0]
 
         doc = Document()
         graph = doc.createElement("graph")
@@ -125,12 +111,14 @@ class CreateRawFile:
         last_counter = 0
 
         # Start XML file
-        basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-' + utt + '.xml')
+        file = os.path.abspath(self.basename + '-' + utt + '.xml')
         f = codecs.open(file,'w','utf-8')
 
+        self.loc = os.path.basename(file)
+        self.fid = utt
+
         # Verify the elements
-        for element in annotation_tree.elements():
+        for element in self.annotation_tree.elements():
 
             # Get the utterance
             utterance = element[0]
@@ -147,6 +135,19 @@ class CreateRawFile:
                 str(last_counter)) # Anchors
 
             graph.appendChild(region)
+
+            # Creating the node with link
+            node = doc.createElement("node")
+            node.setAttribute("xml:id", utt + "-n"
+            + str(seg_count)) # Node number
+
+            # Creating the link node
+            link = doc.createElement("link")
+            link.setAttribute("targets", utt + "-r"
+            + str(seg_count)) # ref
+            node.appendChild(link)
+
+            graph.appendChild(node)
 
             seg_count+=1
 
