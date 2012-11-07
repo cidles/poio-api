@@ -9,6 +9,7 @@
 """ This document is to create the regions
 of the words in the clause units one by one.
 """
+
 from xml.sax._exceptions import SAXParseException
 from xml.dom.minidom import Document
 from xml.dom import minidom
@@ -342,3 +343,146 @@ class Parser():
             graphheader.appendChild(ann_spaces)
 
         return doc
+
+class Render():
+
+    def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath : str
+            Path of the file to manipulate.
+
+        """
+
+        self.filepath = filepath
+        basename = self.filepath.split('-header')
+        self.basedirname = basename[0]
+        self.basedir = os.path.dirname(self.filepath)
+        self.level_map = []
+
+    def load(self, data_hierarchy):
+
+        features_list = []
+        tokens_list = []
+
+        self.seek_tags(data_hierarchy, 0)
+
+        for strct_elem in self.level_map:
+            file = self.basedirname+'-'+str(strct_elem[1])+'.xml'
+
+            procContent = ProcessContent(file)
+            procContent.process()
+
+            features_map = procContent.get_features_map()
+            tokens_map = procContent.get_tokens_map()
+
+            features_list.append(features_map)
+            tokens_list.append(tokens_map)
+
+        flatten_tokens_list = []
+        flatten_features_list = []
+
+        for tokens in tokens_list:
+            for token in tokens:
+                print(token)
+                flatten_tokens_list.append(token)
+
+        for features in features_list:
+            for feature in features:
+                print(feature)
+                flatten_features_list.append(feature)
+
+    def generate_file(self):
+        # Read header file
+        doc = minidom.parse(self.filepath)
+
+        annotation_list = []
+        annotatios_files = doc.getElementsByTagName('annotation')
+
+        # Get the files to look for
+        for annotation in annotatios_files:
+            loc = annotation.getAttribute('loc') # File name
+            fid = annotation.getAttribute('f.id') # File id
+            annotation_list.append((fid, loc))
+
+        f = codecs.open(self.basedirname+'-graf.xml','w','utf-8')
+
+        doc = self._create_graf_header()
+
+        graph = doc.getElementsByTagName('graph').item(0)
+        for ann in annotation_list:
+            doc_parsed = minidom.parse(self.basedir+'/'+ann[1])
+
+            doc = self._update_label_usage(doc, graph, ann[0])
+
+            nodes = doc_parsed.getElementsByTagName('node')
+            for node in nodes:
+                graph.appendChild(node)
+
+            edges = doc_parsed.getElementsByTagName('edge')
+            for edge in edges:
+                graph.appendChild(edge)
+
+            regions = doc_parsed.getElementsByTagName('region')
+            for region in regions:
+                graph.appendChild(region)
+
+            annotations = doc_parsed.getElementsByTagName('a')
+            for a in annotations:
+                graph.appendChild(a)
+                self._update_label_occurs(doc, ann[0])
+
+        raw_string = str(doc.toxml()).replace('\n','')
+        raw_string = raw_string.replace('>      <','><')
+        raw_string = raw_string.replace('>    <','><')
+        raw_string = raw_string.replace('>  <','><')
+        indent = minidom.parseString(raw_string)
+
+        f.write(indent.toprettyxml('    '))
+
+        f.close()
+
+    def _update_label_usage(self, doc, graph, label):
+        labelsDecl = doc.getElementsByTagName('labelsDecl').item(0)
+        labelUsage = doc.createElement("labelUsage")
+        labelUsage.setAttribute('label',label)
+        labelUsage.setAttribute('occurs','0')
+        labelsDecl.appendChild(labelUsage)
+
+        return doc
+
+    def _update_label_occurs(self, doc, label):
+        # Update the occurs of wich label
+        for node in doc.getElementsByTagName('labelUsage'):
+            if node.getAttribute('label') == label:
+                value = int(node.getAttribute('occurs'))
+                value+=1
+                node.setAttribute('occurs',str(value))
+                return doc
+
+    def _create_graf_header(self):
+
+        doc = Document()
+        graph = doc.createElement("graph")
+        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
+        doc.appendChild(graph)
+
+        # Header
+        graphheader = doc.createElement("graphHeader")
+        labelsdecl = doc.createElement("labelsDecl")
+        graphheader.appendChild(labelsdecl)
+        graph.appendChild(graphheader)
+
+        return doc
+
+    def seek_tags(self, hierarchy, level):
+        level+=1
+        for index in range(len(hierarchy)):
+            if isinstance(hierarchy[index],list):
+                self.seek_tags(hierarchy[index], level)
+            else:
+                level_list = (level,
+                              hierarchy[index].replace(' ','_'), 0)
+                self.level_map.append(level_list)

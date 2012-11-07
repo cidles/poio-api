@@ -7,7 +7,6 @@ PoioAPI Tests
 
    testannotationtree
    testdata
-   testparsing
 
 Indices and tables
 ==================
