@@ -55,12 +55,13 @@ class XmlHandler(ContentHandler):
 
         if name == 'link':
             self.link = attrs.getValue('targets')
+
         if name == 'region':
             id = attrs.getValue('xml:id')
             att = attrs.getValue('anchors')
             tokenizer = att.split()
-            values = (id.replace('-r','-'), tokenizer,
-                      self.link.replace('-r','-'))
+            values = (id, tokenizer,
+                      self.link)
             self.tokens_map.append(values)
 
             # Need to write the regions
@@ -86,7 +87,7 @@ class XmlHandler(ContentHandler):
             id = values[0]
             ref = values[1]
             self.features_map.append((id, self.map[name],
-                                      ref.replace('-n','-')))
+                                      ref))
 
     def get_tokenizer(self):
         return self.tokenizer
