@@ -6,12 +6,9 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-""" This module is to create the raw txt
-file form the pickle file to an Annotation
-Tree file.
-
-Note: That the Annotation Tree file is a pickle
-that works in Poio GUI.
+""" This document contain the methods to 
+parse all the files that were generated with 
+the GrAF ISO format.
 """
 
 from xml.sax import make_parser
@@ -31,10 +28,12 @@ class XmlHandler(ContentHandler):
         self.tokens_map = []
         self.features_map = []
         self.link = ''
+        self.edge_from = ''
         self.map = {}
         self.tag = ''
         self._root_element = 0
         self._buffer = ""
+        self.hasregion = False
 
     def startElement(self, name, attrs):
         """Method from ContentHandler Class.
@@ -61,18 +60,26 @@ class XmlHandler(ContentHandler):
             att = attrs.getValue('anchors')
             tokenizer = att.split()
             values = (id, tokenizer,
-                      self.link)
+                      self.edge_from)
             self.tokens_map.append(values)
+            self.hasregion = True
 
             # Need to write the regions
             id = id.split('-r')
             self.tokenizer.append(tokenizer)
             self.token_id.append(id[1])
 
+        if name == 'edge':
+            self.edge_from = attrs.getValue('from')
+
         if name == 'a':
             ref = attrs.getValue('ref')
             id = attrs.getValue('xml:id')
-            self.values = (id, ref)
+
+            if self.hasregion:
+                self.values = (id, self.edge_from)
+            else:
+                self.values = (id, ref)
 
     def characters (self, ch):
         self.map[self.tag] += ch
@@ -86,8 +93,7 @@ class XmlHandler(ContentHandler):
             values = self.values
             id = values[0]
             ref = values[1]
-            self.features_map.append((id, self.map[name],
-                                      ref))
+            self.features_map.append((id, self.map[name], ref))
 
     def get_tokenizer(self):
         return self.tokenizer

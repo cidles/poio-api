@@ -22,7 +22,7 @@ import pickle
 annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
 
 # Open the file and set it to the AnnotationTree
-filepath = 'C:\TESTS\Balochi Text1.pickle'
+filepath = 'Balochi Text1.pickle'
 file = open(filepath, "rb")
 annotation_tree.tree = pickle.load(file)
 

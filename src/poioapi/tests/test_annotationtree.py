@@ -33,7 +33,7 @@ annotationtree_class = annotationtree.AnnotationTree(data_class)
 anntreefilter_class = annotationtree.AnnotationTreeFilter(data_class)
 
 # Open the file and set it to the AnnotationTree
-filepath = '/home/alopes/tests/pi_2.pickle'
+filepath = 'Example.pickle'
 file = open(filepath, "rb")
 annotationtree_class.tree = pickle.load(file)
 
@@ -80,141 +80,6 @@ class TestAnnotationTree:
         expected_result = annotationtree_class._next_annotation_id
 
         assert(annotationtree_class._next_annotation_id == expected_result)
-
-    def test_save_tree_as_pickle(self):
-        """Raise an assertion if can't save the tree.
-
-        Save the project annotation tree in a pickle
-        file.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the filepath variable value equal like this
-        filepath = 'save_test_file.pickle'
-
-        error_message = 'Fail - Save pickle as tree'
-
-        assert annotationtree_class.save_tree_as_pickle(filepath), error_message
-
-    def test_load_tree_from_pickle(self):
-        """Raise an assertion if can't load the file.
-
-        Load the project annotation tree from a pickle
-        file.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the filepath variable value equal like this
-        filepath = '/home/alopes/tests/pi_2.pickle'
-
-        error_message = 'Fail - Load the tree from pickle file'
-
-        assert annotationtree_class.load_tree_from_pickle(filepath), error_message
-
-    def test_append_element(self):
-        """Raise an assertion if can't append the element.
-
-        Append an element to the annotation tree.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variables value equal like this
-        element = 'utterance'
-        update_ids = False
-
-        error_message = 'Fail - Can not append'
-
-        assert annotationtree_class.append_element(element, update_ids), error_message
-
-    def test__update_ids_of_element(self):
-        """Raise an assertion if can't update the element ids.
-
-        Update the ids of the element in the annotation tree.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variables value equal like this
-        element = [[{'id': None, 'annotation': ''},
-                {'id': None, 'annotation': ''},
-                {'id': None, 'annotation': ''}]]
-
-        # The result expected should be
-        expected_result = [[{'id': 7, 'annotation': ''},
-                {'id': 8, 'annotation': ''},
-                {'id': 9, 'annotation': ''}]]
-
-        error_message = 'Fail - Can not append elements'
-
-        assert annotationtree_class._update_ids_of_element(element), error_message
-
-    def test_empty_element(self):
-        """Raise an assertion if the array have no elements.
-
-        Retrieve the array with the updated ids.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # Force the Structure Type
-        annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
-
-        # The result expected should be
-        expected_result = [{'id': 68, 'annotation': ''},
-            [[{'id': 69, 'annotation': ''},
-                [[{'id': 70, 'annotation': ''},
-                        {'id': 71, 'annotation': ''},
-                        {'id': 72, 'annotation': ''}]],
-                    {'id': 73, 'annotation': ''}]],
-                {'id': 74, 'annotation': ''},
-                {'id': 75, 'annotation': ''}]
-
-        error_message = 'Fail - Empty element'
-
-        assert annotationtree_class.empty_element(), error_message
-
-    def test_append_empty_element(self):
-        """Raise an assertion if can't append the element
-        with the ids.
-
-        Append an element with the ids.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # Force the Structure Type
-        annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
-
-        error_message = 'Fail - Can not append elements'
-
-        assert annotationtree_class.append_empty_element(), error_message
 
     def test_elements(self):
         """Raise an assertion if can't retrieve any element.
@@ -304,25 +169,6 @@ class TestAnnotationTree:
 
         assert(annotationtree_class.__len__() > 0)
 
-    def test_append_filter(self):
-        """Raise an assertion if can't set the filter.
-
-        Append a filter to the search.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variable value equal like this
-        filter = 'text'
-
-        error_message = 'Fail - Can not append the filter'
-
-        assert annotationtree_class.append_filter(filter), error_message
-
     def test_last_filter(self):
         """Raise an assertion if can't return the
         last filter.
@@ -341,27 +187,6 @@ class TestAnnotationTree:
 
         # Comparing the result of the two instances
         assert(annotationtree_class.last_filter().data_structure_type == expected_result)
-
-    def test_update_last_filter(self):
-        """Raise an assertion if can't update the filter.
-
-        Update the last filter added.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        ann = annotationtree.AnnotationTreeFilter(annotationtree_class.data_structure_type)
-
-        # If the variable value equal like this
-        filter = ann.filter
-
-        # See it again
-        #assert(annotationtree_class.update_last_filter(filter))
-        pass
 
     def test_pop_filter(self):
         """Raise an assertion if can't remove filter.
@@ -386,65 +211,6 @@ class TestAnnotationTree:
         assert(annotationtree_class.pop_filter() ==
                expected_result)
 
-    def test_init_filters(self):
-        """Raise an assertion if there's no tree.
-
-        Initialize the filters array.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        error_message = 'Fail - Initialize the filters'
-
-        assert annotationtree_class.init_filters(), error_message
-
-    def test_reset_filters(self):
-        """Raise an assertion if there's no tree.
-
-        Reset the filters array.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        error_message = 'Fail - Resetting the filters'
-
-        assert annotationtree_class.reset_filters(), error_message
-
-    def test_as_html(self, filtered = False, html_frame = True):
-        """Raise an assertion if can't create the html page.
-
-        Return the search result in a html page.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # Force the Structure Type
-        annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
-
-        # Open the file and set it to the AnnotationTree
-        filepath = '/home/alopes/tests/pi_2.pickle'
-        file = open(filepath, "rb")
-        annotationtree_class.tree = pickle.load(file)
-
-        # If the variables value equal like this
-        filtered = False
-        html_frame = True
-
-        error_message = 'Fail - To create html file'
-        assert annotationtree_class.as_html(filtered, html_frame), error_message
-
     def test__element_as_table(self):
         """Raise an assertion if can't insert an element into
         a table.
@@ -462,7 +228,7 @@ class TestAnnotationTree:
         annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
 
         # Open the file and set it to the AnnotationTree
-        filepath = '/home/alopes/tests/pi_2.pickle'
+        filepath = 'Example.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 
@@ -499,102 +265,6 @@ class TestAnnotationTree:
 
 class TestAnnotationTreeFilter:
 
-    def test_reset_match_object(self):
-        """Raise an assertion if can't reset a match
-        object.
-
-        Reset a match object.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        error_message = 'Fail - Resetting the match object'
-
-        assert anntreefilter_class.reset_match_object(), error_message
-
-    def test_set_filter_for_type(self):
-        """Raise an assertion if can't set the filter.
-
-        Set a filter for a given type.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variables value equal like this
-        ann_type = 'utterance'
-        filter_string = 'Text'
-
-        error_message = 'Fail - Setting the filter type'
-
-        assert anntreefilter_class.set_filter_for_type(
-            ann_type,filter_string), error_message
-
-    def test_set_inverted_filter(self):
-        """Raise an assertion if can't set the filter.
-
-        Set the inverted value to a filter.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variables value equal like this
-        inverted = True
-
-        error_message = 'Fail - Setting the inverted filter'
-
-        assert anntreefilter_class.set_inverted_filter(inverted), error_message
-
-    def test_set_contained_matches(self):
-        """Raise an assertion if can't set the filter.
-
-        Set the contained matches for a filter.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variables value equal like this
-        contained_matches = False
-
-        error_message = 'Fail - Setting the contained matches'
-
-        assert anntreefilter_class.set_contained_matches(
-            contained_matches), error_message
-
-    def test_set_boolean_operation(self):
-        """Raise an assertion if can't set the filter.
-
-        Set the operation type to the filter.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # If the variables value equal like this
-        type = 'AND' # The type can be AND or OR
-
-        error_message = 'Fail - Setting the boolean operation'
-
-        assert anntreefilter_class.set_boolean_operation(type), error_message
-
     def test_element_passes_filter(self):
         """Raise an assertion if can't pass the filter.
 
@@ -609,7 +279,7 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        filepath = '/home/alopes/tests/pi_2.pickle'
+        filepath = 'Example.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 
@@ -643,7 +313,7 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        filepath = '/home/alopes/tests/pi_2.pickle'
+        filepath = 'Example.pickle'
         file = open(filepath, "rb")
         annotationtree_class.tree = pickle.load(file)
 

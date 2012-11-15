@@ -28,5 +28,8 @@ annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
 file = open(filepath, "rb")
 annotation_tree.tree = pickle.load(file)
 
-# Call the parser to GrAF
-graf.Parser(filepath).parsing(data_hierarchy, annotation_tree)
+# Header file
+headerfile = 'Example-header.hdr'
+
+# Call the writer to GrAF
+graf.Writer(annotation_tree, headerfile).write()
