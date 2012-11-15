@@ -17,7 +17,7 @@ from poioapi.io import graf
 # The file should be generated first with the parser
 headerfile = 'Example-header.hdr'
 
-# Creates a list of nodes, their values and their dependencies
+# Create an annotation tree from the header file
 graf.Render(headerfile).load(data.DataStructureTypeGraid().data_hierarchy)
 
 # Generate a rendered file with all the nodes

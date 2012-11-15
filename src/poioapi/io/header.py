@@ -8,8 +8,8 @@
 # For license information, see LICENSE.TXT
 """ This module is to create the header file.
 This file will contain the files that belongs to
-each raw file with the respective morphemes, words,
-clause units, utterances, wfw and the graids.
+each raw file with the respective elements of a 
+data hierarchy.
 """
 
 from xml.dom.minidom import Document

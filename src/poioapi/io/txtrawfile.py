@@ -10,7 +10,7 @@
 file form the pickle file.
 
 Note: The comments are exactly the sames for
-each on of the types of data hierarchies.
+each one of the types of data hierarchies.
 """
 
 from xml.dom.minidom import Document

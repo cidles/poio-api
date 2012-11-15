@@ -1,31 +1,27 @@
 # -*- coding: utf-8 -*-
-#
 # Poio Tools for Linguists
 #
 # Copyright (C) 2009-2012 Poio Project
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-""" This document is to create the regions
-of the words in the clause units one by one.
+""" This document contain the responsible 
+methods to generate and parse the GrAF files.
 """
 
 from xml.sax._exceptions import SAXParseException
 from xml.dom.minidom import Document
 from xml.dom import minidom
-from poioapi import annotationtree
-from poioapi import data
 from analyzer import ProcessContent
+from poioapi.io import txtrawfile
+from poioapi.io import header
 
-import txtrawfile
-import pickle
 import codecs
-import header
 import os
 
-class Parser():
+class Writer():
 
-    def __init__(self, filepath):
+    def __init__(self, annotation_tree, header_file):
         """Class's constructor.
 
         Parameters
@@ -35,18 +31,19 @@ class Parser():
 
         """
 
-        self.filepath = filepath
+        self.filepath = header_file
         basedirname = self.filepath.split('.')
         self.basedirname = basedirname[0]
-        self.header = header.CreateHeaderFile(filepath)
+        self.header = header.CreateHeaderFile(self.filepath)
         self.level_map = []
+        self.annotation_tree = annotation_tree
 
-    def parsing(self, data_hierarchy, annotation_tree):
+    def write(self):
 
-        self.data_structure_type = data_hierarchy
+        self.data_structure_type = self.annotation_tree.data_structure_type
 
         txt =  txtrawfile.CreateRawFile(self.basedirname,
-            annotation_tree, self.data_structure_type.data_hierarchy)
+            self.annotation_tree, self.data_structure_type.data_hierarchy)
         txt.create_raw_file()
 
         self.header.author = 'CIDLeS'
@@ -60,7 +57,7 @@ class Parser():
         self.seek_tags(self.data_structure_type.data_hierarchy, 0)
 
         # Verify the elements
-        for element in annotation_tree.elements():
+        for element in self.annotation_tree.elements():
             self.seek_elements(element,
                 self.data_structure_type.data_hierarchy, 0)
 
@@ -191,26 +188,23 @@ class Parser():
             doc = self.create_node_region(doc, graph, depends, annotation,
                 annotation_value, increment, filepath)
 
+        # Indent the xml file
+        raw_string = str(doc.toxml()).replace('\n','')
+        raw_string = raw_string.replace('>      <','><')
+        raw_string = raw_string.replace('>    <','><')
+        raw_string = raw_string.replace('>  <','><')
+        indent = minidom.parseString(raw_string)
+
         if new_file:
             # Write the content in XML file
-            f.write(doc.toprettyxml('  '))
+            f.write(indent.toprettyxml('  '))
 
             #Close XML file
             f.close()
         else:
             file = codecs.open(filepath,'w', 'utf-8')
-            file.write(doc.toprettyxml('  '))
-            file.close()
 
-            file = codecs.open(filepath,'r', 'utf-8')
-            lines = file.readlines()
-            file.flush()
-            file.close()
-
-            file = codecs.open(filepath,'w', 'utf-8')
-            for line in lines:
-                if not line.isspace():
-                    file.writelines(line)
+            file.write(indent.toprettyxml('  '))
 
             file.close()
 
@@ -272,15 +266,18 @@ class Parser():
         + str(increment)) # ref
         node.appendChild(link)
 
+        graph.appendChild(node)
+
         # Creating the edge node
         edge = doc.createElement("edge")
+        edge.setAttribute("xml:id", annotation + "-e"
+        + str(seg_count)) # edge id
         edge.setAttribute("from", depends + "-n"
         + str(increment)) # from node
         edge.setAttribute("to", annotation + "-n"
         + str(seg_count)) # to node
-        graph.appendChild(edge)
 
-        graph.appendChild(node)
+        graph.appendChild(edge)
 
         region = doc.createElement("region")
         region.setAttribute("xml:id", annotation + "-r"
@@ -362,17 +359,26 @@ class Render():
         self.basedir = os.path.dirname(self.filepath)
         self.level_map = []
 
-    def load(self, data_hierarchy):
+    def load_as_tree(self, data_hierarchy):
+        # Read header file
+        doc_header = minidom.parse(self.filepath)
 
-        features_list = []
+        files_list = []
+        annotatios_files = doc_header.getElementsByTagName('annotation')
+
+        # Get the files to look for
+        for annotation in annotatios_files:
+            loc = annotation.getAttribute('loc') # File name
+            fid = annotation.getAttribute('f.id') # File id
+            files_list.append((fid, loc))
+
         tokens_list = []
+        features_list = []
 
         self.seek_tags(data_hierarchy, 0)
 
-        for strct_elem in self.level_map:
-            file = self.basedirname+'-'+str(strct_elem[1])+'.xml'
-
-            procContent = ProcessContent(file)
+        for file in files_list:
+            procContent = ProcessContent(self.basedir+'/'+file[1])
             procContent.process()
 
             features_map = procContent.get_features_map()
@@ -383,16 +389,72 @@ class Render():
 
         flatten_tokens_list = []
         flatten_features_list = []
+        self.elements_list = []
 
         for tokens in tokens_list:
             for token in tokens:
-                print(token)
                 flatten_tokens_list.append(token)
 
         for features in features_list:
             for feature in features:
-                print(feature)
                 flatten_features_list.append(feature)
+                self.elements_list.append(feature)
+
+        self.clear_list = []
+        self.final_list = []
+        self.dive_into(data_hierarchy, 'utterance-n0')
+
+        self.final_list.append(self.create_element(data_hierarchy, []))
+        print(self.final_list)
+
+    def create_element(self, elements, new_list):
+        restart = True
+        while restart:
+            restart = False
+            for element in elements:
+                if isinstance(element, list):
+                    new_list.append([self.create_element(element, [])])
+                    for value in self.clear_list:
+                        if value[0]==element[0]:
+                            restart = True
+                            break
+                    if restart:
+                        print('toma')
+                        break
+                else:
+                    element = str(element).replace(' ','_')
+                    for value in self.clear_list:
+                        if value[0]==element:
+                            new_list.append(value[1])
+                            self.clear_list.remove(value)
+                            break
+
+            return new_list
+
+    def dive_into(self, elements, depends):
+        index = 0
+        restart = True
+        while restart:
+            restart = False
+            for element in elements:
+                if isinstance(element, list):
+                    self.dive_into(element, depends)
+                    for value in self.elements_list:
+                        if value[2]==depends:
+                            restart = True
+                            break
+                else:
+                    element = str(element).replace(' ','_')
+
+                    for value in self.elements_list:
+                        value_changed = value[0].split('-')
+                        if value_changed[0]==element and depends==value[2]:
+                            if index is 0:
+                                depends = value[0].replace('-a','-n')
+                                #print(str(element) + ' --- ' + str(value[1]))
+                            self.clear_list.append((element,value[1]))
+                            self.elements_list.remove(value)
+                    index+=1
 
     def generate_file(self):
         # Read header file
