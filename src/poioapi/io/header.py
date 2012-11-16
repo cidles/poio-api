@@ -13,11 +13,8 @@ data hierarchy.
 """
 
 from xml.dom.minidom import Document
-from poioapi import annotationtree
-from poioapi import data
 
 import os
-import pickle
 import codecs
 import datetime
 import random

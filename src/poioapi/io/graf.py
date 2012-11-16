@@ -357,11 +357,23 @@ class Render():
         basename = self.filepath.split('-header')
         self.basedirname = basename[0]
         self.basedir = os.path.dirname(self.filepath)
-        self.level_map = []
 
     def load_as_tree(self, data_hierarchy):
+
+        # Initialize the variable
+        self.annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
+
         # Read header file
         doc_header = minidom.parse(self.filepath)
+
+        # Get the primary file. The file contain the raw text
+        primary_file = doc_header.getElementsByTagName('primaryData')[0].\
+        getAttribute('loc')
+
+        # Get all the lines from the primary file
+        txtfile = codecs.open(self.basedir+"/"+primary_file,'r')
+        self.txtlines = txtfile.readlines()
+        txtfile.close()
 
         files_list = []
         annotatios_files = doc_header.getElementsByTagName('annotation')
@@ -375,70 +387,95 @@ class Render():
         tokens_list = []
         features_list = []
 
-        self.seek_tags(data_hierarchy, 0)
-
         for file in files_list:
-            procContent = ProcessContent(self.basedir+'/'+file[1])
-            procContent.process()
+            content = ProcessContent(self.basedir+'/'+file[1])
+            content.process()
 
-            features_map = procContent.get_features_map()
-            tokens_map = procContent.get_tokens_map()
+            features_map = content.get_features_map()
+            tokens_map = content.get_tokens_map()
 
             features_list.append(features_map)
             tokens_list.append(tokens_map)
 
-        flatten_tokens_list = []
-        flatten_features_list = []
         self.elements_list = []
-
-        for tokens in tokens_list:
-            for token in tokens:
-                flatten_tokens_list.append(token)
 
         for features in features_list:
             for feature in features:
-                flatten_features_list.append(feature)
                 self.elements_list.append(feature)
 
-        self.clear_list = []
-        self.final_list = []
-        self.dive_into(data_hierarchy, 'utterance-n0')
+        self.tree = []
+        counter = 0
 
-        self.final_list.append(self.create_element(data_hierarchy, []))
-        print(self.final_list)
+        for tokens in tokens_list:
+            for token in tokens:
+                if token[2]=='':
+                    self._dependency = token[0].replace('-r','-n')
+                    self.clear_list = []
+                    self.elements_sort(data_hierarchy, self._dependency)
+                    self.utterance = self.retrieve_string(token[1],counter)
+                    self.annotation_tree.append_element(self.append_element(
+                        data_hierarchy, [], token[2], 0, 0))
+                    # A tree to a pickle
+                    #self.tree.append(self.append_element(data_hierarchy, [], token[2], 0, 0))
+                    counter+=1
 
-    def create_element(self, elements, new_list):
-        restart = True
-        while restart:
-            restart = False
+        return self.annotation_tree
+
+    def retrieve_string(self, token, counter):
+        begin = int(token[0]) * 0
+        end = int(token[1]) - int(token[0])
+        string = self.txtlines[counter]
+        return  string[begin:end]
+
+    def append_element(self, elements, new_list, depends, depends_n, level):
+        level+=1
+        empty_list = []
+        while depends_n >= 0:
+            aux_list = []
             for element in elements:
+                index = 0
                 if isinstance(element, list):
-                    new_list.append([self.create_element(element, [])])
                     for value in self.clear_list:
-                        if value[0]==element[0]:
-                            restart = True
-                            break
-                    if restart:
-                        print('toma')
-                        break
+                        if value[2] == depends:
+                            depends_n+=1
+                    self.append_element(element, aux_list, depends, depends_n, level)
                 else:
                     element = str(element).replace(' ','_')
-                    for value in self.clear_list:
-                        if value[0]==element:
-                            new_list.append(value[1])
-                            self.clear_list.remove(value)
-                            break
 
+                    if depends=='':
+                        aux_list.append({ 'id' : self.annotation_tree
+                        .next_annotation_id,'annotation' : self.utterance})
+                        depends = self._dependency
+                        index-=1
+                    else:
+                        for value in self.clear_list:
+                            if value[0]==element:
+                                if index is 0:
+                                    depends = value[2]
+                                aux_list.append({ 'id' : self.annotation_tree.
+                                next_annotation_id,'annotation' : value[1]})
+                                self.clear_list.remove(value)
+                                break
+                    index+=1
+                    depends_n-=1
+
+            if len(aux_list) is not 0:
+                empty_list.append(aux_list)
+
+        if len(empty_list) is not 0:
+            new_list.append(empty_list)
+
+        if level==1:
             return new_list
 
-    def dive_into(self, elements, depends):
+    def elements_sort(self, elements, depends):
         index = 0
         restart = True
         while restart:
             restart = False
             for element in elements:
                 if isinstance(element, list):
-                    self.dive_into(element, depends)
+                    self.elements_sort(element, depends)
                     for value in self.elements_list:
                         if value[2]==depends:
                             restart = True
@@ -451,9 +488,9 @@ class Render():
                         if value_changed[0]==element and depends==value[2]:
                             if index is 0:
                                 depends = value[0].replace('-a','-n')
-                                #print(str(element) + ' --- ' + str(value[1]))
-                            self.clear_list.append((element,value[1]))
+                            self.clear_list.append((element,value[1],value[2]))
                             self.elements_list.remove(value)
+                            break
                     index+=1
 
     def generate_file(self):
@@ -538,13 +575,3 @@ class Render():
         graph.appendChild(graphheader)
 
         return doc
-
-    def seek_tags(self, hierarchy, level):
-        level+=1
-        for index in range(len(hierarchy)):
-            if isinstance(hierarchy[index],list):
-                self.seek_tags(hierarchy[index], level)
-            else:
-                level_list = (level,
-                              hierarchy[index].replace(' ','_'), 0)
-                self.level_map.append(level_list)

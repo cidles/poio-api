@@ -18,7 +18,13 @@ from poioapi.io import graf
 headerfile = 'Example-header.hdr'
 
 # Create an annotation tree from the header file
-graf.Render(headerfile).load(data.DataStructureTypeGraid().data_hierarchy)
+annotation_tree = graf.Render(headerfile).\
+load_as_tree(data.DataStructureTypeGraid().data_hierarchy)
+
+# Consulting the elements
+for element in annotation_tree.elements():
+    print(element)
+    print("\n")
 
 # Generate a rendered file with all the nodes
 graf.Render(headerfile).generate_file()
