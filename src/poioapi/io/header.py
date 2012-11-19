@@ -29,17 +29,17 @@ class CreateHeaderFile:
 
     """
 
-    def __init__(self, filepath):
+    def __init__(self, basedirname):
         """Class's constructor.
 
         Parameters
         ----------
-        filepath : str
-            Path of the file to manipulate.
+        basedirname : str
+            Base path of the file to manipulate, without extension.
 
         """
 
-        self.filepath = filepath
+        self.basedirname = basedirname
         self.annotation_list = []
         self.version = '1.0.0'
         self.filename = ''
@@ -340,8 +340,7 @@ class CreateHeaderFile:
             doc_header.appendChild(revisionDesc)
 
         # Start XML file
-        basename = self.filepath.split('.pickle')
-        file = os.path.abspath(basename[0] + '-header.hdr')
+        file = self.basedirname + '.hdr'
         f = codecs.open(file,'w','utf-8')
 
         # Write the content in XML file

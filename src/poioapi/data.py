@@ -14,6 +14,10 @@ Elan's .eaf files, Kura's .xml file, Toolbox's .txt files etc.
 """
 
 from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
 
 import re as regex
 

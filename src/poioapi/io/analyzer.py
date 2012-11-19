@@ -10,6 +10,7 @@
 parse all the files that were generated with 
 the GrAF ISO format.
 """
+import codecs
 
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
@@ -109,7 +110,7 @@ class XmlHandler(ContentHandler):
 
 class ProcessContent:
     """
-    Class that handles the XML test_split.
+    Class that handles the XML files.
 
     The class uses the ContentHandler from
     SAX XML.
@@ -140,7 +141,7 @@ class ProcessContent:
         parser = make_parser()
         curHandler = XmlHandler()
         parser.setContentHandler(curHandler)
-        f = open(self.metafile)
+        f = codecs.open(self.metafile, "r", "utf-8")
         parser.parse(f)
         f.close()
         self.tokenizer = curHandler.get_tokenizer()

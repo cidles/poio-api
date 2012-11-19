@@ -9,15 +9,18 @@
 methods to generate and parse the GrAF files.
 """
 
+import os
+import codecs
+
 from xml.sax._exceptions import SAXParseException
 from xml.dom.minidom import Document
 from xml.dom import minidom
-from analyzer import ProcessContent
+
+from poioapi.io.analyzer import ProcessContent
 from poioapi.io import txtrawfile
 from poioapi.io import header
+from poioapi import annotationtree
 
-import codecs
-import os
 
 class Writer():
 
@@ -32,9 +35,8 @@ class Writer():
         """
 
         self.filepath = header_file
-        basedirname = self.filepath.split('.')
-        self.basedirname = basedirname[0]
-        self.header = header.CreateHeaderFile(self.filepath)
+        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
+        self.header = header.CreateHeaderFile(self.basedirname)
         self.level_map = []
         self.annotation_tree = annotation_tree
 
@@ -64,7 +66,7 @@ class Writer():
         self.header.create_header()
 
     def seek_tags(self, hierarchy, level):
-        level+=1
+        level += 1
         for index in range(len(hierarchy)):
             if isinstance(hierarchy[index],list):
                 self.seek_tags(hierarchy[index], level)
@@ -73,20 +75,20 @@ class Writer():
                               hierarchy[index].replace(' ','_'), 0)
                 self.level_map.append(level_list)
 
-    def seek_elements(self, elements, labels, level):
+    def seek_elements(self, elements, data_hierarchy, level):
         index = 0
-        level+=1
+        level += 1
         for element in elements:
             if isinstance(element, list):
-                if isinstance(labels[index], list):
-                    self.seek_elements(element, labels[index], level)
+                if isinstance(data_hierarchy[index], list):
+                    self.seek_elements(element, data_hierarchy[index], level)
                 else:
-                    self.seek_elements(element, labels, level)
+                    self.seek_elements(element, data_hierarchy, level)
             else:
-                if isinstance(labels[index], list):
-                    label = labels[index + 1]
+                if isinstance(data_hierarchy[index], list):
+                    label = data_hierarchy[index + 1]
                 else:
-                    label = labels[index]
+                    label = data_hierarchy[index]
 
                 label = label.replace(' ', '_')
 
@@ -100,7 +102,7 @@ class Writer():
                     increment = hierarchy_element[2] - 1
 
                     if element == elements[-1]:
-                        label = labels[-1]
+                        label = data_hierarchy[-1]
 
                 elif level == 1:
                     depends_on = ''
@@ -238,9 +240,9 @@ class Writer():
     def create_node_region(self, doc, graph, depends, annotation, annotation_value, increment, filepath):
 
         try:
-            procContent = ProcessContent(filepath)
-            procContent.process()
-            ranges = procContent.get_tokenizer()
+            proc_content = ProcessContent(filepath)
+            proc_content.process()
+            ranges = proc_content.get_tokenizer()
 
             index = len(ranges) - 1
             range = ranges[index]

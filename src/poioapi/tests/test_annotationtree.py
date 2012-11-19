@@ -22,20 +22,8 @@ from poioapi import data
 from poioapi import annotationtree
 
 import pickle
+from nose import with_setup
 
-# Initialize the DataStructureType class
-data_class = data.DataStructureTypeGraid()
-
-# Initialize the AnnotationTree class
-annotationtree_class = annotationtree.AnnotationTree(data_class)
-
-# Initialize the AnnotationTreeFilter class
-anntreefilter_class = annotationtree.AnnotationTreeFilter(data_class)
-
-# Open the file and set it to the AnnotationTree
-filepath = 'Example.pickle'
-file = open(filepath, "rb")
-annotationtree_class.tree = pickle.load(file)
 
 class TestAnnotationTree:
     """
@@ -43,6 +31,18 @@ class TestAnnotationTree:
     class annotation.py.
 
     """
+
+    def setup(self):
+        # Initialize the DataStructureType class
+        self.data_structure_type = data.DataStructureTypeGraid()
+
+        # Initialize the AnnotationTree class
+        self.annotationtree = annotationtree.AnnotationTree(self.data_structure_type)
+
+        # Open the file and set it to the AnnotationTree
+        #filepath = 'Example.pickle'
+        #file = open(filepath, "rb")
+        #annotationtree_class.tree = pickle.load(file)
 
     def test_next_annotation_id(self):
         """Raise an assertion if the next id isn't correct.
@@ -57,12 +57,12 @@ class TestAnnotationTree:
         """
 
         # If the class variable value equal like this
-        annotationtree_class._next_annotation_id = 1
+        self.annotationtree._next_annotation_id = 1
 
         # The result expected should be
         expected_result = 2
 
-        assert(annotationtree_class._next_annotation_id == expected_result)
+        assert(self.annotationtree._next_annotation_id == expected_result)
 
     def test_next_annotation_id(self):
         """Raise an assertion if the id type isn't int.
@@ -77,9 +77,9 @@ class TestAnnotationTree:
         """
 
         # The result expected should be
-        expected_result = annotationtree_class._next_annotation_id
+        expected_result = self.annotationtree._next_annotation_id
 
-        assert(annotationtree_class._next_annotation_id == expected_result)
+        assert(self.annotationtree._next_annotation_id == expected_result)
 
     def test_elements(self):
         """Raise an assertion if can't retrieve any element.
@@ -97,9 +97,9 @@ class TestAnnotationTree:
         aux_element = 'utterance'
 
         # Append the element to see the results
-        annotationtree_class.append_element(aux_element,False)
+        self.annotationtree.append_element(aux_element,False)
 
-        for element in annotationtree_class.elements():
+        for element in self.annotationtree.elements():
             # The result expected should be
             expected_result = element
 
@@ -123,9 +123,9 @@ class TestAnnotationTree:
         # The result expected should be
         expected_result = False
 
-        assert(annotationtree_class.remove_element(id_element) == expected_result)
+        assert(self.annotationtree.remove_element(id_element) == expected_result)
 
-    def test_insert_element(self):
+    def test_append_element(self):
         """Raise an assertion if can't insert an element.
 
         Insert an element with a certain id.
@@ -146,14 +146,21 @@ class TestAnnotationTree:
                     {'id': 6, 'annotation': ''}]],
                 {'id': 7, 'annotation': ''},
                 {'id': 8, 'annotation': ''}]
-        id_element = 20
-        after = False
-        update_ids = False
 
-        # The result expected should be
-        expected_result = True
+        self.annotationtree.append_element(element)
 
-        assert(annotationtree_class.insert_element(element, id_element, after, update_ids) == expected_result)
+        assert(len(self.annotationtree.tree) == 1)
+
+    def test_range_for_word_in_utterance(self):
+        """
+
+        """
+
+        word = "an"
+        utterance ="This is an another example, and an annotation"
+        start_at_pos = 20
+        range = self.annotationtree._range_for_word_in_utterance(word, utterance, start_at_pos)
+        assert(range == (32,34))
 
     def __len__(self):
         """Raise an assertion if doesn't exist any tree.
@@ -167,7 +174,7 @@ class TestAnnotationTree:
 
         """
 
-        assert(annotationtree_class.__len__() > 0)
+        assert(self.annotationtree.__len__() == 0)
 
     def test_last_filter(self):
         """Raise an assertion if can't return the
@@ -182,11 +189,13 @@ class TestAnnotationTree:
 
         """
 
+        anntreefilter = annotationtree.AnnotationTreeFilter(self.data_structure_type)
+
         # The result expected should be
-        expected_result = anntreefilter_class.data_structure_type
+        expected_result = anntreefilter.data_structure_type
 
         # Comparing the result of the two instances
-        assert(annotationtree_class.last_filter().data_structure_type == expected_result)
+        assert(self.annotationtree.last_filter().data_structure_type == expected_result)
 
     def test_pop_filter(self):
         """Raise an assertion if can't remove filter.
@@ -200,15 +209,10 @@ class TestAnnotationTree:
 
         """
 
-        # Depending on the value of the filters
-
-        # Set some values to filters
-        #annotationtree_class.filters.append('text')
-
         # The result expected should be
         expected_result = None
 
-        assert(annotationtree_class.pop_filter() ==
+        assert(self.annotationtree.pop_filter() ==
                expected_result)
 
     def test__element_as_table(self):
@@ -223,14 +227,6 @@ class TestAnnotationTree:
             If the results there aren't the expected.
 
         """
-
-        # Force the Structure Type
-        annotationtree_class.structure_type_handler = data.DataStructureTypeGraid()
-
-        # Open the file and set it to the AnnotationTree
-        filepath = 'Example.pickle'
-        file = open(filepath, "rb")
-        annotationtree_class.tree = pickle.load(file)
 
         # If the variables value equal like this
         elements = [{'id': 6, 'annotation': 'gu\u0161-\u012bt:'},
@@ -261,7 +257,7 @@ class TestAnnotationTree:
         # The result expected should be
         expected_result = 0 # Return the numbers of inserted elements
 
-        assert(annotationtree_class._element_as_table(elements, data_hierarchy, table, column) == expected_result)
+        assert(self.annotationtree._element_as_table(elements, data_hierarchy, table, column) == expected_result)
 
 class TestAnnotationTreeFilter:
 
@@ -279,9 +275,9 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        filepath = 'Example.pickle'
-        file = open(filepath, "rb")
-        annotationtree_class.tree = pickle.load(file)
+        data_structure_type = data.DataStructureTypeGraid()
+        anntreefilter = annotationtree.AnnotationTreeFilter(data_structure_type)
+        anntreefilter.set_filter_for_type("graid2", "nc")
 
         # If the variables value equal like this
         element = [{'id': 6, 'annotation': 'gu\u0161-\u012bt:'},
@@ -296,42 +292,5 @@ class TestAnnotationTreeFilter:
         # The result expected should be
         expected_result = True # Boolean value
 
-        assert(anntreefilter_class.element_passes_filter(element)
-               == expected_result)
-
-    def test_passes_filter(self):
-        """Raise an assertion if can't pass the filter.
-
-        Verify if a specific element passes in through
-        a filter.
-
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
-
-        """
-
-        # Open the file and set it to the AnnotationTree
-        filepath = 'Example.pickle'
-        file = open(filepath, "rb")
-        annotationtree_class.tree = pickle.load(file)
-
-        # If the variables value equal like this
-        elements = [{'id': 6, 'annotation': 'gu\u0161-\u012bt:'},
-            [[{'id': 4, 'annotation': 'gu\u0161-\u012bt:'},
-                [[{'id': 1, 'annotation': 'gu\u0161-\u012bt:'},
-                        {'id': 2, 'annotation': 'say.PRS-3SG'},
-                        {'id': 3, 'annotation': ''}]],
-                    {'id': 5, 'annotation': 'nc'}]],
-                {'id': 7, 'annotation': 'They say:'},
-                {'id': 8, 'annotation': ''}]
-
-        passed = True
-        hirerarchy = data_class.data_hierarchy
-
-        # The result expected should be
-        expected_result = True # Boolean value
-
-        assert(anntreefilter_class._passes_filter(passed, elements, hirerarchy)
+        assert(anntreefilter.element_passes_filter(element)
                == expected_result)

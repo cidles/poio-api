@@ -30,7 +30,7 @@ class CreateRawFile:
     the txt file.
     """
 
-    def __init__(self, basename, annotation_tree, data_hierarchy):
+    def __init__(self, basedirname, annotation_tree, data_hierarchy):
         """Class's constructor.
 
         Parameters
@@ -40,7 +40,7 @@ class CreateRawFile:
 
         """
 
-        self.basename = basename
+        self.basedirname = basedirname
         self.annotation_tree = annotation_tree
         self.data_hierarchy = data_hierarchy
         self.filename = ''
@@ -59,10 +59,10 @@ class CreateRawFile:
 
         """
 
-        file = os.path.abspath(self.basename + '.txt')
+        file = self.basedirname + '.txt'
         f = codecs.open(file,'w', 'utf-8') # Need the encode
 
-        self.txt_file = os.path.basename(self.basename + '.txt')
+        self.txt_file = os.path.basename(self.basedirname + '.txt')
         self.filename = self.txt_file.split('.')
         self.filename = self.filename[0]
 
@@ -111,7 +111,7 @@ class CreateRawFile:
         last_counter = 0
 
         # Start XML file
-        file = os.path.abspath(self.basename + '-' + utt + '.xml')
+        file = self.basedirname + '-' + utt + '.xml'
         f = codecs.open(file,'w','utf-8')
 
         self.loc = os.path.basename(file)

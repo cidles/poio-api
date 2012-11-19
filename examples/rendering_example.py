@@ -15,7 +15,7 @@ from poioapi.io import graf
 
 # Pickle file path
 # The file should be generated first with the parser
-headerfile = 'Example-header.hdr'
+headerfile = 'D:/tests/balochi-header.hdr'
 
 # Create an annotation tree from the header file
 annotation_tree = graf.Render(headerfile).\

@@ -18,8 +18,9 @@ Wto read and write files.
 """
 
 from __future__ import unicode_literals
+import re
 from poioapi import data
-from poioapi.io import graf
+
 
 import pickle
 import regex
@@ -457,6 +458,18 @@ class AnnotationTree():
                     table[row][column] = (a, 1)
 
         return inserted
+
+    def _range_for_word_in_utterance(self, word, utterance, start_at_pos=0):
+        self.last_position = 0
+
+        s = re.compile("\\b{0}\\b".format(word))
+        m = s.search(utterance, start_at_pos)
+        if m:
+            self.last_position = m.end(0)
+            return (m.start(0), m.end(0))
+        else:
+            return None
+
 
 class AnnotationTreeFilter():
     """

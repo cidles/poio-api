@@ -16,7 +16,6 @@ the class DataStructureType in data.py.
 from poioapi import data
 
 # Initialize the DataStructureType class
-data_class = data.DataStructureType()
 
 class TestDataStructureType:
     """
@@ -24,6 +23,9 @@ class TestDataStructureType:
     class data.py.
 
     """
+
+    def setup(self):
+        self.data_structure_type = data.DataStructureType()
 
     def test_get_siblings_of_type(self):
         """Raise an assertion if there's no siblings to return.
@@ -43,8 +45,9 @@ class TestDataStructureType:
 
         # The result expected should be
         expected_result = ['utterance','translation']
+        print(self.data_structure_type.get_siblings_of_type(ann_type))
 
-        assert(data_class.get_siblings_of_type(ann_type) == expected_result)
+        assert(self.data_structure_type.get_siblings_of_type(ann_type) == expected_result)
 
     def test_get_parents_of_type(self):
         """Raise an assertion if there's no parents to return.
@@ -65,7 +68,7 @@ class TestDataStructureType:
         # The result expected should be
         expected_result = ['utterance', 'translation']
 
-        assert(data_class.get_parents_of_type(ann_type) == expected_result)
+        assert(self.data_structure_type.get_parents_of_type(ann_type) == expected_result)
 
     def test__get_parents_of_type_helper(self):
         """Raise an assertion if there's no elements to return.
@@ -91,7 +94,7 @@ class TestDataStructureType:
         # The result expected should be a {tuple}
         expected_result = (True, ['utterance', 'translation', 'comment'])
 
-        assert(data_class._get_parents_of_type_helper(ann_type, hierarchy) == expected_result)
+        assert(self.data_structure_type._get_parents_of_type_helper(ann_type, hierarchy) == expected_result)
 
     def test_empty_element(self):
         """Raise an assertion if there's no elements to return.
@@ -110,7 +113,7 @@ class TestDataStructureType:
                             [[{'id': None, 'annotation': ''}]],
                               {'id': None, 'annotation': ''}]
 
-        assert(data_class.empty_element() == expected_result)
+        assert(self.data_structure_type.empty_element() == expected_result)
 
     def test__append_list(self):
         """Raise an assertion if the elements list is invalid.
@@ -132,7 +135,7 @@ class TestDataStructureType:
                 {'id': None, 'annotation': ''},
                 {'id': None, 'annotation': ''}]
 
-        assert(data_class._append_list(element) == expected_result)
+        assert(self.data_structure_type._append_list(element) == expected_result)
 
     def test_test_flatten_hierarchy_elements(self):
         """Raise an assertion if the elements aren't correct.
@@ -162,4 +165,4 @@ class TestDataStructureType:
                            'translation',
                            'comment']
 
-        assert(data_class._flatten_hierarchy_elements(elements) == expected_result)
+        assert(self.data_structure_type._flatten_hierarchy_elements(elements) == expected_result)

@@ -16,7 +16,7 @@ from poioapi.io import graf
 import pickle
 
 # Pickle file path
-filepath = 'Example.pickle'
+filepath = 'D:/tests/pi.pickle'
 
 # Create the data structure
 data_hierarchy = data.DataStructureTypeGraid()
@@ -32,4 +32,4 @@ annotation_tree.tree = pickle.load(file)
 headerfile = 'Example-header.hdr'
 
 # Call the writer to GrAF
-graf.Writer(annotation_tree, headerfile).write()
+graf.Writer(annotation_tree, filepath).write()
