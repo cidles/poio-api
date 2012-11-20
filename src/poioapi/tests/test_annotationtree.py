@@ -151,7 +151,7 @@ class TestAnnotationTree:
 
         assert(len(self.annotationtree.tree) == 1)
 
-    def test_range_for_word_in_utterance(self):
+    def test_range_for_string_in_utterance(self):
         """
 
         """
@@ -159,8 +159,56 @@ class TestAnnotationTree:
         word = "an"
         utterance ="This is an another example, and an annotation"
         start_at_pos = 20
-        range = self.annotationtree._range_for_word_in_utterance(word, utterance, start_at_pos)
+        range = self.annotationtree._range_for_string_in_utterance(word, utterance, start_at_pos)
         assert(range == (32,34))
+
+    def test_update_elements_with_ranges(self):
+        search_tier = "utterance"
+        update_tiers = [ "clause unit", "word" ]
+        last_position = 0
+
+        utterance = "This is an another example, and an annotation"
+
+        element = [{'id': 1, 'annotation': utterance},
+            [[{'id': 2, 'annotation': 'This is an another example'},
+                [[{'id': 3, 'annotation': 'this'},
+                        {'id': 4, 'annotation': 'this'},
+                        {'id': 5, 'annotation': 'this'}],
+                    [{'id': 3, 'annotation': ''},
+                        {'id': 4, 'annotation': ''},
+                        {'id': 5, 'annotation': ''}]],
+                    {'id': 6, 'annotation': 'nc1'}],
+                [{'id': 7, 'annotation': 'and an annotation'},
+                    [[{'id': 8, 'annotation': 'an'},
+                            {'id': 9, 'annotation': ''},
+                            {'id': 10, 'annotation': ''}]],
+                        {'id': 11, 'annotation': ''}]],
+                {'id': 12, 'annotation': ''},
+                {'id': 13, 'annotation': ''}]
+
+        expected_element = [{'id': 1, 'annotation': utterance},
+            [[{'id': 2, 'annotation': 'This is an another example', 'region':(0,26)},
+                [[{'id': 3, 'annotation': 'this', 'region':(0,4)},
+                        {'id': 4, 'annotation': 'this'},
+                        {'id': 5, 'annotation': 'this'}],
+                 [{'id': 3, 'annotation': ''},
+                      {'id': 4, 'annotation': ''},
+                      {'id': 5, 'annotation': ''}]],
+                    {'id': 6, 'annotation': 'nc1'}],
+                [{'id': 7, 'annotation': 'and an annotation', 'region':(28,45)},
+                    [[{'id': 8, 'annotation': 'an', 'region':(32,34)},
+                            {'id': 9, 'annotation': ''},
+                            {'id': 10, 'annotation': ''}]],
+                        {'id': 11, 'annotation': ''}]],
+                {'id': 12, 'annotation': ''},
+                {'id': 13, 'annotation': ''}]
+
+        self.annotationtree.append_element(element)
+        self.annotationtree.update_elements_with_ranges(search_tier, update_tiers)
+        result_element = self.annotationtree.tree[0]
+
+        assert(result_element == expected_element)
+
 
     def __len__(self):
         """Raise an assertion if doesn't exist any tree.
