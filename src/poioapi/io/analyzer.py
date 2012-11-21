@@ -6,9 +6,12 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-""" This document contain the methods to 
-parse all the files that were generated with 
-the GrAF ISO format.
+""" This module is to create the raw txt
+file form the pickle file to an Annotation
+Tree file.
+
+Note: That the Annotation Tree file is a pickle
+that works in Poio GUI.
 """
 import codecs
 
@@ -108,7 +111,7 @@ class XmlHandler(ContentHandler):
     def get_tokens_map(self):
         return self.tokens_map
 
-class ProcessContent:
+class XmlContentHandler:
     """
     Class that handles the XML files.
 
