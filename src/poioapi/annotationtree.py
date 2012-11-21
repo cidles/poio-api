@@ -18,12 +18,16 @@ Wto read and write files.
 """
 
 from __future__ import unicode_literals
+import re
 from poioapi import data
-from poioapi.io import graf
+
 
 import pickle
 import regex
 import operator
+
+class RegionNotFoundInString(Exception):
+    """Base class for region update method exception."""
 
 class AnnotationTree():
     """
@@ -457,6 +461,47 @@ class AnnotationTree():
                     table[row][column] = (a, 1)
 
         return inserted
+
+    def _range_for_string_in_utterance(self, string, utterance, start_at_pos=0):
+        self.last_position = 0
+
+        s = re.compile("\\b{0}\\b".format(string), re.I)
+        m = s.search(utterance, start_at_pos)
+        if m:
+            self.last_position = m.end(0)
+            return (m.start(0), m.end(0))
+        else:
+            return None
+
+    def update_elements_with_ranges(self, search_tier, update_tiers):
+        start_pos = dict()
+        for tier in update_tiers:
+            start_pos[tier] = 0
+        for element in self.tree:
+            self._update_with_ranges(element, self.data_structure_type.data_hierarchy, search_tier, update_tiers, start_pos, "")
+        print(self.tree)
+
+    def _update_with_ranges(self, elements, hierarchy, search_tier, update_tiers, start_pos, string_to_search):
+        for i, t in enumerate(hierarchy):
+            if type(t) is list:
+                elements_list = elements[i]
+                for i, e in enumerate(elements_list):
+                   self._update_with_ranges(
+                        e, t, search_tier, update_tiers, start_pos, string_to_search)
+            else:
+                if t == search_tier:
+                    string_to_search = elements[i]['annotation']
+                elif t in update_tiers:
+                    if elements[i]['annotation'] != "":
+                        region = self._range_for_string_in_utterance(elements[i]['annotation'], string_to_search, start_pos[t])
+                        if not region:
+                            raise RegionNotFoundInString("String '{0}' not found in '{1}'.".format(elements[i]['annotation'], string_to_search))
+                        for t in start_pos:
+                            if region[0] > start_pos[t]:
+                                start_pos[t] = region[0]
+                        elements[i]['region'] = region
+                        start_pos[t] = region[1]
+
 
 class AnnotationTreeFilter():
     """

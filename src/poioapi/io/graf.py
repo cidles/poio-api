@@ -5,19 +5,21 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-""" This document contain the responsible 
+""" This document contain the responsible
 methods to generate and parse the GrAF files.
 """
 
-from xml.sax._exceptions import SAXParseException
+import os
+import pickle
+import codecs
+
 from xml.dom.minidom import Document
 from xml.dom import minidom
-from analyzer import ProcessContent
-from poioapi.io import txtrawfile
-from poioapi.io import header
 
-import codecs
-import os
+from poioapi import annotationtree
+from poioapi import data
+from poioapi.io import header
+from poioapi.io.analyzer import XmlContentHandler
 
 class Writer():
 
@@ -32,36 +34,63 @@ class Writer():
         """
 
         self.filepath = header_file
-        basedirname = self.filepath.split('.')
-        self.basedirname = basedirname[0]
-        self.header = header.CreateHeaderFile(self.filepath)
+        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
+
+        # Create the header file
+        self.header = header.CreateHeaderFile(self.basedirname)
+
         self.level_map = []
         self.annotation_tree = annotation_tree
+        self.xml_files_list = []
+        self.xml_files_content = {}
 
     def write(self):
 
         self.data_structure_type = self.annotation_tree.data_structure_type
 
-        txt =  txtrawfile.CreateRawFile(self.basedirname,
-            self.annotation_tree, self.data_structure_type.data_hierarchy)
-        txt.create_raw_file()
+        # Creates the raw file
+        self.create_raw_file()
 
+        # Mandatory to give an author to the file
         self.header.author = 'CIDLeS'
-        self.header.filename = txt.filename
-        self.header.primaryfile = txt.txt_file
-
-        # Create the first annotation file
-        self.header.add_annotation(txt.loc, txt.fid)
+        self.header.filename = os.path.basename(self.basedirname)
+        self.header.primaryfile = os.path.basename(self.basedirname)+".txt"
 
         # Map the elements in the data structure type
         self.seek_tags(self.data_structure_type.data_hierarchy, 0)
 
+        # Map that will contain the xml contexts
+        self.xml_files_content = dict((hierarchy[1],None)
+            for hierarchy in self.level_map)
+
+        self.last_region_value = 0
+        previous_region_value = 0
+
         # Verify the elements
-        for element in self.annotation_tree.elements():
+        for index, element in enumerate(self.annotation_tree.elements()):
+            if index > 0:
+                self.last_region_value += previous_region_value
+                previous_region_value = len(element[0].get('annotation'))
+            else:
+                previous_region_value = len(element[0].get('annotation'))
+
             self.seek_elements(element,
                 self.data_structure_type.data_hierarchy, 0)
 
+        # Close the header file
         self.header.create_header()
+
+        # Creates the result XML docs for each element in the data
+        # structure hierarchy
+        for path in self.xml_files_list:
+            file_to_find = os.path.basename(path)
+            new_file = file_to_find.split('.')
+            new_file = new_file[0].split('-')
+            with open(path, 'w') as f:
+                for value in self.xml_files_content.items():
+                    if value[0]==new_file[1]:
+                        f.write(value[1].toprettyxml('  '))
+                f.close()
 
     def seek_tags(self, hierarchy, level):
         level+=1
@@ -118,15 +147,19 @@ class Writer():
                                         increment = item[2] - 1
                                         break
                             else:
-                                hierarchy_element =\
+                                hierarchy_element = \
                                 self.level_map[index_map-1]
                                 depends_on = hierarchy_element[1]
                                 increment = hierarchy_element[2] - 1
                                 need_increment = True
                         index_map+=1
 
-                self.add_element(label,
-                    element.get('annotation'), depends_on, increment)
+                if element.get('region') is None:
+                    self.add_element(label,
+                        element.get('annotation'), None, depends_on, increment)
+                else:
+                    self.add_element(label,
+                        element.get('annotation'), element.get('region'), depends_on, increment)
 
                 # Increment the dependency
                 if need_increment:
@@ -141,17 +174,13 @@ class Writer():
 
                 index+=1
 
-    def add_element(self, annotation, annotation_value, depends,
+    def add_element(self, annotation, annotation_value, region, depends,
                     increment):
 
         # See if the file exist
         # First see if the header is created and then do the rest
         # If the depends is '' nothing don't create the depends
         # Need a way to keep the track about the id
-
-        first_element = self.level_map[0]
-        if annotation==first_element[1]:
-            return
 
         for item in self.level_map:
             if annotation==item[1]:
@@ -161,12 +190,11 @@ class Writer():
         filepath = self.basedirname + '-' + annotation + '.xml'
         new_file = False
 
-        try:
-            with open(filepath) as f:
-                doc = minidom.parse(filepath)
-        except IOError as e:
-            f = codecs.open(filepath,'w','utf-8')
+        if self.xml_files_content[annotation] == None:
             new_file = True
+            self.xml_files_list.append(filepath)
+        else:
+            doc = self.xml_files_content[annotation]
 
         if new_file:
             if level > 1 or (annotation == 'translation'
@@ -180,33 +208,16 @@ class Writer():
 
         graph = doc.getElementsByTagName('graph').item(0)
 
-        if level > 2 and annotation != 'word'\
-        or (annotation == 'translation' or annotation == 'comment' or annotation == 'graid2'):
+        if level > 2 and annotation != 'word' \
+        or (annotation == 'translation' or annotation == 'comment'
+            or annotation == 'graid2'):
             doc = self.create_dependent_node(doc, graph,
                 annotation, annotation_value, depends, increment)
         else:
             doc = self.create_node_region(doc, graph, depends, annotation,
-                annotation_value, increment, filepath)
+                annotation_value, region, increment)
 
-        # Indent the xml file
-        raw_string = str(doc.toxml()).replace('\n','')
-        raw_string = raw_string.replace('>      <','><')
-        raw_string = raw_string.replace('>    <','><')
-        raw_string = raw_string.replace('>  <','><')
-        indent = minidom.parseString(raw_string)
-
-        if new_file:
-            # Write the content in XML file
-            f.write(indent.toprettyxml('  '))
-
-            #Close XML file
-            f.close()
-        else:
-            file = codecs.open(filepath,'w', 'utf-8')
-
-            file.write(indent.toprettyxml('  '))
-
-            file.close()
+        self.xml_files_content[annotation] = doc
 
     def create_dependent_node(self, doc, graph, annotation,
                               annotation_value, depends, depends_n):
@@ -235,23 +246,7 @@ class Writer():
 
         return doc
 
-    def create_node_region(self, doc, graph, depends, annotation, annotation_value, increment, filepath):
-
-        try:
-            procContent = ProcessContent(filepath)
-            procContent.process()
-            ranges = procContent.get_tokenizer()
-
-            index = len(ranges) - 1
-            range = ranges[index]
-
-            last_counter = int(range[1])
-        except SAXParseException as sax_error:
-            last_counter = 0
-
-        counter = last_counter
-
-        last_counter += len(annotation_value)
+    def create_node_region(self, doc, graph, depends, annotation, annotation_value, region, increment):
 
         seg_count = len(doc.getElementsByTagName('region'))
 
@@ -259,6 +254,9 @@ class Writer():
         node = doc.createElement("node")
         node.setAttribute("xml:id", annotation + "-n"
         + str(seg_count)) # Node number
+
+        if depends=='':
+            increment+=1
 
         # Creating the link node
         link = doc.createElement("link")
@@ -268,48 +266,60 @@ class Writer():
 
         graph.appendChild(node)
 
-        # Creating the edge node
-        edge = doc.createElement("edge")
-        edge.setAttribute("xml:id", annotation + "-e"
-        + str(seg_count)) # edge id
-        edge.setAttribute("from", depends + "-n"
-        + str(increment)) # from node
-        edge.setAttribute("to", annotation + "-n"
-        + str(seg_count)) # to node
+        if depends != '':
+            # Creating the edge node
+            edge = doc.createElement("edge")
+            edge.setAttribute("xml:id", annotation + "-e"
+            + str(seg_count)) # edge id
+            edge.setAttribute("from", depends + "-n"
+            + str(increment)) # from node
+            edge.setAttribute("to", annotation + "-n"
+            + str(seg_count)) # to node
 
-        graph.appendChild(edge)
+            graph.appendChild(edge)
+
+        if depends != '':
+            begin = int(region[0]) + self.last_region_value
+            end = int(region[1]) + self.last_region_value
+        else:
+            if self.last_region_value is 0:
+                begin = self.last_region_value
+            else:
+                begin = self.last_region_value + 1
+            end = begin + len(annotation_value) - 1
 
         region = doc.createElement("region")
         region.setAttribute("xml:id", annotation + "-r"
         + str(seg_count)) # Region
         region.setAttribute("anchors",
-            str(counter) + " " +
-            str(last_counter)) # Anchors
+            str(begin) + " " +
+            str(end)) # Anchors
 
         graph.appendChild(region)
 
-        id_counter = len(doc.getElementsByTagName('a'))
+        if depends != '':
+            id_counter = len(doc.getElementsByTagName('a'))
 
-        # Creating the features and the linkage
-        a = doc.createElement("a")
-        a.setAttribute("xml:id", annotation + "-a"
-        + str(id_counter)) # id
-        a.setAttribute("label", annotation) # label
-        a.setAttribute("ref", annotation + "-n"
-        + str(seg_count)) # ref
-        a.setAttribute("as", annotation) # as
+            # Creating the features and the linkage
+            a = doc.createElement("a")
+            a.setAttribute("xml:id", annotation + "-a"
+            + str(id_counter)) # id
+            a.setAttribute("label", annotation) # label
+            a.setAttribute("ref", annotation + "-n"
+            + str(seg_count)) # ref
+            a.setAttribute("as", annotation) # as
 
-        # Feature structure
-        feature_st = doc.createElement("fs")
-        feature = doc.createElement("f")
-        feature.setAttribute("name",'string')
-        value = doc.createTextNode(annotation_value) # Value
-        feature.appendChild(value)
-        feature_st.appendChild(feature)
+            # Feature structure
+            feature_st = doc.createElement("fs")
+            feature = doc.createElement("f")
+            feature.setAttribute("name",'string')
+            value = doc.createTextNode(annotation_value) # Value
+            feature.appendChild(value)
+            feature_st.appendChild(feature)
 
-        a.appendChild(feature_st)
+            a.appendChild(feature_st)
 
-        graph.appendChild(a)
+            graph.appendChild(a)
 
         return doc
 
@@ -326,7 +336,7 @@ class Writer():
         graphheader.appendChild(labelsdecl)
         graph.appendChild(graphheader)
 
-        if depends!='':
+        if depends != '':
             dependencies = doc.createElement('dependencies')
             dependson = doc.createElement('dependsOn')
             dependson.setAttribute('f.id',depends)
@@ -341,9 +351,35 @@ class Writer():
 
         return doc
 
-class Render():
+    def create_raw_file(self):
+        """Creates an txt file with the data in the
+        Annotation Tree file. Passing only the sentences.
 
-    def __init__(self, filepath):
+        See Also
+        --------
+        create_raw_xml : Function the converts the data
+        to an xml only with the regions.
+
+        """
+
+        file = os.path.abspath(self.basedirname + '.txt')
+        f = codecs.open(file,'w', 'utf-8') # Need the encode
+
+        # Verify the elements
+        for element in self.annotation_tree.elements():
+
+            # Get the utterance
+            utterance = element[0]
+
+            # Write the content to the txt file
+            f.write(utterance.get('annotation') + '\n')
+
+        # Close txt file
+        f.close()
+
+class Parser():
+
+    def __init__(self, header_file):
         """Class's constructor.
 
         Parameters
@@ -353,10 +389,24 @@ class Render():
 
         """
 
-        self.filepath = filepath
-        basename = self.filepath.split('-header')
-        self.basedirname = basename[0]
-        self.basedir = os.path.dirname(self.filepath)
+        self.filepath = header_file
+        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
+        self.dirname = os.path.dirname(self.filepath)
+
+    def load_as_graf(self):
+
+        """
+        gparser = GraphParser()
+
+        file_stream = codecs.open(file, "r", "utf-8")
+
+        graph = gparser.parse(file_stream)
+
+        return graph
+
+        """
+
+        pass
 
     def load_as_tree(self, data_hierarchy):
 
@@ -371,7 +421,7 @@ class Render():
         getAttribute('loc')
 
         # Get all the lines from the primary file
-        txtfile = codecs.open(self.basedir+"/"+primary_file,'r')
+        txtfile = codecs.open(self.dirname+"/"+primary_file,'r')
         self.txtlines = txtfile.readlines()
         txtfile.close()
 
@@ -388,7 +438,7 @@ class Render():
         features_list = []
 
         for file in files_list:
-            content = ProcessContent(self.basedir+'/'+file[1])
+            content = XmlContentHandler(self.dirname+'/'+file[1])
             content.process()
 
             features_map = content.get_features_map()
@@ -512,7 +562,7 @@ class Render():
 
         graph = doc.getElementsByTagName('graph').item(0)
         for ann in annotation_list:
-            doc_parsed = minidom.parse(self.basedir+'/'+ann[1])
+            doc_parsed = minidom.parse(self.dirname+'/'+ann[1])
 
             doc = self._update_label_usage(doc, graph, ann[0])
 
