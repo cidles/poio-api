@@ -86,7 +86,7 @@ class Writer():
             file_to_find = os.path.basename(path)
             new_file = file_to_find.split('.')
             new_file = new_file[0].split('-')
-            with open(path, 'w') as f:
+            with codecs.open(path, 'w', 'utf-8') as f:
                 for value in self.xml_files_content.items():
                     if value[0]==new_file[1]:
                         f.write(value[1].toprettyxml('  '))
@@ -421,7 +421,7 @@ class Parser():
         getAttribute('loc')
 
         # Get all the lines from the primary file
-        txtfile = codecs.open(self.dirname+"/"+primary_file,'r')
+        txtfile = codecs.open(self.dirname+"/"+primary_file,'r', 'utf-8')
         self.txtlines = txtfile.readlines()
         txtfile.close()
 

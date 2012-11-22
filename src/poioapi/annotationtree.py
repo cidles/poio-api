@@ -18,7 +18,8 @@ Wto read and write files.
 """
 
 from __future__ import unicode_literals
-import re
+import codecs
+import regex as re
 from poioapi import data
 
 
@@ -121,7 +122,7 @@ class AnnotationTree():
 
         """
 
-        file = open(filepath, "rb")
+        file = open(filepath, 'rb')
         self.tree = pickle.load(file)
         file.close()
 
@@ -465,8 +466,22 @@ class AnnotationTree():
     def _range_for_string_in_utterance(self, string, utterance, start_at_pos=0):
         self.last_position = 0
 
-        s = re.compile("\\b{0}\\b".format(string), re.I)
+        start_string = ""
+        end_string = ""
+        nonword_at_start = re.match("\W+", string)
+        if nonword_at_start:
+            start_string = nonword_at_start.group(0)
+            string = string[nonword_at_start.end(0):]
+
+        nonword_at_end = re.search("\W+$", string)
+        if nonword_at_end:
+            end_string = nonword_at_end.group(0)
+            string = string[:nonword_at_end.start(0)]
+
+        s = re.compile("{0}\\b{1}\\b{2}".format(re.escape(start_string), re.escape(string), re.escape(end_string)), re.I)
+        #s = re.compile("\\b{0}\\b".format(string), re.I)
         m = s.search(utterance, start_at_pos)
+
         if m:
             self.last_position = m.end(0)
             return (m.start(0), m.end(0))
@@ -475,9 +490,9 @@ class AnnotationTree():
 
     def update_elements_with_ranges(self, search_tier, update_tiers):
         start_pos = dict()
-        for tier in update_tiers:
-            start_pos[tier] = 0
         for element in self.tree:
+            for tier in update_tiers:
+                start_pos[tier] = 0
             self._update_with_ranges(element, self.data_structure_type.data_hierarchy, search_tier, update_tiers, start_pos, "")
         print(self.tree)
 
