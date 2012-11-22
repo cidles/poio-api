@@ -366,10 +366,6 @@ Graid.
 from poioapi import data
 from poioapi import annotationtree
 
-import pickle
-from nose import with_setup
-
-
 class TestAnnotationTree:
     """
     This class contain the test methods to the
@@ -497,20 +493,40 @@ class TestAnnotationTree:
         assert(len(self.annotationtree.tree) == 1)
 
     def test_range_for_string_in_utterance(self):
-        """
+        """Raise an assertion if the ranges doesn't match.
+
+        Return the region of the word in the string.
+
+        Raises
+        ------
+        AssertionError
+            If the results there aren't the expected.
 
         """
 
         word = "an"
         utterance ="This is an another example, and an annotation"
+
         start_at_pos = 20
+
         range = self.annotationtree._range_for_string_in_utterance(word, utterance, start_at_pos)
+
         assert(range == (32,34))
 
     def test_update_elements_with_ranges(self):
+        """Raise an assertion if the ranges doesn't match.
+
+        Return the regions of the elements.
+
+        Raises
+        ------
+        AssertionError
+            If the results there aren't the expected.
+
+        """
+
         search_tier = "utterance"
         update_tiers = [ "clause unit", "word" ]
-        last_position = 0
 
         utterance = "This is an another example, and an annotation"
 
@@ -550,10 +566,10 @@ class TestAnnotationTree:
 
         self.annotationtree.append_element(element)
         self.annotationtree.update_elements_with_ranges(search_tier, update_tiers)
+
         result_element = self.annotationtree.tree[0]
 
         assert(result_element == expected_element)
-
 
     def __len__(self):
         """Raise an assertion if doesn't exist any tree.

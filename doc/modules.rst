@@ -7,6 +7,9 @@ PoioAPI Modules
 
    data
    annotationtree
+   graf
+   analyzer
+   header
 
 Indices and tables
 ==================

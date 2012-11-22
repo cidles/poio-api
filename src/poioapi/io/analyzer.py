@@ -15,6 +15,9 @@ that works in Poio GUI.
 """
 import codecs
 
+import sys
+import codecs
+
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 
@@ -135,7 +138,7 @@ class XmlContentHandler:
         self.tokens_map = []
         self.metafile = metafile
 
-    def process(self):
+    def parse(self):
         """Return the tokens of the regions parsed
         by the class XmlHandler.
 
@@ -144,7 +147,16 @@ class XmlContentHandler:
         parser = make_parser()
         curHandler = XmlHandler()
         parser.setContentHandler(curHandler)
+<<<<<<< HEAD
         f = codecs.open(self.metafile, "r", "utf-8")
+=======
+
+        if sys.version_info[:2] > (3, 0):
+            f = codecs.open(self.metafile, 'r', 'utf-8')
+        else:
+            f = open(self.metafile, 'r')
+
+>>>>>>> develop
         parser.parse(f)
         f.close()
         self.tokenizer = curHandler.get_tokenizer()

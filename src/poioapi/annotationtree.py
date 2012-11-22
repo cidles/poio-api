@@ -703,13 +703,15 @@ Wto read and write files.
 """
 
 from __future__ import unicode_literals
-import re
-from poioapi import data
 
 
+import regex as re
 import pickle
 import regex
 import operator
+
+from poioapi import data
+from poioapi.io import graf
 
 class RegionNotFoundInString(Exception):
     """Base class for region update method exception."""
@@ -806,13 +808,12 @@ class AnnotationTree():
 
         """
 
-        file = open(filepath, "rb")
+        file = open(filepath, 'rb')
         self.tree = pickle.load(file)
         file.close()
 
     def save_tree_as_graf(self, filepath):
-        """Save the project into the GrAF
-        specifications.
+        """Save the project as GrAF.
 
         Parameters
         ----------
@@ -821,7 +822,7 @@ class AnnotationTree():
 
         """
 
-        graf.Parser(filepath).parsing(self.data_structure_type, self.tree)
+        graf.Writer(self.tree, filepath).write()
 
     def append_element(self, element, update_ids = False):
         """Append an element to the annotation tree.
@@ -1114,7 +1115,7 @@ class AnnotationTree():
 
         Returns
         -------
-        inserted = int
+        inserted : int
             Number of elements inserted.
 
         """
@@ -1148,10 +1149,41 @@ class AnnotationTree():
         return inserted
 
     def _range_for_string_in_utterance(self, string, utterance, start_at_pos=0):
-        self.last_position = 0
+        """Calculates the regions of the string to
+        search in the main string.
 
-        s = re.compile("\\b{0}\\b".format(string), re.I)
+        Parameters
+        ----------
+        string : str
+            String to search.
+        utterance : str
+            Main string to make the search on it.
+        start_pos : int
+            Gives the start position to search the regions.
+
+        Returns
+        -------
+        return : tuple
+            Return a tuple with the regions.
+
+        """
+
+        start_string = ""
+        end_string = ""
+        nonword_at_start = re.match("\W+", string)
+        if nonword_at_start:
+            start_string = nonword_at_start.group(0)
+            string = string[nonword_at_start.end(0):]
+
+        nonword_at_end = re.search("\W+$", string)
+        if nonword_at_end:
+            end_string = nonword_at_end.group(0)
+            string = string[:nonword_at_end.start(0)]
+
+        s = re.compile("{0}\\b{1}\\b{2}".format(re.escape(start_string),
+            re.escape(string), re.escape(end_string)), re.I)
         m = s.search(utterance, start_at_pos)
+
         if m:
             self.last_position = m.end(0)
             return (m.start(0), m.end(0))
@@ -1159,28 +1191,69 @@ class AnnotationTree():
             return None
 
     def update_elements_with_ranges(self, search_tier, update_tiers):
-        start_pos = dict()
-        for tier in update_tiers:
-            start_pos[tier] = 0
-        for element in self.tree:
-            self._update_with_ranges(element, self.data_structure_type.data_hierarchy, search_tier, update_tiers, start_pos, "")
-        print(self.tree)
+        """Updated the already existing elements in
+        the Annotation Tree with regions. The regions
+        are the positions values of the words in the
+        raw text.
 
-    def _update_with_ranges(self, elements, hierarchy, search_tier, update_tiers, start_pos, string_to_search):
+        Parameters
+        ----------
+        search_tier : str
+            The name of the first element in the hierarchy.
+        update_tiers : array_like
+            An array with the elements that search will focus.
+
+        """
+
+        start_pos = dict()
+        for element in self.tree:
+            for tier in update_tiers:
+                start_pos[tier] = 0
+            self._update_with_ranges(element, self.data_structure_type
+            .data_hierarchy, search_tier, update_tiers, start_pos, "")
+
+    def _update_with_ranges(self, elements, hierarchy, search_tier,
+                            update_tiers, start_pos, string_to_search):
+        """Run through all the values in one
+        element of the Annotation Tree to
+        update the regions.
+
+        Parameters
+        ----------
+        elements : array_like
+            An array with the elements.
+        hierarchy: array_like
+            An array with the data structure hierarchy.
+        search_tier : str
+            The name of the first element in the hierarchy.
+        update_tiers : array_like
+            An array with the elements that search will focus.
+        start_pos : int
+            Gives the start position to search the regions.
+        string_to_search : str
+            String to search.
+
+        """
+
         for i, t in enumerate(hierarchy):
             if type(t) is list:
                 elements_list = elements[i]
                 for i, e in enumerate(elements_list):
                    self._update_with_ranges(
-                        e, t, search_tier, update_tiers, start_pos, string_to_search)
+                        e, t, search_tier, update_tiers, start_pos,
+                       string_to_search)
             else:
                 if t == search_tier:
                     string_to_search = elements[i]['annotation']
                 elif t in update_tiers:
                     if elements[i]['annotation'] != "":
-                        region = self._range_for_string_in_utterance(elements[i]['annotation'], string_to_search, start_pos[t])
+                        region = self._range_for_string_in_utterance(
+                            elements[i]['annotation'], string_to_search,
+                            start_pos[t])
                         if not region:
-                            raise RegionNotFoundInString("String '{0}' not found in '{1}'.".format(elements[i]['annotation'], string_to_search))
+                            raise RegionNotFoundInString(
+                                "String '{0}' not found in '{1}'.".format(
+                                    elements[i]['annotation'], string_to_search))
                         for t in start_pos:
                             if region[0] > start_pos[t]:
                                 start_pos[t] = region[0]
@@ -1300,9 +1373,6 @@ class AnnotationTreeFilter():
         if all_filter_empty:
             return True
 
-        #if self.filter["utterance"] == "" and self.filter["translation"] == "" and self.filter["word"] == "" and self.filter["morpheme"] == "" and self.filter["gloss"] == "":
-        #    return True
-
         if self.boolean_operation == self.AND:
             passed = True
         else:
@@ -1364,6 +1434,10 @@ class AnnotationTreeFilter():
                 else:
                     passed = (passed or passes)
 
+<<<<<<< HEAD
         return passed
 
+>>>>>>> develop
+=======
+        return passed
 >>>>>>> develop
