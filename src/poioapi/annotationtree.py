@@ -18,14 +18,15 @@ Wto read and write files.
 """
 
 from __future__ import unicode_literals
-import codecs
+
+
 import regex as re
-from poioapi import data
-
-
 import pickle
 import regex
 import operator
+
+from poioapi import data
+from poioapi.io import graf
 
 class RegionNotFoundInString(Exception):
     """Base class for region update method exception."""
@@ -127,8 +128,7 @@ class AnnotationTree():
         file.close()
 
     def save_tree_as_graf(self, filepath):
-        """Save the project into the GrAF
-        specifications.
+        """Save the project as GrAF.
 
         Parameters
         ----------
@@ -137,7 +137,7 @@ class AnnotationTree():
 
         """
 
-        graf.Parser(filepath).parsing(self.data_structure_type, self.tree)
+        graf.Writer(self.tree, filepath).write()
 
     def append_element(self, element, update_ids = False):
         """Append an element to the annotation tree.
@@ -430,7 +430,7 @@ class AnnotationTree():
 
         Returns
         -------
-        inserted = int
+        inserted : int
             Number of elements inserted.
 
         """
@@ -478,8 +478,8 @@ class AnnotationTree():
             end_string = nonword_at_end.group(0)
             string = string[:nonword_at_end.start(0)]
 
-        s = re.compile("{0}\\b{1}\\b{2}".format(re.escape(start_string), re.escape(string), re.escape(end_string)), re.I)
-        #s = re.compile("\\b{0}\\b".format(string), re.I)
+        s = re.compile("{0}\\b{1}\\b{2}".format(re.escape(start_string),
+            re.escape(string), re.escape(end_string)), re.I)
         m = s.search(utterance, start_at_pos)
 
         if m:
@@ -493,24 +493,30 @@ class AnnotationTree():
         for element in self.tree:
             for tier in update_tiers:
                 start_pos[tier] = 0
-            self._update_with_ranges(element, self.data_structure_type.data_hierarchy, search_tier, update_tiers, start_pos, "")
-        print(self.tree)
+            self._update_with_ranges(element, self.data_structure_type
+            .data_hierarchy, search_tier, update_tiers, start_pos, "")
 
-    def _update_with_ranges(self, elements, hierarchy, search_tier, update_tiers, start_pos, string_to_search):
+    def _update_with_ranges(self, elements, hierarchy, search_tier,
+                            update_tiers, start_pos, string_to_search):
         for i, t in enumerate(hierarchy):
             if type(t) is list:
                 elements_list = elements[i]
                 for i, e in enumerate(elements_list):
                    self._update_with_ranges(
-                        e, t, search_tier, update_tiers, start_pos, string_to_search)
+                        e, t, search_tier, update_tiers, start_pos,
+                       string_to_search)
             else:
                 if t == search_tier:
                     string_to_search = elements[i]['annotation']
                 elif t in update_tiers:
                     if elements[i]['annotation'] != "":
-                        region = self._range_for_string_in_utterance(elements[i]['annotation'], string_to_search, start_pos[t])
+                        region = self._range_for_string_in_utterance(
+                            elements[i]['annotation'], string_to_search,
+                            start_pos[t])
                         if not region:
-                            raise RegionNotFoundInString("String '{0}' not found in '{1}'.".format(elements[i]['annotation'], string_to_search))
+                            raise RegionNotFoundInString(
+                                "String '{0}' not found in '{1}'.".format(
+                                    elements[i]['annotation'], string_to_search))
                         for t in start_pos:
                             if region[0] > start_pos[t]:
                                 start_pos[t] = region[0]
@@ -630,9 +636,6 @@ class AnnotationTreeFilter():
         if all_filter_empty:
             return True
 
-        #if self.filter["utterance"] == "" and self.filter["translation"] == "" and self.filter["word"] == "" and self.filter["morpheme"] == "" and self.filter["gloss"] == "":
-        #    return True
-
         if self.boolean_operation == self.AND:
             passed = True
         else:
@@ -695,4 +698,3 @@ class AnnotationTreeFilter():
                     passed = (passed or passes)
 
         return passed
-

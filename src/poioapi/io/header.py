@@ -12,18 +12,17 @@ each raw file with the respective elements of a
 data hierarchy.
 """
 
-from xml.dom.minidom import Document
-
-import os
 import codecs
 import datetime
 import random
+
+from xml.dom.minidom import Document
 
 class CreateHeaderFile:
     """
     Class responsible to create the header file
     that will contain the other resource files
-    to the parsing process.
+    to the parsing parse.
 
     The header is created with ISO GrAF standards.
 
