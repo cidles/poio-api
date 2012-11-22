@@ -464,7 +464,24 @@ class AnnotationTree():
         return inserted
 
     def _range_for_string_in_utterance(self, string, utterance, start_at_pos=0):
-        self.last_position = 0
+        """Calculates the regions of the string to
+        search in the main string.
+
+        Parameters
+        ----------
+        string : str
+            String to search.
+        utterance : str
+            Main string to make the search on it.
+        start_pos : int
+            Gives the start position to search the regions.
+
+        Returns
+        -------
+        return : tuple
+            Return a tuple with the regions.
+
+        """
 
         start_string = ""
         end_string = ""
@@ -489,6 +506,20 @@ class AnnotationTree():
             return None
 
     def update_elements_with_ranges(self, search_tier, update_tiers):
+        """Updated the already existing elements in
+        the Annotation Tree with regions. The regions
+        are the positions values of the words in the
+        raw text.
+
+        Parameters
+        ----------
+        search_tier : str
+            The name of the first element in the hierarchy.
+        update_tiers : array_like
+            An array with the elements that search will focus.
+
+        """
+
         start_pos = dict()
         for element in self.tree:
             for tier in update_tiers:
@@ -498,6 +529,27 @@ class AnnotationTree():
 
     def _update_with_ranges(self, elements, hierarchy, search_tier,
                             update_tiers, start_pos, string_to_search):
+        """Run through all the values in one
+        element of the Annotation Tree to
+        update the regions.
+
+        Parameters
+        ----------
+        elements : array_like
+            An array with the elements.
+        hierarchy: array_like
+            An array with the data structure hierarchy.
+        search_tier : str
+            The name of the first element in the hierarchy.
+        update_tiers : array_like
+            An array with the elements that search will focus.
+        start_pos : int
+            Gives the start position to search the regions.
+        string_to_search : str
+            String to search.
+
+        """
+
         for i, t in enumerate(hierarchy):
             if type(t) is list:
                 elements_list = elements[i]

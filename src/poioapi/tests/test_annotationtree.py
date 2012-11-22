@@ -148,7 +148,14 @@ class TestAnnotationTree:
         assert(len(self.annotationtree.tree) == 1)
 
     def test_range_for_string_in_utterance(self):
-        """
+        """Raise an assertion if the ranges doesn't match.
+
+        Return the region of the word in the string.
+
+        Raises
+        ------
+        AssertionError
+            If the results there aren't the expected.
 
         """
 
@@ -162,6 +169,17 @@ class TestAnnotationTree:
         assert(range == (32,34))
 
     def test_update_elements_with_ranges(self):
+        """Raise an assertion if the ranges doesn't match.
+
+        Return the regions of the elements.
+
+        Raises
+        ------
+        AssertionError
+            If the results there aren't the expected.
+
+        """
+
         search_tier = "utterance"
         update_tiers = [ "clause unit", "word" ]
 

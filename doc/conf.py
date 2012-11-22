@@ -17,7 +17,7 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../src/poioapi/'))
-sys.path.insert(1, os.path.abspath('../src/poioapi/parser/'))
+sys.path.insert(1, os.path.abspath('../src/poioapi/io/'))
 sys.path.insert(2, os.path.abspath('../src/poioapi/tests/'))
 
 # -- General configuration -----------------------------------------------------
