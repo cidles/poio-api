@@ -146,14 +146,10 @@ class XmlContentHandler:
         parser = make_parser()
         curHandler = XmlHandler()
         parser.setContentHandler(curHandler)
-
-        if sys.version_info[:2] > (3, 0):
-            f = codecs.open(self.metafile, 'r', 'utf-8')
-        else:
-            f = open(self.metafile, 'r')
-
+        f = codecs.open(self.metafile, 'r', 'utf-8')
         parser.parse(f)
         f.close()
+
         self.tokenizer = curHandler.get_tokenizer()
         self.token_id = curHandler.get_token_id()
         self.features_map = curHandler.get_features_map()

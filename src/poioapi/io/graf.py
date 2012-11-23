@@ -521,7 +521,7 @@ class Parser():
 
         gparser = GraphParser()
 
-        file_stream = codecs.open(file, "r", "utf-8")
+        file_stream = codecs.open(self.filepath, 'r', 'utf-8')
 
         graph = gparser.parse(file_stream)
 
