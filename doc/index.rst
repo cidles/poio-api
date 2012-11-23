@@ -16,6 +16,7 @@ Welcome to Poio API's documentation!
 <<<<<<< HEAD
 =======
    tests
+   howto
 
 >>>>>>> develop
     
