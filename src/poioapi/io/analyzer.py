@@ -148,6 +148,7 @@ class XmlContentHandler:
         curHandler = XmlHandler()
         parser.setContentHandler(curHandler)
 <<<<<<< HEAD
+<<<<<<< HEAD
         f = codecs.open(self.metafile, "r", "utf-8")
 =======
 
@@ -157,8 +158,12 @@ class XmlContentHandler:
             f = open(self.metafile, 'r')
 
 >>>>>>> develop
+=======
+        f = codecs.open(self.metafile, 'r', 'utf-8')
+>>>>>>> develop
         parser.parse(f)
         f.close()
+
         self.tokenizer = curHandler.get_tokenizer()
         self.token_id = curHandler.get_token_id()
         self.features_map = curHandler.get_features_map()
