@@ -14,46 +14,53 @@ from poioapi.io.graf import Writer
 def main(argv):
 
     inputfile = ''
+    outputfile = ''
 
     try:
-        opts, args = getopt.getopt(argv,"hi:o:",["ifile="])
+        opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
     except getopt.GetoptError:
-        print('pickle2graf.py -i <inputfile>')
+        print('pickle2graf.py -i <inputfile> -o <outputfile>')
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '-h':
-            print('pickle2graf.py -i <inputfile>')
+            print('pickle2graf.py -i <inputfile> -o <outputfile>')
             sys.exit()
         elif opt in ('-i', '--ifile'):
             inputfile = arg
+        elif opt in ('-o', '--ofile'):
+            outputfile = arg
 
-            # Create the data structure
-            data_hierarchy = data.DataStructureTypeGraid()
+    if inputfile == "" or outputfile == "":
+        print('pickle2graf.py -i <inputfile> -o <outputfile>')
+        sys.exit()
 
-            # Create the annotation tree with the created data structure
-            annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
+    # Create the data structure
+    data_hierarchy = data.DataStructureTypeGraid()
 
-            # Open the file
-            annotation_tree.load_tree_from_pickle(inputfile)
+    # Create the annotation tree with the created data structure
+    annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
 
-            # Once not all the existing files have
-            # the regions is important to force it.
-            # Or else the writer doesn't work properly.
+    # Open the file
+    annotation_tree.load_tree_from_pickle(inputfile)
 
-            search_tier = 'utterance'
-            update_tiers = ['clause unit', 'word']
+    # Once not all the existing files have
+    # the regions is important to force it.
+    # Or else the writer doesn't work properly.
 
-            annotation_tree.update_elements_with_ranges(search_tier,
-                update_tiers)
-            annotation_tree.save_tree_as_pickle(inputfile)
+    search_tier = 'utterance'
+    update_tiers = ['clause unit', 'word']
 
-            writer = Writer(annotation_tree, inputfile)
+    annotation_tree.update_elements_with_ranges(search_tier,
+        update_tiers)
+    #annotation_tree.save_tree_as_pickle(inputfile)
 
-            # Write the GrAF files
-            writer.write()
+    writer = Writer(annotation_tree, outputfile)
 
-            print('Finished')
+    # Write the GrAF files
+    writer.write()
+
+    print('Finished')
 
 if __name__ == "__main__":
     main(sys.argv[1:])

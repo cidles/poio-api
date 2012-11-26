@@ -17,7 +17,7 @@ from xml.dom import minidom
 
 from poioapi.io import header
 from poioapi.io.analyzer import XmlContentHandler
-from graf.io import GraphParser
+#from graf.io import GraphParser
 
 class Writer():
     """
