@@ -53,7 +53,6 @@ def main(argv):
 
     annotation_tree.update_elements_with_ranges(search_tier,
         update_tiers)
-    #annotation_tree.save_tree_as_pickle(inputfile)
 
     writer = Writer(annotation_tree, outputfile)
 

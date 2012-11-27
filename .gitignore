@@ -1,0 +1,8 @@
+.DS_STORE
+*.pyc
+.idea
+dist/
+build/
+doc/_build/
+graf_python.egg-info/
+src/graf_python.egg-info/
