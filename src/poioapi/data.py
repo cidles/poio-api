@@ -15,7 +15,14 @@ Elan's .eaf files, Kura's .xml file, Toolbox's .txt files etc.
 
 from __future__ import unicode_literals
 
+import sys
 import re as regex
+
+# Set the type of string
+if sys.version_info[:2] >= (3, 0):
+    string_type = str
+else:
+    string_type = basestring
 
 # File types
 (EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TREEPICKLE) = range(5)
@@ -163,12 +170,12 @@ class DataStructureType(object):
             raise UnknownAnnotationTypeError
 
         if ann_type in self.data_hierarchy:
-            return [s for s in self.data_hierarchy if type(s) is str]
+            return [s for s in self.data_hierarchy if isinstance(s, string_type)]
 
         for e in self.data_hierarchy:
             if type(e) is list:
                 if ann_type in e:
-                    return [s for s in e if type(s) is str]
+                    return [s for s in e if isinstance(s, string_type)]
 
     def get_parents_of_type(self, ann_type):
         """Returns all the elements that are above a given type in the type
