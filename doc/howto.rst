@@ -7,12 +7,12 @@ This is the documentation for Python Libary Poio API.
 Introduction
 ============  
 
-This document has as presupposition explation the some functions of the Poio API Library. Those functions are how to parse the GrAF files and how to transform an Annotation Tree to the GrAF files.
+This document has as presupposition explation the some functions of the Poio API Library. Those functions are how to parse the GrAF files to Annotation Tree and how to transform an Annotation Tree to the GrAF files.
 
 First is important to know how the process of each function works.
 The transformation if an Annotation Tree to the GrAF files is made by giving an Annotation Tree that contains a specific data structure hierarchy and then the necessary files using the GrAF ISO standards, are generated. Each of the files created are followed by the extension that corresponds to each element in the data structure hierarchy (e.g. 'filename-utterance.xml'). In the end a header file is created.
 This header file in the GrAF ISO standard is the file that contain the relevant information about the GrAF. The information passes by the author, date of creation... The most important part of the files are the annotations and the primary file. The annotations are the dependent files to create all the nodes, edges, feature and everything needed to the GrAF. The primary file is the raw file that has the words that are the values of the nodes.
-To parse the Graf files will be necessary an header file and give the respective data structure hiearchy.
+To parse the Graf to Annotation Tree files will be necessary an header file and give the respective data structure hiearchy.
 
 Next is shown the two processes.
 
@@ -59,18 +59,16 @@ The third and last step is call the writer of the GrAF:
 
 .. code-block:: python
 
-	writer = Writer(annotation_tree, inputfile)
+	writer = Writer(annotation_tree, output)
 	writer.write()
 
 NOTE: The generated files are in the same folder as the inputfile.
 
-Parse GrAF files
-================
+Parse GrAF files to Annotation Tree
+===================================
 		
 Is important to know that to make the parsing of the GrAF files they must be createad as well as the header file.
-The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree, generate a single GrAF file containing all the nodes and load the GrAF files as an object. To make it possible to do the last process (create GrAF as an object) is required to install the Graf-python Library.
-
-NOTE: Graf-python Library can be download and consulted at (https://github.com/cidles/graf-python)
+The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree and generate a single GrAF file containing all the nodes.
 
 
 The first step is to initialize the variable. Once again is need to give the correct data structure hierarchy that was given to create the header file (or transform the Annotation Tree into GrAF ISO in this case):
@@ -101,16 +99,6 @@ Generating the GrAF file (the file is generated with the "-graf.xml" extension):
 .. code-block:: python
 
 	parser.generate_file()
-
-Generating the GrAF object:
-
-.. code-block:: python
-
-	graf = parser.load_as_graf()
-
-	# Consulting the nodes
-	for node in graf.nodes():
-		print(node)
 
 Resources
 =========

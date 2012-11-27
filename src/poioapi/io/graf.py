@@ -35,9 +35,12 @@ from xml.dom import minidom
 from poioapi.io import header
 from poioapi.io.analyzer import XmlContentHandler
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> develop
 =======
 from graf.io import GraphParser
+>>>>>>> develop
+=======
 >>>>>>> develop
 
 class Writer():
@@ -100,7 +103,7 @@ class Writer():
         # Verify the elements
         for index, element in enumerate(self.annotation_tree.elements()):
             if index > 0:
-                self.last_region_value += previous_region_value
+                self.last_region_value += previous_region_value + 1
                 previous_region_value = len(element[0].get('annotation'))
             else:
                 previous_region_value = len(element[0].get('annotation'))
@@ -279,7 +282,7 @@ class Writer():
         filepath = self.basedirname + '-' + annotation + '.xml'
         new_file = False
 
-        if self.xml_files_content[annotation] == None:
+        if self.xml_files_content[annotation] is None:
             new_file = True
             self.xml_files_list.append(filepath)
         else:
@@ -434,11 +437,8 @@ class Writer():
             begin = int(region[0]) + self.last_region_value
             end = int(region[1]) + self.last_region_value
         else:
-            if self.last_region_value is 0:
-                begin = self.last_region_value
-            else:
-                begin = self.last_region_value + 1
-            end = begin + len(annotation_value) - 1
+            begin = self.last_region_value
+            end = begin + len(annotation_value)
 
         region = doc.createElement("region")
         region.setAttribute("xml:id", annotation + "-r"
@@ -563,29 +563,6 @@ class Parser():
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
         self.dirname = os.path.dirname(self.filepath)
         self.annotation_tree = annotation_tree
-
-    def load_as_graf(self):
-        """This method will load the GrAF files as an
-        GrAF object. To make the load it is
-        necessary that the header files and the other
-        GrAF files are created. With the GrAF object
-        it is possible to see all the elements such
-        as nodes, edges, etc.
-
-        Returns
-        -------
-        graph : GrAF
-            Return an GrAF object.
-
-        """
-
-        gparser = GraphParser()
-
-        file_stream = codecs.open(self.filepath, 'r', 'utf-8')
-
-        graph = gparser.parse(file_stream)
-
-        return graph
 
     def load_as_tree(self):
         """This method will load the GrAF files as an
