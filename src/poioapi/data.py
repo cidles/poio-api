@@ -317,6 +317,39 @@ class DataStructureTypeGraid(DataStructureType):
           'graid2' ],
       'translation', 'comment' ]
 
+class DataStructureTypeGraidDiana(DataStructureType):
+
+    """
+    Data structure type using a GRAID format.
+
+    Attributes
+    ----------
+    `name` : str
+        Name of the structure.
+    data_hirerarchy : array_like
+        Structure of the array.
+
+    """
+
+    name = "GRAIDDIANA"
+
+    data_hierarchy =\
+    [ 'utterance',
+        [ 'clause unit',
+            [ 'word',
+                [ 'morpheme',
+                  'gloss'
+                ],
+              'graid1',
+              'graid3'
+            ],
+          'graid2'
+      ],
+      'translation',
+      'ref',
+      'comment'
+    ]
+
 class DataStructureTypeMorphsynt(DataStructureType):
 
     """
