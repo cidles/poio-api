@@ -13,7 +13,6 @@ Tree file.
 Note: That the Annotation Tree file is a pickle
 that works in Poio GUI.
 """
-import codecs
 
 import sys
 import codecs
@@ -116,7 +115,7 @@ class XmlHandler(ContentHandler):
 
 class XmlContentHandler:
     """
-    Class that handles the XML files.
+    Class that handles the XML test_split.
 
     The class uses the ContentHandler from
     SAX XML.
@@ -147,20 +146,7 @@ class XmlContentHandler:
         parser = make_parser()
         curHandler = XmlHandler()
         parser.setContentHandler(curHandler)
-<<<<<<< HEAD
-<<<<<<< HEAD
-        f = codecs.open(self.metafile, "r", "utf-8")
-=======
-
-        if sys.version_info[:2] > (3, 0):
-            f = codecs.open(self.metafile, 'r', 'utf-8')
-        else:
-            f = open(self.metafile, 'r')
-
->>>>>>> develop
-=======
         f = codecs.open(self.metafile, 'r', 'utf-8')
->>>>>>> develop
         parser.parse(f)
         f.close()
 

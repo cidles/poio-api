@@ -10,23 +10,6 @@ methods to write and parse the GrAF files.
 """
 
 import os
-<<<<<<< HEAD
-<<<<<<< HEAD
-import codecs
-
-from xml.sax._exceptions import SAXParseException
-from xml.dom.minidom import Document
-from xml.dom import minidom
-
-from poioapi.io.analyzer import ProcessContent
-from poioapi.io import txtrawfile
-from poioapi.io import header
-from poioapi import annotationtree
-
-=======
-import pickle
-=======
->>>>>>> develop
 import codecs
 
 from xml.dom.minidom import Document
@@ -34,14 +17,6 @@ from xml.dom import minidom
 
 from poioapi.io import header
 from poioapi.io.analyzer import XmlContentHandler
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> develop
-=======
-from graf.io import GraphParser
->>>>>>> develop
-=======
->>>>>>> develop
 
 class Writer():
     """
@@ -62,14 +37,10 @@ class Writer():
 
         self.filepath = header_file
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
-<<<<<<< HEAD
-        self.header = header.CreateHeaderFile(self.basedirname)
-=======
 
         # Create the header file
         self.header = header.CreateHeaderFile(self.basedirname)
 
->>>>>>> develop
         self.level_map = []
         self.annotation_tree = annotation_tree
         self.xml_files_list = []
@@ -126,13 +97,6 @@ class Writer():
                         f.write(value[1].toprettyxml('  '))
                 f.close()
 
-<<<<<<< HEAD
-    def seek_tags(self, hierarchy, level):
-        level += 1
-        for index in range(len(hierarchy)):
-            if isinstance(hierarchy[index],list):
-                self.seek_tags(hierarchy[index], level)
-=======
     def seek_tags(self, data_hierarchy, level):
         """This method will fill a map with the
         data structure elements. This map will
@@ -152,15 +116,12 @@ class Writer():
         for index in range(len(data_hierarchy)):
             if isinstance(data_hierarchy[index],list):
                 self.seek_tags(data_hierarchy[index], level)
->>>>>>> develop
             else:
                 level_list = (level,
                               data_hierarchy[index].replace(' ','_'), 0)
                 self.level_map.append(level_list)
 
     def seek_elements(self, elements, data_hierarchy, level):
-<<<<<<< HEAD
-=======
         """This method will search the for the values of
         each element of the Annotation Tree and create
         the respective node to the GrAF file.
@@ -176,9 +137,8 @@ class Writer():
 
         """
 
->>>>>>> develop
         index = 0
-        level += 1
+        level+=1
         for element in elements:
             if isinstance(element, list):
                 if isinstance(data_hierarchy[index], list):
@@ -358,29 +318,6 @@ class Writer():
 
         return doc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    def create_node_region(self, doc, graph, depends, annotation, annotation_value, increment, filepath):
-
-        try:
-            proc_content = ProcessContent(filepath)
-            proc_content.process()
-            ranges = proc_content.get_tokenizer()
-
-            index = len(ranges) - 1
-            range = ranges[index]
-
-            last_counter = int(range[1])
-        except SAXParseException as sax_error:
-            last_counter = 0
-
-        counter = last_counter
-
-        last_counter += len(annotation_value)
-=======
-    def create_node_region(self, doc, graph, depends, annotation, annotation_value, region, increment):
->>>>>>> develop
-=======
     def create_node_region(self, doc, graph, depends, annotation,
                            annotation_value, region, increment):
         """Create the nodes with the regions and annotation
@@ -404,7 +341,6 @@ class Writer():
             It is the number node of the value.
 
         """
->>>>>>> develop
 
         seg_count = len(doc.getElementsByTagName('region'))
 

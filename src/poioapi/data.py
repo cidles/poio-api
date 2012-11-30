@@ -14,10 +14,6 @@ Elan's .eaf files, Kura's .xml file, Toolbox's .txt files etc.
 """
 
 from __future__ import unicode_literals
-try:
-    str = unicode
-except NameError:
-    pass
 
 import sys
 import re as regex
@@ -305,7 +301,7 @@ class DataStructureTypeGraid(DataStructureType):
 
     Attributes
     ----------
-    name : str
+    `name` : str
         Name of the structure.
     data_hirerarchy : array_like
         Structure of the array.
@@ -328,7 +324,7 @@ class DataStructureTypeMorphsynt(DataStructureType):
 
     Attributes
     ----------
-    name : str
+    `name` : str
         Name of the structure.
     data_hirerarchy : array_like
         Structure of the array.
