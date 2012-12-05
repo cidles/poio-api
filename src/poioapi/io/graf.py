@@ -249,25 +249,19 @@ class Writer():
             doc = self.xml_files_content[annotation]
 
         if new_file:
-            if level > 1 or (annotation == 'translation'
-                             or annotation == 'comment'
-                             or annotation == 'graid2'):
-                doc = self.create_graf_header(annotation, depends)
-            else:
-                doc = self.create_graf_header(annotation, '')
+            doc = self.create_graf_header(annotation, depends)
 
             self.header.add_annotation(os.path.basename(filepath),annotation)
 
         graph = doc.getElementsByTagName('graph').item(0)
 
-        if level > 2 and annotation != 'word' \
-        or (annotation == 'translation' or annotation == 'comment'
-            or annotation == 'graid2'):
-            doc = self.create_dependent_node(doc, graph,
-                annotation, annotation_value, depends, increment)
-        else:
-            doc = self.create_node_region(doc, graph, depends, annotation,
-                annotation_value, region, increment)
+        if annotation_value is not '':
+            if region is None and depends is not '':
+                doc = self.create_dependent_node(doc, graph,
+                    annotation, annotation_value, depends, increment)
+            else:
+                doc = self.create_node_region(doc, graph, depends, annotation,
+                    annotation_value, region, increment)
 
         self.xml_files_content[annotation] = doc
 

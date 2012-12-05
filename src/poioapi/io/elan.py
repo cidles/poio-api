@@ -31,6 +31,10 @@ class ElanHandler(ContentHandler):
 
     def __init__(self):
         self.tokenizer = []
+        self.map = {}
+        self.tag = ''
+        self._root_element = 0
+        self._buffer = ""
 
     def startElement(self, name, attrs):
         """Method from ContentHandler Class.
@@ -45,6 +49,9 @@ class ElanHandler(ContentHandler):
             Instance of a line of the xml.
 
         """
+
+        self.map[name] = ''
+        self.tag = name
 
         """
         # First element of the all document
@@ -91,26 +98,66 @@ class ElanHandler(ContentHandler):
         if name == 'TIER':
             for attr_name in attrs.getNames():
                 print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
-        """
-        # The ANNOTATION don't need to be read only theirs elements
 
+        # The ANNOTATION don't need to be read only theirs elements
         # ANNOTATION subelement
         if name == 'ALIGNABLE_ANNOTATION':
             for attr_name in attrs.getNames():
                 print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
-
-        # DONT FORGET THE ANNOTATION VALUE
 
         # ANNOTATION subelement
         if name == 'REF_ANNOTATION':
             for attr_name in attrs.getNames():
                 print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
 
+        # LINGUISTIC_TYPE
+        if name == 'LINGUISTIC_TYPE':
+            for attr_name in attrs.getNames():
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        # LOCALE
+        if name == 'LOCALE':
+            for attr_name in attrs.getNames():
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        # CONSTRAINT
+        if name == 'CONSTRAINT':
+            for attr_name in attrs.getNames():
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        """
+
+        # CONTROLLED_VOCABULARY
+        if name == 'CONTROLLED_VOCABULARY':
+            for attr_name in attrs.getNames():
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        # CONTROLLED_VOCABULARY subelement
+        if name == 'CV_ENTRY':
+            for attr_name in attrs.getNames():
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        # LEXICON_REF
+        if name == 'LEXICON_REF':
+            for attr_name in attrs.getNames():
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        # EXTERNAL_REF
+        for attr_name in attrs.getNames():
+            if name == 'EXTERNAL_REF':
+                print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
     def characters (self, ch):
-        pass
+        self.map[self.tag] += ch
+
+        # Check for root node
+        if self._root_element == 1:
+            self._buffer += ch
 
     def endElement(self, name):
-        pass
+        if name=='ANNOTATION_VALUE':
+            #print(self.map[name])
+            pass
 
 class ElanContentHandler:
     """
@@ -142,11 +189,12 @@ class ElanContentHandler:
         parser = make_parser()
         curHandler = ElanHandler()
         parser.setContentHandler(curHandler)
-        f = codecs.open(self.metafile, 'r', 'utf-8')
+        #f = codecs.open(self.metafile, 'r', 'utf-8')
+        f = open(self.metafile, 'r')
         parser.parse(f)
         f.close()
 
-file = 'C:/tests/elan/example.eaf'
+file = '/home/alopes/tests/elan/example.eaf'
 
 content = ElanContentHandler(file)
 content.parse()
