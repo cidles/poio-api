@@ -6,12 +6,8 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-""" This module is to create the raw txt
-file form the pickle file to an Annotation
-Tree file.
+""" This module is to parse the files.
 
-Note: That the Annotation Tree file is a pickle
-that works in Poio GUI.
 """
 
 import codecs
@@ -39,6 +35,9 @@ class XmlHandler(ContentHandler):
         self._root_element = 0
         self._buffer = ""
         self.hasregion = False
+        self.elan_map = []
+        self.tier_id = ''
+        self.cv_id = ''
 
     def startElement(self, name, attrs):
         """Method from ContentHandler Class.
@@ -86,6 +85,36 @@ class XmlHandler(ContentHandler):
             else:
                 self.values = (id, ref)
 
+        # Elan parser - Xml tags
+        values_list = []
+
+        if name == 'TIER' or name == 'CONTROLLED_VOCABULARY':
+            for attr_name in attrs.getNames():
+                if attr_name == 'TIER_ID':
+                    self.tier_id = attrs.getValue(attr_name)
+                elif attr_name == 'CV_ID':
+                    self.cv_id = attrs.getValue(attr_name)
+                value = attr_name + " - " + attrs.getValue(attr_name)
+                values_list.append(value)
+            self.elan_map.append((name, values_list))
+        elif name == 'ALIGNABLE_ANNOTATION' or name == 'REF_ANNOTATION' or name == 'CV_ENTRY':
+            if name == 'CV_ENTRY':
+                depends = "DEPENDES - " + self.cv_id
+            else:
+                depends = "DEPENDES - " + self.tier_id
+
+            for attr_name in attrs.getNames():
+                value = attr_name + " - " + attrs.getValue(attr_name)
+                values_list.append(value)
+            self.elan_map.append((name, values_list, depends))
+        else:
+            for attr_name in attrs.getNames():
+                value = attr_name + " - " + attrs.getValue(attr_name)
+                values_list.append(value)
+
+            if len(values_list) is not 0:
+                self.elan_map.append((name, values_list))
+
     def characters (self, ch):
         self.map[self.tag] += ch
 
@@ -100,17 +129,10 @@ class XmlHandler(ContentHandler):
             ref = values[1]
             self.features_map.append((id, self.map[name], ref))
 
-    def get_tokenizer(self):
-        return self.tokenizer
-
-    def get_token_id(self):
-        return self.token_id
-
-    def get_features_map(self):
-        return self.features_map
-
-    def get_tokens_map(self):
-        return self.tokens_map
+        if name=='ANNOTATION_VALUE' or name=='CV_ENTRY':
+            tuple_value = self.elan_map[-1]
+            tuple_value = tuple_value + ("VALUE - " + self.map[name], )
+            self.elan_map[-1] = tuple_value
 
 class XmlContentHandler:
     """
@@ -149,19 +171,8 @@ class XmlContentHandler:
         parser.parse(f)
         f.close()
 
-        self.tokenizer = xml_handler.get_tokenizer()
-        self.token_id = xml_handler.get_token_id()
-        self.features_map = xml_handler.get_features_map()
-        self.tokens_map = xml_handler.get_tokens_map()
-
-    def get_tokenizer(self):
-        return self.tokenizer
-
-    def get_token_id(self):
-        return self.token_id
-
-    def get_features_map(self):
-        return self.features_map
-
-    def get_tokens_map(self):
-        return self.tokens_map
+        self.tokenizer = xml_handler.tokenizer
+        self.token_id = xml_handler.token_id
+        self.features_map = xml_handler.features_map
+        self.tokens_map = xml_handler.tokens_map
+        self.elan_map = xml_handler.elan_map
