@@ -105,7 +105,7 @@ class Writer():
 
         Parameters
         ----------
-        data_hierarchy: array_like
+        data_hierarchy : array_like
             An array with the data structure hierarchy.
         level : int
             Level number of each element of the hierarchy.

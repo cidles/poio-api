@@ -1,10 +1,9 @@
-=========
-`graf.py`
-=========
+=====================
+`poioapi.io.analyzer`
+=====================
 
-.. automodule:: graf
+.. automodule:: poioapi.io.analyzer
    :members:
-   :private-members:
 
 Indices and tables
 ==================
