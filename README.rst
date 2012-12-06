@@ -27,4 +27,4 @@ Site
 ----
 The website of this project is:
 
-http://ltll.cidles.eu/poio/poio-api/
+http://media.cidles.eu/poio/poio-api/
