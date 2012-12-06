@@ -20,7 +20,7 @@ You need to install the following packages:
 
 API Documentation
 -----------------
-http://cidles.github.com/poio-api
+http://poio.readthedocs.org/projects/poio-api/en/latest/
 
 
 Site
