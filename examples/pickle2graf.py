@@ -6,10 +6,6 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 
-""" This document is an example of the creation of
-GrAF files.
-"""
-
 import sys, getopt
 
 from poioapi import data, annotationtree
