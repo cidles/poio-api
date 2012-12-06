@@ -1,6 +1,6 @@
-========================
-`poioapi.annotationtree`
-========================
+======================
+poioapi.annotationtree
+======================
 
 .. automodule:: poioapi.annotationtree
    :members:

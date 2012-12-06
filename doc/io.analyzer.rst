@@ -1,6 +1,6 @@
-=====================
-`poioapi.io.analyzer`
-=====================
+===================
+poioapi.io.analyzer
+===================
 
 .. automodule:: poioapi.io.analyzer
    :members:

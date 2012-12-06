@@ -1,6 +1,6 @@
-=================
-`poioapi.io.graf`
-=================
+===============
+poioapi.io.graf
+===============
 
 .. automodule:: poioapi.io.graf
    :members:

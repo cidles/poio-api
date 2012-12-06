@@ -1,6 +1,6 @@
-===================
-`poioapi.io.header`
-===================
+=================
+poioapi.io.header
+=================
 
 .. automodule:: poioapi.io.header
    :members:
