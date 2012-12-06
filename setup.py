@@ -55,7 +55,7 @@ setup(
     'Topic :: Text Processing :: Indexing',
     'Topic :: Text Processing :: Linguistic',
     ],
-    packages = [ 'poioapi' ],
+    packages = [ 'poioapi', 'poioapi.io' ],
     package_dir = { '': 'src' },
     package_data = { 'poioapi': ['VERSION'] },
     #install_requires=['PyYAML>=3.09'],
