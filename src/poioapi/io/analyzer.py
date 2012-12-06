@@ -14,7 +14,6 @@ Note: That the Annotation Tree file is a pickle
 that works in Poio GUI.
 """
 
-import sys
 import codecs
 
 from xml.sax import make_parser
@@ -144,16 +143,16 @@ class XmlContentHandler:
         """
 
         parser = make_parser()
-        curHandler = XmlHandler()
-        parser.setContentHandler(curHandler)
+        xml_handler = XmlHandler()
+        parser.setContentHandler(xml_handler)
         f = codecs.open(self.metafile, 'r', 'utf-8')
         parser.parse(f)
         f.close()
 
-        self.tokenizer = curHandler.get_tokenizer()
-        self.token_id = curHandler.get_token_id()
-        self.features_map = curHandler.get_features_map()
-        self.tokens_map = curHandler.get_tokens_map()
+        self.tokenizer = xml_handler.get_tokenizer()
+        self.token_id = xml_handler.get_token_id()
+        self.features_map = xml_handler.get_features_map()
+        self.tokens_map = xml_handler.get_tokens_map()
 
     def get_tokenizer(self):
         return self.tokenizer

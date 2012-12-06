@@ -31,6 +31,7 @@ class ElanHandler(ContentHandler):
 
     def __init__(self):
         self.tokenizer = []
+        self.values_map = []
         self.map = {}
         self.tag = ''
         self._root_element = 0
@@ -125,8 +126,6 @@ class ElanHandler(ContentHandler):
             for attr_name in attrs.getNames():
                 print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
 
-        """
-
         # CONTROLLED_VOCABULARY
         if name == 'CONTROLLED_VOCABULARY':
             for attr_name in attrs.getNames():
@@ -143,9 +142,16 @@ class ElanHandler(ContentHandler):
                 print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
 
         # EXTERNAL_REF
-        for attr_name in attrs.getNames():
-            if name == 'EXTERNAL_REF':
+        if name == 'EXTERNAL_REF':
+            for attr_name in attrs.getNames():
                 print(str(attr_name) + " - " + str(attrs.getValue(attr_name)))
+
+        """
+
+        for attr_name in attrs.getNames():
+            value = str(attr_name) + " - " + str(attrs.getValue(attr_name))
+            print(value)
+            self.values_map.append((name, value))
 
     def characters (self, ch):
         self.map[self.tag] += ch
@@ -177,7 +183,7 @@ class ElanContentHandler:
 
         """
 
-        self.tokenizer = []
+        self.values_map = []
         self.metafile = metafile
 
     def parse(self):
@@ -193,8 +199,11 @@ class ElanContentHandler:
         f = open(self.metafile, 'r')
         parser.parse(f)
         f.close()
+        self.values_map = curHandler.values_map
 
+#----------------------------------------------------
 file = '/home/alopes/tests/elan/example.eaf'
-
 content = ElanContentHandler(file)
 content.parse()
+for value in content.values_map:
+    print(value)
