@@ -38,6 +38,7 @@ class XmlHandler(ContentHandler):
         self.elan_map = []
         self.tier_id = ''
         self.cv_id = ''
+        self.time_slot_dict = dict()
 
     def startElement(self, name, attrs):
         """Method from ContentHandler Class.
@@ -107,6 +108,19 @@ class XmlHandler(ContentHandler):
                 value = attr_name + " - " + attrs.getValue(attr_name)
                 values_list.append(value)
             self.elan_map.append((name, values_list, depends))
+        elif name == 'TIME_SLOT':
+            key = ''
+            key_entry = ''
+            for attr_name in attrs.getNames():
+                if attr_name == 'TIME_SLOT_ID':
+                    key = attrs.getValue(attr_name)
+                else:
+                    if attrs.getValue(attr_name) is not None:
+                        key_entry = attrs.getValue(attr_name)
+                    else:
+                        key_entry = '0'
+
+            self.time_slot_dict[key] = key_entry
         else:
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
@@ -176,3 +190,4 @@ class XmlContentHandler:
         self.features_map = xml_handler.features_map
         self.tokens_map = xml_handler.tokens_map
         self.elan_map = xml_handler.elan_map
+        self.time_slot_dict = xml_handler.time_slot_dict
