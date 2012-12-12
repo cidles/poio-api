@@ -28,7 +28,7 @@ else:
 (EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TREEPICKLE) = range(5)
 
 # Data structure types
-(GLOSS, WORDS, GRAID) = range(3)
+(GLOSS, WORDS, GRAID, GRAIDDIANA) = range(4)
 
 class UnknownFileFormatError(Exception): pass
 class NoFileSpecifiedError(Exception): pass

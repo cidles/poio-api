@@ -2,10 +2,11 @@
 #
 # Poio Tools for Linguists
 #
-# Copyright (C) 2009-2012 Poio Project
+# Copyright (C) 2009-2013 Poio Project
 # Author: Peter Bouda <pbouda@cidles.eu>
-# URL: <http://www.cidles.eu/ltll/poio>
+# URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """This module contains the classes to access annotated data in
 an annotation tree. An annotation tree is a tree-like structure,
 dependant on the "data structure type". Data structure types 
@@ -500,7 +501,7 @@ class AnnotationTree():
         m = s.search(utterance, start_at_pos)
 
         if m:
-            self.last_position = m.end(0)
+            #self.last_position = m.end(0)
             return (m.start(0), m.end(0))
         else:
             return None
