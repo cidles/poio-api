@@ -100,9 +100,9 @@ class XmlHandler(ContentHandler):
             self.elan_map.append((name, values_list))
         elif name == 'ALIGNABLE_ANNOTATION' or name == 'REF_ANNOTATION' or name == 'CV_ENTRY':
             if name == 'CV_ENTRY':
-                depends = "DEPENDES - " + self.cv_id
+                depends = "DEPENDS - " + self.cv_id
             else:
-                depends = "DEPENDES - " + self.tier_id
+                depends = "DEPENDS - " + self.tier_id
 
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
@@ -181,7 +181,7 @@ class XmlContentHandler:
         parser = make_parser()
         xml_handler = XmlHandler()
         parser.setContentHandler(xml_handler)
-        f = codecs.open(self.metafile, 'r', 'utf-8')
+        f = open(self.metafile, 'r')
         parser.parse(f)
         f.close()
 
