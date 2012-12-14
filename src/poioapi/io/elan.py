@@ -13,9 +13,10 @@ EafGlossTree, EafPosTree, etc. are the classes to access the data via
 tree, which also contains the original .eaf IDs. Because of this
 EafTrees are read-/writeable.
 """
-import codecs
 
 import os
+import re
+import codecs
 
 from xml.dom import minidom
 
@@ -33,8 +34,7 @@ class ElanToGraf:
 
     def __init__(self, filename):
         self.filename = filename
-        self.counter = 0
-        self.tier_counter = 0
+
 
     def elan_to_graf(self):
 
@@ -43,15 +43,23 @@ class ElanToGraf:
         parser = XmlContentHandler(self.filename)
         parser.parse()
 
+        tier_counter = 0
+
         for element in parser.elan_map:
 
+            # Common to all the nodes
+            node_attributes = element[1]
+
+            add_annotation_space = False
+
             if element[0] == 'TIER':
-                node_id = element[0]+"-n"+str(self.tier_counter)
+
+                node_id = "tier-n"+str(tier_counter)
                 node = Node(node_id)
 
                 # Annotation
-                ann_name = element[0]
-                ann_id = ann_name+"-"+str(self.tier_counter)
+                ann_name = 'tier'
+                ann_id = "tier-"+str(tier_counter)
                 annotation = Annotation(ann_name, None, ann_id)
 
                 for attributes in element[1]:
@@ -63,8 +71,6 @@ class ElanToGraf:
                 node.annotations.add(annotation)
                 graph.nodes.add(node)
 
-                ann_name_id = element[0]
-
                 annotation_space = AnnotationSpace(ann_name)
                 annotation_space.add(annotation)
 
@@ -72,78 +78,78 @@ class ElanToGraf:
 
                 from_node = node
 
-                self.tier_counter+=1
+                tier_id = [x for x in node_attributes if
+                           'TIER_ID - ' in x][0].split(' - ')[1]
+                linguistic_type_ref = [x for x in node_attributes
+                                       if 'LINGUISTIC_TYPE_REF - ' in
+                                          x][0].split(' - ')[1]
+
+                tier_counter+=1
 
             if element[0] == 'ALIGNABLE_ANNOTATION':
-                anchors = element[1]
+                # Anchors for the regions
+                anchors = node_attributes
                 anchor_1 = anchors[1].split(' - ')
                 anchor_1 = parser.time_slot_dict[anchor_1[1]]
                 anchor_2 = anchors[0].split(' - ')
                 anchor_2 = parser.time_slot_dict[anchor_2[1]]
                 anchors = [anchor_1, anchor_2]
 
-                node_id = element[0]+"-n"+str(self.counter)
+                # Annotation
+                ann_name = linguistic_type_ref
+                ann_id = node_attributes[2].split(' - ')[1]
+                annotation_value = element[3].split(' - ')[1]
+                annotation = Annotation(ann_name, None, ann_id)
+                annotation.features['annotation_value'] = annotation_value
+
+                index = re.sub("\D", "", ann_id)
+
+                node_id = tier_id+"-n"+index
                 node = Node(node_id)
 
-                region_id = element[0]+"-r"+str(self.counter)
+                region_id = tier_id+"-r"+index
                 region = Region(region_id, *anchors)
 
-                edge_id = element[0]+"-e"+str(self.counter)
+                edge_id = element[0]+"-e"+index
                 edge = Edge(edge_id, from_node, node)
-
-                # Annotation
-                ann_name = element[0]
-                ann_id = element[1]
-                ann_id = ann_id[2].split(' - ')
-                annotation_value = element[3].split(' - ')
-                annotation = Annotation(ann_name, None, ann_name+"-"+ann_id[1])
-                annotation.features['string'] = annotation_value[1]
 
                 node.annotations.add(annotation)
                 node.add_region(region)
 
-                depends = element[2].split(' - ')
+                depends = element[2].split(' - ')[1]
 
-                if not depends[1] in graph.header.depends_on:
-                    graph.header.add_dependency(depends[1])
+                if not depends in graph.header.depends_on:
+                    graph.header.add_dependency(depends)
 
                 graph.regions.add(region)
                 graph.edges.add(edge)
                 graph.nodes.add(node)
 
-                ann_name_id = element[0]
-
-                annotation_space = AnnotationSpace(ann_name_id)
-                annotation_space.add(annotation)
-
-                graph.annotation_spaces.add(annotation_space)
-
-                self.counter+=1
+                add_annotation_space = True
 
             if element[0] == 'REF_ANNOTATION':
                 # Annotation
-                ann_name = element[0]
-                ann_id = element[1]
-                ann_id = ann_id[1].split(' - ')
-                annotation_value = element[3].split(' - ')
-                annotation = Annotation(ann_name, None, ann_name+"-"+ann_id[1])
-                annotation.features['string'] = annotation_value[1]
+                ann_name = linguistic_type_ref
+                ann_id = node_attributes[1].split(' - ')[1]
+                annotation_value = element[3].split(' - ')[1]
+                annotation = Annotation(ann_name, None, ann_id)
+                annotation.features['annotation_value'] = annotation_value
 
-                from_node.annotations.add(annotation)
+                index = re.sub("\D", "", ann_id)
 
-                depends = element[2].split(' - ')
+                node_id = tier_id+"-n"+index
+                node = Node(node_id)
 
-                if not depends[1] in graph.header.depends_on:
-                    graph.header.add_dependency(depends[1])
+                node.annotations.add(annotation)
+                graph.nodes.add(node)
 
-                ann_name_id = element[0]
+                add_annotation_space = True
 
-                annotation_space = AnnotationSpace(ann_name_id)
+            if add_annotation_space:
+                annotation_space = AnnotationSpace(linguistic_type_ref)
                 annotation_space.add(annotation)
 
                 graph.annotation_spaces.add(annotation_space)
-
-                self.counter+=1
 
         return graph
 
