@@ -181,8 +181,17 @@ class XmlContentHandler:
         parser = make_parser()
         xml_handler = XmlHandler()
         parser.setContentHandler(xml_handler)
-        f = open(self.metafile, 'r')
-        parser.parse(f)
+
+        # Handle the files encode
+        try:
+            f = codecs.open(self.metafile, 'r', 'utf-8')
+            parser.parse(f)
+        except UnicodeEncodeError as unicodeError:
+            print(unicodeError)
+
+            f = open(self.metafile, 'r')
+            parser.parse(f)
+
         f.close()
 
         self.tokenizer = xml_handler.tokenizer
