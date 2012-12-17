@@ -1,6 +1,6 @@
-=========
-`data.py`
-=========
+============
+poioapi.data
+============
    
 .. automodule:: poioapi.data
    :members:

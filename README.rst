@@ -20,11 +20,11 @@ You need to install the following packages:
 
 API Documentation
 -----------------
-http://cidles.github.com/poio-api
+http://poio.readthedocs.org/projects/poio-api/en/latest/
 
 
 Site
 ----
 The website of this project is:
 
-http://ltll.cidles.eu/poio/poio-api/
+http://media.cidles.eu/poio/poio-api/

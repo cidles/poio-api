@@ -1,10 +1,9 @@
-=========
-`graf.py`
-=========
+===============
+poioapi.io.graf
+===============
 
-.. automodule:: graf
+.. automodule:: poioapi.io.graf
    :members:
-   :private-members:
 
 Indices and tables
 ==================

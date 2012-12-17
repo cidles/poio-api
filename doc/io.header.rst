@@ -1,10 +1,9 @@
-=============
-`analyzer.py`
-=============
+=================
+poioapi.io.header
+=================
 
-.. automodule:: analyzer
+.. automodule:: poioapi.io.header
    :members:
-   :private-members:
 
 Indices and tables
 ==================
