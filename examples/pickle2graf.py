@@ -51,7 +51,7 @@ if __name__ == "__main__":
 import sys, getopt
 
 from poioapi import data, annotationtree
-from poioapi.io.graff import Writer
+from poioapi.io.graf import Writer
 
 def main(argv):
 
