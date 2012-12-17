@@ -302,7 +302,7 @@ class Writer():
         # Feature structure
         feature_st = doc.createElement("fs")
         feature = doc.createElement("f")
-        feature.setAttribute("name",annotation)
+        feature.setAttribute("name",'annotation_value')
         value = doc.createTextNode(annotation_value) # Value
         feature.appendChild(value)
         feature_st.appendChild(feature)
@@ -394,7 +394,7 @@ class Writer():
             # Feature structure
             feature_st = doc.createElement("fs")
             feature = doc.createElement("f")
-            feature.setAttribute("name",'string')
+            feature.setAttribute("name",'annotation_value')
             value = doc.createTextNode(annotation_value) # Value
             feature.appendChild(value)
             feature_st.appendChild(feature)
@@ -539,8 +539,8 @@ class Parser():
             content = XmlContentHandler(self.dirname+'/'+file[1])
             content.parse()
 
-            features_map = content.features_map()
-            tokens_map = content.tokens_map()
+            features_map = content.features_map
+            tokens_map = content.tokens_map
 
             features_list.append(features_map)
             tokens_list.append(tokens_map)
@@ -554,6 +554,9 @@ class Parser():
         self.tree = []
         counter = 0
 
+        self._first_element_hierarchy = data_hierarchy[0]
+        self._last_element_hierarchy = data_hierarchy[-1]
+
         for tokens in tokens_list:
             for token in tokens:
                 if token[2]=='':
@@ -561,8 +564,10 @@ class Parser():
                     self.clear_list = []
                     self.elements_sort(data_hierarchy, self._dependency)
                     self.utterance = self.retrieve_string(token[1],counter)
-                    self.annotation_tree.append_element(self.append_element(
-                        data_hierarchy, [], token[2], 0, 0))
+                    element = self.append_element(
+                        data_hierarchy, [], self._dependency, 0)
+                    print('-------------.---------------')
+                    #self.annotation_tree.append_element(element[0][0])
                     counter+=1
 
         return self.annotation_tree
@@ -590,7 +595,77 @@ class Parser():
         string = self.txtlines[counter]
         return  string[begin:end]
 
-    def append_element(self, elements, new_list, depends, depends_n, level):
+    def append_element(self, elements, new_list, depends, level):
+        for element in elements:
+            if isinstance(element, list):
+                self.append_element(element, 0, 0, 0)
+            else:
+                print(element)
+
+        for value in self.clear_list:
+            print(value[0])
+            print([x for x in elements if value[0] in x])
+
+    def _append_element(self, elements, new_list, depends, level):
+        level+=1
+        empty_list = []
+        restart = True
+        last_element = False
+        while restart:
+            restart = False
+            record_element = True
+            aux_list = []
+            for index, element in enumerate(elements):
+                    if isinstance(element, list):
+                        self.append_element(element, aux_list, depends, level)
+                        for value in self.clear_list:
+                            if value[2]==depends:
+                                restart = True
+                                break
+                    else:
+                        element = str(element).replace(' ','_')
+
+                        if element == self._first_element_hierarchy:
+                            aux_list.append({ 'id' : self.annotation_tree
+                            .next_annotation_id,element : self.utterance})
+                        else:
+                            # For the empty values of each element hierarchy
+                            empty_element = True
+
+                            for value in self.clear_list:
+                                value_changed = value[0].split('-')
+                                if value_changed[0]==element and depends==value[2]:
+                                    if index is 0:
+                                        depends = value[0].replace('-a','-n')
+                                    aux_list.append({ 'id' : self.annotation_tree.
+                                    next_annotation_id, element : value[1]})
+                                    #next_annotation_id,'annotation' : value[1]})
+                                    self.clear_list.remove(value)
+                                    empty_element = False
+                                    break
+
+                            if index is 0 and empty_element:
+                                record_element = False
+
+                            if empty_element and record_element:
+                                aux_list.append({ 'id' : self.annotation_tree.
+                                next_annotation_id, element : ''})
+
+                            if element == self._last_element_hierarchy:
+                                last_element = True
+
+            print(aux_list)
+            if len(aux_list) is not 0:
+                empty_list.append(aux_list)
+
+        if len(empty_list) is not 0:
+            new_list.append(empty_list)
+
+        if last_element:
+            return new_list
+
+
+    def old_append_element(self, elements, new_list, depends, level):
         """This method will append the correct values
         to the Annotation Tree. The method will search in
         the list generated by the method elements_sort the
@@ -605,8 +680,6 @@ class Parser():
             List of elements in Annotation Tree.
         depends : str
             Name of dependent node.
-        depends_n : int
-            Number of times that the dependency appears in the clean list.
         level : int
             Depth of the list.
 
@@ -614,24 +687,28 @@ class Parser():
 
         level+=1
         empty_list = []
-        while depends_n >= 0:
+        index = 0
+        restart = True
+        while restart:
+            restart = False
             aux_list = []
             for element in elements:
-                index = 0
                 if isinstance(element, list):
+                    self.append_element(element, aux_list, depends, level)
                     for value in self.clear_list:
-                        if value[2] == depends:
-                            depends_n+=1
-                    self.append_element(element, aux_list, depends, depends_n, level)
+                        if value[2]==depends:
+                            restart = True
+                            break
                 else:
                     element = str(element).replace(' ','_')
 
-                    if depends=='':
+                    if element == self._first_element_hierarchy:
                         aux_list.append({ 'id' : self.annotation_tree
                         .next_annotation_id,'annotation' : self.utterance})
-                        depends = self._dependency
-                        index-=1
                     else:
+                        # For the empty values of each element hierarchy
+                        no_element = True
+
                         for value in self.clear_list:
                             if value[0]==element:
                                 if index is 0:
@@ -639,9 +716,14 @@ class Parser():
                                 aux_list.append({ 'id' : self.annotation_tree.
                                 next_annotation_id,'annotation' : value[1]})
                                 self.clear_list.remove(value)
+                                no_element = False
                                 break
-                    index+=1
-                    depends_n-=1
+
+                        if no_element:
+                            aux_list.append({ 'id' : self.annotation_tree.
+                            next_annotation_id,'annotation' : ''})
+
+                        index+=1
 
             if len(aux_list) is not 0:
                 empty_list.append(aux_list)
@@ -688,9 +770,10 @@ class Parser():
                         if value_changed[0]==element and depends==value[2]:
                             if index is 0:
                                 depends = value[0].replace('-a','-n')
-                            self.clear_list.append((element,value[1],value[2]))
+                            self.clear_list.append((element, value[1], depends))
                             self.elements_list.remove(value)
                             break
+
                     index+=1
 
     def generate_file(self):
