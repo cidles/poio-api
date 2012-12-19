@@ -310,7 +310,7 @@ class DataStructureTypeGraid(DataStructureType):
 
     name = "GRAID"
 
-    data_hierarchy = \
+    data_hierarchy_dict = \
     [ 'utterance',
         [ 'clause unit',
             [ 'word', 'wfw', 'graid1' ],
@@ -339,3 +339,30 @@ class DataStructureTypeMorphsynt(DataStructureType):
             [ 'morpheme',
                 [ 'gloss'] ] ],
         'translation', 'comment' ]
+
+class DataStructureTypeWithConstraints(DataStructureType):
+
+    """
+    Data structure type using a GRAID format.
+
+    Attributes
+    ----------
+    `name` : str
+        Name of the structure.
+    data_hirerarchy : array_like
+        Structure of the array.
+
+    """
+
+    name = "GRAID"
+
+    data_hierarchy_dict =\
+        { 'utterance',
+          [ 'clause unit' : { "constraints" : "Included_In" } ,
+        [ 'word', 'wfw', 'graid1' ],
+    'graid2' ],
+    'translation', 'comment' }
+
+    tier = dict()
+    tier["utterance"] = None
+    tier["clause unit"] = "CharacterAssociation"

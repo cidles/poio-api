@@ -39,6 +39,8 @@ class XmlHandler(ContentHandler):
         self.tier_id = ''
         self.cv_id = ''
         self.time_slot_dict = dict()
+        self.constraints = []
+        self.linguistic_type = []
 
     def startElement(self, name, attrs):
         """Method from ContentHandler Class.
@@ -121,6 +123,16 @@ class XmlHandler(ContentHandler):
                         key_entry = '0'
 
             self.time_slot_dict[key] = key_entry
+        elif name == 'CONSTRAINT':
+            for attr_name in attrs.getNames():
+                value = attr_name + " - " + attrs.getValue(attr_name)
+                values_list.append(value)
+            self.constraints.append(values_list)
+        elif name == 'LINGUISTIC_TYPE':
+            for attr_name in attrs.getNames():
+                value = attr_name + " - " + attrs.getValue(attr_name)
+                values_list.append(value)
+            self.linguistic_type.append(values_list)
         else:
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
@@ -200,3 +212,5 @@ class XmlContentHandler:
         self.tokens_map = xml_handler.tokens_map
         self.elan_map = xml_handler.elan_map
         self.time_slot_dict = xml_handler.time_slot_dict
+        self.constraints = xml_handler.constraints
+        self.linguistic_type = xml_handler.linguistic_type

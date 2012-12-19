@@ -5,6 +5,7 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
+
 """This module contains classes to access Elan data.
 
 The class Eaf is a low level API to .eaf files.
@@ -19,12 +20,14 @@ import re
 import codecs
 
 from xml.dom import minidom
+from poioapi.io import header
 
 from poioapi.io.analyzer import XmlContentHandler
-from graf.io import Graph, GrafRenderer
-from graf.graphs import Node, Edge
-from graf.annotations import Annotation, AnnotationSpace
-from graf.media import Region
+
+from graf import Graph, GrafRenderer
+from graf import Node, Edge
+from graf import Annotation, AnnotationSpace
+from graf import Region
 
 class ElanToGraf:
     """
@@ -32,20 +35,34 @@ class ElanToGraf:
 
     """
 
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self, filepath):
+        self.filename = os.path.basename(filepath)
+        self.filepath = filepath
+        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
+        # Create the header file
+        self.header = header.CreateHeaderFile(self.basedirname)
 
     def elan_to_graf(self):
 
         graph = Graph()
 
-        parser = XmlContentHandler(self.filename)
+        parser = XmlContentHandler(self.filepath)
         parser.parse()
 
         tier_counter = 0
 
+        data_structure = []
+        constraints = dict()
+
+        # Mandatory to give an author to the file
+        self.header.author = 'CIDLeS'
+        self.header.filename = self.filename.split('.eaf')[0]
+        self.header.primaryfile = self.filename
+
         for element in parser.elan_map:
+
+            print(element)
 
             # Common to all the nodes
             node_attributes = element[1]
@@ -78,13 +95,39 @@ class ElanToGraf:
 
                 from_node = node
 
+                tier_counter+=1
+
                 tier_id = [x for x in node_attributes if
                            'TIER_ID - ' in x][0].split(' - ')[1]
+
                 linguistic_type_ref = [x for x in node_attributes
                                        if 'LINGUISTIC_TYPE_REF - ' in
                                           x][0].split(' - ')[1]
 
-                tier_counter+=1
+                try:
+                    parent_ref = [x for x in node_attributes if
+                                  'PARENT_REF - ' in x][0].split(' - ')[1]
+                except IndexError as indexError:
+                    parent_ref = None
+
+                if not tier_id in self.header.annotation_list:
+                    self.header.add_annotation(self.filename, tier_id, parent_ref)
+                    for linguistic_type in parser.linguistic_type:
+                        linguistic_type_id = [x for x in linguistic_type
+                                               if 'LINGUISTIC_TYPE_ID - ' in
+                                                  x][0].split(' - ')[1]
+
+                        try:
+                            constraint = [x for x in linguistic_type
+                                                  if 'CONSTRAINTS - ' in
+                                                     x][0].split(' - ')[1]
+                        except IndexError as indexError:
+                            constraint = None
+
+                        if constraint is not None and \
+                           linguistic_type_ref == linguistic_type_id:
+                            self.header.add_constraint(tier_id,
+                                linguistic_type_ref, constraint)
 
             if element[0] == 'ALIGNABLE_ANNOTATION':
                 # Anchors for the regions
@@ -151,6 +194,9 @@ class ElanToGraf:
 
                 graph.annotation_spaces.add(annotation_space)
 
+        # Close the header file
+        self.header.create_header()
+
         return graph
 
     def graf_render(self, outputfile, graph):
@@ -168,11 +214,3 @@ class ElanToGraf:
         os.remove(outputfile+"_tmp")
 
 
-file = '/home/alopes/tests/elan/example.eaf'
-elan_graf = ElanToGraf(file)
-
-graph = elan_graf.elan_to_graf()
-
-# Just to see the result faster
-outputfile = '/home/alopes/tests/elan/example_render.xml'
-elan_graf.graf_render(outputfile, graph)

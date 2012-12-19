@@ -40,6 +40,7 @@ class CreateHeaderFile:
 
         self.basedirname = basedirname
         self.annotation_list = []
+        self.constraints_list = []
         self.version = '1.0.0'
         self.filename = ''
         self.primaryfile = ''
@@ -310,7 +311,27 @@ class CreateHeaderFile:
             annotation = doc.createElement("annotation") # Required
             annotation.setAttribute("loc",ann[0]) # Required
             annotation.setAttribute("f.id",ann[1]) # Required
+
+            # Add a parent node of the data hierarchy
+            if ann[2] is not None:
+                annotation.setAttribute("parent",ann[2]) # Required
+
             annotations.appendChild(annotation)
+
+            # Add the constraints
+            if len(self.constraints_list) is not 0:
+                tier = doc.createElement("tier")
+                value = None
+                for constraint in self.constraints_list:
+                    if constraint[0]==ann[1]:
+                        constraint_node = doc.createElement("constraint")
+                        constraint_node.setAttribute("name",constraint[1])
+                        value = doc.createTextNode(constraint[2])
+                        constraint_node.appendChild(value)
+                        tier.appendChild(constraint_node)
+
+                if value is not None:
+                    annotation.appendChild(tier)
 
         dataDesc.appendChild(annotations)
         doc_header.appendChild(dataDesc)
@@ -348,7 +369,7 @@ class CreateHeaderFile:
         #Close XML file
         f.close()
 
-    def add_annotation(self, loc, fid):
+    def add_annotation(self, loc, fid, parent=None):
         """This method is responsible to add the
         annotations to the list of annotations.
 
@@ -366,7 +387,16 @@ class CreateHeaderFile:
 
         """
 
-        self.annotation_list.append((loc, fid))
+        self.annotation_list.append((loc, fid, parent))
+
+    def add_constraint(self, parent, name, value):
+        """
+
+        ...........................
+
+        """
+
+        self.constraints_list.append((parent, name, value))
 
     def add_change(self, changedate, responsible, item):
         """This method is responsible to add the
