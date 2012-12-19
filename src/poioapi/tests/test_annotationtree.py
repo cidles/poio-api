@@ -183,7 +183,7 @@ class TestAnnotationTree:
         """
 
         search_tier = "utterance"
-        update_tiers = [ "clause unit", "word" ]
+        update_tiers = [ "clause_unit", "word" ]
 
         utterance = "This is an another example, and an annotation"
 
