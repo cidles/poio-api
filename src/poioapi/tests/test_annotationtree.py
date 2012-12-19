@@ -306,7 +306,7 @@ class TestAnnotationTree:
 
         data_hierarchy =\
         [ 'utterance',
-            [ 'clause unit',
+            [ 'clause_unit',
                 [ 'word', 'wfw', 'graid1' ],
               'graid2' ],
           'translation', 'comment' ]
