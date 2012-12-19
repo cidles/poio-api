@@ -49,7 +49,7 @@ def main(argv):
     # Or else the writer doesn't work properly.
 
     search_tier = 'utterance'
-    update_tiers = ['clause unit', 'word']
+    update_tiers = [ 'clause_unit', 'word' ]
 
     annotation_tree.update_elements_with_ranges(search_tier,
         update_tiers)

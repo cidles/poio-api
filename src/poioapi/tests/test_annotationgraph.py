@@ -34,3 +34,11 @@ class TestAnnotationGraph:
 
         expected_nodes = 618
         assert(len(self.annotation_graph.graf.nodes) == expected_nodes)
+
+    def test_get_all_neighbours_for_node(self):
+        filename = os.path.join(os.path.dirname(__file__), "sample_files",
+            "balochi_graf", "balochi.hdr")
+        self.annotation_graph.load_graph_from_graf(filename)
+
+        clause_units = self.annotation_graph.get_all_neighbours_for_node("utterance-n1", "clause unit")
+        assert(clause_units == [ "clause_unit-n1" ])

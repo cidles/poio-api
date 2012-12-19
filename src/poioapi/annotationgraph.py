@@ -53,7 +53,7 @@ class AnnotationGraph():
 
         Returns
         -------
-        e : array_like
+        elements : list
             Return elements of the graph.
 
         """
@@ -70,3 +70,25 @@ class AnnotationGraph():
                 utterance = base_data[region.start:region.end]
         return []
 
+    def get_all_neighbours_for_node(self, node_id, neighbour_type):
+        """Retreive all neighbour annotations for a given nodes. The parameter
+        neighbour_type specifies the type if the neigbours. For example if
+        the node is an utterance the neighbour type "word" specifies that
+        all "word" annotations that are connected to the utterance should
+        be returned. The neighbour type must be a parent or child if the node's
+        type in the data hierarchy.
+
+        Parameters
+        ----------
+        node_id : str
+            The ID of the node to start the search.
+        neighbour_type : str
+            The type of the neighbours to search.
+
+        Returns
+        -------
+        neighbours : list of node ids
+
+        """
+
+        return []
