@@ -13,9 +13,7 @@ Welcome to Poio API's documentation!
    :maxdepth: 2
 
    modules
-   tests
    howto
-
     
 Indices and tables
 ==================

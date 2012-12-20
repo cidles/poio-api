@@ -4,5 +4,6 @@
 dist/
 build/
 doc/_build/
+src/Poio_API.egg-info/
 graf_python.egg-info/
 src/graf_python.egg-info/

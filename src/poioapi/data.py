@@ -28,7 +28,7 @@ else:
 (EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TREEPICKLE) = range(5)
 
 # Data structure types
-(GLOSS, WORDS, GRAID) = range(3)
+(GLOSS, WORDS, GRAID, GRAIDDIANA) = range(4)
 
 class UnknownFileFormatError(Exception): pass
 class NoFileSpecifiedError(Exception): pass
@@ -312,10 +312,43 @@ class DataStructureTypeGraid(DataStructureType):
 
     data_hierarchy_dict = \
     [ 'utterance',
-        [ 'clause unit',
+        [ 'clause_unit',
             [ 'word', 'wfw', 'graid1' ],
           'graid2' ],
       'translation', 'comment' ]
+
+class DataStructureTypeGraidDiana(DataStructureType):
+
+    """
+    Data structure type using a GRAID format.
+
+    Attributes
+    ----------
+    `name` : str
+        Name of the structure.
+    data_hirerarchy : array_like
+        Structure of the array.
+
+    """
+
+    name = "GRAIDDIANA"
+
+    data_hierarchy =\
+    [ 'utterance',
+        [ 'clause_unit',
+            [ 'word',
+                [ 'morpheme',
+                  'gloss'
+                ],
+              'graid1',
+              'graid3'
+            ],
+          'graid2'
+      ],
+      'translation',
+      'ref',
+      'comment'
+    ]
 
 class DataStructureTypeMorphsynt(DataStructureType):
 

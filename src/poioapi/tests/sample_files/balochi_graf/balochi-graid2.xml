@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="clause_unit"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="graid2"/>
+    </annotationSpaces>
+  </graphHeader>
+  <a as="graid2" label="graid2" ref="clause_unit-n0" xml:id="graid2-a0">
+    <fs>
+      <f name="annotation_value">nc</f>
+    </fs>
+  </a>
+  <a as="graid2" label="graid2" ref="clause_unit-n4" xml:id="graid2-a1">
+    <fs>
+      <f name="annotation_value">0:s</f>
+    </fs>
+  </a>
+  <a as="graid2" label="graid2" ref="clause_unit-n6" xml:id="graid2-a2">
+    <fs>
+      <f name="annotation_value">0.h:a</f>
+    </fs>
+  </a>
+</graph>

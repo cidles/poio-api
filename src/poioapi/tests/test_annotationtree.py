@@ -2,10 +2,12 @@
 #
 # Poio Tools for Linguists
 #
-# Copyright (C) 2009-2012 Poio Project
+# Copyright (C) 2009-2013 Poio Project
 # Author: António Lopes <alopes@cidles.eu>
-# URL: <http://www.cidles.eu/ltll/poio>
+# Author: Peter Bouda <pbouda@cidles.eu>
+# URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """This module contains the tests to the class
 AnnotationTree and AnnotationTreeFilter in
 annotationtree.py module.
@@ -24,7 +26,7 @@ from poioapi import annotationtree
 class TestAnnotationTree:
     """
     This class contain the test methods to the
-    class annotation.py.
+    class annotationtree.py.
 
     """
 
@@ -181,7 +183,7 @@ class TestAnnotationTree:
         """
 
         search_tier = "utterance"
-        update_tiers = [ "clause unit", "word" ]
+        update_tiers = [ "clause_unit", "word" ]
 
         utterance = "This is an another example, and an annotation"
 
@@ -304,7 +306,7 @@ class TestAnnotationTree:
 
         data_hierarchy =\
         [ 'utterance',
-            [ 'clause unit',
+            [ 'clause_unit',
                 [ 'word', 'wfw', 'graid1' ],
               'graid2' ],
           'translation', 'comment' ]

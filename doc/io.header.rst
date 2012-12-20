@@ -1,10 +1,9 @@
-==============
-`test_data.py`
-==============
-   
-.. automodule:: test_data
+=================
+poioapi.io.header
+=================
+
+.. automodule:: poioapi.io.header
    :members:
-   :private-members:
 
 Indices and tables
 ==================

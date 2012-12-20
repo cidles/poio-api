@@ -105,7 +105,7 @@ class Writer():
 
         Parameters
         ----------
-        data_hierarchy: array_like
+        data_hierarchy : array_like
             An array with the data structure hierarchy.
         level : int
             Level number of each element of the hierarchy.
@@ -118,7 +118,7 @@ class Writer():
                 self.seek_tags(data_hierarchy[index], level)
             else:
                 level_list = (level,
-                              data_hierarchy[index].replace(' ','_'), 0)
+                              data_hierarchy[index], 0)
                 self.level_map.append(level_list)
 
     def seek_elements(self, elements, data_hierarchy, level):
@@ -151,7 +151,7 @@ class Writer():
                 else:
                     label = data_hierarchy[index]
 
-                label = label.replace(' ', '_')
+                #label = label.replace(' ', '_')
 
                 index_map = 0
                 need_increment = False
@@ -172,28 +172,28 @@ class Writer():
                     need_increment = True
                 else:
                     for item in self.level_map:
-                        if label==item[1]:
+                        if label == item[1]:
                             hierarchy_level = item[0]
                             if index >= 1:
                                 for item in self.level_map:
-                                    if hierarchy_level==item[0]:
+                                    if hierarchy_level == item[0]:
                                         depends_on = item[1]
                                         increment = item[2] - 1
                                         break
                             else:
-                                hierarchy_element = \
-                                self.level_map[index_map-1]
+                                hierarchy_element = self.level_map[index_map-1]
                                 depends_on = hierarchy_element[1]
                                 increment = hierarchy_element[2] - 1
                                 need_increment = True
-                        index_map+=1
+                        index_map += 1
 
                 if element.get('region') is None:
                     self.add_element(label,
                         element.get('annotation'), None, depends_on, increment)
                 else:
                     self.add_element(label,
-                        element.get('annotation'), element.get('region'), depends_on, increment)
+                        element.get('annotation'), element.get('region'),
+                        depends_on, increment)
 
                 # Increment the dependency
                 if need_increment:
@@ -360,6 +360,7 @@ class Writer():
             + str(increment)) # from node
             edge.setAttribute("to", annotation + "-n"
             + str(seg_count)) # to node
+            edge.setAttribute("label", annotation) # label
 
             graph.appendChild(edge)
 
@@ -623,7 +624,7 @@ class Parser():
                 if isinstance(element, list):
                     self.append_element(element, aux_list, depends)
                 else:
-                    element = str(element).replace(' ','_')
+                    element = str(element) # .replace(' ','_')
 
                     if element == self._first_element_hierarchy:
                         aux_list.append({ 'id' : self.annotation_tree
@@ -695,7 +696,7 @@ class Parser():
                             restart = True
                             break
                 else:
-                    element = str(element).replace(' ','_')
+                    element = str(element) # .replace(' ','_')
 
                     for value in self.elements_list:
                         value_changed = value[0].split('-')

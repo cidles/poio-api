@@ -1,10 +1,9 @@
-=========
-`data.py`
-=========
+============
+poioapi.data
+============
    
-.. automodule:: data
+.. automodule:: poioapi.data
    :members:
-   :private-members:
 
 Indices and tables
 ==================

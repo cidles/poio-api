@@ -1,5 +1,5 @@
 ***************
-PoioAPI Modules
+PoioAPI Package
 ***************
    
 .. toctree::
@@ -7,13 +7,14 @@ PoioAPI Modules
 
    data
    annotationtree
-   graf
-   analyzer
-   header
 
-Indices and tables
-==================
+******************
+PoioAPI IO Package
+******************
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 1
+
+   io.graf
+   io.analyzer
+   io.header

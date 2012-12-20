@@ -1,10 +1,9 @@
-===================
-`annotationtree.py`
-===================
+======================
+poioapi.annotationtree
+======================
 
-.. automodule:: annotationtree
+.. automodule:: poioapi.annotationtree
    :members:
-   :private-members:
 
 Indices and tables
 ==================
