@@ -52,6 +52,7 @@ class ElanToGraf:
 
         tier_counter = 0
 
+        self.data_structure_hierarchy = []
         data_structure_basic = []
         constraints = dict()
 
@@ -194,7 +195,6 @@ class ElanToGraf:
         # Close the header file
         self.header.create_header()
 
-        data_final = []
         data_hierarchy_dict = dict()
 
         # Mapping the tiers with the parent
@@ -214,8 +214,7 @@ class ElanToGraf:
             else:
                 data_hierarchy_dict[tier] = child_list
 
-        for dict_elements in data_hierarchy_dict.items():
-            print(dict_elements)
+        tiers_gray_list = []
 
         # Creating the final data_structure_hierarchy
         for strc_elements in data_structure_basic:
@@ -225,12 +224,22 @@ class ElanToGraf:
                 elements = dict_elements[1]
                 if key == tier:
                     if elements is None:
-                        data_final.append(key)
+                        if not key in tiers_gray_list:
+                            self.data_structure_hierarchy.append(key)
                     else:
-                        data_final.append([key, elements])
+                        auxiliar_list = []
+                        for element in elements:
+                            for dict_elts in data_hierarchy_dict.items():
+                                if dict_elts[0] == element:
+                                    if dict_elts[1] is not None:
+                                        auxiliar_list.append([element,dict_elts[1]])
+                                    else:
+                                        auxiliar_list.append(element)
+                                    tiers_gray_list.append(element)
+                                    break
 
-        print(data_final)
-
+                        if not key in tiers_gray_list:
+                            self.data_structure_hierarchy.append([key, auxiliar_list])
         return graph
 
     def graf_render(self, outputfile, graph):
