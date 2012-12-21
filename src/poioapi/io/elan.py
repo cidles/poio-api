@@ -20,8 +20,8 @@ import re
 import codecs
 
 from xml.dom import minidom
-from poioapi.io import header
 
+from poioapi.io import header
 from poioapi.io.analyzer import XmlContentHandler
 
 from graf import Graph, GrafRenderer
@@ -52,7 +52,7 @@ class ElanToGraf:
 
         tier_counter = 0
 
-        data_structure = []
+        data_structure_basic = []
         constraints = dict()
 
         # Mandatory to give an author to the file
@@ -101,6 +101,16 @@ class ElanToGraf:
                 linguistic_type_ref = [x for x in node_attributes
                                        if 'LINGUISTIC_TYPE_REF - ' in
                                           x][0].split(' - ')[1]
+
+                try:
+                    parent_ref = [x for x in node_attributes
+                                           if 'PARENT_REF - ' in
+                                              x][0].split(' - ')[1]
+                except IndexError as indexError:
+                    parent_ref = None
+
+                if not tier_id in data_structure_basic:
+                    data_structure_basic.append((tier_id, parent_ref))
 
                 if not tier_id in self.header.annotation_list:
                     self.header.add_annotation(self.filename, tier_id)
@@ -183,6 +193,43 @@ class ElanToGraf:
 
         # Close the header file
         self.header.create_header()
+
+        data_final = []
+        data_hierarchy_dict = dict()
+
+        # Mapping the tiers with the parent
+        # references (Dependencies)
+        for strc_elements in data_structure_basic:
+            tier = strc_elements[0]
+            empty_parents = True
+            child_list = []
+            for parents in data_structure_basic:
+                parent = parents[1]
+                if tier == parent:
+                    child_list.append(parents[0])
+                    empty_parents = False
+
+            if empty_parents:
+                data_hierarchy_dict[tier] = None
+            else:
+                data_hierarchy_dict[tier] = child_list
+
+        for dict_elements in data_hierarchy_dict.items():
+            print(dict_elements)
+
+        # Creating the final data_structure_hierarchy
+        for strc_elements in data_structure_basic:
+            tier = strc_elements[0]
+            for dict_elements in data_hierarchy_dict.items():
+                key = dict_elements[0]
+                elements = dict_elements[1]
+                if key == tier:
+                    if elements is None:
+                        data_final.append(key)
+                    else:
+                        data_final.append([key, elements])
+
+        print(data_final)
 
         return graph
 
