@@ -40,7 +40,7 @@ class CreateHeaderFile:
 
         self.basedirname = basedirname
         self.annotation_list = []
-        self.constraints_list = []
+        self.annotation_list_attributes = []
         self.version = '1.0.0'
         self.filename = ''
         self.primaryfile = ''
@@ -311,27 +311,27 @@ class CreateHeaderFile:
             annotation = doc.createElement("annotation") # Required
             annotation.setAttribute("loc",ann[0]) # Required
             annotation.setAttribute("f.id",ann[1]) # Required
-
-            # Add a parent node of the data hierarchy
-            if ann[2] is not None:
-                annotation.setAttribute("parent",ann[2]) # Required
-
             annotations.appendChild(annotation)
 
-            # Add the constraints
-            if len(self.constraints_list) is not 0:
-                tier = doc.createElement("tier")
-                value = None
-                for constraint in self.constraints_list:
-                    if constraint[0]==ann[1]:
-                        constraint_node = doc.createElement("constraint")
-                        constraint_node.setAttribute("name",constraint[1])
-                        value = doc.createTextNode(constraint[2])
-                        constraint_node.appendChild(value)
-                        tier.appendChild(constraint_node)
+            # Add the annotations attributes
+            if len(self.annotation_list_attributes) is not 0:
+                for attributes in self.annotation_list_attributes:
+                    if attributes[0]==ann[1]:
+                        if attributes[1]=='linguistic_type':
+                            linguistic_node = doc.\
+                            createElement('linguistic_type')
+                            annotation.appendChild(linguistic_node)
 
-                if value is not None:
-                    annotation.appendChild(tier)
+                        for attribute in attributes[2]:
+                            node_name = attribute.split(' - ')[0]
+                            node_value = attribute.split(' - ')[1]
+                            node_child = doc.createElement(node_name.lower())
+                            value = doc.createTextNode(node_value)
+                            node_child.appendChild(value)
+                            if attributes[1]=='linguistic_type':
+                                linguistic_node.appendChild(node_child)
+                            else:
+                                annotation.appendChild(node_child)
 
         dataDesc.appendChild(annotations)
         doc_header.appendChild(dataDesc)
@@ -369,7 +369,7 @@ class CreateHeaderFile:
         #Close XML file
         f.close()
 
-    def add_annotation(self, loc, fid, parent=None):
+    def add_annotation(self, loc, fid):
         """This method is responsible to add the
         annotations to the list of annotations.
 
@@ -387,16 +387,24 @@ class CreateHeaderFile:
 
         """
 
-        self.annotation_list.append((loc, fid, parent))
+        self.annotation_list.append((loc, fid))
 
-    def add_constraint(self, parent, name, value):
+    def add_annotation_attributes(self, parent, type, values_list):
+        """This method is responsible to add the
+        annotations attribute values to a list.
+
+        Parameters
+        ----------
+        parent : str
+            Referes to what annotation the attributes belong.
+        type : str
+            The type of attribues.
+        type : array-like
+            Array that contains the values of the attributes.
+
         """
 
-        ...........................
-
-        """
-
-        self.constraints_list.append((parent, name, value))
+        self.annotation_list_attributes.append((parent, type, values_list))
 
     def add_change(self, changedate, responsible, item):
         """This method is responsible to add the

@@ -60,9 +60,7 @@ class ElanToGraf:
         self.header.filename = self.filename.split('.eaf')[0]
         self.header.primaryfile = self.filename
 
-        for element in parser.elan_map:
-
-            print(element)
+        for element in parser.elan_list:
 
             # Common to all the nodes
             node_attributes = element[1]
@@ -104,30 +102,19 @@ class ElanToGraf:
                                        if 'LINGUISTIC_TYPE_REF - ' in
                                           x][0].split(' - ')[1]
 
-                try:
-                    parent_ref = [x for x in node_attributes if
-                                  'PARENT_REF - ' in x][0].split(' - ')[1]
-                except IndexError as indexError:
-                    parent_ref = None
-
                 if not tier_id in self.header.annotation_list:
-                    self.header.add_annotation(self.filename, tier_id, parent_ref)
-                    for linguistic_type in parser.linguistic_type:
+                    self.header.add_annotation(self.filename, tier_id)
+                    self.header.add_annotation_attributes(tier_id,
+                        'tier', node_attributes)
+                    for linguistic_type in parser.linguistic_type_list:
                         linguistic_type_id = [x for x in linguistic_type
-                                               if 'LINGUISTIC_TYPE_ID - ' in
-                                                  x][0].split(' - ')[1]
+                                              if 'LINGUISTIC_TYPE_ID - ' in
+                                                 x][0].split(' - ')[1]
 
-                        try:
-                            constraint = [x for x in linguistic_type
-                                                  if 'CONSTRAINTS - ' in
-                                                     x][0].split(' - ')[1]
-                        except IndexError as indexError:
-                            constraint = None
-
-                        if constraint is not None and \
-                           linguistic_type_ref == linguistic_type_id:
-                            self.header.add_constraint(tier_id,
-                                linguistic_type_ref, constraint)
+                        if linguistic_type_ref == linguistic_type_id:
+                            self.header.add_annotation_attributes(tier_id,
+                                'linguistic_type', linguistic_type)
+                            break
 
             if element[0] == 'ALIGNABLE_ANNOTATION':
                 # Anchors for the regions

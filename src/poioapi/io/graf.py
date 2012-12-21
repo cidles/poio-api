@@ -51,7 +51,7 @@ class Writer():
 
         """
 
-        self.data_structure_type = self.annotation_tree.data_structure_type
+        self.data_hierarchy = self.annotation_tree.data_structure_type.data_hierarchy_dict
 
         # Creates the raw file
         self.create_raw_file()
@@ -62,7 +62,7 @@ class Writer():
         self.header.primaryfile = os.path.basename(self.basedirname)+".txt"
 
         # Map the elements in the data structure type
-        self.seek_tags(self.data_structure_type.data_hierarchy, 0)
+        self.seek_tags(self.data_hierarchy, 0)
 
         # Map that will contain the xml contexts
         self.xml_files_content = dict((hierarchy[1],None)
@@ -80,7 +80,7 @@ class Writer():
                 previous_region_value = len(element[0].get('annotation'))
 
             self.seek_elements(element,
-                self.data_structure_type.data_hierarchy, 0)
+                self.data_hierarchy, 0)
 
         # Close the header file
         self.header.create_header()
@@ -510,7 +510,7 @@ class Parser():
 
         # Initialize the variable
         data_hierarchy = self.annotation_tree.data_structure_type\
-        .data_hierarchy
+        .data_hierarchy_dict
 
         # Read header file
         doc_header = minidom.parse(self.filepath)
@@ -540,8 +540,8 @@ class Parser():
             content = XmlContentHandler(self.dirname+'/'+file[1])
             content.parse()
 
-            features_map = content.features_map
-            tokens_map = content.tokens_map
+            features_map = content.features_list
+            tokens_map = content.tokens_list
 
             features_list.append(features_map)
             tokens_list.append(tokens_map)
@@ -646,7 +646,8 @@ class Parser():
                                 break
 
                         if empty_element:
-                            aux_list.append((element, ''))
+                            aux_list.append({ 'id' : self.annotation_tree.
+                            next_annotation_id,'annotation' : ''})
 
                         if element == self._last_element_hierarchy:
                             reach_end = True

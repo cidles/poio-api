@@ -24,10 +24,10 @@ class XmlHandler(ContentHandler):
     """
 
     def __init__(self):
-        self.tokenizer = []
-        self.token_id = []
-        self.tokens_map = []
-        self.features_map = []
+        self.tokenizer_list = []
+        self.token_id_list = []
+        self.tokens_list = []
+        self.features_list = []
         self.link = ''
         self.edge_from = ''
         self.map = {}
@@ -35,12 +35,12 @@ class XmlHandler(ContentHandler):
         self._root_element = 0
         self._buffer = ""
         self.hasregion = False
-        self.elan_map = []
+        self.elan_list = []
         self.tier_id = ''
         self.cv_id = ''
         self.time_slot_dict = dict()
-        self.constraints = []
-        self.linguistic_type = []
+        self.constraints_list = []
+        self.linguistic_type_list = []
 
     def startElement(self, name, attrs):
         """Method from ContentHandler Class.
@@ -68,13 +68,13 @@ class XmlHandler(ContentHandler):
             tokenizer = att.split()
             values = (id, tokenizer,
                       self.edge_from)
-            self.tokens_map.append(values)
+            self.tokens_list.append(values)
             self.hasregion = True
 
             # Need to write the regions
             id = id.split('-r')
-            self.tokenizer.append(tokenizer)
-            self.token_id.append(id[1])
+            self.tokenizer_list.append(tokenizer)
+            self.token_id_list.append(id[1])
 
         if name == 'edge':
             self.edge_from = attrs.getValue('from')
@@ -99,7 +99,7 @@ class XmlHandler(ContentHandler):
                     self.cv_id = attrs.getValue(attr_name)
                 value = attr_name + " - " + attrs.getValue(attr_name)
                 values_list.append(value)
-            self.elan_map.append((name, values_list))
+            self.elan_list.append((name, values_list))
         elif name == 'ALIGNABLE_ANNOTATION' or name == 'REF_ANNOTATION' or name == 'CV_ENTRY':
             if name == 'CV_ENTRY':
                 depends = "DEPENDS - " + self.cv_id
@@ -109,7 +109,7 @@ class XmlHandler(ContentHandler):
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
                 values_list.append(value)
-            self.elan_map.append((name, values_list, depends))
+            self.elan_list.append((name, values_list, depends))
         elif name == 'TIME_SLOT':
             key = ''
             key_entry = ''
@@ -127,19 +127,19 @@ class XmlHandler(ContentHandler):
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
                 values_list.append(value)
-            self.constraints.append(values_list)
+            self.constraints_list.append(values_list)
         elif name == 'LINGUISTIC_TYPE':
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
                 values_list.append(value)
-            self.linguistic_type.append(values_list)
+            self.linguistic_type_list.append(values_list)
         else:
             for attr_name in attrs.getNames():
                 value = attr_name + " - " + attrs.getValue(attr_name)
                 values_list.append(value)
 
             if len(values_list) is not 0:
-                self.elan_map.append((name, values_list))
+                self.elan_list.append((name, values_list))
 
     def characters (self, ch):
         self.map[self.tag] += ch
@@ -153,12 +153,12 @@ class XmlHandler(ContentHandler):
             values = self.values
             id = values[0]
             ref = values[1]
-            self.features_map.append((id, self.map[name], ref))
+            self.features_list.append((id, self.map[name], ref))
 
         if name=='ANNOTATION_VALUE' or name=='CV_ENTRY':
-            tuple_value = self.elan_map[-1]
+            tuple_value = self.elan_list[-1]
             tuple_value = tuple_value + ("VALUE - " + self.map[name], )
-            self.elan_map[-1] = tuple_value
+            self.elan_list[-1] = tuple_value
 
 class XmlContentHandler:
     """
@@ -178,10 +178,6 @@ class XmlContentHandler:
 
         """
 
-        self.tokenizer = []
-        self.token_id = []
-        self.features_map = []
-        self.tokens_map = []
         self.metafile = metafile
 
     def parse(self):
@@ -206,11 +202,11 @@ class XmlContentHandler:
 
         f.close()
 
-        self.tokenizer = xml_handler.tokenizer
-        self.token_id = xml_handler.token_id
-        self.features_map = xml_handler.features_map
-        self.tokens_map = xml_handler.tokens_map
-        self.elan_map = xml_handler.elan_map
+        self.tokenizer_list = xml_handler.tokenizer_list
+        self.token_id_list = xml_handler.token_id_list
+        self.features_list = xml_handler.features_list
+        self.tokens_list = xml_handler.tokens_list
+        self.elan_list = xml_handler.elan_list
         self.time_slot_dict = xml_handler.time_slot_dict
-        self.constraints = xml_handler.constraints
-        self.linguistic_type = xml_handler.linguistic_type
+        self.constraints_list = xml_handler.constraints_list
+        self.linguistic_type_list = xml_handler.linguistic_type_list

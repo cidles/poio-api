@@ -390,11 +390,11 @@ class DataStructureTypeWithConstraints(DataStructureType):
     name = "GRAID"
 
     data_hierarchy_dict =\
-        { 'utterance',
-          [ 'clause unit' : { "constraints" : "Included_In" } ,
+        [ 'utterance',
+          [ 'clause unit',
         [ 'word', 'wfw', 'graid1' ],
     'graid2' ],
-    'translation', 'comment' }
+    'translation', 'comment' ]
 
     tier = dict()
     tier["utterance"] = None
