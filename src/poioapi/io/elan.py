@@ -236,14 +236,23 @@ class ElanToGraf:
         return graph
 
     def _create_data_structure(self, data_structure_basic):
+        """This method will create the data structure hierarchy
+        based on the tiers from the elan file.
+
+        Returns
+        -------
+        data_structure_hierarchy: array-like
+            Array with the tiers arrange by the correct order.
+
+        """
 
         data_structure_hierarchy = []
         data_hierarchy_dict = dict()
 
         # Mapping the tiers with the parent
         # references (Dependencies)
-        for strc_elements in data_structure_basic:
-            tier = strc_elements[0]
+        for structure_element in data_structure_basic:
+            tier = structure_element[0]
             empty_parents = True
             child_list = []
             for parents in data_structure_basic:
@@ -257,11 +266,13 @@ class ElanToGraf:
             else:
                 data_hierarchy_dict[tier] = child_list
 
+        # List that will help to filter which elements in
+        # data structure were appended
         tiers_gray_list = []
 
         # Creating the final data_structure_hierarchy
-        for strc_elements in data_structure_basic:
-            tier = strc_elements[0]
+        for structure_element in data_structure_basic:
+            tier = structure_element[0]
             for dict_elements in data_hierarchy_dict.items():
                 key = dict_elements[0]
                 elements = dict_elements[1]
@@ -287,6 +298,20 @@ class ElanToGraf:
         return data_structure_hierarchy
 
     def graph_rendering(self, outputfile, graph):
+        """This method will convert a GrAF object to a
+        Xml files respecting GrAF standards.
+        To use the rendering is need to install the
+        Graf-Python Library,
+
+        Returns
+        -------
+        outputfile: str
+            Path to the outputfile with the renderer GrAF.
+        graph: object
+            GrAF object.
+
+
+        """
 
         graf_render = GrafRenderer(outputfile+"_tmp")
         graf_render.render(graph)
