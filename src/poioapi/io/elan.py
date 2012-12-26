@@ -36,14 +36,40 @@ class ElanToGraf:
     """
 
     def __init__(self, filepath):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        filepath: str
+            Path of the elan file.
+
+        """
+
         self.filename = os.path.basename(filepath)
         self.filepath = filepath
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
         # Create the header file
         self.header = header.CreateHeaderFile(self.basedirname)
+        self.data_structure_hierarchy = []
 
     def elan_to_graf(self):
+        """This method will recieve the parsed elements
+        of an elan file. Then will create a GrAF object
+        based in the information from the parsed elements.
+        This method will also create the data structure
+        hierarchy and theirs respective constraints.
+
+        Returns
+        -------
+        graph: object
+            GrAF object.
+
+        See Also
+        --------
+        _create_data_structure
+
+        """
 
         graph = Graph()
 
@@ -52,9 +78,8 @@ class ElanToGraf:
 
         tier_counter = 0
 
-        self.data_structure_hierarchy = []
         data_structure_basic = []
-        constraints = dict()
+        constraints_dict = dict()
 
         # Mandatory to give an author to the file
         self.header.author = 'CIDLeS'
@@ -125,6 +150,15 @@ class ElanToGraf:
                         if linguistic_type_ref == linguistic_type_id:
                             self.header.add_annotation_attributes(tier_id,
                                 'linguistic_type', linguistic_type)
+                            try:
+                                constraint = [x for x in linguistic_type
+                                              if 'CONSTRAINTS - ' in
+                                                 x][0].split(' - ')[1]
+                            except IndexError as indexError:
+                                constraint = None
+
+                            constraints_dict[tier_id] = constraint
+
                             break
 
             if element[0] == 'ALIGNABLE_ANNOTATION':
@@ -195,6 +229,15 @@ class ElanToGraf:
         # Close the header file
         self.header.create_header()
 
+        # Create the data structure hierarchy based on the elan tiers
+        self.data_structure_hierarchy = \
+        self._create_data_structure(data_structure_basic)
+
+        return graph
+
+    def _create_data_structure(self, data_structure_basic):
+
+        data_structure_hierarchy = []
         data_hierarchy_dict = dict()
 
         # Mapping the tiers with the parent
@@ -239,10 +282,11 @@ class ElanToGraf:
                                     break
 
                         if not key in tiers_gray_list:
-                            self.data_structure_hierarchy.append([key, auxiliar_list])
-        return graph
+                            data_structure_hierarchy.append([key, auxiliar_list])
 
-    def graf_render(self, outputfile, graph):
+        return data_structure_hierarchy
+
+    def graph_rendering(self, outputfile, graph):
 
         graf_render = GrafRenderer(outputfile+"_tmp")
         graf_render.render(graph)

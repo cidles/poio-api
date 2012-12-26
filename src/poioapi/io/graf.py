@@ -30,8 +30,10 @@ class Writer():
 
         Parameters
         ----------
-        filepath : str
-            Path of the file to manipulate.
+        annotation_tree: array-like
+            Tree array like with the elements to write to graf.
+        header_file: str
+            Path of the header file or resulting output file.
 
         """
 
@@ -41,7 +43,7 @@ class Writer():
         # Create the header file
         self.header = header.CreateHeaderFile(self.basedirname)
 
-        self.level_map = []
+        self.hierarchy_level_list = []
         self.annotation_tree = annotation_tree
         self.xml_files_list = []
         self.xml_files_content = {}
@@ -62,11 +64,11 @@ class Writer():
         self.header.primaryfile = os.path.basename(self.basedirname)+".txt"
 
         # Map the elements in the data structure type
-        self.seek_tags(self.data_hierarchy, 0)
+        self._find_hiearchy_levels(self.data_hierarchy, 0)
 
         # Map that will contain the xml contexts
         self.xml_files_content = dict((hierarchy[1],None)
-            for hierarchy in self.level_map)
+            for hierarchy in self.hierarchy_level_list)
 
         self.last_region_value = 0
         previous_region_value = 0
@@ -79,7 +81,7 @@ class Writer():
             else:
                 previous_region_value = len(element[0].get('annotation'))
 
-            self.seek_elements(element,
+            self.obtain_elements(element,
                 self.data_hierarchy, 0)
 
         # Close the header file
@@ -97,8 +99,8 @@ class Writer():
                         f.write(value[1].toprettyxml('  '))
                 f.close()
 
-    def seek_tags(self, data_hierarchy, level):
-        """This method will fill a map with the
+    def _find_hiearchy_levels(self, data_hierarchy, level):
+        """This method will fill a list with the
         data structure elements. This map will
         be used to help to search in the correct
         level the correct values.
@@ -115,13 +117,13 @@ class Writer():
         level+=1
         for index in range(len(data_hierarchy)):
             if isinstance(data_hierarchy[index],list):
-                self.seek_tags(data_hierarchy[index], level)
+                self._find_hiearchy_levels(data_hierarchy[index], level)
             else:
                 level_list = (level,
                               data_hierarchy[index], 0)
-                self.level_map.append(level_list)
+                self.hierarchy_level_list.append(level_list)
 
-    def seek_elements(self, elements, data_hierarchy, level):
+    def obtain_elements(self, elements, data_hierarchy, level):
         """This method will search the for the values of
         each element of the Annotation Tree and create
         the respective node to the GrAF file.
@@ -142,23 +144,21 @@ class Writer():
         for element in elements:
             if isinstance(element, list):
                 if isinstance(data_hierarchy[index], list):
-                    self.seek_elements(element, data_hierarchy[index], level)
+                    self.obtain_elements(element, data_hierarchy[index], level)
                 else:
-                    self.seek_elements(element, data_hierarchy, level)
+                    self.obtain_elements(element, data_hierarchy, level)
             else:
                 if isinstance(data_hierarchy[index], list):
                     label = data_hierarchy[index + 1]
                 else:
                     label = data_hierarchy[index]
 
-                #label = label.replace(' ', '_')
-
                 index_map = 0
                 need_increment = False
 
                 # Get first element of hierarchy
                 if level == 1 and index >= 1:
-                    hierarchy_element = self.level_map[0]
+                    hierarchy_element = self.hierarchy_level_list[0]
                     depends_on = hierarchy_element[1]
                     increment = hierarchy_element[2] - 1
 
@@ -167,21 +167,21 @@ class Writer():
 
                 elif level == 1:
                     depends_on = ''
-                    hierarchy_element = self.level_map[0]
+                    hierarchy_element = self.hierarchy_level_list[0]
                     increment = hierarchy_element[2] - 1
                     need_increment = True
                 else:
-                    for item in self.level_map:
+                    for item in self.hierarchy_level_list:
                         if label == item[1]:
                             hierarchy_level = item[0]
                             if index >= 1:
-                                for item in self.level_map:
+                                for item in self.hierarchy_level_list:
                                     if hierarchy_level == item[0]:
                                         depends_on = item[1]
                                         increment = item[2] - 1
                                         break
                             else:
-                                hierarchy_element = self.level_map[index_map-1]
+                                hierarchy_element = self.hierarchy_level_list[index_map-1]
                                 depends_on = hierarchy_element[1]
                                 increment = hierarchy_element[2] - 1
                                 need_increment = True
@@ -197,10 +197,10 @@ class Writer():
 
                 # Increment the dependency
                 if need_increment:
-                    for idx, item in enumerate(self.level_map):
+                    for idx, item in enumerate(self.hierarchy_level_list):
                         if item[1] == label:
                             new_value = item[2] + 1
-                            self.level_map[idx] = (item[0], item[1],
+                            self.hierarchy_level_list[idx] = (item[0], item[1],
                                                    new_value)
                             need_increment = False
                             break
@@ -230,14 +230,9 @@ class Writer():
 
         See Also
         --------
-        seek_elements
+        obtain_elements
 
         """
-
-        for item in self.level_map:
-            if annotation==item[1]:
-                level = item[0]
-                break
 
         filepath = self.basedirname + '-' + annotation + '.xml'
         new_file = False
@@ -249,7 +244,7 @@ class Writer():
             doc = self.xml_files_content[annotation]
 
         if new_file:
-            doc = self.create_graf_header(annotation, depends)
+            doc = self.create_xml_graf_header(annotation, depends)
 
             self.header.add_annotation(os.path.basename(filepath),annotation)
 
@@ -406,7 +401,7 @@ class Writer():
 
         return doc
 
-    def create_graf_header(self, annotation, depends):
+    def create_xml_graf_header(self, annotation, depends):
         """Create the header of the Xml document.
 
         annotation: str
@@ -697,7 +692,7 @@ class Parser():
                             restart = True
                             break
                 else:
-                    element = str(element) # .replace(' ','_')
+                    element = str(element)
 
                     for value in self.elements_list:
                         value_changed = value[0].split('-')
@@ -735,7 +730,15 @@ class Parser():
 
         f = codecs.open(self.basedirname+'-graf.xml','w','utf-8')
 
-        doc = self._create_graf_header()
+        graph = doc.createElement("graph")
+        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
+        doc.appendChild(graph)
+
+        # Header
+        graphheader = doc.createElement("graphHeader")
+        labelsdecl = doc.createElement("labelsDecl")
+        graphheader.appendChild(labelsdecl)
+        graph.appendChild(graphheader)
 
         graph = doc.getElementsByTagName('graph').item(0)
         for ann in annotation_list:
@@ -808,6 +811,11 @@ class Parser():
         label : str
             Name of the tag to find.
 
+        Returns
+        -------
+        doc : xml
+            Xml document.
+
         """
 
         # Update the occurs of wich label
@@ -817,26 +825,3 @@ class Parser():
                 value+=1
                 node.setAttribute('occurs',str(value))
                 return doc
-
-    def _create_graf_header(self):
-        """Create the header of the Xml document.
-
-        Returns
-        -------
-        doc : xml
-            Xml document.
-
-        """
-
-        doc = Document()
-        graph = doc.createElement("graph")
-        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
-        doc.appendChild(graph)
-
-        # Header
-        graphheader = doc.createElement("graphHeader")
-        labelsdecl = doc.createElement("labelsDecl")
-        graphheader.appendChild(labelsdecl)
-        graph.appendChild(graphheader)
-
-        return doc
