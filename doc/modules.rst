@@ -16,5 +16,6 @@ PoioAPI IO Package
    :maxdepth: 1
 
    io.graf
+   io.elan
    io.analyzer
    io.header

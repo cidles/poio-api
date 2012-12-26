@@ -43,18 +43,6 @@ class XmlHandler(ContentHandler):
         self.linguistic_type_list = []
 
     def startElement(self, name, attrs):
-        """Method from ContentHandler Class.
-
-        Need each line of the xml file.
-
-        Parameters
-        ----------
-        `name` : str
-            Name of the tag.
-        attrs : SAX type
-            Instance of a line of the xml.
-
-        """
 
         self.map[name] = ''
         self.tag = name
