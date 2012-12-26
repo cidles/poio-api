@@ -12,10 +12,10 @@ some of the elements of an
 AnnotationTree.
 """
 
+import pickle
+
 from poioapi import annotationtree
 from poioapi import data
-
-import pickle
 
 # Initialize the variable
 annotation_tree = annotationtree.AnnotationTree(data.GLOSS)

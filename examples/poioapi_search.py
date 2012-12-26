@@ -11,12 +11,12 @@ how to use the PoioAPI and search
 some of the elements in an AnnotationTree.
 """
 
+import copy
+import pickle
+
 from poioapi import corpus
 from poioapi import annotationtree
 from poioapi import data
-
-import copy
-import pickle
 
 # Initialize the variable
 annotation_tree = annotationtree.AnnotationTree(data.GLOSS)
