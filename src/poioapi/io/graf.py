@@ -57,7 +57,7 @@ class Writer():
         self.data_hierarchy = self.annotation_tree.data_structure_type.data_hierarchy_dict
 
         # Creates the raw file
-        self.create_raw_file()
+        self._create_raw_file()
 
         # Mandatory to give an author to the file
         self.header.author = 'CIDLeS'
@@ -452,14 +452,9 @@ class Writer():
 
         return document
 
-    def create_raw_file(self):
+    def _create_raw_file(self):
         """Creates an txt file with the data in the
         Annotation Tree file. Passing only the sentences.
-
-        See Also
-        --------
-        create_raw_xml : Function the converts the data
-        to an xml only with the regions.
 
         """
 
