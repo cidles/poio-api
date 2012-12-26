@@ -40,7 +40,7 @@ class ElanToGraf:
 
         Parameters
         ----------
-        filepath: str
+        filepath : str
             Path of the elan file.
 
         """
@@ -62,7 +62,7 @@ class ElanToGraf:
 
         Returns
         -------
-        graph: object
+        graph : object
             GrAF object.
 
         See Also
@@ -239,9 +239,14 @@ class ElanToGraf:
         """This method will create the data structure hierarchy
         based on the tiers from the elan file.
 
+        Parameters
+        ----------
+        data_structure_basic : array_like
+            Array with the tiers not order.
+
         Returns
         -------
-        data_structure_hierarchy: array-like
+        data_structure_hierarchy: array_like
             Array with the tiers arrange by the correct order.
 
         """
@@ -303,13 +308,12 @@ class ElanToGraf:
         To use the rendering is need to install the
         Graf-Python Library,
 
-        Returns
-        -------
-        outputfile: str
+        Parameters
+        ----------
+        outputfile : str
             Path to the outputfile with the renderer GrAF.
-        graph: object
+        graph : object
             GrAF object.
-
 
         """
 
