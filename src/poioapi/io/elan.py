@@ -13,12 +13,14 @@ access the data via tree, which also contains the
 original .eaf IDs. Because of this EafTrees are
 read-/writeable.
 """
+from _elementtree import ElementTree
 
 import os
 import re
 import codecs
 
 from xml.dom import minidom
+from xml.etree.ElementTree import Element, SubElement
 
 from poioapi.io import header
 from poioapi.io.analyzer import XmlContentHandler
@@ -51,6 +53,9 @@ class ElanToGraf:
         # Create the header file
         self.header = header.CreateHeaderFile(self.basedirname)
         self.data_structure_hierarchy = []
+
+        self.xml_files_list = []
+        self.xml_files_map = {}
 
     def elan_to_graf(self):
         """This method will recieve the parsed elements
@@ -91,6 +96,7 @@ class ElanToGraf:
             node_attributes = element[1]
 
             add_annotation_space = False
+            only_have_annotations = True
 
             if element[0] == 'TIER':
 
@@ -160,7 +166,32 @@ class ElanToGraf:
 
                             break
 
+                if not any([key for key in self.xml_files_map.keys()
+                            if tier_id in key]):
+
+                    # Creates the Xml Header (graphHeader)
+                    element_tree = Element('graph',
+                            {'xmlns':'http://www.xces.org/ns/GrAF/1.0/'})
+                    graph_header = SubElement(element_tree,
+                        'graphHeader')
+                    labels_declaration = SubElement(graph_header,
+                        'labelsDecl')
+                    dependencies = SubElement(graph_header,
+                        'dependencies')
+                    if parent_ref is not None:
+                        dependes_on = SubElement(dependencies,
+                            'dependsOn', {'f.id':parent_ref})
+                    annotation_spaces = SubElement(graph_header,
+                        'annotationSpaces')
+                    annotation_space = SubElement(annotation_spaces,
+                        'annotationSpace',{'as.id':linguistic_type_ref})
+
+                    # Add the element in a map that will contains the elements
+                    # of each tier
+                    self.xml_files_map[tier_id] = element_tree
+
             if element[0] == 'ALIGNABLE_ANNOTATION':
+
                 # Anchors for the regions
                 anchors = node_attributes
                 anchor_1 = anchors[1].split(' - ')
@@ -200,6 +231,7 @@ class ElanToGraf:
                 graph.nodes.add(node)
 
                 add_annotation_space = True
+                only_have_annotations = False
 
             if element[0] == 'REF_ANNOTATION':
                 # Annotation
@@ -220,10 +252,27 @@ class ElanToGraf:
                 add_annotation_space = True
 
             if add_annotation_space:
+
+                # Adding elements to Xml file
+                if not only_have_annotations:
+                    graph_node = SubElement(element_tree, 'node')
+                    link = SubElement(graph_node, 'link', {'targets':node_id})
+                    edge = SubElement(element_tree, 'edge', {'from':from_node.id,
+                                                           'to': node_id ,
+                                                           'xml:id':edge_id})
+                    region = SubElement(element_tree, 'region',
+                            {'anchors':anchor_1+" "+anchor_2,'xml:id':region_id})
+
                 annotation_space = AnnotationSpace(linguistic_type_ref)
                 annotation_space.add(annotation)
 
                 graph.annotation_spaces.add(annotation_space)
+
+                graph_annotation = SubElement(element_tree, 'a',
+                        {'as':linguistic_type_ref,
+                         'label':linguistic_type_ref,
+                         'ref':node_id,
+                         'xml:id':annotation.id})
 
         # Close the header file
         self.header.create_header()
@@ -232,7 +281,25 @@ class ElanToGraf:
         self.data_structure_hierarchy = \
         self._create_data_structure(data_structure_basic)
 
+        self._create_graf_files()
+
         return graph
+
+    def _create_graf_files(self):
+        """This method will create the GrAF Xml files.
+        But first is need to create the GrAF object in
+        order to get the values.
+
+        """
+
+        for tree_element in self.xml_files_map.items():
+            tier_name = tree_element[0]
+            filepath = self.basedirname+"-"+tier_name+".xml"
+            file = open(filepath,'wb')
+            element_tree = tree_element[1]
+            ElementTree(element_tree).write(file,
+                encoding="UTF-8",xml_declaration=True)
+            file.close()
 
     def _create_data_structure(self, data_structure_basic):
         """This method will create the data structure hierarchy
@@ -274,6 +341,7 @@ class ElanToGraf:
         # data structure were appended
         tiers_gray_list = []
 
+
         # Creating the final data_structure_hierarchy
         for structure_element in data_structure_basic:
             tier = structure_element[0]
@@ -301,10 +369,6 @@ class ElanToGraf:
 
         return data_structure_hierarchy
 
-    def create_nodes(self):
-
-        return None
-
     def graph_rendering(self, outputfile, graph):
         """This method will convert a GrAF object to a
         Xml files respecting GrAF standards.
@@ -331,5 +395,3 @@ class ElanToGraf:
 
         # Delete the temp file
         os.remove(outputfile+"_tmp")
-
-
