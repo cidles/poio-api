@@ -5,14 +5,13 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-
 """This module contains classes to access Elan data.
-
 The class Eaf is a low level API to .eaf files.
 
-EafGlossTree, EafPosTree, etc. are the classes to access the data via
-tree, which also contains the original .eaf IDs. Because of this
-EafTrees are read-/writeable.
+EafGlossTree, EafPosTree, etc. are the classes to
+access the data via tree, which also contains the
+original .eaf IDs. Because of this EafTrees are
+read-/writeable.
 """
 
 import os
