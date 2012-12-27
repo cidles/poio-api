@@ -251,64 +251,13 @@ class Writer():
 
         if annotation_value is not '':
             if region is None and depends is not '':
-                document = self.create_dependent_node(document, graph,
+                document = self.create_node_annotation(document, graph,
                     annotation, annotation_value, depends, increment)
             else:
                 document = self.create_node_region(document, graph, depends, annotation,
                     annotation_value, region, increment)
 
         self.xml_files_map[annotation] = document
-
-    def create_dependent_node(self, document, graph, annotation,
-                              annotation_value, depends, depends_number):
-        """Create nodes that only have annotation
-        and dependencies.
-
-        Parameters
-        ----------
-        document : xml
-            Xml document.
-        graph : node
-            Main node of the Xml document.
-        annotation : str
-            Name of the annotation.
-        annotation_value : str
-            Value of the annotation.
-        depends : str
-            Name of the node that the element belongs to.
-        depends_number : int
-            It is the number node of the value.
-
-        Returns
-        -------
-        document : xml
-            Xml document.
-
-        """
-
-        id_counter = len(document.getElementsByTagName('a'))
-
-        # Creating the features and the linkage
-        a = document.createElement("a")
-        a.setAttribute("xml:id", annotation + "-a"
-        + str(id_counter)) # id
-        a.setAttribute("label", annotation) # label
-        a.setAttribute("ref", depends + "-n"
-        + str(depends_number)) # ref
-        a.setAttribute("as", annotation) # as
-
-        # Feature structure
-        feature_st = document.createElement("fs")
-        feature = document.createElement("f")
-        feature.setAttribute("name",'annotation_value')
-        value = document.createTextNode(annotation_value) # Value
-        feature.appendChild(value)
-        feature_st.appendChild(feature)
-
-        a.appendChild(feature_st)
-        graph.appendChild(a)
-
-        return document
 
     def create_node_region(self, document, graph, depends, annotation,
                            annotation_value, region, increment):
@@ -384,28 +333,60 @@ class Writer():
         graph.appendChild(region)
 
         if depends != '':
-            id_counter = len(document.getElementsByTagName('a'))
+            # Create annotation
+            document = self.create_node_annotation(document, graph,
+                annotation, annotation_value, annotation, seg_count)
 
-            # Creating the features and the linkage
-            a = document.createElement("a")
-            a.setAttribute("xml:id", annotation + "-a"
-            + str(id_counter)) # id
-            a.setAttribute("label", annotation) # label
-            a.setAttribute("ref", annotation + "-n"
-            + str(seg_count)) # ref
-            a.setAttribute("as", annotation) # as
+        return document
 
-            # Feature structure
-            feature_st = document.createElement("fs")
-            feature = document.createElement("f")
-            feature.setAttribute("name",'annotation_value')
-            value = document.createTextNode(annotation_value) # Value
-            feature.appendChild(value)
-            feature_st.appendChild(feature)
+    def create_node_annotation(self, document, graph, annotation,
+                               annotation_value, depends, depends_number):
+        """Create nodes that only have annotation
+        and dependencies.
 
-            a.appendChild(feature_st)
+        Parameters
+        ----------
+        document : xml
+            Xml document.
+        graph : node
+            Main node of the Xml document.
+        annotation : str
+            Name of the annotation.
+        annotation_value : str
+            Value of the annotation.
+        depends : str
+            Name of the node that the element belongs to.
+        depends_number : int
+            It is the number node of the value.
 
-            graph.appendChild(a)
+        Returns
+        -------
+        document : xml
+            Xml document.
+
+        """
+
+        id_counter = len(document.getElementsByTagName('a'))
+
+        # Creating the features and the linkage
+        a = document.createElement("a")
+        a.setAttribute("xml:id", annotation + "-a"
+        + str(id_counter)) # id
+        a.setAttribute("label", annotation) # label
+        a.setAttribute("ref", depends + "-n"
+        + str(depends_number)) # ref
+        a.setAttribute("as", annotation) # as
+
+        # Feature structure
+        feature_st = document.createElement("fs")
+        feature = document.createElement("f")
+        feature.setAttribute("name",'annotation_value')
+        value = document.createTextNode(annotation_value) # Value
+        feature.appendChild(value)
+        feature_st.appendChild(feature)
+
+        a.appendChild(feature_st)
+        graph.appendChild(a)
 
         return document
 
