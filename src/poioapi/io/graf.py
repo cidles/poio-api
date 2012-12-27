@@ -254,12 +254,12 @@ class Writer():
                 document = self.create_node_annotation(document, graph,
                     annotation, annotation_value, depends, increment)
             else:
-                document = self.create_node_region(document, graph, depends, annotation,
+                document = self.create_node_with_region(document, graph, depends, annotation,
                     annotation_value, region, increment)
 
         self.xml_files_map[annotation] = document
 
-    def create_node_region(self, document, graph, depends, annotation,
+    def create_node_with_region(self, document, graph, depends, annotation,
                            annotation_value, region, increment):
         """Create the nodes with the regions and annotation
         if necessary.
