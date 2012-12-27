@@ -20,7 +20,7 @@ import re
 import codecs
 
 from xml.dom import minidom
-from xml.etree.ElementTree import Element, SubElement
+from xml.etree.ElementTree import Element, SubElement, tostring
 
 from poioapi.io import header
 from poioapi.io.analyzer import XmlContentHandler
@@ -54,7 +54,6 @@ class ElanToGraf:
         self.header = header.CreateHeaderFile(self.basedirname)
         self.data_structure_hierarchy = []
 
-        self.xml_files_list = []
         self.xml_files_map = {}
 
     def elan_to_graf(self):
@@ -126,17 +125,18 @@ class ElanToGraf:
 
                 tier_counter+=1
 
-                tier_id = [x for x in node_attributes if
-                           'TIER_ID - ' in x][0].split(' - ')[1]
+                tier_id = [tier for tier in node_attributes if
+                           'TIER_ID - ' in tier][0].split(' - ')[1]
 
-                linguistic_type_ref = [x for x in node_attributes
+                linguistic_type_ref = [ling_type for ling_type
+                                       in node_attributes
                                        if 'LINGUISTIC_TYPE_REF - ' in
-                                          x][0].split(' - ')[1]
+                                          ling_type][0].split(' - ')[1]
 
                 try:
-                    parent_ref = [x for x in node_attributes
+                    parent_ref = [parent for parent in node_attributes
                                            if 'PARENT_REF - ' in
-                                              x][0].split(' - ')[1]
+                                              parent][0].split(' - ')[1]
                 except IndexError as indexError:
                     parent_ref = None
 
@@ -148,17 +148,18 @@ class ElanToGraf:
                     self.header.add_annotation_attributes(tier_id,
                         'tier', node_attributes)
                     for linguistic_type in parser.linguistic_type_list:
-                        linguistic_type_id = [x for x in linguistic_type
+                        linguistic_type_id = [ling_type_id for ling_type_id
+                                              in linguistic_type
                                               if 'LINGUISTIC_TYPE_ID - ' in
-                                                 x][0].split(' - ')[1]
+                                                 ling_type_id][0].split(' - ')[1]
 
                         if linguistic_type_ref == linguistic_type_id:
                             self.header.add_annotation_attributes(tier_id,
                                 'linguistic_type', linguistic_type)
                             try:
-                                constraint = [x for x in linguistic_type
+                                constraint = [const for const in linguistic_type
                                               if 'CONSTRAINTS - ' in
-                                                 x][0].split(' - ')[1]
+                                                 const][0].split(' - ')[1]
                             except IndexError as indexError:
                                 constraint = None
 
@@ -171,7 +172,7 @@ class ElanToGraf:
 
                     # Creates the Xml Header (graphHeader)
                     element_tree = Element('graph',
-                            {'xmlns':'http://www.xces.org/ns/GrAF/1.0/'})
+                        {'xmlns':'http://www.xces.org/ns/GrAF/1.0/'})
                     graph_header = SubElement(element_tree,
                         'graphHeader')
                     labels_declaration = SubElement(graph_header,
@@ -230,13 +231,21 @@ class ElanToGraf:
                 graph.edges.add(edge)
                 graph.nodes.add(node)
 
+                # Reference to the node that the
+                # annotation belongs to
+                reference_local = node_id
+
                 add_annotation_space = True
                 only_have_annotations = False
 
             if element[0] == 'REF_ANNOTATION':
+
                 # Annotation
                 ann_name = linguistic_type_ref
                 ann_id = node_attributes[1].split(' - ')[1]
+                # The REF_ANNOTATION are annotation that points
+                # to another annotation
+                reference_local = node_attributes[1].split(' - ')[0]
                 annotation_value = element[3].split(' - ')[1]
                 annotation = Annotation(ann_name, None, ann_id)
                 annotation.features['annotation_value'] = annotation_value
@@ -271,8 +280,14 @@ class ElanToGraf:
                 graph_annotation = SubElement(element_tree, 'a',
                         {'as':linguistic_type_ref,
                          'label':linguistic_type_ref,
-                         'ref':node_id,
+                         'ref':reference_local,
                          'xml:id':annotation.id})
+                features = SubElement(graph_annotation, 'fs')
+                feature = SubElement(features, 'f', {'name':'annotation_value'})
+                feature.text = annotation_value
+
+                self.xml_files_map[tier_id] = element_tree
+
 
         # Close the header file
         self.header.create_header()
@@ -280,8 +295,6 @@ class ElanToGraf:
         # Create the data structure hierarchy based on the elan tiers
         self.data_structure_hierarchy = \
         self._create_data_structure(data_structure_basic)
-
-        self._create_graf_files()
 
         return graph
 
@@ -341,7 +354,6 @@ class ElanToGraf:
         # data structure were appended
         tiers_gray_list = []
 
-
         # Creating the final data_structure_hierarchy
         for structure_element in data_structure_basic:
             tier = structure_element[0]
@@ -351,7 +363,7 @@ class ElanToGraf:
                 if key == tier:
                     if elements is None:
                         if not key in tiers_gray_list:
-                            self.data_structure_hierarchy.append(key)
+                            data_structure_hierarchy.append(key)
                     else:
                         auxiliar_list = []
                         for element in elements:

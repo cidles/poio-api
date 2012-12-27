@@ -39,6 +39,9 @@ def main(argv):
     # Create a GrAF object
     graph = elan_graf.elan_to_graf()
 
+    # Create GrAF Xml files
+    elan_graf._create_graf_files()
+
     # Rendering the GrAF object to an Xml file
     elan_graf.graph_rendering(outputfile, graph)
 
