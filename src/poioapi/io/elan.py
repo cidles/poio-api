@@ -301,6 +301,10 @@ class ElanToGraf:
 
         return data_structure_hierarchy
 
+    def create_nodes(self):
+
+        return None
+
     def graph_rendering(self, outputfile, graph):
         """This method will convert a GrAF object to a
         Xml files respecting GrAF standards.
