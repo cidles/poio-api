@@ -13,7 +13,6 @@ access the data via tree, which also contains the
 original .eaf IDs. Because of this EafTrees are
 read-/writeable.
 """
-from _elementtree import ElementTree
 
 import os
 import re
@@ -264,13 +263,18 @@ class ElanToGraf:
 
                 # Adding elements to Xml file
                 if not only_have_annotations:
-                    graph_node = SubElement(element_tree, 'node')
-                    link = SubElement(graph_node, 'link', {'targets':node_id})
-                    edge = SubElement(element_tree, 'edge', {'from':from_node.id,
-                                                           'to': node_id ,
-                                                           'xml:id':edge_id})
-                    region = SubElement(element_tree, 'region',
-                            {'anchors':anchor_1+" "+anchor_2,'xml:id':region_id})
+                    graph_node = SubElement(element_tree, 'node',
+                            {'xml:id':node_id})
+                    # Link
+                    SubElement(graph_node, 'link', {'targets':region_id})
+                    # Edge
+                    SubElement(element_tree, 'edge', {'from':from_node.id,
+                                                      'to':node_id,
+                                                      'xml:id':edge_id})
+                    # Region
+                    SubElement(element_tree, 'region',
+                            {'anchors':anchor_1+" "+anchor_2,
+                             'xml:id':region_id})
 
                 annotation_space = AnnotationSpace(linguistic_type_ref)
                 annotation_space.add(annotation)
@@ -287,7 +291,6 @@ class ElanToGraf:
                 feature.text = annotation_value
 
                 self.xml_files_map[tier_id] = element_tree
-
 
         # Close the header file
         self.header.create_header()
@@ -310,8 +313,8 @@ class ElanToGraf:
             filepath = self.basedirname+"-"+tier_name+".xml"
             file = open(filepath,'wb')
             element_tree = tree_element[1]
-            ElementTree(element_tree).write(file,
-                encoding="UTF-8",xml_declaration=True)
+            doc = minidom.parseString(tostring(element_tree))
+            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
             file.close()
 
     def _create_data_structure(self, data_structure_basic):

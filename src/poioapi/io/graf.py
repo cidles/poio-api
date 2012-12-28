@@ -12,7 +12,7 @@ methods to write and parse the GrAF files.
 import os
 import codecs
 
-from xml.dom.minidom import Document
+from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 from poioapi.io import header
@@ -45,8 +45,8 @@ class Writer():
 
         self.hierarchy_level_list = []
         self.annotation_tree = annotation_tree
-        self.xml_files_list = []
-        self.xml_files_map = {}
+
+        self.xml_elements_tree_map = {}
 
     def write(self):
         """Writes the GrAF files based on the data
@@ -68,7 +68,7 @@ class Writer():
         self._find_hiearchy_levels(self.data_hierarchy, 0)
 
         # Map that will contain the xml contexts
-        self.xml_files_map = dict((hierarchy[1],None)
+        self.xml_elements_tree_map = dict((hierarchy[1],None)
             for hierarchy in self.hierarchy_level_list)
 
         self.last_region_value = 0
@@ -90,15 +90,14 @@ class Writer():
 
         # Creates the result XML docs for each element in the data
         # structure hierarchy
-        for path in self.xml_files_list:
-            file_to_find = os.path.basename(path)
-            new_file = file_to_find.split('.')
-            new_file = new_file[0].split('-')
-            with codecs.open(path, 'w', 'utf-8') as f:
-                for value in self.xml_files_map.items():
-                    if value[0]==new_file[1]:
-                        f.write(value[1].toprettyxml('  '))
-                f.close()
+        for tree_element in self.xml_elements_tree_map.items():
+            tier_name = tree_element[0]
+            filepath = self.basedirname+"-"+tier_name+".xml"
+            file = open(filepath,'wb')
+            element_tree = tree_element[1]
+            doc = minidom.parseString(tostring(element_tree))
+            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+            file.close()
 
     def _find_hiearchy_levels(self, data_hierarchy, level):
         """This method will find the hierarchy level of
@@ -236,40 +235,35 @@ class Writer():
         filepath = self.basedirname + '-' + annotation + '.xml'
         new_file = False
 
-        if self.xml_files_map[annotation] is None:
+        if self.xml_elements_tree_map[annotation] is None:
             new_file = True
-            self.xml_files_list.append(filepath)
         else:
-            document = self.xml_files_map[annotation]
+            document = self.xml_elements_tree_map[annotation]
 
         if new_file:
-            document = self.create_xml_graf_header(annotation, depends)
+            document = self.create_xml_graph_header(annotation, depends)
 
             self.header.add_annotation(os.path.basename(filepath),annotation)
 
-        graph = document.getElementsByTagName('graph').item(0)
-
         if annotation_value is not '':
             if region is None and depends is not '':
-                document = self.create_node_annotation(document, graph,
-                    annotation, annotation_value, depends, increment)
+                document = self.create_node_annotation(document, annotation,
+                    annotation_value, depends, increment)
             else:
-                document = self.create_node_with_region(document, graph, depends, annotation,
-                    annotation_value, region, increment)
+                document = self.create_node_with_region(document, depends,
+                    annotation, annotation_value, region, increment)
 
-        self.xml_files_map[annotation] = document
+        self.xml_elements_tree_map[annotation] = document
 
-    def create_node_with_region(self, document, graph, depends, annotation,
-                           annotation_value, region, increment):
+    def create_node_with_region(self, element_tree, depends, annotation,
+                                annotation_value, region, increment):
         """Create the nodes with the regions and annotation
         if necessary.
 
         Parameters
         ----------
-        document : xml
-            Xml document.
-        graph : node
-            Main node of the Xml document.
+        element_tree : Element Tree
+            Xml element.
         depends : str
             Name of the node that the element belongs to.
         annotation : str
@@ -283,39 +277,24 @@ class Writer():
 
         Returns
         -------
-        document : xml
-            Xml document.
+        element_tree : Element Tree
+            Xml element.
 
         """
 
-        seg_count = len(document.getElementsByTagName('region'))
+        seg_count = len(element_tree.getiterator('region'))
 
-        # Creating the node with link
-        node = document.createElement("node")
-        node.setAttribute("xml:id", annotation + "-n"
-        + str(seg_count)) # Node number
+        graph_node = SubElement(element_tree, 'node',
+                {'xml:id':annotation+"-n"+str(seg_count)})
 
-        # Creating the link node
-        link = document.createElement("link")
-        link.setAttribute("targets", annotation + "-r"
-        + str(seg_count)) # ref
-        node.appendChild(link)
-
-        graph.appendChild(node)
+        SubElement(graph_node, 'link', {'targets':annotation+"-r"+str(seg_count)})
 
         if depends != '':
-            # Creating the edge node
-            edge = document.createElement("edge")
-            edge.setAttribute("xml:id", annotation + "-e"
-            + str(seg_count)) # edge id
-            edge.setAttribute("from", depends + "-n"
-            + str(increment)) # from node
-            edge.setAttribute("to", annotation + "-n"
-            + str(seg_count)) # to node
-            edge.setAttribute("label", annotation) # label
-
-            graph.appendChild(edge)
-
+            SubElement(element_tree, 'edge',
+                    {'label':annotation,
+                     'from':depends+"-n"+str(increment),
+                     'to':annotation+"-n"+str(seg_count),
+                     'xml:id':annotation+"-e"+str(seg_count)})
         if depends != '':
             begin = int(region[0]) + self.last_region_value
             end = int(region[1]) + self.last_region_value
@@ -323,33 +302,26 @@ class Writer():
             begin = self.last_region_value
             end = begin + len(annotation_value)
 
-        region = document.createElement("region")
-        region.setAttribute("xml:id", annotation + "-r"
-        + str(seg_count)) # Region
-        region.setAttribute("anchors",
-            str(begin) + " " +
-            str(end)) # Anchors
-
-        graph.appendChild(region)
+        SubElement(element_tree, 'region',
+                {'anchors':str(begin)+" "+str(end),
+                 'xml:id':annotation+"-r"+str(seg_count)})
 
         if depends != '':
             # Create annotation
-            document = self.create_node_annotation(document, graph,
+            element_tree = self.create_node_annotation(element_tree,
                 annotation, annotation_value, annotation, seg_count)
 
-        return document
+        return element_tree
 
-    def create_node_annotation(self, document, graph, annotation,
+    def create_node_annotation(self, element_tree, annotation,
                                annotation_value, depends, depends_number):
         """Create nodes that only have annotation
         and dependencies.
 
         Parameters
         ----------
-        document : xml
-            Xml document.
-        graph : node
-            Main node of the Xml document.
+        element_tree : Element Tree
+            Xml element.
         annotation : str
             Name of the annotation.
         annotation_value : str
@@ -361,36 +333,26 @@ class Writer():
 
         Returns
         -------
-        document : xml
-            Xml document.
+        element_tree : Element Tree
+            Xml element.
 
         """
 
-        id_counter = len(document.getElementsByTagName('a'))
+        id_counter = len(element_tree.getiterator('a'))
 
-        # Creating the features and the linkage
-        a = document.createElement("a")
-        a.setAttribute("xml:id", annotation + "-a"
-        + str(id_counter)) # id
-        a.setAttribute("label", annotation) # label
-        a.setAttribute("ref", depends + "-n"
-        + str(depends_number)) # ref
-        a.setAttribute("as", annotation) # as
+        graph_annotation = SubElement(element_tree, 'a',
+                {'as':annotation,
+                 'label':annotation,
+                 'ref':depends+"-n"+str(depends_number),
+                 'xml:id':annotation+"-a"+str(id_counter)})
 
-        # Feature structure
-        feature_st = document.createElement("fs")
-        feature = document.createElement("f")
-        feature.setAttribute("name",'annotation_value')
-        value = document.createTextNode(annotation_value) # Value
-        feature.appendChild(value)
-        feature_st.appendChild(feature)
+        features = SubElement(graph_annotation, 'fs')
+        feature = SubElement(features, 'f', {'name':'annotation_value'})
+        feature.text = annotation_value
 
-        a.appendChild(feature_st)
-        graph.appendChild(a)
+        return element_tree
 
-        return document
-
-    def create_xml_graf_header(self, annotation, depends):
+    def create_xml_graph_header(self, annotation, depends):
         """Create the header of the Xml document.
 
         Parameters
@@ -402,36 +364,25 @@ class Writer():
 
         Returns
         -------
-        document : xml
-            Xml document.
+        element_tree : Element Tree
+            Xml element.
 
         """
 
-        document = Document()
-        graph = document.createElement("graph")
-        graph.setAttribute("xmlns", "http://www.xces.org/ns/GrAF/1.0/")
-        document.appendChild(graph)
+        element_tree = Element('graph',
+                {'xmlns':'http://www.xces.org/ns/GrAF/1.0/'})
+        graph_header = SubElement(element_tree,
+            'graphHeader')
+        SubElement(graph_header, 'labelsDecl')
+        dependencies = SubElement(graph_header,
+            'dependencies')
+        SubElement(dependencies, 'dependsOn', {'f.id':depends})
+        annotation_spaces = SubElement(graph_header,
+            'annotationSpaces')
+        SubElement(annotation_spaces,
+            'annotationSpace',{'as.id':annotation})
 
-        # Header
-        graphheader = document.createElement("graphHeader")
-        labelsdecl = document.createElement("labelsDecl")
-        graphheader.appendChild(labelsdecl)
-        graph.appendChild(graphheader)
-
-        if depends != '':
-            dependencies = document.createElement('dependencies')
-            dependson = document.createElement('dependsOn')
-            dependson.setAttribute('f.id',depends)
-            dependencies.appendChild(dependson)
-            graphheader.appendChild(dependencies)
-
-            ann_spaces = document.createElement('annotationSpaces')
-            ann_space = document.createElement('annotationSpace')
-            ann_space.setAttribute('as.id',annotation)
-            ann_spaces.appendChild(ann_space)
-            graphheader.appendChild(ann_spaces)
-
-        return document
+        return element_tree
 
     def _create_raw_file(self):
         """Creates an txt file with the data in the
