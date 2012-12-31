@@ -6,8 +6,8 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
-""" This module is to parse the files.
-
+""" This modules contains a class that uses
+the ContentHandler from SAX Xml.
 """
 
 import codecs

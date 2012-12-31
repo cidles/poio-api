@@ -11,8 +11,10 @@ methods to write and parse the GrAF files.
 
 import os
 import codecs
+import re
+import xml.etree.ElementTree as ET
 
-from xml.etree.ElementTree import Element, SubElement, tostring, ElementTree
+from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 from poioapi.io import header
@@ -445,11 +447,13 @@ class Parser():
         .data_hierarchy_dict
 
         # Read header file
-        doc_header = minidom.parse(self.filepath)
+        element_tree = ET.parse(self.filepath)
+
+        xml_namespace = re.search('\{(.*)\}', element_tree._root.tag).group()
 
         # Get the primary file. The file contain the raw text
-        primary_file = doc_header.getElementsByTagName('primaryData')[0].\
-        getAttribute('loc')
+        primary_file = element_tree.getiterator(
+            xml_namespace+'primaryData')[0].attrib['loc']
 
         # Get all the lines from the primary file
         txtfile = codecs.open(self.dirname+"/"+primary_file,'r', 'utf-8')
@@ -457,19 +461,16 @@ class Parser():
         txtfile.close()
 
         files_list = []
-        annotatios_files = doc_header.getElementsByTagName('annotation')
 
         # Get the files to look for
-        for annotation in annotatios_files:
-            loc = annotation.getAttribute('loc') # File name
-            fid = annotation.getAttribute('f.id') # File id
-            files_list.append((fid, loc))
+        for annotation in element_tree.getiterator(xml_namespace+'annotation'):
+            files_list.append(annotation.attrib['loc'])
 
         tokens_list = []
         features_list = []
 
         for file in files_list:
-            content = XmlContentHandler(self.dirname+'/'+file[1])
+            content = XmlContentHandler(self.dirname+'/'+file)
             content.parse()
 
             features_list.append(content.features_list)
@@ -482,10 +483,10 @@ class Parser():
                 self.elements_list.append(feature)
 
         self.tree = []
-        counter = 0
-
         self._first_element_hierarchy = data_hierarchy[0]
         self._last_element_hierarchy = data_hierarchy[-1]
+
+        counter = 0
 
         for tokens in tokens_list:
             for token in tokens:
