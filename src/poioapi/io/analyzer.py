@@ -18,8 +18,6 @@ from xml.sax.handler import ContentHandler
 class XmlHandler(ContentHandler):
 
     def __init__(self):
-        self.tokenizer_list = []
-        self.token_id_list = []
         self.tokens_list = []
         self.features_list = []
         self.link = ''
@@ -52,11 +50,6 @@ class XmlHandler(ContentHandler):
                       self.edge_from)
             self.tokens_list.append(values)
             self.hasregion = True
-
-            # Need to write the regions
-            id = id.split('-r')
-            self.tokenizer_list.append(tokenizer)
-            self.token_id_list.append(id[1])
 
         if name == 'edge':
             self.edge_from = attrs.getValue('from')
@@ -188,8 +181,6 @@ class XmlContentHandler:
 
         f.close()
 
-        self.tokenizer_list = xml_handler.tokenizer_list
-        self.token_id_list = xml_handler.token_id_list
         self.features_list = xml_handler.features_list
         self.tokens_list = xml_handler.tokens_list
         self.elan_list = xml_handler.elan_list
