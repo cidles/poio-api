@@ -472,11 +472,8 @@ class Parser():
             content = XmlContentHandler(self.dirname+'/'+file[1])
             content.parse()
 
-            features_map = content.features_list
-            tokens_map = content.tokens_list
-
-            features_list.append(features_map)
-            tokens_list.append(tokens_map)
+            features_list.append(content.features_list)
+            tokens_list.append(content.regions_list)
 
         self.elements_list = []
 
