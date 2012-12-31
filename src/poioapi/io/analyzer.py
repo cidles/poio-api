@@ -16,12 +16,6 @@ from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 
 class XmlHandler(ContentHandler):
-    """
-    Class that handles the XML test_split.
-
-    The class uses the ContentHandler from
-    SAX XML.
-    """
 
     def __init__(self):
         self.tokenizer_list = []
@@ -150,7 +144,7 @@ class XmlHandler(ContentHandler):
 
 class XmlContentHandler:
     """
-    Class that handles the XML test_split.
+    Class that handles the Xml files like.
 
     The class uses the ContentHandler from
     SAX XML.
@@ -169,8 +163,12 @@ class XmlContentHandler:
         self.metafile = metafile
 
     def parse(self):
-        """Return the tokens of the regions parsed
-        by the class XmlHandler.
+        """Return the important information about the
+        different files (e.g. GrAF, elan,...). The gathered
+        information contains tokens, regions and all the need
+        data that will be used to help in the creation of the
+        GrAF objects from the files or to create GrAF files
+        from the same kind of files.
 
         """
 
