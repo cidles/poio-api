@@ -419,8 +419,10 @@ class Parser():
 
         Parameters
         ----------
-        filepath : str
-            Path of the file to manipulate.
+        annotation_tree : array_like
+            Tree array like empty only with the data structure hierarchy.
+        header_file : str
+            Path of the header file.
 
         """
 

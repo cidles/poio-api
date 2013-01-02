@@ -421,3 +421,27 @@ class ElanToGraf:
 
         # Delete the temp file
         os.remove(outputfile+"_tmp")
+
+class GrafToElan:
+    """
+    Class that will transform the GrAF files
+    in Elan file.
+
+    """
+
+    def __init__(self, header_file, data_structure_hierarchy):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        header_file : str
+            Path of the header file.
+        data_structure_hierarchy : array_like
+            Data structure with tiers hierarchy.
+
+        """
+
+        self.filepath = header_file
+        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
+        self.dirname = os.path.dirname(self.filepath)
+        self.data_structure_hierarchy = data_structure_hierarchy
