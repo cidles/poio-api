@@ -8,15 +8,14 @@
 # For license information, see LICENSE.TXT
 """ This module is to create the header file.
 This file will contain the files that belongs to
-each raw file with the respective elements of a 
-data hierarchy.
+each raw file with the respective elements.
 """
 
-import codecs
 import datetime
 import random
 
-from xml.dom.minidom import Document
+from xml.dom import minidom
+from xml.etree.ElementTree import Element, SubElement, tostring
 
 class CreateHeaderFile:
     """
@@ -44,6 +43,7 @@ class CreateHeaderFile:
         self.version = '1.0.0'
         self.filename = ''
         self.primaryfile = ''
+        self.dataType = 'text'
 
         # Can be tokens, bytes, words, etc...
         self.unit = 'words'
@@ -110,264 +110,175 @@ class CreateHeaderFile:
 
         """
 
-        # Start the Header file
-        doc = Document()
-
-        doc_header = doc.createElement("documentHeader") # Required
-        doc_header.setAttribute("xmlns", "http://www.xces.org"
-                                         "/ns/GrAF/1.0/") # Required
-        doc_header.setAttribute("xmlns:xlink", "http://www.w3.org"
-                                               "/1999/xlink") # Required
-        docID = random.randint(1, 1000000)
-        doc_header.setAttribute("docID", "POIO-"+str(docID)) # Required
-        doc_header.setAttribute("version", self.version) # Required
+        # Get the actual date hour time
         now = datetime.datetime.now()
-        doc_header.setAttribute("date.created",
-            now.strftime("%Y-%m-%d")) # Required
-        doc.appendChild(doc_header)
+
+        # Start the Header file
+        element_tree = Element('documentHeader',
+                {"xmlns":"http://www.xces.org/ns/GrAF/1.0/",
+                 "xmlns:xlink":"http://www.w3.org/1999/xlink",
+                 "docID":"POIO-"+str(random.randint(1, 1000000)),
+                 "version":self.version,
+                 "date.created":now.strftime("%Y-%m-%d")})
 
         # Branch fileDesc
-        fileDesc = doc.createElement("fileDesc")
-        fileName = doc.createElement("fileName")
-        value = doc.createTextNode(self.filename)
-        fileName.appendChild(value)
-        extent = doc.createElement("extent") # Required
-        extent.setAttribute("unit",self.unit) # Required
-        extent.setAttribute("count",str(self.unitcount)) # Required
+        fileDesc = SubElement(element_tree,
+            'fileDesc')
+        fileName = SubElement(fileDesc, 'fileName')
+        fileName.text = self.filename
+        SubElement(fileDesc, 'extent',  {"unit":self.unit,
+                                               "count":str(self.unitcount)})
 
         # Required
-        sourceDesc = doc.createElement("sourceDesc")
+        sourceDesc = SubElement(fileDesc, "sourceDesc")
         if self.title != '':
-            title = doc.createElement("title")
-            value = doc.createTextNode(self.title)
-            title.appendChild(value)
-            sourceDesc.appendChild(title)
+            fileName = SubElement(sourceDesc, 'title')
+            fileName.text = self.title
 
         if self.author != '':
-            author = doc.createElement("author")
-            author.setAttribute("age",self.authorage)
-            author.setAttribute("sex",self.authorsex)
-            value = doc.createTextNode(self.author)
-            author.appendChild(value)
-            sourceDesc.appendChild(author)
+            author = SubElement(sourceDesc, "author", {"age":self.authorage,
+                                                       "sex":self.authorsex})
+            author.text = self.author
 
         # Required
-        source = doc.createElement("source") # Required
-        source.setAttribute("type",self.sourcetype) # Required
-        value = doc.createTextNode(self.sourcename) # Required
-        source.appendChild(value)
-        sourceDesc.appendChild(source)
+        source = SubElement(sourceDesc, "source", {"type":self.sourcetype})
+        source.text = self.sourcename
 
         if self.distributor != '':
-            distributor = doc.createElement("distributor")
-            value = doc.createTextNode(self.distributor)
-            distributor.appendChild(value)
-            sourceDesc.appendChild(distributor)
+            distributor = SubElement(sourceDesc, "distributor")
+            distributor.text = self.distributor
 
         # Required if there's no name the value should be self
-        publisher = doc.createElement("publisher")
-        value = doc.createTextNode(self.publisher)
-        publisher.appendChild(value)
-        sourceDesc.appendChild(publisher)
+        publisher = SubElement(sourceDesc, "publisher")
+        publisher.text = self.publisher
 
         if self.pubAddress != '':
-            pubAddress = doc.createElement("pubAddress")
-            value = doc.createTextNode(self.pubAddress)
-            pubAddress.appendChild(value)
-            sourceDesc.appendChild(pubAddress)
+            pubAddress = SubElement(sourceDesc, "pubAddress")
+            pubAddress.text = self.pubAddress
 
         # It's required but not mandatory
         if self.eAddress != '':
-            eAddress = doc.createElement("eAddress") # Required
-            eAddress.setAttribute("type",self.eAddress_type) # Required
-            value = doc.createTextNode(self.eAddress) # Required
-            eAddress.appendChild(value)
-            sourceDesc.appendChild(eAddress)
+            eAddress = SubElement(sourceDesc, "eAddress",
+                    {"type":self.eAddress_type})
+            eAddress.text = self.eAddress
 
         # Should use the ISO 8601 format YYYY-MM-DD
-        pubDate = doc.createElement("pubDate")
         self.pubDate = now.strftime("%Y-%m-%d")
-        pubDate.setAttribute("iso8601",self.pubDate)
-        sourceDesc.appendChild(pubDate)
+        SubElement(sourceDesc, "pubDate", {"iso8601":self.pubDate})
 
         # Required
-        idno = doc.createElement("idno") # Required
-        idno.setAttribute("type",self.idno_type) # Required
-        value = doc.createTextNode(self.idno) # Required
-        idno.appendChild(value)
-        sourceDesc.appendChild(idno)
+        idno = SubElement(sourceDesc, "idno", {"type":self.idno_type})
+        idno.text = self.idno
 
         if self.pubName != '':
-            pubName = doc.createElement("pubName")
-            pubName.setAttribute("type",self.pubName_type)
-            value = doc.createTextNode(self.pubName)
-            pubName.appendChild(value)
-            sourceDesc.appendChild(pubName)
+            pubName = SubElement(sourceDesc, "pubName", {"type":self.pubName_type})
+            pubName.text = self.pubName
 
         if self.documentation != '':
-            documentation = doc.createElement("documentation")
-            value = doc.createTextNode(self.documentation)
-            documentation.appendChild(value)
-            sourceDesc.appendChild(documentation)
-
-        fileDesc.appendChild(fileName)
-        fileDesc.appendChild(extent)
-        fileDesc.appendChild(sourceDesc)
-        doc_header.appendChild(fileDesc)
+            documentation = SubElement(sourceDesc, "documentation")
+            documentation.text = self.documentation
 
         # Branch profileDesc
-        profileDesc = doc.createElement("profileDesc")
+        profileDesc = SubElement(element_tree, "profileDesc")
 
         # Not required
         if len(self.language_list) > 0:
-            langUsage = doc.createElement("langUsage")
+            langUsage = SubElement(profileDesc, "langUsage")
 
             for lang in self.language_list:
-                language = doc.createElement("language") # Use ISO 639
-                language.setAttribute("iso639",lang[0])
-                langUsage.appendChild(language)
-
-                profileDesc.appendChild(langUsage)
+                SubElement(langUsage, "language", {"iso639":lang[0]}) # Use ISO 639
 
         # Required at least the subject
-        textClass = doc.createElement("textClass")  # Required
-        textClass.setAttribute("catRef","PT") # Required the catRef
-        subject = doc.createElement("subject")
-        value = doc.createTextNode(self.subject)
-        subject.appendChild(value)
-        textClass.appendChild(subject)
+        textClass = SubElement(profileDesc, "textClass", {"catRef":"PT"})
+        subject = SubElement(textClass, "subject")
+        subject.text = self.subject
 
         if self.domain != '':
-            domain = doc.createElement("domain")
-            value = doc.createTextNode(self.domain)
-            domain.appendChild(value)
-            textClass.appendChild(domain)
+            domain = SubElement(textClass, "domain")
+            domain.text = self.domain
 
         if self.subdomain != '':
-            subdomain = doc.createElement("subdomain")
-            value = doc.createTextNode(self.subdomain)
-            subdomain.appendChild(value)
-            textClass.appendChild(subdomain)
-
-        profileDesc.appendChild(textClass)
+            subdomain = SubElement(textClass, "subdomain")
+            subdomain.text = self.subdomain
 
         # Required at least one person
         if len(self.participants_list) > 0:
-            particDesc = doc.createElement("particDesc") # Required
+            particDesc = SubElement(profileDesc, "particDesc") # Required
 
             for part in self.participants_list:
-                person = doc.createElement("person") # Required
-                person.setAttribute("id",part[1]) # Required the id attribut
-                person.setAttribute("age",part[2])
-                person.setAttribute("sex",part[3])
-                person.setAttribute("role",part[4])
-                value = doc.createTextNode(part[0])
-                person.appendChild(value)
-
-                particDesc.appendChild(person)
-
-            profileDesc.appendChild(particDesc)
+                person = SubElement(particDesc, "person",
+                        {"id":part[1], "age":part[2], "sex":part[3],
+                         "role":part[4]}) # Required
+                person.text = part[0]
 
         # Maybe it's possible to use the tag to do the
         # description of the data hierarchy and it's
         # not required
         if len(self.settings_list) >  0:
-            settingDesc = doc.createElement("settingDesc")
+            settingDesc = SubElement(profileDesc, "settingDesc")
 
             for sett in self.settings_list:
-                setting = doc.createElement("setting")
-                setting.setAttribute("who",sett[0])
+                setting = SubElement(settingDesc, "setting", {"who":sett[0]})
 
-                time = doc.createElement("time")
-                value = doc.createTextNode(sett[1])
-                time.appendChild(value)
-                setting.appendChild(time)
+                time = SubElement(setting, "time")
+                time.text = sett[1]
 
-                activity = doc.createElement("activity")
-                value = doc.createTextNode(sett[2])
-                activity.appendChild(value)
-                setting.appendChild(activity)
+                activity = SubElement(setting, "activity")
+                activity.text = sett[2]
 
-                locale = doc.createElement("locale")
-                value = doc.createTextNode(sett[3])
-                locale.appendChild(value)
-                setting.appendChild(locale)
-
-                settingDesc.appendChild(setting)
-
-            profileDesc.appendChild(settingDesc)
-
-        doc_header.appendChild(profileDesc)
+                locale = SubElement(setting, "locale")
+                locale.text = sett[3]
 
         # Branch dataDesc required in PoioAPI case
-        dataDesc = doc.createElement("dataDesc") # Required
-        primaryData = doc.createElement("primaryData") # Required
-        primaryData.setAttribute("loc",self.primaryfile) # Required
-        primaryData.setAttribute("f.id","text") # Required
-        dataDesc.appendChild(primaryData)
-        annotations = doc.createElement("annotations")
+        dataDesc = SubElement(element_tree, "dataDesc") #Required
+        primaryData = SubElement(dataDesc, "primaryData",
+                {"loc":self.primaryfile,"f.id":self.dataType}) #Required
+        annotations = SubElement(primaryData, "annotations")
 
         for ann in self.annotation_list:
-            annotation = doc.createElement("annotation") # Required
-            annotation.setAttribute("loc",ann[0]) # Required
-            annotation.setAttribute("f.id",ann[1]) # Required
-            annotations.appendChild(annotation)
+            annotation = SubElement(annotations, "annotation",
+                    {"loc":ann[0],"f.id":ann[1]}) # Required
 
             # Add the annotations attributes
             if len(self.annotation_list_attributes) is not 0:
                 for attributes in self.annotation_list_attributes:
                     if attributes[0]==ann[1]:
                         if attributes[1]=='linguistic_type':
-                            linguistic_node = doc.\
-                            createElement('linguistic_type')
-                            annotation.appendChild(linguistic_node)
+                            linguistic_node = SubElement(annotation,
+                                "linguistic_type")
 
                         for attribute in attributes[2]:
                             node_name = attribute.split(' - ')[0]
                             node_value = attribute.split(' - ')[1]
-                            node_child = doc.createElement(node_name.lower())
-                            value = doc.createTextNode(node_value)
-                            node_child.appendChild(value)
+                            node_child = Element(node_name.lower())
+                            node_child.text = node_value
                             if attributes[1]=='linguistic_type':
-                                linguistic_node.appendChild(node_child)
+                                linguistic_node.append(node_child)
                             else:
-                                annotation.appendChild(node_child)
-
-        dataDesc.appendChild(annotations)
-        doc_header.appendChild(dataDesc)
+                                annotation.append(node_child)
 
         # Branch revisionDesc isn't required
         if len(self.changes_list) > 0:
-            revisionDesc = doc.createElement("revisionDesc")
+            revisionDesc = SubElement(dataDesc, "revisionDesc")
 
             for cha in self.changes_list:
-                change = doc.createElement("change")
-                changeDate = doc.createElement("changeDate")
-                value = doc.createTextNode(cha[0])
-                changeDate.appendChild(value)
-                change.appendChild(changeDate)
-                respName = doc.createElement("respName")
-                value = doc.createTextNode(cha[1])
-                respName.appendChild(value)
-                change.appendChild(respName)
-                item = doc.createElement("item")
-                value = doc.createTextNode(cha[2])
-                item.appendChild(value)
-                change.appendChild(item)
+                change = SubElement(revisionDesc, "change")
 
-                revisionDesc.appendChild(change)
+                changeDate = SubElement(change, "changeDate")
+                changeDate.text = cha[0]
 
-            doc_header.appendChild(revisionDesc)
+                respName = SubElement(change, "respName")
+                respName.text = cha[1]
 
-        # Start XML file
-        file = self.basedirname + '.hdr'
-        f = codecs.open(file,'w','utf-8')
+                item = SubElement(change, "item")
+                item.text = cha[2]
 
-        # Write the content in XML file
-        f.write(doc.toprettyxml(indent="  "))
-
-        #Close XML file
-        f.close()
+        # Write and indent file
+        filepath = self.basedirname + '.hdr'
+        file = open(filepath,'wb')
+        doc = minidom.parseString(tostring(element_tree))
+        file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+        file.close()
 
     def add_annotation(self, loc, fid):
         """This method is responsible to add the
