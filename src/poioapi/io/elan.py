@@ -87,6 +87,7 @@ class ElanToGraf:
         self.header.author = 'CIDLeS'
         self.header.filename = self.filename.split('.eaf')[0]
         self.header.primaryfile = self.filename
+        self.header.dataType = 'Elan file' # Type of the origin data file
 
         for element in parser.elan_list:
 

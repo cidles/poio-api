@@ -12,6 +12,7 @@ each raw file with the respective elements.
 """
 
 import datetime
+import getpass
 import random
 
 from xml.dom import minidom
@@ -27,7 +28,7 @@ class CreateHeaderFile:
 
     """
 
-    def __init__(self, basedirname):
+    def __init__(self, basedirname, author=None):
         """Class's constructor.
 
         Parameters
@@ -55,7 +56,12 @@ class CreateHeaderFile:
         # Can be web, contributor, distributor, etc...
         self.sourcetype = 'Contributor'
         self.sourcename = 'Cont'
-        self.author = ''
+
+        if author is None:
+            self.author = getpass.getuser()
+        else:
+            self.author = author
+
         self.authorsex = ''
         self.authorage = ''
         self.distributor = ''
@@ -135,10 +141,9 @@ class CreateHeaderFile:
             fileName = SubElement(sourceDesc, 'title')
             fileName.text = self.title
 
-        if self.author != '':
-            author = SubElement(sourceDesc, "author", {"age":self.authorage,
-                                                       "sex":self.authorsex})
-            author.text = self.author
+        author = SubElement(sourceDesc, "author", {"age":self.authorage,
+                                                   "sex":self.authorsex})
+        author.text = self.author
 
         # Required
         source = SubElement(sourceDesc, "source", {"type":self.sourcetype})
@@ -272,6 +277,8 @@ class CreateHeaderFile:
 
                 item = SubElement(change, "item")
                 item.text = cha[2]
+
+        getpass.getuser()
 
         # Write and indent file
         filepath = self.basedirname + '.hdr'
