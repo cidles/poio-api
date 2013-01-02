@@ -96,6 +96,7 @@ class ElanToGraf:
 
             add_annotation_space = False
             only_have_annotations = True
+            additional_information = True
 
             if element[0] == 'TIER':
 
@@ -191,6 +192,8 @@ class ElanToGraf:
                     # of each tier
                     self.xml_files_map[tier_id] = element_tree
 
+                additional_information = False
+
             if element[0] == 'ALIGNABLE_ANNOTATION':
 
                 # Anchors for the regions
@@ -237,6 +240,7 @@ class ElanToGraf:
 
                 add_annotation_space = True
                 only_have_annotations = False
+                additional_information = False
 
             if element[0] == 'REF_ANNOTATION':
 
@@ -259,6 +263,7 @@ class ElanToGraf:
                 graph.nodes.add(node)
 
                 add_annotation_space = True
+                additional_information = False
 
             if add_annotation_space:
 
@@ -292,6 +297,11 @@ class ElanToGraf:
                 feature.text = annotation_value
 
                 self.xml_files_map[tier_id] = element_tree
+
+            # Save the additional information in a
+            # extra list in the graph
+            if additional_information:
+                graph.additional_information.append(element)
 
         # Close the header file
         self.header.create_header()
