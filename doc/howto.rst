@@ -68,7 +68,7 @@ Parse GrAF files to Annotation Tree
 ===================================
 		
 Is important to know that to make the parsing of the GrAF files they must be createad as well as the header file.
-The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree and generate a single GrAF file containing all the nodes.
+The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree.
 
 
 The first step is to initialize the variable. Once again is need to give the correct data structure hierarchy that was given to create the header file (or transform the Annotation Tree into GrAF ISO in this case):
@@ -93,12 +93,6 @@ And then is possible to create the Annotation Tree again:
 	# Consulting the elements
 	for element in annotation_tree.elements():
 		print(element)
-
-Generating the GrAF file (the file is generated with the "-graf.xml" extension):
-
-.. code-block:: python
-
-	parser.generate_file()
 
 Resources
 =========
