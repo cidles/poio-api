@@ -45,6 +45,16 @@ def main(argv):
     # Rendering the GrAF object to an Xml file
     elan_graf.graph_rendering(outputfile, graph)
 
+    # Header file
+    header_file = elan_graf.header
+
+    # Data Structure hierarchy
+    data_structure_hierarchy = elan_graf.data_structure_hierarchy
+
+    # Generate a metafile with the necessary data
+    elan_graf.generate_metafile(graph, header_file, data_structure_hierarchy,
+        outputfile)
+
     print('Finished')
 
 if __name__ == "__main__":

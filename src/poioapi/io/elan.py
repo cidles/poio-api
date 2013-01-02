@@ -312,6 +312,87 @@ class ElanToGraf:
 
         return graph
 
+    def generate_metafile(self, graph, header, data_structure, outputfile):
+        """This method will create a metafile that will
+        gathered all the data information to recreate the
+        elan files and to access to the data structure
+        hierarchy, the vocabulary, the media descriptor
+        and all the important information.
+
+        Returns
+        -------
+        graph : object
+            GrAF object.
+        header : object
+            Header object.
+        data_structure : array_like
+            Array like with the data structure hierarchy.
+        outputfile : str
+            String with the directory for the outputfile.
+
+        """
+
+        metafile_tree = Element('metadata')
+
+        SubElement(metafile_tree, 'header_file').text = \
+        os.path.basename(outputfile)
+
+        SubElement(metafile_tree, 'data_structure_hierarchy').text = \
+        str(data_structure)
+
+        file_tag = SubElement(metafile_tree, "file",
+                {"data_type":header.dataType})
+
+        if graph.additional_information is not None:
+            miscellaneous = SubElement(file_tag, "miscellaneous")
+            current_parent_element = None
+            for element in graph.additional_information:
+                tag = element[0]
+                attributes = element[1]
+
+                try:
+                    depends = [depends for depends in element
+                                           if 'DEPENDS - ' in
+                                              depends]
+                except IndexError as indexError:
+                    depends = None
+
+                try:
+                    tag_value = [tag_value for tag_value in element
+                               if 'VALUE - ' in
+                                  tag_value]
+                except IndexError as indexError:
+                    tag_value = None
+
+                attribute_map = {}
+
+                for attribute in attributes:
+                    attr = attribute.split(' - ')
+                    name = attr[0]
+                    val = attr[1]
+                    attribute_map[name] = val
+
+                if not depends:
+                    current_parent_element = SubElement(miscellaneous,
+                        tag, attribute_map)
+                    if tag_value:
+                        value = tag_value[0].split(' - ')[1]
+                        current_parent_element.text = value
+                else:
+                    if tag_value:
+                        value = tag_value[0].split(' - ')[1]
+                        SubElement(current_parent_element, tag,
+                            attribute_map).text = value
+                    else:
+                        SubElement(current_parent_element, tag,
+                            attribute_map)
+
+        filename = os.path.dirname(outputfile)+"/metafile.xml"
+        file = open(filename,'wb')
+        doc = minidom.parseString(tostring(metafile_tree))
+        file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+        file.close()
+
     def _create_graf_files(self):
         """This method will create the GrAF Xml files.
         But first is need to create the GrAF object in
