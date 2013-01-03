@@ -39,21 +39,17 @@ def main(argv):
     # Create a GrAF object
     graph = elan_graf.elan_to_graf()
 
-    # Create GrAF Xml files
-    elan_graf._create_graf_files()
-
-    # Rendering the GrAF object to an Xml file
-    elan_graf.graph_rendering(outputfile, graph)
-
     # Header file
-    header_file = elan_graf.header
+    header = elan_graf.header
 
     # Data Structure hierarchy
     data_structure_hierarchy = elan_graf.data_structure_hierarchy
 
-    # Generate a metafile with the necessary data
-    elan_graf.generate_metafile(graph, header_file, data_structure_hierarchy,
-        outputfile)
+    # Create GrAF Xml files
+    elan_graf._create_graf_files(graph, header, data_structure_hierarchy)
+
+    # Rendering the GrAF object to an Xml file
+    elan_graf.graph_rendering(outputfile, graph)
 
     print('Finished')
 
