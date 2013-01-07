@@ -18,7 +18,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 from poioapi.io import header
-from poioapi.io.analyzer import XmlContentHandler
+from poioapi.io.parser import XmlContentHandler
 
 class Writer():
     """
