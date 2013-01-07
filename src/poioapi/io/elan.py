@@ -22,7 +22,7 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 from poioapi.io import header
-from poioapi.io.parser import XmlContentHandler
+from poioapi.io.parser import ElanParser
 
 from graf import Graph, GrafRenderer
 from graf import Node, Edge
@@ -75,7 +75,7 @@ class Elan:
 
         graph = Graph()
 
-        parser = XmlContentHandler(self.filepath)
+        parser = ElanParser(self.filepath)
         parser.parse()
 
         tier_counter = 0

@@ -18,7 +18,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 from poioapi.io import header
-from poioapi.io.parser import XmlContentHandler
+from poioapi.io.parser import GrAFParser
 
 class Writer():
     """
@@ -472,7 +472,7 @@ class Parser():
         features_list = []
 
         for file in files_list:
-            content = XmlContentHandler(self.dirname+'/'+file)
+            content = GrAFParser(self.dirname+'/'+file)
             content.parse()
 
             features_list.append(content.features_list)

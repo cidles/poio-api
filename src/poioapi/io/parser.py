@@ -33,7 +33,7 @@ class XmlHandler(ContentHandler):
         self.time_slot_dict = dict()
         self.constraints_list = []
         self.linguistic_type_list = []
-
+        
     def startElement(self, name, attrs):
 
         self.map[name] = ''
@@ -135,9 +135,9 @@ class XmlHandler(ContentHandler):
             tuple_value = tuple_value + ("VALUE - " + self.map[name], )
             self.elan_list[-1] = tuple_value
 
-class XmlContentHandler:
+class GrAFParser:
     """
-    Class that handles the Xml files like.
+    Class that handles the content of GrAF files.
 
     The class uses the ContentHandler from
     SAX XML.
@@ -183,6 +183,53 @@ class XmlContentHandler:
 
         self.features_list = xml_handler.features_list
         self.regions_list = xml_handler.regions_list
+
+class ElanParser:
+    """
+    Class that handles the content of Elan files.
+
+    The class uses the ContentHandler from
+    SAX XML.
+    """
+
+    def __init__(self, metafile):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        metafile : str
+            Path of the file to manipulate.
+
+        """
+
+        self.metafile = metafile
+
+    def parse(self):
+        """Return the important information about the
+        different files (e.g. GrAF, elan,...). The gathered
+        information contains tokens, regions and all the need
+        data that will be used to help in the creation of the
+        GrAF objects from the files or to create GrAF files
+        from the same kind of files.
+
+        """
+
+        parser = make_parser()
+        xml_handler = XmlHandler()
+        parser.setContentHandler(xml_handler)
+
+        # Handle the files encode
+        try:
+            f = codecs.open(self.metafile, 'r', 'utf-8')
+            parser.parse(f)
+        except UnicodeEncodeError as unicodeError:
+            print(unicodeError)
+
+            f = open(self.metafile, 'r')
+            parser.parse(f)
+
+        f.close()
+
         self.elan_list = xml_handler.elan_list
         self.time_slot_dict = xml_handler.time_slot_dict
         self.constraints_list = xml_handler.constraints_list
