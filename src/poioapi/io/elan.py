@@ -22,14 +22,14 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 from poioapi.io import header
-from poioapi.io.analyzer import XmlContentHandler
+from poioapi.io.parser import XmlContentHandler
 
 from graf import Graph, GrafRenderer
 from graf import Node, Edge
 from graf import Annotation, AnnotationSpace
 from graf import Region
 
-class ElanToGraf:
+class Elan:
     """
     Class that will handle elan files.
 

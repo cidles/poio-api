@@ -34,7 +34,7 @@ def main(argv):
         print('elan2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    elan_graf = poioapi.io.elan.ElanToGraf(inputfile)
+    elan_graf = poioapi.io.elan.Elan(inputfile)
 
     # Create a GrAF object
     graph = elan_graf.elan_to_graf()
