@@ -23,7 +23,6 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
 
 from poioapi.io import header
-from poioapi.io.parser import ElanParser
 
 from graf import Graph, GrafRenderer
 from graf import Node, Edge
@@ -78,7 +77,6 @@ class Elan:
 
         tree = ET.parse(self.filepath)
         doc = tree.getroot()
-        tiers = doc.findall('TIER')
 
         # Mandatory to give an author to the file
         self.header.author = 'CIDLeS'
@@ -86,6 +84,18 @@ class Elan:
         self.header.primaryfile = self.filename
         self.header.dataType = 'Elan file' # Type of the origin data file
 
+        time_order = doc.find('TIME_ORDER')
+        time_order_dict = dict()
+
+        for time in time_order:
+            key = time.attrib['TIME_SLOT_ID']
+            try:
+                value = time.attrib['TIME_VALUE']
+            except KeyError as keyError:
+                value = 0
+            time_order_dict[key] = value
+
+        tiers = doc.findall('TIER')
         tiers_number = 0
 
         # First try with the tiers
@@ -122,8 +132,10 @@ class Elan:
                 add_node = False
 
                 if child.tag == 'ALIGNABLE_ANNOTATION':
-                    annotation_time_ref_1 = child.attrib['TIME_SLOT_REF1']
-                    annotation_time_ref_2 = child.attrib['TIME_SLOT_REF2']
+                    annotation_time_ref_1 = str(time_order_dict[
+                                            child.attrib['TIME_SLOT_REF1']])
+                    annotation_time_ref_2 = str(time_order_dict[
+                                            child.attrib['TIME_SLOT_REF2']])
                     annotation_id = child.attrib['ANNOTATION_ID']
                     annotation_value = child.find('ANNOTATION_VALUE').text
 
@@ -179,7 +191,7 @@ class Elan:
                         # Region
                         SubElement(element_tree, 'region',
                                 {'anchors':annotation_time_ref_1
-                                           +" "+annotation_time_ref_1,
+                                           +" "+annotation_time_ref_2,
                                  'xml:id':region_id})
 
                     annotation_space = AnnotationSpace(linguistic_type_ref)
@@ -199,19 +211,12 @@ class Elan:
 
             tiers_number+=1
 
-        for tir in self.xml_files_map.items():
-            filepath = self.basedirname+"-"+tir[0]+".xml"
-            file = open(filepath,'wb')
-            doc = minidom.parseString(tostring(tir[1]))
-            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-            file.close()
-
         # Close the header file
         self.header.create_header()
 
         return graph
 
-    def _create_graf_files(self, graph, header, data_structure):
+    def _create_graf_files(self):
         """This method will create the GrAF Xml files.
         But first is need to create the GrAF object in
         order to get the values.
@@ -241,6 +246,16 @@ class Elan:
             file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
             file.close()
 
+    def generate_metafile(self, header, data_structure):
+
+        tree = ET.parse(self.filepath)
+        doc = tree.getroot()
+        #root = doc.find('ANNOTATION_DOCUMENT')
+        root = doc.find('TIER')
+        for dc in doc.getiterator():
+            print(dc)
+
+        print(root)
         # Generate the metadata file
         metafile_tree = Element('metadata')
 
@@ -253,49 +268,8 @@ class Elan:
         file_tag = SubElement(metafile_tree, "file",
                 {"data_type":header.dataType})
 
-        if graph.additional_information is not None:
-            miscellaneous = SubElement(file_tag, "miscellaneous")
-            current_parent_element = None
-            for element in graph.additional_information:
-                tag = element[0]
-                attributes = element[1]
+        miscellaneous = SubElement(file_tag, "miscellaneous")
 
-                try:
-                    depends = [depends for depends in element
-                               if 'DEPENDS - ' in
-                                  depends]
-                except IndexError as indexError:
-                    depends = None
-
-                try:
-                    tag_value = [tag_value for tag_value in element
-                                 if 'VALUE - ' in
-                                    tag_value]
-                except IndexError as indexError:
-                    tag_value = None
-
-                attribute_map = {}
-
-                for attribute in attributes:
-                    attr = attribute.split(' - ')
-                    name = attr[0]
-                    val = attr[1]
-                    attribute_map[name] = val
-
-                if not depends:
-                    current_parent_element = SubElement(miscellaneous,
-                        tag, attribute_map)
-                    if tag_value:
-                        value = tag_value[0].split(' - ')[1]
-                        current_parent_element.text = value
-                else:
-                    if tag_value:
-                        value = tag_value[0].split(' - ')[1]
-                        SubElement(current_parent_element, tag,
-                            attribute_map).text = value
-                    else:
-                        SubElement(current_parent_element, tag,
-                            attribute_map)
 
         filename = self.basedirname+"-metafile.xml"
         file = open(filename,'wb')

@@ -40,10 +40,12 @@ def main(argv):
     graph = elan_graf.elan_to_graf()
 
     # Header file
-    #header = elan_graf.header
+    header = elan_graf.header
 
     # Create GrAF Xml files
-    #elan_graf._create_graf_files(graph, header, data_structure_hierarchy)
+    elan_graf._create_graf_files()
+
+    #elan_graf.generate_metafile(header, None)
 
     # Rendering the GrAF object to an Xml file
     #elan_graf.graph_rendering(outputfile, graph)
