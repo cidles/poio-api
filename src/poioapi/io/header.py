@@ -40,7 +40,6 @@ class CreateHeaderFile:
 
         self.basedirname = basedirname
         self.annotation_list = []
-        self.annotation_list_attributes = []
         self.version = '1.0.0'
         self.filename = ''
         self.primaryfile = ''
@@ -244,24 +243,6 @@ class CreateHeaderFile:
             annotation = SubElement(annotations, "annotation",
                     {"loc":ann[0],"f.id":ann[1]}) # Required
 
-            # Add the annotations attributes
-            if len(self.annotation_list_attributes) is not 0:
-                for attributes in self.annotation_list_attributes:
-                    if attributes[0]==ann[1]:
-                        if attributes[1]=='linguistic_type':
-                            linguistic_node = SubElement(annotation,
-                                "linguistic_type")
-
-                        for attribute in attributes[2]:
-                            node_name = attribute.split(' - ')[0]
-                            node_value = attribute.split(' - ')[1]
-                            node_child = Element(node_name.lower())
-                            node_child.text = node_value
-                            if attributes[1]=='linguistic_type':
-                                linguistic_node.append(node_child)
-                            else:
-                                annotation.append(node_child)
-
         # Branch revisionDesc isn't required
         if len(self.changes_list) > 0:
             revisionDesc = SubElement(dataDesc, "revisionDesc")
@@ -307,23 +288,6 @@ class CreateHeaderFile:
 
         if (loc, fid) not in self.annotation_list:
             self.annotation_list.append((loc, fid))
-
-    def add_annotation_attributes(self, parent, type, values_list):
-        """This method is responsible to add the
-        annotations attribute values to a list.
-
-        Parameters
-        ----------
-        parent : str
-            Referes to what annotation the attributes belong.
-        type : str
-            The type of attribues.
-        type : array-like
-            Array that contains the values of the attributes.
-
-        """
-
-        self.annotation_list_attributes.append((parent, type, values_list))
 
     def add_change(self, changedate, responsible, item):
         """This method is responsible to add the
