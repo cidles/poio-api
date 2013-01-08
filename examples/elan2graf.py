@@ -43,12 +43,10 @@ def main(argv):
     header = elan_graf.header
 
     # Create GrAF Xml files
-    elan_graf._create_graf_files()
-
-    #elan_graf.generate_metafile(header, None)
+    elan_graf.generate_graf_files(header, None)
 
     # Rendering the GrAF object to an Xml file
-    #elan_graf.graph_rendering(outputfile, graph)
+    elan_graf.graph_rendering(outputfile, graph)
 
     print('Finished')
 

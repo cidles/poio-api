@@ -216,7 +216,7 @@ class Elan:
 
         return graph
 
-    def _create_graf_files(self):
+    def generate_graf_files(self, header, data_structure):
         """This method will create the GrAF Xml files.
         But first is need to create the GrAF object in
         order to get the values.
@@ -246,34 +246,40 @@ class Elan:
             file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
             file.close()
 
-    def generate_metafile(self, header, data_structure):
-
+        # Generating the metafile
         tree = ET.parse(self.filepath)
-        doc = tree.getroot()
-        #root = doc.find('ANNOTATION_DOCUMENT')
-        root = doc.find('TIER')
-        for dc in doc.getiterator():
-            print(dc)
+        root = tree.getroot()
 
-        print(root)
         # Generate the metadata file
-        metafile_tree = Element('metadata')
+        element_tree = Element('metadata')
 
-        SubElement(metafile_tree, 'header_file').text =\
-        os.path.basename(header.filename)
+        SubElement(element_tree, 'header_file').text =\
+        os.path.basename(self.header.filename)
 
-        SubElement(metafile_tree, 'data_structure_hierarchy').text =\
+        SubElement(element_tree, 'data_structure_hierarchy').text =\
         str(data_structure)
 
-        file_tag = SubElement(metafile_tree, "file",
+        file_tag = SubElement(element_tree, "file",
                 {"data_type":header.dataType})
 
         miscellaneous = SubElement(file_tag, "miscellaneous")
 
+        # Add the root element
+        SubElement(miscellaneous, root.tag, root.attrib)
+
+        for child in root:
+            if child.tag != "ALIGNABLE_ANNOTATION" and\
+               child.tag != "REF_ANNOTATION" and\
+               child.tag != "ANNOTATION_VALUE" and\
+               child.tag != "ANNOTATION":
+                if child.tag == "TIER":
+                    SubElement(miscellaneous, child.tag, child.attrib)
+                else:
+                    miscellaneous.append(child)
 
         filename = self.basedirname+"-metafile.xml"
         file = open(filename,'wb')
-        doc = minidom.parseString(tostring(metafile_tree))
+        doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
 
