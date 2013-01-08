@@ -305,7 +305,8 @@ class CreateHeaderFile:
 
         """
 
-        self.annotation_list.append((loc, fid))
+        if (loc, fid) not in self.annotation_list:
+            self.annotation_list.append((loc, fid))
 
     def add_annotation_attributes(self, parent, type, values_list):
         """This method is responsible to add the

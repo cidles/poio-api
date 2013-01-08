@@ -33,7 +33,7 @@ class XmlHandler(ContentHandler):
         self.time_slot_dict = dict()
         self.constraints_list = []
         self.linguistic_type_list = []
-        
+
     def startElement(self, name, attrs):
 
         self.map[name] = ''
