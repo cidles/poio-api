@@ -310,7 +310,7 @@ class DataStructureTypeGraid(DataStructureType):
 
     name = "GRAID"
 
-    data_hierarchy_dict = \
+    data_hierarchy = \
     [ 'utterance',
         [ 'clause_unit',
             [ 'word', 'wfw', 'graid1' ],
@@ -389,13 +389,13 @@ class DataStructureTypeWithConstraints(DataStructureType):
 
     name = "GRAID"
 
-    data_hierarchy_dict =\
+    data_hierarchy =\
         [ 'utterance',
-          [ 'clause unit',
+          [ 'clause_unit',
         [ 'word', 'wfw', 'graid1' ],
     'graid2' ],
     'translation', 'comment' ]
 
     tier = dict()
     tier["utterance"] = None
-    tier["clause unit"] = "CharacterAssociation"
+    tier["clause_unit"] = "CharacterAssociation"
