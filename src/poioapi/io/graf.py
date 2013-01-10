@@ -56,7 +56,7 @@ class Writer():
 
         """
 
-        self.data_hierarchy = self.annotation_tree.data_structure_type.data_hierarchy_dict
+        self.data_hierarchy = self.annotation_tree.data_structure_type.data_hierarchy
 
         # Creates the raw file
         self._create_raw_file()
@@ -446,7 +446,7 @@ class Parser():
 
         # Initialize the variable
         data_hierarchy = self.annotation_tree.data_structure_type\
-        .data_hierarchy_dict
+        .data_hierarchy
 
         # Read header file
         element_tree = ET.parse(self.filepath)

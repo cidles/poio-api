@@ -574,7 +574,7 @@ class AnnotationTree():
                             if region[0] > start_pos[t]:
                                 start_pos[t] = region[0]
                         elements[i]['region'] = region
-                        start_pos[t] = region[1]
+                        #start_pos[t] = region[1]
 
 
 class AnnotationTreeFilter():
