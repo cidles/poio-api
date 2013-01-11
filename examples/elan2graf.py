@@ -8,7 +8,8 @@
 
 import sys, getopt
 
-import poioapi.io.elan
+from poioapi.io import elan
+from poioapi import data
 
 def main(argv):
 
@@ -34,16 +35,14 @@ def main(argv):
         print('elan2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    elan_graf = poioapi.io.elan.Elan(inputfile)
+    # Initialize
+    elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints())
 
     # Create a GrAF object
     graph = elan_graf.elan_to_graf()
 
-    # Header file
-    header = elan_graf.header
-
     # Create GrAF Xml files
-    elan_graf.generate_graf_files(header, None)
+    elan_graf.generate_graf_files()
 
     # Rendering the GrAF object to an Xml file
     elan_graf.graph_rendering(outputfile, graph)

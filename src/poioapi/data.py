@@ -387,15 +387,10 @@ class DataStructureTypeWithConstraints(DataStructureType):
 
     """
 
-    name = "GRAID"
+    name = "ELAN"
 
-    data_hierarchy =\
-        [ 'utterance',
-          [ 'clause_unit',
-        [ 'word', 'wfw', 'graid1' ],
-    'graid2' ],
-    'translation', 'comment' ]
+    data_hierarchy = ['utterance','words','part of speech',
+                      'phonetic_transcription','gestures',
+                      'gesture_phases','gesture_meaning']
 
-    tier = dict()
-    tier["utterance"] = None
-    tier["clause_unit"] = "CharacterAssociation"
+    data_hierarchy_const = dict()

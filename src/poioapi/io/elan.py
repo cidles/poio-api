@@ -35,7 +35,7 @@ class Elan:
 
     """
 
-    def __init__(self, filepath):
+    def __init__(self, filepath, data_structure_hierarchy):
         """Class's constructor.
 
         Parameters
@@ -51,7 +51,8 @@ class Elan:
 
         # Create the header file
         self.header = header.CreateHeaderFile(self.basedirname)
-        self.data_structure_hierarchy = []
+        self.data_structure_hierarchy = data_structure_hierarchy.data_hierarchy
+        self.data_structure_constraints = data_structure_hierarchy.data_hierarchy_const
 
         self.xml_files_map = {}
 
@@ -103,7 +104,7 @@ class Elan:
             node_id = "tier-n"+str(tiers_number)
             tier_node = Node(node_id)
             tier_id = tier.attrib['TIER_ID']
-            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF']
+            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].replace(" ","_")
 
             self.header.add_annotation(self.filename, linguistic_type_ref)
 
@@ -126,6 +127,12 @@ class Elan:
                 self.xml_files_map[linguistic_type_ref] = element_tree
             else:
                 element_tree = self.xml_files_map[linguistic_type_ref]
+
+            # Add to the constraint in the data structure hierarchy
+            if linguistic_type_ref in self.data_structure_constraints:
+                self.data_structure_constraints[linguistic_type_ref].append(tier_id)
+            else:
+                self.data_structure_constraints[linguistic_type_ref] = [tier_id]
 
             for child in tier.getiterator():
                 add_annotation = False
@@ -216,7 +223,7 @@ class Elan:
 
         return graph
 
-    def generate_graf_files(self, header, data_structure):
+    def generate_graf_files(self):
         """This method will create the GrAF Xml files.
         But first is need to create the GrAF object in
         order to get the values.
@@ -226,22 +233,13 @@ class Elan:
         hierarchy, the vocabulary, the media descriptor
         and all the important information.
 
-        Parameters
-        ----------
-        graph : object
-            GrAF object.
-        header : object
-            Header object.
-        data_structure : array_like
-            Array like with the data structure hierarchy.
-
         """
 
-        for tree_element in self.xml_files_map.items():
-            tier_name = tree_element[0]
-            filepath = self.basedirname+"-"+tier_name+".xml"
+        for elements in self.xml_files_map.items():
+            file_name = elements[0]
+            filepath = self.basedirname+"-"+file_name+".xml"
             file = open(filepath,'wb')
-            element_tree = tree_element[1]
+            element_tree = elements[1]
             doc = minidom.parseString(tostring(element_tree))
             file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
             file.close()
@@ -256,11 +254,21 @@ class Elan:
         SubElement(element_tree, 'header_file').text =\
         os.path.basename(self.header.filename)
 
-        SubElement(element_tree, 'data_structure_hierarchy').text =\
-        str(data_structure)
+        data_structure = SubElement(element_tree,
+            'data_structure_hierarchy')
+        structure = SubElement(data_structure,
+            'hierarchy').text =\
+        str(self.data_structure_hierarchy)
+
+        constraints = SubElement(data_structure,'constraints')
+
+        for values in self.data_structure_constraints.items():
+            key = values[0]
+            values = values[1]
+            SubElement(constraints,'constraint', {key:values})
 
         file_tag = SubElement(element_tree, "file",
-                {"data_type":header.dataType})
+                {"data_type":self.header.dataType})
 
         miscellaneous = SubElement(file_tag, "miscellaneous")
 
@@ -277,7 +285,7 @@ class Elan:
                 else:
                     miscellaneous.append(child)
 
-        filename = self.basedirname+"-metafile.xml"
+        filename = self.basedirname+"-extinfo.xml"
         file = open(filename,'wb')
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
