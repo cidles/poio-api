@@ -43,7 +43,7 @@ class Writer():
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
         # Create the header file
-        self.header = header.CreateHeaderFile(self.basedirname)
+        self.header = header.HeaderFile(self.basedirname)
 
         self.hierarchy_level_list = []
         self.annotation_tree = annotation_tree

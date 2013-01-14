@@ -18,7 +18,7 @@ import random
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
-class CreateHeaderFile:
+class HeaderFile:
     """
     Class responsible to create the header file
     that will contain the other resource files
@@ -240,7 +240,7 @@ class CreateHeaderFile:
         annotations = SubElement(primaryData, "annotations")
 
         for ann in self.annotation_list:
-            annotation = SubElement(annotations, "annotation",
+            SubElement(annotations, "annotation",
                     {"loc":ann[0],"f.id":ann[1]}) # Required
 
         # Branch revisionDesc isn't required

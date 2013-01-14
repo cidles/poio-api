@@ -49,8 +49,6 @@ class Elan:
         self.filepath = filepath
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
-        # Create the header file
-        self.header = header.CreateHeaderFile(self.basedirname)
         self.data_structure_hierarchy = data_structure_hierarchy.data_hierarchy
         self.data_structure_constraints = data_structure_hierarchy.data_hierarchy_const
 
@@ -79,12 +77,6 @@ class Elan:
         tree = ET.parse(self.filepath)
         doc = tree.getroot()
 
-        # Mandatory to give an author to the file
-        self.header.author = 'CIDLeS'
-        self.header.filename = self.filename.split('.eaf')[0]
-        self.header.primaryfile = self.filename
-        self.header.dataType = 'Elan file' # Type of the origin data file
-
         time_order = doc.find('TIME_ORDER')
         time_order_dict = dict()
 
@@ -105,8 +97,6 @@ class Elan:
             tier_node = Node(node_id)
             tier_id = tier.attrib['TIER_ID']
             linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].replace(" ","_")
-
-            self.header.add_annotation(self.filename, linguistic_type_ref)
 
             # Need to check if the tier element already exist
             if linguistic_type_ref not in self.xml_files_map.keys():
@@ -218,9 +208,6 @@ class Elan:
 
             tiers_number+=1
 
-        # Close the header file
-        self.header.create_header()
-
         return graph
 
     def generate_graf_files(self):
@@ -235,14 +222,23 @@ class Elan:
 
         """
 
+        self.header = header.HeaderFile(self.basedirname)
+        self.header.filename = self.filename.split('.eaf')[0]
+        self.header.primaryfile = self.filename
+        self.header.dataType = 'Elan file' # Type of the origin data file
+
         for elements in self.xml_files_map.items():
             file_name = elements[0]
-            filepath = self.basedirname+"-"+file_name+".xml"
+            extension = file_name+".xml"
+            self.header.add_annotation(extension, file_name)
+            filepath = self.basedirname+"-"+extension
             file = open(filepath,'wb')
             element_tree = elements[1]
             doc = minidom.parseString(tostring(element_tree))
             file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
             file.close()
+
+        self.header.create_header()
 
         # Generating the metafile
         tree = ET.parse(self.filepath)
