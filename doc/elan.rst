@@ -13,6 +13,7 @@ The data structure elements is going to have the same names as the "LINGUISTIC_T
 Data Structure Hierarchy example:
 
 .. code-block:: python
+
     ['utterance',
         ['words', 
             ['part_of_speech', 
@@ -24,7 +25,8 @@ The metafile is structure is composed by the header file, data structure hierarc
 
 Metafile example:
 
-.. code-block:: python
+.. code-block:: xml
+
     <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <header_file>example</header_file>
       <data_structure_hierarchy>
@@ -46,7 +48,8 @@ In the data structure hierarchy tag exist a child "constraints". Those constrain
 
 Tag "data_structure_hierarchy" constraints example:
 
-.. code-block:: python
+.. code-block:: xml
+
     <data_structure_hierarchy>
         <hierarchy>['utterance', 'words']</hierarchy>
         <constraints>
@@ -69,6 +72,7 @@ First is important to know the class DataStructureTypeWithConstraints. This clas
 For the parser works properly is need to set the data structure of the class first:
 
 .. code-block:: python
+
     # Initialize
     data_hierarchy = ['utterance','words','part_of_speech']
 
@@ -80,6 +84,7 @@ For the parser works properly is need to set the data structure of the class fir
 Next to creat a GrAF object:
 
 .. code-block:: python
+
     graph = elan_graf.elan_to_graf()
 
 Now it's possible to access it with `Graf-python API <https://github.com/cidles/graf-python>`_
@@ -89,6 +94,7 @@ For more information about Graf-python (https://graf-python.readthedocs.org/en/l
 Generate the GrAF files:
 
 .. code-block:: python
+
     elan_graf.generate_graf_files()
 
 This step will generate the GrAF files inclunding the header and the metafile. Each of the GrAF files is going to be named with the file name of the elan file followed by an extension that is the respective element of the data structure hierarchy. The metafile is named like the GrAF files but the extension will be "extinfo". All the files are xml file type but the header will have a different file extension ".hdr".
