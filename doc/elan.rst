@@ -80,7 +80,7 @@ For the parser works properly is need to set the data structure of the class fir
     # Path to the elan file
     inputfile = 'example.elan'
 
-    elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints())
+    elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints(data_hierarchy))
 
 Next to creat a GrAF object:
 
