@@ -2,17 +2,17 @@
 How To Use Poio API
 *******************
 
-This is the documentation for Python Libary Poio API.
+This is the documentation for Python Library Poio API.
 
 Introduction
 ============  
 
-This document has as presupposition explation the some functions of the Poio API Library. Those functions are how to parse the GrAF files to Annotation Tree and how to transform an Annotation Tree to the GrAF files.
+This document has as presupposition explanation the some functions of the Poio API Library. Those functions are how to parse the GrAF files to Annotation Tree and how to transform an Annotation Tree to the GrAF files.
 
 First is important to know how the process of each function works.
 The transformation if an Annotation Tree to the GrAF files is made by giving an Annotation Tree that contains a specific data structure hierarchy and then the necessary files using the GrAF ISO standards, are generated. Each of the files created are followed by the extension that corresponds to each element in the data structure hierarchy (e.g. 'filename-utterance.xml'). In the end a header file is created.
 This header file in the GrAF ISO standard is the file that contain the relevant information about the GrAF. The information passes by the author, date of creation... The most important part of the files are the annotations and the primary file. The annotations are the dependent files to create all the nodes, edges, feature and everything needed to the GrAF. The primary file is the raw file that has the words that are the values of the nodes.
-To parse the Graf to Annotation Tree files will be necessary an header file and give the respective data structure hiearchy.
+To parse the Graf to Annotation Tree files will be necessary an header file and give the respective data structure hierarchy.
 
 Next is shown the two processes.
 
@@ -67,7 +67,7 @@ NOTE: The generated files are in the same folder as the inputfile.
 Parse GrAF files to Annotation Tree
 ===================================
 		
-Is important to know that to make the parsing of the GrAF files they must be createad as well as the header file.
+Is important to know that to make the parsing of the GrAF files they must be created as well as the header file.
 The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree.
 
 
