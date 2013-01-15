@@ -52,6 +52,8 @@ class Elan:
         self.data_structure_hierarchy = data_structure_hierarchy.data_hierarchy
         self.data_structure_constraints = data_structure_hierarchy.data_hierarchy_const
 
+        self.data_hierarchy_parent_dict = dict()
+
         self.xml_files_map = {}
 
     def elan_to_graf(self):
@@ -73,6 +75,9 @@ class Elan:
         """
 
         graph = Graph()
+
+        # Find the dependencies in the hierarchy
+        self._find_hierarchy_parents(self.data_structure_hierarchy, None)
 
         tree = ET.parse(self.filepath)
         doc = tree.getroot()
@@ -108,7 +113,11 @@ class Elan:
                 SubElement(graph_header, 'labelsDecl')
                 dependencies = SubElement(graph_header,
                     'dependencies')
-                SubElement(dependencies, 'dependsOn', {'f.id':'None'})
+
+                dependecie = self.data_hierarchy_parent_dict[linguistic_type_ref]
+                if dependecie is not None:
+                    SubElement(dependencies, 'dependsOn', {'f.id':dependecie})
+
                 annotation_spaces = SubElement(graph_header,
                     'annotationSpaces')
                 SubElement(annotation_spaces,'annotationSpace',
@@ -209,6 +218,15 @@ class Elan:
             tiers_number+=1
 
         return graph
+
+    def _find_hierarchy_parents(self, hierarchy, parent):
+        for index, element in enumerate(hierarchy):
+            if isinstance(element, list):
+                self._find_hierarchy_parents(element, parent)
+            else:
+                self.data_hierarchy_parent_dict[element] = parent
+                if index is 0:
+                    parent = element
 
     def generate_graf_files(self):
         """This method will create the GrAF Xml files.

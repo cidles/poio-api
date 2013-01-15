@@ -389,7 +389,7 @@ class DataStructureTypeWithConstraints(DataStructureType):
 
     name = "ELAN"
 
-    data_hierarchy = ['utterance','words','part of speech',
+    data_hierarchy = ['utterance','words','part_of_speech',
                       'phonetic_transcription','gestures',
                       'gesture_phases','gesture_meaning']
 
