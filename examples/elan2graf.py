@@ -36,7 +36,11 @@ def main(argv):
         sys.exit()
 
     # Initialize
-    elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints())
+    data_hierarchy = ['utterance','words','part_of_speech',
+                      'phonetic_transcription','gestures',
+                      'gesture_phases','gesture_meaning']
+
+    elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints(data_hierarchy))
 
     # Create a GrAF object
     graph = elan_graf.elan_to_graf()

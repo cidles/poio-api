@@ -376,7 +376,7 @@ class DataStructureTypeMorphsynt(DataStructureType):
 class DataStructureTypeWithConstraints(DataStructureType):
 
     """
-    Data structure type using a GRAID format.
+    Data structure type for structure with constraints.
 
     Attributes
     ----------
@@ -384,13 +384,16 @@ class DataStructureTypeWithConstraints(DataStructureType):
         Name of the structure.
     data_hirerarchy : array_like
         Structure of the array.
+    data_hierarchy_const : dictionary
+        A dictionary with the constrainst of each element in the structure.
 
     """
 
     name = "ELAN"
 
-    data_hierarchy = ['utterance','words','part_of_speech',
-                      'phonetic_transcription','gestures',
-                      'gesture_phases','gesture_meaning']
+    data_hierarchy = []
 
     data_hierarchy_const = dict()
+
+    def __init__(self, data_structure_hierarchy):
+        self.data_hierarchy = data_structure_hierarchy

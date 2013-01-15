@@ -153,7 +153,7 @@ class Elan:
                     region_id = tier_id+"-r"+index
                     region = Region(region_id, *anchors)
 
-                    edge_id = child.tag+"-e"+index
+                    edge_id = "e"+index
                     edge = Edge(edge_id, tier_node, node)
 
                     # Annotation
