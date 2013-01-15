@@ -42,6 +42,8 @@ class Elan:
         ----------
         filepath : str
             Path of the elan file.
+        data_structure_hierarchy : object
+            This object contains the data hierarchy and the constraints.
 
         """
 
@@ -67,10 +69,6 @@ class Elan:
         -------
         graph : object
             GrAF object.
-
-        See Also
-        --------
-        _create_data_structure
 
         """
 
@@ -220,6 +218,18 @@ class Elan:
         return graph
 
     def _find_hierarchy_parents(self, hierarchy, parent):
+        """This method will search in the data structure
+        hierarchy for the parents of each elements.
+
+        Parameters
+        ----------
+        hierarchy : array_like
+            Hierarchy of the data strcuture.
+        parent : str
+            Name of an element.
+
+        """
+
         for index, element in enumerate(hierarchy):
             if isinstance(element, list):
                 self._find_hierarchy_parents(element, parent)
