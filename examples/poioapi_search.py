@@ -2,9 +2,9 @@
 #
 # Poio Tools for Linguists
 #
-# Copyright (C) 2009-2012 Poio Project
+# Copyright (C) 2009-2013 Poio Project
 # Author: António Lopes <alopes@cidles.eu>
-# URL: <http://www.cidles.eu/ltll/poio>
+# URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 """This module contains a simple example 
 how to use the PoioAPI and search
