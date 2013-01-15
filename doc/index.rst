@@ -14,6 +14,7 @@ Welcome to Poio API's documentation!
 
    modules
    howto
+   elan
     
 Indices and tables
 ==================
