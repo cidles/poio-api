@@ -11,8 +11,9 @@ In order to convert the Elan files into GrAF object or GrAF files there is going
 The data structure elements is going to have the same names as the "LINGUISTIC_TYPE_REF" of each tier. Their hierarchy can assume any order/format, it's the user choice. 
 
 Data Structure Hierarchy example:
+
 .. code-block:: python
-    ['utterance', 
+    ['utterance',
         ['words', 
             ['part_of_speech', 
                 ['phonetic_transcription']]], 
@@ -21,7 +22,8 @@ Data Structure Hierarchy example:
 The Elan file contains a lot of information that is only used by the program itself and is not to much use for the GrAF. Thereby is important to separate the information that's will be used in the GrAF construction that are merely the TIERs and the rest will be stored in the file so that later it can be possible to rebuild the elan file again.
 The metafile is structure is composed by the header file, data structure hierarchy, type of file (text, elan, etc...) and miscellaneous information. 
 
-Metafile example
+Metafile example:
+
 .. code-block:: python
     <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <header_file>example</header_file>
@@ -43,6 +45,7 @@ Metafile example
 In the data structure hierarchy tag exist a child "constraints". Those constraints are the the tiers id that belongs to an element in the hierarchy.
 
 Tag "data_structure_hierarchy" constraints example:
+
 .. code-block:: python
     <data_structure_hierarchy>
         <hierarchy>['utterance', 'words']</hierarchy>
