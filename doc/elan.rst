@@ -100,4 +100,4 @@ Generate the GrAF files:
 
 This step will generate the GrAF files inclunding the header and the metafile. Each of the GrAF files is going to be named with the file name of the elan file followed by an extension that is the respective element of the data structure hierarchy. The metafile is named like the GrAF files but the extension will be "extinfo". All the files are xml file type but the header will have a different file extension ".hdr".
 
-Note: To create the GrAF files it's first needed to run the method above described.
+**Note:** To create the GrAF files it's first needed to run the method above described.
