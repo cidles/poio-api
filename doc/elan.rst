@@ -2,7 +2,7 @@
 Elan Handler
 ************
 
-This is the documentation how the Elan files are parsed in Python Library Poio API.
+This is the documentation how the Elan files are handled in Python Library Poio API.
 
 Introduction
 ============
@@ -59,6 +59,7 @@ Tag "data_structure_hierarchy" constraints example:
     </data_structure_hierarchy>
 
 Important references:
+
 * Elan Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
 * Elan Information (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
 * Elan Tools and Documentation (http://tla.mpi.nl/tools/tla-tools/elan/download/)
