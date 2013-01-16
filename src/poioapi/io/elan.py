@@ -137,9 +137,9 @@ class Elan:
 
                 if child.tag == 'ALIGNABLE_ANNOTATION':
                     annotation_time_ref_1 = str(time_order_dict[
-                                            child.attrib['TIME_SLOT_REF1']])
+                                                child.attrib['TIME_SLOT_REF1']])
                     annotation_time_ref_2 = str(time_order_dict[
-                                            child.attrib['TIME_SLOT_REF2']])
+                                                child.attrib['TIME_SLOT_REF2']])
                     annotation_id = child.attrib['ANNOTATION_ID']
                     annotation_value = child.find('ANNOTATION_VALUE').text
 
@@ -341,3 +341,12 @@ class Elan:
 
         # Delete the temp file
         os.remove(outputfile+"_tmp")
+
+    def write_elan(self, inputfile):
+        tree = ET.parse(inputfile)
+        root = tree.getroot()
+
+        return root
+
+    def _find_tier_elements(self, tier_id, linguistyc_ref):
+        print(self.basedirname)
