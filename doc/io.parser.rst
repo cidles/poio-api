@@ -2,7 +2,7 @@
 poioapi.io.analyzer
 ===================
 
-.. automodule:: poioapi.io.analyzer
+.. automodule:: poioapi.io.parser
    :members:
 
 Indices and tables
