@@ -1,6 +1,6 @@
-===================
-poioapi.io.analyzer
-===================
+=================
+poioapi.io.parser
+=================
 
 .. automodule:: poioapi.io.parser
    :members:
