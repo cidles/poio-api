@@ -275,21 +275,21 @@ class Elan:
         # Generate the metadata file
         element_tree = Element('metadata')
 
-        SubElement(element_tree, 'header_file').text =\
-        os.path.basename(self.header.filename)
+        header_tag = SubElement(element_tree, 'header')
 
-        data_structure = SubElement(element_tree,
-            'data_structure_hierarchy')
-        structure = SubElement(data_structure,
-            'hierarchy').text =\
+        data_structure = SubElement(header_tag, 'data_structure')
+        
+        SubElement(data_structure, 'hierarchy').text = \
         str(self.data_structure_hierarchy)
 
-        constraints = SubElement(data_structure,'constraints')
+        tier_mapping = SubElement(data_structure,'tier_mapping')
 
         for values in self.data_structure_constraints.items():
             key = values[0]
             values = values[1]
-            SubElement(constraints,'constraint', {key:values})
+            type = SubElement(tier_mapping,'type', {'name':key})
+            for value in values:
+                SubElement(type, 'tier').text = value
 
         file_tag = SubElement(element_tree, "file",
                 {"data_type":self.header.dataType})
