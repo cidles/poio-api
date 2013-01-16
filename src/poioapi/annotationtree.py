@@ -298,9 +298,9 @@ class AnnotationTree():
 
         self.filters.append(filter)
         new_filtered_elements = [i
-             for i, e in enumerate(self.tree)
-             if i in self.filtered_element_ids[-1] and
-                filter.element_passes_filter(e)]
+                                 for i, e in enumerate(self.tree)
+                                 if i in self.filtered_element_ids[-1] and
+                                    filter.element_passes_filter(e)]
         self.filtered_element_ids.append(new_filtered_elements)
 
     def last_filter(self):
@@ -364,8 +364,8 @@ class AnnotationTree():
         self.filtered_element_ids = [ range(len(self.tree)) ]
         for filter in self.filters:
             new_filtered_elements = [i for i, e in enumerate(self.tree)
-                if i in self.filtered_element_ids[-1] and
-                    filter.element_passes_filter(e)]
+                                     if i in self.filtered_element_ids[-1] and
+                                        filter.element_passes_filter(e)]
             self.filtered_element_ids.append(new_filtered_elements)
 
     def as_html(self, filtered = False, html_frame = True):
@@ -456,7 +456,7 @@ class AnnotationTree():
                 a = elements[i]["annotation"]
                 if a == "":
                     a = "&nbsp;"
-                #if (column + 1) > len(table[row]):
+                    #if (column + 1) > len(table[row]):
                 if column in table[row]:
                     table[row][column] = (a, table[row][column][1])
                 else:
@@ -555,9 +555,9 @@ class AnnotationTree():
             if type(t) is list:
                 elements_list = elements[i]
                 for i, e in enumerate(elements_list):
-                   self._update_with_ranges(
+                    self._update_with_ranges(
                         e, t, search_tier, update_tiers, start_pos,
-                       string_to_search)
+                        string_to_search)
             else:
                 if t == search_tier:
                     string_to_search = elements[i]['annotation']
@@ -570,11 +570,11 @@ class AnnotationTree():
                             raise RegionNotFoundInString(
                                 "String '{0}' not found in '{1}'.".format(
                                     elements[i]['annotation'], string_to_search))
-                        for t in start_pos:
-                            if region[0] > start_pos[t]:
-                                start_pos[t] = region[0]
+                        for tier in start_pos:
+                            if region[0] > start_pos[tier]:
+                                start_pos[tier] = region[0]
                         elements[i]['region'] = region
-                        #start_pos[t] = region[1]
+                        start_pos[t] = region[1]
 
 
 class AnnotationTreeFilter():
@@ -738,9 +738,9 @@ class AnnotationTreeFilter():
                     match = regex.search(
                         self.filter[t], elements[i]["annotation"])
                     if match:
-                        self.matchobject[t][elements[i]["id"]] = \
-                            [ [m.start(), m.end()] for m in regex.finditer(
-                                self.filter[t], elements[i]["annotation"]) ]
+                        self.matchobject[t][elements[i]["id"]] =\
+                        [ [m.start(), m.end()] for m in regex.finditer(
+                            self.filter[t], elements[i]["annotation"]) ]
                         passes = True
                 elif self.boolean_operation == self.AND:
                     passes = True
