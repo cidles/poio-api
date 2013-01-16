@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies/>
+    <annotationSpaces>
+      <annotationSpace as.id="utterance"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="K-Spch-n1">
+    <link targets="K-Spch-r1"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n1" xml:id="e1"/>
+  <region anchors="280 1250" xml:id="K-Spch-r1"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n1" xml:id="a1">
+    <fs>
+      <f name="annotation_value">so from here.</f>
+    </fs>
+  </a>
+  <node xml:id="K-Spch-n2">
+    <link targets="K-Spch-r2"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n2" xml:id="e2"/>
+  <region anchors="4040 4400" xml:id="K-Spch-r2"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n2" xml:id="a2">
+    <fs>
+      <f name="annotation_value">yeah</f>
+    </fs>
+  </a>
+  <node xml:id="K-Spch-n3">
+    <link targets="K-Spch-r3"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n3" xml:id="e3"/>
+  <region anchors="10060 10460" xml:id="K-Spch-r3"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n3" xml:id="a3">
+    <fs>
+      <f name="annotation_value">ja</f>
+    </fs>
+  </a>
+  <node xml:id="K-Spch-n4">
+    <link targets="K-Spch-r4"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n4" xml:id="e4"/>
+  <region anchors="14620 14990" xml:id="K-Spch-r4"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n4" xml:id="a4">
+    <fs>
+      <f name="annotation_value">ja</f>
+    </fs>
+  </a>
+  <node xml:id="K-Spch-n5">
+    <link targets="K-Spch-r5"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n5" xml:id="e5"/>
+  <region anchors="22830 23870" xml:id="K-Spch-r5"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n5" xml:id="a5">
+    <fs>
+      <f name="annotation_value">there is another plein</f>
+    </fs>
+  </a>
+  <node xml:id="K-Spch-n6">
+    <link targets="K-Spch-r6"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n6" xml:id="e6"/>
+  <region anchors="27030 27990" xml:id="K-Spch-r6"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n6" xml:id="a6">
+    <fs>
+      <f name="annotation_value">rotunda</f>
+    </fs>
+  </a>
+  <node xml:id="K-Spch-n7">
+    <link targets="K-Spch-r7"/>
+  </node>
+  <edge from="tier-n0" to="K-Spch-n7" xml:id="e7"/>
+  <region anchors="29010 29480" xml:id="K-Spch-r7"/>
+  <a as="utterance" label="utterance" ref="K-Spch-n7" xml:id="a7">
+    <fs>
+      <f name="annotation_value">ja</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n8">
+    <link targets="W-Spch-r8"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n8" xml:id="e8"/>
+  <region anchors="780 4090" xml:id="W-Spch-r8"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n8" xml:id="a8">
+    <fs>
+      <f name="annotation_value">so you go out of the Institute to the Saint Anna Straat.</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n9">
+    <link targets="W-Spch-r9"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n9" xml:id="e9"/>
+  <region anchors="4600 10070" xml:id="W-Spch-r9"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n9" xml:id="a9">
+    <fs>
+      <f name="annotation_value">and then you go the other, Saint Anna Straat to this to the center of the town, to this big rotunde.</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n10">
+    <link targets="W-Spch-r10"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n10" xml:id="e10"/>
+  <region anchors="11150 13240" xml:id="W-Spch-r10"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n10" xml:id="a10">
+    <fs>
+      <f name="annotation_value">and you follow then the sign Kleef</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n11">
+    <link targets="W-Spch-r11"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n11" xml:id="e11"/>
+  <region anchors="13310 14540" xml:id="W-Spch-r11"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n11" xml:id="a11">
+    <fs>
+      <f name="annotation_value">that's the oranje single</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n12">
+    <link targets="W-Spch-r12"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n12" xml:id="e12"/>
+  <region anchors="15330 17190" xml:id="W-Spch-r12"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n12" xml:id="a12">
+    <fs>
+      <f name="annotation_value">then you follow the sign kleef</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n13">
+    <link targets="W-Spch-r13"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n13" xml:id="e13"/>
+  <region anchors="17570 18750" xml:id="W-Spch-r13"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n13" xml:id="a13">
+    <fs>
+      <f name="annotation_value">you come down</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n14">
+    <link targets="W-Spch-r14"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n14" xml:id="e14"/>
+  <region anchors="18990 21810" xml:id="W-Spch-r14"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n14" xml:id="a14">
+    <fs>
+      <f name="annotation_value">you know eh after this trajanus plein</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n15">
+    <link targets="W-Spch-r15"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n15" xml:id="e15"/>
+  <region anchors="21860 22930" xml:id="W-Spch-r15"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n15" xml:id="a15">
+    <fs>
+      <f name="annotation_value">you come down to the</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n16">
+    <link targets="W-Spch-r16"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n16" xml:id="e16"/>
+  <region anchors="23470 25050" xml:id="W-Spch-r16"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n16" xml:id="a16">
+    <fs>
+      <f name="annotation_value">rhine eh valley</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n17">
+    <link targets="W-Spch-r17"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n17" xml:id="e17"/>
+  <region anchors="25080 27010" xml:id="W-Spch-r17"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n17" xml:id="a17">
+    <fs>
+      <f name="annotation_value">yeah that's another eh</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n18">
+    <link targets="W-Spch-r18"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n18" xml:id="e18"/>
+  <region anchors="28160 29110" xml:id="W-Spch-r18"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n18" xml:id="a18">
+    <fs>
+      <f name="annotation_value">kind of rotunde</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n19">
+    <link targets="W-Spch-r19"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n19" xml:id="e19"/>
+  <region anchors="29370 31230" xml:id="W-Spch-r19"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n19" xml:id="a19">
+    <fs>
+      <f name="annotation_value">and then you follow the signs kleef</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n20">
+    <link targets="W-Spch-r20"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n20" xml:id="e20"/>
+  <region anchors="31320 31999" xml:id="W-Spch-r20"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n20" xml:id="a20">
+    <fs>
+      <f name="annotation_value">go down</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n21">
+    <link targets="W-Spch-r21"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n21" xml:id="e21"/>
+  <region anchors="32379 34290" xml:id="W-Spch-r21"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n21" xml:id="a21">
+    <fs>
+      <f name="annotation_value">and then you go the this way</f>
+    </fs>
+  </a>
+  <node xml:id="W-Spch-n22">
+    <link targets="W-Spch-r22"/>
+  </node>
+  <edge from="tier-n1" to="W-Spch-n22" xml:id="e22"/>
+  <region anchors="34380 36180" xml:id="W-Spch-r22"/>
+  <a as="utterance" label="utterance" ref="W-Spch-n22" xml:id="a22">
+    <fs>
+      <f name="annotation_value">eh ja to kleef</f>
+    </fs>
+  </a>
+</graph>
