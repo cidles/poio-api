@@ -25,6 +25,8 @@ class TestElan:
         self.filename = os.path.join(os.path.dirname(__file__), "sample_files",
             "elan_graf", "example.eaf")
 
+        self.basedirname = os.path.dirname(self.filename)
+
         self.metafile = os.path.join(os.path.dirname(__file__), "sample_files",
             "elan_graf", "example-extinfo.xml")
 
@@ -61,7 +63,7 @@ class TestElan:
 
             SubElement(new_element_tree, element.tag, element.attrib).text = element.text
 
-        file = open("C:\\tests\elan\_result.xml",'wb')
+        file = open(self.basedirname+"/_result.xml",'wb')
         doc = minidom.parseString(tostring(new_element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
