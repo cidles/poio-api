@@ -193,7 +193,10 @@ class AnnotationGraph():
         if full_html:
             html += "</body></html>"
 
-        #print(html)
+        f = open("test.html", "wb")
+        f.write(html.encode("utf-8"))
+        f.close()
+
         return html
 
     def _node_as_table(self, node, hierarchy, table, column):
@@ -222,7 +225,7 @@ class AnnotationGraph():
         for i, t in enumerate(hierarchy):
 
             if type(t) is list:
-                node_list = self.nodes_for_tier(t, node)
+                node_list = self.nodes_for_tier(t[0], node)
                 for i, n in enumerate(node_list):
                     inserted += self._node_as_table(
                         n, t, table, column + i + inserted)
@@ -242,7 +245,7 @@ class AnnotationGraph():
                 if len(a_list) > 0:
                     a = self.annotation_value_for_annotation(a_list[0])
                 if a == "":
-                    a = "nbsp;"
+                    a = "&nbsp;"
 
                 if column in table[row]:
                     table[row][column] = (a, table[row][column][1])

@@ -59,7 +59,7 @@ class TestElan:
             if element.tag == 'TIER':
                 self.elan._find_tier_elements(None,None)
 
-            print(element.tag)
+            #print(element.tag)
 
             SubElement(new_element_tree, element.tag, element.attrib).text = element.text
 
