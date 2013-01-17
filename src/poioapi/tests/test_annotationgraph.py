@@ -45,3 +45,13 @@ class TestAnnotationGraph:
         node = self.annotation_graph.graf.nodes["word-n1"]
         annotations = self.annotation_graph.annotations_for_tier("wfw", node)
         assert(len(annotations) == 1)
+
+    def test_annotation_value_for_annotation(self):
+        node = self.annotation_graph.graf.nodes["word-n1"]
+        annotations = self.annotation_graph.annotations_for_tier("wfw", node)
+        value = self.annotation_graph.annotation_value_for_annotation(annotations[0])
+        assert(value=="SUB")
+
+    def test_as_html_table(self):
+        html = self.annotation_graph.as_html_table()
+        assert(len(html) > 0)

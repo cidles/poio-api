@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os.path
 import codecs
-from operator import attrgetter
+import operator
 
 from poioapi import data
 from graf import GraphParser
@@ -127,7 +127,126 @@ class AnnotationGraph():
             if a.label == tier_name:
                 res.append(a)
 
-        print(res)
         return res
 
+    def annotation_value_for_annotation(self, annotation):
+        """Returns the annotation value for a given annotation.
 
+        Parameters
+        ----------
+        annotation: graf.Annotation
+            The annotation to get the value for.
+
+        Returns
+        -------
+        annotation_value : str
+            The annotation value.
+        """
+        return annotation.features.get_value("annotation_value")
+
+    def as_html_table(self, filtered = False, full_html = True):
+        """Return the graph as a HTML table.
+
+        Parameters
+        ----------
+        filtered : bool
+            Whether to us the filtered graph or the full graph.
+        full_html: bool
+            Whether to return a complete HTML page (i.e. with "<html>" etc.)
+            or just the <table> element.
+
+        Returns
+        -------
+        html = str
+            The HTML for the GrAF graph.
+
+        """
+        html = ""
+        if full_html:
+            html = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body>\n"
+
+        for i, root_node in enumerate(self.root_nodes()):
+            html += "<table>\n"
+
+            table = [dict() for _ in range(len(
+                self.structure_type_handler.flat_data_hierarchy))]
+
+            self._node_as_table(
+                root_node, self.structure_type_handler.data_hierarchy, table, 0)
+
+            for j, row in enumerate(table):
+                html += "<tr>\n"
+                if j == 0:
+                    html += "<td rowspan=\"{0}\" "\
+                            "class=\"element_id\">{1}</td>\n".format(
+                        len(self.structure_type_handler.flat_data_hierarchy), i)
+                html += "<td class=\"ann_type\">{0}</td>".format(
+                    self.structure_type_handler.flat_data_hierarchy[j])
+                for _, column in sorted(row.items(), key=operator.itemgetter(0)):
+                    html += "<td colspan=\"{0}\" class=\"{2}\">{1}</td>\n".format(
+                        column[1], column[0],
+                        self.structure_type_handler.flat_data_hierarchy[j])
+                html += "</tr>\n"
+
+            html += "</table>\n"
+
+        if full_html:
+            html += "</body></html>"
+
+        #print(html)
+        return html
+
+    def _node_as_table(self, node, hierarchy, table, column):
+        """Insert an element into a table.
+
+        Parameters
+        ----------
+        node : array_like
+            The root node to start the traversal.
+        hierarchy: array_like
+            An array with the data structure hierarchy.
+        table : array_like
+            The table to store the annotations to.
+        column: int
+            The current column number.
+
+        Returns
+        -------
+        inserted : int
+            Number of elements inserted.
+
+        """
+
+        inserted = 0
+
+        for i, t in enumerate(hierarchy):
+
+            if type(t) is list:
+                node_list = self.nodes_for_tier(t, node)
+                for i, n in enumerate(node_list):
+                    inserted += self._node_as_table(
+                        n, t, table, column + i + inserted)
+                inserted = inserted + len(node_list) - 1
+                merge_rows = [ r for r in hierarchy if type(r) is not list]
+                for r in merge_rows:
+                    row = self.structure_type_handler.flat_data_hierarchy.index(r)
+                    if column in table[row]:
+                        table[row][column] = (table[row][column][0], inserted + 1)
+                    else:
+                        table[row][column] = ("", inserted + 1)
+            else:
+                row = self.structure_type_handler.flat_data_hierarchy.index(t)
+
+                a_list = self.annotations_for_tier(t, node)
+                a = ""
+                if len(a_list) > 0:
+                    a = self.annotation_value_for_annotation(a_list[0])
+                if a == "":
+                    a = "nbsp;"
+
+                if column in table[row]:
+                    table[row][column] = (a, table[row][column][1])
+                else:
+                    table[row][column] = (a, 1)
+
+        return inserted

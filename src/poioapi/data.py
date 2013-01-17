@@ -134,6 +134,7 @@ class DataStructureType(object):
     name = "WORDS"
 
     data_hierarchy = [ 'utterance', ['word'], 'translation']
+    types_with_regions = [ 'utterance', 'clause_unit', 'word' ]
 
     def __init__(self):
         """Class's constructor.....
@@ -143,6 +144,22 @@ class DataStructureType(object):
         self.flat_data_hierarchy = self._flatten_hierarchy_elements(
             self.data_hierarchy)
         self.nr_of_types = len(self.flat_data_hierarchy)
+
+    def type_has_region(self, ann_type):
+        """ Checks whether the given type has regions that connect it
+        to the base data.
+
+        Parameters
+        ----------
+        ann_type : str
+            Value of the field in the data structure hierarchy.
+
+        Returns
+        -------
+        is_region : bool
+            Whether the annotation type has regions.
+        """
+        return (ann_type in self.types_with_regions)
 
     def get_siblings_of_type(self, ann_type):
         """Return all the siblings of a given type in the hierarchy
@@ -316,6 +333,9 @@ class DataStructureTypeGraid(DataStructureType):
             [ 'word', 'wfw', 'graid1' ],
           'graid2' ],
       'translation', 'comment' ]
+
+    types_with_regions = \
+    [ 'utterance', 'clause_unit', 'word' ]
 
 class DataStructureTypeGraidDiana(DataStructureType):
 
