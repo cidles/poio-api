@@ -51,26 +51,37 @@ need to map those data into our internal representation, we try to ease the crea
 are easy to understand for users. For this we will allow users to create their own data structure types and derive the
 annotation schemes for GrAF files from those structures.
 
-=====================
-Handling Pickle files
-=====================
+==============
+Handling files
+==============
+
+To transform any kind of file to GrAF ISO standards using Poio API is necessary to specify data structure hierarchy.
+Each of the files created are followed by the extension that corresponds to each element in the data structure hierarchy
+(e.g. 'filename-utterance.xml'). A header file is also created.
+This header file in the GrAF ISO standard is the file that contain the relevant information about the GrAF. The
+information passes by the author, date of creation... The most important part of the that file are the annotations and
+the primary file. The annotations represents the dependent files to create all the nodes, edges, feature and everything
+else needed to the GrAF. The primary file is the file that contains the raw corpus/information which will be the values
+of the nodes.
+
+**Important references**
+  * GrAF ISO standards (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
+
+------
+Pickle
+------
 
 The transformation of an Annotation Tree to the GrAF files is made by giving an Annotation Tree that contains a specific
-data structure hierarchy and then the necessary files using the GrAF ISO standards, are generated. Each of the files
-created are followed by the extension that corresponds to each element in the data structure hierarchy
-(e.g. 'filename-utterance.xml'). In the end a header file is created.
-This header file in the GrAF ISO standard is the file that contain the relevant information about the GrAF. The
-information passes by the author, date of creation... The most important part of the files are the annotations and the
-primary file. The annotations are the dependent files to create all the nodes, edges, feature and everything needed to
-the GrAF. The primary file is the raw file that has the words that are the values of the nodes.
-To parse the Graf to Annotation Tree files will be necessary an header file and give the respective data structure
-hierarchy.
+data structure hierarchy and then the necessary files using the GrAF ISO standards, are generated.
 
-The descriptions below can be used with the script in the examples folder called pickle2graf.py.
+The descriptions below can be used with the script in the examples folder called pickle2graf.py. This example is going
+to use mainly the GRAID Annotation structure (http://www.linguistik.uni-kiel.de/GRAID_manual6.0_08sept.pdf).
 
------------------------
+More information about :doc:`Annotation Tree</annotationtree>`.
+
+^^^^^^^^^^^^^^^^^^^^^^^
 Annotation Tree to GrAF
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The first step is to initialize the variable:
 
@@ -102,9 +113,9 @@ The third and last step is call the writer of the GrAF:
 
 NOTE: The generated files are in the same folder as the inputfile.
 
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Parse GrAF files to Annotation Tree
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 		
 Is important to know that to make the parsing of the GrAF files they must be created as well as the header file.
 The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree.
@@ -133,14 +144,15 @@ And then is possible to create the Annotation Tree again:
 	for element in annotation_tree.elements():
 		print(element)
 
-===================
-Handling Elan files
-===================
+
+----
+Elan
+----
 
 In order to convert the Elan files into GrAF object or GrAF files there is going to be necessary to understand the use
 of the data structures hierarchy and the metafile. The data structure describes the relations between tiers. We map each
 entry in the data structure to one or more tiers in the elan file.
-The data structure elements is going to have the same names as the "LINGUISTIC_TYPE_REF" of each tier. Their hierarchy
+The data structure elements are going to have the same names as the "LINGUISTIC_TYPE_REF" of each tier. Their hierarchy
 can assume any order/format, it's the user choice.
 
 .. code-block:: xml
@@ -162,7 +174,8 @@ can assume any order/format, it's the user choice.
 
 The Elan file contains a lot of information that is only used by the program itself and is not to much use for the GrAF.
 Only the TIERs and TIME_ORDER information are usefully to the Poio API the rest will be stored in a metafile under
-the tag miscellaneous.
+the tag *miscellaneous*.
+The metafile will be named with a extension "-extinfo.xml".
 
 Metafile example:
 
@@ -190,13 +203,19 @@ Metafile example:
         </file>
     </metadata>
 
-The TIERS will give the information to the nodes. Each node as the same name as the tier id.
-It's in the TIERS that are the values of the annotations as well as the time order. The time order  is going to be the
-regions of each node
+*Relation between the elan tier elements and GrAF ISO:*
+  * Nodes are going to use the same id as the TIERs followed by "-n" and an sequential index. E. g. ("W-RGph-n233").
+  * The regions anchors will be derived from the map TIME_ORDER. The region id is like the node id but instead of the "-n" is a "-r". E. g. (W-RGph-r233)
+  * The values of ALIGNABLE_ANNOTATION and REF_ANNOTATION will be the annotation values under the tag *a* and the id exactly the same. E. g. (a233)
 
---------------------------
+**Imporant references:**
+  * Elan Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
+  * Elan Information (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
+  * Elan Tools and Documentation (http://tla.mpi.nl/tools/tla-tools/elan/download/)
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 How to use the elan parser
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First is important to know the class DataStructureTypeWithConstraints. This class contains the data structure hierarchy
 and the dictionary with the constraints.
@@ -213,7 +232,9 @@ For the parser works properly is need to set the data structure of the class fir
 
     elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints(data_hierarchy))
 
-Next to creat a GrAF object:
+**Note:** If a data structure isn't given the API will assume the structure of the elan tiers.
+
+Next to create a GrAF object:
 
 .. code-block:: python
 
@@ -229,30 +250,22 @@ Generate the GrAF files:
 
     elan_graf.generate_graf_files()
 
-This step will generate the GrAF files inclunding the header and the metafile. Each of the GrAF files is going to be
-named with the file name of the elan file followed by an extension that is the respective element of the data structure
-hierarchy. The metafile is named like the GrAF files but the extension will be "extinfo". All the files are xml file
-type but the header will have a different file extension ".hdr".
+This step will generate the GrAF files inclunding the header and the metafile.
 
 **Note:** To create the GrAF files it's first needed to run the method above described.
 
-===========================
-Handling Other file formats
-===========================
 
-Under construction....
+------------------
+Other file formats
+------------------
+
+Under development ...
 
 =========
 Resources
 =========
-Source File :download:`pickle2graf.py<_resources/pickle2graf.py>`.
 
-----------
-References
-----------
+Source Files:
+  * :download:`pickle2graf.py<_resources/pickle2graf.py>`
+  * :download:`elan2graf.py<_resources/elan2graf.py>`
 
-* GRAID Annotations (http://www.linguistik.uni-kiel.de/GRAID_manual6.0_08sept.pdf)
-* Elan Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
-* Elan Information (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
-* Elan Tools and Documentation (http://tla.mpi.nl/tools/tla-tools/elan/download/)
-* GrAF ISO standards (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
