@@ -35,7 +35,7 @@ class Elan:
 
     """
 
-    def __init__(self, filepath, data_structure_hierarchy):
+    def __init__(self, filepath, data_structure_hierarchy=None):
         """Class's constructor.
 
         Parameters
@@ -51,9 +51,12 @@ class Elan:
         self.filepath = filepath
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
-        self.data_structure_hierarchy = data_structure_hierarchy.data_hierarchy
-        self.data_structure_constraints = data_structure_hierarchy.data_hierarchy_const
+        if data_structure_hierarchy is not None:
+            self.data_structure_hierarchy = data_structure_hierarchy
+        else:
+            self.data_structure_hierarchy = []
 
+        self.data_structure_constraints = dict()
         self.data_hierarchy_parent_dict = dict()
 
         self.xml_files_map = {}
@@ -74,8 +77,13 @@ class Elan:
 
         graph = Graph()
 
+        no_structure = False
+
         # Find the dependencies in the hierarchy
-        self._find_hierarchy_parents(self.data_structure_hierarchy, None)
+        if len(self.data_structure_hierarchy) is not 0:
+            self._find_hierarchy_parents(self.data_structure_hierarchy, None)
+        else:
+            no_structure = True
 
         tree = ET.parse(self.filepath)
         doc = tree.getroot()
@@ -101,6 +109,9 @@ class Elan:
             tier_id = tier.attrib['TIER_ID']
             linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].replace(" ","_")
 
+            if tiers_number is 0:
+                first_element = linguistic_type_ref
+
             # Need to check if the tier element already exist
             if linguistic_type_ref not in self.xml_files_map.keys():
                 # Creates the Xml Header (graphHeader)
@@ -112,7 +123,14 @@ class Elan:
                 dependencies = SubElement(graph_header,
                     'dependencies')
 
-                dependecie = self.data_hierarchy_parent_dict[linguistic_type_ref]
+                if no_structure is True:
+                    if tiers_number is 0:
+                        dependecie = None
+                    else:
+                        dependecie = first_element
+                else:
+                    dependecie = self.data_hierarchy_parent_dict[linguistic_type_ref]
+
                 if dependecie is not None:
                     SubElement(dependencies, 'dependsOn', {'f.id':dependecie})
 
@@ -214,6 +232,9 @@ class Elan:
                     feature.text = annotation_value
 
             tiers_number+=1
+
+            if no_structure:
+                self.data_structure_hierarchy.append(linguistic_type_ref)
 
         return graph
 
