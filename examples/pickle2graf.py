@@ -9,7 +9,7 @@
 import sys, getopt
 
 from poioapi import data, annotationtree
-from poioapi.io.graf import Writer
+from poioapi.io.pick import Writer
 
 def main(argv):
 

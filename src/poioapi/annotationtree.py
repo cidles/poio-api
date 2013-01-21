@@ -27,7 +27,7 @@ import regex
 import operator
 
 from poioapi import data
-from poioapi.io import graf
+from poioapi.io import pick
 
 class RegionNotFoundInString(Exception):
     """Base class for region update method exception."""
@@ -138,7 +138,7 @@ class AnnotationTree():
 
         """
 
-        graf.Writer(self.tree, filepath).write()
+        pick.Writer(self.tree, filepath).write()
 
     def append_element(self, element, update_ids = False):
         """Append an element to the annotation tree.

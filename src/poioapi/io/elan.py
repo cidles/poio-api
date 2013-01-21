@@ -23,6 +23,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
 
 from poioapi.io import header
+from poioapi.io.graf_handler import GrAFWriter
 
 from graf import Graph, GrafRenderer
 from graf import Node, Edge
@@ -60,6 +61,8 @@ class Elan:
         self.data_hierarchy_parent_dict = dict()
 
         self.xml_files_map = {}
+
+        self.graf = GrAFWriter()
 
     def elan_to_graf(self):
         """This method will recieve the parsed elements
@@ -107,7 +110,8 @@ class Elan:
             node_id = "tier-n"+str(tiers_number)
             tier_node = Node(node_id)
             tier_id = tier.attrib['TIER_ID']
-            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].replace(" ","_")
+            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
+            replace(" ","_")
 
             if tiers_number is 0:
                 first_element = linguistic_type_ref
@@ -115,14 +119,6 @@ class Elan:
             # Need to check if the tier element already exist
             if linguistic_type_ref not in self.xml_files_map.keys():
                 # Creates the Xml Header (graphHeader)
-                element_tree = Element('graph',
-                        {'xmlns':'http://www.xces.org/ns/GrAF/1.0/'})
-                graph_header = SubElement(element_tree,
-                    'graphHeader')
-                SubElement(graph_header, 'labelsDecl')
-                dependencies = SubElement(graph_header,
-                    'dependencies')
-
                 if no_structure is True:
                     if tiers_number is 0:
                         dependecie = None
@@ -131,13 +127,8 @@ class Elan:
                 else:
                     dependecie = self.data_hierarchy_parent_dict[linguistic_type_ref]
 
-                if dependecie is not None:
-                    SubElement(dependencies, 'dependsOn', {'f.id':dependecie})
-
-                annotation_spaces = SubElement(graph_header,
-                    'annotationSpaces')
-                SubElement(annotation_spaces,'annotationSpace',
-                        {'as.id':linguistic_type_ref})
+                element_tree = self.graf.create_xml_graph_header(linguistic_type_ref,
+                    dependecie)
 
                 self.xml_files_map[linguistic_type_ref] = element_tree
             else:
@@ -201,35 +192,21 @@ class Elan:
 
                 # Add the annotation to the element tree
                 if add_annotation:
-                    if add_node:
-                        graph_node = SubElement(element_tree, 'node',
-                                {'xml:id':node_id})
-                        # Link
-                        SubElement(graph_node, 'link', {'targets':region_id})
-                        # Edge
-                        SubElement(element_tree, 'edge', {'from':tier_node.id,
-                                                          'to':node_id,
-                                                          'xml:id':edge_id})
-                        # Region
-                        SubElement(element_tree, 'region',
-                                {'anchors':annotation_time_ref_1
-                                           +" "+annotation_time_ref_2,
-                                 'xml:id':region_id})
 
                     annotation_space = AnnotationSpace(linguistic_type_ref)
                     annotation_space.add(annotation)
 
                     graph.annotation_spaces.add(annotation_space)
 
-                    graph_annotation = SubElement(element_tree, 'a',
-                            {'as':linguistic_type_ref,
-                             'label':linguistic_type_ref,
-                             'ref':annotation_ref,
-                             'xml:id':annotation_id})
-                    features = SubElement(graph_annotation, 'fs')
-                    feature = SubElement(features, 'f',
-                            {'name':'annotation_value'})
-                    feature.text = annotation_value
+                    if add_node:
+                        element_tree = self.graf.create_node_with_region(element_tree,
+                            dependecie, linguistic_type_ref, annotation_id,
+                            annotation_ref,annotation_value, node_id,
+                            region_id, anchors,tier_node.id, edge_id)
+                    else:
+                        element_tree = self.graf.create_node_annotation(element_tree,
+                            linguistic_type_ref, annotation_id,
+                            annotation_ref, annotation_value)
 
             tiers_number+=1
 
