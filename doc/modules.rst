@@ -15,7 +15,8 @@ PoioAPI IO Package
 .. toctree::
    :maxdepth: 1
 
-   io.graf
+   io.graf_handler
    io.parser
    io.header
    io.elan
+   io.pick
