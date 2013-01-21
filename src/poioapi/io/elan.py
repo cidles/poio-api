@@ -282,7 +282,7 @@ class Elan:
         SubElement(data_structure, 'hierarchy').text = \
         str(self.data_structure_hierarchy)
 
-        tier_mapping = SubElement(data_structure,'tier_mapping')
+        tier_mapping = SubElement(header_tag,'tier_mapping')
 
         for values in self.data_structure_constraints.items():
             key = values[0]
