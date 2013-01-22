@@ -9,7 +9,6 @@
 import sys, getopt
 
 from poioapi.io import elan
-from poioapi import data
 
 def main(argv):
 
