@@ -17,7 +17,7 @@ class GrAFWriter():
 
     """
 
-    def create_node_with_region(self, element_tree, dependency, annotation,
+    def create_node_with_region(self, element_tree, annotation,
                                 annotation_id, annotation_ref,
                                 annotation_value, node_id, region_id,
                                 region, from_node_id, edge_id):
@@ -28,8 +28,6 @@ class GrAFWriter():
         ----------
         element_tree : Element Tree
             Xml element.
-        dependency : str
-            Name of the node that the element belongs to.
         annotation : str
             Name of the annotation.
         annotation_id : str
@@ -69,9 +67,8 @@ class GrAFWriter():
                 {'anchors':str(region[0])+" "+str(region[1]),
                  'xml:id':region_id})
 
-        if dependency is not None and dependency is not '':
-            element_tree = self.create_node_annotation(element_tree,
-                annotation, annotation_value, annotation_id, annotation_ref)
+        element_tree = self.create_node_annotation(element_tree,
+            annotation, annotation_id, annotation_ref, annotation_value)
 
         return element_tree
 

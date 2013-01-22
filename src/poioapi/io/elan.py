@@ -200,7 +200,7 @@ class Elan:
 
                     if add_node:
                         element_tree = self.graf.create_node_with_region(element_tree,
-                            dependecie, linguistic_type_ref, annotation_id,
+                            linguistic_type_ref, annotation_id,
                             annotation_ref,annotation_value, node_id,
                             region_id, anchors,tier_node.id, edge_id)
                     else:
@@ -211,7 +211,8 @@ class Elan:
             tiers_number+=1
 
             if no_structure:
-                self.data_structure_hierarchy.append(linguistic_type_ref)
+                if not linguistic_type_ref in self.data_structure_hierarchy:
+                    self.data_structure_hierarchy.append(linguistic_type_ref)
 
         return graph
 
