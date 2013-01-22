@@ -156,10 +156,10 @@ class Elan:
 
                     index = re.sub("\D", "", annotation_id)
 
-                    node_id = tier_id+"-n"+index
+                    node_id = linguistic_type_ref+"/"+tier_id+"/n"+index
                     node = Node(node_id)
 
-                    region_id = tier_id+"-r"+index
+                    region_id = linguistic_type_ref+"/"+tier_id+"/r"+index
                     region = Region(region_id, *anchors)
 
                     edge_id = "e"+index
