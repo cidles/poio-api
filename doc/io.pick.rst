@@ -1,8 +1,8 @@
-===============
-poioapi.io.pick
-===============
+=================
+poioapi.io.pickle
+=================
 
-.. automodule:: poioapi.io.pick
+.. automodule:: poioapi.io.pickle
    :members:
 
 Indices and tables

@@ -23,7 +23,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
 
 from poioapi.io import header
-from poioapi.io.graf_handler import GrAFWriter
+from poioapi.io.graf import GrAFWriter
 
 from graf import Graph, GrafRenderer
 from graf import Node, Edge
