@@ -107,11 +107,18 @@ class Elan:
 
         # First try with the tiers
         for tier in tiers:
-            node_id = "tier-n"+str(tiers_number)
-            tier_node = Node(node_id)
             tier_id = tier.attrib['TIER_ID']
             linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
             replace(" ","_")
+
+            try:
+                parent_ref = tier.attrib['PARENT_REF']
+                node_id = "tier-n"+str(tiers_number)
+                tier_node = Node(node_id)
+            except KeyError as keyError:
+                parent_ref = None
+                from_node_id = None
+                edge_id = None
 
             if tiers_number is 0:
                 first_element = linguistic_type_ref
@@ -152,7 +159,7 @@ class Elan:
                     annotation_id = child.attrib['ANNOTATION_ID']
                     annotation_value = child.find('ANNOTATION_VALUE').text
 
-                    anchors = [annotation_time_ref_1, annotation_time_ref_2]
+                    anchors = (annotation_time_ref_1, annotation_time_ref_2)
 
                     index = re.sub("\D", "", annotation_id)
 
@@ -162,8 +169,11 @@ class Elan:
                     region_id = linguistic_type_ref+"/"+tier_id+"/r"+index
                     region = Region(region_id, *anchors)
 
-                    edge_id = "e"+index
-                    edge = Edge(edge_id, tier_node, node)
+                    if parent_ref is not None:
+                        edge_id = "e"+index
+                        edge = Edge(edge_id, tier_node, node)
+                        graph.edges.add(edge)
+                        from_node_id = tier_node.id
 
                     # Annotation
                     annotation_name = linguistic_type_ref
@@ -173,9 +183,8 @@ class Elan:
 
                     node.annotations.add(annotation)
                     node.add_region(region)
-
+                    
                     graph.regions.add(region)
-                    graph.edges.add(edge)
                     graph.nodes.add(node)
 
                     annotation_ref = node_id
@@ -202,7 +211,7 @@ class Elan:
                         element_tree = self.graf.create_node_with_region(element_tree,
                             linguistic_type_ref, annotation_id,
                             annotation_ref,annotation_value, node_id,
-                            region_id, anchors,tier_node.id, edge_id)
+                            region_id, anchors, from_node_id, edge_id)
                     else:
                         element_tree = self.graf.create_node_annotation(element_tree,
                             linguistic_type_ref, annotation_id,

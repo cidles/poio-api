@@ -59,9 +59,10 @@ class GrAFWriter():
 
         SubElement(graph_node, 'link', {'targets':region_id})
 
-        SubElement(element_tree, 'edge', {'from':from_node_id,
-                                          'to':node_id,
-                                          'xml:id':edge_id})
+        if from_node_id is not None:
+            SubElement(element_tree, 'edge', {'from':from_node_id,
+                                              'to':node_id,
+                                              'xml:id':edge_id})
 
         SubElement(element_tree, 'region',
                 {'anchors':str(region[0])+" "+str(region[1]),
