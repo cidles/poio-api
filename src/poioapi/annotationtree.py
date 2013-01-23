@@ -157,7 +157,7 @@ class AnnotationTree():
         loaded_data = pickle.load(file)
         if loaded_data[0] == 'poio_pickle_v2':
             self.reset_data_structure_type(loaded_data[1])
-            self.annotation_tree.tree = loaded_data[2]
+            self.tree = loaded_data[2]
         else:
             file.seek(0)
             self.reset_data_structure_type(data.GRAID)
