@@ -13,6 +13,7 @@ access the data via tree, which also contains the
 original .eaf IDs. Because of this EafTrees are
 read-/writeable.
 """
+from collections import defaultdict
 
 import os
 import re
@@ -103,31 +104,32 @@ class Elan:
             time_order_dict[key] = value
 
         tiers = doc.findall('TIER')
-        tiers_number = 0
+
+        self.anchors_dict = defaultdict(list)
 
         # First try with the tiers
-        for tier in tiers:
+        for tier_num, tier in enumerate(tiers):
             tier_id = tier.attrib['TIER_ID']
             linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
             replace(" ","_")
 
             try:
                 parent_ref = tier.attrib['PARENT_REF']
-                node_id = "tier-n"+str(tiers_number)
+                node_id = "tier-n"+str(tier_num)
                 tier_node = Node(node_id)
             except KeyError as keyError:
                 parent_ref = None
                 from_node_id = None
                 edge_id = None
 
-            if tiers_number is 0:
+            if tier_num is 0:
                 first_element = linguistic_type_ref
 
             # Need to check if the tier element already exist
             if linguistic_type_ref not in self.xml_files_map.keys():
                 # Creates the Xml Header (graphHeader)
                 if no_structure is True:
-                    if tiers_number is 0:
+                    if tier_num is 0:
                         dependecie = None
                     else:
                         dependecie = first_element
@@ -170,10 +172,14 @@ class Elan:
                     region = Region(region_id, *anchors)
 
                     if parent_ref is not None:
-                        edge_id = "e"+index
-                        edge = Edge(edge_id, tier_node, node)
-                        graph.edges.add(edge)
-                        from_node_id = tier_node.id
+                        from_node = self._find_node(parent_ref, anchors)
+                        if from_node is not None:
+                            edge_id = "e"+index
+                            edge = Edge(edge_id, from_node, node)
+                            graph.edges.add(edge)
+                            from_node_id = from_node.id
+                    else:
+                        self.anchors_dict[tier_id].append((node, anchors))
 
                     # Annotation
                     annotation_name = linguistic_type_ref
@@ -217,13 +223,34 @@ class Elan:
                             linguistic_type_ref, annotation_id,
                             annotation_ref, annotation_value)
 
-            tiers_number+=1
-
             if no_structure:
                 if not linguistic_type_ref in self.data_structure_hierarchy:
                     self.data_structure_hierarchy.append(linguistic_type_ref)
 
         return graph
+
+    def _find_node(self, parent_ref, anchors):
+        """This method will try to find a parent
+        node using to search the anchors. This
+        anchors are the range/regions of a value.
+
+        Parameters
+        ----------
+        parent_ref : str
+            Identification of the parent of the node.
+        anchors : array_like
+            Values of the range to find the node.
+
+        """
+
+        for items in self.anchors_dict.items():
+            if parent_ref == items[0]:
+                for item in items[1]:
+                    range = item[1]
+                    if (int(range[0]) <= int(anchors[0]) <= int(range[1])) \
+                    and (int(range[0]) <= int(anchors[1]) <= int(range[1])):
+                        return item[0]
+        return None
 
     def _find_hierarchy_parents(self, hierarchy, parent):
         """This method will search in the data structure

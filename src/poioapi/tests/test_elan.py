@@ -46,15 +46,11 @@ class TestElan:
             if element.tag == 'TIER':
                 self.elan._find_tier_elements(None,None)
 
-            #print(element.tag)
-
             SubElement(new_element_tree, element.tag, element.attrib).text = element.text
 
         file = open(self.basedirname+"/_result.xml",'wb')
         doc = minidom.parseString(tostring(new_element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
-        constrainst = 0
-        asd = a
 
         assert(1 == 1)
