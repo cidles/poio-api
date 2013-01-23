@@ -320,28 +320,3 @@ class DataStructureTypeMorphsynt(DataStructureType):
 
     types_with_regions =\
     [ 'utterance', 'word', 'morpheme' ]
-
-class DataStructureTypeWithConstraints(DataStructureType):
-
-    """
-    Data structure type for structure with constraints.
-
-    Attributes
-    ----------
-    `name` : str
-        Name of the structure.
-    data_hirerarchy : array_like
-        Structure of the array.
-    data_hierarchy_const : dictionary
-        A dictionary with the constrainst of each element in the structure.
-
-    """
-
-    name = "ELAN"
-
-    data_hierarchy = []
-
-    data_hierarchy_const = dict()
-
-    def __init__(self, data_structure_hierarchy):
-        self.data_hierarchy = data_structure_hierarchy

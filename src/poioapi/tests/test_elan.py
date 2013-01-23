@@ -11,7 +11,6 @@ import os
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
-from poioapi import data
 from poioapi.io import elan
 
 class TestElan:
@@ -33,7 +32,7 @@ class TestElan:
         data_structure = ['utterance',['clause',['word']],'translation']
 
         # Initialize the Elan class
-        self.elan = elan.Elan(self.filename, data.DataStructureTypeWithConstraints(data_structure))
+        self.elan = elan.Elan(self.filename, data_structure)
 
     def test_write_elan(self):
         root = self.elan.write_elan(self.metafile)
@@ -55,5 +54,7 @@ class TestElan:
         doc = minidom.parseString(tostring(new_element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
+        constrainst = 0
+        asd = a
 
         assert(1 == 1)
