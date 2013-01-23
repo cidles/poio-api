@@ -9,22 +9,20 @@
       <annotationSpace as.id="gestures"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="W-RGU-n232">
-    <link targets="W-RGU-r232"/>
+  <node xml:id="gestures/W-RGU/n232">
+    <link targets="gestures/W-RGU/r232"/>
   </node>
-  <edge from="tier-n5" to="W-RGU-n232" xml:id="e232"/>
-  <region anchors="0 33840" xml:id="W-RGU-r232"/>
-  <a as="gestures" label="gestures" ref="W-RGU-n232" xml:id="a232">
+  <region anchors="0 33840" xml:id="gestures/W-RGU/r232"/>
+  <a as="gestures" label="gestures" ref="gestures/W-RGU/n232" xml:id="a232">
     <fs>
       <f name="annotation_value">R Gesture Unit 1</f>
     </fs>
   </a>
-  <node xml:id="K-RGU-n311">
-    <link targets="K-RGU-r311"/>
+  <node xml:id="gestures/K-RGU/n311">
+    <link targets="gestures/K-RGU/r311"/>
   </node>
-  <edge from="tier-n8" to="K-RGU-n311" xml:id="e311"/>
-  <region anchors="23120 24040" xml:id="K-RGU-r311"/>
-  <a as="gestures" label="gestures" ref="K-RGU-n311" xml:id="a311">
+  <region anchors="23120 24040" xml:id="gestures/K-RGU/r311"/>
+  <a as="gestures" label="gestures" ref="gestures/K-RGU/n311" xml:id="a311">
     <fs>
       <f name="annotation_value">R Gesture Unit 1</f>
     </fs>

@@ -115,8 +115,6 @@ class Elan:
 
             try:
                 parent_ref = tier.attrib['PARENT_REF']
-                node_id = "tier-n"+str(tier_num)
-                tier_node = Node(node_id)
             except KeyError as keyError:
                 parent_ref = None
                 from_node_id = None
@@ -202,6 +200,12 @@ class Elan:
                     annotation_id = child.attrib['ANNOTATION_ID']
                     annotation_value = child.find('ANNOTATION_VALUE').text
                     annotation_ref = child.attrib['ANNOTATION_REF']
+
+                    # Annotation
+                    annotation_name = linguistic_type_ref
+                    annotation = Annotation(annotation_name, None,
+                        annotation_id)
+                    annotation.features['annotation_value'] = annotation_value
 
                     add_annotation = True
 

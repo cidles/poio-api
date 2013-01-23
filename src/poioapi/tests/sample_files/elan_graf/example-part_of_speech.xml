@@ -3,7 +3,7 @@
   <graphHeader>
     <labelsDecl/>
     <dependencies>
-      <dependsOn f.id="utterance"/>
+      <dependsOn f.id="words"/>
     </dependencies>
     <annotationSpaces>
       <annotationSpace as.id="part_of_speech"/>

@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <header_file>example</header_file>
-  <data_structure_hierarchy>
-    <hierarchy>['utterance', 'words', 'part_of_speech', 'phonetic_transcription', 'gestures', 'gesture_phases', 'gesture_meaning']</hierarchy>
-    <constraints>
-      <constraint gesture_meaning="['W-RGMe', 'K-RGMe']"/>
-      <constraint part_of_speech="['W-POS']"/>
-      <constraint gesture_phases="['W-RGph', 'K-RGph']"/>
-      <constraint gestures="['W-RGU', 'K-RGU']"/>
-      <constraint words="['W-Words']"/>
-      <constraint phonetic_transcription="['W-IPA']"/>
-      <constraint utterance="['K-Spch', 'W-Spch']"/>
-    </constraints>
-  </data_structure_hierarchy>
+  <header>
+    <data_structure>
+      <hierarchy>['utterance', ['words', ['part_of_speech']], 'phonetic_transcription', 'gestures', 'gesture_phases', 'gesture_meaning']</hierarchy>
+    </data_structure>
+    <tier_mapping>
+      <type name="gesture_meaning">
+        <tier>W-RGMe</tier>
+        <tier>K-RGMe</tier>
+      </type>
+      <type name="part_of_speech">
+        <tier>W-POS</tier>
+      </type>
+      <type name="gesture_phases">
+        <tier>W-RGph</tier>
+        <tier>K-RGph</tier>
+      </type>
+      <type name="gestures">
+        <tier>W-RGU</tier>
+        <tier>K-RGU</tier>
+      </type>
+      <type name="words">
+        <tier>W-Words</tier>
+      </type>
+      <type name="phonetic_transcription">
+        <tier>W-IPA</tier>
+      </type>
+      <type name="utterance">
+        <tier>K-Spch</tier>
+        <tier>W-Spch</tier>
+      </type>
+    </tier_mapping>
+  </header>
   <file data_type="Elan file">
     <miscellaneous>
       <ANNOTATION_DOCUMENT AUTHOR="" DATE="2006-06-13T15:09:43+01:00" FORMAT="2.3" VERSION="2.3" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.3.xsd"/>

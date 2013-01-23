@@ -9,622 +9,622 @@
       <annotationSpace as.id="gesture_phases"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="W-RGph-n233">
-    <link targets="W-RGph-r233"/>
+  <node xml:id="gesture_phases/W-RGph/n233">
+    <link targets="gesture_phases/W-RGph/r233"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n233" xml:id="e233"/>
-  <region anchors="0 440" xml:id="W-RGph-r233"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n233" xml:id="a233">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n233" xml:id="e233"/>
+  <region anchors="0 440" xml:id="gesture_phases/W-RGph/r233"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n233" xml:id="a233">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n234">
-    <link targets="W-RGph-r234"/>
+  <node xml:id="gesture_phases/W-RGph/n234">
+    <link targets="gesture_phases/W-RGph/r234"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n234" xml:id="e234"/>
-  <region anchors="440 1600" xml:id="W-RGph-r234"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n234" xml:id="a234">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n234" xml:id="e234"/>
+  <region anchors="440 1600" xml:id="gesture_phases/W-RGph/r234"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n234" xml:id="a234">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n235">
-    <link targets="W-RGph-r235"/>
+  <node xml:id="gesture_phases/W-RGph/n235">
+    <link targets="gesture_phases/W-RGph/r235"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n235" xml:id="e235"/>
-  <region anchors="1600 2240" xml:id="W-RGph-r235"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n235" xml:id="a235">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n235" xml:id="e235"/>
+  <region anchors="1600 2240" xml:id="gesture_phases/W-RGph/r235"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n235" xml:id="a235">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n236">
-    <link targets="W-RGph-r236"/>
+  <node xml:id="gesture_phases/W-RGph/n236">
+    <link targets="gesture_phases/W-RGph/r236"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n236" xml:id="e236"/>
-  <region anchors="2240 2760" xml:id="W-RGph-r236"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n236" xml:id="a236">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n236" xml:id="e236"/>
+  <region anchors="2240 2760" xml:id="gesture_phases/W-RGph/r236"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n236" xml:id="a236">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n237">
-    <link targets="W-RGph-r237"/>
+  <node xml:id="gesture_phases/W-RGph/n237">
+    <link targets="gesture_phases/W-RGph/r237"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n237" xml:id="e237"/>
-  <region anchors="2760 3320" xml:id="W-RGph-r237"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n237" xml:id="a237">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n237" xml:id="e237"/>
+  <region anchors="2760 3320" xml:id="gesture_phases/W-RGph/r237"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n237" xml:id="a237">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n238">
-    <link targets="W-RGph-r238"/>
+  <node xml:id="gesture_phases/W-RGph/n238">
+    <link targets="gesture_phases/W-RGph/r238"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n238" xml:id="e238"/>
-  <region anchors="3320 3840" xml:id="W-RGph-r238"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n238" xml:id="a238">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n238" xml:id="e238"/>
+  <region anchors="3320 3840" xml:id="gesture_phases/W-RGph/r238"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n238" xml:id="a238">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n239">
-    <link targets="W-RGph-r239"/>
+  <node xml:id="gesture_phases/W-RGph/n239">
+    <link targets="gesture_phases/W-RGph/r239"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n239" xml:id="e239"/>
-  <region anchors="3840 4600" xml:id="W-RGph-r239"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n239" xml:id="a239">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n239" xml:id="e239"/>
+  <region anchors="3840 4600" xml:id="gesture_phases/W-RGph/r239"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n239" xml:id="a239">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n240">
-    <link targets="W-RGph-r240"/>
+  <node xml:id="gesture_phases/W-RGph/n240">
+    <link targets="gesture_phases/W-RGph/r240"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n240" xml:id="e240"/>
-  <region anchors="4600 5720" xml:id="W-RGph-r240"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n240" xml:id="a240">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n240" xml:id="e240"/>
+  <region anchors="4600 5720" xml:id="gesture_phases/W-RGph/r240"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n240" xml:id="a240">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n241">
-    <link targets="W-RGph-r241"/>
+  <node xml:id="gesture_phases/W-RGph/n241">
+    <link targets="gesture_phases/W-RGph/r241"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n241" xml:id="e241"/>
-  <region anchors="5720 6360" xml:id="W-RGph-r241"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n241" xml:id="a241">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n241" xml:id="e241"/>
+  <region anchors="5720 6360" xml:id="gesture_phases/W-RGph/r241"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n241" xml:id="a241">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n242">
-    <link targets="W-RGph-r242"/>
+  <node xml:id="gesture_phases/W-RGph/n242">
+    <link targets="gesture_phases/W-RGph/r242"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n242" xml:id="e242"/>
-  <region anchors="6360 6720" xml:id="W-RGph-r242"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n242" xml:id="a242">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n242" xml:id="e242"/>
+  <region anchors="6360 6720" xml:id="gesture_phases/W-RGph/r242"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n242" xml:id="a242">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n243">
-    <link targets="W-RGph-r243"/>
+  <node xml:id="gesture_phases/W-RGph/n243">
+    <link targets="gesture_phases/W-RGph/r243"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n243" xml:id="e243"/>
-  <region anchors="6720 7400" xml:id="W-RGph-r243"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n243" xml:id="a243">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n243" xml:id="e243"/>
+  <region anchors="6720 7400" xml:id="gesture_phases/W-RGph/r243"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n243" xml:id="a243">
     <fs>
       <f name="annotation_value">part.retraction</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n244">
-    <link targets="W-RGph-r244"/>
+  <node xml:id="gesture_phases/W-RGph/n244">
+    <link targets="gesture_phases/W-RGph/r244"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n244" xml:id="e244"/>
-  <region anchors="7400 7520" xml:id="W-RGph-r244"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n244" xml:id="a244">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n244" xml:id="e244"/>
+  <region anchors="7400 7520" xml:id="gesture_phases/W-RGph/r244"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n244" xml:id="a244">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n245">
-    <link targets="W-RGph-r245"/>
+  <node xml:id="gesture_phases/W-RGph/n245">
+    <link targets="gesture_phases/W-RGph/r245"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n245" xml:id="e245"/>
-  <region anchors="7520 7800" xml:id="W-RGph-r245"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n245" xml:id="a245">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n245" xml:id="e245"/>
+  <region anchors="7520 7800" xml:id="gesture_phases/W-RGph/r245"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n245" xml:id="a245">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n246">
-    <link targets="W-RGph-r246"/>
+  <node xml:id="gesture_phases/W-RGph/n246">
+    <link targets="gesture_phases/W-RGph/r246"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n246" xml:id="e246"/>
-  <region anchors="7800 8080" xml:id="W-RGph-r246"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n246" xml:id="a246">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n246" xml:id="e246"/>
+  <region anchors="7800 8080" xml:id="gesture_phases/W-RGph/r246"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n246" xml:id="a246">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n247">
-    <link targets="W-RGph-r247"/>
+  <node xml:id="gesture_phases/W-RGph/n247">
+    <link targets="gesture_phases/W-RGph/r247"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n247" xml:id="e247"/>
-  <region anchors="8080 8720" xml:id="W-RGph-r247"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n247" xml:id="a247">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n247" xml:id="e247"/>
+  <region anchors="8080 8720" xml:id="gesture_phases/W-RGph/r247"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n247" xml:id="a247">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n248">
-    <link targets="W-RGph-r248"/>
+  <node xml:id="gesture_phases/W-RGph/n248">
+    <link targets="gesture_phases/W-RGph/r248"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n248" xml:id="e248"/>
-  <region anchors="8720 10200" xml:id="W-RGph-r248"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n248" xml:id="a248">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n248" xml:id="e248"/>
+  <region anchors="8720 10200" xml:id="gesture_phases/W-RGph/r248"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n248" xml:id="a248">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n249">
-    <link targets="W-RGph-r249"/>
+  <node xml:id="gesture_phases/W-RGph/n249">
+    <link targets="gesture_phases/W-RGph/r249"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n249" xml:id="e249"/>
-  <region anchors="10200 10880" xml:id="W-RGph-r249"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n249" xml:id="a249">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n249" xml:id="e249"/>
+  <region anchors="10200 10880" xml:id="gesture_phases/W-RGph/r249"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n249" xml:id="a249">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n250">
-    <link targets="W-RGph-r250"/>
+  <node xml:id="gesture_phases/W-RGph/n250">
+    <link targets="gesture_phases/W-RGph/r250"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n250" xml:id="e250"/>
-  <region anchors="10880 11840" xml:id="W-RGph-r250"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n250" xml:id="a250">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n250" xml:id="e250"/>
+  <region anchors="10880 11840" xml:id="gesture_phases/W-RGph/r250"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n250" xml:id="a250">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n251">
-    <link targets="W-RGph-r251"/>
+  <node xml:id="gesture_phases/W-RGph/n251">
+    <link targets="gesture_phases/W-RGph/r251"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n251" xml:id="e251"/>
-  <region anchors="11840 12120" xml:id="W-RGph-r251"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n251" xml:id="a251">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n251" xml:id="e251"/>
+  <region anchors="11840 12120" xml:id="gesture_phases/W-RGph/r251"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n251" xml:id="a251">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n252">
-    <link targets="W-RGph-r252"/>
+  <node xml:id="gesture_phases/W-RGph/n252">
+    <link targets="gesture_phases/W-RGph/r252"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n252" xml:id="e252"/>
-  <region anchors="12120 12680" xml:id="W-RGph-r252"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n252" xml:id="a252">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n252" xml:id="e252"/>
+  <region anchors="12120 12680" xml:id="gesture_phases/W-RGph/r252"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n252" xml:id="a252">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n253">
-    <link targets="W-RGph-r253"/>
+  <node xml:id="gesture_phases/W-RGph/n253">
+    <link targets="gesture_phases/W-RGph/r253"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n253" xml:id="e253"/>
-  <region anchors="12680 13240" xml:id="W-RGph-r253"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n253" xml:id="a253">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n253" xml:id="e253"/>
+  <region anchors="12680 13240" xml:id="gesture_phases/W-RGph/r253"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n253" xml:id="a253">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n254">
-    <link targets="W-RGph-r254"/>
+  <node xml:id="gesture_phases/W-RGph/n254">
+    <link targets="gesture_phases/W-RGph/r254"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n254" xml:id="e254"/>
-  <region anchors="13240 13920" xml:id="W-RGph-r254"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n254" xml:id="a254">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n254" xml:id="e254"/>
+  <region anchors="13240 13920" xml:id="gesture_phases/W-RGph/r254"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n254" xml:id="a254">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n255">
-    <link targets="W-RGph-r255"/>
+  <node xml:id="gesture_phases/W-RGph/n255">
+    <link targets="gesture_phases/W-RGph/r255"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n255" xml:id="e255"/>
-  <region anchors="13920 14560" xml:id="W-RGph-r255"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n255" xml:id="a255">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n255" xml:id="e255"/>
+  <region anchors="13920 14560" xml:id="gesture_phases/W-RGph/r255"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n255" xml:id="a255">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n256">
-    <link targets="W-RGph-r256"/>
+  <node xml:id="gesture_phases/W-RGph/n256">
+    <link targets="gesture_phases/W-RGph/r256"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n256" xml:id="e256"/>
-  <region anchors="14560 15120" xml:id="W-RGph-r256"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n256" xml:id="a256">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n256" xml:id="e256"/>
+  <region anchors="14560 15120" xml:id="gesture_phases/W-RGph/r256"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n256" xml:id="a256">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n257">
-    <link targets="W-RGph-r257"/>
+  <node xml:id="gesture_phases/W-RGph/n257">
+    <link targets="gesture_phases/W-RGph/r257"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n257" xml:id="e257"/>
-  <region anchors="15120 15840" xml:id="W-RGph-r257"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n257" xml:id="a257">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n257" xml:id="e257"/>
+  <region anchors="15120 15840" xml:id="gesture_phases/W-RGph/r257"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n257" xml:id="a257">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n258">
-    <link targets="W-RGph-r258"/>
+  <node xml:id="gesture_phases/W-RGph/n258">
+    <link targets="gesture_phases/W-RGph/r258"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n258" xml:id="e258"/>
-  <region anchors="15840 17000" xml:id="W-RGph-r258"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n258" xml:id="a258">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n258" xml:id="e258"/>
+  <region anchors="15840 17000" xml:id="gesture_phases/W-RGph/r258"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n258" xml:id="a258">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n259">
-    <link targets="W-RGph-r259"/>
+  <node xml:id="gesture_phases/W-RGph/n259">
+    <link targets="gesture_phases/W-RGph/r259"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n259" xml:id="e259"/>
-  <region anchors="17000 17200" xml:id="W-RGph-r259"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n259" xml:id="a259">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n259" xml:id="e259"/>
+  <region anchors="17000 17200" xml:id="gesture_phases/W-RGph/r259"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n259" xml:id="a259">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n260">
-    <link targets="W-RGph-r260"/>
+  <node xml:id="gesture_phases/W-RGph/n260">
+    <link targets="gesture_phases/W-RGph/r260"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n260" xml:id="e260"/>
-  <region anchors="17200 17680" xml:id="W-RGph-r260"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n260" xml:id="a260">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n260" xml:id="e260"/>
+  <region anchors="17200 17680" xml:id="gesture_phases/W-RGph/r260"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n260" xml:id="a260">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n261">
-    <link targets="W-RGph-r261"/>
+  <node xml:id="gesture_phases/W-RGph/n261">
+    <link targets="gesture_phases/W-RGph/r261"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n261" xml:id="e261"/>
-  <region anchors="17680 18240" xml:id="W-RGph-r261"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n261" xml:id="a261">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n261" xml:id="e261"/>
+  <region anchors="17680 18240" xml:id="gesture_phases/W-RGph/r261"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n261" xml:id="a261">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n262">
-    <link targets="W-RGph-r262"/>
+  <node xml:id="gesture_phases/W-RGph/n262">
+    <link targets="gesture_phases/W-RGph/r262"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n262" xml:id="e262"/>
-  <region anchors="18240 18640" xml:id="W-RGph-r262"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n262" xml:id="a262">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n262" xml:id="e262"/>
+  <region anchors="18240 18640" xml:id="gesture_phases/W-RGph/r262"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n262" xml:id="a262">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n263">
-    <link targets="W-RGph-r263"/>
+  <node xml:id="gesture_phases/W-RGph/n263">
+    <link targets="gesture_phases/W-RGph/r263"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n263" xml:id="e263"/>
-  <region anchors="18640 19240" xml:id="W-RGph-r263"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n263" xml:id="a263">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n263" xml:id="e263"/>
+  <region anchors="18640 19240" xml:id="gesture_phases/W-RGph/r263"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n263" xml:id="a263">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n264">
-    <link targets="W-RGph-r264"/>
+  <node xml:id="gesture_phases/W-RGph/n264">
+    <link targets="gesture_phases/W-RGph/r264"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n264" xml:id="e264"/>
-  <region anchors="19240 20160" xml:id="W-RGph-r264"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n264" xml:id="a264">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n264" xml:id="e264"/>
+  <region anchors="19240 20160" xml:id="gesture_phases/W-RGph/r264"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n264" xml:id="a264">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n265">
-    <link targets="W-RGph-r265"/>
+  <node xml:id="gesture_phases/W-RGph/n265">
+    <link targets="gesture_phases/W-RGph/r265"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n265" xml:id="e265"/>
-  <region anchors="20160 20840" xml:id="W-RGph-r265"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n265" xml:id="a265">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n265" xml:id="e265"/>
+  <region anchors="20160 20840" xml:id="gesture_phases/W-RGph/r265"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n265" xml:id="a265">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n266">
-    <link targets="W-RGph-r266"/>
+  <node xml:id="gesture_phases/W-RGph/n266">
+    <link targets="gesture_phases/W-RGph/r266"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n266" xml:id="e266"/>
-  <region anchors="20840 21320" xml:id="W-RGph-r266"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n266" xml:id="a266">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n266" xml:id="e266"/>
+  <region anchors="20840 21320" xml:id="gesture_phases/W-RGph/r266"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n266" xml:id="a266">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n267">
-    <link targets="W-RGph-r267"/>
+  <node xml:id="gesture_phases/W-RGph/n267">
+    <link targets="gesture_phases/W-RGph/r267"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n267" xml:id="e267"/>
-  <region anchors="21320 21720" xml:id="W-RGph-r267"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n267" xml:id="a267">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n267" xml:id="e267"/>
+  <region anchors="21320 21720" xml:id="gesture_phases/W-RGph/r267"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n267" xml:id="a267">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n268">
-    <link targets="W-RGph-r268"/>
+  <node xml:id="gesture_phases/W-RGph/n268">
+    <link targets="gesture_phases/W-RGph/r268"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n268" xml:id="e268"/>
-  <region anchors="21720 22280" xml:id="W-RGph-r268"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n268" xml:id="a268">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n268" xml:id="e268"/>
+  <region anchors="21720 22280" xml:id="gesture_phases/W-RGph/r268"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n268" xml:id="a268">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n269">
-    <link targets="W-RGph-r269"/>
+  <node xml:id="gesture_phases/W-RGph/n269">
+    <link targets="gesture_phases/W-RGph/r269"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n269" xml:id="e269"/>
-  <region anchors="22280 22840" xml:id="W-RGph-r269"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n269" xml:id="a269">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n269" xml:id="e269"/>
+  <region anchors="22280 22840" xml:id="gesture_phases/W-RGph/r269"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n269" xml:id="a269">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n270">
-    <link targets="W-RGph-r270"/>
+  <node xml:id="gesture_phases/W-RGph/n270">
+    <link targets="gesture_phases/W-RGph/r270"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n270" xml:id="e270"/>
-  <region anchors="22840 23720" xml:id="W-RGph-r270"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n270" xml:id="a270">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n270" xml:id="e270"/>
+  <region anchors="22840 23720" xml:id="gesture_phases/W-RGph/r270"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n270" xml:id="a270">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n271">
-    <link targets="W-RGph-r271"/>
+  <node xml:id="gesture_phases/W-RGph/n271">
+    <link targets="gesture_phases/W-RGph/r271"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n271" xml:id="e271"/>
-  <region anchors="23720 24040" xml:id="W-RGph-r271"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n271" xml:id="a271">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n271" xml:id="e271"/>
+  <region anchors="23720 24040" xml:id="gesture_phases/W-RGph/r271"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n271" xml:id="a271">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n272">
-    <link targets="W-RGph-r272"/>
+  <node xml:id="gesture_phases/W-RGph/n272">
+    <link targets="gesture_phases/W-RGph/r272"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n272" xml:id="e272"/>
-  <region anchors="24040 24520" xml:id="W-RGph-r272"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n272" xml:id="a272">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n272" xml:id="e272"/>
+  <region anchors="24040 24520" xml:id="gesture_phases/W-RGph/r272"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n272" xml:id="a272">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n273">
-    <link targets="W-RGph-r273"/>
+  <node xml:id="gesture_phases/W-RGph/n273">
+    <link targets="gesture_phases/W-RGph/r273"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n273" xml:id="e273"/>
-  <region anchors="24520 24960" xml:id="W-RGph-r273"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n273" xml:id="a273">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n273" xml:id="e273"/>
+  <region anchors="24520 24960" xml:id="gesture_phases/W-RGph/r273"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n273" xml:id="a273">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n274">
-    <link targets="W-RGph-r274"/>
+  <node xml:id="gesture_phases/W-RGph/n274">
+    <link targets="gesture_phases/W-RGph/r274"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n274" xml:id="e274"/>
-  <region anchors="24960 25520" xml:id="W-RGph-r274"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n274" xml:id="a274">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n274" xml:id="e274"/>
+  <region anchors="24960 25520" xml:id="gesture_phases/W-RGph/r274"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n274" xml:id="a274">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n275">
-    <link targets="W-RGph-r275"/>
+  <node xml:id="gesture_phases/W-RGph/n275">
+    <link targets="gesture_phases/W-RGph/r275"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n275" xml:id="e275"/>
-  <region anchors="25520 25640" xml:id="W-RGph-r275"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n275" xml:id="a275">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n275" xml:id="e275"/>
+  <region anchors="25520 25640" xml:id="gesture_phases/W-RGph/r275"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n275" xml:id="a275">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n276">
-    <link targets="W-RGph-r276"/>
+  <node xml:id="gesture_phases/W-RGph/n276">
+    <link targets="gesture_phases/W-RGph/r276"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n276" xml:id="e276"/>
-  <region anchors="25640 26200" xml:id="W-RGph-r276"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n276" xml:id="a276">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n276" xml:id="e276"/>
+  <region anchors="25640 26200" xml:id="gesture_phases/W-RGph/r276"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n276" xml:id="a276">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n277">
-    <link targets="W-RGph-r277"/>
+  <node xml:id="gesture_phases/W-RGph/n277">
+    <link targets="gesture_phases/W-RGph/r277"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n277" xml:id="e277"/>
-  <region anchors="26200 27080" xml:id="W-RGph-r277"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n277" xml:id="a277">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n277" xml:id="e277"/>
+  <region anchors="26200 27080" xml:id="gesture_phases/W-RGph/r277"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n277" xml:id="a277">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n278">
-    <link targets="W-RGph-r278"/>
+  <node xml:id="gesture_phases/W-RGph/n278">
+    <link targets="gesture_phases/W-RGph/r278"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n278" xml:id="e278"/>
-  <region anchors="27080 27360" xml:id="W-RGph-r278"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n278" xml:id="a278">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n278" xml:id="e278"/>
+  <region anchors="27080 27360" xml:id="gesture_phases/W-RGph/r278"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n278" xml:id="a278">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n279">
-    <link targets="W-RGph-r279"/>
+  <node xml:id="gesture_phases/W-RGph/n279">
+    <link targets="gesture_phases/W-RGph/r279"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n279" xml:id="e279"/>
-  <region anchors="27360 28000" xml:id="W-RGph-r279"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n279" xml:id="a279">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n279" xml:id="e279"/>
+  <region anchors="27360 28000" xml:id="gesture_phases/W-RGph/r279"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n279" xml:id="a279">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n280">
-    <link targets="W-RGph-r280"/>
+  <node xml:id="gesture_phases/W-RGph/n280">
+    <link targets="gesture_phases/W-RGph/r280"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n280" xml:id="e280"/>
-  <region anchors="28000 28120" xml:id="W-RGph-r280"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n280" xml:id="a280">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n280" xml:id="e280"/>
+  <region anchors="28000 28120" xml:id="gesture_phases/W-RGph/r280"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n280" xml:id="a280">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n281">
-    <link targets="W-RGph-r281"/>
+  <node xml:id="gesture_phases/W-RGph/n281">
+    <link targets="gesture_phases/W-RGph/r281"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n281" xml:id="e281"/>
-  <region anchors="28120 28920" xml:id="W-RGph-r281"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n281" xml:id="a281">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n281" xml:id="e281"/>
+  <region anchors="28120 28920" xml:id="gesture_phases/W-RGph/r281"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n281" xml:id="a281">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n282">
-    <link targets="W-RGph-r282"/>
+  <node xml:id="gesture_phases/W-RGph/n282">
+    <link targets="gesture_phases/W-RGph/r282"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n282" xml:id="e282"/>
-  <region anchors="28920 29120" xml:id="W-RGph-r282"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n282" xml:id="a282">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n282" xml:id="e282"/>
+  <region anchors="28920 29120" xml:id="gesture_phases/W-RGph/r282"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n282" xml:id="a282">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n283">
-    <link targets="W-RGph-r283"/>
+  <node xml:id="gesture_phases/W-RGph/n283">
+    <link targets="gesture_phases/W-RGph/r283"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n283" xml:id="e283"/>
-  <region anchors="29120 29880" xml:id="W-RGph-r283"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n283" xml:id="a283">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n283" xml:id="e283"/>
+  <region anchors="29120 29880" xml:id="gesture_phases/W-RGph/r283"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n283" xml:id="a283">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n284">
-    <link targets="W-RGph-r284"/>
+  <node xml:id="gesture_phases/W-RGph/n284">
+    <link targets="gesture_phases/W-RGph/r284"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n284" xml:id="e284"/>
-  <region anchors="29880 30000" xml:id="W-RGph-r284"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n284" xml:id="a284">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n284" xml:id="e284"/>
+  <region anchors="29880 30000" xml:id="gesture_phases/W-RGph/r284"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n284" xml:id="a284">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n285">
-    <link targets="W-RGph-r285"/>
+  <node xml:id="gesture_phases/W-RGph/n285">
+    <link targets="gesture_phases/W-RGph/r285"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n285" xml:id="e285"/>
-  <region anchors="30000 30720" xml:id="W-RGph-r285"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n285" xml:id="a285">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n285" xml:id="e285"/>
+  <region anchors="30000 30720" xml:id="gesture_phases/W-RGph/r285"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n285" xml:id="a285">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n286">
-    <link targets="W-RGph-r286"/>
+  <node xml:id="gesture_phases/W-RGph/n286">
+    <link targets="gesture_phases/W-RGph/r286"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n286" xml:id="e286"/>
-  <region anchors="30720 31160" xml:id="W-RGph-r286"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n286" xml:id="a286">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n286" xml:id="e286"/>
+  <region anchors="30720 31160" xml:id="gesture_phases/W-RGph/r286"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n286" xml:id="a286">
     <fs>
       <f name="annotation_value">hold</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n287">
-    <link targets="W-RGph-r287"/>
+  <node xml:id="gesture_phases/W-RGph/n287">
+    <link targets="gesture_phases/W-RGph/r287"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n287" xml:id="e287"/>
-  <region anchors="31160 31520" xml:id="W-RGph-r287"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n287" xml:id="a287">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n287" xml:id="e287"/>
+  <region anchors="31160 31520" xml:id="gesture_phases/W-RGph/r287"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n287" xml:id="a287">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n288">
-    <link targets="W-RGph-r288"/>
+  <node xml:id="gesture_phases/W-RGph/n288">
+    <link targets="gesture_phases/W-RGph/r288"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n288" xml:id="e288"/>
-  <region anchors="31520 31960" xml:id="W-RGph-r288"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n288" xml:id="a288">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n288" xml:id="e288"/>
+  <region anchors="31520 31960" xml:id="gesture_phases/W-RGph/r288"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n288" xml:id="a288">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n289">
-    <link targets="W-RGph-r289"/>
+  <node xml:id="gesture_phases/W-RGph/n289">
+    <link targets="gesture_phases/W-RGph/r289"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n289" xml:id="e289"/>
-  <region anchors="31960 32920" xml:id="W-RGph-r289"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n289" xml:id="a289">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n289" xml:id="e289"/>
+  <region anchors="31960 32920" xml:id="gesture_phases/W-RGph/r289"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n289" xml:id="a289">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n290">
-    <link targets="W-RGph-r290"/>
+  <node xml:id="gesture_phases/W-RGph/n290">
+    <link targets="gesture_phases/W-RGph/r290"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n290" xml:id="e290"/>
-  <region anchors="32920 33360" xml:id="W-RGph-r290"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n290" xml:id="a290">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n290" xml:id="e290"/>
+  <region anchors="32920 33360" xml:id="gesture_phases/W-RGph/r290"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n290" xml:id="a290">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="W-RGph-n291">
-    <link targets="W-RGph-r291"/>
+  <node xml:id="gesture_phases/W-RGph/n291">
+    <link targets="gesture_phases/W-RGph/r291"/>
   </node>
-  <edge from="tier-n6" to="W-RGph-n291" xml:id="e291"/>
-  <region anchors="33360 33840" xml:id="W-RGph-r291"/>
-  <a as="gesture_phases" label="gesture_phases" ref="W-RGph-n291" xml:id="a291">
+  <edge from="gestures/W-RGU/n232" to="gesture_phases/W-RGph/n291" xml:id="e291"/>
+  <region anchors="33360 33840" xml:id="gesture_phases/W-RGph/r291"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/W-RGph/n291" xml:id="a291">
     <fs>
       <f name="annotation_value">retraction</f>
     </fs>
   </a>
-  <node xml:id="K-RGph-n312">
-    <link targets="K-RGph-r312"/>
+  <node xml:id="gesture_phases/K-RGph/n312">
+    <link targets="gesture_phases/K-RGph/r312"/>
   </node>
-  <edge from="tier-n9" to="K-RGph-n312" xml:id="e312"/>
-  <region anchors="23120 23520" xml:id="K-RGph-r312"/>
-  <a as="gesture_phases" label="gesture_phases" ref="K-RGph-n312" xml:id="a312">
+  <edge from="gestures/K-RGU/n311" to="gesture_phases/K-RGph/n312" xml:id="e312"/>
+  <region anchors="23120 23520" xml:id="gesture_phases/K-RGph/r312"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/K-RGph/n312" xml:id="a312">
     <fs>
       <f name="annotation_value">preparation</f>
     </fs>
   </a>
-  <node xml:id="K-RGph-n313">
-    <link targets="K-RGph-r313"/>
+  <node xml:id="gesture_phases/K-RGph/n313">
+    <link targets="gesture_phases/K-RGph/r313"/>
   </node>
-  <edge from="tier-n9" to="K-RGph-n313" xml:id="e313"/>
-  <region anchors="23520 23800" xml:id="K-RGph-r313"/>
-  <a as="gesture_phases" label="gesture_phases" ref="K-RGph-n313" xml:id="a313">
+  <edge from="gestures/K-RGU/n311" to="gesture_phases/K-RGph/n313" xml:id="e313"/>
+  <region anchors="23520 23800" xml:id="gesture_phases/K-RGph/r313"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/K-RGph/n313" xml:id="a313">
     <fs>
       <f name="annotation_value">stroke</f>
     </fs>
   </a>
-  <node xml:id="K-RGph-n314">
-    <link targets="K-RGph-r314"/>
+  <node xml:id="gesture_phases/K-RGph/n314">
+    <link targets="gesture_phases/K-RGph/r314"/>
   </node>
-  <edge from="tier-n9" to="K-RGph-n314" xml:id="e314"/>
-  <region anchors="23800 24040" xml:id="K-RGph-r314"/>
-  <a as="gesture_phases" label="gesture_phases" ref="K-RGph-n314" xml:id="a314">
+  <edge from="gestures/K-RGU/n311" to="gesture_phases/K-RGph/n314" xml:id="e314"/>
+  <region anchors="23800 24040" xml:id="gesture_phases/K-RGph/r314"/>
+  <a as="gesture_phases" label="gesture_phases" ref="gesture_phases/K-RGph/n314" xml:id="a314">
     <fs>
       <f name="annotation_value">retraction</f>
     </fs>
