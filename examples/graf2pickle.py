@@ -9,7 +9,7 @@
 import sys, getopt
 
 from poioapi import annotationtree, data
-from poioapi.io.pick import Parser
+from poioapi.io.pickle import Parser
 
 def main(argv):
 

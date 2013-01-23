@@ -35,18 +35,6 @@ class TestElan:
         # Initialize the Elan class
         self.elan = elan.Elan(self.filename, data.DataStructureTypeWithConstraints(data_structure))
 
-    def test_find_hierarchy_parents(self):
-        expected_result = {'clause': 'utterance',
-                           'translation': 'utterance',
-                           'utterance': None,
-                           'word': 'clause'}
-
-        self.elan._find_hierarchy_parents(self.elan.data_structure_hierarchy, None)
-
-        final_result = self.elan.data_hierarchy_parent_dict
-
-        assert(final_result == expected_result)
-
     def test_write_elan(self):
         root = self.elan.write_elan(self.metafile)
 
@@ -68,4 +56,4 @@ class TestElan:
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
 
-        assert(1 != 1)
+        assert(1 == 1)

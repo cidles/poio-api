@@ -20,7 +20,7 @@ from xml.dom import minidom
 
 from poioapi.io import header
 from poioapi.io.parser import GrAFParser
-from poioapi.io.graf_handler import GrAFWriter
+from poioapi.io.graf import GrAFWriter
 
 class Writer():
     """
