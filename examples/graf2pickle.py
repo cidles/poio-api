@@ -36,7 +36,7 @@ def main(argv):
         sys.exit()
 
     # Define data structure hierarchy
-    data_hierarchy = data.DataStructureTypeGraid()
+    data_hierarchy = data.GRAID
 
     # Create the annotation tree with the created data structure
     annotation_tree = annotationtree.AnnotationTree(data_hierarchy)

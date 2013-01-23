@@ -19,8 +19,7 @@ from xml.etree.ElementTree import tostring
 from xml.dom import minidom
 
 from poioapi.io import header
-from poioapi.io.parser import GrAFParser
-from poioapi.io.graf import GrAFWriter
+from poioapi.io.graf import GrAFWriter, GrAFParser
 
 class Writer():
     """
@@ -60,7 +59,7 @@ class Writer():
 
         """
 
-        self.data_hierarchy = self.annotation_tree.data_structure_type.data_hierarchy
+        self.data_hierarchy = self.annotation_tree.structure_type_handler.data_hierarchy
 
         # Creates the raw file
         self._create_raw_file()
@@ -331,7 +330,7 @@ class Parser():
         """
 
         # Initialize the variable
-        data_hierarchy = self.annotation_tree.data_structure_type\
+        data_hierarchy = self.annotation_tree.structure_type_handler\
         .data_hierarchy
 
         # Read header file

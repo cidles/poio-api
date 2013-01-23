@@ -204,8 +204,8 @@ Metafile example:
     </metadata>
 
 *Relation between the elan tier elements and GrAF ISO:*
-  * Nodes are going to use the same id as the TIERs followed by "-n" and an sequential index. E. g. ("W-RGph-n233").
-  * The regions anchors will be derived from the map TIME_ORDER. The region id is like the node id but instead of the "-n" is a "-r". E. g. (W-RGph-r233)
+  * Nodes ids are going to use a prefix that's the "LINGUISTIC_TYPE_REF" and then the same id as the TIERs followed by "/n" and a sequential index. E. g. ("gestures/W-RGph/n233").
+  * The regions anchors will be derived from the map TIME_ORDER. The region id is like the node id but instead of the "/n" is a "/r". E. g. (W-RGph-r233)
   * The values of ALIGNABLE_ANNOTATION and REF_ANNOTATION will be the annotation values under the tag *a* and the id exactly the same. E. g. (a233)
 
 **Imporant references:**
