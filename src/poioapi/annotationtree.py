@@ -39,7 +39,7 @@ class AnnotationTree():
 
     """
 
-    def __init__(self, data_structure_type):
+    def __init__(self, data_structure_type = None):
         """Class's constructor.....
 
         """
@@ -47,6 +47,26 @@ class AnnotationTree():
         self.tree = []
         self._next_annotation_id = 0
 
+        if data_structure_type != None:
+            self.reset_data_structure_type(data_structure_type)
+
+        self.filters = []
+        self.filtered_element_ids = [[]]
+
+    def reset_data_structure_type(self, data_structure_type):
+        """
+        Sets the data structure type to the given value. Initializes the
+        class that handles the data structure type.
+
+        Parameters
+        ----------
+        data_structure_type : int
+            The data structure type from the ENUM in poioapi.data.
+
+        Returns
+        -------
+        Nothing.
+        """
         self.data_structure_type = data_structure_type
 
         if data_structure_type == data.GRAID:
@@ -61,17 +81,13 @@ class AnnotationTree():
                     "Data structure type {0} not supported".format(
                         data_structure_type)))
 
-
-        self.filters = []
-        self.filtered_element_ids = [[]]
-
     @property
     def next_annotation_id(self):
         """Returns the next annotation id.
 
         Returns
         -------
-        _next_annotation_id : int
+        next_annotation_id : int
             The return result is the increment of the previous annotation
             id.
 
@@ -133,7 +149,14 @@ class AnnotationTree():
         """
 
         file = open(filepath, 'rb')
-        self.tree = pickle.load(file)
+        loaded_data = pickle.load(file)
+        if loaded_data[0] == 'poio_pickle_v2':
+            self.reset_data_structure_type(loaded_data[1])
+            self.annotation_tree.tree = loaded_data[2]
+        else:
+            file.seek(0)
+            self.reset_data_structure_type(data.GRAID)
+            self.tree = pickle.load(file)
         file.close()
 
     def save_tree_as_graf(self, filepath):
