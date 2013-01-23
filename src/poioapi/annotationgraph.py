@@ -28,7 +28,10 @@ class AnnotationGraph():
         elif data_structure_type == data.MORPHSYNT:
             self.structure_type_handler = data.DataStructureTypeMorphsynt()
         else:
-            self.structure_type_handler = None
+            raise(
+                data.DataStructureTypeNotSupportedError(
+                    "Data structure type {0} not supported".format(
+                        data_structure_type)))
 
         self.graf = None
         self.graf_basename = None

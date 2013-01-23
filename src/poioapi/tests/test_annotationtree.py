@@ -32,7 +32,7 @@ class TestAnnotationTree:
 
     def setup(self):
         # Initialize the DataStructureType class
-        self.data_structure_type = data.DataStructureTypeGraid()
+        self.data_structure_type = data.GRAID
 
         # Initialize the AnnotationTree class
         self.annotationtree = annotationtree.AnnotationTree(self.data_structure_type)
@@ -341,7 +341,7 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        data_structure_type = data.DataStructureTypeGraid()
+        data_structure_type = data.GRAID
         anntreefilter = annotationtree.AnnotationTreeFilter(data_structure_type)
         anntreefilter.set_filter_for_type("graid2", "nc")
 

@@ -44,6 +44,7 @@ class TestAnnotationGraph:
     def test_annotations_for_tier(self):
         node = self.annotation_graph.graf.nodes["word-n1"]
         annotations = self.annotation_graph.annotations_for_tier("wfw", node)
+        print(annotations)
         assert(len(annotations) == 1)
 
     def test_annotation_value_for_annotation(self):

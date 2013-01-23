@@ -51,8 +51,16 @@ class AnnotationTree():
 
         if data_structure_type == data.GRAID:
             self.structure_type_handler = data.DataStructureTypeGraid()
+        elif data_structure_type == data.GRAIDDIANA:
+            self.structure_type_handler = data.DataStructureTypeGraidDiana()
         elif data_structure_type == data.MORPHSYNT:
             self.structure_type_handler = data.DataStructureTypeMorphsynt()
+        else:
+            raise(
+                data.DataStructureTypeNotSupportedError(
+                    "Data structure type {0} not supported".format(
+                        data_structure_type)))
+
 
         self.filters = []
         self.filtered_element_ids = [[]]
@@ -446,13 +454,13 @@ class AnnotationTree():
                 inserted = inserted + len(elements_list) - 1
                 merge_rows = [ r for r in hierarchy if type(r) is not list]
                 for r in merge_rows:
-                    row = self.data_structure_type.flat_data_hierarchy.index(r)
+                    row = self.structure_type_handler.flat_data_hierarchy.index(r)
                     if column in table[row]:
                         table[row][column] = (table[row][column][0], inserted + 1)
                     else:
                         table[row][column] = ("", inserted + 1)
             else:
-                row = self.data_structure_type.flat_data_hierarchy.index(t)
+                row = self.structure_type_handler.flat_data_hierarchy.index(t)
                 a = elements[i]["annotation"]
                 if a == "":
                     a = "&nbsp;"
@@ -525,7 +533,7 @@ class AnnotationTree():
         for element in self.tree:
             for tier in update_tiers:
                 start_pos[tier] = 0
-            self._update_with_ranges(element, self.data_structure_type
+            self._update_with_ranges(element, self.structure_type_handler
             .data_hierarchy, search_tier, update_tiers, start_pos, "")
 
     def _update_with_ranges(self, elements, hierarchy, search_tier,
@@ -597,7 +605,7 @@ class AnnotationTreeFilter():
             self.structure_type_handler = data.DataStructureTypeGraid()
 
         self.filter = dict()
-        for e in self.data_structure_type.flat_data_hierarchy:
+        for e in self.structure_type_handler.flat_data_hierarchy:
             self.filter[e] = ""
 
         self.reset_match_object()
@@ -611,7 +619,7 @@ class AnnotationTreeFilter():
         """
 
         self.matchobject = dict()
-        for e in self.data_structure_type.flat_data_hierarchy:
+        for e in self.structure_type_handler.flat_data_hierarchy:
             self.matchobject[e] = dict()
 
     def set_filter_for_type(self, ann_type, filter_string):
@@ -694,7 +702,7 @@ class AnnotationTreeFilter():
         else:
             passed = False
 
-        passed = self._passes_filter(passed, element, self.data_structure_type.data_hierarchy)
+        passed = self._passes_filter(passed, element, self.structure_type_handler.data_hierarchy)
 
         if self.inverted:
             passed = not passed
