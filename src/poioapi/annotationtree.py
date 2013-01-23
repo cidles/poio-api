@@ -66,6 +66,11 @@ class AnnotationTree():
         Returns
         -------
         Nothing.
+
+        Raises
+        ------
+        poioapi.data.DataStructureTypeNotSupportedError
+            If the given data structure type is not in the ENUM.
         """
         self.data_structure_type = data_structure_type
 

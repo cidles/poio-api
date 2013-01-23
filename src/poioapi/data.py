@@ -37,6 +37,7 @@ class NoFileSpecifiedError(Exception): pass
 (WORDS, MORPHSYNT, GRAID) = range(3)
 class UnknownDataStructureTypeError(Exception): pass
 class DataStructureTypeNotSupportedError(Exception): pass
+class DataStructureTypeNotCompatible(Exception): pass
 class UnknownAnnotationTypeError(Exception): pass
 
 class DataStructureType(object):
