@@ -401,22 +401,22 @@ class AnnotationTree():
                 continue
             html += "<table>\n"
             table = [dict() for _ in range(len(
-                self.data_structure_type.flat_data_hierarchy))]
+                self.structure_type_handler.flat_data_hierarchy))]
             self._element_as_table(
-                element, self.data_structure_type.data_hierarchy, table, 0)
+                element, self.structure_type_handler.data_hierarchy, table, 0)
             #print table
             for j, row in enumerate(table):
                 html += "<tr>\n"
                 if j == 0:
                     html += "<td rowspan=\"{0}\" "\
                             "class=\"element_id\">{1}</td>\n".format(
-                        len(self.data_structure_type.flat_data_hierarchy), i)
+                        len(self.structure_type_handler.flat_data_hierarchy), i)
                 html += "<td class=\"ann_type\">{0}</td>".format(
-                    self.data_structure_type.flat_data_hierarchy[j])
+                    self.structure_type_handler.flat_data_hierarchy[j])
                 for _, column in sorted(row.items(), key=operator.itemgetter(0)):
                     html += "<td colspan=\"{0}\" class=\"{2}\">{1}</td>\n".format(
                         column[1], column[0],
-                        self.data_structure_type.flat_data_hierarchy[j])
+                        self.structure_type_handler.flat_data_hierarchy[j])
                 html += "</tr>\n"
             html += "</table>\n"
         if html_frame:
