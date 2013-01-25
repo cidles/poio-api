@@ -33,7 +33,7 @@ from graf import Region
 
 class Elan:
     """
-    Class that will handle elan files.
+    Class that will handle parse Elan files.
 
     """
 
@@ -385,16 +385,39 @@ class Elan:
         os.remove(outputfile+"_tmp")
 
 class ElanWriter:
+    """
+    Class that will handle the writing of
+    GrAF files into Elan files again.
+
+    """
 
     def __init__(self, extinfofile, outputfile):
+        """Class's constructor.
+
+        Parameters
+        ----------
+        extinfofile : str
+            Path of the metafile.
+        outputfile : str
+            Path and name of the new elan file.
+
+        """
+
         self.extinfofile = extinfofile
         self.outputfile = outputfile
 
-    def write_elan(self, output):
+    def write_elan(self):
+        """This method will look into the metafile
+        and then reconstruct the Elan file.
+
+        """
+
         tree = ET.parse(self.extinfofile)
         root = tree.getroot()
+
         miscellaneous = root.find('./file/miscellaneous')
         top_element = miscellaneous[0]
+
         element_tree = Element(top_element.tag, top_element.attrib)
 
         # Need to map again the time order
@@ -417,16 +440,6 @@ class ElanWriter:
             key = linguisty.attrib['LINGUISTIC_TYPE_ID'].replace(' ','_')
             value = linguisty.attrib['TIME_ALIGNABLE']
             linguisty_type_dict[key] = value
-
-        # Map the TIERS with the LINGUISTIC_TYPE
-        tier_mapping = root.find('./header/tier_mapping')
-        tier_mapping_dict = dict()
-
-        for tiers in tier_mapping:
-            value = tiers.attrib['name']
-            for tier in tiers.iter():
-                if not str(tier.text).isspace():
-                    tier_mapping_dict[tier.text] = value
 
         for element in miscellaneous:
 
@@ -456,6 +469,7 @@ class ElanWriter:
 
                     tree = ET.parse(self.extinfofile.replace("-extinfo","-"+linguisty_id))
                     graf_elements = tree.getroot()
+                    
                     xml_namespace = re.search('\{(.*)\}', graf_elements.tag).group()
                     attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
 
