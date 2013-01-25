@@ -469,7 +469,7 @@ class ElanWriter:
 
                     tree = ET.parse(self.extinfofile.replace("-extinfo","-"+linguisty_id))
                     graf_elements = tree.getroot()
-                    
+
                     xml_namespace = re.search('\{(.*)\}', graf_elements.tag).group()
                     attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
 
