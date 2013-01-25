@@ -339,14 +339,17 @@ class Elan:
         SubElement(miscellaneous, root.tag, root.attrib)
 
         for child in root:
-            if child.tag != "ALIGNABLE_ANNOTATION" and\
-               child.tag != "REF_ANNOTATION" and\
-               child.tag != "ANNOTATION_VALUE" and\
-               child.tag != "ANNOTATION":
-                if child.tag == "TIER":
-                    SubElement(miscellaneous, child.tag, child.attrib)
-                else:
-                    miscellaneous.append(child)
+            parent = SubElement(miscellaneous, child.tag, child.attrib)
+            for lower_child in child:
+                if lower_child.tag != "ALIGNABLE_ANNOTATION" and\
+                   lower_child.tag != "REF_ANNOTATION" and\
+                   lower_child.tag != "ANNOTATION_VALUE" and\
+                   lower_child.tag != "ANNOTATION":
+                    child_element = SubElement(parent, lower_child.tag,
+                        lower_child.attrib)
+                    if not str(lower_child.text).isspace() or\
+                       lower_child.text is not None:
+                        child_element.text = lower_child.text
 
         filename = self.basedirname+"-extinfo.xml"
         file = open(filename,'wb')
@@ -381,11 +384,143 @@ class Elan:
         # Delete the temp file
         os.remove(outputfile+"_tmp")
 
-    def write_elan(self, inputfile):
-        tree = ET.parse(inputfile)
+class ElanWriter:
+
+    def __init__(self, extinfofile, outputfile):
+        self.extinfofile = extinfofile
+        self.outputfile = outputfile
+
+    def write_elan(self, output):
+        tree = ET.parse(self.extinfofile)
         root = tree.getroot()
+        miscellaneous = root.find('./file/miscellaneous')
+        top_element = miscellaneous[0]
+        element_tree = Element(top_element.tag, top_element.attrib)
 
-        return root
+        # Need to map again the time order
+        time_order = miscellaneous.find('TIME_ORDER')
+        time_order_dict = dict()
 
-    def _find_tier_elements(self, tier_id, linguistyc_ref):
-        print(self.basedirname)
+        for time in time_order:
+            value = time.attrib['TIME_SLOT_ID']
+            try:
+                key = time.attrib['TIME_VALUE']
+            except KeyError as keyError:
+                key = 0
+            time_order_dict[key] = value
+
+        # Need to know the if the lingyustic type is alignable
+        linguisty_type = miscellaneous.findall('LINGUISTIC_TYPE')
+        linguisty_type_dict = dict()
+
+        for linguisty in linguisty_type:
+            key = linguisty.attrib['LINGUISTIC_TYPE_ID'].replace(' ','_')
+            value = linguisty.attrib['TIME_ALIGNABLE']
+            linguisty_type_dict[key] = value
+
+        # Map the TIERS with the LINGUISTIC_TYPE
+        tier_mapping = root.find('./header/tier_mapping')
+        tier_mapping_dict = dict()
+
+        for tiers in tier_mapping:
+            value = tiers.attrib['name']
+            for tier in tiers.iter():
+                if not str(tier.text).isspace():
+                    tier_mapping_dict[tier.text] = value
+
+        for element in miscellaneous:
+
+            if element.tag != 'miscellaneous' and\
+               element.tag != 'ANNOTATION_DOCUMENT':
+
+                parent_element = SubElement(element_tree, element.tag,
+                    element.attrib)
+
+                for child in element:
+                    other_chid = SubElement(parent_element, child.tag,
+                        child.attrib)
+                    if not str(child.text).isspace() or\
+                       child.text is not None:
+                        other_chid.text = child.text
+
+                if element.tag == 'TIER':
+                    tier_id = element.attrib['TIER_ID']
+
+                    try:
+                        parent_ref = element.attrib['PARENT_REF']
+                    except KeyError as keyError:
+                        parent_ref = None
+
+                    linguisty_id = element.attrib['LINGUISTIC_TYPE_REF']
+                    linguisty_id = linguisty_id.replace(' ','_')
+
+                    tree = ET.parse(self.extinfofile.replace("-extinfo","-"+linguisty_id))
+                    graf_elements = tree.getroot()
+                    xml_namespace = re.search('\{(.*)\}', graf_elements.tag).group()
+                    attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
+
+                    if linguisty_type_dict[linguisty_id] == "true":
+                        regions_map = dict()
+                        regions = graf_elements.findall(xml_namespace+"region")
+                        for region in regions:
+                            key = region.attrib[attrib_namespace+"id"]
+                            values = region.attrib['anchors']
+                            regions_map[key] = values
+
+                        for graf_element in graf_elements:
+                            key = attrib_namespace+"id"
+                            if (graf_element.tag == xml_namespace+"node")\
+                            and (tier_id in graf_element.attrib[key]):
+                                link = graf_element[0]
+                                target = link.attrib['targets']
+                                anchors = regions_map[target].split()
+                                time_slot_1 = time_order_dict[anchors[0]]
+                                time_slot_2 = time_order_dict[anchors[1]]
+
+                                annotations = graf_elements.findall(xml_namespace+"a")
+                                for annotation in annotations:
+                                    ref = annotation.attrib['ref']
+
+                                    if ref == graf_element.attrib[key]:
+                                        annotation_id = annotation.attrib[attrib_namespace+"id"]
+                                        feature_structure = annotation[0]
+                                        feature = feature_structure[0]
+
+                                        if linguisty_type_dict[linguisty_id] == 'true':
+                                            annotation_element = SubElement(parent_element,
+                                                'ANNOTATION')
+                                            alignable_annotation = SubElement(annotation_element,
+                                                'ALIGNABLE_ANNOTATION',
+                                                    {'ANNOTATION_ID':annotation_id,
+                                                     'TIME_SLOT_REF1':time_slot_1,
+                                                     'TIME_SLOT_REF2':time_slot_2})
+                                            SubElement(alignable_annotation,
+                                                'ANNOTATION_VALUE').text = feature.text
+                    else:
+                        annotations = graf_elements.findall(xml_namespace+"a")
+
+                        for node_tier in element_tree.findall('TIER'):
+                            if parent_ref == node_tier.attrib['TIER_ID']:
+                                alignale_nodes = node_tier
+
+                        for annotation in annotations:
+                            ref_annotation_id = annotation.attrib['ref']
+
+                            for ann_node in alignale_nodes:
+                                if ann_node[0].attrib['ANNOTATION_ID'] == ref_annotation_id:
+                                    annotation_id = annotation.attrib[attrib_namespace+"id"]
+                                    feature_structure = annotation[0]
+                                    feature = feature_structure[0]
+
+                                    annotation = SubElement(parent_element, 'ANNOTATION')
+                                    ref_annotation = SubElement(annotation,
+                                        'REF_ANNOTATION',
+                                            {'ANNOTATION_ID':annotation_id,
+                                             'ANNOTATION_REF':ref_annotation_id})
+                                    SubElement(ref_annotation, 'ANNOTATION_VALUE').text = feature.text
+                                    break
+
+        file = open(self.outputfile,'wb')
+        doc = minidom.parseString(tostring(element_tree))
+        file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
+        file.close()

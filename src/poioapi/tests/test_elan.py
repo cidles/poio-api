@@ -8,8 +8,10 @@
 # For license information, see LICENSE.TXT
 
 import os
+import re
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
+import xml.etree.ElementTree as ET
 
 from poioapi.io import elan
 
@@ -35,22 +37,6 @@ class TestElan:
         self.elan = elan.Elan(self.filename, data_structure)
 
     def test_write_elan(self):
-        root = self.elan.write_elan(self.metafile)
-
-        miscellaneous = root.find('./file/miscellaneous')
-
-        top_element = miscellaneous[0]
-        new_element_tree = Element(top_element.tag, top_element.attrib)
-
-        for element in miscellaneous.iter():
-            if element.tag == 'TIER':
-                self.elan._find_tier_elements(None,None)
-
-            SubElement(new_element_tree, element.tag, element.attrib).text = element.text
-
-        file = open(self.basedirname+"/_result.xml",'wb')
-        doc = minidom.parseString(tostring(new_element_tree))
-        file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-        file.close()
-
-        assert(1 == 1)
+        # compare the result file with
+        # the original
+        pass
