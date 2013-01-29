@@ -297,8 +297,9 @@ class Elan:
         for elements in self.xml_files_map.items():
             file_name = elements[0]
             extension = file_name+".xml"
-            self.header.add_annotation(extension, file_name)
             filepath = self.basedirname+"-"+extension
+            loc = os.path.basename(filepath)
+            self.header.add_annotation(loc, file_name)
             file = open(filepath,'wb')
             element_tree = elements[1]
             doc = minidom.parseString(tostring(element_tree))

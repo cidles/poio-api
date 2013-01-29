@@ -51,10 +51,11 @@ need to map those data into our internal representation, we try to ease the crea
 are easy to understand for users. For this we will allow users to create their own data structure types and derive the
 annotation schemes for GrAF files from those structures.
 
-==============
-Handling files
-==============
+===========
+GrAF Matter
+===========
 
+This section explains how to transformation a specific kind of file into GrAF ISO standards files.
 To transform any kind of file to GrAF ISO standards using Poio API is necessary to specify data structure hierarchy.
 Each of the files created are followed by the extension that corresponds to each element in the data structure hierarchy
 (e.g. 'filename-utterance.xml'). A header file is also created.

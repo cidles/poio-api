@@ -38,7 +38,7 @@ def main(argv):
     elan_write = elan.ElanWriter(inputfile, outputfile)
 
     # Write the Elan file
-    elan_write.write_elan(outputfile)
+    elan_write.write_elan()
 
     print('Finished')
 
