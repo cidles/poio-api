@@ -528,28 +528,24 @@ class ElanWriter:
                     else:
                         annotations = graf_elements.findall(xml_namespace+"a")
 
-                        for node_tier in element_tree.findall('TIER'):
-                            if parent_ref == node_tier.attrib['TIER_ID']:
-                                alignale_nodes = node_tier
+                        alignale_nodes = element_tree.findall("./*[@TIER_ID='"+
+                                                              parent_ref+"']")[0]
 
                         for annotation in annotations:
-                            ref_annotation_id = annotation.attrib['ref']
+                            annotation_id = annotation.attrib[attrib_namespace+"id"]
+                            feature_structure = annotation[0]
 
-                            print(ref_annotation_id)
+                            ref_annotation_id = feature_structure[0].text
+                            annotation_value = feature_structure[1].text
 
-                            for ann_node in alignale_nodes:
-                                if ann_node[0].attrib['ANNOTATION_ID'] == ref_annotation_id:
-                                    annotation_id = annotation.attrib[attrib_namespace+"id"]
-                                    feature_structure = annotation[0]
-                                    feature = feature_structure[0]
-
-                                    annotation = SubElement(parent_element, 'ANNOTATION')
-                                    ref_annotation = SubElement(annotation,
-                                        'REF_ANNOTATION',
-                                            {'ANNOTATION_ID':annotation_id,
-                                             'ANNOTATION_REF':ref_annotation_id})
-                                    SubElement(ref_annotation, 'ANNOTATION_VALUE').text = feature.text
-                                    break
+                            if alignale_nodes.findall(".//*[@ANNOTATION_ID='"+
+                                                      ref_annotation_id+"']"):
+                                annotation = SubElement(parent_element, 'ANNOTATION')
+                                ref_annotation = SubElement(annotation,
+                                    'REF_ANNOTATION',
+                                        {'ANNOTATION_ID':annotation_id,
+                                         'ANNOTATION_REF':ref_annotation_id})
+                                SubElement(ref_annotation, 'ANNOTATION_VALUE').text = annotation_value
 
         file = open(self.outputfile,'wb')
         doc = minidom.parseString(tostring(element_tree))
