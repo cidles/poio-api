@@ -9,487 +9,487 @@
       <annotationSpace as.id="part_of_speech"/>
     </annotationSpaces>
   </graphHeader>
-  <a as="part_of_speech" label="part_of_speech" ref="a23" xml:id="a120">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n23" xml:id="a120">
     <fs>
       <f name="annotation_value"/>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a24" xml:id="a121">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n24" xml:id="a121">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a25" xml:id="a122">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n25" xml:id="a122">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a26" xml:id="a123">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n26" xml:id="a123">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a27" xml:id="a124">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n27" xml:id="a124">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a28" xml:id="a125">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n28" xml:id="a125">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a29" xml:id="a126">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n29" xml:id="a126">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a30" xml:id="a127">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n30" xml:id="a127">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a31" xml:id="a128">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n31" xml:id="a128">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a32" xml:id="a129">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n32" xml:id="a129">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a33" xml:id="a130">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n33" xml:id="a130">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a34" xml:id="a131">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n34" xml:id="a131">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a35" xml:id="a132">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n35" xml:id="a132">
     <fs>
       <f name="annotation_value">con</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a36" xml:id="a133">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n36" xml:id="a133">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a37" xml:id="a134">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n37" xml:id="a134">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a38" xml:id="a135">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n38" xml:id="a135">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a39" xml:id="a136">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n39" xml:id="a136">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a40" xml:id="a137">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n40" xml:id="a137">
     <fs>
       <f name="annotation_value">adj</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a41" xml:id="a138">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n41" xml:id="a138">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a42" xml:id="a139">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n42" xml:id="a139">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a43" xml:id="a140">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n43" xml:id="a140">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a44" xml:id="a141">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n44" xml:id="a141">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a45" xml:id="a142">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n45" xml:id="a142">
     <fs>
       <f name="annotation_value">dem</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a46" xml:id="a143">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n46" xml:id="a143">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a47" xml:id="a144">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n47" xml:id="a144">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a48" xml:id="a145">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n48" xml:id="a145">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a49" xml:id="a146">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n49" xml:id="a146">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a50" xml:id="a147">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n50" xml:id="a147">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a51" xml:id="a148">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n51" xml:id="a148">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a52" xml:id="a149">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n52" xml:id="a149">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a53" xml:id="a150">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n53" xml:id="a150">
     <fs>
       <f name="annotation_value">dem</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a54" xml:id="a151">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n54" xml:id="a151">
     <fs>
       <f name="annotation_value">adj</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a55" xml:id="a152">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n55" xml:id="a152">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a56" xml:id="a153">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n56" xml:id="a153">
     <fs>
       <f name="annotation_value">con</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a57" xml:id="a154">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n57" xml:id="a154">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a58" xml:id="a155">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n58" xml:id="a155">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a59" xml:id="a156">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n59" xml:id="a156">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a60" xml:id="a157">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n60" xml:id="a157">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a61" xml:id="a158">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n61" xml:id="a158">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a62" xml:id="a159">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n62" xml:id="a159">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a63" xml:id="a160">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n63" xml:id="a160">
     <fs>
       <f name="annotation_value">dem</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a64" xml:id="a161">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n64" xml:id="a161">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a65" xml:id="a162">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n65" xml:id="a162">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a66" xml:id="a163">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n66" xml:id="a163">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a67" xml:id="a164">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n67" xml:id="a164">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a68" xml:id="a165">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n68" xml:id="a165">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a69" xml:id="a166">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n69" xml:id="a166">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a70" xml:id="a167">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n70" xml:id="a167">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a71" xml:id="a168">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n71" xml:id="a168">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a72" xml:id="a169">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n72" xml:id="a169">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a73" xml:id="a170">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n73" xml:id="a170">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a74" xml:id="a171">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n74" xml:id="a171">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a75" xml:id="a172">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n75" xml:id="a172">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a76" xml:id="a173">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n76" xml:id="a173">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a77" xml:id="a174">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n77" xml:id="a174">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a78" xml:id="a175">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n78" xml:id="a175">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a79" xml:id="a176">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n79" xml:id="a176">
     <fs>
       <f name="annotation_value">post</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a80" xml:id="a177">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n80" xml:id="a177">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a81" xml:id="a178">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n81" xml:id="a178">
     <fs>
       <f name="annotation_value">dem</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a82" xml:id="a179">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n82" xml:id="a179">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a83" xml:id="a180">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n83" xml:id="a180">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a84" xml:id="a181">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n84" xml:id="a181">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a85" xml:id="a182">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n85" xml:id="a182">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a86" xml:id="a183">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n86" xml:id="a183">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a87" xml:id="a184">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n87" xml:id="a184">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a88" xml:id="a185">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n88" xml:id="a185">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a89" xml:id="a186">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n89" xml:id="a186">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a90" xml:id="a187">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n90" xml:id="a187">
     <fs>
       <f name="annotation_value">post</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a91" xml:id="a188">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n91" xml:id="a188">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a92" xml:id="a189">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n92" xml:id="a189">
     <fs>
       <f name="annotation_value">int</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a93" xml:id="a190">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n93" xml:id="a190">
     <fs>
       <f name="annotation_value">dem</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a94" xml:id="a191">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n94" xml:id="a191">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a95" xml:id="a192">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n95" xml:id="a192">
     <fs>
       <f name="annotation_value">adj</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a96" xml:id="a193">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n96" xml:id="a193">
     <fs>
       <f name="annotation_value">part</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a97" xml:id="a194">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n97" xml:id="a194">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a98" xml:id="a195">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n98" xml:id="a195">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a99" xml:id="a196">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n99" xml:id="a196">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a100" xml:id="a197">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n100" xml:id="a197">
     <fs>
       <f name="annotation_value">con</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a101" xml:id="a198">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n101" xml:id="a198">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a102" xml:id="a199">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n102" xml:id="a199">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a103" xml:id="a200">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n103" xml:id="a200">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a104" xml:id="a201">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n104" xml:id="a201">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a105" xml:id="a202">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n105" xml:id="a202">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a106" xml:id="a203">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n106" xml:id="a203">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a107" xml:id="a204">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n107" xml:id="a204">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a108" xml:id="a205">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n108" xml:id="a205">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a109" xml:id="a206">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n109" xml:id="a206">
     <fs>
       <f name="annotation_value">con</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a110" xml:id="a207">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n110" xml:id="a207">
     <fs>
       <f name="annotation_value">adv</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a111" xml:id="a208">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n111" xml:id="a208">
     <fs>
       <f name="annotation_value">pro</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a112" xml:id="a209">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n112" xml:id="a209">
     <fs>
       <f name="annotation_value">v</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a113" xml:id="a210">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n113" xml:id="a210">
     <fs>
       <f name="annotation_value">art</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a114" xml:id="a211">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n114" xml:id="a211">
     <fs>
       <f name="annotation_value">dem</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a115" xml:id="a212">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n115" xml:id="a212">
     <fs>
       <f name="annotation_value">n</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a116" xml:id="a213">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n116" xml:id="a213">
     <fs>
       <f name="annotation_value">part</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a117" xml:id="a214">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n117" xml:id="a214">
     <fs>
       <f name="annotation_value">int</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a118" xml:id="a215">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n118" xml:id="a215">
     <fs>
       <f name="annotation_value">prep</f>
     </fs>
   </a>
-  <a as="part_of_speech" label="part_of_speech" ref="a119" xml:id="a216">
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n119" xml:id="a216">
     <fs>
       <f name="annotation_value">n</f>
     </fs>

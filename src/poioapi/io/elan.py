@@ -83,6 +83,8 @@ class Elan:
 
         no_structure = False
 
+        tier_linguistic_map = dict()
+
         # Find the dependencies in the hierarchy
         if len(self.data_structure_hierarchy) is not 0:
             self._find_hierarchy_parents(self.data_structure_hierarchy, None)
@@ -113,15 +115,15 @@ class Elan:
             linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
             replace(" ","_")
 
+            if not tier_id in tier_linguistic_map.keys():
+                tier_linguistic_map[tier_id] = linguistic_type_ref
+
             try:
                 parent_ref = tier.attrib['PARENT_REF']
             except KeyError as keyError:
                 parent_ref = None
                 from_node_id = None
                 edge_id = None
-
-            if tier_num is 0:
-                first_element = linguistic_type_ref
 
             # Need to check if the tier element already exist
             if linguistic_type_ref not in self.xml_files_map.keys():
@@ -130,7 +132,10 @@ class Elan:
                     if tier_num is 0:
                         dependecie = None
                     else:
-                        dependecie = first_element
+                        if parent_ref is None:
+                            dependecie = None
+                        else:
+                            dependecie = tier_linguistic_map[parent_ref]
                 else:
                     dependecie = self.data_hierarchy_parent_dict[linguistic_type_ref]
 
@@ -200,6 +205,16 @@ class Elan:
                     annotation_id = child.attrib['ANNOTATION_ID']
                     annotation_value = child.find('ANNOTATION_VALUE').text
                     annotation_ref = child.attrib['ANNOTATION_REF']
+
+                    look_tier = tier_linguistic_map[parent_ref]
+                    auxiliar_tree = self.xml_files_map[look_tier]
+
+                    # Look for the parent node:
+                    for el_tree in auxiliar_tree:
+                        if el_tree.tag == 'node':
+                            node_ref = el_tree.attrib['xml:id']
+                        if el_tree.tag == 'a' and el_tree.attrib['xml:id'] == annotation_ref:
+                            annotation_ref = node_ref
 
                     # Annotation
                     annotation_name = linguistic_type_ref

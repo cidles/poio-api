@@ -3,108 +3,108 @@
   <graphHeader>
     <labelsDecl/>
     <dependencies>
-      <dependsOn f.id="utterance"/>
+      <dependsOn f.id="gesture_phases"/>
     </dependencies>
     <annotationSpaces>
       <annotationSpace as.id="gesture_meaning"/>
     </annotationSpaces>
   </graphHeader>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a235" xml:id="a292">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n235" xml:id="a292">
     <fs>
       <f name="annotation_value">Going out of the Insitute</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a238" xml:id="a293">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n238" xml:id="a293">
     <fs>
       <f name="annotation_value">Going out of MPI to Saint Anna Street</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a241" xml:id="a294">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n241" xml:id="a294">
     <fs>
       <f name="annotation_value">Going along St. Anna Street</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a246" xml:id="a295">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n246" xml:id="a295">
     <fs>
       <f name="annotation_value">Going along St. Anna Street</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a248" xml:id="a296">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n248" xml:id="a296">
     <fs>
       <f name="annotation_value">A roundabout</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a252" xml:id="a297">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n252" xml:id="a297">
     <fs>
       <f name="annotation_value">Going to the direction of Kleve</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a255" xml:id="a298">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n255" xml:id="a298">
     <fs>
       <f name="annotation_value">Going along Oranje Singel (Street)</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a259" xml:id="a299">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n259" xml:id="a299">
     <fs>
       <f name="annotation_value">Going to the direction of Kleve</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a262" xml:id="a300">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n262" xml:id="a300">
     <fs>
       <f name="annotation_value">Going down</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a265" xml:id="a301">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n265" xml:id="a301">
     <fs>
       <f name="annotation_value">a roundabout</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a267" xml:id="a302">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n267" xml:id="a302">
     <fs>
       <f name="annotation_value">a roundabout</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a269" xml:id="a303">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n269" xml:id="a303">
     <fs>
       <f name="annotation_value">Going down</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a273" xml:id="a304">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n273" xml:id="a304">
     <fs>
       <f name="annotation_value">Going down</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a276" xml:id="a305">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n276" xml:id="a305">
     <fs>
       <f name="annotation_value">a roundabout</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a279" xml:id="a306">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n279" xml:id="a306">
     <fs>
       <f name="annotation_value">a roundabout</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a281" xml:id="a307">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n281" xml:id="a307">
     <fs>
       <f name="annotation_value">a roundabout</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a285" xml:id="a308">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n285" xml:id="a308">
     <fs>
       <f name="annotation_value">Going down</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a288" xml:id="a309">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n288" xml:id="a309">
     <fs>
       <f name="annotation_value">Going down</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a290" xml:id="a310">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/W-RGph/n290" xml:id="a310">
     <fs>
       <f name="annotation_value">Going to Kleve</f>
     </fs>
   </a>
-  <a as="gesture_meaning" label="gesture_meaning" ref="a313" xml:id="a315">
+  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_phases/K-RGph/n313" xml:id="a315">
     <fs>
       <f name="annotation_value">a roundabout</f>
     </fs>

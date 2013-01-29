@@ -2,7 +2,7 @@
 <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <data_structure>
-      <hierarchy>['utterance', ['words', ['part_of_speech']], 'phonetic_transcription', 'gestures', 'gesture_phases', 'gesture_meaning']</hierarchy>
+      <hierarchy>['utterance', 'words', 'part_of_speech', 'phonetic_transcription', 'gestures', 'gesture_phases', 'gesture_meaning']</hierarchy>
     </data_structure>
     <tier_mapping>
       <type name="gesture_meaning">

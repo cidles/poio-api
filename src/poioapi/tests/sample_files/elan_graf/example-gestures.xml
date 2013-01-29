@@ -2,9 +2,7 @@
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
   <graphHeader>
     <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="utterance"/>
-    </dependencies>
+    <dependencies/>
     <annotationSpaces>
       <annotationSpace as.id="gestures"/>
     </annotationSpaces>

@@ -3,7 +3,7 @@
   <graphHeader>
     <labelsDecl/>
     <dependencies>
-      <dependsOn f.id="utterance"/>
+      <dependsOn f.id="gestures"/>
     </dependencies>
     <annotationSpaces>
       <annotationSpace as.id="gesture_phases"/>

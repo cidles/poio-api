@@ -9,77 +9,77 @@
       <annotationSpace as.id="phonetic_transcription"/>
     </annotationSpaces>
   </graphHeader>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a8" xml:id="a217">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n8" xml:id="a217">
     <fs>
       <f name="annotation_value">səʋ  juː ɡɔ aut əf ðə ɪnstɪtjuːt tʊ zə sant ana straːt</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a9" xml:id="a218">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n9" xml:id="a218">
     <fs>
       <f name="annotation_value">ənd ðen juː ɡəʊ ðɪ ɔθɛ sant ana straːt tʊ ðɪs to ðə sɛntə əf ðə taun tu ðɪs bɪɡ rɔtundə</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a10" xml:id="a219">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n10" xml:id="a219">
     <fs>
       <f name="annotation_value">ænd juː fɔləʊ ðən ðə saɪn kleːf</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a11" xml:id="a220">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n11" xml:id="a220">
     <fs>
       <f name="annotation_value">ðæts ðə ɔranjə sɪŋl</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a12" xml:id="a221">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n12" xml:id="a221">
     <fs>
       <f name="annotation_value">ðen juː fɔləʊ ðə saɪn kleːf</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a13" xml:id="a222">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n13" xml:id="a222">
     <fs>
       <f name="annotation_value">juː kʌm daʊn</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a14" xml:id="a223">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n14" xml:id="a223">
     <fs>
       <f name="annotation_value">juː nɔː ə aftə ðɪs trajanus pleːɪn</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a15" xml:id="a224">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n15" xml:id="a224">
     <fs>
       <f name="annotation_value">juː kʌm daʊn tʊ ðə</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a16" xml:id="a225">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n16" xml:id="a225">
     <fs>
       <f name="annotation_value">raɪn ə vælɪ</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a17" xml:id="a226">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n17" xml:id="a226">
     <fs>
       <f name="annotation_value">jɛː ðæts ənaðə ə</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a18" xml:id="a227">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n18" xml:id="a227">
     <fs>
       <f name="annotation_value">kaɪnd əv rotʊndə</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a19" xml:id="a228">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n19" xml:id="a228">
     <fs>
       <f name="annotation_value">ənd ðen juː fɔləʊ ðə saɪns kleːf</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a20" xml:id="a229">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n20" xml:id="a229">
     <fs>
       <f name="annotation_value">jə ɡɔ daʊn</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a21" xml:id="a230">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n21" xml:id="a230">
     <fs>
       <f name="annotation_value">ənd ðen juː ɡɔ ðə ðɪs weɪ</f>
     </fs>
   </a>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="a22" xml:id="a231">
+  <a as="phonetic_transcription" label="phonetic_transcription" ref="utterance/W-Spch/n22" xml:id="a231">
     <fs>
       <f name="annotation_value">ə jaː tʊ kleːf</f>
     </fs>
