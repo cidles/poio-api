@@ -122,8 +122,8 @@ class Elan:
                 parent_ref = tier.attrib['PARENT_REF']
             except KeyError as keyError:
                 parent_ref = None
-                from_node_id = None
-                edge_id = None
+                from_node = None
+                edge = None
 
             # Need to check if the tier element already exist
             if linguistic_type_ref not in self.xml_files_map.keys():
@@ -180,7 +180,6 @@ class Elan:
                             edge_id = "e"+index
                             edge = Edge(edge_id, from_node, node)
                             graph.edges.add(edge)
-                            from_node_id = from_node.id
                     else:
                         self.anchors_dict[tier_id].append((node, anchors))
 
@@ -221,6 +220,8 @@ class Elan:
                     annotation = Annotation(annotation_name, None,
                         annotation_id)
                     annotation.features['annotation_value'] = annotation_value
+                    annotation.features['ref_annotation'] = \
+                    child.attrib['ANNOTATION_REF']
 
                     add_annotation = True
 
@@ -234,13 +235,11 @@ class Elan:
 
                     if add_node:
                         element_tree = self.graf.create_node_with_region(element_tree,
-                            linguistic_type_ref, annotation_id,
-                            annotation_ref,annotation_value, node_id,
-                            region_id, anchors, from_node_id, edge_id)
+                            annotation, annotation_ref, node, region, anchors,
+                            from_node, edge)
                     else:
                         element_tree = self.graf.create_node_annotation(element_tree,
-                            linguistic_type_ref, annotation_id,
-                            annotation_ref, annotation_value)
+                            annotation, annotation_ref)
 
             if no_structure:
                 if not linguistic_type_ref in self.data_structure_hierarchy:
@@ -535,6 +534,8 @@ class ElanWriter:
 
                         for annotation in annotations:
                             ref_annotation_id = annotation.attrib['ref']
+
+                            print(ref_annotation_id)
 
                             for ann_node in alignale_nodes:
                                 if ann_node[0].attrib['ANNOTATION_ID'] == ref_annotation_id:

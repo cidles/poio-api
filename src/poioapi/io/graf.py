@@ -24,9 +24,8 @@ class GrAFWriter():
     """
 
     def create_node_with_region(self, element_tree, annotation,
-                                annotation_id, annotation_ref,
-                                annotation_value, node_id, region_id,
-                                region, from_node_id, edge_id):
+                                 annotation_ref, node, region,
+                                regions, from_node, edge):
         """Create the nodes with the regions from
         a values with ids.
 
@@ -34,19 +33,15 @@ class GrAFWriter():
         ----------
         element_tree : Element Tree
             Xml element.
-        annotation : str
-            Name of the annotation.
-        annotation_id : str
-            Annotation identification.
+        annotation : object
+            Annotation graf object.
         annotation_ref : str
             Reference that this annotation appoints to.
-        annotation_value : str
-            Value of the annotation.
         node_id : str
             Identification of the node.
         region_id : str
             Identification of the region.
-        region : array_like
+        regions : array_like
             Are the regions of the value word in the raw text.
         from_node_id : str
             Identification of the node of the region.
@@ -61,27 +56,25 @@ class GrAFWriter():
         """
 
         graph_node = SubElement(element_tree, 'node',
-                {'xml:id':node_id})
+                {'xml:id':node.id})
 
-        SubElement(graph_node, 'link', {'targets':region_id})
+        SubElement(graph_node, 'link', {'targets':region.id})
 
-        if from_node_id is not None:
-            SubElement(element_tree, 'edge', {'from':from_node_id,
-                                              'to':node_id,
-                                              'xml:id':edge_id})
+        if from_node is not None:
+            SubElement(element_tree, 'edge', {'from':from_node.id,
+                                              'to':node.id,
+                                              'xml:id':edge.id})
 
         SubElement(element_tree, 'region',
-                {'anchors':str(region[0])+" "+str(region[1]),
-                 'xml:id':region_id})
+                {'anchors':str(regions[0])+" "+str(regions[1]),
+                 'xml:id':region.id})
 
         element_tree = self.create_node_annotation(element_tree,
-            annotation, annotation_id, annotation_ref, annotation_value)
+            annotation, annotation_ref)
 
         return element_tree
 
-    def create_node_annotation(self, element_tree, annotation,
-                               annotation_id, annotation_ref,
-                               annotation_value):
+    def create_node_annotation(self, element_tree, annotation, annotation_ref):
         """Create the annotations of the nodes with
         ids.
 
@@ -89,14 +82,10 @@ class GrAFWriter():
         ----------
         element_tree : Element Tree
             Xml element.
-        annotation : str
-            Name of the annotation.
-        annotation_id : str
-            Annotation identification.
+        annotation : object
+            Annotation graf object.
         annotation_ref : str
             Reference that this annotation appoints to.
-        annotation_value : str
-            Value of the annotation.
 
         Returns
         -------
@@ -106,14 +95,17 @@ class GrAFWriter():
         """
 
         graph_annotation = SubElement(element_tree, 'a',
-                {'as':annotation,
-                 'label':annotation,
+                {'as':annotation.label,
+                 'label':annotation.label,
                  'ref':annotation_ref,
-                 'xml:id':annotation_id})
+                 'xml:id':annotation.id})
 
         features = SubElement(graph_annotation, 'fs')
-        feature = SubElement(features, 'f', {'name':'annotation_value'})
-        feature.text = annotation_value
+
+        for feature in annotation.features._elements.items():
+            key = feature[0]
+            value = feature[1]
+            SubElement(features, 'f', {'name':key}).text = value
 
         return element_tree
 

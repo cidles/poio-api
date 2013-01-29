@@ -352,7 +352,6 @@
   <node xml:id="words/W-Words/n57">
     <link targets="words/W-Words/r57"/>
   </node>
-  <edge from="utterance/W-Spch/n10" to="words/W-Words/n57" xml:id="e56"/>
   <region anchors="11470 0" xml:id="words/W-Words/r57"/>
   <a as="words" label="words" ref="words/W-Words/n57" xml:id="a57">
     <fs>
@@ -362,7 +361,6 @@
   <node xml:id="words/W-Words/n58">
     <link targets="words/W-Words/r58"/>
   </node>
-  <edge from="utterance/W-Spch/n10" to="words/W-Words/n58" xml:id="e56"/>
   <region anchors="0 11940" xml:id="words/W-Words/r58"/>
   <a as="words" label="words" ref="words/W-Words/n58" xml:id="a58">
     <fs>
