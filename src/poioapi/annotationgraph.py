@@ -51,9 +51,11 @@ class AnnotationGraph():
 
         # read the base data to get string for regions
         base_data_file = self.graf_basename + ".txt"
-        f = codecs.open(base_data_file, "r", "utf-8")
-        self.base_data = f.read()
-        f.close()
+        try:
+            with codecs.open(base_data_file, "r", "utf-8") as f:
+                self.base_data = f.read()
+        except:
+            pass
 
     def root_nodes(self):
         """Retrieve the root nodes from the annotation graph. Root nodes are
