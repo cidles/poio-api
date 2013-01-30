@@ -51,100 +51,29 @@ need to map those data into our internal representation, we try to ease the crea
 are easy to understand for users. For this we will allow users to create their own data structure types and derive the
 annotation schemes for GrAF files from those structures.
 
-===========
-GrAF Matter
-===========
+===================================
+Structure of GrAF files in Poio API
+===================================
 
-This section explains how to transformation a specific kind of file into GrAF ISO standards files.
 To transform any kind of file to GrAF ISO standards using Poio API is necessary to specify data structure hierarchy.
 Each of the files created are followed by the extension that corresponds to each element in the data structure hierarchy
-(e.g. 'filename-utterance.xml'). A header file is also created.
+(e.g. 'filename-utterance.xml').
 This header file in the GrAF ISO standard is the file that contain the relevant information about the GrAF. The
 information passes by the author, date of creation... The most important part of the that file are the annotations and
 the primary file. The annotations represents the dependent files to create all the nodes, edges, feature and everything
 else needed to the GrAF. The primary file is the file that contains the raw corpus/information which will be the values
 of the nodes.
 
-**Important references**
+starts with header
+
+**References:**
   * GrAF ISO standards (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
 
-------
-Pickle
-------
+===============================================
+Transformation of file formats from and to GrAF
+===============================================
 
-The transformation of an Annotation Tree to the GrAF files is made by giving an Annotation Tree that contains a specific
-data structure hierarchy and then the necessary files using the GrAF ISO standards, are generated.
-
-The descriptions below can be used with the script in the examples folder called pickle2graf.py. This example is going
-to use mainly the GRAID Annotation structure (http://www.linguistik.uni-kiel.de/GRAID_manual6.0_08sept.pdf).
-
-More information about :doc:`Annotation Tree</annotationtree>`.
-
-^^^^^^^^^^^^^^^^^^^^^^^
-Annotation Tree to GrAF
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The first step is to initialize the variable:
-
-.. code-block:: python
-
-	data_hierarchy = data.DataStructureTypeGraid()
-	annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
-
-The Annotation Tree will contain the hierarchy and relations between the elements between which sentence, word, wfw
-and it's translation.
-In this step what is done is to set the data structure type of the tree with
-**Annotation Tree(data.DataStructureTypeGraid)**.
-
-The second step is to load the Annotation Tree (in the example_data folder there are some example files):
-
-.. code-block:: python
-
-	annotation_tree.load_tree_from_pickle(inputfile)
-
-At this point is important to know that the file should be a **pickle** file and must be previously created with PoioUI
-(https://github.com/cidles/Poio).
-
-The third and last step is call the writer of the GrAF:
-
-.. code-block:: python
-
-	writer = Writer(annotation_tree, output)
-	writer.write()
-
-NOTE: The generated files are in the same folder as the inputfile.
-
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Parse GrAF files to Annotation Tree
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-		
-Is important to know that to make the parsing of the GrAF files they must be created as well as the header file.
-The parsing of the files using Poio API module allows to reverse from GrAF to the Annotation Tree.
-
-The first step is to initialize the variable. Once again is need to give the correct data structure hierarchy that
-was given to create the header file (or transform the Annotation Tree into GrAF ISO in this case):
-
-.. code-block:: python
-
-	data_hierarchy = data.DataStructureTypeGraid()
-
-The second is to initialize the Annotation Tree and the Parser itself:
-
-.. code-block:: python
-
-	annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
-	parser = graf.Parser(annotation_tree, headerfile)
-
-And then is possible to create the Annotation Tree again:
-
-.. code-block:: python
-
-	annotation_tree = parser.load_as_tree()
-	
-	# Consulting the elements
-	for element in annotation_tree.elements():
-		print(element)
-
+This section explains how to transformation a specific kind of file into GrAF ISO standards files.
 
 ----
 Elan
@@ -209,7 +138,7 @@ Metafile example:
   * The regions anchors will be derived from the map TIME_ORDER. The region id is like the node id but instead of the "/n" is a "/r". E. g. (W-RGph-r233)
   * The values of ALIGNABLE_ANNOTATION and REF_ANNOTATION will be the annotation values under the tag *a* and the id exactly the same. E. g. (a233)
 
-**Imporant references:**
+**References:**
   * Elan Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
   * Elan Information (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
   * Elan Tools and Documentation (http://tla.mpi.nl/tools/tla-tools/elan/download/)
@@ -255,18 +184,11 @@ This step will generate the GrAF files inclunding the header and the metafile.
 
 **Note:** To create the GrAF files it's first needed to run the method above described.
 
+==============================
+Example transformation scripts
+==============================
 
-------------------
-Other file formats
-------------------
-
-Under development ...
-
-=========
-Resources
-=========
-
-Source Files:
+Files on Github:
   * :download:`pickle2graf.py<_resources/pickle2graf.py>`
   * :download:`elan2graf.py<_resources/elan2graf.py>`
 

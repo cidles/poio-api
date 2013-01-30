@@ -12,8 +12,9 @@ Welcome to Poio API's documentation!
 .. toctree::
    :maxdepth: 2
 
-   modules
    howto
+   modules
+
     
 Indices and tables
 ==================

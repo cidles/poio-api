@@ -14,6 +14,8 @@
   <a as="gestures" label="gestures" ref="gestures/W-RGU/n232" xml:id="a232">
     <fs>
       <f name="annotation_value">R Gesture Unit 1</f>
+      <f name="time_slot2">ts183</f>
+      <f name="time_slot1">ts1</f>
     </fs>
   </a>
   <node xml:id="gestures/K-RGU/n311">
@@ -23,6 +25,8 @@
   <a as="gestures" label="gestures" ref="gestures/K-RGU/n311" xml:id="a311">
     <fs>
       <f name="annotation_value">R Gesture Unit 1</f>
+      <f name="time_slot2">ts129</f>
+      <f name="time_slot1">ts122</f>
     </fs>
   </a>
 </graph>

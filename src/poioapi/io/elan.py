@@ -188,6 +188,10 @@ class Elan:
                     annotation = Annotation(annotation_name, None,
                         annotation_id)
                     annotation.features['annotation_value'] = annotation_value
+                    annotation.features['time_slot1'] = \
+                    child.attrib['TIME_SLOT_REF1']
+                    annotation.features['time_slot2'] = \
+                    child.attrib['TIME_SLOT_REF2']
 
                     node.annotations.add(annotation)
                     node.add_region(region)
@@ -435,18 +439,6 @@ class ElanWriter:
 
         element_tree = Element(top_element.tag, top_element.attrib)
 
-        # Need to map again the time order
-        time_order = miscellaneous.find('TIME_ORDER')
-        time_order_dict = dict()
-
-        for time in time_order:
-            value = time.attrib['TIME_SLOT_ID']
-            try:
-                key = time.attrib['TIME_VALUE']
-            except KeyError as keyError:
-                key = 0
-            time_order_dict[key] = value
-
         # Need to know the if the lingyustic type is alignable
         linguisty_type = miscellaneous.findall('LINGUISTIC_TYPE')
         linguisty_type_dict = dict()
@@ -489,22 +481,10 @@ class ElanWriter:
                     attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
 
                     if linguisty_type_dict[linguisty_id] == "true":
-                        regions_map = dict()
-                        regions = graf_elements.findall(xml_namespace+"region")
-                        for region in regions:
-                            key = region.attrib[attrib_namespace+"id"]
-                            values = region.attrib['anchors']
-                            regions_map[key] = values
-
                         for graf_element in graf_elements:
                             key = attrib_namespace+"id"
                             if (graf_element.tag == xml_namespace+"node")\
                             and (tier_id in graf_element.attrib[key]):
-                                link = graf_element[0]
-                                target = link.attrib['targets']
-                                anchors = regions_map[target].split()
-                                time_slot_1 = time_order_dict[anchors[0]]
-                                time_slot_2 = time_order_dict[anchors[1]]
 
                                 annotations = graf_elements.findall(xml_namespace+"a")
                                 for annotation in annotations:
@@ -513,7 +493,9 @@ class ElanWriter:
                                     if ref == graf_element.attrib[key]:
                                         annotation_id = annotation.attrib[attrib_namespace+"id"]
                                         feature_structure = annotation[0]
-                                        feature = feature_structure[0]
+                                        annotation_value = feature_structure[0]
+                                        time_slot_1 = feature_structure[2]
+                                        time_slot_2 = feature_structure[1]
 
                                         if linguisty_type_dict[linguisty_id] == 'true':
                                             annotation_element = SubElement(parent_element,
@@ -521,10 +503,10 @@ class ElanWriter:
                                             alignable_annotation = SubElement(annotation_element,
                                                 'ALIGNABLE_ANNOTATION',
                                                     {'ANNOTATION_ID':annotation_id,
-                                                     'TIME_SLOT_REF1':time_slot_1,
-                                                     'TIME_SLOT_REF2':time_slot_2})
+                                                     'TIME_SLOT_REF1':time_slot_1.text,
+                                                     'TIME_SLOT_REF2':time_slot_2.text})
                                             SubElement(alignable_annotation,
-                                                'ANNOTATION_VALUE').text = feature.text
+                                                'ANNOTATION_VALUE').text = annotation_value.text
                     else:
                         annotations = graf_elements.findall(xml_namespace+"a")
 
