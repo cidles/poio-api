@@ -55,16 +55,127 @@ annotation schemes for GrAF files from those structures.
 Structure of GrAF files in Poio API
 ===================================
 
-To transform any kind of file to GrAF ISO standards using Poio API is necessary to specify data structure hierarchy.
-Each of the files created are followed by the extension that corresponds to each element in the data structure hierarchy
-(e.g. 'filename-utterance.xml').
-This header file in the GrAF ISO standard is the file that contain the relevant information about the GrAF. The
-information passes by the author, date of creation... The most important part of the that file are the annotations and
-the primary file. The annotations represents the dependent files to create all the nodes, edges, feature and everything
-else needed to the GrAF. The primary file is the file that contains the raw corpus/information which will be the values
-of the nodes.
+This section explains how is the relation between the GrAF structure files with Poio API.
 
-starts with header
+| The header file will always have the same name as the original file with the extension *.hdr*.
+| E. g. assuming that the original file was example.txt the header file will be *example.hdr*.
+
+| The header file will contain information that forms the GrAF. Some of that information may be consulted in detail in the references link.
+| For Poio API the important part will be only the dataDesc.
+
+.. code-block:: xml
+
+    [.......]
+      <dataDesc>
+        <primaryData f.id="text" loc="example.txt">
+          <annotations>
+            <annotation f.id="utterance" loc="example-utterance.xml"/>
+            <annotation f.id="word" loc="balochi-word.xml"/>
+            <annotation f.id="translation" loc="balochi-translation.xml"/>
+          </annotations>
+        </primaryData>
+      </dataDesc>
+    [.......]
+
+The *primaryData* provides the location of the primary data document:
+
+* loc - Is the identification of the primary data document.
+* f.id - Is the file type of the primary data document.
+
+.. code-block:: xml
+
+    <primaryData f.id="text" loc="example.txt">
+
+The *annotations* are the tiers associated to the primary data document:
+
+* loc - Is the identification of the tier document.
+* f.id - Is the file type of the tier document.
+
+.. code-block:: xml
+
+  <annotations>
+    <annotation f.id="utterance" loc="example-utterance.xml"/>
+    <annotation f.id="word" loc="balochi-word.xml"/>
+    <annotation f.id="translation" loc="balochi-translation.xml"/>
+  </annotations>
+
+In Poio API those tiers are linked to the elements of the data structure. This allows the
+correlation between the hierarchical structure of Poio API and the structure of Graf to be possible. Each one of those
+tiers will only contain the information relating to each of the elements of the data structure. By doing this it
+immediately gets the dependency between the tiers.
+
+The creation of those tiers(*annotations*) will always be the name of the original file followed by an hyphen an by the
+respective data structure element, **filename-data_element.xml** (e. g. example-utterance.xml). Their type always going
+to be the name of the respective data structure element.
+
+There will be generic two kinds of files. Some files that have nodes and whether or without annotations and other
+files that will have only annotations. This is due to the fact that we assume that the first elements of a hierarchical
+list are nodes may thus contain one or more annotations. While the remaining elements of the list will be considered
+only as annotations of values ​​and/or annotations of reference to another node or annotation.
+
+Below a simple example explaining everything it's shown.
+
+Assuming that the original file is *example.txt* and the data structure hierarchy is like this:
+
+.. code-block:: python
+
+	[ 'word', 'translation' ]
+
+The generated GrAF files should be two:
+
+* example-word.xml
+* example-translation.xml
+
+In this example since the *node* element it's the first in the hierarchy it'll be generated a file with the nodes of
+the word and a file only with annotation of the *translation* element. The *translation* annotation will point to a node
+of *word* because it's parent in the hierarchy.
+
+The result files should be like this:
+
+* For the *word*:
+
+    .. code-block:: xml
+
+        <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+          <graphHeader>
+            <labelsDecl/>
+            <dependencies/>
+            <annotationSpaces>
+              <annotationSpace as.id="word"/>
+            </annotationSpaces>
+          </graphHeader>
+          <node xml:id="word-n0">
+            <link targets="word-r0"/>
+          </node>
+          <region anchors="0 10" xml:id="word-r0"/>
+          <a as="word" label="word" ref="word-n0" xml:id="word-a0">
+            <fs>
+              <f name="annotation_value">Ola CIDLeS</f>
+            </fs>
+          </a>
+        [........]
+
+* For the *translation* it's going to have a dependency as you can see in the *<dependencies>*:
+
+    .. code-block:: xml
+
+        <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+          <graphHeader>
+            <labelsDecl/>
+            <dependencies>
+              <dependsOn f.id="word"/>
+            </dependencies>
+            <annotationSpaces>
+              <annotationSpace as.id="translation"/>
+            </annotationSpaces>
+          </graphHeader>
+          <a as="translation" label="translation" ref="word-n0" xml:id="translation-a0">
+            <fs>
+              <f name="annotation_value">Hello CIDLeS</f>
+            </fs>
+          </a>
+        [........]
+
 
 **References:**
   * GrAF ISO standards (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
@@ -189,6 +300,6 @@ Example transformation scripts
 ==============================
 
 Files on Github:
-  * :download:`pickle2graf.py<_resources/pickle2graf.py>`
-  * :download:`elan2graf.py<_resources/elan2graf.py>`
+  * `pickle2graf.py <https://github.com/cidles/poio-api/blob/master/examples/pickle2graf.py>`_
+  * `elan2graf.py <https://github.com/cidles/poio-api/blob/master/examples/elan2graf.py>`_
 
