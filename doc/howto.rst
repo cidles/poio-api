@@ -131,7 +131,7 @@ Tier Attributes...`:
 .. image:: _static/elan_tier_attributes.png
 
 In this case the tier `K-Spch` has the linguistic type `utterance`, and so on.
-These tier attributes correspond to the names in the data structure types of
+These linguistic types correspond to the names in the data structure types of
 Poio API (see section :ref:`data_structure_types`). Which means that if you
 transform an EAF file into GrAF files with Poio API it will create one file for
 each of the linguistic types. Each of those files file will contain all the
@@ -184,10 +184,11 @@ The first annotation of `W-Spch` in `prefix-words.xml` looks like this:
     </fs>
   </a>
 
-The node for the word annotation looks similar, but in addition to the utterance
-node it also has an `<edge>` to the corresponding utterance node. Edges are created
-for all annotations of tiers that have time slots *and* a parent tier in EAF
-(those tiers have the stereotype `"Time Subdivision"` in EAF).
+The node for the word annotation is similar to the utterance node, except for an
+additional `<edge>` tag that links the node to the corresponding utterance node.
+Nodes and edges are created for all annotations of tiers that have time slots
+*and* a parent tier in EAF (those tiers have the stereotype `"Time Subdivision"`
+in EAF).
 
 For tiers that have a parent tier but *no regions* Poio API only creates
 annotations that refer to the node in the parent tier (stereotypes `"Symbolic
