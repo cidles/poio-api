@@ -102,9 +102,9 @@ Elan's EAF files
 Elan is a widely used transcription and annotation software developed at the
 Max-Planck-Institute in Nijmegen. Due to its popularity the file format used
 by Elan, an XML format called "EAF" ("Elan Annotation Standard"), has become
-the de facto standard on language documentation and is used by several project
+the de facto standard in language documentation and is used by several project
 in qualitative and quantitative language typology. Poio API fully supports to
-convert EAF files to GrAF annotatoin graphs and back again without any loss of
+convert EAF files to GrAF annotation graphs and back again without any loss of
 information.
 
 Basically, Poio API extracts all `<annotation>` tags from the EAF file and
