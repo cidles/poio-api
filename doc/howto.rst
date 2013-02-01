@@ -18,11 +18,13 @@ representations in this framework.
 
 **Note:** The explanations in this document focus only on the module graf.py of the Poio API Library.
 
+.. _data_structure_types:
+
 ====================
 Data Structure Types
 ====================
 
-We use a data type called data structure type to represent the schema of annotation in a tree. A simple data structure
+We use a data type called data structure type to represent annotation schemes in a tree. A simple data structure
 type describing that the researcher wants to tokenize a text into words before adding a word-for-word translation and a
 translation for the whole utterance looks like this:
 
@@ -51,249 +53,163 @@ need to map those data into our internal representation, we try to ease the crea
 are easy to understand for users. For this we will allow users to create their own data structure types and derive the
 annotation schemes for GrAF files from those structures.
 
+In Poio API there are several data structure types pre-defined as classes in the module `poioapi.data`, for example:
+
+* :py:class:`poioapi.data.DataStructureTypeGraid`
+* :py:class:`poioapi.data.DataStructureTypeMorphsynt`
+
+The user of the API can of course create her own data structure type, by deriving a custom class from the base class
+`poioapi.data.DataStructureType`. This is often done when a GrAF graph was created from an ELAN file that contains
+custom tiers. A custom class would look like this:
+
+.. code-block:: python
+
+  class DataStructureTypeElan(poioapi.data.DataStructureType):
+      name = "ELAN"
+
+      data_hierarchy =\
+      [ 'utterance', 'phonetic_transcription',
+          [ 'words', 'part_of_speech' ]
+      ]
+
+
+=================
+Annotation Graphs
+=================
+
+TODO
+
+.. _graf_structure:
+
 ===================================
 Structure of GrAF files in Poio API
 ===================================
 
-This section explains how is the relation between the GrAF structure files with Poio API.
-
-| The header file will always have the same name as the original file with the extension *.hdr*.
-| E. g. assuming that the original file was example.txt the header file will be *example.hdr*.
-
-| The header file will contain information that forms the GrAF. Some of that information may be consulted in detail in the references link.
-| For Poio API the important part will be only the dataDesc.
-
-.. code-block:: xml
-
-    [.......]
-      <dataDesc>
-        <primaryData f.id="text" loc="example.txt">
-          <annotations>
-            <annotation f.id="utterance" loc="example-utterance.xml"/>
-            <annotation f.id="word" loc="balochi-word.xml"/>
-            <annotation f.id="translation" loc="balochi-translation.xml"/>
-          </annotations>
-        </primaryData>
-      </dataDesc>
-    [.......]
-
-The *primaryData* provides the location of the primary data document:
-
-* loc - Is the identification of the primary data document.
-* f.id - Is the file type of the primary data document.
-
-.. code-block:: xml
-
-    <primaryData f.id="text" loc="example.txt">
-
-The *annotations* are the tiers associated to the primary data document:
-
-* loc - Is the identification of the tier document.
-* f.id - Is the file type of the tier document.
-
-.. code-block:: xml
-
-  <annotations>
-    <annotation f.id="utterance" loc="example-utterance.xml"/>
-    <annotation f.id="word" loc="balochi-word.xml"/>
-    <annotation f.id="translation" loc="balochi-translation.xml"/>
-  </annotations>
-
-In Poio API those tiers are linked to the elements of the data structure. This allows the
-correlation between the hierarchical structure of Poio API and the structure of Graf to be possible. Each one of those
-tiers will only contain the information relating to each of the elements of the data structure. By doing this it
-immediately gets the dependency between the tiers.
-
-The creation of those tiers(*annotations*) will always be the name of the original file followed by an hyphen an by the
-respective data structure element, **filename-data_element.xml** (e. g. example-utterance.xml). Their type always going
-to be the name of the respective data structure element.
-
-There will be generic two kinds of files. Some files that have nodes and whether or without annotations and other
-files that will have only annotations. This is due to the fact that we assume that the first elements of a hierarchical
-list are nodes may thus contain one or more annotations. While the remaining elements of the list will be considered
-only as annotations of values ​​and/or annotations of reference to another node or annotation.
-
-Below a simple example explaining everything it's shown.
-
-Assuming that the original file is *example.txt* and the data structure hierarchy is like this:
-
-.. code-block:: python
-
-	[ 'word', 'translation' ]
-
-The generated GrAF files should be two:
-
-* example-word.xml
-* example-translation.xml
-
-In this example since the *node* element it's the first in the hierarchy it'll be generated a file with the nodes of
-the word and a file only with annotation of the *translation* element. The *translation* annotation will point to a node
-of *word* because it's parent in the hierarchy.
-
-The result files should be like this:
-
-* For the *word*:
-
-    .. code-block:: xml
-
-        <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-          <graphHeader>
-            <labelsDecl/>
-            <dependencies/>
-            <annotationSpaces>
-              <annotationSpace as.id="word"/>
-            </annotationSpaces>
-          </graphHeader>
-          <node xml:id="word-n0">
-            <link targets="word-r0"/>
-          </node>
-          <region anchors="0 10" xml:id="word-r0"/>
-          <a as="word" label="word" ref="word-n0" xml:id="word-a0">
-            <fs>
-              <f name="annotation_value">Ola CIDLeS</f>
-            </fs>
-          </a>
-        [........]
-
-* For the *translation* it's going to have a dependency as you can see in the *<dependencies>*:
-
-    .. code-block:: xml
-
-        <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-          <graphHeader>
-            <labelsDecl/>
-            <dependencies>
-              <dependsOn f.id="word"/>
-            </dependencies>
-            <annotationSpaces>
-              <annotationSpace as.id="translation"/>
-            </annotationSpaces>
-          </graphHeader>
-          <a as="translation" label="translation" ref="word-n0" xml:id="translation-a0">
-            <fs>
-              <f name="annotation_value">Hello CIDLeS</f>
-            </fs>
-          </a>
-        [........]
-
+TODO
 
 **References:**
   * GrAF ISO standards (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
+
 
 ===============================================
 Transformation of file formats from and to GrAF
 ===============================================
 
-This section explains how to transformation a specific kind of file into GrAF ISO standards files.
+----------------
+Elan's EAF files
+----------------
 
-----
-Elan
-----
+Elan is a widely used transcription and annotation software developed at the
+Max-Planck-Institute in Nijmegen. Due to its popularity the file format used
+by Elan, an XML format called "EAF" ("Elan Annotation Standard"), has become
+the de facto standard on language documentation and is used by several project
+in qualitative and quantitative language typology. Poio API fully supports to
+convert EAF files to GrAF annotatoin graphs and back again without any loss of
+information.
 
-In order to convert the Elan files into GrAF object or GrAF files there is going to be necessary to understand the use
-of the data structures hierarchy and the metafile. The data structure describes the relations between tiers. We map each
-entry in the data structure to one or more tiers in the elan file.
-The data structure elements are going to have the same names as the "LINGUISTIC_TYPE_REF" of each tier. Their hierarchy
-can assume any order/format, it's the user choice.
+Basically, Poio API extracts all `<annotation>` tags from the EAF file and
+converts them to GrAF nodes and annotations. The `<time_slot>` tags in the
+EAF file are used to create the regions for the nodes in GrAF. The rest of the
+EAF file is left intact and stored as a separate file `prefix-extinfo.xml` in
+parallel to the other GrAF files as described in section :ref:`graf_structure`
+(where `prefix` is again the base name of the header file of GrAF). In addition
+to this, the original EAF file is also stored together with the GrAF files.
+
+The structure of the GrAF files is defined by the tier hierarchy in the Elan
+file. As an example we will use the example data file that you may `download from
+the the Elan website <http://tla.mpi.nl/tools/tla-tools/elan/download/>`_ (next
+to "Example Set"). If you open those files in Elan and sort the tiers by
+hierarchy you will have the following tier hierarchy:
+
+.. image:: _static/elan_tier_hierarchy.png
+
+In this case, there are four *root tiers* with annotations: `K-Spch`, `W-Spch`,
+`W-RGU` and `K-RGU`. The latter three each has several child tiers. Each tier
+has a *linguistic type*, which you can see if you click on `Tier` -> `Change
+Tier Attributes...`:
+
+.. image:: _static/elan_tier_attributes.png
+
+In this case the tier `K-Spch` has the linguistic type `utterance`, and so on.
+These tier attributes correspond to the names in the data structure types of
+Poio API (see section :ref:`data_structure_types`). Which means that if you
+transform an EAF file into GrAF files with Poio API it will create one file for
+each of the linguistic types. Each of those files file will contain all the
+annotations of all the tiers that have the corresponding linguistic type. In
+our example, Poio API will create one file `prefix-utterance.xml` that contain
+the annotations from the tiers `K-Spch` and `W-Spch`. The file
+`prefix-words.xml` will then contain all annotations from tier `W-Words` with
+links to the parent annotations in `prefix-utterance.xml`. You can find an
+example of the GrAF structure for the sample EAF file `on Github
+<https://github.com/cidles/poio-api/tree/master/src/poioapi/tests/sample_files/elan_graf>`_.
+
+The first annotation of the tier `W-Spch` with the annotation value
+"so you go out of the Institute to the Saint Anna Straat." looks like this in
+GrAF:
 
 .. code-block:: xml
 
-    <header>
-        <data_structure>
-            <hierarchy>['utterance', 'words']</hierarchy>
-        <data_structure>
-        <tier_mapping>
-            <type name="words">
-                <tier>W-Words</tier>
-            </type>
-            <type name="utterance">
-                <tier>K-Spch</tier>
-                <tier>W-Spch</tier>
-            </type>
-        </tier_mapping>
-    </header>
+  <node xml:id="utterance/W-Spch/n8">
+    <link targets="utterance/W-Spch/r8"/>
+  </node>
+  <region anchors="780 4090" xml:id="utterance/W-Spch/r8"/>
+  <a as="utterance" label="utterance" ref="utterance/W-Spch/n8" xml:id="a8">
+    <fs>
+      <f name="annotation_value">so you go out of the Institute to the Saint Anna Straat.</f>
+      <f name="time_slot2">ts23</f>
+      <f name="time_slot1">ts4</f>
+    </fs>
+  </a>
 
-The Elan file contains a lot of information that is only used by the program itself and is not to much use for the GrAF.
-Only the TIERs and TIME_ORDER information are usefully to the Poio API the rest will be stored in a metafile under
-the tag *miscellaneous*.
-The metafile will be named with a extension "-extinfo.xml".
+The `<node>` is linked to a `<region>` that contains the values of the time slots of
+the original EAF file. The annotation `<a>` for the node has a feature structure
+`<fs>` with three features `<f>` for the annotation value and the original names
+of the time slots. We need to save the names of the time slots to be able to
+reconstruct the original EAF file.
 
-Metafile example:
+The first annotation of `W-Spch` in `prefix-words.xml` looks like this:
 
 .. code-block:: xml
 
-    <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <header>
-            <data_structure>
-                <hierarchy>['utterance', 'words',...]</hierarchy>
-            <data_structure>
-            <tier_mapping>
-                <type name="gesture_meaning">
-                    <tier>W-RGMe</tier>
-                    <tier>K-RGMe</tier>
-                </type>
-                [.......]
-            </tier_mapping>
-        </header>
-        <file data_type="Elan file">
-            <miscellaneous>
-            <ANNOTATION_DOCUMENT AUTHOR="" DATE="2006-06-13T15:09:43+01:00" FORMAT="2.3" VERSION="2.3"
-            xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.3.xsd"/>
-            [.........]
-            </miscellaneous>
-        </file>
-    </metadata>
+  <node xml:id="words/W-Words/n23">
+    <link targets="words/W-Words/r23"/>
+  </node>
+  <edge from="utterance/W-Spch/n8" to="words/W-Words/n23" xml:id="e23"/>
+  <region anchors="780 1340" xml:id="words/W-Words/r23"/>
+  <a as="words" label="words" ref="words/W-Words/n23" xml:id="a23">
+    <fs>
+      <f name="annotation_value">so</f>
+      <f name="time_slot2">ts6</f>
+      <f name="time_slot1">ts4</f>
+    </fs>
+  </a>
 
-*Relation between the elan tier elements and GrAF ISO:*
-  * Nodes ids are going to use a prefix that's the "LINGUISTIC_TYPE_REF" and then the same id as the TIERs followed by "/n" and a sequential index. E. g. ("gestures/W-RGph/n233").
-  * The regions anchors will be derived from the map TIME_ORDER. The region id is like the node id but instead of the "/n" is a "/r". E. g. (W-RGph-r233)
-  * The values of ALIGNABLE_ANNOTATION and REF_ANNOTATION will be the annotation values under the tag *a* and the id exactly the same. E. g. (a233)
+The node for the word annotation looks similar, but in addition to the utterance
+node it also has an `<edge>` to the corresponding utterance node. Edges are created
+for all annotations of tiers that have time slots *and* a parent tier in EAF
+(those tiers have the stereotype `"Time Subdivision"` in EAF).
+
+For tiers that have a parent tier but *no regions* Poio API only creates
+annotations that refer to the node in the parent tier (stereotypes `"Symbolic
+Association"` in EAF). For example, the tier `W-POS` in the sample has no time
+slots and is of the stereotype `Symbolic Association`. An annotation in GrAF in
+`prefix-part_of_speech.xml` then looks like this:
+
+.. code-block:: xml
+
+  <a as="part_of_speech" label="part_of_speech" ref="words/W-Words/n23" xml:id="a120">
+    <fs>
+      <f name="ref_annotation">a23</f>
+      <f name="annotation_value"/>
+    </fs>
+  </a>
+
 
 **References:**
-  * Elan Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
-  * Elan Information (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
+  * EAF Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
+  * Information about Elan (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
   * Elan Tools and Documentation (http://tla.mpi.nl/tools/tla-tools/elan/download/)
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-How to use the elan parser
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-First is important to know the class DataStructureTypeWithConstraints. This class contains the data structure hierarchy
-and the dictionary with the constraints.
-
-For the parser works properly is need to set the data structure of the class first:
-
-.. code-block:: python
-
-    # Initialize
-    data_hierarchy = ['utterance','words','part_of_speech']
-
-    # Path to the elan file
-    inputfile = 'example.elan'
-
-    elan_graf = elan.Elan(inputfile, data.DataStructureTypeWithConstraints(data_hierarchy))
-
-**Note:** If a data structure isn't given the API will assume the structure of the elan tiers.
-
-Next to create a GrAF object:
-
-.. code-block:: python
-
-    graph = elan_graf.elan_to_graf()
-
-Now it's possible to access it with `Graf-python API <https://github.com/cidles/graf-python>`_
-
-For more information about Graf-python (https://graf-python.readthedocs.org/en/latest/howto.html)
-
-Generate the GrAF files:
-
-.. code-block:: python
-
-    elan_graf.generate_graf_files()
-
-This step will generate the GrAF files inclunding the header and the metafile.
-
-**Note:** To create the GrAF files it's first needed to run the method above described.
 
 ==============================
 Example transformation scripts

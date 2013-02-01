@@ -25,10 +25,11 @@ sys.path.insert(0, os.path.abspath('../src/'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-#extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode']
+#extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',  'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode']
 extensions = ['sphinx.ext.autodoc', # 'sphinx.ext.coverage',
               'sphinx.ext.viewcode',
               'sphinx.ext.autosummary',
+              #'sphinx.ext.intersphinx',
               'numpydoc' ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -252,7 +253,7 @@ texinfo_documents = [
 epub_title = u'Poio API'
 epub_author = u'Peter Bouda'
 epub_publisher = u'Peter Bouda'
-epub_copyright = u'2012, Peter Bouda'
+epub_copyright = u'2013, Peter Bouda'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
