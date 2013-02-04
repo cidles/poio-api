@@ -1,10 +1,6 @@
-*******************
-How To Use Poio API
-*******************
-
-============
-Introduction
-============
+************************
+Introduction to Poio API
+************************
 
 Poio API provides access to language documentation data and a wide range of annotations schemes stored in different file
 formats. It's based on a common and standardized representational format: annotation graphs as defined by "ISO 24612 -
