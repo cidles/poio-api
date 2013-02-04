@@ -2,21 +2,18 @@
 How To Use Poio API
 *******************
 
-This is the documentation for Python Library Poio API.
-
 ============
 Introduction
 ============
 
-This document has as presupposition explanation the some functions of the Poio API Library. Those functions are mainly
-the parsing of different file formats in to GrAF standardization and vice-versa.
-
-Poio API provides access to language documentation data and a wide range of annotations types stored in different file
-formats. It's based on a common and standardized representation format (LAF). The data and annotations can then be used
+Poio API provides access to language documentation data and a wide range of annotations schemes stored in different file
+formats. It's based on a common and standardized representational format: annotation graphs as defined by "ISO 24612 -
+Language resource management -- Linguistic annotation framework (LAF)". The data and annotations can then be used
 with existing NLP tools and workflows and hence be combined with any other data source that is isomorphic to the
 representations in this framework.
 
-**Note:** The explanations in this document focus only on the module graf.py of the Poio API Library.
+**References:**
+  * ISO 24612 (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
 
 .. _data_structure_types:
 
@@ -88,7 +85,7 @@ Structure of GrAF files in Poio API
 TODO
 
 **References:**
-  * GrAF ISO standards (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
+  * ISO 24612 (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
 
 
 ===============================================
