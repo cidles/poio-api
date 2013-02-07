@@ -8,7 +8,7 @@ Language resource management -- Linguistic annotation framework (LAF)". The data
 with existing NLP tools and workflows and hence be combined with any other data source that is isomorphic to the
 representations in this framework.
 
-Poio API is developed as a part of the `curation project of the F-AG 3 within CLARIN-D <http://de.clarin.eu/de/fachspezifische-arbeitsgruppen/f-ag-3-linguistische-feldforschung.html>`_.
+Poio API is developed as a part of the `curation project of the F-AG 3 within CLARIN-D <http://de.clarin.eu/de/fachspezifische-arbeitsgruppen/f-ag-3-linguistische-feldforschung/kurationsprojekt-1.html>`_.
 
 **References:**
   * ISO 24612 (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
