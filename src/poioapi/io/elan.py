@@ -84,6 +84,7 @@ class Elan:
         no_structure = False
 
         tier_linguistic_map = dict()
+        orphan_annotation_references_map = dict()
 
         # Find the dependencies in the hierarchy
         if len(self.data_structure_hierarchy) is not 0:
@@ -109,14 +110,19 @@ class Elan:
 
         self.anchors_dict = defaultdict(list)
 
-        # First try with the tiers
-        for tier_num, tier in enumerate(tiers):
+        for tier in tiers:
             tier_id = tier.attrib['TIER_ID']
             linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
             replace(" ","_")
 
             if not tier_id in tier_linguistic_map.keys():
                 tier_linguistic_map[tier_id] = linguistic_type_ref
+
+        # First try with the tiers
+        for tier_num, tier in enumerate(tiers):
+            tier_id = tier.attrib['TIER_ID']
+            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
+            replace(" ","_")
 
             try:
                 parent_ref = tier.attrib['PARENT_REF']
@@ -205,29 +211,45 @@ class Elan:
                     add_node = True
 
                 elif child.tag == 'REF_ANNOTATION':
+                    has_parent = False
+
                     annotation_id = child.attrib['ANNOTATION_ID']
                     annotation_value = child.find('ANNOTATION_VALUE').text
                     annotation_ref = child.attrib['ANNOTATION_REF']
 
                     look_tier = tier_linguistic_map[parent_ref]
-                    auxiliar_tree = self.xml_files_map[look_tier]
 
-                    # Look for the parent node:
-                    for el_tree in auxiliar_tree:
-                        if el_tree.tag == 'node':
-                            node_ref = el_tree.attrib['xml:id']
-                        if el_tree.tag == 'a' and el_tree.attrib['xml:id'] == annotation_ref:
-                            annotation_ref = node_ref
+                    if look_tier in self.xml_files_map.keys():
+                        auxiliar_tree = self.xml_files_map[look_tier]
 
-                    # Annotation
-                    annotation_name = linguistic_type_ref
-                    annotation = Annotation(annotation_name, None,
-                        annotation_id)
-                    annotation.features['annotation_value'] = annotation_value
-                    annotation.features['ref_annotation'] = \
-                    child.attrib['ANNOTATION_REF']
+                        # Look for the parent node:
+                        for el_tree in auxiliar_tree:
+                            if el_tree.tag == 'node':
+                                node_ref = el_tree.attrib['xml:id']
+                            if el_tree.tag == 'a' and el_tree.attrib['xml:id'] == annotation_ref:
+                                annotation_ref = node_ref
+                                has_parent = True
 
-                    add_annotation = True
+                    if has_parent:
+                        # Annotation
+                        annotation_name = linguistic_type_ref
+                        annotation = Annotation(annotation_name, None,
+                            annotation_id)
+                        annotation.features['annotation_value'] = annotation_value
+                        annotation.features['ref_annotation'] = \
+                        child.attrib['ANNOTATION_REF']
+                        annotation.features['tier_id'] = tier_id
+
+                        add_annotation = True
+                    else:
+                        if look_tier in orphan_annotation_references_map.keys():
+                            orphan_annotation_references_map[look_tier].\
+                            append((linguistic_type_ref, annotation_id, annotation_value,
+                                    child.attrib['ANNOTATION_REF'], tier_id))
+                        else:
+                            orphan_annotation_references_map[look_tier] = \
+                            [(linguistic_type_ref, annotation_id, annotation_value,
+                              child.attrib['ANNOTATION_REF'], tier_id)]
 
                 # Add the annotation to the element tree
                 if add_annotation:
@@ -248,6 +270,43 @@ class Elan:
             if no_structure:
                 if not linguistic_type_ref in self.data_structure_hierarchy:
                     self.data_structure_hierarchy.append(linguistic_type_ref)
+
+        # Find and place the orphan references because of the tiers order
+        for orphan in orphan_annotation_references_map.items():
+            reference = orphan[0]
+            orphan_values = orphan[1]
+            for values in orphan_values:
+                annotation_name = values[0]
+                annotation_id = values[1]
+                annotation_value = values[2]
+                annotation_ref = values[3]
+                tier_id = values[4]
+
+                auxiliar_tree = self.xml_files_map[reference]
+
+                # Look for the parent node:
+                for el_tree in auxiliar_tree:
+                    if el_tree.tag == 'node':
+                        node_ref = el_tree.attrib['xml:id']
+                    if el_tree.tag == 'a' and el_tree.attrib['xml:id'] == annotation_ref:
+                        annotation_node_ref = node_ref
+
+                annotation = Annotation(annotation_name, None,
+                    annotation_id)
+                annotation.features['annotation_value'] = annotation_value
+                annotation.features['ref_annotation'] = annotation_ref
+                annotation.features['tier_id'] = tier_id
+
+                annotation_space = AnnotationSpace(annotation_name)
+                annotation_space.add(annotation)
+
+                graph.annotation_spaces.add(annotation_space)
+
+                element_tree = self.xml_files_map[annotation_name]
+
+                self.xml_files_map[annotation_name] = \
+                self.graf.create_node_annotation(element_tree,
+                    annotation, annotation_node_ref)
 
         return graph
 
@@ -434,6 +493,8 @@ class ElanWriter:
         tree = ET.parse(self.extinfofile)
         root = tree.getroot()
 
+        orphan_annotation_map = dict()
+
         miscellaneous = root.find('./file/miscellaneous')
         top_element = miscellaneous[0]
 
@@ -484,8 +545,7 @@ class ElanWriter:
                         for graf_element in graf_elements:
                             key = attrib_namespace+"id"
                             if (graf_element.tag == xml_namespace+"node")\
-                            and (tier_id in graf_element.attrib[key]):
-
+                            and (tier_id+"/" in graf_element.attrib[key]):
                                 annotations = graf_elements.findall(xml_namespace+"a")
                                 for annotation in annotations:
                                     ref = annotation.attrib['ref']
@@ -509,17 +569,63 @@ class ElanWriter:
                                                 'ANNOTATION_VALUE').text = annotation_value.text
                     else:
                         annotations = graf_elements.findall(xml_namespace+"a")
+                        has_child = True
 
-                        alignale_nodes = element_tree.findall("./*[@TIER_ID='"+
-                                                              parent_ref+"']")[0]
+                        try:
+                            alignale_nodes = element_tree.findall("./*[@TIER_ID='"+
+                                                                  parent_ref+"']")[0]
+                        except IndexError as indexError:
+                            if linguisty_id in orphan_annotation_map.keys():
+                                orphan_annotation_map[parent_ref]\
+                                .append([(parent_element, annotations, tier_id)])
+                            else:
+                                orphan_annotation_map[parent_ref] =\
+                                [(parent_element, annotations, tier_id)]
+                            has_child = False
 
-                        for annotation in annotations:
-                            annotation_id = annotation.attrib[attrib_namespace+"id"]
-                            feature_structure = annotation[0]
+                        if has_child:
+                            for annotation in annotations:
+                                if "/"+parent_ref+"/" in annotation.attrib['ref']:
+                                    annotation_id = annotation.attrib[attrib_namespace+"id"]
+                                    feature_structure = annotation[0]
 
-                            ref_annotation_id = feature_structure[0].text
-                            annotation_value = feature_structure[1].text
+                                    annotation_tier_id = feature_structure[0].text
+                                    ref_annotation_id = feature_structure[1].text
+                                    annotation_value = feature_structure[2].text
 
+                                    if annotation_tier_id == tier_id:
+                                        if alignale_nodes.findall(".//*[@ANNOTATION_ID='"+
+                                                                  ref_annotation_id+"']"):
+                                            annotation = SubElement(parent_element, 'ANNOTATION')
+                                            ref_annotation = SubElement(annotation,
+                                                'REF_ANNOTATION',
+                                                    {'ANNOTATION_ID':annotation_id,
+                                                     'ANNOTATION_REF':ref_annotation_id})
+                                            SubElement(ref_annotation, 'ANNOTATION_VALUE').text = \
+                                            annotation_value
+
+        for orphan in orphan_annotation_map.items():
+            parent_ref = orphan[0]
+            orphan_values = orphan[1]
+
+            for values in orphan_values:
+                parent_element = values[0]
+                annotations = values[1]
+                tier_id = values[2]
+
+                alignale_nodes = element_tree.findall("./*[@TIER_ID='"+
+                                                      parent_ref+"']")[0]
+
+                for index, annotation in enumerate(annotations):
+                    if "/"+parent_ref+"/" in annotation.attrib['ref']:
+                        annotation_id = annotation.attrib[attrib_namespace+"id"]
+                        feature_structure = annotation[0]
+
+                        annotation_tier_id = feature_structure[0].text
+                        ref_annotation_id = feature_structure[1].text
+                        annotation_value = feature_structure[2].text
+
+                        if annotation_tier_id == tier_id:
                             if alignale_nodes.findall(".//*[@ANNOTATION_ID='"+
                                                       ref_annotation_id+"']"):
                                 annotation = SubElement(parent_element, 'ANNOTATION')
@@ -527,7 +633,8 @@ class ElanWriter:
                                     'REF_ANNOTATION',
                                         {'ANNOTATION_ID':annotation_id,
                                          'ANNOTATION_REF':ref_annotation_id})
-                                SubElement(ref_annotation, 'ANNOTATION_VALUE').text = annotation_value
+                                SubElement(ref_annotation, 'ANNOTATION_VALUE').text = \
+                                annotation_value
 
         file = open(self.outputfile,'wb')
         doc = minidom.parseString(tostring(element_tree))
