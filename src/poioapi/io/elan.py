@@ -493,12 +493,19 @@ class ElanWriter:
         tree = ET.parse(self.extinfofile)
         root = tree.getroot()
 
-        orphan_annotation_map = dict()
-
         miscellaneous = root.find('./file/miscellaneous')
         top_element = miscellaneous[0]
 
         element_tree = Element(top_element.tag, top_element.attrib)
+
+        # Mapping the tiers LINGUISTIC_TYPE from the metafile
+        tier_map_dict = dict()
+
+        for tiers in root.findall('./header/tier_mapping/'):
+            value = tiers.attrib['name'].replace(' ','_')
+            for tiers_id in tiers:
+                key = tiers_id.text
+                tier_map_dict[key] = value
 
         # Need to know the if the lingyustic type is alignable
         linguisty_type = miscellaneous.findall('LINGUISTIC_TYPE')
@@ -569,72 +576,32 @@ class ElanWriter:
                                                 'ANNOTATION_VALUE').text = annotation_value.text
                     else:
                         annotations = graf_elements.findall(xml_namespace+"a")
-                        has_child = True
 
-                        try:
-                            alignale_nodes = element_tree.findall("./*[@TIER_ID='"+
-                                                                  parent_ref+"']")[0]
-                        except IndexError as indexError:
-                            if linguisty_id in orphan_annotation_map.keys():
-                                orphan_annotation_map[parent_ref]\
-                                .append([(parent_element, annotations, tier_id)])
-                            else:
-                                orphan_annotation_map[parent_ref] =\
-                                [(parent_element, annotations, tier_id)]
-                            has_child = False
+                        tree = ET.parse(self.extinfofile.replace("-extinfo",
+                            "-"+tier_map_dict[parent_ref]))
+                        parent_elements = tree.getroot()
+                        parent_annotations = parent_elements.findall(xml_namespace+"a")
 
-                        if has_child:
-                            for annotation in annotations:
-                                if "/"+parent_ref+"/" in annotation.attrib['ref']:
-                                    annotation_id = annotation.attrib[attrib_namespace+"id"]
-                                    feature_structure = annotation[0]
+                        for annotation in annotations:
+                            annotation_id = annotation.attrib[attrib_namespace+"id"]
+                            feature_structure = annotation[0]
 
-                                    annotation_tier_id = feature_structure[0].text
-                                    ref_annotation_id = feature_structure[1].text
-                                    annotation_value = feature_structure[2].text
+                            annotation_tier_id = feature_structure[0].text
+                            ref_annotation_id = feature_structure[1].text
+                            annotation_value = feature_structure[2].text
 
+                            for parent_annotation in parent_annotations:
+                                if parent_annotation.attrib['ref'] == annotation.attrib['ref']:
                                     if annotation_tier_id == tier_id:
-                                        if alignale_nodes.findall(".//*[@ANNOTATION_ID='"+
-                                                                  ref_annotation_id+"']"):
-                                            annotation = SubElement(parent_element, 'ANNOTATION')
-                                            ref_annotation = SubElement(annotation,
-                                                'REF_ANNOTATION',
-                                                    {'ANNOTATION_ID':annotation_id,
-                                                     'ANNOTATION_REF':ref_annotation_id})
-                                            SubElement(ref_annotation, 'ANNOTATION_VALUE').text = \
-                                            annotation_value
+                                        annotation = SubElement(parent_element, 'ANNOTATION')
+                                        ref_annotation = SubElement(annotation,
+                                            'REF_ANNOTATION',
+                                                {'ANNOTATION_ID':annotation_id,
+                                                 'ANNOTATION_REF':ref_annotation_id})
+                                        SubElement(ref_annotation, 'ANNOTATION_VALUE').text =\
+                                        annotation_value
 
-        for orphan in orphan_annotation_map.items():
-            parent_ref = orphan[0]
-            orphan_values = orphan[1]
-
-            for values in orphan_values:
-                parent_element = values[0]
-                annotations = values[1]
-                tier_id = values[2]
-
-                alignale_nodes = element_tree.findall("./*[@TIER_ID='"+
-                                                      parent_ref+"']")[0]
-
-                for index, annotation in enumerate(annotations):
-                    if "/"+parent_ref+"/" in annotation.attrib['ref']:
-                        annotation_id = annotation.attrib[attrib_namespace+"id"]
-                        feature_structure = annotation[0]
-
-                        annotation_tier_id = feature_structure[0].text
-                        ref_annotation_id = feature_structure[1].text
-                        annotation_value = feature_structure[2].text
-
-                        if annotation_tier_id == tier_id:
-                            if alignale_nodes.findall(".//*[@ANNOTATION_ID='"+
-                                                      ref_annotation_id+"']"):
-                                annotation = SubElement(parent_element, 'ANNOTATION')
-                                ref_annotation = SubElement(annotation,
-                                    'REF_ANNOTATION',
-                                        {'ANNOTATION_ID':annotation_id,
-                                         'ANNOTATION_REF':ref_annotation_id})
-                                SubElement(ref_annotation, 'ANNOTATION_VALUE').text = \
-                                annotation_value
+                                        break
 
         file = open(self.outputfile,'wb')
         doc = minidom.parseString(tostring(element_tree))
