@@ -13,6 +13,8 @@ access the data via tree, which also contains the
 original .eaf IDs. Because of this EafTrees are
 read-/writeable.
 """
+
+from __future__ import absolute_import
 from collections import defaultdict
 
 import os
