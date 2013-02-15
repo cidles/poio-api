@@ -249,6 +249,8 @@ class Elan:
                                attribute != 'ANNOTATION_VALUE':
                                 annotation.features[attribute] = child.attrib[attribute]
 
+                        graph.nodes[annotation_ref].annotations.add(annotation)
+
                         add_annotation = True
                     else:
                         if look_tier in orphan_annotation_references_map.keys():
@@ -312,6 +314,8 @@ class Elan:
                        attribute != 'ANNOTATION_ID' and\
                        attribute != 'ANNOTATION_VALUE':
                         annotation.features[attribute] = child.attrib[attribute]
+
+                graph.nodes[annotation_node_ref].annotations.add(annotation)
 
                 annotation_space = AnnotationSpace(annotation_name)
                 annotation_space.add(annotation)
