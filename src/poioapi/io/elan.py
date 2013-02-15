@@ -242,16 +242,23 @@ class Elan:
                         child.attrib['ANNOTATION_REF']
                         annotation.features['tier_id'] = tier_id
 
+                        # Keep all the extra attributes of the annotations tags
+                        for attribute in child.attrib:
+                            if attribute != 'ANNOTATION_REF' and \
+                               attribute != 'ANNOTATION_ID' and \
+                               attribute != 'ANNOTATION_VALUE':
+                                annotation.features[attribute] = child.attrib[attribute]
+
                         add_annotation = True
                     else:
                         if look_tier in orphan_annotation_references_map.keys():
                             orphan_annotation_references_map[look_tier].\
                             append((linguistic_type_ref, annotation_id, annotation_value,
-                                    child.attrib['ANNOTATION_REF'], tier_id))
+                                    child.attrib['ANNOTATION_REF'], tier_id, child.attrib))
                         else:
                             orphan_annotation_references_map[look_tier] = \
                             [(linguistic_type_ref, annotation_id, annotation_value,
-                              child.attrib['ANNOTATION_REF'], tier_id)]
+                              child.attrib['ANNOTATION_REF'], tier_id, child.attrib)]
 
                 # Add the annotation to the element tree
                 if add_annotation:
@@ -298,6 +305,13 @@ class Elan:
                 annotation.features['annotation_value'] = annotation_value
                 annotation.features['ref_annotation'] = annotation_ref
                 annotation.features['tier_id'] = tier_id
+
+                # Keep all the extra attributes of the annotations tags
+                for attribute in child.attrib:
+                    if attribute != 'ANNOTATION_REF' and\
+                       attribute != 'ANNOTATION_ID' and\
+                       attribute != 'ANNOTATION_VALUE':
+                        annotation.features[attribute] = child.attrib[attribute]
 
                 annotation_space = AnnotationSpace(annotation_name)
                 annotation_space.add(annotation)
@@ -566,14 +580,23 @@ class ElanWriter:
                                         time_slot_1 = feature_structure[2]
                                         time_slot_2 = feature_structure[1]
 
+                                        features_map = {}
+                                        features_map['ANNOTATION_ID'] = annotation_id
+                                        features_map['TIME_SLOT_REF1'] = time_slot_1.text
+                                        features_map['TIME_SLOT_REF2'] = time_slot_2.text
+
+                                        for feature_element in feature_structure:
+                                            if feature_element.attrib['name'] != 'annotation_value' and\
+                                               feature_element.attrib['name'] != 'time_slot1' and\
+                                               feature_element.attrib['name'] != 'time_slot2':
+                                                key = feature_element.attrib['name']
+                                                features_map[key] = feature_element.text
+
                                         if linguisty_type_dict[linguisty_id] == 'true':
                                             annotation_element = SubElement(parent_element,
                                                 'ANNOTATION')
                                             alignable_annotation = SubElement(annotation_element,
-                                                'ALIGNABLE_ANNOTATION',
-                                                    {'ANNOTATION_ID':annotation_id,
-                                                     'TIME_SLOT_REF1':time_slot_1.text,
-                                                     'TIME_SLOT_REF2':time_slot_2.text})
+                                                'ALIGNABLE_ANNOTATION',features_map)
                                             SubElement(alignable_annotation,
                                                 'ANNOTATION_VALUE').text = annotation_value.text
                     else:
@@ -592,14 +615,23 @@ class ElanWriter:
                             ref_annotation_id = feature_structure[1].text
                             annotation_value = feature_structure[2].text
 
+                            features_map = {}
+                            features_map['ANNOTATION_ID'] = annotation_id
+                            features_map['ANNOTATION_REF'] = ref_annotation_id
+
+                            for feature_element in feature_structure:
+                                if feature_element.attrib['name'] != 'ref_annotation' and\
+                                   feature_element.attrib['name'] != 'annotation_value' and\
+                                   feature_element.attrib['name'] != 'tier_id':
+                                    key = feature_element.attrib['name']
+                                    features_map[key] = feature_element.text
+
                             for parent_annotation in parent_annotations:
                                 if parent_annotation.attrib['ref'] == annotation.attrib['ref']:
                                     if annotation_tier_id == tier_id:
                                         annotation = SubElement(parent_element, 'ANNOTATION')
                                         ref_annotation = SubElement(annotation,
-                                            'REF_ANNOTATION',
-                                                {'ANNOTATION_ID':annotation_id,
-                                                 'ANNOTATION_REF':ref_annotation_id})
+                                            'REF_ANNOTATION',features_map)
                                         SubElement(ref_annotation, 'ANNOTATION_VALUE').text =\
                                         annotation_value
 
