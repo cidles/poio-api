@@ -24,8 +24,8 @@ class GrAFWriter():
     """
 
     def create_node_with_region(self, element_tree, annotation,
-                                 annotation_ref, node, region,
-                                regions, from_node, edge):
+                                annotation_ref, node, region=None,
+                                regions=None, from_node=None, edge=None):
         """Create the nodes with the regions from
         a values with ids.
 
@@ -58,16 +58,17 @@ class GrAFWriter():
         graph_node = SubElement(element_tree, 'node',
                 {'xml:id':node.id})
 
-        SubElement(graph_node, 'link', {'targets':region.id})
-
         if from_node is not None:
             SubElement(element_tree, 'edge', {'from':from_node.id,
                                               'to':node.id,
                                               'xml:id':edge.id})
 
-        SubElement(element_tree, 'region',
-                {'anchors':str(regions[0])+" "+str(regions[1]),
-                 'xml:id':region.id})
+        if region is not None:
+            SubElement(graph_node, 'link', {'targets':region.id})
+
+            SubElement(element_tree, 'region',
+                    {'anchors':str(regions[0])+" "+str(regions[1]),
+                     'xml:id':region.id})
 
         element_tree = self.create_node_annotation(element_tree,
             annotation, annotation_ref)
