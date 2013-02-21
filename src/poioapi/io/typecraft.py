@@ -65,26 +65,29 @@ class Typecraft:
         words_number = 1
         morpheme_number = 1
         gloss_number = 1
+        globaltags_number = 1
+        globaltag_number = 1
 
         element_tree = self.graf.create_xml_graph_header('phrase', None)
         word_element_tree = self.graf.create_xml_graph_header('word', 'phrase')
         morph_element_tree = self.graf.create_xml_graph_header('morpheme','word')
         gloss_element_tree = self.graf.create_xml_graph_header('gloss','morpheme')
+        globaltags_element_tree = self.graf.create_xml_graph_header('globaltags', 'phrase')
+        globaltag_element_tree = self.graf.create_xml_graph_header('globaltag','globaltags')
 
         for phrase in phrases:
             index = phrase.attrib['id']
 
-            node_id = "phrase"+"/n"+index
+            node_id = "phrase/n"+index
             node = Node(node_id)
 
             anchors = ['10','100']
 
-            region_id = "phrase"+"/r"+index
+            region_id = "phrase/r"+index
             region = Region(region_id, *anchors)
 
             node.add_region(region)
 
-            # Annotation
             annotation = Annotation("phrase", None,
                 "phrase/a"+index)
 
@@ -95,12 +98,12 @@ class Typecraft:
 
             for elements in phrase:
                 if elements.tag == word:
-                    word_node_id = "word"+"/n"+str(words_number)
+                    word_node_id = "word/n"+str(words_number)
                     word_node = Node(word_node_id)
 
                     word_anchors = ['1','9']
 
-                    word_region_id = "word"+"/r"+str(words_number)
+                    word_region_id = "word/r"+str(words_number)
                     word_region = Region(word_region_id, *word_anchors)
 
                     word_node.add_region(word_region)
@@ -110,7 +113,6 @@ class Typecraft:
 
                     graph.edges.add(word_edge)
 
-                    # Annotation
                     word_ann = Annotation("word",
                         None,"word/a"+str(words_number))
 
@@ -123,7 +125,7 @@ class Typecraft:
                         if key[1] == "pos":
                             word_ann.features[key[1]] = word_elements.text
                         elif key[1] == "morpheme":
-                            morph_node_id = "morpheme"+"/n"+str(morpheme_number)
+                            morph_node_id = "morpheme/n"+str(morpheme_number)
                             morph_node = Node(morph_node_id)
 
                             morph_edge_id = "morpheme/e"+str(morpheme_number)
@@ -131,7 +133,6 @@ class Typecraft:
 
                             graph.edges.add(morph_edge)
 
-                            # Annotation
                             morph_ann = Annotation("morpheme",
                                 None,"morpheme/a"+str(morpheme_number))
 
@@ -188,7 +189,61 @@ class Typecraft:
 
                     words_number+=1
                 elif elements.tag == globaltags:
-                    print(globaltags)
+                    globaltags_node_id = "globaltags/n"+str(globaltags_number)
+                    globaltags_node = Node(globaltags_node_id)
+
+
+                    globaltags_edge_id = "globaltags/e"+str(globaltags_number)
+                    globaltags_edge = Edge(globaltags_edge_id, from_node, globaltags_node)
+
+                    graph.edges.add(globaltags_edge)
+
+                    globaltags_ann = Annotation("globaltags",
+                        None,"globaltags/a"+str(globaltags_number))
+
+                    for globaltags_key in elements.attrib:
+                        globaltags_ann.features[globaltags_key] = \
+                        elements.attrib[globaltags_key]
+
+                    graph.nodes.add(globaltags_node)
+
+                    # Look for the globaltags
+                    for globaltags_elements in elements:
+
+                        globaltag_ann = Annotation("globaltag", None,
+                            "globaltag/a"+str(globaltag_number))
+
+                        for global_attrib in globaltags_elements:
+                            globaltag_ann.features[global_attrib] = \
+                            globaltags_elements.attrib[global_attrib]
+
+                        graph.nodes[globaltags_node_id].annotations.add(globaltag_ann)
+
+                        annotation_space = AnnotationSpace('globaltag')
+                        annotation_space.add(globaltag_ann)
+                        graph.annotation_spaces.add(annotation_space)
+
+                        globaltag_element_tree = self.graf.create_node_annotation(globaltag_element_tree,
+                            globaltag_ann, globaltags_node_id)
+
+                        self.xml_files_map['globaltag'] = globaltag_element_tree
+
+                        globaltag_number+=1
+
+                    globaltags_node.annotations.add(globaltags_ann)
+
+                    annotation_space = AnnotationSpace('globaltags')
+                    annotation_space.add(globaltags_ann)
+
+                    graph.annotation_spaces.add(annotation_space)
+
+                    globaltags_element_tree = self.graf.create_node_with_region(globaltags_element_tree,
+                        globaltags_ann, globaltags_node.id, globaltags_node, None, None, from_node,
+                        globaltags_edge)
+
+                    self.xml_files_map['globaltags'] = globaltags_element_tree
+
+                    globaltags_number+=1
                 else:
                     key = str(elements.tag).split(xml_namespace)
                     annotation.features[key[1]] = elements.text
