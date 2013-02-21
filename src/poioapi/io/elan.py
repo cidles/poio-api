@@ -382,7 +382,8 @@ class Elan:
         gathered all the data information to recreate the
         elan files and to access to the data structure
         hierarchy, the vocabulary, the media descriptor
-        and all the important information.
+        and all the important information. The header file
+        it's created too.
 
         """
 
