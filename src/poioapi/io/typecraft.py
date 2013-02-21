@@ -60,16 +60,11 @@ class Typecraft:
 
         graph = Graph()
 
+        globaltags = xml_namespace+"globaltags"
         word = xml_namespace+"word"
         words_number = 1
-
-        morpheme = xml_namespace+"morpheme"
         morpheme_number = 1
-
-        gloss = xml_namespace+"gloss"
         gloss_number = 1
-
-        globaltags = xml_namespace+"globaltags"
 
         element_tree = self.graf.create_xml_graph_header('phrase', None)
         word_element_tree = self.graf.create_xml_graph_header('word', 'phrase')
@@ -90,8 +85,7 @@ class Typecraft:
             node.add_region(region)
 
             # Annotation
-            annotation_name = "phrase"
-            annotation = Annotation(annotation_name, None,
+            annotation = Annotation("phrase", None,
                 "phrase/a"+index)
 
             for attribute in phrase.attrib:
@@ -100,54 +94,101 @@ class Typecraft:
             from_node = node
 
             for elements in phrase:
-                if elements.tag == word or \
-                   elements.tag == globaltags:
-                    if elements.tag == word:
-                        word_node_id = "word"+"/n"+str(words_number)
-                        word_node = Node(word_node_id)
+                if elements.tag == word:
+                    word_node_id = "word"+"/n"+str(words_number)
+                    word_node = Node(word_node_id)
 
-                        word_anchors = ['1','9']
+                    word_anchors = ['1','9']
 
-                        word_region_id = "word"+"/r"+str(words_number)
-                        word_region = Region(word_region_id, *word_anchors)
+                    word_region_id = "word"+"/r"+str(words_number)
+                    word_region = Region(word_region_id, *word_anchors)
 
-                        word_node.add_region(word_region)
+                    word_node.add_region(word_region)
 
-                        edge_id = "word/e"+str(words_number)
-                        edge = Edge(edge_id, from_node, word_node)
+                    word_edge_id = "word/e"+str(words_number)
+                    word_edge = Edge(word_edge_id, from_node, word_node)
 
-                        graph.edges.add(edge)
+                    graph.edges.add(word_edge)
 
-                        # Annotation
-                        word_ann_name = "word"
-                        word_ann = Annotation(word_ann_name,
-                            None,"word/a"+str(words_number))
+                    # Annotation
+                    word_ann = Annotation("word",
+                        None,"word/a"+str(words_number))
 
-                        for word_key in elements.attrib:
-                            word_ann.features[word_key] = elements.attrib[word_key]
+                    for word_key in elements.attrib:
+                        word_ann.features[word_key] = elements.attrib[word_key]
 
-                        # Look for the morpheme
-                        for word_elements in elements:
-                            key = str(word_elements.tag).split(xml_namespace)
-                            if key[1] == "pos":
-                                word_ann.features[key[1]] = word_elements.text
+                    # Look for the morpheme
+                    for word_elements in elements:
+                        key = str(word_elements.tag).split(xml_namespace)
+                        if key[1] == "pos":
+                            word_ann.features[key[1]] = word_elements.text
+                        elif key[1] == "morpheme":
+                            morph_node_id = "morpheme"+"/n"+str(morpheme_number)
+                            morph_node = Node(morph_node_id)
 
-                        word_node.annotations.add(word_ann)
+                            morph_edge_id = "morpheme/e"+str(morpheme_number)
+                            morph_edge = Edge(morph_edge_id, word_node, word_node)
 
-                        annotation_space = AnnotationSpace('word')
-                        annotation_space.add(word_ann)
+                            graph.edges.add(morph_edge)
 
-                        graph.nodes.add(word_node)
-                        graph.regions.add(word_region)
-                        graph.annotation_spaces.add(annotation_space)
+                            # Annotation
+                            morph_ann = Annotation("morpheme",
+                                None,"morpheme/a"+str(morpheme_number))
 
-                        word_element_tree = self.graf.create_node_with_region(word_element_tree,
-                            word_ann, word_node.id, word_node, word_region, word_anchors,
-                            from_node, edge)
+                            for morph_key in word_elements.attrib:
+                                morph_ann.features[morph_key] = word_elements.attrib[morph_key]
 
-                        self.xml_files_map['word'] = word_element_tree
+                            morph_node.annotations.add(morph_ann)
+                            graph.nodes.add(morph_node)
 
-                        words_number+=1
+                            for gloss in word_elements:
+                                gloss_ann = Annotation("gloss", None,
+                                    "gloss/a"+str(gloss_number))
+                                gloss_ann.features['annotation_value'] = gloss.text
+
+                                graph.nodes[morph_node_id].annotations.add(gloss_ann)
+
+                                annotation_space = AnnotationSpace('gloss')
+                                annotation_space.add(gloss_ann)
+                                graph.annotation_spaces.add(annotation_space)
+
+                                gloss_element_tree = self.graf.create_node_annotation(gloss_element_tree,
+                                    gloss_ann, morph_node_id)
+
+                                self.xml_files_map['gloss'] = gloss_element_tree
+
+                                gloss_number+=1
+
+                            annotation_space = AnnotationSpace('morpheme')
+                            annotation_space.add(morph_ann)
+                            graph.annotation_spaces.add(annotation_space)
+
+                            morph_element_tree = self.graf.create_node_with_region(morph_element_tree,
+                                morph_ann, morph_node.id, morph_node, None, None,
+                                word_node, morph_edge)
+
+                            self.xml_files_map['morpheme'] = morph_element_tree
+
+                            morpheme_number+=1
+
+                    word_node.annotations.add(word_ann)
+
+                    annotation_space = AnnotationSpace('word')
+                    annotation_space.add(word_ann)
+
+                    graph.nodes.add(word_node)
+                    graph.regions.add(word_region)
+                    graph.annotation_spaces.add(annotation_space)
+
+                    word_element_tree = self.graf.create_node_with_region(word_element_tree,
+                        word_ann, word_node.id, word_node, word_region, word_anchors,
+                        from_node, word_edge)
+
+                    self.xml_files_map['word'] = word_element_tree
+
+                    words_number+=1
+                elif elements.tag == globaltags:
+                    print(globaltags)
                 else:
                     key = str(elements.tag).split(xml_namespace)
                     annotation.features[key[1]] = elements.text
