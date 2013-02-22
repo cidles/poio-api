@@ -38,6 +38,9 @@ def main(argv):
     # Create a GrAF object
     graph = typecraft_graf.typecraft_to_elan()
 
+    # Generate the files
+    typecraft_graf.generate_graf_files()
+
     print('Finished')
 
 if __name__ == "__main__":

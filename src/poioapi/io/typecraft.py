@@ -56,10 +56,71 @@ class Typecraft:
 
         xml_namespace = re.search('\{(.*)\}', root.tag).group()
 
-        phrases = root.findall(xml_namespace+'phrase')
+        texts = root.findall(xml_namespace+"text")
+        phrases = root.findall(xml_namespace+"phrase")
 
         graph = Graph()
 
+        if len(texts) is not 0:
+            graph = self._parse_texts(graph,
+                xml_namespace, texts)
+        else:
+            graph = self._parse_phrases(graph,
+                xml_namespace, phrases)
+
+        return graph
+
+    def _parse_texts(self, graph, xml_namespace, texts):
+        text_element_tree = self.graf.create_xml_graph_header('text', None)
+
+        for text in texts:
+            index = text.attrib['id']
+
+            node_id = "text/n"+index
+            node = Node(node_id)
+
+            anchors = ['10','100']
+
+            region_id = "text/r"+index
+            region = Region(region_id, *anchors)
+
+            node.add_region(region)
+
+            annotation = Annotation("text", None,
+                "text/a"+index)
+
+            for attribute in text.attrib:
+                annotation.features[attribute] = text.attrib[attribute]
+
+            from_node = node
+
+            for text_element in text:
+                key = str(text_element.tag).split(xml_namespace)
+
+                if key[1] is not "phrase":
+                    annotation.features[key[1]] = text_element.text
+
+            text_phrases = text.findall(xml_namespace+"phrase")
+            graph = self._parse_phrases(graph, xml_namespace, text_phrases,
+                'text', from_node)
+
+            node.annotations.add(annotation)
+
+            annotation_space = AnnotationSpace('text')
+            annotation_space.add(annotation)
+
+            graph.nodes.add(node)
+            graph.regions.add(region)
+            graph.annotation_spaces.add(annotation_space)
+
+            text_element_tree = self.graf.create_node_with_region(text_element_tree,
+                annotation, node_id, node, region, anchors,
+                None, None)
+
+            self.xml_files_map['text'] = text_element_tree
+
+    def _parse_phrases(self, graph, xml_namespace, phrases,
+                       dependency=None, from_node=None):
         globaltags = xml_namespace+"globaltags"
         word = xml_namespace+"word"
         words_number = 1
@@ -68,7 +129,7 @@ class Typecraft:
         globaltags_number = 1
         globaltag_number = 1
 
-        element_tree = self.graf.create_xml_graph_header('phrase', None)
+        element_tree = self.graf.create_xml_graph_header('phrase', dependency)
         word_element_tree = self.graf.create_xml_graph_header('word', 'phrase')
         morph_element_tree = self.graf.create_xml_graph_header('morpheme','word')
         gloss_element_tree = self.graf.create_xml_graph_header('gloss','morpheme')
@@ -87,6 +148,12 @@ class Typecraft:
             region = Region(region_id, *anchors)
 
             node.add_region(region)
+
+            if from_node is not None:
+                node_edge_id = "phrase/e"+index
+                node_edge = Edge(node_edge_id, from_node, node)
+
+                graph.edges.add(node_edge)
 
             annotation = Annotation("phrase", None,
                 "phrase/a"+index)
@@ -202,7 +269,7 @@ class Typecraft:
                         None,"globaltags/a"+str(globaltags_number))
 
                     for globaltags_key in elements.attrib:
-                        globaltags_ann.features[globaltags_key] = \
+                        globaltags_ann.features[globaltags_key] =\
                         elements.attrib[globaltags_key]
 
                     graph.nodes.add(globaltags_node)
@@ -214,7 +281,7 @@ class Typecraft:
                             "globaltag/a"+str(globaltag_number))
 
                         for global_attrib in globaltags_elements:
-                            globaltag_ann.features[global_attrib] = \
+                            globaltag_ann.features[global_attrib] =\
                             globaltags_elements.attrib[global_attrib]
 
                         graph.nodes[globaltags_node_id].annotations.add(globaltag_ann)
@@ -263,7 +330,7 @@ class Typecraft:
 
             self.xml_files_map['phrase'] = element_tree
 
-        self.generate_graf_files()
+        return graph
 
     def generate_graf_files(self):
         """This method will create the GrAF Xml files.
@@ -274,8 +341,8 @@ class Typecraft:
         """
 
         self.header = header.HeaderFile(self.basedirname)
-        self.header.filename = 'oo'
-        self.header.primaryfile = 'oo'
+        self.header.filename = os.path.splitext(self.filename)[0]
+        self.header.primaryfile = self.filename
         self.header.dataType = 'text' # Type of the origin data file
 
         for elements in self.xml_files_map.items():
