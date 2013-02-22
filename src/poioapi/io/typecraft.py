@@ -51,6 +51,19 @@ class Typecraft:
         self.graf = GrAFWriter()
 
     def typecraft_to_elan(self):
+        """This method will recieve the parsed elements
+        of an elan file. Then will create a GrAF object
+        based in the information from the parsed elements.
+        This method will also create the data structure
+        hierarchy and theirs respective constraints.
+
+        Returns
+        -------
+        graph : object
+            GrAF object.
+
+        """
+
         tree = ET.parse(self.filepath)
         root = tree.getroot()
 
