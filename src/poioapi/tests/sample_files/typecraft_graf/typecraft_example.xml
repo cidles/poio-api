@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<typecraft xsi:schemaLocation="http://typecraft.org/typecraft.xsd" xmlns="http://typecraft.org/typecraft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <phrase valid="VALID" id="1818">
+        <original>Mpa kɛseɛ nkɔ dan no mu</original>
+        <translation>The big bed cannot enter the room</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="Mpa">
+            <pos>N</pos>
+            <morpheme meaning="bed" baseform="mpa" text="mpa">
+                <gloss>SBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="kɛseɛ">
+            <pos>ADJ</pos>
+            <morpheme meaning="big" baseform="kɛseɛ" text="kɛseɛ"/>
+        </word>
+        <word head="false" text="nkɔ">
+            <pos>V</pos>
+            <morpheme baseform="n" text="n">
+                <gloss>NEG</gloss>
+            </morpheme>
+            <morpheme meaning="go" baseform="kɔ" text="kɔ"/>
+        </word>
+        <word head="false" text="dan">
+            <pos>N</pos>
+            <morpheme meaning="room" baseform="dan" text="dan"/>
+        </word>
+        <word head="false" text="nó">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="nó" text="nó">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="9064">
+        <original>bere ahorow dumbienu a εka bɔ mu yε afe baako;</original>
+        <translation>twelve periods that add up to one year</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="bere">
+            <pos>N</pos>
+            <morpheme meaning="time" baseform="bere" text="bere"/>
+        </word>
+        <word head="false" text="ahorow">
+            <pos>ADJ</pos>
+            <morpheme meaning="multiply" baseform="ahorow" text="ahorow"/>
+        </word>
+        <word head="false" text="dumbienu">
+            <pos>NUM</pos>
+            <morpheme meaning="ten" baseform="du" text="du"/>
+            <morpheme meaning="two" baseform="mbienu" text="mbienu"/>
+        </word>
+        <word head="false" text="a">
+            <pos>PRT</pos>
+            <morpheme meaning="" baseform="a" text="a">
+                <gloss>REL</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="εka">
+            <pos>V</pos>
+            <morpheme baseform="ε" text="ε">
+                <gloss>3SG</gloss>
+                <gloss>INANIM</gloss>
+            </morpheme>
+            <morpheme meaning="push" baseform="ka" text="ka"/>
+        </word>
+        <word head="false" text="bɔ">
+            <pos>V</pos>
+            <morpheme meaning="hit" baseform="bɔ" text="bɔ"/>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+        <word head="false" text="yε">
+            <pos>V</pos>
+            <morpheme meaning="be" baseform="yε" text="yε"/>
+        </word>
+        <word head="false" text="afe">
+            <pos>N</pos>
+            <morpheme meaning="year" baseform="afe" text="afe"/>
+        </word>
+        <word head="false" text="baako">
+            <pos>NUM</pos>
+            <morpheme meaning="one" baseform="baako" text="baako"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="9121">
+        <original>bere ahorow dumbienu a εka bɔ mu yε afe baako;</original>
+        <translation>twelve periods which add up to a year</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="bere">
+            <pos>N</pos>
+            <morpheme meaning="time" baseform="bere" text="bere"/>
+        </word>
+        <word head="false" text="ahorow">
+            <pos></pos>
+            <morpheme meaning="" baseform="ahorow" text="ahorow">
+                <gloss>x</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="dumbienu">
+            <pos>NUM</pos>
+            <morpheme meaning="ten" baseform="du" text="du"/>
+            <morpheme meaning="two" baseform="mbienu" text="mbienu"/>
+        </word>
+        <word head="false" text="a">
+            <pos>PRT</pos>
+            <morpheme baseform="a" text="a">
+                <gloss>REL</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="εka">
+            <pos>V</pos>
+            <morpheme baseform="ε" text="ε">
+                <gloss>3SG</gloss>
+                <gloss>INANIM</gloss>
+            </morpheme>
+            <morpheme meaning="push" baseform="ka" text="ka"/>
+        </word>
+        <word head="false" text="bɔ">
+            <pos>V</pos>
+            <morpheme meaning="hit" baseform="bɔ" text="bɔ"/>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+        <word head="false" text="yε">
+            <pos>V</pos>
+            <morpheme meaning="make" baseform="yε" text="yε"/>
+        </word>
+        <word head="false" text="afe">
+            <pos>N</pos>
+            <morpheme meaning="year" baseform="afe" text="afe"/>
+        </word>
+        <word head="false" text="baako">
+            <pos>NUM</pos>
+            <morpheme meaning="one" baseform="baako" text="baako"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="9764">
+        <original>Kwantwakɔsansuo a yɛ hu wo ekorasi mu</original>
+        <translation>Travelling in search of water has become dangerous in the villages.</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="Kwantwakɔsansuo">
+            <pos>N</pos>
+            <morpheme meaning="road" baseform="kwan" text="kwan">
+                <gloss>SBJ</gloss>
+            </morpheme>
+            <morpheme meaning="cross" baseform="twa" text="twa"/>
+            <morpheme meaning="go" baseform="kɔ" text="kɔ"/>
+            <morpheme meaning="fetch" baseform="sa" text="sa"/>
+            <morpheme meaning="water" baseform="nsuo" text="nsuo"/>
+        </word>
+        <word head="false" text="a">
+            <pos></pos>
+            <morpheme meaning="" baseform="a" text="a"/>
+        </word>
+        <word head="false" text="yɛ">
+            <pos>V</pos>
+            <morpheme meaning="do" baseform="yɛ" text="yɛ"/>
+        </word>
+        <word head="false" text="hu">
+            <pos>ADJ</pos>
+            <morpheme meaning="dangerous" baseform="hu" text="hu"/>
+        </word>
+        <word head="false" text="wɔ">
+            <pos>P</pos>
+            <morpheme meaning="in" baseform="wɔ" text="wɔ"/>
+        </word>
+        <word head="false" text="ekorasi">
+            <pos>N</pos>
+            <morpheme meaning="village" baseform="ekorasi" text="ekorasi">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="10429">
+        <original>Akosua hwiee nsuo no faa tokuro no mu</original>
+        <translation>Akosua poured water through the hole</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="Akosua">
+            <pos>N</pos>
+            <morpheme meaning="Akosua" baseform="akosua" text="akosua">
+                <gloss>SBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="hwiee">
+            <pos>V</pos>
+            <morpheme meaning="pour" baseform="hwie" text="hwiee"/>
+        </word>
+        <word head="false" text="nsuo">
+            <pos>N</pos>
+            <morpheme meaning="water" baseform="nsuo" text="nsuo">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="nó">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="nó" text="nó">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="faa">
+            <pos>V</pos>
+            <morpheme meaning="pass" baseform="fa" text="faa"/>
+        </word>
+        <word head="false" text="tokuro">
+            <pos>N</pos>
+            <morpheme meaning="hole" baseform="tokuro" text="tokuro">
+                <gloss>OBJ2</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="nò">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="nó" text="nò">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu">
+                <gloss>LOC</gloss>
+            </morpheme>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="10432">
+        <original>Mɪ twii kaa no firii fie fa sukuu no mu kɔ asɔrɪ</original>
+        <translation>I drove the car from the house through the school to church</translation>
+        <description>firi: can firi inflect like a verb?</description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="Mɪ">
+            <pos>PN</pos>
+            <morpheme meaning="" baseform="mɪ" text="mɪ">
+                <gloss>SBJ</gloss>
+                <gloss>1SG</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="twii">
+            <pos>V</pos>
+            <morpheme meaning="drive" baseform="twi" text="twii"/>
+        </word>
+        <word head="false" text="kaa">
+            <pos>N</pos>
+            <morpheme meaning="car" baseform="kaa" text="kaa">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="nó">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="nó" text="nó">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="firii">
+            <pos>V</pos>
+            <morpheme meaning="from" baseform="firi" text="firii"/>
+        </word>
+        <word head="false" text="fie">
+            <pos></pos>
+            <morpheme meaning="house" baseform="fie" text="fie"/>
+        </word>
+        <word head="false" text="faa">
+            <pos>V</pos>
+            <morpheme meaning="pass" baseform="fa" text="faa"/>
+        </word>
+        <word head="false" text="sukuu">
+            <pos>N</pos>
+            <morpheme meaning="school" baseform="sukuu" text="sukuu"/>
+        </word>
+        <word head="false" text="nò">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="nó" text="nò">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+        <word head="false" text="kɔɔ">
+            <pos>V</pos>
+            <morpheme meaning="go" baseform="kɔ" text="kɔɔ"/>
+        </word>
+        <word head="false" text="asɔrɪ">
+            <pos>N</pos>
+            <morpheme meaning="church" baseform="asɔrɪ" text="asɔrɪ"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="10437">
+        <original>ɔ fa sukuu no mu kɔ dwaso</original>
+        <translation>She passes through the school to the market.</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="ɔ">
+            <pos>PN</pos>
+            <morpheme meaning="" baseform="ɔ" text="ɔ">
+                <gloss>SBJ</gloss>
+                <gloss>3SG</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="fa">
+            <pos>V</pos>
+            <morpheme meaning="pass" baseform="fa" text="fa">
+                <gloss>PATH</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="sukuu">
+            <pos>N</pos>
+            <morpheme meaning="school" baseform="sukuu" text="sukuu"/>
+        </word>
+        <word head="false" text="no">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="no" text="no">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+        <word head="false" text="kɔ">
+            <pos>V</pos>
+            <morpheme meaning="go" baseform="kɔ" text="kɔ"/>
+        </word>
+        <word head="false" text="dwaso">
+            <pos>N</pos>
+            <morpheme meaning="market" baseform="dwaso" text="dwaso"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="10491">
+        <original>Abain ɛyɛ nyuɔma a ɛbe bua nsrahwɛ ewɔ ɔmain mu.</original>
+        <translation>Government is doing things to enhance tourism in the country.</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="Abain">
+            <pos>N</pos>
+            <morpheme meaning="government" baseform="abain" text="abain">
+                <gloss>SBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="ɛyɛ">
+            <pos>V</pos>
+            <morpheme meaning="do" baseform="ɛyɛ" text="ɛyɛ"/>
+        </word>
+        <word head="false" text="nyuɔma">
+            <pos>N</pos>
+            <morpheme meaning="things" baseform="nyuɔma" text="nyuɔma"/>
+        </word>
+        <word head="false" text="a">
+            <pos>DET</pos>
+            <morpheme meaning="that" baseform="a" text="a">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="ɛbe">
+            <pos>MOD</pos>
+            <morpheme meaning="will" baseform="ɛbe" text="ɛbe"/>
+        </word>
+        <word head="false" text="bua">
+            <pos>V</pos>
+            <morpheme meaning="help" baseform="bua" text="bua"/>
+        </word>
+        <word head="false" text="nsrahwɛ">
+            <pos>N</pos>
+            <morpheme meaning="visit" baseform="nsra" text="nsra"/>
+            <morpheme meaning="see" baseform="hwɛ" text="hwɛ"/>
+        </word>
+        <word head="false" text="ewɔ">
+            <pos>PREP</pos>
+            <morpheme meaning="at" baseform="ewɔ" text="ewɔ"/>
+        </word>
+        <word head="false" text="ɔmain">
+            <pos>N</pos>
+            <morpheme meaning="state" baseform="ɔmain" text="ɔmain">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="34986">
+        <original>Me fa afuo no mu kɔ sukuu</original>
+        <translation>I pass through the farm to school</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="me">
+            <pos>PN</pos>
+            <morpheme meaning="I" baseform="me" text="me">
+                <gloss>SBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="fa">
+            <pos>V</pos>
+            <morpheme meaning="pass" baseform="fa" text="fa"/>
+        </word>
+        <word head="false" text="afuo">
+            <pos>N</pos>
+            <morpheme meaning="farm" baseform="afuo" text="afuo">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="no">
+            <pos>DET</pos>
+            <morpheme meaning="" baseform="no" text="no">
+                <gloss>DEF</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu"/>
+        </word>
+        <word head="false" text="kɔ">
+            <pos>Vtr</pos>
+            <morpheme meaning="go" baseform="kɔ" text="kɔ"/>
+        </word>
+        <word head="false" text="sukuu">
+            <pos>N</pos>
+            <morpheme meaning="school" baseform="sukuu" text="sukuu">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+    </phrase>
+    <phrase valid="VALID" id="35334">
+        <original>Na sukku mu na mepɛ sɛ me de kɔ</original>
+        <translation>It is school that I wanted to send it</translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        <word head="false" text="ná">
+            <pos>CONJ</pos>
+            <morpheme meaning="" baseform="na" text="ná">
+                <gloss>FOC</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="sukuu">
+            <pos>N</pos>
+            <morpheme meaning="school" baseform="sukuu" text="sukuu">
+                <gloss>OBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="mu">
+            <pos>Nrel</pos>
+            <morpheme meaning="inside" baseform="mu" text="mu">
+                <gloss>LOC</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="nà">
+            <pos>CONJ</pos>
+            <morpheme meaning="and" baseform="na" text="nà"/>
+        </word>
+        <word head="false" text="mepɛ">
+            <pos>V</pos>
+            <morpheme baseform="me" text="me">
+                <gloss>1SG</gloss>
+            </morpheme>
+            <morpheme meaning="want" baseform="pɛ" text="pɛ"/>
+        </word>
+        <word head="false" text="sɛ">
+            <pos>CONJS</pos>
+            <morpheme meaning="" baseform="sɛ" text="sɛ">
+                <gloss>COND</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="me">
+            <pos>PN</pos>
+            <morpheme meaning="" baseform="me" text="me">
+                <gloss>1SG</gloss>
+                <gloss>SBJ</gloss>
+            </morpheme>
+        </word>
+        <word head="false" text="de">
+            <pos>V</pos>
+            <morpheme meaning="use" baseform="de" text="de"/>
+        </word>
+        <word head="false" text="kɔ">
+            <pos>V</pos>
+            <morpheme meaning="go" baseform="kɔ" text="kɔ"/>
+        </word>
+    </phrase>
+</typecraft>

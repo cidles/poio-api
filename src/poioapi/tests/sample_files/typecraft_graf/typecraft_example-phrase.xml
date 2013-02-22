@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies/>
+    <annotationSpaces>
+      <annotationSpace as.id="phrase"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="phrase/n1818">
+    <link targets="phrase/r1818"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r1818"/>
+  <a as="phrase" label="phrase" ref="phrase/n1818" xml:id="phrase/a1818">
+    <fs>
+      <f name="description"/>
+      <f name="translation">The big bed cannot enter the room</f>
+      <f name="valid">VALID</f>
+      <f name="id">1818</f>
+      <f name="original">Mpa kɛseɛ nkɔ dan no mu</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n9064">
+    <link targets="phrase/r9064"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r9064"/>
+  <a as="phrase" label="phrase" ref="phrase/n9064" xml:id="phrase/a9064">
+    <fs>
+      <f name="description"/>
+      <f name="translation">twelve periods that add up to one year</f>
+      <f name="valid">VALID</f>
+      <f name="id">9064</f>
+      <f name="original">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n9121">
+    <link targets="phrase/r9121"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r9121"/>
+  <a as="phrase" label="phrase" ref="phrase/n9121" xml:id="phrase/a9121">
+    <fs>
+      <f name="description"/>
+      <f name="translation">twelve periods which add up to a year</f>
+      <f name="valid">VALID</f>
+      <f name="id">9121</f>
+      <f name="original">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n9764">
+    <link targets="phrase/r9764"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r9764"/>
+  <a as="phrase" label="phrase" ref="phrase/n9764" xml:id="phrase/a9764">
+    <fs>
+      <f name="description"/>
+      <f name="translation">Travelling in search of water has become dangerous in the villages.</f>
+      <f name="valid">VALID</f>
+      <f name="id">9764</f>
+      <f name="original">Kwantwakɔsansuo a yɛ hu wo ekorasi mu</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n10429">
+    <link targets="phrase/r10429"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r10429"/>
+  <a as="phrase" label="phrase" ref="phrase/n10429" xml:id="phrase/a10429">
+    <fs>
+      <f name="description"/>
+      <f name="translation">Akosua poured water through the hole</f>
+      <f name="valid">VALID</f>
+      <f name="id">10429</f>
+      <f name="original">Akosua hwiee nsuo no faa tokuro no mu</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n10432">
+    <link targets="phrase/r10432"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r10432"/>
+  <a as="phrase" label="phrase" ref="phrase/n10432" xml:id="phrase/a10432">
+    <fs>
+      <f name="description">firi: can firi inflect like a verb?</f>
+      <f name="translation">I drove the car from the house through the school to church</f>
+      <f name="valid">VALID</f>
+      <f name="id">10432</f>
+      <f name="original">Mɪ twii kaa no firii fie fa sukuu no mu kɔ asɔrɪ</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n10437">
+    <link targets="phrase/r10437"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r10437"/>
+  <a as="phrase" label="phrase" ref="phrase/n10437" xml:id="phrase/a10437">
+    <fs>
+      <f name="description"/>
+      <f name="translation">She passes through the school to the market.</f>
+      <f name="valid">VALID</f>
+      <f name="id">10437</f>
+      <f name="original">ɔ fa sukuu no mu kɔ dwaso</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n10491">
+    <link targets="phrase/r10491"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r10491"/>
+  <a as="phrase" label="phrase" ref="phrase/n10491" xml:id="phrase/a10491">
+    <fs>
+      <f name="description"/>
+      <f name="translation">Government is doing things to enhance tourism in the country.</f>
+      <f name="valid">VALID</f>
+      <f name="id">10491</f>
+      <f name="original">Abain ɛyɛ nyuɔma a ɛbe bua nsrahwɛ ewɔ ɔmain mu.</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n34986">
+    <link targets="phrase/r34986"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r34986"/>
+  <a as="phrase" label="phrase" ref="phrase/n34986" xml:id="phrase/a34986">
+    <fs>
+      <f name="description"/>
+      <f name="translation">I pass through the farm to school</f>
+      <f name="valid">VALID</f>
+      <f name="id">34986</f>
+      <f name="original">Me fa afuo no mu kɔ sukuu</f>
+    </fs>
+  </a>
+  <node xml:id="phrase/n35334">
+    <link targets="phrase/r35334"/>
+  </node>
+  <region anchors="10 100" xml:id="phrase/r35334"/>
+  <a as="phrase" label="phrase" ref="phrase/n35334" xml:id="phrase/a35334">
+    <fs>
+      <f name="description"/>
+      <f name="translation">It is school that I wanted to send it</f>
+      <f name="valid">VALID</f>
+      <f name="id">35334</f>
+      <f name="original">Na sukku mu na mepɛ sɛ me de kɔ</f>
+    </fs>
+  </a>
+</graph>

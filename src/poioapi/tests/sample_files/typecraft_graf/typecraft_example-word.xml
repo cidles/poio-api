@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="phrase"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="word"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="word/n1">
+    <link targets="word/r1"/>
+  </node>
+  <edge from="phrase/n1818" to="word/n1" xml:id="word/e1"/>
+  <region anchors="1 9" xml:id="word/r1"/>
+  <a as="word" label="word" ref="word/n1" xml:id="word/a1">
+    <fs>
+      <f name="text">Mpa</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n2">
+    <link targets="word/r2"/>
+  </node>
+  <edge from="phrase/n1818" to="word/n2" xml:id="word/e2"/>
+  <region anchors="1 9" xml:id="word/r2"/>
+  <a as="word" label="word" ref="word/n2" xml:id="word/a2">
+    <fs>
+      <f name="text">kɛseɛ</f>
+      <f name="head">false</f>
+      <f name="pos">ADJ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n3">
+    <link targets="word/r3"/>
+  </node>
+  <edge from="phrase/n1818" to="word/n3" xml:id="word/e3"/>
+  <region anchors="1 9" xml:id="word/r3"/>
+  <a as="word" label="word" ref="word/n3" xml:id="word/a3">
+    <fs>
+      <f name="text">nkɔ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n4">
+    <link targets="word/r4"/>
+  </node>
+  <edge from="phrase/n1818" to="word/n4" xml:id="word/e4"/>
+  <region anchors="1 9" xml:id="word/r4"/>
+  <a as="word" label="word" ref="word/n4" xml:id="word/a4">
+    <fs>
+      <f name="text">dan</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n5">
+    <link targets="word/r5"/>
+  </node>
+  <edge from="phrase/n1818" to="word/n5" xml:id="word/e5"/>
+  <region anchors="1 9" xml:id="word/r5"/>
+  <a as="word" label="word" ref="word/n5" xml:id="word/a5">
+    <fs>
+      <f name="text">nó</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n6">
+    <link targets="word/r6"/>
+  </node>
+  <edge from="phrase/n1818" to="word/n6" xml:id="word/e6"/>
+  <region anchors="1 9" xml:id="word/r6"/>
+  <a as="word" label="word" ref="word/n6" xml:id="word/a6">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n7">
+    <link targets="word/r7"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n7" xml:id="word/e7"/>
+  <region anchors="1 9" xml:id="word/r7"/>
+  <a as="word" label="word" ref="word/n7" xml:id="word/a7">
+    <fs>
+      <f name="text">bere</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n8">
+    <link targets="word/r8"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n8" xml:id="word/e8"/>
+  <region anchors="1 9" xml:id="word/r8"/>
+  <a as="word" label="word" ref="word/n8" xml:id="word/a8">
+    <fs>
+      <f name="text">ahorow</f>
+      <f name="head">false</f>
+      <f name="pos">ADJ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n9">
+    <link targets="word/r9"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n9" xml:id="word/e9"/>
+  <region anchors="1 9" xml:id="word/r9"/>
+  <a as="word" label="word" ref="word/n9" xml:id="word/a9">
+    <fs>
+      <f name="text">dumbienu</f>
+      <f name="head">false</f>
+      <f name="pos">NUM</f>
+    </fs>
+  </a>
+  <node xml:id="word/n10">
+    <link targets="word/r10"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n10" xml:id="word/e10"/>
+  <region anchors="1 9" xml:id="word/r10"/>
+  <a as="word" label="word" ref="word/n10" xml:id="word/a10">
+    <fs>
+      <f name="text">a</f>
+      <f name="head">false</f>
+      <f name="pos">PRT</f>
+    </fs>
+  </a>
+  <node xml:id="word/n11">
+    <link targets="word/r11"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n11" xml:id="word/e11"/>
+  <region anchors="1 9" xml:id="word/r11"/>
+  <a as="word" label="word" ref="word/n11" xml:id="word/a11">
+    <fs>
+      <f name="text">εka</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n12">
+    <link targets="word/r12"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n12" xml:id="word/e12"/>
+  <region anchors="1 9" xml:id="word/r12"/>
+  <a as="word" label="word" ref="word/n12" xml:id="word/a12">
+    <fs>
+      <f name="text">bɔ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n13">
+    <link targets="word/r13"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n13" xml:id="word/e13"/>
+  <region anchors="1 9" xml:id="word/r13"/>
+  <a as="word" label="word" ref="word/n13" xml:id="word/a13">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n14">
+    <link targets="word/r14"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n14" xml:id="word/e14"/>
+  <region anchors="1 9" xml:id="word/r14"/>
+  <a as="word" label="word" ref="word/n14" xml:id="word/a14">
+    <fs>
+      <f name="text">yε</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n15">
+    <link targets="word/r15"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n15" xml:id="word/e15"/>
+  <region anchors="1 9" xml:id="word/r15"/>
+  <a as="word" label="word" ref="word/n15" xml:id="word/a15">
+    <fs>
+      <f name="text">afe</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n16">
+    <link targets="word/r16"/>
+  </node>
+  <edge from="phrase/n9064" to="word/n16" xml:id="word/e16"/>
+  <region anchors="1 9" xml:id="word/r16"/>
+  <a as="word" label="word" ref="word/n16" xml:id="word/a16">
+    <fs>
+      <f name="text">baako</f>
+      <f name="head">false</f>
+      <f name="pos">NUM</f>
+    </fs>
+  </a>
+  <node xml:id="word/n17">
+    <link targets="word/r17"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n17" xml:id="word/e17"/>
+  <region anchors="1 9" xml:id="word/r17"/>
+  <a as="word" label="word" ref="word/n17" xml:id="word/a17">
+    <fs>
+      <f name="text">bere</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n18">
+    <link targets="word/r18"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n18" xml:id="word/e18"/>
+  <region anchors="1 9" xml:id="word/r18"/>
+  <a as="word" label="word" ref="word/n18" xml:id="word/a18">
+    <fs>
+      <f name="text">ahorow</f>
+      <f name="head">false</f>
+      <f name="pos"/>
+    </fs>
+  </a>
+  <node xml:id="word/n19">
+    <link targets="word/r19"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n19" xml:id="word/e19"/>
+  <region anchors="1 9" xml:id="word/r19"/>
+  <a as="word" label="word" ref="word/n19" xml:id="word/a19">
+    <fs>
+      <f name="text">dumbienu</f>
+      <f name="head">false</f>
+      <f name="pos">NUM</f>
+    </fs>
+  </a>
+  <node xml:id="word/n20">
+    <link targets="word/r20"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n20" xml:id="word/e20"/>
+  <region anchors="1 9" xml:id="word/r20"/>
+  <a as="word" label="word" ref="word/n20" xml:id="word/a20">
+    <fs>
+      <f name="text">a</f>
+      <f name="head">false</f>
+      <f name="pos">PRT</f>
+    </fs>
+  </a>
+  <node xml:id="word/n21">
+    <link targets="word/r21"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n21" xml:id="word/e21"/>
+  <region anchors="1 9" xml:id="word/r21"/>
+  <a as="word" label="word" ref="word/n21" xml:id="word/a21">
+    <fs>
+      <f name="text">εka</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n22">
+    <link targets="word/r22"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n22" xml:id="word/e22"/>
+  <region anchors="1 9" xml:id="word/r22"/>
+  <a as="word" label="word" ref="word/n22" xml:id="word/a22">
+    <fs>
+      <f name="text">bɔ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n23">
+    <link targets="word/r23"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n23" xml:id="word/e23"/>
+  <region anchors="1 9" xml:id="word/r23"/>
+  <a as="word" label="word" ref="word/n23" xml:id="word/a23">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n24">
+    <link targets="word/r24"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n24" xml:id="word/e24"/>
+  <region anchors="1 9" xml:id="word/r24"/>
+  <a as="word" label="word" ref="word/n24" xml:id="word/a24">
+    <fs>
+      <f name="text">yε</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n25">
+    <link targets="word/r25"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n25" xml:id="word/e25"/>
+  <region anchors="1 9" xml:id="word/r25"/>
+  <a as="word" label="word" ref="word/n25" xml:id="word/a25">
+    <fs>
+      <f name="text">afe</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n26">
+    <link targets="word/r26"/>
+  </node>
+  <edge from="phrase/n9121" to="word/n26" xml:id="word/e26"/>
+  <region anchors="1 9" xml:id="word/r26"/>
+  <a as="word" label="word" ref="word/n26" xml:id="word/a26">
+    <fs>
+      <f name="text">baako</f>
+      <f name="head">false</f>
+      <f name="pos">NUM</f>
+    </fs>
+  </a>
+  <node xml:id="word/n27">
+    <link targets="word/r27"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n27" xml:id="word/e27"/>
+  <region anchors="1 9" xml:id="word/r27"/>
+  <a as="word" label="word" ref="word/n27" xml:id="word/a27">
+    <fs>
+      <f name="text">Kwantwakɔsansuo</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n28">
+    <link targets="word/r28"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n28" xml:id="word/e28"/>
+  <region anchors="1 9" xml:id="word/r28"/>
+  <a as="word" label="word" ref="word/n28" xml:id="word/a28">
+    <fs>
+      <f name="text">a</f>
+      <f name="head">false</f>
+      <f name="pos"/>
+    </fs>
+  </a>
+  <node xml:id="word/n29">
+    <link targets="word/r29"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n29" xml:id="word/e29"/>
+  <region anchors="1 9" xml:id="word/r29"/>
+  <a as="word" label="word" ref="word/n29" xml:id="word/a29">
+    <fs>
+      <f name="text">yɛ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n30">
+    <link targets="word/r30"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n30" xml:id="word/e30"/>
+  <region anchors="1 9" xml:id="word/r30"/>
+  <a as="word" label="word" ref="word/n30" xml:id="word/a30">
+    <fs>
+      <f name="text">hu</f>
+      <f name="head">false</f>
+      <f name="pos">ADJ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n31">
+    <link targets="word/r31"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n31" xml:id="word/e31"/>
+  <region anchors="1 9" xml:id="word/r31"/>
+  <a as="word" label="word" ref="word/n31" xml:id="word/a31">
+    <fs>
+      <f name="text">wɔ</f>
+      <f name="head">false</f>
+      <f name="pos">P</f>
+    </fs>
+  </a>
+  <node xml:id="word/n32">
+    <link targets="word/r32"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n32" xml:id="word/e32"/>
+  <region anchors="1 9" xml:id="word/r32"/>
+  <a as="word" label="word" ref="word/n32" xml:id="word/a32">
+    <fs>
+      <f name="text">ekorasi</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n33">
+    <link targets="word/r33"/>
+  </node>
+  <edge from="phrase/n9764" to="word/n33" xml:id="word/e33"/>
+  <region anchors="1 9" xml:id="word/r33"/>
+  <a as="word" label="word" ref="word/n33" xml:id="word/a33">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n34">
+    <link targets="word/r34"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n34" xml:id="word/e34"/>
+  <region anchors="1 9" xml:id="word/r34"/>
+  <a as="word" label="word" ref="word/n34" xml:id="word/a34">
+    <fs>
+      <f name="text">Akosua</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n35">
+    <link targets="word/r35"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n35" xml:id="word/e35"/>
+  <region anchors="1 9" xml:id="word/r35"/>
+  <a as="word" label="word" ref="word/n35" xml:id="word/a35">
+    <fs>
+      <f name="text">hwiee</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n36">
+    <link targets="word/r36"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n36" xml:id="word/e36"/>
+  <region anchors="1 9" xml:id="word/r36"/>
+  <a as="word" label="word" ref="word/n36" xml:id="word/a36">
+    <fs>
+      <f name="text">nsuo</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n37">
+    <link targets="word/r37"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n37" xml:id="word/e37"/>
+  <region anchors="1 9" xml:id="word/r37"/>
+  <a as="word" label="word" ref="word/n37" xml:id="word/a37">
+    <fs>
+      <f name="text">nó</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n38">
+    <link targets="word/r38"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n38" xml:id="word/e38"/>
+  <region anchors="1 9" xml:id="word/r38"/>
+  <a as="word" label="word" ref="word/n38" xml:id="word/a38">
+    <fs>
+      <f name="text">faa</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n39">
+    <link targets="word/r39"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n39" xml:id="word/e39"/>
+  <region anchors="1 9" xml:id="word/r39"/>
+  <a as="word" label="word" ref="word/n39" xml:id="word/a39">
+    <fs>
+      <f name="text">tokuro</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n40">
+    <link targets="word/r40"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n40" xml:id="word/e40"/>
+  <region anchors="1 9" xml:id="word/r40"/>
+  <a as="word" label="word" ref="word/n40" xml:id="word/a40">
+    <fs>
+      <f name="text">nò</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n41">
+    <link targets="word/r41"/>
+  </node>
+  <edge from="phrase/n10429" to="word/n41" xml:id="word/e41"/>
+  <region anchors="1 9" xml:id="word/r41"/>
+  <a as="word" label="word" ref="word/n41" xml:id="word/a41">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n42">
+    <link targets="word/r42"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n42" xml:id="word/e42"/>
+  <region anchors="1 9" xml:id="word/r42"/>
+  <a as="word" label="word" ref="word/n42" xml:id="word/a42">
+    <fs>
+      <f name="text">Mɪ</f>
+      <f name="head">false</f>
+      <f name="pos">PN</f>
+    </fs>
+  </a>
+  <node xml:id="word/n43">
+    <link targets="word/r43"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n43" xml:id="word/e43"/>
+  <region anchors="1 9" xml:id="word/r43"/>
+  <a as="word" label="word" ref="word/n43" xml:id="word/a43">
+    <fs>
+      <f name="text">twii</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n44">
+    <link targets="word/r44"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n44" xml:id="word/e44"/>
+  <region anchors="1 9" xml:id="word/r44"/>
+  <a as="word" label="word" ref="word/n44" xml:id="word/a44">
+    <fs>
+      <f name="text">kaa</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n45">
+    <link targets="word/r45"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n45" xml:id="word/e45"/>
+  <region anchors="1 9" xml:id="word/r45"/>
+  <a as="word" label="word" ref="word/n45" xml:id="word/a45">
+    <fs>
+      <f name="text">nó</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n46">
+    <link targets="word/r46"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n46" xml:id="word/e46"/>
+  <region anchors="1 9" xml:id="word/r46"/>
+  <a as="word" label="word" ref="word/n46" xml:id="word/a46">
+    <fs>
+      <f name="text">firii</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n47">
+    <link targets="word/r47"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n47" xml:id="word/e47"/>
+  <region anchors="1 9" xml:id="word/r47"/>
+  <a as="word" label="word" ref="word/n47" xml:id="word/a47">
+    <fs>
+      <f name="text">fie</f>
+      <f name="head">false</f>
+      <f name="pos"/>
+    </fs>
+  </a>
+  <node xml:id="word/n48">
+    <link targets="word/r48"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n48" xml:id="word/e48"/>
+  <region anchors="1 9" xml:id="word/r48"/>
+  <a as="word" label="word" ref="word/n48" xml:id="word/a48">
+    <fs>
+      <f name="text">faa</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n49">
+    <link targets="word/r49"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n49" xml:id="word/e49"/>
+  <region anchors="1 9" xml:id="word/r49"/>
+  <a as="word" label="word" ref="word/n49" xml:id="word/a49">
+    <fs>
+      <f name="text">sukuu</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n50">
+    <link targets="word/r50"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n50" xml:id="word/e50"/>
+  <region anchors="1 9" xml:id="word/r50"/>
+  <a as="word" label="word" ref="word/n50" xml:id="word/a50">
+    <fs>
+      <f name="text">nò</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n51">
+    <link targets="word/r51"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n51" xml:id="word/e51"/>
+  <region anchors="1 9" xml:id="word/r51"/>
+  <a as="word" label="word" ref="word/n51" xml:id="word/a51">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n52">
+    <link targets="word/r52"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n52" xml:id="word/e52"/>
+  <region anchors="1 9" xml:id="word/r52"/>
+  <a as="word" label="word" ref="word/n52" xml:id="word/a52">
+    <fs>
+      <f name="text">kɔɔ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n53">
+    <link targets="word/r53"/>
+  </node>
+  <edge from="phrase/n10432" to="word/n53" xml:id="word/e53"/>
+  <region anchors="1 9" xml:id="word/r53"/>
+  <a as="word" label="word" ref="word/n53" xml:id="word/a53">
+    <fs>
+      <f name="text">asɔrɪ</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n54">
+    <link targets="word/r54"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n54" xml:id="word/e54"/>
+  <region anchors="1 9" xml:id="word/r54"/>
+  <a as="word" label="word" ref="word/n54" xml:id="word/a54">
+    <fs>
+      <f name="text">ɔ</f>
+      <f name="head">false</f>
+      <f name="pos">PN</f>
+    </fs>
+  </a>
+  <node xml:id="word/n55">
+    <link targets="word/r55"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n55" xml:id="word/e55"/>
+  <region anchors="1 9" xml:id="word/r55"/>
+  <a as="word" label="word" ref="word/n55" xml:id="word/a55">
+    <fs>
+      <f name="text">fa</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n56">
+    <link targets="word/r56"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n56" xml:id="word/e56"/>
+  <region anchors="1 9" xml:id="word/r56"/>
+  <a as="word" label="word" ref="word/n56" xml:id="word/a56">
+    <fs>
+      <f name="text">sukuu</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n57">
+    <link targets="word/r57"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n57" xml:id="word/e57"/>
+  <region anchors="1 9" xml:id="word/r57"/>
+  <a as="word" label="word" ref="word/n57" xml:id="word/a57">
+    <fs>
+      <f name="text">no</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n58">
+    <link targets="word/r58"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n58" xml:id="word/e58"/>
+  <region anchors="1 9" xml:id="word/r58"/>
+  <a as="word" label="word" ref="word/n58" xml:id="word/a58">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n59">
+    <link targets="word/r59"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n59" xml:id="word/e59"/>
+  <region anchors="1 9" xml:id="word/r59"/>
+  <a as="word" label="word" ref="word/n59" xml:id="word/a59">
+    <fs>
+      <f name="text">kɔ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n60">
+    <link targets="word/r60"/>
+  </node>
+  <edge from="phrase/n10437" to="word/n60" xml:id="word/e60"/>
+  <region anchors="1 9" xml:id="word/r60"/>
+  <a as="word" label="word" ref="word/n60" xml:id="word/a60">
+    <fs>
+      <f name="text">dwaso</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n61">
+    <link targets="word/r61"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n61" xml:id="word/e61"/>
+  <region anchors="1 9" xml:id="word/r61"/>
+  <a as="word" label="word" ref="word/n61" xml:id="word/a61">
+    <fs>
+      <f name="text">Abain</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n62">
+    <link targets="word/r62"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n62" xml:id="word/e62"/>
+  <region anchors="1 9" xml:id="word/r62"/>
+  <a as="word" label="word" ref="word/n62" xml:id="word/a62">
+    <fs>
+      <f name="text">ɛyɛ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n63">
+    <link targets="word/r63"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n63" xml:id="word/e63"/>
+  <region anchors="1 9" xml:id="word/r63"/>
+  <a as="word" label="word" ref="word/n63" xml:id="word/a63">
+    <fs>
+      <f name="text">nyuɔma</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n64">
+    <link targets="word/r64"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n64" xml:id="word/e64"/>
+  <region anchors="1 9" xml:id="word/r64"/>
+  <a as="word" label="word" ref="word/n64" xml:id="word/a64">
+    <fs>
+      <f name="text">a</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n65">
+    <link targets="word/r65"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n65" xml:id="word/e65"/>
+  <region anchors="1 9" xml:id="word/r65"/>
+  <a as="word" label="word" ref="word/n65" xml:id="word/a65">
+    <fs>
+      <f name="text">ɛbe</f>
+      <f name="head">false</f>
+      <f name="pos">MOD</f>
+    </fs>
+  </a>
+  <node xml:id="word/n66">
+    <link targets="word/r66"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n66" xml:id="word/e66"/>
+  <region anchors="1 9" xml:id="word/r66"/>
+  <a as="word" label="word" ref="word/n66" xml:id="word/a66">
+    <fs>
+      <f name="text">bua</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n67">
+    <link targets="word/r67"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n67" xml:id="word/e67"/>
+  <region anchors="1 9" xml:id="word/r67"/>
+  <a as="word" label="word" ref="word/n67" xml:id="word/a67">
+    <fs>
+      <f name="text">nsrahwɛ</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n68">
+    <link targets="word/r68"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n68" xml:id="word/e68"/>
+  <region anchors="1 9" xml:id="word/r68"/>
+  <a as="word" label="word" ref="word/n68" xml:id="word/a68">
+    <fs>
+      <f name="text">ewɔ</f>
+      <f name="head">false</f>
+      <f name="pos">PREP</f>
+    </fs>
+  </a>
+  <node xml:id="word/n69">
+    <link targets="word/r69"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n69" xml:id="word/e69"/>
+  <region anchors="1 9" xml:id="word/r69"/>
+  <a as="word" label="word" ref="word/n69" xml:id="word/a69">
+    <fs>
+      <f name="text">ɔmain</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n70">
+    <link targets="word/r70"/>
+  </node>
+  <edge from="phrase/n10491" to="word/n70" xml:id="word/e70"/>
+  <region anchors="1 9" xml:id="word/r70"/>
+  <a as="word" label="word" ref="word/n70" xml:id="word/a70">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n71">
+    <link targets="word/r71"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n71" xml:id="word/e71"/>
+  <region anchors="1 9" xml:id="word/r71"/>
+  <a as="word" label="word" ref="word/n71" xml:id="word/a71">
+    <fs>
+      <f name="text">me</f>
+      <f name="head">false</f>
+      <f name="pos">PN</f>
+    </fs>
+  </a>
+  <node xml:id="word/n72">
+    <link targets="word/r72"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n72" xml:id="word/e72"/>
+  <region anchors="1 9" xml:id="word/r72"/>
+  <a as="word" label="word" ref="word/n72" xml:id="word/a72">
+    <fs>
+      <f name="text">fa</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n73">
+    <link targets="word/r73"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n73" xml:id="word/e73"/>
+  <region anchors="1 9" xml:id="word/r73"/>
+  <a as="word" label="word" ref="word/n73" xml:id="word/a73">
+    <fs>
+      <f name="text">afuo</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n74">
+    <link targets="word/r74"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n74" xml:id="word/e74"/>
+  <region anchors="1 9" xml:id="word/r74"/>
+  <a as="word" label="word" ref="word/n74" xml:id="word/a74">
+    <fs>
+      <f name="text">no</f>
+      <f name="head">false</f>
+      <f name="pos">DET</f>
+    </fs>
+  </a>
+  <node xml:id="word/n75">
+    <link targets="word/r75"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n75" xml:id="word/e75"/>
+  <region anchors="1 9" xml:id="word/r75"/>
+  <a as="word" label="word" ref="word/n75" xml:id="word/a75">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n76">
+    <link targets="word/r76"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n76" xml:id="word/e76"/>
+  <region anchors="1 9" xml:id="word/r76"/>
+  <a as="word" label="word" ref="word/n76" xml:id="word/a76">
+    <fs>
+      <f name="text">kɔ</f>
+      <f name="head">false</f>
+      <f name="pos">Vtr</f>
+    </fs>
+  </a>
+  <node xml:id="word/n77">
+    <link targets="word/r77"/>
+  </node>
+  <edge from="phrase/n34986" to="word/n77" xml:id="word/e77"/>
+  <region anchors="1 9" xml:id="word/r77"/>
+  <a as="word" label="word" ref="word/n77" xml:id="word/a77">
+    <fs>
+      <f name="text">sukuu</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n78">
+    <link targets="word/r78"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n78" xml:id="word/e78"/>
+  <region anchors="1 9" xml:id="word/r78"/>
+  <a as="word" label="word" ref="word/n78" xml:id="word/a78">
+    <fs>
+      <f name="text">ná</f>
+      <f name="head">false</f>
+      <f name="pos">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n79">
+    <link targets="word/r79"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n79" xml:id="word/e79"/>
+  <region anchors="1 9" xml:id="word/r79"/>
+  <a as="word" label="word" ref="word/n79" xml:id="word/a79">
+    <fs>
+      <f name="text">sukuu</f>
+      <f name="head">false</f>
+      <f name="pos">N</f>
+    </fs>
+  </a>
+  <node xml:id="word/n80">
+    <link targets="word/r80"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n80" xml:id="word/e80"/>
+  <region anchors="1 9" xml:id="word/r80"/>
+  <a as="word" label="word" ref="word/n80" xml:id="word/a80">
+    <fs>
+      <f name="text">mu</f>
+      <f name="head">false</f>
+      <f name="pos">Nrel</f>
+    </fs>
+  </a>
+  <node xml:id="word/n81">
+    <link targets="word/r81"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n81" xml:id="word/e81"/>
+  <region anchors="1 9" xml:id="word/r81"/>
+  <a as="word" label="word" ref="word/n81" xml:id="word/a81">
+    <fs>
+      <f name="text">nà</f>
+      <f name="head">false</f>
+      <f name="pos">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n82">
+    <link targets="word/r82"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n82" xml:id="word/e82"/>
+  <region anchors="1 9" xml:id="word/r82"/>
+  <a as="word" label="word" ref="word/n82" xml:id="word/a82">
+    <fs>
+      <f name="text">mepɛ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n83">
+    <link targets="word/r83"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n83" xml:id="word/e83"/>
+  <region anchors="1 9" xml:id="word/r83"/>
+  <a as="word" label="word" ref="word/n83" xml:id="word/a83">
+    <fs>
+      <f name="text">sɛ</f>
+      <f name="head">false</f>
+      <f name="pos">CONJS</f>
+    </fs>
+  </a>
+  <node xml:id="word/n84">
+    <link targets="word/r84"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n84" xml:id="word/e84"/>
+  <region anchors="1 9" xml:id="word/r84"/>
+  <a as="word" label="word" ref="word/n84" xml:id="word/a84">
+    <fs>
+      <f name="text">me</f>
+      <f name="head">false</f>
+      <f name="pos">PN</f>
+    </fs>
+  </a>
+  <node xml:id="word/n85">
+    <link targets="word/r85"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n85" xml:id="word/e85"/>
+  <region anchors="1 9" xml:id="word/r85"/>
+  <a as="word" label="word" ref="word/n85" xml:id="word/a85">
+    <fs>
+      <f name="text">de</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+  <node xml:id="word/n86">
+    <link targets="word/r86"/>
+  </node>
+  <edge from="phrase/n35334" to="word/n86" xml:id="word/e86"/>
+  <region anchors="1 9" xml:id="word/r86"/>
+  <a as="word" label="word" ref="word/n86" xml:id="word/a86">
+    <fs>
+      <f name="text">kɔ</f>
+      <f name="head">false</f>
+      <f name="pos">V</f>
+    </fs>
+  </a>
+</graph>

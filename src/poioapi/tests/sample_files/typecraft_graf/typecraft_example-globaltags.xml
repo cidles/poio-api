@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="phrase"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="globaltags"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="globaltags/n1"/>
+  <edge from="phrase/n1818" to="globaltags/n1" xml:id="globaltags/e1"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n1" xml:id="globaltags/a1">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n2"/>
+  <edge from="phrase/n9064" to="globaltags/n2" xml:id="globaltags/e2"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n2" xml:id="globaltags/a2">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n3"/>
+  <edge from="phrase/n9121" to="globaltags/n3" xml:id="globaltags/e3"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n3" xml:id="globaltags/a3">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n4"/>
+  <edge from="phrase/n9764" to="globaltags/n4" xml:id="globaltags/e4"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n4" xml:id="globaltags/a4">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n5"/>
+  <edge from="phrase/n10429" to="globaltags/n5" xml:id="globaltags/e5"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n5" xml:id="globaltags/a5">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n6"/>
+  <edge from="phrase/n10432" to="globaltags/n6" xml:id="globaltags/e6"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n6" xml:id="globaltags/a6">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n7"/>
+  <edge from="phrase/n10437" to="globaltags/n7" xml:id="globaltags/e7"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n7" xml:id="globaltags/a7">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n8"/>
+  <edge from="phrase/n10491" to="globaltags/n8" xml:id="globaltags/e8"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n8" xml:id="globaltags/a8">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n9"/>
+  <edge from="phrase/n34986" to="globaltags/n9" xml:id="globaltags/e9"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n9" xml:id="globaltags/a9">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+  <node xml:id="globaltags/n10"/>
+  <edge from="phrase/n35334" to="globaltags/n10" xml:id="globaltags/e10"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/n10" xml:id="globaltags/a10">
+    <fs>
+      <f name="id">1</f>
+      <f name="tagset">Default</f>
+    </fs>
+  </a>
+</graph>
