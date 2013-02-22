@@ -19,3 +19,4 @@ PoioAPI IO Package
    io.header
    io.elan
    io.pickle
+   io.typecraft
