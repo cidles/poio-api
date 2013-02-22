@@ -6,6 +6,7 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """ This module is to create the header file.
 This file will contain the files that belongs to
 each raw file with the respective elements.
