@@ -5,6 +5,7 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """ This document contain the responsible
 methods to write and parse the GrAF files.
 The parser use the ContentHandler from
@@ -34,19 +35,19 @@ class GrAFWriter():
         element_tree : Element Tree
             Xml element.
         annotation : object
-            Annotation graf object.
+            Annotation GrAF object.
         annotation_ref : str
             Reference that this annotation appoints to.
-        node_id : str
-            Identification of the node.
-        region_id : str
-            Identification of the region.
+        node : object
+            GrAF node object.
+        region : object
+            GrAF region node object.
         regions : array_like
-            Are the regions of the value word in the raw text.
-        from_node_id : str
-            Identification of the node of the region.
-        edge_id : str
-            Identification of the edge.
+            Anchors of the regions represented by the region.
+        from_node : object
+            GrAF node object representing the begin of an edge.
+        edge : object
+            GrAF edge node object.
 
         Returns
         -------
