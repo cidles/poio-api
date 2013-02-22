@@ -6,21 +6,24 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """This module contains classes to access to
-Typecraf files.
+Typecraf files and generate GrAF files.
 """
+
+from __future__ import absolute_import
 
 import os
 import re
 
 from xml.dom import minidom
-from xml.etree.ElementTree import Element, SubElement, tostring
+from xml.etree.ElementTree import tostring
 import xml.etree.ElementTree as ET
 
 from poioapi.io import header
 from poioapi.io.graf import GrAFWriter
 
-from graf.graphs import Graph
+from graf import Graph
 from graf import Node, Edge
 from graf import Annotation, AnnotationSpace
 from graf import Region
@@ -51,11 +54,12 @@ class Typecraft:
         self.graf = GrAFWriter()
 
     def typecraft_to_elan(self):
-        """This method will recieve the parsed elements
-        of an elan file. Then will create a GrAF object
+        """This method will retrieve the parsed elements
+        of an Typecraft file. Then will create a GrAF object
         based in the information from the parsed elements.
-        This method will also create the data structure
-        hierarchy and theirs respective constraints.
+        The two main parts to be parsed of the file are
+        the text tags or the phrase tags. A file can have
+        both of them or just one of those.
 
         Returns
         -------
@@ -84,6 +88,25 @@ class Typecraft:
         return graph
 
     def _parse_texts(self, graph, xml_namespace, texts):
+        """This method will parse the text tags elements
+        of a typecraft file.
+
+        Parameters
+        ----------
+        graph : Graph
+            GrAF object.
+        xml_namespace : str
+            The XML namespace of the file.
+        texts : array_like
+            Array with all the text elements.
+
+        Returns
+        -------
+        graph : object
+            GrAF object.
+
+        """
+
         text_element_tree = self.graf.create_xml_graph_header('text', None)
 
         for text in texts:
@@ -134,6 +157,29 @@ class Typecraft:
 
     def _parse_phrases(self, graph, xml_namespace, phrases,
                        dependency=None, from_node=None):
+        """This method will parse the text tags elements
+        of a typecraft file.
+
+        Parameters
+        ----------
+        graph : object
+            GrAF object.
+        xml_namespace : str
+            The XML namespace of the file.
+        phrases : array_like
+            Array with all the phrase elements.
+        dependency : str
+            Name of the first dependency of the graph element.
+        from_node : object
+            GrAF node object representing the begin of an edge.
+
+        Returns
+        -------
+        graph : object
+            GrAF object.
+
+        """
+
         globaltags = xml_namespace+"globaltags"
         word = xml_namespace+"word"
         words_number = 1
