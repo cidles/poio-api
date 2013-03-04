@@ -24,9 +24,8 @@ import re
 
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
-    import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET
 
-from poioapi.io import header
 from poioapi.io.graf import GrAFWriter
 
 from graf import Graph
@@ -374,88 +373,6 @@ class Parser:
                 self.data_hierarchy_parent_dict[element] = parent
                 if index is 0:
                     parent = element
-
-    def generate_graf_files(self):
-        """This method will create the GrAF Xml files.
-        But first is need to create the GrAF object in
-        order to get the values.
-        This method will also create a metafile that will
-        gathered all the data information to recreate the
-        elan files and to access to the data structure
-        hierarchy, the vocabulary, the media descriptor
-        and all the important information. The header file
-        it's created too.
-
-        """
-
-        self.header = header.HeaderFile(self.basedirname)
-        self.header.filename = self.filename.split('.eaf')[0]
-        self.header.primaryfile = self.filename
-        self.header.dataType = 'Elan file' # Type of the origin data file
-
-        for elements in self.xml_files_map.items():
-            file_name = elements[0]
-            extension = file_name+".xml"
-            filepath = self.basedirname+"-"+extension
-            loc = os.path.basename(filepath)
-            self.header.add_annotation(loc, file_name)
-            file = open(filepath,'wb')
-            element_tree = elements[1]
-            doc = minidom.parseString(tostring(element_tree))
-            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-            file.close()
-
-        self.header.create_header()
-
-        # Generating the metafile
-        tree = ET.parse(self.filepath)
-        root = tree.getroot()
-
-        # Generate the metadata file
-        element_tree = Element('metadata')
-
-        header_tag = SubElement(element_tree, 'header')
-
-        data_structure = SubElement(header_tag, 'data_structure')
-        
-        SubElement(data_structure, 'hierarchy').text = \
-        str(self.data_structure_hierarchy)
-
-        tier_mapping = SubElement(header_tag,'tier_mapping')
-
-        for values in self.data_structure_constraints.items():
-            key = values[0]
-            values = values[1]
-            type = SubElement(tier_mapping,'type', {'name':key})
-            for value in values:
-                SubElement(type, 'tier').text = value
-
-        file_tag = SubElement(element_tree, "file",
-                {"data_type":self.header.dataType})
-
-        miscellaneous = SubElement(file_tag, "miscellaneous")
-
-        # Add the root element
-        SubElement(miscellaneous, root.tag, root.attrib)
-
-        for child in root:
-            parent = SubElement(miscellaneous, child.tag, child.attrib)
-            for lower_child in child:
-                if lower_child.tag != "ALIGNABLE_ANNOTATION" and\
-                   lower_child.tag != "REF_ANNOTATION" and\
-                   lower_child.tag != "ANNOTATION_VALUE" and\
-                   lower_child.tag != "ANNOTATION":
-                    child_element = SubElement(parent, lower_child.tag,
-                        lower_child.attrib)
-                    if not str(lower_child.text).isspace() or\
-                       lower_child.text is not None:
-                        child_element.text = lower_child.text
-
-        filename = self.basedirname+"-extinfo.xml"
-        file = open(filename,'wb')
-        doc = minidom.parseString(tostring(element_tree))
-        file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-        file.close()
 
 class Writer:
     """

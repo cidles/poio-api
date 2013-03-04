@@ -269,6 +269,10 @@ class AnnotationGraph():
         return inserted
 
     def from_elan(self, elanfile):
+        """This method generates a GrAF object
+        from a Elan file.
+
+        """
 
         elan = poioapi.io.elan.Parser(elanfile)
 
@@ -285,12 +289,35 @@ class AnnotationGraph():
         self.xml_files_map = elan.xml_files_map
 
     def from_typecraft(self):
+        """This method generates a GrAF object
+        from a Typecraft file.
+
+        """
+
         pass
 
     def from_pickle(self):
+        """This method generates a GrAF object
+        from a pickle file.
+
+        """
+
         pass
 
     def generate_graf_files(self):
+        """This method will create the GrAF Xml files.
+        But first is need to create the GrAF object in
+        order to get the values.
+        In some specific cases this method will also
+        create a metafile that will gathered all the
+        data information to recreate a file. Elan type
+        is one of those specific files and this metafile
+        will garante that the extra information from the
+        files like the data structure hierarchy,
+        the vocabulary, the media descriptor and etc,
+        will be stored. The header file it's created too.
+
+        """
 
         self.header = poioapi.io.header.HeaderFile(self.basedirname)
         self.header.filename = os.path.splitext(self.filename)[0]
@@ -315,6 +342,10 @@ class AnnotationGraph():
             self._generate_metafile()
 
     def _generate_metafile(self):
+        """ This method will create a metafile
+        from the original file.
+
+        """
 
         # Generating the metafile
         tree = ET.parse(self.filepath)

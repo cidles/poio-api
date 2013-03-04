@@ -41,8 +41,10 @@ def main(argv):
     # Initialize the annotation graph
     annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
 
+    # Create a graph from an elan file
     annotation_graph.from_elan(inputfile)
 
+    # Generate the GrAF files
     annotation_graph.generate_graf_files()
 
     print('Finished')
