@@ -52,7 +52,7 @@ def main(argv):
         elan_write = elan.ElanWriter(inputfile, outputfile)
 
         # Write the Elan file
-        elan_write.write_elan()
+        elan_write.write()
 
     print('Finished')
 

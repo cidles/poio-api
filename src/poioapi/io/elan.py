@@ -21,7 +21,6 @@ from collections import defaultdict
 
 import os
 import re
-import codecs
 
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
@@ -30,7 +29,7 @@ import xml.etree.ElementTree as ET
 from poioapi.io import header
 from poioapi.io.graf import GrAFWriter
 
-from graf import Graph, GrafRenderer
+from graf import Graph
 from graf import Node, Edge
 from graf import Annotation, AnnotationSpace
 from graf import Region
@@ -480,7 +479,7 @@ class ElanWriter:
         self.extinfofile = extinfofile
         self.outputfile = outputfile
 
-    def write_elan(self):
+    def write(self):
         """This method will look into the metafile
         and then reconstruct the Elan file.
 
