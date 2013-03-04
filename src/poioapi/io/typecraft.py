@@ -16,11 +16,8 @@ from __future__ import absolute_import
 import os
 import re
 
-from xml.dom import minidom
-from xml.etree.ElementTree import tostring
 import xml.etree.ElementTree as ET
 
-from poioapi.io import header
 from poioapi.io.graf import GrAFWriter
 
 from graf import Graph
@@ -390,30 +387,3 @@ class Parser:
             self.xml_files_map['phrase'] = element_tree
 
         return graph
-
-    def generate_graf_files(self):
-        """This method will create the GrAF Xml files.
-        But first is need to create the GrAF object in
-        order to get the values.
-        This method will also create the header file.
-
-        """
-
-        self.header = header.HeaderFile(self.basedirname)
-        self.header.filename = os.path.splitext(self.filename)[0]
-        self.header.primaryfile = self.filename
-        self.header.dataType = 'text' # Type of the origin data file
-
-        for elements in self.xml_files_map.items():
-            file_name = elements[0]
-            extension = file_name+".xml"
-            filepath = self.basedirname+"-"+extension
-            loc = os.path.basename(filepath)
-            self.header.add_annotation(loc, file_name)
-            file = open(filepath,'wb')
-            element_tree = elements[1]
-            doc = minidom.parseString(tostring(element_tree))
-            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-            file.close()
-
-        self.header.create_header()
