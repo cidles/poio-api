@@ -24,7 +24,7 @@ import re
 
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
-import xml.etree.ElementTree as ET
+    import xml.etree.ElementTree as ET
 
 from poioapi.io import header
 from poioapi.io.graf import GrAFWriter

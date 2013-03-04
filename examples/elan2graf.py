@@ -8,7 +8,8 @@
 
 import sys, getopt
 
-from poioapi.io import elan
+import poioapi.annotationgraph
+import poioapi.data
 
 def main(argv):
 
@@ -34,14 +35,15 @@ def main(argv):
         print('elan2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    # Initialize
-    elan_graf = elan.Parser(inputfile)
+    # Create the data structure
+    data_hierarchy = None
 
-    # Create a GrAF object
-    graph = elan_graf.as_graf()
+    # Initialize the annotation graph
+    annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
 
-    # Create GrAF Xml files
-    elan_graf.generate_graf_files()
+    annotation_graph.from_elan(inputfile)
+
+    annotation_graph.generate_graf_files()
 
     print('Finished')
 
