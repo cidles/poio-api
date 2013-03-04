@@ -27,9 +27,9 @@ class TestTypecraft:
 
         self.basedirname = os.path.dirname(self.filename)
 
-        self.typecraft = typecraft.Typecraft(self.filename)
+        self.typecraft = typecraft.Parser(self.filename)
 
-        self.graph = self.typecraft.typecraft_to_elan()
+        self.graph = self.typecraft.as_graf()
 
         tree = ET.parse(self.filename)
         self.root = tree.getroot()

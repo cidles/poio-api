@@ -33,10 +33,10 @@ def main(argv):
         sys.exit()
 
     # Initialize
-    typecraft_graf = typecraft.Typecraft(inputfile)
+    typecraft_graf = typecraft.Parser(inputfile)
 
     # Create a GrAF object
-    graph = typecraft_graf.typecraft_to_elan()
+    graph = typecraft_graf.as_graf()
 
     # Generate the files
     typecraft_graf.generate_graf_files()

@@ -28,7 +28,7 @@ from graf import Node, Edge
 from graf import Annotation, AnnotationSpace
 from graf import Region
 
-class Typecraft:
+class Parser:
     """
     Class that will handle the parse of
     Typecraft files.
@@ -53,7 +53,7 @@ class Typecraft:
 
         self.graf = GrAFWriter()
 
-    def typecraft_to_elan(self):
+    def as_graf(self):
         """This method will retrieve the parsed elements
         of an Typecraft file. Then will create a GrAF object
         based in the information from the parsed elements.
