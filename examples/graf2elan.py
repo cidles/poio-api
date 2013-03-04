@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#
 # Poio Tools for Linguists
 #
 # Copyright (C) 2009-2013 Poio Project
@@ -8,7 +9,7 @@
 
 import sys, getopt
 
-from poioapi.io import elan
+import poioapi.io.elan
 
 def main(argv):
 
@@ -35,10 +36,10 @@ def main(argv):
         sys.exit()
 
     # Initialize
-    elan_write = elan.Writer(inputfile, outputfile)
+    elan = poioapi.io.elan.Writer(inputfile, outputfile)
 
     # Write the Elan file
-    elan_write.write()
+    elan.write()
 
     print('Finished')
 
