@@ -19,6 +19,7 @@ import xml.etree.ElementTree as ET
 
 import poioapi.io.elan
 import poioapi.io.header
+import poioapi.io.typecraft
 from poioapi import data
 
 from graf import GraphParser
@@ -288,13 +289,22 @@ class AnnotationGraph():
         self.filepath = elan.filepath
         self.xml_files_map = elan.xml_files_map
 
-    def from_typecraft(self):
+    def from_typecraft(self, typecraftfile):
         """This method generates a GrAF object
         from a Typecraft file.
 
         """
 
-        pass
+        typecraft = poioapi.io.typecraft.Parser(typecraftfile)
+
+        # Create a GrAF object
+        self.graf = typecraft.as_graf()
+
+        # Gather all the information to generate the GrAF files
+        self.basedirname = typecraft.basedirname
+        self.filename = typecraft.filename
+        self.filepath = typecraft.filepath
+        self.xml_files_map = typecraft.xml_files_map
 
     def from_pickle(self):
         """This method generates a GrAF object

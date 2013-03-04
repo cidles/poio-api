@@ -9,7 +9,8 @@
 
 import sys, getopt
 
-from poioapi.io import typecraft
+import poioapi.annotationgraph
+import poioapi.data
 
 def main(argv):
 
@@ -32,14 +33,17 @@ def main(argv):
         print('typecraft2graf.py -i <inputfile>')
         sys.exit()
 
-    # Initialize
-    typecraft_graf = typecraft.Parser(inputfile)
+    # Create the data structure
+    data_hierarchy = None
 
-    # Create a GrAF object
-    graph = typecraft_graf.as_graf()
+    # Initialize the annotation graph
+    annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
 
-    # Generate the files
-    typecraft_graf.generate_graf_files()
+    # Create a graph from an typecraft file
+    annotation_graph.from_typecraft(inputfile)
+
+    # Generate the GrAF files
+    annotation_graph.generate_graf_files()
 
     print('Finished')
 
