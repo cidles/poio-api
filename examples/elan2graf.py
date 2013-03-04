@@ -43,9 +43,6 @@ def main(argv):
     # Create GrAF Xml files
     elan_graf.generate_graf_files()
 
-    # Rendering the GrAF object to an Xml file
-    elan_graf.graph_rendering(outputfile, graph)
-
     print('Finished')
 
 if __name__ == "__main__":

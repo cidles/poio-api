@@ -458,33 +458,6 @@ class Elan:
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
 
-    def graph_rendering(self, outputfile, graph):
-        """This method will convert a GrAF object to a
-        Xml files respecting GrAF standards.
-        To use the rendering is need to install the
-        Graf-Python Library,
-
-        Parameters
-        ----------
-        outputfile : str
-            Path to the outputfile with the renderer GrAF.
-        graph : object
-            GrAF object.
-
-        """
-
-        graf_render = GrafRenderer(outputfile+"_tmp")
-        graf_render.render(graph)
-
-        # Indent the Xml file
-        file = codecs.open(outputfile,'w','utf-8')
-        xml = minidom.parse(outputfile+"_tmp")
-        file.write(xml.toprettyxml(' '))
-        file.close()
-
-        # Delete the temp file
-        os.remove(outputfile+"_tmp")
-
 class ElanWriter:
     """
     Class that will handle the writing of
