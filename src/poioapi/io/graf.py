@@ -13,11 +13,32 @@ The parser use the ContentHandler from
 SAX Xml module.
 """
 
+import abc
 import codecs
 
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from xml.etree.ElementTree import Element, SubElement
+
+class ABCGraf(object):
+
+    __metaclass__ = abc.ABCMeta
+
+    @abc.abstractmethod
+    def get_root_tiers(self):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def get_child_tiers_for_tier(self, tier):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def get_annotations_for_tier(self, tier, annotation_parent):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def tier_has_regions(self, tier):
+        raise NotImplementedError("Method must be implemented")
 
 class GrAFWriter():
     """
