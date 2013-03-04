@@ -40,7 +40,7 @@ def main(argv):
         elan_graf = elan.Elan(inputfile)
 
         # Create a GrAF object
-        graph = elan_graf.elan_to_graf()
+        graph = elan_graf.as_graf()
 
         # Create GrAF Xml files
         elan_graf.generate_graf_files()

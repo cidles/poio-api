@@ -69,7 +69,7 @@ class Elan:
 
         self.graf = GrAFWriter()
 
-    def elan_to_graf(self):
+    def as_graf(self):
         """This method will retrieve the parsed elements
         of an elan file. Then will create a GrAF object
         based in the information from the parsed elements.
