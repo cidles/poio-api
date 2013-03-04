@@ -9,7 +9,8 @@
 
 import os
 import sys, getopt
-from poioapi.io import elan
+
+import poioapi.io.elan
 
 def main(argv):
 
@@ -32,27 +33,30 @@ def main(argv):
         print('elandir2graf.py -i <inputdir>')
         sys.exit()
 
+    # Create the data structure
+    data_hierarchy = None
+
+    # Initialize the annotation graph
+    annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
+
     for file in os.listdir(inputdir):
         (basedirname, _) = os.path.splitext(file)
         inputfile = inputdir+file
 
-        # Initialize
-        elan_graf = elan.Parser(inputfile)
+        # Create a graph from an elan file
+        annotation_graph.from_elan(inputfile)
 
-        # Create a GrAF object
-        graph = elan_graf.as_graf()
-
-        # Create GrAF Xml files
-        elan_graf.generate_graf_files()
+        # Generate the GrAF files
+        annotation_graph.generate_graf_files()
 
         inputfile = inputdir+basedirname+"-extinfo.xml"
         outputfile = inputdir+basedirname+"_result.eaf"
 
         # Initialize
-        elan_write = elan.Writer(inputfile, outputfile)
+        elan = poioapi.io.elan.Writer(inputfile, outputfile)
 
         # Write the Elan file
-        elan_write.write()
+        elan.write()
 
     print('Finished')
 
