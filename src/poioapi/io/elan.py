@@ -457,7 +457,7 @@ class Elan:
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
 
-class ElanWriter:
+class Writer:
     """
     Class that will handle the writing of
     GrAF files into Elan files again.

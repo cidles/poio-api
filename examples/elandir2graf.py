@@ -49,7 +49,7 @@ def main(argv):
         outputfile = inputdir+basedirname+"_result.eaf"
 
         # Initialize
-        elan_write = elan.ElanWriter(inputfile, outputfile)
+        elan_write = elan.Writer(inputfile, outputfile)
 
         # Write the Elan file
         elan_write.write()
