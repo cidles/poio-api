@@ -34,7 +34,7 @@ class TestElan:
         data_structure = ['utterance',['clause',['word']],'translation']
 
         # Initialize the Elan class
-        self.elan = elan.Elan(self.filename, data_structure)
+        self.elan = elan.Parser(self.filename, data_structure)
 
     def test_write_elan(self):
         # compare the result file with

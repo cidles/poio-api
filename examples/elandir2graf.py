@@ -37,7 +37,7 @@ def main(argv):
         inputfile = inputdir+file
 
         # Initialize
-        elan_graf = elan.Elan(inputfile)
+        elan_graf = elan.Parser(inputfile)
 
         # Create a GrAF object
         graph = elan_graf.as_graf()

@@ -34,7 +34,7 @@ from graf import Node, Edge
 from graf import Annotation, AnnotationSpace
 from graf import Region
 
-class Elan:
+class Parser:
     """
     Class that will handle parse Elan files.
 
