@@ -20,12 +20,12 @@ from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from xml.etree.ElementTree import Element, SubElement
 
-class ABCGraf(object):
+class BaseParser(object):
 
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def get_root_tiers(self):
+    def get_root_tiers(self, element):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
@@ -38,6 +38,10 @@ class ABCGraf(object):
 
     @abc.abstractmethod
     def tier_has_regions(self, tier):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def as_graf(self):
         raise NotImplementedError("Method must be implemented")
 
 class GrAFWriter():
