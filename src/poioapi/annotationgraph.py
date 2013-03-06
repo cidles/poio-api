@@ -29,14 +29,10 @@ class AnnotationGraph():
     def __init__(self, data_structure_type):
         self.data_structure_type = data_structure_type
 
-        if data_structure_type == data.GRAID:
-            self.structure_type_handler = data.DataStructureTypeGraid()
-        elif data_structure_type == data.GRAIDDIANA:
-            self.structure_type_handler = data.DataStructureTypeGraidDiana()
-        elif data_structure_type == data.MORPHSYNT:
-            self.structure_type_handler = data.DataStructureTypeMorphsynt()
-        elif data_structure_type is None:
+        if data_structure_type is None:
             self.structure_type_handler = None
+        elif isinstance(data_structure_type, data.DataStructureType):
+            self.structure_type_handler = data_structure_type
         else:
             raise(
                 data.DataStructureTypeNotSupportedError(

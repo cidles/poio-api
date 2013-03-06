@@ -48,7 +48,7 @@ def main(argv):
         sys.exit()
 
     # Create the data structure
-    data_hierarchy = poioapi.data.GRAID
+    data_hierarchy = poioapi.data.DataStructureTypeGraid()
 
     # Create the annotation tree with the created data structure
     annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
