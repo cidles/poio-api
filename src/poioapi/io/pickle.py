@@ -21,7 +21,7 @@ from xml.etree.ElementTree import tostring
 from xml.dom import minidom
 
 from poioapi.io import header
-from poioapi.io.graf import GrAFWriter, GrAFParser
+from poioapi.io.graf import Writer, Parser
 
 class Writer():
     """
@@ -53,7 +53,7 @@ class Writer():
 
         self.xml_elements_tree_map = {}
 
-        self.graf = GrAFWriter()
+        self.graf = Writer()
 
     def write(self):
         """Writes the GrAF files based on the data
@@ -359,7 +359,7 @@ class Parser():
         features_list = []
 
         for file in files_list:
-            content = GrAFParser(self.dirname+'/'+file)
+            content = Parser(self.dirname+'/'+file)
             content.parse()
 
             features_list.append(content.features_list)
