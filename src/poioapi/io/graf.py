@@ -356,7 +356,7 @@ class XmlHandler(ContentHandler):
             ref = values[1]
             self.features_list.append((id, self.map[name], ref))
 
-class GrAFParser:
+class Parser:
     """
     Class that handles the content of GrAF files.
 
