@@ -18,7 +18,7 @@ import re
 
 import xml.etree.ElementTree as ET
 
-from poioapi.io.graf import GrAFWriter
+from poioapi.io.graf import Writer
 
 from graf import Graph
 from graf import Node, Edge
@@ -48,7 +48,7 @@ class Parser:
 
         self.xml_files_map = {}
 
-        self.graf = GrAFWriter()
+        self.graf = Writer()
 
     def as_graf(self):
         """This method will retrieve the parsed elements
