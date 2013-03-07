@@ -26,14 +26,16 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
 
-from poioapi.io.graf import GrAFWriter
+from graf.annotations import FeatureStructure
+
+from poioapi.io.graf import Writer, BaseParser
 
 from graf import Graph
 from graf import Node, Edge
 from graf import Annotation, AnnotationSpace
 from graf import Region
 
-class Parser:
+class Parser(BaseParser):
     """
     Class that will handle parse Elan files.
 
@@ -65,475 +67,196 @@ class Parser:
 
         self.xml_files_map = {}
 
-        self.graf = GrAFWriter()
+        self.graf = Writer()
 
     def as_graf(self):
-        """This method will retrieve the parsed elements
-        of an elan file. Then will create a GrAF object
-        based in the information from the parsed elements.
-        This method will also create the data structure
-        hierarchy and theirs respective constraints.
+        self.graph = Graph()
 
-        Returns
-        -------
-        graph : object
-            GrAF object.
+        self.tree = ET.parse(self.filepath).getroot()
 
-        """
+        self.regions_map = self._get_regions()
 
-        graph = Graph()
+        self.tiers = self.tree.findall('TIER')
+        root_tiers = self.get_root_tiers(self.tiers)
 
-        no_structure = False
+        for root_tier in root_tiers:
+            self._parent_tier_id = None
+            self._parent_linguistic_type_ref = None
 
-        tier_linguistic_map = dict()
-        orphan_annotation_references_map = dict()
+            self._tier_id = root_tier.attrib['TIER_ID']
+            self._linguistic_type_ref = root_tier.attrib['LINGUISTIC_TYPE_REF'].\
+            replace(" ","_")
 
-        # Find the dependencies in the hierarchy
-        if len(self.data_structure_hierarchy) is not 0:
-            self._find_hierarchy_parents(self.data_structure_hierarchy, None)
-        else:
-            no_structure = True
+            root_annotations = self.get_annotations_for_tier(root_tier)
+            self.add_graf_annotations(root_annotations)
 
-        tree = ET.parse(self.filepath)
-        doc = tree.getroot()
+            self.find_children_tiers_for_tier(root_tier)
 
-        time_order = doc.find('TIME_ORDER')
+        return self.graph
+
+    def get_root_tiers(self, tiers=None):
+
+        root_tiers = []
+
+        for tier in tiers:
+            if not 'PARENT_REF' in tier.attrib:
+                root_tiers.append(tier)
+
+        return root_tiers
+
+    def get_child_tiers_for_tier(self, tier):
+
+        tier_id = tier.attrib['TIER_ID']
+
+        tier_childs = self.tree.findall("TIER[@PARENT_REF='"+tier_id+"']")
+
+        return tier_childs
+
+    def find_children_tiers_for_tier(self, tier):
+
+        children = self.get_child_tiers_for_tier(tier)
+
+        for child in children:
+            annotations = self.get_annotations_for_tier(child)
+
+            self._parent_tier_id = tier.attrib['TIER_ID']
+            self._parent_linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
+            replace(" ","_")
+
+            self._tier_id = child.attrib['TIER_ID']
+            self._linguistic_type_ref = child.attrib['LINGUISTIC_TYPE_REF'].\
+            replace(" ","_")
+
+            self.add_graf_annotations(annotations)
+
+            child_children = self.get_child_tiers_for_tier(child)
+
+            if len(child_children) > 0:
+                self.find_children_tiers_for_tier(child)
+
+    def get_annotations_for_tier(self, tier, annotation_parent=None):
+
+        tier_annotations = tier.findall("ANNOTATION")
+
+        return tier_annotations
+
+    def add_graf_annotations(self, annotations):
+
+        prefix_name = self._linguistic_type_ref+"/"+self._tier_id
+        annotation_name = self._linguistic_type_ref
+        parent_ref = self._parent_linguistic_type_ref
+
+        for annotation in annotations:
+            annotation_elements = annotation.getiterator()
+
+            if annotation_elements[1].tag == 'ALIGNABLE_ANNOTATION':
+                annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
+                annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
+
+                features_map = {'annotation_value':annotation_value,
+                                'time_slot1':annotation_elements[1].attrib['TIME_SLOT_REF1'],
+                                'time_slot2':annotation_elements[1].attrib['TIME_SLOT_REF2']}
+
+                regions = (self.regions_map[annotation_elements[1].attrib['TIME_SLOT_REF1']],
+                           self.regions_map[annotation_elements[1].attrib['TIME_SLOT_REF2']])
+
+                index = re.sub("\D", "", annotation_id)
+
+                if parent_ref is not None:
+                    from_node = self.find_from_node(parent_ref, regions)
+                else:
+                    from_node = None
+
+                self.add_graf_node(index, prefix_name, regions, from_node)
+
+                annotation_ref = prefix_name+"/n"+index
+
+                self.add_graf_annotation(annotation_name, annotation_id,
+                    annotation_ref, features_map)
+            else:
+                annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
+                annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
+                annotation_ref = annotation_elements[1].attrib['ANNOTATION_REF']
+
+                features_map = {'annotation_value':annotation_value,
+                                'ref_annotation':annotation_ref,
+                                'tier_id':self._tier_id}
+
+                for attribute in annotation_elements[1].attrib:
+                    if attribute != 'ANNOTATION_REF' and\
+                       attribute != 'ANNOTATION_ID' and\
+                       attribute != 'ANNOTATION_VALUE':
+                        features_map[attribute] = annotation_elements[1].attrib[attribute]
+
+                index = re.sub("\D", "", annotation_ref)
+
+                annotation_ref = self._parent_linguistic_type_ref+"/"+\
+                                 self._parent_tier_id+"/n"+index
+
+                self.add_graf_annotation(annotation_name, annotation_id,
+                    annotation_ref, features_map)
+
+    def find_from_node(self, parent_ref, anchors):
+        for region in self.graph.regions:
+            if parent_ref in region.id:
+                if (int(region.anchors[0]) <= int(anchors[0]) <= int(region.anchors[1]))\
+                and (int(region.anchors[0]) <= int(anchors[1]) <= int(region.anchors[1])):
+                    node_id = re.sub(r"(.*)/r", r"\1/n", region.id)
+                    node = self.graph.nodes[node_id]
+                    return node
+        return None
+
+    def _get_regions(self):
+        time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
 
         for time in time_order:
             key = time.attrib['TIME_SLOT_ID']
-            try:
+
+            if 'TIME_VALUE' in time.attrib:
                 value = time.attrib['TIME_VALUE']
-            except KeyError as keyError:
+            else:
                 value = 0
+
             time_order_dict[key] = value
 
-        tiers = doc.findall('TIER')
+        return time_order_dict
 
-        self.anchors_dict = defaultdict(list)
+    def add_graf_node(self, node_index, prefix_name, regions=None, from_node=None):
 
-        for tier in tiers:
-            tier_id = tier.attrib['TIER_ID']
-            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
-            replace(" ","_")
+        node_id = prefix_name+"/n"+node_index
+        node = Node(node_id)
 
-            if not tier_id in tier_linguistic_map.keys():
-                tier_linguistic_map[tier_id] = linguistic_type_ref
+        if from_node is not None:
+            edge_id = "e"+node_index
+            edge = Edge(edge_id, from_node, node)
 
-        # First try with the tiers
-        for tier_num, tier in enumerate(tiers):
-            tier_id = tier.attrib['TIER_ID']
-            linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
-            replace(" ","_")
+            self.graph.edges.add(edge)
 
-            try:
-                parent_ref = tier.attrib['PARENT_REF']
-            except KeyError as keyError:
-                parent_ref = None
-                from_node = None
-                edge = None
+        if regions is not None:
+            region_id = prefix_name+"/r"+node_index
+            region = Region(region_id, *regions)
+            node.add_region(region)
 
-            # Need to check if the tier element already exist
-            if linguistic_type_ref not in self.xml_files_map.keys():
-                # Creates the Xml Header (graphHeader)
-                if no_structure is True:
-                    if tier_num is 0:
-                        dependecie = None
-                    else:
-                        if parent_ref is None:
-                            dependecie = None
-                        else:
-                            dependecie = tier_linguistic_map[parent_ref]
-                else:
-                    dependecie = self.data_hierarchy_parent_dict[linguistic_type_ref]
+            self.graph.regions.add(region)
 
-                element_tree = self.graf.create_xml_graph_header(linguistic_type_ref,
-                    dependecie)
+        self.graph.nodes.add(node)
 
-                self.xml_files_map[linguistic_type_ref] = element_tree
-            else:
-                element_tree = self.xml_files_map[linguistic_type_ref]
+    def add_graf_annotation(self, annotation_name, annotation_id,
+                            annotation_ref, annotation_features=None):
 
-            # Add to the constraint in the data structure hierarchy
-            if linguistic_type_ref in self.data_structure_constraints:
-                self.data_structure_constraints[linguistic_type_ref].append(tier_id)
-            else:
-                self.data_structure_constraints[linguistic_type_ref] = [tier_id]
+        annotation = Annotation(annotation_name, annotation_features,
+            annotation_id)
 
-            for child in tier.getiterator():
-                add_annotation = False
-                add_node = False
+        self.graph.nodes[annotation_ref].annotations.add(annotation)
 
-                if child.tag == 'ALIGNABLE_ANNOTATION':
-                    annotation_time_ref_1 = str(time_order_dict[
-                                                child.attrib['TIME_SLOT_REF1']])
-                    annotation_time_ref_2 = str(time_order_dict[
-                                                child.attrib['TIME_SLOT_REF2']])
-                    annotation_id = child.attrib['ANNOTATION_ID']
-                    annotation_value = child.find('ANNOTATION_VALUE').text
+        annotation_space = AnnotationSpace(annotation_name)
+        annotation_space.add(annotation)
 
-                    anchors = (annotation_time_ref_1, annotation_time_ref_2)
+        self.graph.annotation_spaces.add(annotation_space)
 
-                    index = re.sub("\D", "", annotation_id)
+    def tier_has_regions(self, tier):
+        pass
 
-                    node_id = linguistic_type_ref+"/"+tier_id+"/n"+index
-                    node = Node(node_id)
-
-                    region_id = linguistic_type_ref+"/"+tier_id+"/r"+index
-                    region = Region(region_id, *anchors)
-
-                    if parent_ref is not None:
-                        from_node = self._find_node(parent_ref, anchors)
-                        if from_node is not None:
-                            edge_id = "e"+index
-                            edge = Edge(edge_id, from_node, node)
-                            graph.edges.add(edge)
-                    else:
-                        self.anchors_dict[tier_id].append((node, anchors))
-
-                    # Annotation
-                    annotation_name = linguistic_type_ref
-                    annotation = Annotation(annotation_name, None,
-                        annotation_id)
-                    annotation.features['annotation_value'] = annotation_value
-                    annotation.features['time_slot1'] = \
-                    child.attrib['TIME_SLOT_REF1']
-                    annotation.features['time_slot2'] = \
-                    child.attrib['TIME_SLOT_REF2']
-
-                    node.annotations.add(annotation)
-                    node.add_region(region)
-                    
-                    graph.regions.add(region)
-                    graph.nodes.add(node)
-
-                    annotation_ref = node_id
-
-                    add_annotation = True
-                    add_node = True
-
-                elif child.tag == 'REF_ANNOTATION':
-                    has_parent = False
-
-                    annotation_id = child.attrib['ANNOTATION_ID']
-                    annotation_value = child.find('ANNOTATION_VALUE').text
-                    annotation_ref = child.attrib['ANNOTATION_REF']
-
-                    look_tier = tier_linguistic_map[parent_ref]
-
-                    if look_tier in self.xml_files_map.keys():
-                        auxiliar_tree = self.xml_files_map[look_tier]
-
-                        # Look for the parent node:
-                        for el_tree in auxiliar_tree:
-                            if el_tree.tag == 'node':
-                                node_ref = el_tree.attrib['xml:id']
-                            if el_tree.tag == 'a' and el_tree.attrib['xml:id'] == annotation_ref:
-                                annotation_ref = node_ref
-                                has_parent = True
-
-                    if has_parent:
-                        # Annotation
-                        annotation_name = linguistic_type_ref
-                        annotation = Annotation(annotation_name, None,
-                            annotation_id)
-                        annotation.features['annotation_value'] = annotation_value
-                        annotation.features['ref_annotation'] = \
-                        child.attrib['ANNOTATION_REF']
-                        annotation.features['tier_id'] = tier_id
-
-                        # Keep all the extra attributes of the annotations tags
-                        for attribute in child.attrib:
-                            if attribute != 'ANNOTATION_REF' and \
-                               attribute != 'ANNOTATION_ID' and \
-                               attribute != 'ANNOTATION_VALUE':
-                                annotation.features[attribute] = child.attrib[attribute]
-
-                        graph.nodes[annotation_ref].annotations.add(annotation)
-
-                        add_annotation = True
-                    else:
-                        if look_tier in orphan_annotation_references_map.keys():
-                            orphan_annotation_references_map[look_tier].\
-                            append((linguistic_type_ref, annotation_id, annotation_value,
-                                    child.attrib['ANNOTATION_REF'], tier_id, child.attrib))
-                        else:
-                            orphan_annotation_references_map[look_tier] = \
-                            [(linguistic_type_ref, annotation_id, annotation_value,
-                              child.attrib['ANNOTATION_REF'], tier_id, child.attrib)]
-
-                # Add the annotation to the element tree
-                if add_annotation:
-
-                    annotation_space = AnnotationSpace(linguistic_type_ref)
-                    annotation_space.add(annotation)
-
-                    graph.annotation_spaces.add(annotation_space)
-
-                    if add_node:
-                        element_tree = self.graf.create_node_with_region(element_tree,
-                            annotation, annotation_ref, node, region, anchors,
-                            from_node, edge)
-                    else:
-                        element_tree = self.graf.create_node_annotation(element_tree,
-                            annotation, annotation_ref)
-
-            if no_structure:
-                if not linguistic_type_ref in self.data_structure_hierarchy:
-                    self.data_structure_hierarchy.append(linguistic_type_ref)
-
-        # Find and place the orphan references because of the tiers order
-        for orphan in orphan_annotation_references_map.items():
-            reference = orphan[0]
-            orphan_values = orphan[1]
-            for values in orphan_values:
-                annotation_name = values[0]
-                annotation_id = values[1]
-                annotation_value = values[2]
-                annotation_ref = values[3]
-                tier_id = values[4]
-
-                auxiliar_tree = self.xml_files_map[reference]
-
-                # Look for the parent node:
-                for el_tree in auxiliar_tree:
-                    if el_tree.tag == 'node':
-                        node_ref = el_tree.attrib['xml:id']
-                    if el_tree.tag == 'a' and el_tree.attrib['xml:id'] == annotation_ref:
-                        annotation_node_ref = node_ref
-
-                annotation = Annotation(annotation_name, None,
-                    annotation_id)
-                annotation.features['annotation_value'] = annotation_value
-                annotation.features['ref_annotation'] = annotation_ref
-                annotation.features['tier_id'] = tier_id
-
-                # Keep all the extra attributes of the annotations tags
-                for attribute in child.attrib:
-                    if attribute != 'ANNOTATION_REF' and\
-                       attribute != 'ANNOTATION_ID' and\
-                       attribute != 'ANNOTATION_VALUE':
-                        annotation.features[attribute] = child.attrib[attribute]
-
-                graph.nodes[annotation_node_ref].annotations.add(annotation)
-
-                annotation_space = AnnotationSpace(annotation_name)
-                annotation_space.add(annotation)
-
-                graph.annotation_spaces.add(annotation_space)
-
-                element_tree = self.xml_files_map[annotation_name]
-
-                self.xml_files_map[annotation_name] = \
-                self.graf.create_node_annotation(element_tree,
-                    annotation, annotation_node_ref)
-
-        return graph
-
-    def _find_node(self, parent_ref, anchors):
-        """This method will try to find a parent
-        node using to search the anchors. This
-        anchors are the range/regions of a value.
-
-        Parameters
-        ----------
-        parent_ref : str
-            Identification of the parent of the node.
-        anchors : array_like
-            Values of the range to find the node.
-
-        """
-
-        for items in self.anchors_dict.items():
-            if parent_ref == items[0]:
-                for item in items[1]:
-                    range = item[1]
-                    if (int(range[0]) <= int(anchors[0]) <= int(range[1])) \
-                    and (int(range[0]) <= int(anchors[1]) <= int(range[1])):
-                        return item[0]
-        return None
-
-    def _find_hierarchy_parents(self, hierarchy, parent):
-        """This method will search in the data structure
-        hierarchy for the parents of each elements.
-
-        Parameters
-        ----------
-        hierarchy : array_like
-            Hierarchy of the data strcuture.
-        parent : str
-            Name of an element.
-
-        """
-
-        for index, element in enumerate(hierarchy):
-            if isinstance(element, list):
-                self._find_hierarchy_parents(element, parent)
-            else:
-                self.data_hierarchy_parent_dict[element] = parent
-                if index is 0:
-                    parent = element
-
-class Writer:
-    """
-    Class that will handle the writing of
-    GrAF files into Elan files again.
-
-    """
-
-    def __init__(self, extinfofile, outputfile):
-        """Class's constructor.
-
-        Parameters
-        ----------
-        extinfofile : str
-            Path of the metafile.
-        outputfile : str
-            Path and name of the new elan file.
-
-        """
-
-        self.extinfofile = extinfofile
-        self.outputfile = outputfile
-
-    def write(self):
-        """This method will look into the metafile
-        and then reconstruct the Elan file.
-
-        """
-
-        tree = ET.parse(self.extinfofile)
-        root = tree.getroot()
-
-        miscellaneous = root.find('./file/miscellaneous')
-        top_element = miscellaneous[0]
-
-        element_tree = Element(top_element.tag, top_element.attrib)
-
-        # Mapping the tiers LINGUISTIC_TYPE from the metafile
-        tier_map_dict = dict()
-
-        for tiers in root.findall('./header/tier_mapping/'):
-            value = tiers.attrib['name'].replace(' ','_')
-            for tiers_id in tiers:
-                key = tiers_id.text
-                tier_map_dict[key] = value
-
-        # Need to know the if the lingyustic type is alignable
-        linguisty_type = miscellaneous.findall('LINGUISTIC_TYPE')
-        linguisty_type_dict = dict()
-
-        for linguisty in linguisty_type:
-            key = linguisty.attrib['LINGUISTIC_TYPE_ID'].replace(' ','_')
-            value = linguisty.attrib['TIME_ALIGNABLE']
-            linguisty_type_dict[key] = value
-
-        for element in miscellaneous:
-
-            if element.tag != 'miscellaneous' and\
-               element.tag != 'ANNOTATION_DOCUMENT':
-
-                parent_element = SubElement(element_tree, element.tag,
-                    element.attrib)
-
-                for child in element:
-                    other_chid = SubElement(parent_element, child.tag,
-                        child.attrib)
-                    if not str(child.text).isspace() or\
-                       child.text is not None:
-                        other_chid.text = child.text
-
-                if element.tag == 'TIER':
-                    tier_id = element.attrib['TIER_ID']
-
-                    try:
-                        parent_ref = element.attrib['PARENT_REF']
-                    except KeyError as keyError:
-                        parent_ref = None
-
-                    linguisty_id = element.attrib['LINGUISTIC_TYPE_REF']
-                    linguisty_id = linguisty_id.replace(' ','_')
-
-                    tree = ET.parse(self.extinfofile.replace("-extinfo","-"+linguisty_id))
-                    graf_elements = tree.getroot()
-
-                    xml_namespace = re.search('\{(.*)\}', graf_elements.tag).group()
-                    attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
-
-                    if linguisty_type_dict[linguisty_id] == "true":
-                        for graf_element in graf_elements:
-                            key = attrib_namespace+"id"
-                            if (graf_element.tag == xml_namespace+"node")\
-                            and (tier_id+"/" in graf_element.attrib[key]):
-                                annotations = graf_elements.findall(xml_namespace+"a")
-                                for annotation in annotations:
-                                    ref = annotation.attrib['ref']
-
-                                    if ref == graf_element.attrib[key]:
-                                        annotation_id = annotation.attrib[attrib_namespace+"id"]
-                                        feature_structure = annotation[0]
-                                        annotation_value = feature_structure[0]
-                                        time_slot_1 = feature_structure[2]
-                                        time_slot_2 = feature_structure[1]
-
-                                        features_map = {}
-                                        features_map['ANNOTATION_ID'] = annotation_id
-                                        features_map['TIME_SLOT_REF1'] = time_slot_1.text
-                                        features_map['TIME_SLOT_REF2'] = time_slot_2.text
-
-                                        for feature_element in feature_structure:
-                                            if feature_element.attrib['name'] != 'annotation_value' and\
-                                               feature_element.attrib['name'] != 'time_slot1' and\
-                                               feature_element.attrib['name'] != 'time_slot2':
-                                                key = feature_element.attrib['name']
-                                                features_map[key] = feature_element.text
-
-                                        if linguisty_type_dict[linguisty_id] == 'true':
-                                            annotation_element = SubElement(parent_element,
-                                                'ANNOTATION')
-                                            alignable_annotation = SubElement(annotation_element,
-                                                'ALIGNABLE_ANNOTATION',features_map)
-                                            SubElement(alignable_annotation,
-                                                'ANNOTATION_VALUE').text = annotation_value.text
-                    else:
-                        annotations = graf_elements.findall(xml_namespace+"a")
-
-                        tree = ET.parse(self.extinfofile.replace("-extinfo",
-                            "-"+tier_map_dict[parent_ref]))
-                        parent_elements = tree.getroot()
-                        parent_annotations = parent_elements.findall(xml_namespace+"a")
-
-                        for annotation in annotations:
-                            annotation_id = annotation.attrib[attrib_namespace+"id"]
-                            feature_structure = annotation[0]
-
-                            annotation_tier_id = feature_structure[0].text
-                            ref_annotation_id = feature_structure[1].text
-                            annotation_value = feature_structure[2].text
-
-                            features_map = {}
-                            features_map['ANNOTATION_ID'] = annotation_id
-                            features_map['ANNOTATION_REF'] = ref_annotation_id
-
-                            for feature_element in feature_structure:
-                                if feature_element.attrib['name'] != 'ref_annotation' and\
-                                   feature_element.attrib['name'] != 'annotation_value' and\
-                                   feature_element.attrib['name'] != 'tier_id':
-                                    key = feature_element.attrib['name']
-                                    features_map[key] = feature_element.text
-
-                            for parent_annotation in parent_annotations:
-                                if parent_annotation.attrib['ref'] == annotation.attrib['ref']:
-                                    if annotation_tier_id == tier_id:
-                                        annotation = SubElement(parent_element, 'ANNOTATION')
-                                        ref_annotation = SubElement(annotation,
-                                            'REF_ANNOTATION',features_map)
-                                        SubElement(ref_annotation, 'ANNOTATION_VALUE').text =\
-                                        annotation_value
-
-                                        break
-
-        file = open(self.outputfile,'wb')
-        doc = minidom.parseString(tostring(element_tree))
-        file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
-        file.close()
+    def annotation_has_regions(self, annotation):
+        pass
