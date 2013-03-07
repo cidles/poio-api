@@ -25,11 +25,15 @@ class BaseParser(object):
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def get_root_tiers(self, element=None):
+    def get_root_tiers(self, tiers=None):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
     def get_child_tiers_for_tier(self, tier):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def find_children_tiers_for_tier(self, tier):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
