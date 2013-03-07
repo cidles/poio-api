@@ -52,7 +52,29 @@ class BaseParser(object):
     def as_graf(self):
         raise NotImplementedError("Method must be implemented")
 
-class GrAFWriter():
+    @abc.abstractmethod
+    def add_graf_node(self, node_index, prefix_name, regions=None,
+                      from_node=None):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def add_graf_annotations(self, annotations):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def add_graf_annotation(self, annotation_name, annotation_id,
+                            annotation_ref, annotation_features=None):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def find_from_node(self, parent_ref, anchors):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def _get_regions(self):
+        raise NotImplementedError("Method must be implemented")
+
+class Writer():
     """
     This class contain the methods to write the GrAF files.
 
