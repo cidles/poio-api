@@ -42,6 +42,19 @@ class TestBaseParser:
 
         assert(len(tier_childs) == 2)
 
+    def test_find_children_tiers_for_tier(self, tier):
+
+        #children = self.get_child_tiers_for_tier(tier)
+
+        #for child in children:
+            #print("Parent: "+tier.attrib['TIER_ID'])
+            #print("-->"+child.attrib['TIER_ID'])
+            #child_children = self.get_child_tiers_for_tier(child)
+            #if len(child_children) > 0:
+                #self.get_child_tiers_for_child_tier(child)
+
+        pass
+
     def test_get_annotations_for_tier(self):
 
         root_tier = "W-Spch"
