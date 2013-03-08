@@ -48,3 +48,20 @@ class TestBaseParser:
         tier_annotations = self.root.findall("TIER[@TIER_ID='"+root_tier+"']/ANNOTATION")
 
         assert(len(tier_annotations) == 15)
+
+    def test_create_data_structure(self):
+
+        depends_on_dict = dict()
+
+        structure_elements = ['utterance','words','part_of_speech']
+
+        parent = '_parent_linguistic_type_ref'
+        son = '_linguistic_type_ref'
+
+        if parent in depends_on_dict:
+            if son not in depends_on_dict[parent]:
+                depends_on_dict[parent].append(son)
+        else:
+            depends_on_dict[parent] = [son]
+
+        pass
