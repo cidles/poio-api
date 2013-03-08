@@ -45,7 +45,7 @@ def main(argv):
     annotation_graph.from_elan(inputfile)
 
     # Generate the GrAF files
-    annotation_graph.generate_graf_files()
+    annotation_graph.generate_graf_files(inputfile, outputfile)
 
     print('Finished')
 
