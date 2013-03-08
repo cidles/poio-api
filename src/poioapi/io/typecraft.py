@@ -18,7 +18,7 @@ import re
 
 import xml.etree.ElementTree as ET
 
-from poioapi.io.graf import Writer
+import poioapi.io.graf
 
 from graf import Graph
 from graf import Node, Edge
@@ -42,13 +42,7 @@ class Parser:
 
         """
 
-        self.filename = os.path.basename(filepath)
         self.filepath = filepath
-        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
-
-        self.xml_files_map = {}
-
-        self.graf = Writer()
 
     def as_graf(self):
         """This method will retrieve the parsed elements
@@ -104,7 +98,9 @@ class Parser:
 
         """
 
-        text_element_tree = self.graf.create_xml_graph_header('text', None)
+        graf_xml_writer = poioapi.io.graf.Writer()
+
+        text_element_tree = graf_xml_writer.create_xml_graph_header('text', None)
 
         for text in texts:
             index = text.attrib['id']
@@ -146,11 +142,11 @@ class Parser:
             graph.regions.add(region)
             graph.annotation_spaces.add(annotation_space)
 
-            text_element_tree = self.graf.create_graf_xml_node(text_element_tree,
+            text_element_tree = graf_xml_writer.create_graf_xml_node(text_element_tree,
                 annotation, node_id, node, region, anchors,
                 None, None)
 
-            self.xml_files_map['text'] = text_element_tree
+            graph.additional_information['text'] = text_element_tree
 
     def _parse_phrases(self, graph, xml_namespace, phrases,
                        dependency=None, from_node=None):
@@ -177,6 +173,8 @@ class Parser:
 
         """
 
+        graf_xml_writer = poioapi.io.graf.Writer()
+
         globaltags = xml_namespace+"globaltags"
         word = xml_namespace+"word"
         words_number = 1
@@ -185,12 +183,12 @@ class Parser:
         globaltags_number = 1
         globaltag_number = 1
 
-        element_tree = self.graf.create_xml_graph_header('phrase', dependency)
-        word_element_tree = self.graf.create_xml_graph_header('word', 'phrase')
-        morph_element_tree = self.graf.create_xml_graph_header('morpheme','word')
-        gloss_element_tree = self.graf.create_xml_graph_header('gloss','morpheme')
-        globaltags_element_tree = self.graf.create_xml_graph_header('globaltags', 'phrase')
-        globaltag_element_tree = self.graf.create_xml_graph_header('globaltag','globaltags')
+        element_tree = graf_xml_writer.create_xml_graph_header('phrase', dependency)
+        word_element_tree = graf_xml_writer.create_xml_graph_header('word', 'phrase')
+        morph_element_tree = graf_xml_writer.create_xml_graph_header('morpheme','word')
+        gloss_element_tree = graf_xml_writer.create_xml_graph_header('gloss','morpheme')
+        globaltags_element_tree = graf_xml_writer.create_xml_graph_header('globaltags', 'phrase')
+        globaltag_element_tree = graf_xml_writer.create_xml_graph_header('globaltag','globaltags')
 
         for phrase in phrases:
             index = phrase.attrib['id']
@@ -276,10 +274,10 @@ class Parser:
                                 annotation_space.add(gloss_ann)
                                 graph.annotation_spaces.add(annotation_space)
 
-                                gloss_element_tree = self.graf.create_graf_xml_node_annotation(gloss_element_tree,
+                                gloss_element_tree = graf_xml_writer.create_graf_xml_node_annotation(gloss_element_tree,
                                     gloss_ann, morph_node_id)
 
-                                self.xml_files_map['gloss'] = gloss_element_tree
+                                graph.additional_information['gloss'] = gloss_element_tree
 
                                 gloss_number+=1
 
@@ -287,11 +285,11 @@ class Parser:
                             annotation_space.add(morph_ann)
                             graph.annotation_spaces.add(annotation_space)
 
-                            morph_element_tree = self.graf.create_graf_xml_node(morph_element_tree,
+                            morph_element_tree = graf_xml_writer.create_graf_xml_node(morph_element_tree,
                                 morph_ann, morph_node.id, morph_node, None, None,
                                 word_node, morph_edge)
 
-                            self.xml_files_map['morpheme'] = morph_element_tree
+                            graph.additional_information['morpheme'] = morph_element_tree
 
                             morpheme_number+=1
 
@@ -304,11 +302,11 @@ class Parser:
                     graph.regions.add(word_region)
                     graph.annotation_spaces.add(annotation_space)
 
-                    word_element_tree = self.graf.create_graf_xml_node(word_element_tree,
+                    word_element_tree = graf_xml_writer.create_graf_xml_node(word_element_tree,
                         word_ann, word_node.id, word_node, word_region, word_anchors,
                         from_node, word_edge)
 
-                    self.xml_files_map['word'] = word_element_tree
+                    graph.additional_information['word'] = word_element_tree
 
                     words_number+=1
                 elif elements.tag == globaltags:
@@ -346,10 +344,10 @@ class Parser:
                         annotation_space.add(globaltag_ann)
                         graph.annotation_spaces.add(annotation_space)
 
-                        globaltag_element_tree = self.graf.create_graf_xml_node_annotation(globaltag_element_tree,
+                        globaltag_element_tree = graf_xml_writer.create_graf_xml_node_annotation(globaltag_element_tree,
                             globaltag_ann, globaltags_node_id)
 
-                        self.xml_files_map['globaltag'] = globaltag_element_tree
+                        graph.additional_information['globaltag'] = globaltag_element_tree
 
                         globaltag_number+=1
 
@@ -360,11 +358,11 @@ class Parser:
 
                     graph.annotation_spaces.add(annotation_space)
 
-                    globaltags_element_tree = self.graf.create_graf_xml_node(globaltags_element_tree,
+                    globaltags_element_tree = graf_xml_writer.create_graf_xml_node(globaltags_element_tree,
                         globaltags_ann, globaltags_node.id, globaltags_node, None, None, from_node,
                         globaltags_edge)
 
-                    self.xml_files_map['globaltags'] = globaltags_element_tree
+                    graph.additional_information['globaltags'] = globaltags_element_tree
 
                     globaltags_number+=1
                 else:
@@ -380,10 +378,10 @@ class Parser:
             graph.regions.add(region)
             graph.annotation_spaces.add(annotation_space)
 
-            element_tree = self.graf.create_graf_xml_node(element_tree,
+            element_tree = graf_xml_writer.create_graf_xml_node(element_tree,
                 annotation, node_id, node, region, anchors,
                 None, None)
 
-            self.xml_files_map['phrase'] = element_tree
+            graph.additional_information['phrase'] = element_tree
 
         return graph
