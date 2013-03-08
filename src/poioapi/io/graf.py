@@ -41,14 +41,6 @@ class BaseParser(object):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
-    def tier_has_regions(self, tier):
-        raise NotImplementedError("Method must be implemented")
-
-    @abc.abstractmethod
-    def annotation_has_regions(self, annotation):
-        raise NotImplementedError("Method must be implemented")
-
-    @abc.abstractmethod
     def as_graf(self):
         raise NotImplementedError("Method must be implemented")
 
@@ -71,7 +63,7 @@ class BaseParser(object):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
-    def _get_regions(self):
+    def get_regions(self):
         raise NotImplementedError("Method must be implemented")
 
 class Writer():
@@ -80,7 +72,7 @@ class Writer():
 
     """
 
-    def create_node_with_region(self, element_tree, annotation,
+    def create_graf_xml_node(self, element_tree, annotation,
                                 annotation_ref, node, region=None,
                                 regions=None, from_node=None, edge=None):
         """Create the nodes with the regions from
@@ -127,12 +119,12 @@ class Writer():
                     {'anchors':str(regions[0])+" "+str(regions[1]),
                      'xml:id':region.id})
 
-        element_tree = self.create_node_annotation(element_tree,
+        element_tree = self.create_graf_xml_node_annotation(element_tree,
             annotation, annotation_ref)
 
         return element_tree
 
-    def create_node_annotation(self, element_tree, annotation, annotation_ref):
+    def create_graf_xml_node_annotation(self, element_tree, annotation, annotation_ref):
         """Create the annotations of the nodes with
         ids.
 
