@@ -340,7 +340,7 @@ class AnnotationGraph():
 
         header.create_header()
 
-        if file_extension is ".eaf":
+        if file_extension == ".eaf":
             self._generate_metafile(inputfile)
 
     def _generate_metafile(self, inputfile):
