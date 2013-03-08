@@ -194,14 +194,14 @@ class Parser(poioapi.io.graf.BaseParser):
                         features_map[attribute] = annotation_elements[1].attrib[attribute]
 
                 index = re.sub("\D", "", annotation_ref)
-
                 annotation_ref = self._parent_linguistic_type_ref+"/"+\
                                  self._parent_tier_id+"/n"+index
 
                 annotation = self.add_graf_annotation(annotation_name, annotation_id,
                     annotation_ref, features_map)
 
-                graf_xml_writer.create_graf_xml_node_annotation(element_tree, annotation, annotation_ref)
+                graf_xml_writer.create_graf_xml_node_annotation(element_tree,
+                    annotation, annotation_ref)
 
         self.graph.additional_information[annotation_name] = element_tree
 
