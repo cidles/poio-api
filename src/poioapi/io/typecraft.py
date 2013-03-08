@@ -146,7 +146,7 @@ class Parser:
             graph.regions.add(region)
             graph.annotation_spaces.add(annotation_space)
 
-            text_element_tree = self.graf.create_node_with_region(text_element_tree,
+            text_element_tree = self.graf.create_graf_xml_node(text_element_tree,
                 annotation, node_id, node, region, anchors,
                 None, None)
 
@@ -276,7 +276,7 @@ class Parser:
                                 annotation_space.add(gloss_ann)
                                 graph.annotation_spaces.add(annotation_space)
 
-                                gloss_element_tree = self.graf.create_node_annotation(gloss_element_tree,
+                                gloss_element_tree = self.graf.create_graf_xml_node_annotation(gloss_element_tree,
                                     gloss_ann, morph_node_id)
 
                                 self.xml_files_map['gloss'] = gloss_element_tree
@@ -287,7 +287,7 @@ class Parser:
                             annotation_space.add(morph_ann)
                             graph.annotation_spaces.add(annotation_space)
 
-                            morph_element_tree = self.graf.create_node_with_region(morph_element_tree,
+                            morph_element_tree = self.graf.create_graf_xml_node(morph_element_tree,
                                 morph_ann, morph_node.id, morph_node, None, None,
                                 word_node, morph_edge)
 
@@ -304,7 +304,7 @@ class Parser:
                     graph.regions.add(word_region)
                     graph.annotation_spaces.add(annotation_space)
 
-                    word_element_tree = self.graf.create_node_with_region(word_element_tree,
+                    word_element_tree = self.graf.create_graf_xml_node(word_element_tree,
                         word_ann, word_node.id, word_node, word_region, word_anchors,
                         from_node, word_edge)
 
@@ -346,7 +346,7 @@ class Parser:
                         annotation_space.add(globaltag_ann)
                         graph.annotation_spaces.add(annotation_space)
 
-                        globaltag_element_tree = self.graf.create_node_annotation(globaltag_element_tree,
+                        globaltag_element_tree = self.graf.create_graf_xml_node_annotation(globaltag_element_tree,
                             globaltag_ann, globaltags_node_id)
 
                         self.xml_files_map['globaltag'] = globaltag_element_tree
@@ -360,7 +360,7 @@ class Parser:
 
                     graph.annotation_spaces.add(annotation_space)
 
-                    globaltags_element_tree = self.graf.create_node_with_region(globaltags_element_tree,
+                    globaltags_element_tree = self.graf.create_graf_xml_node(globaltags_element_tree,
                         globaltags_ann, globaltags_node.id, globaltags_node, None, None, from_node,
                         globaltags_edge)
 
@@ -380,7 +380,7 @@ class Parser:
             graph.regions.add(region)
             graph.annotation_spaces.add(annotation_space)
 
-            element_tree = self.graf.create_node_with_region(element_tree,
+            element_tree = self.graf.create_graf_xml_node(element_tree,
                 annotation, node_id, node, region, anchors,
                 None, None)
 
