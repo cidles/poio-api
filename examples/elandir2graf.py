@@ -10,6 +10,7 @@
 import os
 import sys, getopt
 
+import poioapi.annotationgraph
 import poioapi.io.elan
 
 def main(argv):
@@ -43,11 +44,12 @@ def main(argv):
         (basedirname, _) = os.path.splitext(file)
         inputfile = inputdir+file
 
+        print(inputfile)
         # Create a graph from an elan file
         annotation_graph.from_elan(inputfile)
 
         # Generate the GrAF files
-        annotation_graph.generate_graf_files()
+        annotation_graph.generate_graf_files(inputfile, inputfile)
 
         inputfile = inputdir+basedirname+"-extinfo.xml"
         outputfile = inputdir+basedirname+"_result.eaf"
