@@ -55,6 +55,7 @@ class Parser(poioapi.io.graf.BaseParser):
         self.data_structure_constraints = dict()
 
     def as_graf(self):
+
         self.graph = Graph()
 
         self.tree = ET.parse(self.filepath).getroot()
@@ -204,9 +205,6 @@ class Parser(poioapi.io.graf.BaseParser):
 
                 annotation = self.add_graf_annotation(annotation_name, annotation_id,
                     annotation_ref, features_map)
-
-                #graf_xml_writer.create_graf_xml_node_annotation(element_tree,
-                    #annotation, annotation_ref)
 
                 graf_xml_writer.create_graf_xml_node(element_tree,annotation,
                     node.id, node, from_node=from_node, edge=edge)
