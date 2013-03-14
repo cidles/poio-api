@@ -26,11 +26,6 @@ import xml.etree.ElementTree as ET
 
 import poioapi.io.graf
 
-from graf import Graph
-from graf import Node, Edge
-from graf import Annotation, AnnotationSpace
-from graf import Region
-
 class Parser(poioapi.io.graf.BaseParser):
     """
     Class that will handle parse Elan files.
@@ -54,16 +49,18 @@ class Parser(poioapi.io.graf.BaseParser):
         self.data_structure_hierarchy = data_structure_hierarchy
         self.data_structure_constraints = dict()
 
-    def as_graf(self):
+        self.annotations_list = []
 
-        self.graph = Graph()
+        self.parse()
+
+    def parse(self):
 
         self.tree = ET.parse(self.filepath).getroot()
 
         self.tiers = self.tree.findall('TIER')
         root_tiers = self.get_root_tiers(self.tiers)
 
-        self.regions_map = self.get_regions()
+        self.regions_map = self._map_time_order()
 
         for root_tier in root_tiers:
             self._parent_tier_id = None
@@ -73,13 +70,11 @@ class Parser(poioapi.io.graf.BaseParser):
             replace(" ","_")
 
             root_annotations = self.get_annotations_for_tier(root_tier)
-            self.add_graf_annotations(root_annotations)
+            self.add_elements_to_annotation_list(root_tier, root_annotations)
 
             self._add_data_constraint(self._tier_id, self._linguistic_type_ref)
 
             self.find_children_tiers_for_tier(root_tier)
-
-        return self.graph
 
     def get_root_tiers(self, tiers=None):
 
@@ -114,7 +109,7 @@ class Parser(poioapi.io.graf.BaseParser):
             self._linguistic_type_ref = child.attrib['LINGUISTIC_TYPE_REF'].\
             replace(" ","_")
 
-            self.add_graf_annotations(annotations)
+            self.add_elements_to_annotation_list(child, annotations)
 
             self._add_data_constraint(self._tier_id, self._linguistic_type_ref)
 
@@ -123,106 +118,83 @@ class Parser(poioapi.io.graf.BaseParser):
             if len(child_children) > 0:
                 self.find_children_tiers_for_tier(child)
 
-    def _add_data_constraint(self, tier_id, linguistic_type_ref):
-
-        if linguistic_type_ref in self.data_structure_constraints:
-            self.data_structure_constraints[linguistic_type_ref].append(tier_id)
-        else:
-            self.data_structure_constraints[linguistic_type_ref] = [tier_id]
-
     def get_annotations_for_tier(self, tier, annotation_parent=None):
 
         tier_annotations = tier.findall("ANNOTATION")
 
         return tier_annotations
 
-    def add_graf_annotations(self, annotations):
+    def add_elements_to_annotation_list(self, tier, annotations):
 
         prefix_name = self._linguistic_type_ref+"/"+self._tier_id
         annotation_name = self._linguistic_type_ref
         parent_ref = self._parent_linguistic_type_ref
 
-        graf_xml_writer = poioapi.io.graf.Writer()
-
-        if annotation_name not in self.graph.additional_information:
-            element_tree = graf_xml_writer.create_xml_graph_header(annotation_name,
-                parent_ref)
-        else:
-            element_tree = self.graph.additional_information[annotation_name]
+        has_regions = self.tier_has_regions(tier)
 
         for annotation in annotations:
             annotation_elements = annotation.getiterator()
 
-            if annotation_elements[1].tag == 'ALIGNABLE_ANNOTATION':
-                annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
-                annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
+            annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
+            annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
 
-                features_map = {'annotation_value':annotation_value,
-                                'time_slot1':annotation_elements[1].attrib['TIME_SLOT_REF1'],
-                                'time_slot2':annotation_elements[1].attrib['TIME_SLOT_REF2']}
+            annotation_ref = None
+            regions = None
 
-                regions = (self.regions_map[annotation_elements[1].attrib['TIME_SLOT_REF1']],
-                           self.regions_map[annotation_elements[1].attrib['TIME_SLOT_REF2']])
+            if has_regions:
+                features = {'annotation_value':annotation_value,
+                            'time_slot1':annotation_elements[1].attrib['TIME_SLOT_REF1'],
+                            'time_slot2':annotation_elements[1].attrib['TIME_SLOT_REF2']}
 
-                index = re.sub("\D", "", annotation_id)
-
-                if parent_ref is not None:
-                    from_node = self.find_from_node(parent_ref, regions)
-                else:
-                    from_node = None
-
-                (node, region, edge) = self.add_graf_node(index, prefix_name, regions, from_node)
-
-                annotation_ref = prefix_name+"/n"+index
-
-                annotation = self.add_graf_annotation(annotation_name, annotation_id,
-                    annotation_ref, features_map)
-
-                graf_xml_writer.create_graf_xml_node(element_tree,annotation,
-                    annotation_ref, node, region, regions, from_node, edge)
+                regions = self.region_for_annotation(annotation_elements[1])
             else:
-                annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
-                annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
                 annotation_ref = annotation_elements[1].attrib['ANNOTATION_REF']
 
-                features_map = {'annotation_value':annotation_value,
-                                'ref_annotation':annotation_ref,
-                                'tier_id':self._tier_id}
+                features = {'annotation_value':annotation_value,
+                            'ref_annotation':annotation_ref,
+                            'tier_id':self._tier_id}
 
                 for attribute in annotation_elements[1].attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
                        attribute != 'ANNOTATION_VALUE':
-                        features_map[attribute] = annotation_elements[1].attrib[attribute]
+                        features[attribute] = annotation_elements[1].attrib[attribute]
 
-                index = re.sub("\D", "", annotation_ref)
                 annotation_ref = self._parent_linguistic_type_ref+"/"+\
-                                 self._parent_tier_id+"/n"+index
+                                 self._parent_tier_id+"/n"+\
+                                 re.sub("\D", "", annotation_ref)
 
-                from_node = self.graph.nodes[annotation_ref]
+            self.annotations_list.append({'parent_ref':parent_ref,
+                                          'annotation_name':annotation_name,
+                                          'annotation_ref':annotation_ref,
+                                          'annotation_id':annotation_id,
+                                          'index_number':re.sub("\D", "", annotation_id),
+                                          'prefix_name':prefix_name,
+                                          'regions':regions,
+                                          'features':features})
 
-                index = re.sub("\D", "", annotation_id)
-                (node, _, edge) = self.add_graf_node(index, prefix_name, from_node=from_node)
+    def tier_has_regions(self, tier):
 
-                annotation = self.add_graf_annotation(annotation_name, annotation_id,
-                    annotation_ref, features_map)
+        linguistic_id = tier.attrib['LINGUISTIC_TYPE_REF']
+        linguistic_type = self.tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+linguistic_id+"']")
 
-                graf_xml_writer.create_graf_xml_node(element_tree,annotation,
-                    node.id, node, from_node=from_node, edge=edge)
+        if linguistic_type.attrib['TIME_ALIGNABLE'] == 'true':
+            return True
 
-        self.graph.additional_information[annotation_name] = element_tree
+        return False
 
-    def find_from_node(self, parent_ref, anchors):
+    def region_for_annotation(self, annotation):
 
-        for region in self.graph.regions:
-            if parent_ref in region.id:
-                if (int(region.anchors[0]) <= int(anchors[0]) <= int(region.anchors[1]))\
-                and (int(region.anchors[0]) <= int(anchors[1]) <= int(region.anchors[1])):
-                    node_id = re.sub(r"(.*)/r", r"\1/n", region.id)
-                    node = self.graph.nodes[node_id]
-                    return node
-        return None
+        if 'TIME_SLOT_REF1' in annotation.attrib:
+            region_1 = int(self.regions_map[annotation.attrib['TIME_SLOT_REF1']])
 
-    def get_regions(self):
+        if 'TIME_SLOT_REF2' in annotation.attrib:
+            region_2 = int(self.regions_map[annotation.attrib['TIME_SLOT_REF2']])
+
+        regions = (region_1, region_2)
+
+        return regions
+
+    def _map_time_order(self):
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
@@ -239,46 +211,12 @@ class Parser(poioapi.io.graf.BaseParser):
 
         return time_order_dict
 
-    def add_graf_node(self, node_index, prefix_name, regions=None, from_node=None):
+    def _add_data_constraint(self, tier_id, linguistic_type_ref):
 
-        node_id = prefix_name+"/n"+node_index
-        node = Node(node_id)
-
-        if from_node is not None:
-            edge_id = "e"+node_index
-            edge = Edge(edge_id, from_node, node)
-
-            self.graph.edges.add(edge)
+        if linguistic_type_ref in self.data_structure_constraints:
+            self.data_structure_constraints[linguistic_type_ref].append(tier_id)
         else:
-            edge = None
-
-        if regions is not None:
-            region_id = prefix_name+"/r"+node_index
-            region = Region(region_id, *regions)
-            node.add_region(region)
-
-            self.graph.regions.add(region)
-        else:
-            region = None
-
-        self.graph.nodes.add(node)
-
-        return node, region, edge
-
-    def add_graf_annotation(self, annotation_name, annotation_id,
-                            annotation_ref, annotation_features=None):
-
-        annotation = Annotation(annotation_name, annotation_features,
-            annotation_id)
-
-        self.graph.nodes[annotation_ref].annotations.add(annotation)
-
-        annotation_space = AnnotationSpace(annotation_name)
-        annotation_space.add(annotation)
-
-        self.graph.annotation_spaces.add(annotation_space)
-
-        return annotation
+            self.data_structure_constraints[linguistic_type_ref] = [tier_id]
 
 class Writer:
     """
