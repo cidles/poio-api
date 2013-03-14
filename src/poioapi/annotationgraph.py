@@ -326,7 +326,7 @@ class AnnotationGraph():
         graf_xml_writer.generate_graf_files(self.graf, inputfile)
 
         (_, file_extension) = os.path.splitext(outputfile)
-        
+
         if file_extension == ".eaf":
             self._generate_metafile(inputfile)
 
