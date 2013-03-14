@@ -20,6 +20,8 @@ import xml.etree.ElementTree as ET
 import poioapi.io.elan
 import poioapi.io.header
 import poioapi.io.typecraft
+import poioapi.io.graf
+
 from poioapi import data
 
 from graf import GraphParser
@@ -272,9 +274,9 @@ class AnnotationGraph():
         """
 
         elan = poioapi.io.elan.Parser(elanfile)
+        elan_graf = poioapi.io.graf.GrAFConverter(elan)
 
-        # Create a GrAF object
-        self.graf = elan.as_graf()
+        self.graf = elan_graf.as_graf()
 
         self.data_structure_constraints = elan.data_structure_constraints
 
@@ -319,27 +321,12 @@ class AnnotationGraph():
 
         """
 
-        filename = os.path.abspath(outputfile)
-        (basedirname, file_extension) = os.path.splitext(outputfile)
-        header = poioapi.io.header.HeaderFile(basedirname)
-        header.filename = os.path.splitext(filename)[0]
-        header.primaryfile = os.path.basename(outputfile)
-        header.dataType = 'text'
+        graf_xml_writer = poioapi.io.graf.Writer()
 
-        for elements in self.graf.additional_information.items():
-            file_name = elements[0]
-            extension = file_name+".xml"
-            filepath = basedirname+"-"+extension
-            loc = os.path.basename(filepath)
-            header.add_annotation(loc, file_name)
-            file = open(filepath,'wb')
-            element_tree = elements[1]
-            doc = minidom.parseString(tostring(element_tree))
-            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-            file.close()
+        graf_xml_writer.generate_graf_files(self.graf, inputfile)
 
-        header.create_header()
-
+        (_, file_extension) = os.path.splitext(outputfile)
+        
         if file_extension == ".eaf":
             self._generate_metafile(inputfile)
 
