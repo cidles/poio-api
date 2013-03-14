@@ -13,12 +13,25 @@ The parser use the ContentHandler from
 SAX Xml module.
 """
 
+from __future__ import absolute_import
+
 import abc
 import codecs
+import os
+import re
+
+from xml.dom import minidom
 
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
-from xml.etree.ElementTree import Element, SubElement
+from xml.etree.ElementTree import Element, SubElement, tostring
+
+from graf import Graph
+from graf import Node, Edge
+from graf import Annotation, AnnotationSpace
+from graf import Region
+
+import poioapi.io.header
 
 class BaseParser(object):
 
@@ -41,30 +54,94 @@ class BaseParser(object):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
+    def add_elements_to_annotation_list(self, tiers, annotations):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def tier_has_regions(self, tier):
+        raise NotImplementedError("Method must be implemented")
+
+    @abc.abstractmethod
+    def region_for_annotation(self, annotation):
+        raise NotImplementedError("Method must be implemented")
+
+class GrAFConverter:
+
+    def __init__(self, parser):
+        self.parser = parser
+        self.graph = Graph()
+
     def as_graf(self):
-        raise NotImplementedError("Method must be implemented")
 
-    @abc.abstractmethod
-    def add_graf_node(self, node_index, prefix_name, regions=None,
-                      from_node=None):
-        raise NotImplementedError("Method must be implemented")
+        annotations = self.parser.annotations_list
 
-    @abc.abstractmethod
-    def add_graf_annotations(self, annotations):
-        raise NotImplementedError("Method must be implemented")
+        for tier in annotations:
 
-    @abc.abstractmethod
+            regions = None
+            from_node = None
+
+            if tier['regions'] is not None:
+                regions = tier['regions']
+                if tier['parent_ref'] is not None:
+                    from_node = self.find_from_node_from_regions(tier['parent_ref'], tier['regions'])
+
+            if tier['annotation_ref'] is not None:
+                from_node = self.graph.nodes[tier['annotation_ref']]
+
+            annotation_ref = tier['prefix_name']+"/n"+tier['index_number']
+
+            self.add_graf_node(tier['index_number'], tier['prefix_name'], regions, from_node)
+            self.add_graf_annotation(tier['annotation_name'],
+                tier['annotation_id'], annotation_ref,
+                tier['features'])
+
+        return self.graph
+
     def add_graf_annotation(self, annotation_name, annotation_id,
                             annotation_ref, annotation_features=None):
-        raise NotImplementedError("Method must be implemented")
 
-    @abc.abstractmethod
-    def find_from_node(self, parent_ref, anchors):
-        raise NotImplementedError("Method must be implemented")
+        annotation = Annotation(annotation_name, annotation_features,
+            annotation_id)
 
-    @abc.abstractmethod
-    def get_regions(self):
-        raise NotImplementedError("Method must be implemented")
+        self.graph.nodes[annotation_ref].annotations.add(annotation)
+
+        annotation_space = AnnotationSpace(annotation_name)
+        annotation_space.add(annotation)
+
+        self.graph.annotation_spaces.add(annotation_space)
+
+    def add_graf_node(self, node_index, prefix_name, regions=None,
+                      from_node=None):
+
+        node_id = prefix_name+"/n"+node_index
+        node = Node(node_id)
+
+        if from_node is not None:
+            edge_id = "e"+node_index
+            edge = Edge(edge_id, from_node, node)
+
+            self.graph.edges.add(edge)
+
+        if regions is not None:
+            region_id = prefix_name+"/r"+node_index
+            region = Region(region_id, *regions)
+            node.add_region(region)
+
+            self.graph.regions.add(region)
+
+        self.graph.nodes.add(node)
+
+    def find_from_node_from_regions(self, parent_ref, anchors):
+
+        for region in self.graph.regions:
+            if parent_ref in region.id:
+                if (int(region.anchors[0]) <= int(anchors[0]) <= int(region.anchors[1]))\
+                and (int(region.anchors[0]) <= int(anchors[1]) <= int(region.anchors[1])):
+                    node_id = re.sub(r"(.*)/r", r"\1/n", region.id)
+                    node = self.graph.nodes[node_id]
+                    return node
+
+        return None
 
 class Writer():
     """
@@ -72,9 +149,9 @@ class Writer():
 
     """
 
-    def create_graf_xml_node(self, element_tree, annotation,
-                                annotation_ref, node, region=None,
-                                regions=None, from_node=None, edge=None):
+    def create_graf_xml_node(self, element_tree, annotations,
+                             annotation_ref, node, region=None,
+                             from_node=None, edge=None):
         """Create the nodes with the regions from
         a values with ids.
 
@@ -90,8 +167,6 @@ class Writer():
             GrAF node object.
         region : object
             GrAF region node object.
-        regions : array_like
-            Anchors of the regions represented by the region.
         from_node : object
             GrAF node object representing the begin of an edge.
         edge : object
@@ -116,11 +191,12 @@ class Writer():
             SubElement(graph_node, 'link', {'targets':region.id})
 
             SubElement(element_tree, 'region',
-                    {'anchors':str(regions[0])+" "+str(regions[1]),
+                    {'anchors':str(region.anchors[0])+" "+str(region.anchors[1]),
                      'xml:id':region.id})
 
-        element_tree = self.create_graf_xml_node_annotation(element_tree,
-            annotation, annotation_ref)
+        for annotation in annotations:
+            element_tree = self.create_graf_xml_node_annotation(element_tree,
+                annotation, annotation_ref)
 
         return element_tree
 
@@ -160,7 +236,7 @@ class Writer():
         return element_tree
 
     def create_node_with_region_no_id(self, element_tree, depends, annotation,
-                                annotation_value, region, increment):
+                                      annotation_value, region, increment):
         """Create the nodes with the regions and
         generate the ids of the nodes, edges...
         and the rest of the GrAF elements.
@@ -212,7 +288,7 @@ class Writer():
         return element_tree
 
     def create_node_annotation_no_id(self, element_tree, annotation,
-                               annotation_value, depends, depends_number):
+                                     annotation_value, depends, depends_number):
         """Create nodes that only have annotation
         and dependencies and generate the ids of
         the rest of the GrAF elements.
@@ -285,6 +361,61 @@ class Writer():
             'annotationSpace',{'as.id':annotation})
 
         return element_tree
+
+    def generate_graf_files(self, graf, outputfile):
+
+        for node in sorted(graf.nodes):
+            if len(node.in_edges._by_ind) is not 0:
+                edge = node.in_edges._by_ind[0]
+                from_node = edge.from_node
+            else:
+                edge = None
+                from_node = None
+
+            if len(node.links) is not 0:
+                links = node.links[0]
+                region = links[0]
+            else:
+                region = None
+
+            annotation_ref = node.id
+            annotations = node.annotations
+
+            annotation_name = str(node.id).split('/')[0]
+
+            if annotation_name not in graf.additional_information:
+                try:
+                    dependencie = str(node.parent.id).split('/')[0]
+                except AttributeError:
+                    dependencie = None
+
+                element_tree = self.create_xml_graph_header(annotation_name, dependencie)
+            else:
+                element_tree = graf.additional_information[annotation_name]
+
+            graf.additional_information[annotation_name] = self.create_graf_xml_node(element_tree, annotations,
+                annotation_ref, node, region, from_node, edge)
+
+        filename = os.path.abspath(outputfile)
+        (basedirname, file_extension) = os.path.splitext(outputfile)
+        header = poioapi.io.header.HeaderFile(basedirname)
+        header.filename = os.path.splitext(filename)[0]
+        header.primaryfile = os.path.basename(outputfile)
+        header.dataType = 'text'
+
+        for elements in graf.additional_information.items():
+            file_name = elements[0]
+            extension = file_name+".xml"
+            filepath = basedirname+"-"+extension
+            loc = os.path.basename(filepath)
+            header.add_annotation(loc, file_name)
+            file = open(filepath,'wb')
+            element_tree = elements[1]
+            doc = minidom.parseString(tostring(element_tree))
+            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+            file.close()
+
+        header.create_header()
 
 class XmlHandler(ContentHandler):
 
