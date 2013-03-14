@@ -9,7 +9,6 @@
 import sys, getopt
 
 import poioapi.annotationgraph
-import poioapi.data
 
 def main(argv):
 
