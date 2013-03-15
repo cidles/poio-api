@@ -61,8 +61,6 @@ class TestTypecraft:
 
         expected_features_number = len(node_phrase.attrib)
 
-        print(node_phrase)
-
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
             if key[1] != "word":
