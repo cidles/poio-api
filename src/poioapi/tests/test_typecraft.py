@@ -65,7 +65,7 @@ class TestTypecraft:
 
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
-            if key[1] != "word" and key[1] != "globaltags":
+            if key[1] != "word":
                 expected_features_number+=1
 
         node = self.graph.nodes["phrase/n1818"]
