@@ -32,7 +32,7 @@ class Parser(poioapi.io.graf.BaseParser):
         Parameters
         ----------
         filepath : str
-            Path of the elan file.
+            Path of the typecraft file.
 
         """
 
