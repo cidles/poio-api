@@ -54,7 +54,7 @@ class BaseParser(object):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
-    def add_elements_to_annotation_list(self, tiers, annotations):
+    def add_elements_to_annotation_list(self, tier, annotations):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
