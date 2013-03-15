@@ -74,6 +74,4 @@ class TestTypecraft:
 
         features_number = len(node_annotations[0].features)
 
-        print(expected_features_number)
-        print(features_number)
         assert(features_number == expected_features_number)
