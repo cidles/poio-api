@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader date.created="2013-02-22" docID="PoioAPI-822363" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+<documentHeader date.created="2013-03-15" docID="PoioAPI-593968" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
   <fileDesc>
-    <fileName>typecraft_example</fileName>
+    <fileName>/home/alopes/tests/typecraft/typecraft_example</fileName>
     <extent count="0" unit="words"/>
     <sourceDesc>
       <author age="" sex="">alopes</author>
       <source type="Contributor">Cont</source>
       <publisher>self</publisher>
-      <pubDate iso8601="2013-02-22"/>
+      <pubDate iso8601="2013-03-15"/>
       <idno type="ISBN">9164784</idno>
     </sourceDesc>
   </fileDesc>

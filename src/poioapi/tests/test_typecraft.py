@@ -12,7 +12,8 @@ import re
 
 import xml.etree.ElementTree as ET
 
-from poioapi.io import typecraft
+import poioapi.io.typecraft
+import poioapi.io.graf
 
 class TestTypecraft:
     """
@@ -27,9 +28,11 @@ class TestTypecraft:
 
         self.basedirname = os.path.dirname(self.filename)
 
-        self.typecraft = typecraft.Parser(self.filename)
+        typecraft = poioapi.io.typecraft.Parser(self.filename)
 
-        self.graph = self.typecraft.as_graf()
+        typecraft_graf = poioapi.io.graf.GrAFConverter(typecraft)
+
+        self.graph = typecraft_graf.as_graf()
 
         tree = ET.parse(self.filename)
         self.root = tree.getroot()
@@ -58,6 +61,8 @@ class TestTypecraft:
 
         expected_features_number = len(node_phrase.attrib)
 
+        print(node_phrase)
+
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
             if key[1] != "word" and key[1] != "globaltags":
@@ -69,4 +74,6 @@ class TestTypecraft:
 
         features_number = len(node_annotations[0].features)
 
+        print(expected_features_number)
+        print(features_number)
         assert(features_number == expected_features_number)
