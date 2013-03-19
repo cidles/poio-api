@@ -278,8 +278,11 @@ class Writer:
                 tier_id = tiers_id.text
                 linguistic_type = value
 
-                graf_tree = ET.parse(self.extinfofile.replace("-extinfo",
-                    "-"+linguistic_type)).getroot()
+                try:
+                    graf_tree = ET.parse(self.extinfofile.replace("-extinfo",
+                        "-"+linguistic_type)).getroot()
+                except IOError as ioError:
+                    continue
 
                 annotations = graf_tree.findall('{http://www.xces.org/ns/GrAF/1.0/}a')
 
