@@ -57,120 +57,81 @@ class Parser(poioapi.io.graf.BaseParser):
 
         self.tree = ET.parse(self.filepath).getroot()
 
-        self.tiers = self.tree.findall('TIER')
-        root_tiers = self.get_root_tiers(self.tiers)
+#        self.tiers = self.tree.findall('TIER')
+#        root_tiers = self.get_root_tiers()
+#        print(root_tiers[1].name)
+#
+#        child_tiers = self.get_child_tiers_for_tier(root_tiers[1])
+#
+#        annotations = self.tree.findall("TIER[@PARENT_REF='"+root_tiers[1].name+"'][@TIER_ID='"+child_tiers[0].name+"']/")
+#
+#        annotations = self.get_annotations_for_tier(child_tiers[0], root_tiers[1])
+#
+#        print('ok')
+        #child_tiers = self.get_child_tiers_for_tier()
+#
+#
+#        self.regions_map = self._map_time_order()
+#
+#        for root_tier in root_tiers:
+#            self._parent_tier_id = None
+#            self._parent_linguistic_type_ref = None
+#            self._tier_id = root_tier.attrib['TIER_ID']
+#            self._linguistic_type_ref = root_tier.attrib['LINGUISTIC_TYPE_REF'].\
+#            replace(" ","_")
+#
+#            root_annotations = self.get_annotations_for_tier(root_tier)
+#            self.add_elements_to_annotation_list(root_tier, root_annotations)
+#
+#            self._add_data_constraint(self._tier_id, self._linguistic_type_ref)
+#
+#            self.find_children_tiers_for_tier(root_tier)
 
-        self.regions_map = self._map_time_order()
+    def get_root_tiers(self):
 
-        for root_tier in root_tiers:
-            self._parent_tier_id = None
-            self._parent_linguistic_type_ref = None
-            self._tier_id = root_tier.attrib['TIER_ID']
-            self._linguistic_type_ref = root_tier.attrib['LINGUISTIC_TYPE_REF'].\
-            replace(" ","_")
-
-            root_annotations = self.get_annotations_for_tier(root_tier)
-            self.add_elements_to_annotation_list(root_tier, root_annotations)
-
-            self._add_data_constraint(self._tier_id, self._linguistic_type_ref)
-
-            self.find_children_tiers_for_tier(root_tier)
-
-    def get_root_tiers(self, tiers=None):
-
-        root_tiers = []
-
-        for tier in tiers:
-            if not 'PARENT_REF' in tier.attrib:
-                root_tiers.append(tier)
-
-        return root_tiers
+        return [poioapi.io.graf.Tier(tier.attrib['TIER_ID'])
+                for tier in self.tree.findall('TIER')
+                if not 'PARENT_REF' in tier.attrib]
 
     def get_child_tiers_for_tier(self, tier):
 
-        tier_id = tier.attrib['TIER_ID']
-
-        tier_childs = self.tree.findall("TIER[@PARENT_REF='"+tier_id+"']")
-
-        return tier_childs
-
-    def find_children_tiers_for_tier(self, tier):
-
-        children = self.get_child_tiers_for_tier(tier)
-
-        for child in children:
-            annotations = self.get_annotations_for_tier(child)
-
-            self._parent_tier_id = tier.attrib['TIER_ID']
-            self._parent_linguistic_type_ref = tier.attrib['LINGUISTIC_TYPE_REF'].\
-            replace(" ","_")
-
-            self._tier_id = child.attrib['TIER_ID']
-            self._linguistic_type_ref = child.attrib['LINGUISTIC_TYPE_REF'].\
-            replace(" ","_")
-
-            self.add_elements_to_annotation_list(child, annotations)
-
-            self._add_data_constraint(self._tier_id, self._linguistic_type_ref)
-
-            child_children = self.get_child_tiers_for_tier(child)
-
-            if len(child_children) > 0:
-                self.find_children_tiers_for_tier(child)
+        return [poioapi.io.graf.Tier(child_tier.attrib['TIER_ID'])
+                for child_tier in self.tree.findall("TIER[@PARENT_REF='"+tier.name+"']")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
 
-        tier_annotations = tier.findall("ANNOTATION")
+        annotations = []
 
-        return tier_annotations
+        print(tier)
 
-    def add_elements_to_annotation_list(self, tier, annotations):
+        if annotation_parent is None:
+            tier_annotations = self.tree.findall("TIER[@TIER_ID='"+tier.name+"']/")
+        else:
+            tier_annotations = self.tree.findall("TIER[@PARENT_REF='"+annotation_parent.name+"'][@TIER_ID='"+tier.name+"']/")
 
-        prefix_name = self._linguistic_type_ref+"/"+self._tier_id
-        annotation_name = self._linguistic_type_ref
-        parent_ref = self._parent_linguistic_type_ref
-
-        has_regions = self.tier_has_regions(tier)
-
-        for annotation in annotations:
+        for annotation in tier_annotations:
             annotation_elements = annotation.getiterator()
 
             annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
             annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
 
-            annotation_ref = None
-            regions = None
-
-            if has_regions:
-                features = {'annotation_value':annotation_value,
-                            'time_slot1':annotation_elements[1].attrib['TIME_SLOT_REF1'],
+            if annotation_elements[1].tag == "ALIGNABLE_ANNOTATION":
+                features = {'time_slot1':annotation_elements[1].attrib['TIME_SLOT_REF1'],
                             'time_slot2':annotation_elements[1].attrib['TIME_SLOT_REF2']}
-
-                regions = self.region_for_annotation(annotation_elements[1])
             else:
                 annotation_ref = annotation_elements[1].attrib['ANNOTATION_REF']
 
-                features = {'annotation_value':annotation_value,
-                            'ref_annotation':annotation_ref,
-                            'tier_id':self._tier_id}
+                features = {'ref_annotation':annotation_ref,
+                            'tier_id':tier.name}
 
                 for attribute in annotation_elements[1].attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
                        attribute != 'ANNOTATION_VALUE':
                         features[attribute] = annotation_elements[1].attrib[attribute]
 
-                annotation_ref = self._parent_linguistic_type_ref+"/"+\
-                                 self._parent_tier_id+"/n"+\
-                                 re.sub("\D", "", annotation_ref)
+            annotations.append(poioapi.io.graf.Annotation(annotation_id, annotation_value, features))
 
-            self.annotations_list.append({'parent_ref':parent_ref,
-                                          'annotation_name':annotation_name,
-                                          'annotation_ref':annotation_ref,
-                                          'annotation_id':annotation_id,
-                                          'index_number':re.sub("\D", "", annotation_id),
-                                          'prefix_name':prefix_name,
-                                          'regions':regions,
-                                          'features':features})
+        return annotations
 
     def tier_has_regions(self, tier):
 
