@@ -30,7 +30,7 @@ import graf
 import poioapi.io.header
 
 class Tier:
-    __slots__ = [ 'name']
+    __slots__ = [ 'name' ]
 
     def __init__(self, name):
         self.name = name
@@ -110,25 +110,21 @@ class GrAFConverter:
         for tier in self.parser.get_root_tiers():
             self._convert_tier(tier, None, None)
 
-    #def _convert_tier(self, tier, parent_node, parent_annotation):
-    def _convert_tier(self, tier, parent_node, parent_tier):
+    def _convert_tier(self, tier, parent_node, parent_annotation):
 
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
-        #for annotation in self.parser.get_annotations_for_tier(tier, parent_annotation):
-        #for annotation in self.parser.get_annotations_for_tier(tier, parent_node):
-        for annotation in self.parser.get_annotations_for_tier(tier, parent_tier):
+        for annotation in self.parser.get_annotations_for_tier(tier, parent_annotation):
             node_id = NodeId(tier.name, annotation.id)
             self._add_node(node_id, annotation, parent_node)
+
             if child_tiers:
                 for t in child_tiers:
-                    print(annotation)
-                    #self._convert_tier(t, node_id, annotation)
-                    self._convert_tier(t, node_id, parent_tier)
+                    self._convert_tier(t, node_id, annotation)
 
     def _add_node(self, node_id, annotation, from_node_id):
-        self.add_node_to_graph(node_id, from_node_id=from_node_id)
-        self.add_graf_annotation(annotation.value, annotation.id, node_id, annotation.features)
+        self._add_node_to_graph(node_id, from_node_id=from_node_id)
+        self._add_graf_annotation(annotation.value, annotation.id, node_id, annotation.features)
 
     #        annotations = self.parser.annotations_list
 #
@@ -154,7 +150,7 @@ class GrAFConverter:
 #
 #        return self.graph
 
-    def add_graf_annotation(self, annotation_name, annotation_id,
+    def _add_graf_annotation(self, annotation_name, annotation_id,
                             annotation_ref, annotation_features=None):
 
         annotation = graf.Annotation(annotation_name, annotation_features,
@@ -167,7 +163,7 @@ class GrAFConverter:
 
         self.graph.annotation_spaces.add(annotation_space)
 
-    def add_node_to_graph(self, node_id, regions=None,
+    def _add_node_to_graph(self, node_id, regions=None,
                       from_node_id=None):
 
         node = graf.Node(str(node_id))
