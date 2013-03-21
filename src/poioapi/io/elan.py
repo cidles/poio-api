@@ -162,10 +162,9 @@ class Writer:
 
         """
 
-        tree = ET.parse(self.extinfofile)
-        root = tree.getroot()
+        tree = ET.parse(self.extinfofile).getroot()
 
-        miscellaneous = root.findall('./miscellaneous/')
+        miscellaneous = tree.findall('./miscellaneous/')
         element_tree = Element(miscellaneous[0].tag, miscellaneous[0].attrib)
 
         for element in miscellaneous:
@@ -179,42 +178,33 @@ class Writer:
                        child.text is not None:
                         other_chid.text = child.text
 
-        linguisty_type_dict = dict()
-
-        for linguisty in element_tree.findall('LINGUISTIC_TYPE'):
-            key = linguisty.attrib['LINGUISTIC_TYPE_ID'].replace(' ','_')
-            value = linguisty.attrib['TIME_ALIGNABLE']
-            linguisty_type_dict[key] = value
-
         attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
 
-        for tiers in root.findall('./header/tier_mapping/'):
-            value = tiers.attrib['name'].replace(' ','_')
+        for tiers in tree.findall('./header/tier_mapping/'):
+            linguistic_type = tiers.attrib['name'].replace(' ','_')
+
             for tiers_id in tiers:
                 tier_id = tiers_id.text
-                linguistic_type = value
 
-                try:
-                    graf_tree = ET.parse(self.extinfofile.replace("-extinfo",
-                        "-"+linguistic_type)).getroot()
-                except IOError as ioError:
-                    continue
+                graf_tree = ET.parse(self.extinfofile.replace("-extinfo",
+                    "-"+linguistic_type)).getroot()
 
                 annotations = graf_tree.findall('{http://www.xces.org/ns/GrAF/1.0/}a')
 
                 tier_element_tree = element_tree.find("TIER[@TIER_ID='"+tier_id+"']")
 
-                linguistic_type_ref = tier_element_tree.attrib['LINGUISTIC_TYPE_REF'].replace(' ','_')
+                linguistic_type_ref = element_tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+
+                                                        tier_element_tree.attrib['LINGUISTIC_TYPE_REF']+"']")
 
                 for annotation in annotations:
                     features_map = {}
 
                     if tier_id+"/" in annotation.attrib['ref']:
-                        if linguisty_type_dict[linguistic_type_ref] == 'true':
+                        if linguistic_type_ref.attrib['TIME_ALIGNABLE'] == 'true':
                             feature_structure = annotation[0]
-                            annotation_value = feature_structure[0].text
-                            time_slot_1 = feature_structure[2].text
+                            time_slot_1 = feature_structure[0].text
                             time_slot_2 = feature_structure[1].text
+                            annotation_value = feature_structure[2].text
 
                             features_map['ANNOTATION_ID'] = annotation.attrib[attrib_namespace+"id"]
                             features_map['TIME_SLOT_REF1'] = time_slot_1
