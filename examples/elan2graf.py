@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#
 # Poio Tools for Linguists
 #
 # Copyright (C) 2009-2013 Poio Project
@@ -13,12 +14,11 @@ import poioapi.io.graf_old
 import poioapi.io.elan_old
 
 def main(argv):
-
     inputfile = ''
     outputfile = ''
 
     try:
-        opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+        opts, args = getopt.getopt(argv, "hi:o:", ["ifile=", "ofile="])
     except getopt.GetoptError:
         print('elan2graf.py -i <inputfile> -o <outputfile>')
         sys.exit(2)
