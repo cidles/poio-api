@@ -92,8 +92,6 @@ class GrAFConverter:
         self.graph = graf.Graph()
         self.current_index = 0
 
-        #self.convert()
-
     def next_index(self):
         index = self.current_index
         self.current_index += 1
@@ -176,18 +174,6 @@ class GrAFConverter:
             self.graph.regions.add(region)
 
         self.graph.nodes.add(node)
-
-#    def find_from_node_from_regions(self, parent_ref, anchors):
-#
-#        for region in self.graph.regions:
-#            if parent_ref in region.id:
-#                if (int(region.anchors[0]) <= int(anchors[0]) <= int(region.anchors[1]))\
-#                and (int(region.anchors[0]) <= int(anchors[1]) <= int(region.anchors[1])):
-#                    node_id = re.sub(r"(.*)/r", r"\1/n", region.id)
-#                    node = self.graph.nodes[node_id]
-#                    return node
-#
-#        return None
 
 class Writer():
     """
