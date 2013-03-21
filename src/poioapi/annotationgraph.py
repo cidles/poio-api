@@ -273,12 +273,12 @@ class AnnotationGraph():
 
         """
 
-        elan = poioapi.io.elan.Parser(elanfile)
-        elan_graf = poioapi.io.graf.GrAFConverter(elan)
+        parser = poioapi.io.elan.Parser(elanfile)
 
-        self.graf = elan_graf.as_graf()
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
 
-        self.data_structure_constraints = elan.data_structure_constraints
+        self.graf = converter.graph
 
     def from_typecraft(self, typecraftfile):
         """This method generates a GrAF object
@@ -296,7 +296,6 @@ class AnnotationGraph():
         from a pickle file.
 
         """
-
         pass
 
     def generate_graf_files(self, inputfile, outputfile):
@@ -322,7 +321,6 @@ class AnnotationGraph():
         """
 
         graf_xml_writer = poioapi.io.graf.Writer()
-
         graf_xml_writer.generate_graf_files(self.graf, inputfile)
 
         (_, file_extension) = os.path.splitext(outputfile)
@@ -338,43 +336,36 @@ class AnnotationGraph():
 
         (basedirname, _) = os.path.splitext(inputfile)
 
-        tree = ET.parse(inputfile)
-        root = tree.getroot()
+        tree = ET.parse(inputfile).getroot()
 
         # Generate the metadata file
         element_tree = Element('metadata')
-
         header_tag = SubElement(element_tree, 'header')
-
         data_structure = SubElement(header_tag, 'data_structure')
-
-        SubElement(data_structure, 'hierarchy').text =\
-        str(['utterance'])
-
         tier_mapping = SubElement(header_tag,'tier_mapping')
 
-        for values in self.data_structure_constraints.items():
-            key = values[0]
-            values = values[1]
-            type = SubElement(tier_mapping,'type', {'name':key})
-            for value in values:
-                SubElement(type, 'tier').text = value
+        data_structure_hirearchy = []
 
-        file_tag = SubElement(element_tree, "file",
-                {"data_type":'elan'})
+        for linguistic_type in tree.findall('LINGUISTIC_TYPE'):
+            linguistic_type_id = linguistic_type.attrib['LINGUISTIC_TYPE_ID']
 
-        miscellaneous = SubElement(file_tag, "miscellaneous")
+            type = SubElement(tier_mapping,'type',
+                    {'name':str(linguistic_type_id).replace(' ','_')})
 
-        # Add the root element
-        SubElement(miscellaneous, root.tag, root.attrib)
+            data_structure_hirearchy.append(str(linguistic_type_id).replace(' ','_'))
 
-        for child in root:
+            for tier_ref in tree.findall("TIER[@LINGUISTIC_TYPE_REF='"+linguistic_type_id+"']"):
+                SubElement(type, 'tier').text = tier_ref.attrib['TIER_ID']
+
+        SubElement(data_structure, 'hierarchy').text = str(data_structure_hirearchy)
+
+        miscellaneous = SubElement(element_tree, "miscellaneous")
+        SubElement(miscellaneous, tree.tag, tree.attrib)
+
+        for child in tree:
             parent = SubElement(miscellaneous, child.tag, child.attrib)
             for lower_child in child:
-                if lower_child.tag != "ALIGNABLE_ANNOTATION" and\
-                   lower_child.tag != "REF_ANNOTATION" and\
-                   lower_child.tag != "ANNOTATION_VALUE" and\
-                   lower_child.tag != "ANNOTATION":
+                if lower_child.tag != "ANNOTATION":
                     child_element = SubElement(parent, lower_child.tag,
                         lower_child.attrib)
                     if not str(lower_child.text).isspace() or\
