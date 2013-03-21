@@ -27,13 +27,15 @@ from xml.sax.handler import ContentHandler
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import graf
+
 import poioapi.io.header
 
 class Tier:
-    __slots__ = [ 'name' ]
+    __slots__ = [ 'name', 'linguistic_type' ]
 
-    def __init__(self, name):
+    def __init__(self, name, linguistic_type=None):
         self.name = name
+        self.linguistic_type = linguistic_type
 
 class Annotation:
     __slots__ = [ 'id', 'value', 'features' ]
@@ -71,17 +73,9 @@ class BaseParser(object):
     def get_child_tiers_for_tier(self, tier):
         raise NotImplementedError("Method must be implemented")
 
-    #@abc.abstractmethod
-    #def find_children_tiers_for_tier(self, tier):
-    #    raise NotImplementedError("Method must be implemented")
-
     @abc.abstractmethod
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         raise NotImplementedError("Method must be implemented")
-
-    #@abc.abstractmethod
-    #def add_elements_to_annotation_list(self, tier, annotations):
-    #    raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
     def tier_has_regions(self, tier):
@@ -114,54 +108,42 @@ class GrAFConverter:
 
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
+        if tier.linguistic_type is None:
+            prefix = tier.name
+        else:
+            prefix = tier.linguistic_type+"/"+tier.name
+
         for annotation in self.parser.get_annotations_for_tier(tier, parent_annotation):
-            node_id = NodeId(tier.name, annotation.id)
-            self._add_node(node_id, annotation, parent_node)
+            node_id = NodeId(prefix, annotation.id)
+            self._add_node(node_id, annotation, tier.linguistic_type, parent_node)
 
             if child_tiers:
                 for t in child_tiers:
                     self._convert_tier(t, node_id, annotation)
 
-    def _add_node(self, node_id, annotation, from_node_id):
+    def _add_node(self, node_id, annotation, annotation_name, from_node_id):
         self._add_node_to_graph(node_id, from_node_id=from_node_id)
-        self._add_graf_annotation(annotation.value, annotation.id, node_id, annotation.features)
-
-    #        annotations = self.parser.annotations_list
-#
-#        for tier in annotations:
-#
-#            regions = None
-#            from_node = None
-#
-#            if tier['regions'] is not None:
-#                regions = tier['regions']
-#                if tier['parent_ref'] is not None:
-#                    from_node = self.find_from_node_from_regions(tier['parent_ref'], tier['regions'])
-#
-#            if tier['annotation_ref'] is not None:
-#                from_node = self.graph.nodes[tier['annotation_ref']]
-#
-#            annotation_ref = tier['prefix_name']+"/n"+tier['index_number']
-#
-#            self.add_graf_node(tier['index_number'], tier['prefix_name'], regions, from_node)
-#            self.add_graf_annotation(tier['annotation_name'],
-#                tier['annotation_id'], annotation_ref,
-#                tier['features'])
-#
-#        return self.graph
+        self._add_graf_annotation(annotation_name, annotation.id, node_id,
+            annotation.value, annotation.features)
 
     def _add_graf_annotation(self, annotation_name, annotation_id,
-                            annotation_ref, annotation_features=None):
+                             annotation_ref, annotation_value, annotation_features=None):
 
         annotation = graf.Annotation(annotation_name, annotation_features,
             annotation_id)
 
+        annotation.features['annotation_value'] = annotation_value
+
         self.graph.nodes[str(annotation_ref)].annotations.add(annotation)
 
-        annotation_space = graf.AnnotationSpace(annotation_name)
-        annotation_space.add(annotation)
+        if annotation_name in self.graph.annotation_spaces:
+            if annotation not in self.graph.annotation_spaces[annotation_name]:
+                self.graph.annotation_spaces[annotation_name].add(annotation)
+        else:
+            annotation_space = graf.AnnotationSpace(annotation_name)
+            annotation_space.add(annotation)
 
-        self.graph.annotation_spaces.add(annotation_space)
+            self.graph.annotation_spaces.add(annotation_space)
 
     def _add_node_to_graph(self, node_id, regions=None,
                       from_node_id=None):
