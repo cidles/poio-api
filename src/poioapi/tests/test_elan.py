@@ -8,12 +8,9 @@
 # For license information, see LICENSE.TXT
 
 import os
-import re
-from xml.dom import minidom
-from xml.etree.ElementTree import Element, SubElement, tostring
-import xml.etree.ElementTree as ET
 
-from poioapi.io import elan
+import poioapi.io.elan
+import poioapi.io.graf
 
 class TestElan:
     """
@@ -31,7 +28,7 @@ class TestElan:
         self.metafile = os.path.join(os.path.dirname(__file__), "sample_files",
             "elan_graf", "example-extinfo.xml")
 
-        self.elan = elan.Parser(self.filename)
+        self.elan = poioapi.io.elan.Parser(self.filename)
 
     def test_get_root_tiers(self):
         root_tiers = self.elan.get_root_tiers()
@@ -39,7 +36,6 @@ class TestElan:
         assert len(root_tiers) == 4
 
     def test_get_child_tiers_for_tier(self):
-
         # Get the root tiers
         root_tiers = self.elan.get_root_tiers()
 
@@ -51,7 +47,6 @@ class TestElan:
         assert len(child_tier) == 2
 
     def test_get_annotations_for_tier(self):
-
         root_tiers = self.elan.get_root_tiers()
         child_tiers = self.elan.get_child_tiers_for_tier(root_tiers[1])
 
@@ -62,20 +57,20 @@ class TestElan:
         assert len(child_tier_annotations) == 97
 
     def test_get_annotations_for_tier_with_parent(self):
+        root_tiers = self.elan.get_root_tiers()
 
-#
-#        root_tiers = self.get_root_tiers()
-#        root_childs = self.get_child_tiers_for_tier(root_tiers[1]) #W-Spch
-#
-#        parent_annotation = poioapi.io.graf.Annotation('a8','xxxx')
-#        root_childs_annotations = self.get_annotations_for_tier(root_childs[1], parent_annotation) #W-IPA
-#
-#        print(root_childs_annotations, parent_annotation)
-        pass
+        child_tiers = self.elan.get_child_tiers_for_tier(root_tiers[1])
+
+        parent_annotation = poioapi.io.graf.Annotation('a8', 'ann_value')
+
+        child_tier_annotations = self.elan.get_annotations_for_tier(child_tiers[1], parent_annotation)
+
+        assert len(child_tier_annotations) == 1
+        assert child_tier_annotations[0].id == "a217"
 
     def test_tier_has_regions(self):
-
         root_tiers = self.elan.get_root_tiers()
+
         child_tiers = self.elan.get_child_tiers_for_tier(root_tiers[1])
 
         tier = child_tiers[0] # W-Words
@@ -85,7 +80,6 @@ class TestElan:
         assert has_regions == True
 
     def test_region_for_annotation(self):
-
         root_tiers = self.elan.get_root_tiers()
         child_tiers = self.elan.get_child_tiers_for_tier(root_tiers[1])
 
