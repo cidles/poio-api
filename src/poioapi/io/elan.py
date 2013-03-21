@@ -127,9 +127,6 @@ class Parser(poioapi.io.graf.BaseParser):
     def region_for_annotation(self, annotation):
 
         if 'time_slot1' in annotation.features:
-            time_slot1 = annotation.features['time_slot1']
-            time_slot2 = annotation.features['time_slot2']
-
             region_1 = int(self.regions_map[annotation.features['time_slot1']])
             region_2 = int(self.regions_map[annotation.features['time_slot2']])
 
