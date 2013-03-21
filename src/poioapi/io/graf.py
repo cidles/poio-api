@@ -111,18 +111,28 @@ class GrAFConverter:
         if tier.linguistic_type is None:
             prefix = tier.name
         else:
-            prefix = tier.linguistic_type+"/"+tier.name
+            prefix = str(tier.linguistic_type).replace(' ','_')+"/"+tier.name
+
+        has_regions = False
+
+        if self.parser.tier_has_regions(tier):
+            has_regions = True
 
         for annotation in self.parser.get_annotations_for_tier(tier, parent_annotation):
+            regions = None
+
+            if has_regions:
+                regions = self.parser.region_for_annotation(annotation)
+
             node_id = NodeId(prefix, annotation.id)
-            self._add_node(node_id, annotation, tier.linguistic_type, parent_node)
+            self._add_node(node_id, annotation, str(tier.linguistic_type).replace(' ','_'), regions, parent_node)
 
             if child_tiers:
                 for t in child_tiers:
                     self._convert_tier(t, node_id, annotation)
 
-    def _add_node(self, node_id, annotation, annotation_name, from_node_id):
-        self._add_node_to_graph(node_id, from_node_id=from_node_id)
+    def _add_node(self, node_id, annotation, annotation_name, regions, from_node_id):
+        self._add_node_to_graph(node_id, regions, from_node_id)
         self._add_graf_annotation(annotation_name, annotation.id, node_id,
             annotation.value, annotation.features)
 
@@ -165,17 +175,17 @@ class GrAFConverter:
 
         self.graph.nodes.add(node)
 
-    def find_from_node_from_regions(self, parent_ref, anchors):
-
-        for region in self.graph.regions:
-            if parent_ref in region.id:
-                if (int(region.anchors[0]) <= int(anchors[0]) <= int(region.anchors[1]))\
-                and (int(region.anchors[0]) <= int(anchors[1]) <= int(region.anchors[1])):
-                    node_id = re.sub(r"(.*)/r", r"\1/n", region.id)
-                    node = self.graph.nodes[node_id]
-                    return node
-
-        return None
+#    def find_from_node_from_regions(self, parent_ref, anchors):
+#
+#        for region in self.graph.regions:
+#            if parent_ref in region.id:
+#                if (int(region.anchors[0]) <= int(anchors[0]) <= int(region.anchors[1]))\
+#                and (int(region.anchors[0]) <= int(anchors[1]) <= int(region.anchors[1])):
+#                    node_id = re.sub(r"(.*)/r", r"\1/n", region.id)
+#                    node = self.graph.nodes[node_id]
+#                    return node
+#
+#        return None
 
 class Writer():
     """
