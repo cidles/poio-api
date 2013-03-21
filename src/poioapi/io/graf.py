@@ -110,8 +110,10 @@ class GrAFConverter:
 
         if tier.linguistic_type is None:
             prefix = tier.name
+            annotation_name = prefix
         else:
-            prefix = str(tier.linguistic_type).replace(' ','_')+"/"+tier.name
+            annotation_name = str(tier.linguistic_type).replace(' ','_')
+            prefix = annotation_name+"/"+tier.name
 
         has_regions = False
 
@@ -125,7 +127,7 @@ class GrAFConverter:
                 regions = self.parser.region_for_annotation(annotation)
 
             node_id = NodeId(prefix, annotation.id)
-            self._add_node(node_id, annotation, str(tier.linguistic_type).replace(' ','_'), regions, parent_node)
+            self._add_node(node_id, annotation, annotation_name, regions, parent_node)
 
             if child_tiers:
                 for t in child_tiers:
