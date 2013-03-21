@@ -62,6 +62,15 @@ class TestElan:
         assert len(child_tier_annotations) == 97
 
     def test_get_annotations_for_tier_with_parent(self):
+
+#
+#        root_tiers = self.get_root_tiers()
+#        root_childs = self.get_child_tiers_for_tier(root_tiers[1]) #W-Spch
+#
+#        parent_annotation = poioapi.io.graf.Annotation('a8','xxxx')
+#        root_childs_annotations = self.get_annotations_for_tier(root_childs[1], parent_annotation) #W-IPA
+#
+#        print(root_childs_annotations, parent_annotation)
         pass
 
     def test_tier_has_regions(self):
