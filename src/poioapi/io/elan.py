@@ -50,42 +50,21 @@ class Parser(poioapi.io.graf.BaseParser):
         self.data_structure_constraints = dict()
 
         self.annotations_list = []
-
         self.parse()
 
     def parse(self):
 
         self.tree = ET.parse(self.filepath).getroot()
-
-#        self.tiers = self.tree.findall('TIER')
+        self.regions_map = self._map_time_slots()
+#
 #        root_tiers = self.get_root_tiers()
-#        print(root_tiers[1].name)
+#        root_childs = self.get_child_tiers_for_tier(root_tiers[1]) #W-Spch
 #
-#        child_tiers = self.get_child_tiers_for_tier(root_tiers[1])
+#        parent_annotation = poioapi.io.graf.Annotation('a8','xxxx')
+#        root_childs_annotations = self.get_annotations_for_tier(root_childs[1], parent_annotation) #W-IPA
 #
-#        annotations = self.tree.findall("TIER[@PARENT_REF='"+root_tiers[1].name+"'][@TIER_ID='"+child_tiers[0].name+"']/")
-#
-#        annotations = self.get_annotations_for_tier(child_tiers[0], root_tiers[1])
-#
-#        print('ok')
-        #child_tiers = self.get_child_tiers_for_tier()
-#
-#
-#        self.regions_map = self._map_time_order()
-#
-#        for root_tier in root_tiers:
-#            self._parent_tier_id = None
-#            self._parent_linguistic_type_ref = None
-#            self._tier_id = root_tier.attrib['TIER_ID']
-#            self._linguistic_type_ref = root_tier.attrib['LINGUISTIC_TYPE_REF'].\
-#            replace(" ","_")
-#
-#            root_annotations = self.get_annotations_for_tier(root_tier)
-#            self.add_elements_to_annotation_list(root_tier, root_annotations)
-#
-#            self._add_data_constraint(self._tier_id, self._linguistic_type_ref)
-#
-#            self.find_children_tiers_for_tier(root_tier)
+#        print(root_childs_annotations, parent_annotation)
+
 
     def get_root_tiers(self):
 
@@ -102,32 +81,31 @@ class Parser(poioapi.io.graf.BaseParser):
 
         annotations = []
 
-        print(tier)
-
         if annotation_parent is None:
-            tier_annotations = self.tree.findall("TIER[@TIER_ID='"+tier.name+"']/")
+            tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
         else:
-            tier_annotations = self.tree.findall("TIER[@PARENT_REF='"+annotation_parent.name+"'][@TIER_ID='"+tier.name+"']/")
+            tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/*[@ANNOTATION_REF='"+annotation_parent.id+"']"))
+
+            if len(tier_annotations) is 0:
+                tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
 
         for annotation in tier_annotations:
-            annotation_elements = annotation.getiterator()
+            annotation_id = annotation.attrib['ANNOTATION_ID']
+            annotation_value = annotation.find('ANNOTATION_VALUE').text
 
-            annotation_id = annotation_elements[1].attrib['ANNOTATION_ID']
-            annotation_value = annotation_elements[1].find('ANNOTATION_VALUE').text
-
-            if annotation_elements[1].tag == "ALIGNABLE_ANNOTATION":
-                features = {'time_slot1':annotation_elements[1].attrib['TIME_SLOT_REF1'],
-                            'time_slot2':annotation_elements[1].attrib['TIME_SLOT_REF2']}
+            if annotation.tag == "ALIGNABLE_ANNOTATION":
+                features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
+                            'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
             else:
-                annotation_ref = annotation_elements[1].attrib['ANNOTATION_REF']
+                annotation_ref = annotation.attrib['ANNOTATION_REF']
 
                 features = {'ref_annotation':annotation_ref,
                             'tier_id':tier.name}
 
-                for attribute in annotation_elements[1].attrib:
+                for attribute in annotation.attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
                        attribute != 'ANNOTATION_VALUE':
-                        features[attribute] = annotation_elements[1].attrib[attribute]
+                        features[attribute] = annotation.attrib[attribute]
 
             annotations.append(poioapi.io.graf.Annotation(annotation_id, annotation_value, features))
 
@@ -135,7 +113,10 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def tier_has_regions(self, tier):
 
-        linguistic_id = tier.attrib['LINGUISTIC_TYPE_REF']
+        tier_in_tree = self.tree.find("TIER[@TIER_ID='"+tier.name+"']")
+
+        linguistic_id = tier_in_tree.attrib['LINGUISTIC_TYPE_REF']
+
         linguistic_type = self.tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+linguistic_id+"']")
 
         if linguistic_type.attrib['TIME_ALIGNABLE'] == 'true':
@@ -145,17 +126,20 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def region_for_annotation(self, annotation):
 
-        if 'TIME_SLOT_REF1' in annotation.attrib:
-            region_1 = int(self.regions_map[annotation.attrib['TIME_SLOT_REF1']])
+        if 'time_slot1' in annotation.features:
+            time_slot1 = annotation.features['time_slot1']
+            time_slot2 = annotation.features['time_slot2']
 
-        if 'TIME_SLOT_REF2' in annotation.attrib:
-            region_2 = int(self.regions_map[annotation.attrib['TIME_SLOT_REF2']])
+            region_1 = int(self.regions_map[annotation.features['time_slot1']])
+            region_2 = int(self.regions_map[annotation.features['time_slot2']])
 
-        regions = (region_1, region_2)
+            regions = (region_1, region_2)
 
-        return regions
+            return regions
 
-    def _map_time_order(self):
+        return None
+
+    def _map_time_slots(self):
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
