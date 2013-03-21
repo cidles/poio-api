@@ -18,8 +18,6 @@ read-/writeable.
 
 from __future__ import absolute_import
 
-import re
-
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
@@ -46,35 +44,22 @@ class Parser(poioapi.io.graf.BaseParser):
 
         self.filepath = filepath
 
-        self.data_structure_hierarchy = data_structure_hierarchy
-        self.data_structure_constraints = dict()
-
-        self.annotations_list = []
         self.parse()
 
     def parse(self):
 
         self.tree = ET.parse(self.filepath).getroot()
         self.regions_map = self._map_time_slots()
-#
-#        root_tiers = self.get_root_tiers()
-#        root_childs = self.get_child_tiers_for_tier(root_tiers[1]) #W-Spch
-#
-#        parent_annotation = poioapi.io.graf.Annotation('a8','xxxx')
-#        root_childs_annotations = self.get_annotations_for_tier(root_childs[1], parent_annotation) #W-IPA
-#
-#        print(root_childs_annotations, parent_annotation)
-
 
     def get_root_tiers(self):
 
-        return [poioapi.io.graf.Tier(tier.attrib['TIER_ID'])
+        return [poioapi.io.graf.Tier(tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
                 for tier in self.tree.findall('TIER')
                 if not 'PARENT_REF' in tier.attrib]
 
     def get_child_tiers_for_tier(self, tier):
 
-        return [poioapi.io.graf.Tier(child_tier.attrib['TIER_ID'])
+        return [poioapi.io.graf.Tier(child_tier.attrib['TIER_ID'], child_tier.attrib['LINGUISTIC_TYPE_REF'])
                 for child_tier in self.tree.findall("TIER[@PARENT_REF='"+tier.name+"']")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
@@ -84,8 +69,8 @@ class Parser(poioapi.io.graf.BaseParser):
         if annotation_parent is None:
             tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
         else:
-            tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/*[@ANNOTATION_REF='"+annotation_parent.id+"']"))
-
+            tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+
+                                                  "']/ANNOTATION/*[@ANNOTATION_REF='"+annotation_parent.id+"']"))
             if len(tier_annotations) is 0:
                 tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
 
@@ -113,11 +98,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def tier_has_regions(self, tier):
 
-        tier_in_tree = self.tree.find("TIER[@TIER_ID='"+tier.name+"']")
-
-        linguistic_id = tier_in_tree.attrib['LINGUISTIC_TYPE_REF']
-
-        linguistic_type = self.tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+linguistic_id+"']")
+        linguistic_type = self.tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+tier.linguistic_type+"']")
 
         if linguistic_type.attrib['TIME_ALIGNABLE'] == 'true':
             return True
@@ -153,13 +134,6 @@ class Parser(poioapi.io.graf.BaseParser):
 
         return time_order_dict
 
-    def _add_data_constraint(self, tier_id, linguistic_type_ref):
-
-        if linguistic_type_ref in self.data_structure_constraints:
-            self.data_structure_constraints[linguistic_type_ref].append(tier_id)
-        else:
-            self.data_structure_constraints[linguistic_type_ref] = [tier_id]
-
 class Writer:
     """
     Class that will handle the writing of
@@ -191,7 +165,7 @@ class Writer:
         tree = ET.parse(self.extinfofile)
         root = tree.getroot()
 
-        miscellaneous = root.findall('./file/miscellaneous/')
+        miscellaneous = root.findall('./miscellaneous/')
         element_tree = Element(miscellaneous[0].tag, miscellaneous[0].attrib)
 
         for element in miscellaneous:
