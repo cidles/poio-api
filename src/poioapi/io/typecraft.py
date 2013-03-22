@@ -102,16 +102,20 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         if tier.linguistic_type == "text" or tier.linguistic_type == "phrase":
-            elements = self.tree.findall(self.xml_namespace + tier.linguistic_type
-                                         + "[@id='" + tier.name + "']/*")
+            elements = self.tree.find(self.xml_namespace + tier.linguistic_type
+                                         + "[@id='" + tier.name + "']")
         else:
-            features, elements = self._get_tier_elements(tier)
+            elements = self._get_tier_elements(tier)
+
+        features = {}
 
         if tier.linguistic_type == "gloss":
             annotation_value = elements.text
         else:
-            features = {}
             annotation_value = None
+
+        for attribute in elements.attrib:
+            features[attribute] = elements.attrib[attribute]
 
         for element in elements:
             if len(element) is 0:
@@ -144,11 +148,7 @@ class Parser(poioapi.io.graf.BaseParser):
             morphemes = words.findall(self.xml_namespace + "morpheme")[morpheme_position]
             elements = morphemes.findall(self.xml_namespace + "gloss")[gloss_position]
 
-        features = {}
-        for attribute in elements.attrib:
-            features[attribute] = elements.attrib[attribute]
-
-        return features, elements
+        return elements
 
     def _find_words(self, word_name):
         (phrase_name, word_position) = self._find_tier_position(word_name)
