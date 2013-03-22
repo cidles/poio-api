@@ -142,7 +142,8 @@ class GrAFConverter:
         annotation = graf.Annotation(annotation_name, annotation_features,
             annotation_id)
 
-        annotation.features['annotation_value'] = annotation_value
+        if annotation_value is not None:
+            annotation.features['annotation_value'] = annotation_value
 
         self.graph.nodes[str(annotation_ref)].annotations.add(annotation)
 
