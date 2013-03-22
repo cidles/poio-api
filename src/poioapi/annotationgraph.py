@@ -286,10 +286,12 @@ class AnnotationGraph():
 
         """
 
-        typecraft = poioapi.io.typecraft.Parser(typecraftfile)
-        typecraft_graf = poioapi.io.graf.GrAFConverter(typecraft)
+        parser = poioapi.io.elan.Parser(typecraftfile)
 
-        self.graf = typecraft_graf.as_graf()
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
+
+        self.graf = converter.graph
 
     def from_pickle(self):
         """This method generates a GrAF object
