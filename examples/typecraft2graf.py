@@ -11,10 +11,6 @@ import sys, getopt
 
 import poioapi.annotationgraph
 import poioapi.data
-import poioapi.io.graf
-import poioapi.io.typecraft
-import poioapi.io.graf_old
-import poioapi.io.typecraft_old
 
 def main(argv):
 
