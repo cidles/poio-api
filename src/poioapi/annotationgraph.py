@@ -286,7 +286,7 @@ class AnnotationGraph():
 
         """
 
-        parser = poioapi.io.elan.Parser(typecraftfile)
+        parser = poioapi.io.typecraft.Parser(typecraftfile)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
