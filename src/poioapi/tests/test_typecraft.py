@@ -28,11 +28,12 @@ class TestTypecraft:
 
         self.basedirname = os.path.dirname(self.filename)
 
-        typecraft = poioapi.io.typecraft.Parser(self.filename)
+        self.parser = poioapi.io.typecraft.Parser(self.filename)
 
-        typecraft_graf = poioapi.io.graf.GrAFConverter(typecraft)
+        self.convert = poioapi.io.graf.GrAFConverter(self.parser)
+        self.convert.convert()
 
-        self.graph = typecraft_graf.as_graf()
+        self.graph = self.convert.graph
 
         tree = ET.parse(self.filename)
         self.root = tree.getroot()
@@ -66,7 +67,7 @@ class TestTypecraft:
             if key[1] != "word":
                 expected_features_number+=1
 
-        node = self.graph.nodes["phrase/n1818"]
+        node = self.graph.nodes["phrase/1818/n1818"]
 
         node_annotations = node.annotations._elements
 
