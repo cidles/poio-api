@@ -153,7 +153,7 @@ class Parser(poioapi.io.graf.BaseParser):
         if tier.linguistic_type == "globaltags":
             elements = self.tree.findall(self.xml_namespace + "phrase[@id='"
                                          + parent_name + "']/" + self.xml_namespace
-            + "word")[tier_position]
+            + "globaltags")[tier_position]
 
         elif tier.linguistic_type == "morpheme":
             words = self._find_words(parent_name)
