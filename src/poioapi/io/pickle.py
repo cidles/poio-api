@@ -20,8 +20,8 @@ import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring
 from xml.dom import minidom
 
+import poioapi.io.graf
 from poioapi.io import header
-from poioapi.io.graf import Writer, Parser
 
 class Writer():
     """
@@ -53,7 +53,7 @@ class Writer():
 
         self.xml_elements_tree_map = {}
 
-        self.graf = Writer()
+        self.graf = poioapi.io.graf.Writer()
 
     def write(self):
         """Writes the GrAF files based on the data
