@@ -123,9 +123,6 @@ class Parser(poioapi.io.graf.BaseParser):
 
                 if key != "gloss" and key != "globaltags" and key != "morpheme":
                     features[key] = element.text
-                else:
-                    print(tier.name, tier.linguistic_type)
-                    print('ui')
 
         return [poioapi.io.graf.Annotation(tier.name, annotation_value, features)]
 
