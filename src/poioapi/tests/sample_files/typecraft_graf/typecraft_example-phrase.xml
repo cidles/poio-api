@@ -7,113 +7,103 @@
       <annotationSpace as.id="phrase"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="phrase/n10429"/>
-  <a as="phrase" label="phrase" ref="phrase/n10429" xml:id="phrase/a10429">
+  <node xml:id="phrase/10429/n10429"/>
+  <a as="phrase" label="phrase" ref="phrase/10429/n10429" xml:id="10429">
     <fs>
-      <f name="description"/>
       <f name="original">Akosua hwiee nsuo no faa tokuro no mu</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">Akosua poured water through the hole</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">10429</f>
     </fs>
   </a>
-  <node xml:id="phrase/n10432"/>
-  <a as="phrase" label="phrase" ref="phrase/n10432" xml:id="phrase/a10432">
+  <node xml:id="phrase/10432/n10432"/>
+  <a as="phrase" label="phrase" ref="phrase/10432/n10432" xml:id="10432">
     <fs>
-      <f name="description">firi: can firi inflect like a verb?</f>
       <f name="original">Mɪ twii kaa no firii fie fa sukuu no mu kɔ asɔrɪ</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">I drove the car from the house through the school to church</f>
+      <f name="valid">VALID</f>
+      <f name="description">firi: can firi inflect like a verb?</f>
       <f name="id">10432</f>
     </fs>
   </a>
-  <node xml:id="phrase/n10437"/>
-  <a as="phrase" label="phrase" ref="phrase/n10437" xml:id="phrase/a10437">
+  <node xml:id="phrase/10437/n10437"/>
+  <a as="phrase" label="phrase" ref="phrase/10437/n10437" xml:id="10437">
     <fs>
-      <f name="description"/>
       <f name="original">ɔ fa sukuu no mu kɔ dwaso</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">She passes through the school to the market.</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">10437</f>
     </fs>
   </a>
-  <node xml:id="phrase/n10491"/>
-  <a as="phrase" label="phrase" ref="phrase/n10491" xml:id="phrase/a10491">
+  <node xml:id="phrase/10491/n10491"/>
+  <a as="phrase" label="phrase" ref="phrase/10491/n10491" xml:id="10491">
     <fs>
-      <f name="description"/>
       <f name="original">Abain ɛyɛ nyuɔma a ɛbe bua nsrahwɛ ewɔ ɔmain mu.</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">Government is doing things to enhance tourism in the country.</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">10491</f>
     </fs>
   </a>
-  <node xml:id="phrase/n1818"/>
-  <a as="phrase" label="phrase" ref="phrase/n1818" xml:id="phrase/a1818">
+  <node xml:id="phrase/1818/n1818"/>
+  <a as="phrase" label="phrase" ref="phrase/1818/n1818" xml:id="1818">
     <fs>
-      <f name="description"/>
       <f name="original">Mpa kɛseɛ nkɔ dan no mu</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">The big bed cannot enter the room</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">1818</f>
     </fs>
   </a>
-  <node xml:id="phrase/n34986"/>
-  <a as="phrase" label="phrase" ref="phrase/n34986" xml:id="phrase/a34986">
+  <node xml:id="phrase/34986/n34986"/>
+  <a as="phrase" label="phrase" ref="phrase/34986/n34986" xml:id="34986">
     <fs>
-      <f name="description"/>
       <f name="original">Me fa afuo no mu kɔ sukuu</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">I pass through the farm to school</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">34986</f>
     </fs>
   </a>
-  <node xml:id="phrase/n35334"/>
-  <a as="phrase" label="phrase" ref="phrase/n35334" xml:id="phrase/a35334">
+  <node xml:id="phrase/35334/n35334"/>
+  <a as="phrase" label="phrase" ref="phrase/35334/n35334" xml:id="35334">
     <fs>
-      <f name="description"/>
       <f name="original">Na sukku mu na mepɛ sɛ me de kɔ</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">It is school that I wanted to send it</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">35334</f>
     </fs>
   </a>
-  <node xml:id="phrase/n9064"/>
-  <a as="phrase" label="phrase" ref="phrase/n9064" xml:id="phrase/a9064">
+  <node xml:id="phrase/9064/n9064"/>
+  <a as="phrase" label="phrase" ref="phrase/9064/n9064" xml:id="9064">
     <fs>
-      <f name="description"/>
       <f name="original">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">twelve periods that add up to one year</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">9064</f>
     </fs>
   </a>
-  <node xml:id="phrase/n9121"/>
-  <a as="phrase" label="phrase" ref="phrase/n9121" xml:id="phrase/a9121">
+  <node xml:id="phrase/9121/n9121"/>
+  <a as="phrase" label="phrase" ref="phrase/9121/n9121" xml:id="9121">
     <fs>
-      <f name="description"/>
       <f name="original">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">twelve periods which add up to a year</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">9121</f>
     </fs>
   </a>
-  <node xml:id="phrase/n9764"/>
-  <a as="phrase" label="phrase" ref="phrase/n9764" xml:id="phrase/a9764">
+  <node xml:id="phrase/9764/n9764"/>
+  <a as="phrase" label="phrase" ref="phrase/9764/n9764" xml:id="9764">
     <fs>
-      <f name="description"/>
       <f name="original">Kwantwakɔsansuo a yɛ hu wo ekorasi mu</f>
-      <f name="valid">VALID</f>
-      <f name="globaltags"/>
       <f name="translation">Travelling in search of water has become dangerous in the villages.</f>
+      <f name="valid">VALID</f>
+      <f name="description"/>
       <f name="id">9764</f>
     </fs>
   </a>

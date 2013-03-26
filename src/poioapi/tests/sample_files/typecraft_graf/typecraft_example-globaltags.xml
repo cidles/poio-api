@@ -9,81 +9,81 @@
       <annotationSpace as.id="globaltags"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="globaltags/n1"/>
-  <edge from="phrase/n1818" to="globaltags/n1" xml:id="e1"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n1" xml:id="globaltags/a1">
+  <node xml:id="globaltags/1/n1"/>
+  <edge from="phrase/1818/n1818" to="globaltags/1/n1" xml:id="e1"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/1/n1" xml:id="1">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n10"/>
-  <edge from="phrase/n35334" to="globaltags/n10" xml:id="e10"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n10" xml:id="globaltags/a10">
+  <node xml:id="globaltags/10/n10"/>
+  <edge from="phrase/35334/n35334" to="globaltags/10/n10" xml:id="e10"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/10/n10" xml:id="10">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n2"/>
-  <edge from="phrase/n9064" to="globaltags/n2" xml:id="e2"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n2" xml:id="globaltags/a2">
+  <node xml:id="globaltags/2/n2"/>
+  <edge from="phrase/9064/n9064" to="globaltags/2/n2" xml:id="e2"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/2/n2" xml:id="2">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n3"/>
-  <edge from="phrase/n9121" to="globaltags/n3" xml:id="e3"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n3" xml:id="globaltags/a3">
+  <node xml:id="globaltags/3/n3"/>
+  <edge from="phrase/9121/n9121" to="globaltags/3/n3" xml:id="e3"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/3/n3" xml:id="3">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n4"/>
-  <edge from="phrase/n9764" to="globaltags/n4" xml:id="e4"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n4" xml:id="globaltags/a4">
+  <node xml:id="globaltags/4/n4"/>
+  <edge from="phrase/9764/n9764" to="globaltags/4/n4" xml:id="e4"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/4/n4" xml:id="4">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n5"/>
-  <edge from="phrase/n10429" to="globaltags/n5" xml:id="e5"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n5" xml:id="globaltags/a5">
+  <node xml:id="globaltags/5/n5"/>
+  <edge from="phrase/10429/n10429" to="globaltags/5/n5" xml:id="e5"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/5/n5" xml:id="5">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n6"/>
-  <edge from="phrase/n10432" to="globaltags/n6" xml:id="e6"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n6" xml:id="globaltags/a6">
+  <node xml:id="globaltags/6/n6"/>
+  <edge from="phrase/10432/n10432" to="globaltags/6/n6" xml:id="e6"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/6/n6" xml:id="6">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n7"/>
-  <edge from="phrase/n10437" to="globaltags/n7" xml:id="e7"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n7" xml:id="globaltags/a7">
+  <node xml:id="globaltags/7/n7"/>
+  <edge from="phrase/10437/n10437" to="globaltags/7/n7" xml:id="e7"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/7/n7" xml:id="7">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n8"/>
-  <edge from="phrase/n10491" to="globaltags/n8" xml:id="e8"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n8" xml:id="globaltags/a8">
+  <node xml:id="globaltags/8/n8"/>
+  <edge from="phrase/10491/n10491" to="globaltags/8/n8" xml:id="e8"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/8/n8" xml:id="8">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>
     </fs>
   </a>
-  <node xml:id="globaltags/n9"/>
-  <edge from="phrase/n34986" to="globaltags/n9" xml:id="e9"/>
-  <a as="globaltags" label="globaltags" ref="globaltags/n9" xml:id="globaltags/a9">
+  <node xml:id="globaltags/9/n9"/>
+  <edge from="phrase/34986/n34986" to="globaltags/9/n9" xml:id="e9"/>
+  <a as="globaltags" label="globaltags" ref="globaltags/9/n9" xml:id="9">
     <fs>
       <f name="id">1</f>
       <f name="tagset">Default</f>

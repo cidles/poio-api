@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader date.created="2013-03-15" docID="PoioAPI-593968" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+<documentHeader date.created="2013-03-26" docID="PoioAPI-431536" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
   <fileDesc>
     <fileName>/home/alopes/tests/typecraft/typecraft_example</fileName>
     <extent count="0" unit="words"/>
@@ -7,7 +7,7 @@
       <author age="" sex="">alopes</author>
       <source type="Contributor">Cont</source>
       <publisher>self</publisher>
-      <pubDate iso8601="2013-03-15"/>
+      <pubDate iso8601="2013-03-26"/>
       <idno type="ISBN">9164784</idno>
     </sourceDesc>
   </fileDesc>

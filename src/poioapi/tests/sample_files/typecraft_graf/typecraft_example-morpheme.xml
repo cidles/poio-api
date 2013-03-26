@@ -9,868 +9,868 @@
       <annotationSpace as.id="morpheme"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="morpheme/n1"/>
-  <edge from="word/n1" to="morpheme/n1" xml:id="e1"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n1" xml:id="morpheme/a1">
+  <node xml:id="morpheme/1/n1"/>
+  <edge from="word/1/n1" to="morpheme/1/n1" xml:id="e1"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/1/n1" xml:id="1">
     <fs>
       <f name="text">mpa</f>
       <f name="meaning">bed</f>
       <f name="baseform">mpa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n10"/>
-  <edge from="word/n9" to="morpheme/n10" xml:id="e10"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n10" xml:id="morpheme/a10">
+  <node xml:id="morpheme/10/n10"/>
+  <edge from="word/9/n9" to="morpheme/10/n10" xml:id="e10"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/10/n10" xml:id="10">
     <fs>
       <f name="text">du</f>
       <f name="meaning">ten</f>
       <f name="baseform">du</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n11"/>
-  <edge from="word/n9" to="morpheme/n11" xml:id="e11"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n11" xml:id="morpheme/a11">
+  <node xml:id="morpheme/11/n11"/>
+  <edge from="word/9/n9" to="morpheme/11/n11" xml:id="e11"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/11/n11" xml:id="11">
     <fs>
       <f name="text">mbienu</f>
       <f name="meaning">two</f>
       <f name="baseform">mbienu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n12"/>
-  <edge from="word/n10" to="morpheme/n12" xml:id="e12"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n12" xml:id="morpheme/a12">
+  <node xml:id="morpheme/12/n12"/>
+  <edge from="word/10/n10" to="morpheme/12/n12" xml:id="e12"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/12/n12" xml:id="12">
     <fs>
       <f name="text">a</f>
       <f name="meaning"/>
       <f name="baseform">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n13"/>
-  <edge from="word/n11" to="morpheme/n13" xml:id="e13"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n13" xml:id="morpheme/a13">
+  <node xml:id="morpheme/13/n13"/>
+  <edge from="word/11/n11" to="morpheme/13/n13" xml:id="e13"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/13/n13" xml:id="13">
     <fs>
       <f name="text">ε</f>
       <f name="baseform">ε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n14"/>
-  <edge from="word/n11" to="morpheme/n14" xml:id="e14"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n14" xml:id="morpheme/a14">
+  <node xml:id="morpheme/14/n14"/>
+  <edge from="word/11/n11" to="morpheme/14/n14" xml:id="e14"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/14/n14" xml:id="14">
     <fs>
       <f name="text">ka</f>
       <f name="meaning">push</f>
       <f name="baseform">ka</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n15"/>
-  <edge from="word/n12" to="morpheme/n15" xml:id="e15"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n15" xml:id="morpheme/a15">
+  <node xml:id="morpheme/15/n15"/>
+  <edge from="word/12/n12" to="morpheme/15/n15" xml:id="e15"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/15/n15" xml:id="15">
     <fs>
       <f name="text">bɔ</f>
       <f name="meaning">hit</f>
       <f name="baseform">bɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n16"/>
-  <edge from="word/n13" to="morpheme/n16" xml:id="e16"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n16" xml:id="morpheme/a16">
+  <node xml:id="morpheme/16/n16"/>
+  <edge from="word/13/n13" to="morpheme/16/n16" xml:id="e16"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/16/n16" xml:id="16">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n17"/>
-  <edge from="word/n14" to="morpheme/n17" xml:id="e17"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n17" xml:id="morpheme/a17">
+  <node xml:id="morpheme/17/n17"/>
+  <edge from="word/14/n14" to="morpheme/17/n17" xml:id="e17"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/17/n17" xml:id="17">
     <fs>
       <f name="text">yε</f>
       <f name="meaning">be</f>
       <f name="baseform">yε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n18"/>
-  <edge from="word/n15" to="morpheme/n18" xml:id="e18"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n18" xml:id="morpheme/a18">
+  <node xml:id="morpheme/18/n18"/>
+  <edge from="word/15/n15" to="morpheme/18/n18" xml:id="e18"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/18/n18" xml:id="18">
     <fs>
       <f name="text">afe</f>
       <f name="meaning">year</f>
       <f name="baseform">afe</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n19"/>
-  <edge from="word/n16" to="morpheme/n19" xml:id="e19"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n19" xml:id="morpheme/a19">
+  <node xml:id="morpheme/19/n19"/>
+  <edge from="word/16/n16" to="morpheme/19/n19" xml:id="e19"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/19/n19" xml:id="19">
     <fs>
       <f name="text">baako</f>
       <f name="meaning">one</f>
       <f name="baseform">baako</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n2"/>
-  <edge from="word/n2" to="morpheme/n2" xml:id="e2"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n2" xml:id="morpheme/a2">
+  <node xml:id="morpheme/2/n2"/>
+  <edge from="word/2/n2" to="morpheme/2/n2" xml:id="e2"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/2/n2" xml:id="2">
     <fs>
       <f name="text">kɛseɛ</f>
       <f name="meaning">big</f>
       <f name="baseform">kɛseɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n20"/>
-  <edge from="word/n17" to="morpheme/n20" xml:id="e20"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n20" xml:id="morpheme/a20">
+  <node xml:id="morpheme/20/n20"/>
+  <edge from="word/17/n17" to="morpheme/20/n20" xml:id="e20"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/20/n20" xml:id="20">
     <fs>
       <f name="text">bere</f>
       <f name="meaning">time</f>
       <f name="baseform">bere</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n21"/>
-  <edge from="word/n18" to="morpheme/n21" xml:id="e21"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n21" xml:id="morpheme/a21">
+  <node xml:id="morpheme/21/n21"/>
+  <edge from="word/18/n18" to="morpheme/21/n21" xml:id="e21"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/21/n21" xml:id="21">
     <fs>
       <f name="text">ahorow</f>
       <f name="meaning"/>
       <f name="baseform">ahorow</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n22"/>
-  <edge from="word/n19" to="morpheme/n22" xml:id="e22"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n22" xml:id="morpheme/a22">
+  <node xml:id="morpheme/22/n22"/>
+  <edge from="word/19/n19" to="morpheme/22/n22" xml:id="e22"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/22/n22" xml:id="22">
     <fs>
       <f name="text">du</f>
       <f name="meaning">ten</f>
       <f name="baseform">du</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n23"/>
-  <edge from="word/n19" to="morpheme/n23" xml:id="e23"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n23" xml:id="morpheme/a23">
+  <node xml:id="morpheme/23/n23"/>
+  <edge from="word/19/n19" to="morpheme/23/n23" xml:id="e23"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/23/n23" xml:id="23">
     <fs>
       <f name="text">mbienu</f>
       <f name="meaning">two</f>
       <f name="baseform">mbienu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n24"/>
-  <edge from="word/n20" to="morpheme/n24" xml:id="e24"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n24" xml:id="morpheme/a24">
+  <node xml:id="morpheme/24/n24"/>
+  <edge from="word/20/n20" to="morpheme/24/n24" xml:id="e24"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/24/n24" xml:id="24">
     <fs>
       <f name="text">a</f>
       <f name="baseform">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n25"/>
-  <edge from="word/n21" to="morpheme/n25" xml:id="e25"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n25" xml:id="morpheme/a25">
+  <node xml:id="morpheme/25/n25"/>
+  <edge from="word/21/n21" to="morpheme/25/n25" xml:id="e25"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/25/n25" xml:id="25">
     <fs>
       <f name="text">ε</f>
       <f name="baseform">ε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n26"/>
-  <edge from="word/n21" to="morpheme/n26" xml:id="e26"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n26" xml:id="morpheme/a26">
+  <node xml:id="morpheme/26/n26"/>
+  <edge from="word/21/n21" to="morpheme/26/n26" xml:id="e26"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/26/n26" xml:id="26">
     <fs>
       <f name="text">ka</f>
       <f name="meaning">push</f>
       <f name="baseform">ka</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n27"/>
-  <edge from="word/n22" to="morpheme/n27" xml:id="e27"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n27" xml:id="morpheme/a27">
+  <node xml:id="morpheme/27/n27"/>
+  <edge from="word/22/n22" to="morpheme/27/n27" xml:id="e27"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/27/n27" xml:id="27">
     <fs>
       <f name="text">bɔ</f>
       <f name="meaning">hit</f>
       <f name="baseform">bɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n28"/>
-  <edge from="word/n23" to="morpheme/n28" xml:id="e28"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n28" xml:id="morpheme/a28">
+  <node xml:id="morpheme/28/n28"/>
+  <edge from="word/23/n23" to="morpheme/28/n28" xml:id="e28"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/28/n28" xml:id="28">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n29"/>
-  <edge from="word/n24" to="morpheme/n29" xml:id="e29"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n29" xml:id="morpheme/a29">
+  <node xml:id="morpheme/29/n29"/>
+  <edge from="word/24/n24" to="morpheme/29/n29" xml:id="e29"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/29/n29" xml:id="29">
     <fs>
       <f name="text">yε</f>
       <f name="meaning">make</f>
       <f name="baseform">yε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n3"/>
-  <edge from="word/n3" to="morpheme/n3" xml:id="e3"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n3" xml:id="morpheme/a3">
+  <node xml:id="morpheme/3/n3"/>
+  <edge from="word/3/n3" to="morpheme/3/n3" xml:id="e3"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/3/n3" xml:id="3">
     <fs>
       <f name="text">n</f>
       <f name="baseform">n</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n30"/>
-  <edge from="word/n25" to="morpheme/n30" xml:id="e30"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n30" xml:id="morpheme/a30">
+  <node xml:id="morpheme/30/n30"/>
+  <edge from="word/25/n25" to="morpheme/30/n30" xml:id="e30"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/30/n30" xml:id="30">
     <fs>
       <f name="text">afe</f>
       <f name="meaning">year</f>
       <f name="baseform">afe</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n31"/>
-  <edge from="word/n26" to="morpheme/n31" xml:id="e31"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n31" xml:id="morpheme/a31">
+  <node xml:id="morpheme/31/n31"/>
+  <edge from="word/26/n26" to="morpheme/31/n31" xml:id="e31"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/31/n31" xml:id="31">
     <fs>
       <f name="text">baako</f>
       <f name="meaning">one</f>
       <f name="baseform">baako</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n32"/>
-  <edge from="word/n27" to="morpheme/n32" xml:id="e32"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n32" xml:id="morpheme/a32">
+  <node xml:id="morpheme/32/n32"/>
+  <edge from="word/27/n27" to="morpheme/32/n32" xml:id="e32"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/32/n32" xml:id="32">
     <fs>
       <f name="text">kwan</f>
       <f name="meaning">road</f>
       <f name="baseform">kwan</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n33"/>
-  <edge from="word/n27" to="morpheme/n33" xml:id="e33"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n33" xml:id="morpheme/a33">
+  <node xml:id="morpheme/33/n33"/>
+  <edge from="word/27/n27" to="morpheme/33/n33" xml:id="e33"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/33/n33" xml:id="33">
     <fs>
       <f name="text">twa</f>
       <f name="meaning">cross</f>
       <f name="baseform">twa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n34"/>
-  <edge from="word/n27" to="morpheme/n34" xml:id="e34"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n34" xml:id="morpheme/a34">
+  <node xml:id="morpheme/34/n34"/>
+  <edge from="word/27/n27" to="morpheme/34/n34" xml:id="e34"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/34/n34" xml:id="34">
     <fs>
       <f name="text">kɔ</f>
       <f name="meaning">go</f>
       <f name="baseform">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35"/>
-  <edge from="word/n27" to="morpheme/n35" xml:id="e35"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35" xml:id="morpheme/a35">
+  <node xml:id="morpheme/35/n35"/>
+  <edge from="word/27/n27" to="morpheme/35/n35" xml:id="e35"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/35/n35" xml:id="35">
     <fs>
       <f name="text">sa</f>
       <f name="meaning">fetch</f>
       <f name="baseform">sa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n36"/>
-  <edge from="word/n27" to="morpheme/n36" xml:id="e36"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n36" xml:id="morpheme/a36">
+  <node xml:id="morpheme/36/n36"/>
+  <edge from="word/27/n27" to="morpheme/36/n36" xml:id="e36"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/36/n36" xml:id="36">
     <fs>
       <f name="text">nsuo</f>
       <f name="meaning">water</f>
       <f name="baseform">nsuo</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n37"/>
-  <edge from="word/n28" to="morpheme/n37" xml:id="e37"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n37" xml:id="morpheme/a37">
+  <node xml:id="morpheme/37/n37"/>
+  <edge from="word/28/n28" to="morpheme/37/n37" xml:id="e37"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/37/n37" xml:id="37">
     <fs>
       <f name="text">a</f>
       <f name="meaning"/>
       <f name="baseform">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n38"/>
-  <edge from="word/n29" to="morpheme/n38" xml:id="e38"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n38" xml:id="morpheme/a38">
+  <node xml:id="morpheme/38/n38"/>
+  <edge from="word/29/n29" to="morpheme/38/n38" xml:id="e38"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/38/n38" xml:id="38">
     <fs>
       <f name="text">yɛ</f>
       <f name="meaning">do</f>
       <f name="baseform">yɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n39"/>
-  <edge from="word/n30" to="morpheme/n39" xml:id="e39"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n39" xml:id="morpheme/a39">
+  <node xml:id="morpheme/39/n39"/>
+  <edge from="word/30/n30" to="morpheme/39/n39" xml:id="e39"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/39/n39" xml:id="39">
     <fs>
       <f name="text">hu</f>
       <f name="meaning">dangerous</f>
       <f name="baseform">hu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n4"/>
-  <edge from="word/n3" to="morpheme/n4" xml:id="e4"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n4" xml:id="morpheme/a4">
+  <node xml:id="morpheme/4/n4"/>
+  <edge from="word/3/n3" to="morpheme/4/n4" xml:id="e4"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/4/n4" xml:id="4">
     <fs>
       <f name="text">kɔ</f>
       <f name="meaning">go</f>
       <f name="baseform">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n40"/>
-  <edge from="word/n31" to="morpheme/n40" xml:id="e40"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n40" xml:id="morpheme/a40">
+  <node xml:id="morpheme/40/n40"/>
+  <edge from="word/31/n31" to="morpheme/40/n40" xml:id="e40"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/40/n40" xml:id="40">
     <fs>
       <f name="text">wɔ</f>
       <f name="meaning">in</f>
       <f name="baseform">wɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n41"/>
-  <edge from="word/n32" to="morpheme/n41" xml:id="e41"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n41" xml:id="morpheme/a41">
+  <node xml:id="morpheme/41/n41"/>
+  <edge from="word/32/n32" to="morpheme/41/n41" xml:id="e41"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/41/n41" xml:id="41">
     <fs>
       <f name="text">ekorasi</f>
       <f name="meaning">village</f>
       <f name="baseform">ekorasi</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n42"/>
-  <edge from="word/n33" to="morpheme/n42" xml:id="e42"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n42" xml:id="morpheme/a42">
+  <node xml:id="morpheme/42/n42"/>
+  <edge from="word/33/n33" to="morpheme/42/n42" xml:id="e42"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/42/n42" xml:id="42">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n43"/>
-  <edge from="word/n34" to="morpheme/n43" xml:id="e43"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n43" xml:id="morpheme/a43">
+  <node xml:id="morpheme/43/n43"/>
+  <edge from="word/34/n34" to="morpheme/43/n43" xml:id="e43"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/43/n43" xml:id="43">
     <fs>
       <f name="text">akosua</f>
       <f name="meaning">Akosua</f>
       <f name="baseform">akosua</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n44"/>
-  <edge from="word/n35" to="morpheme/n44" xml:id="e44"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n44" xml:id="morpheme/a44">
+  <node xml:id="morpheme/44/n44"/>
+  <edge from="word/35/n35" to="morpheme/44/n44" xml:id="e44"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/44/n44" xml:id="44">
     <fs>
       <f name="text">hwiee</f>
       <f name="meaning">pour</f>
       <f name="baseform">hwie</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n45"/>
-  <edge from="word/n36" to="morpheme/n45" xml:id="e45"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n45" xml:id="morpheme/a45">
+  <node xml:id="morpheme/45/n45"/>
+  <edge from="word/36/n36" to="morpheme/45/n45" xml:id="e45"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/45/n45" xml:id="45">
     <fs>
       <f name="text">nsuo</f>
       <f name="meaning">water</f>
       <f name="baseform">nsuo</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n46"/>
-  <edge from="word/n37" to="morpheme/n46" xml:id="e46"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n46" xml:id="morpheme/a46">
+  <node xml:id="morpheme/46/n46"/>
+  <edge from="word/37/n37" to="morpheme/46/n46" xml:id="e46"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/46/n46" xml:id="46">
     <fs>
       <f name="text">nó</f>
       <f name="meaning"/>
       <f name="baseform">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n47"/>
-  <edge from="word/n38" to="morpheme/n47" xml:id="e47"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n47" xml:id="morpheme/a47">
+  <node xml:id="morpheme/47/n47"/>
+  <edge from="word/38/n38" to="morpheme/47/n47" xml:id="e47"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/47/n47" xml:id="47">
     <fs>
       <f name="text">faa</f>
       <f name="meaning">pass</f>
       <f name="baseform">fa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n48"/>
-  <edge from="word/n39" to="morpheme/n48" xml:id="e48"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n48" xml:id="morpheme/a48">
+  <node xml:id="morpheme/48/n48"/>
+  <edge from="word/39/n39" to="morpheme/48/n48" xml:id="e48"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/48/n48" xml:id="48">
     <fs>
       <f name="text">tokuro</f>
       <f name="meaning">hole</f>
       <f name="baseform">tokuro</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n49"/>
-  <edge from="word/n40" to="morpheme/n49" xml:id="e49"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n49" xml:id="morpheme/a49">
+  <node xml:id="morpheme/49/n49"/>
+  <edge from="word/40/n40" to="morpheme/49/n49" xml:id="e49"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/49/n49" xml:id="49">
     <fs>
       <f name="text">nò</f>
       <f name="meaning"/>
       <f name="baseform">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n5"/>
-  <edge from="word/n4" to="morpheme/n5" xml:id="e5"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n5" xml:id="morpheme/a5">
+  <node xml:id="morpheme/5/n5"/>
+  <edge from="word/4/n4" to="morpheme/5/n5" xml:id="e5"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/5/n5" xml:id="5">
     <fs>
       <f name="text">dan</f>
       <f name="meaning">room</f>
       <f name="baseform">dan</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n50"/>
-  <edge from="word/n41" to="morpheme/n50" xml:id="e50"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n50" xml:id="morpheme/a50">
+  <node xml:id="morpheme/50/n50"/>
+  <edge from="word/41/n41" to="morpheme/50/n50" xml:id="e50"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/50/n50" xml:id="50">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n51"/>
-  <edge from="word/n42" to="morpheme/n51" xml:id="e51"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n51" xml:id="morpheme/a51">
+  <node xml:id="morpheme/51/n51"/>
+  <edge from="word/42/n42" to="morpheme/51/n51" xml:id="e51"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/51/n51" xml:id="51">
     <fs>
       <f name="text">mɪ</f>
       <f name="meaning"/>
       <f name="baseform">mɪ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n52"/>
-  <edge from="word/n43" to="morpheme/n52" xml:id="e52"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n52" xml:id="morpheme/a52">
+  <node xml:id="morpheme/52/n52"/>
+  <edge from="word/43/n43" to="morpheme/52/n52" xml:id="e52"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/52/n52" xml:id="52">
     <fs>
       <f name="text">twii</f>
       <f name="meaning">drive</f>
       <f name="baseform">twi</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n53"/>
-  <edge from="word/n44" to="morpheme/n53" xml:id="e53"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n53" xml:id="morpheme/a53">
+  <node xml:id="morpheme/53/n53"/>
+  <edge from="word/44/n44" to="morpheme/53/n53" xml:id="e53"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/53/n53" xml:id="53">
     <fs>
       <f name="text">kaa</f>
       <f name="meaning">car</f>
       <f name="baseform">kaa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n54"/>
-  <edge from="word/n45" to="morpheme/n54" xml:id="e54"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n54" xml:id="morpheme/a54">
+  <node xml:id="morpheme/54/n54"/>
+  <edge from="word/45/n45" to="morpheme/54/n54" xml:id="e54"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/54/n54" xml:id="54">
     <fs>
       <f name="text">nó</f>
       <f name="meaning"/>
       <f name="baseform">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n55"/>
-  <edge from="word/n46" to="morpheme/n55" xml:id="e55"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n55" xml:id="morpheme/a55">
+  <node xml:id="morpheme/55/n55"/>
+  <edge from="word/46/n46" to="morpheme/55/n55" xml:id="e55"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/55/n55" xml:id="55">
     <fs>
       <f name="text">firii</f>
       <f name="meaning">from</f>
       <f name="baseform">firi</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n56"/>
-  <edge from="word/n47" to="morpheme/n56" xml:id="e56"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n56" xml:id="morpheme/a56">
+  <node xml:id="morpheme/56/n56"/>
+  <edge from="word/47/n47" to="morpheme/56/n56" xml:id="e56"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/56/n56" xml:id="56">
     <fs>
       <f name="text">fie</f>
       <f name="meaning">house</f>
       <f name="baseform">fie</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n57"/>
-  <edge from="word/n48" to="morpheme/n57" xml:id="e57"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n57" xml:id="morpheme/a57">
+  <node xml:id="morpheme/57/n57"/>
+  <edge from="word/48/n48" to="morpheme/57/n57" xml:id="e57"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/57/n57" xml:id="57">
     <fs>
       <f name="text">faa</f>
       <f name="meaning">pass</f>
       <f name="baseform">fa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n58"/>
-  <edge from="word/n49" to="morpheme/n58" xml:id="e58"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n58" xml:id="morpheme/a58">
+  <node xml:id="morpheme/58/n58"/>
+  <edge from="word/49/n49" to="morpheme/58/n58" xml:id="e58"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/58/n58" xml:id="58">
     <fs>
       <f name="text">sukuu</f>
       <f name="meaning">school</f>
       <f name="baseform">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n59"/>
-  <edge from="word/n50" to="morpheme/n59" xml:id="e59"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n59" xml:id="morpheme/a59">
+  <node xml:id="morpheme/59/n59"/>
+  <edge from="word/50/n50" to="morpheme/59/n59" xml:id="e59"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/59/n59" xml:id="59">
     <fs>
       <f name="text">nò</f>
       <f name="meaning"/>
       <f name="baseform">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n6"/>
-  <edge from="word/n5" to="morpheme/n6" xml:id="e6"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n6" xml:id="morpheme/a6">
+  <node xml:id="morpheme/6/n6"/>
+  <edge from="word/5/n5" to="morpheme/6/n6" xml:id="e6"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/6/n6" xml:id="6">
     <fs>
       <f name="text">nó</f>
       <f name="meaning"/>
       <f name="baseform">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n60"/>
-  <edge from="word/n51" to="morpheme/n60" xml:id="e60"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n60" xml:id="morpheme/a60">
+  <node xml:id="morpheme/60/n60"/>
+  <edge from="word/51/n51" to="morpheme/60/n60" xml:id="e60"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/60/n60" xml:id="60">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n61"/>
-  <edge from="word/n52" to="morpheme/n61" xml:id="e61"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n61" xml:id="morpheme/a61">
+  <node xml:id="morpheme/61/n61"/>
+  <edge from="word/52/n52" to="morpheme/61/n61" xml:id="e61"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/61/n61" xml:id="61">
     <fs>
       <f name="text">kɔɔ</f>
       <f name="meaning">go</f>
       <f name="baseform">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n62"/>
-  <edge from="word/n53" to="morpheme/n62" xml:id="e62"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n62" xml:id="morpheme/a62">
+  <node xml:id="morpheme/62/n62"/>
+  <edge from="word/53/n53" to="morpheme/62/n62" xml:id="e62"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/62/n62" xml:id="62">
     <fs>
       <f name="text">asɔrɪ</f>
       <f name="meaning">church</f>
       <f name="baseform">asɔrɪ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n63"/>
-  <edge from="word/n54" to="morpheme/n63" xml:id="e63"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n63" xml:id="morpheme/a63">
+  <node xml:id="morpheme/63/n63"/>
+  <edge from="word/54/n54" to="morpheme/63/n63" xml:id="e63"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/63/n63" xml:id="63">
     <fs>
       <f name="text">ɔ</f>
       <f name="meaning"/>
       <f name="baseform">ɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n64"/>
-  <edge from="word/n55" to="morpheme/n64" xml:id="e64"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n64" xml:id="morpheme/a64">
+  <node xml:id="morpheme/64/n64"/>
+  <edge from="word/55/n55" to="morpheme/64/n64" xml:id="e64"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/64/n64" xml:id="64">
     <fs>
       <f name="text">fa</f>
       <f name="meaning">pass</f>
       <f name="baseform">fa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n65"/>
-  <edge from="word/n56" to="morpheme/n65" xml:id="e65"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n65" xml:id="morpheme/a65">
+  <node xml:id="morpheme/65/n65"/>
+  <edge from="word/56/n56" to="morpheme/65/n65" xml:id="e65"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/65/n65" xml:id="65">
     <fs>
       <f name="text">sukuu</f>
       <f name="meaning">school</f>
       <f name="baseform">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n66"/>
-  <edge from="word/n57" to="morpheme/n66" xml:id="e66"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n66" xml:id="morpheme/a66">
+  <node xml:id="morpheme/66/n66"/>
+  <edge from="word/57/n57" to="morpheme/66/n66" xml:id="e66"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/66/n66" xml:id="66">
     <fs>
       <f name="text">no</f>
       <f name="meaning"/>
       <f name="baseform">no</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n67"/>
-  <edge from="word/n58" to="morpheme/n67" xml:id="e67"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n67" xml:id="morpheme/a67">
+  <node xml:id="morpheme/67/n67"/>
+  <edge from="word/58/n58" to="morpheme/67/n67" xml:id="e67"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/67/n67" xml:id="67">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n68"/>
-  <edge from="word/n59" to="morpheme/n68" xml:id="e68"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n68" xml:id="morpheme/a68">
+  <node xml:id="morpheme/68/n68"/>
+  <edge from="word/59/n59" to="morpheme/68/n68" xml:id="e68"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/68/n68" xml:id="68">
     <fs>
       <f name="text">kɔ</f>
       <f name="meaning">go</f>
       <f name="baseform">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n69"/>
-  <edge from="word/n60" to="morpheme/n69" xml:id="e69"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n69" xml:id="morpheme/a69">
+  <node xml:id="morpheme/69/n69"/>
+  <edge from="word/60/n60" to="morpheme/69/n69" xml:id="e69"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/69/n69" xml:id="69">
     <fs>
       <f name="text">dwaso</f>
       <f name="meaning">market</f>
       <f name="baseform">dwaso</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n7"/>
-  <edge from="word/n6" to="morpheme/n7" xml:id="e7"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n7" xml:id="morpheme/a7">
+  <node xml:id="morpheme/7/n7"/>
+  <edge from="word/6/n6" to="morpheme/7/n7" xml:id="e7"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/7/n7" xml:id="7">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n70"/>
-  <edge from="word/n61" to="morpheme/n70" xml:id="e70"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n70" xml:id="morpheme/a70">
+  <node xml:id="morpheme/70/n70"/>
+  <edge from="word/61/n61" to="morpheme/70/n70" xml:id="e70"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/70/n70" xml:id="70">
     <fs>
       <f name="text">abain</f>
       <f name="meaning">government</f>
       <f name="baseform">abain</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n71"/>
-  <edge from="word/n62" to="morpheme/n71" xml:id="e71"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n71" xml:id="morpheme/a71">
+  <node xml:id="morpheme/71/n71"/>
+  <edge from="word/62/n62" to="morpheme/71/n71" xml:id="e71"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/71/n71" xml:id="71">
     <fs>
       <f name="text">ɛyɛ</f>
       <f name="meaning">do</f>
       <f name="baseform">ɛyɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n72"/>
-  <edge from="word/n63" to="morpheme/n72" xml:id="e72"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n72" xml:id="morpheme/a72">
+  <node xml:id="morpheme/72/n72"/>
+  <edge from="word/63/n63" to="morpheme/72/n72" xml:id="e72"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/72/n72" xml:id="72">
     <fs>
       <f name="text">nyuɔma</f>
       <f name="meaning">things</f>
       <f name="baseform">nyuɔma</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n73"/>
-  <edge from="word/n64" to="morpheme/n73" xml:id="e73"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n73" xml:id="morpheme/a73">
+  <node xml:id="morpheme/73/n73"/>
+  <edge from="word/64/n64" to="morpheme/73/n73" xml:id="e73"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/73/n73" xml:id="73">
     <fs>
       <f name="text">a</f>
       <f name="meaning">that</f>
       <f name="baseform">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n74"/>
-  <edge from="word/n65" to="morpheme/n74" xml:id="e74"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n74" xml:id="morpheme/a74">
+  <node xml:id="morpheme/74/n74"/>
+  <edge from="word/65/n65" to="morpheme/74/n74" xml:id="e74"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/74/n74" xml:id="74">
     <fs>
       <f name="text">ɛbe</f>
       <f name="meaning">will</f>
       <f name="baseform">ɛbe</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n75"/>
-  <edge from="word/n66" to="morpheme/n75" xml:id="e75"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n75" xml:id="morpheme/a75">
+  <node xml:id="morpheme/75/n75"/>
+  <edge from="word/66/n66" to="morpheme/75/n75" xml:id="e75"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/75/n75" xml:id="75">
     <fs>
       <f name="text">bua</f>
       <f name="meaning">help</f>
       <f name="baseform">bua</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n76"/>
-  <edge from="word/n67" to="morpheme/n76" xml:id="e76"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n76" xml:id="morpheme/a76">
+  <node xml:id="morpheme/76/n76"/>
+  <edge from="word/67/n67" to="morpheme/76/n76" xml:id="e76"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/76/n76" xml:id="76">
     <fs>
       <f name="text">nsra</f>
       <f name="meaning">visit</f>
       <f name="baseform">nsra</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n77"/>
-  <edge from="word/n67" to="morpheme/n77" xml:id="e77"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n77" xml:id="morpheme/a77">
+  <node xml:id="morpheme/77/n77"/>
+  <edge from="word/67/n67" to="morpheme/77/n77" xml:id="e77"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/77/n77" xml:id="77">
     <fs>
       <f name="text">hwɛ</f>
       <f name="meaning">see</f>
       <f name="baseform">hwɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n78"/>
-  <edge from="word/n68" to="morpheme/n78" xml:id="e78"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n78" xml:id="morpheme/a78">
+  <node xml:id="morpheme/78/n78"/>
+  <edge from="word/68/n68" to="morpheme/78/n78" xml:id="e78"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/78/n78" xml:id="78">
     <fs>
       <f name="text">ewɔ</f>
       <f name="meaning">at</f>
       <f name="baseform">ewɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n79"/>
-  <edge from="word/n69" to="morpheme/n79" xml:id="e79"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n79" xml:id="morpheme/a79">
+  <node xml:id="morpheme/79/n79"/>
+  <edge from="word/69/n69" to="morpheme/79/n79" xml:id="e79"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/79/n79" xml:id="79">
     <fs>
       <f name="text">ɔmain</f>
       <f name="meaning">state</f>
       <f name="baseform">ɔmain</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n8"/>
-  <edge from="word/n7" to="morpheme/n8" xml:id="e8"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n8" xml:id="morpheme/a8">
+  <node xml:id="morpheme/8/n8"/>
+  <edge from="word/7/n7" to="morpheme/8/n8" xml:id="e8"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/8/n8" xml:id="8">
     <fs>
       <f name="text">bere</f>
       <f name="meaning">time</f>
       <f name="baseform">bere</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n80"/>
-  <edge from="word/n70" to="morpheme/n80" xml:id="e80"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n80" xml:id="morpheme/a80">
+  <node xml:id="morpheme/80/n80"/>
+  <edge from="word/70/n70" to="morpheme/80/n80" xml:id="e80"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/80/n80" xml:id="80">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n81"/>
-  <edge from="word/n71" to="morpheme/n81" xml:id="e81"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n81" xml:id="morpheme/a81">
+  <node xml:id="morpheme/81/n81"/>
+  <edge from="word/71/n71" to="morpheme/81/n81" xml:id="e81"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/81/n81" xml:id="81">
     <fs>
       <f name="text">me</f>
       <f name="meaning">I</f>
       <f name="baseform">me</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n82"/>
-  <edge from="word/n72" to="morpheme/n82" xml:id="e82"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n82" xml:id="morpheme/a82">
+  <node xml:id="morpheme/82/n82"/>
+  <edge from="word/72/n72" to="morpheme/82/n82" xml:id="e82"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/82/n82" xml:id="82">
     <fs>
       <f name="text">fa</f>
       <f name="meaning">pass</f>
       <f name="baseform">fa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n83"/>
-  <edge from="word/n73" to="morpheme/n83" xml:id="e83"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n83" xml:id="morpheme/a83">
+  <node xml:id="morpheme/83/n83"/>
+  <edge from="word/73/n73" to="morpheme/83/n83" xml:id="e83"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/83/n83" xml:id="83">
     <fs>
       <f name="text">afuo</f>
       <f name="meaning">farm</f>
       <f name="baseform">afuo</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n84"/>
-  <edge from="word/n74" to="morpheme/n84" xml:id="e84"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n84" xml:id="morpheme/a84">
+  <node xml:id="morpheme/84/n84"/>
+  <edge from="word/74/n74" to="morpheme/84/n84" xml:id="e84"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/84/n84" xml:id="84">
     <fs>
       <f name="text">no</f>
       <f name="meaning"/>
       <f name="baseform">no</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n85"/>
-  <edge from="word/n75" to="morpheme/n85" xml:id="e85"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n85" xml:id="morpheme/a85">
+  <node xml:id="morpheme/85/n85"/>
+  <edge from="word/75/n75" to="morpheme/85/n85" xml:id="e85"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/85/n85" xml:id="85">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n86"/>
-  <edge from="word/n76" to="morpheme/n86" xml:id="e86"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n86" xml:id="morpheme/a86">
+  <node xml:id="morpheme/86/n86"/>
+  <edge from="word/76/n76" to="morpheme/86/n86" xml:id="e86"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/86/n86" xml:id="86">
     <fs>
       <f name="text">kɔ</f>
       <f name="meaning">go</f>
       <f name="baseform">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n87"/>
-  <edge from="word/n77" to="morpheme/n87" xml:id="e87"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n87" xml:id="morpheme/a87">
+  <node xml:id="morpheme/87/n87"/>
+  <edge from="word/77/n77" to="morpheme/87/n87" xml:id="e87"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/87/n87" xml:id="87">
     <fs>
       <f name="text">sukuu</f>
       <f name="meaning">school</f>
       <f name="baseform">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n88"/>
-  <edge from="word/n78" to="morpheme/n88" xml:id="e88"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n88" xml:id="morpheme/a88">
+  <node xml:id="morpheme/88/n88"/>
+  <edge from="word/78/n78" to="morpheme/88/n88" xml:id="e88"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/88/n88" xml:id="88">
     <fs>
       <f name="text">ná</f>
       <f name="meaning"/>
       <f name="baseform">na</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n89"/>
-  <edge from="word/n79" to="morpheme/n89" xml:id="e89"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n89" xml:id="morpheme/a89">
+  <node xml:id="morpheme/89/n89"/>
+  <edge from="word/79/n79" to="morpheme/89/n89" xml:id="e89"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/89/n89" xml:id="89">
     <fs>
       <f name="text">sukuu</f>
       <f name="meaning">school</f>
       <f name="baseform">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n9"/>
-  <edge from="word/n8" to="morpheme/n9" xml:id="e9"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n9" xml:id="morpheme/a9">
+  <node xml:id="morpheme/9/n9"/>
+  <edge from="word/8/n8" to="morpheme/9/n9" xml:id="e9"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/9/n9" xml:id="9">
     <fs>
       <f name="text">ahorow</f>
       <f name="meaning">multiply</f>
       <f name="baseform">ahorow</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n90"/>
-  <edge from="word/n80" to="morpheme/n90" xml:id="e90"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n90" xml:id="morpheme/a90">
+  <node xml:id="morpheme/90/n90"/>
+  <edge from="word/80/n80" to="morpheme/90/n90" xml:id="e90"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/90/n90" xml:id="90">
     <fs>
       <f name="text">mu</f>
       <f name="meaning">inside</f>
       <f name="baseform">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n91"/>
-  <edge from="word/n81" to="morpheme/n91" xml:id="e91"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n91" xml:id="morpheme/a91">
+  <node xml:id="morpheme/91/n91"/>
+  <edge from="word/81/n81" to="morpheme/91/n91" xml:id="e91"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/91/n91" xml:id="91">
     <fs>
       <f name="text">nà</f>
       <f name="meaning">and</f>
       <f name="baseform">na</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n92"/>
-  <edge from="word/n82" to="morpheme/n92" xml:id="e92"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n92" xml:id="morpheme/a92">
+  <node xml:id="morpheme/92/n92"/>
+  <edge from="word/82/n82" to="morpheme/92/n92" xml:id="e92"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/92/n92" xml:id="92">
     <fs>
       <f name="text">me</f>
       <f name="baseform">me</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n93"/>
-  <edge from="word/n82" to="morpheme/n93" xml:id="e93"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n93" xml:id="morpheme/a93">
+  <node xml:id="morpheme/93/n93"/>
+  <edge from="word/82/n82" to="morpheme/93/n93" xml:id="e93"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/93/n93" xml:id="93">
     <fs>
       <f name="text">pɛ</f>
       <f name="meaning">want</f>
       <f name="baseform">pɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n94"/>
-  <edge from="word/n83" to="morpheme/n94" xml:id="e94"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n94" xml:id="morpheme/a94">
+  <node xml:id="morpheme/94/n94"/>
+  <edge from="word/83/n83" to="morpheme/94/n94" xml:id="e94"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/94/n94" xml:id="94">
     <fs>
       <f name="text">sɛ</f>
       <f name="meaning"/>
       <f name="baseform">sɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n95"/>
-  <edge from="word/n84" to="morpheme/n95" xml:id="e95"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n95" xml:id="morpheme/a95">
+  <node xml:id="morpheme/95/n95"/>
+  <edge from="word/84/n84" to="morpheme/95/n95" xml:id="e95"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/95/n95" xml:id="95">
     <fs>
       <f name="text">me</f>
       <f name="meaning"/>
       <f name="baseform">me</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n96"/>
-  <edge from="word/n85" to="morpheme/n96" xml:id="e96"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n96" xml:id="morpheme/a96">
+  <node xml:id="morpheme/96/n96"/>
+  <edge from="word/85/n85" to="morpheme/96/n96" xml:id="e96"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/96/n96" xml:id="96">
     <fs>
       <f name="text">de</f>
       <f name="meaning">use</f>
       <f name="baseform">de</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n97"/>
-  <edge from="word/n86" to="morpheme/n97" xml:id="e97"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n97" xml:id="morpheme/a97">
+  <node xml:id="morpheme/97/n97"/>
+  <edge from="word/86/n86" to="morpheme/97/n97" xml:id="e97"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/97/n97" xml:id="97">
     <fs>
       <f name="text">kɔ</f>
       <f name="meaning">go</f>
