@@ -52,19 +52,13 @@ class TestTypecraft:
         assert(nodes_number == expected_nodes_number)
 
     def test_phrase_annotation_features(self):
-        """ The annotations of a phrase are the
-        attributes and the rest elements
-        excluding the WORD and globaltags elements.
-
-        """
-
         node_phrase = self.root.find(self.xml_namespace+"phrase")
 
         expected_features_number = len(node_phrase.attrib)
 
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
-            if key[1] != "word":
+            if key[1] != "word" and key[1] != "globaltags":
                 expected_features_number+=1
 
         node = self.graph.nodes["phrase/1818/n1818"]
