@@ -27,7 +27,7 @@ import regex
 import operator
 
 from poioapi import data
-from poioapi.io.pickle import Writer
+#from poioapi.io.pickle import Writer
 
 class RegionNotFoundInString(Exception):
     """Base class for region update method exception."""
