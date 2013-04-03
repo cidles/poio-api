@@ -29,8 +29,6 @@ from graf import GraphParser
 class AnnotationGraph():
 
     def __init__(self, data_structure_type):
-        self.data_structure_type = data_structure_type
-
         if data_structure_type is None:
             self.structure_type_handler = None
         elif isinstance(data_structure_type, data.DataStructureType):
@@ -155,7 +153,13 @@ class AnnotationGraph():
         annotation_value : str
             The annotation value.
         """
-        return annotation.features.get_value("annotation_value")
+        annotation_value = ""
+        try:
+            annotation_value = annotation.features.get_value("annotation_value")
+        except KeyError:
+            pass
+        
+        return annotation_value
 
     def as_html_table(self, filtered = False, full_html = True):
         """Return the graph as a HTML table.
