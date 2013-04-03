@@ -1,11 +1,12 @@
 import poioapi.io.graf
 
 class SimpleParser(poioapi.io.graf.BaseParser):
-    tiers = ["utterance", "word", "graid"]
+    tiers = ["utterance", "word", "wfw", "graid"]
 
     utterance_tier = ["this is a test", "this is another test"]
     word_tier = [['this', 'is', 'a', 'test'], ['this', 'is', 'another', 'test']]
-    graid_tier = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    wfw_tier = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    graid_tier = ['i', 'j', 'k', 'l', 'm', 'n', 'o', 'p']
 
     def __init__(self):
         pass
@@ -17,7 +18,7 @@ class SimpleParser(poioapi.io.graf.BaseParser):
         if tier.name == "utterance":
             return [poioapi.io.graf.Tier("word")]
         if tier.name == "word":
-            return [poioapi.io.graf.Tier("graid")]
+            return [poioapi.io.graf.Tier("graid"), poioapi.io.graf.Tier("wfw")]
 
         return None
 
@@ -31,6 +32,9 @@ class SimpleParser(poioapi.io.graf.BaseParser):
 
         if tier.name == "graid":
             return [poioapi.io.graf.Annotation(annotation_parent.id + 10, self.graid_tier[annotation_parent.id - 2])]
+
+        if tier.name == "wfw":
+            return [poioapi.io.graf.Annotation(annotation_parent.id + 12, self.wfw_tier[annotation_parent.id - 2])]
 
         return []
 
@@ -74,7 +78,7 @@ class TestGrAFConverter:
     def test_get_nodes_from_graf(self):
         nodes = self.graph.nodes
 
-        assert (len(nodes) == 18)
+        assert len(nodes) == 26
 
     def test_get_annotation_from_node(self):
         node = self.graph.nodes['word/n2']
@@ -85,7 +89,7 @@ class TestGrAFConverter:
     def test_get_edges_from_graf(self):
         edges = self.graph.edges
 
-        assert len(edges) == 16
+        assert len(edges) == 18
 
     def test_get_edge_nodes(self):
         edge = self.graph.edges['e2']
@@ -96,8 +100,7 @@ class TestGrAFConverter:
     def test_get_annotations_spaces_from_graf(self):
         annotation_spaces = self.graph.annotation_spaces
 
-        assert len(annotation_spaces) == 3
-
+        assert len(annotation_spaces) == 4
         assert len(annotation_spaces['utterance']) == 2
         assert len(annotation_spaces['word']) == 8
         assert len(annotation_spaces['graid']) == 8
