@@ -79,7 +79,10 @@ class Parser(poioapi.io.graf.BaseParser):
             annotation_value = annotation.find('ANNOTATION_VALUE').text
 
             if annotation.tag == "ALIGNABLE_ANNOTATION":
-                if self._find_ranges_in_annotation_parent(annotation_parent, annotation):
+                if annotation_parent is None:
+                    features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
+                                'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
+                elif self._find_ranges_in_annotation_parent(annotation_parent, annotation):
                     features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
                                 'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
                 else:
