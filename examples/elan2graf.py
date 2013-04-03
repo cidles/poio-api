@@ -10,8 +10,6 @@
 import sys, getopt
 
 import poioapi.annotationgraph
-import poioapi.io.graf_old
-import poioapi.io.elan_old
 
 def main(argv):
     inputfile = ''

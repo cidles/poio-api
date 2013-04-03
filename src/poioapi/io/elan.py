@@ -79,8 +79,11 @@ class Parser(poioapi.io.graf.BaseParser):
             annotation_value = annotation.find('ANNOTATION_VALUE').text
 
             if annotation.tag == "ALIGNABLE_ANNOTATION":
-                features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
-                            'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
+                if self._find_ranges_in_annotation_parent(annotation_parent, annotation):
+                    features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
+                                'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
+                else:
+                    continue
             else:
                 annotation_ref = annotation.attrib['ANNOTATION_REF']
 
@@ -95,6 +98,20 @@ class Parser(poioapi.io.graf.BaseParser):
             annotations.append(poioapi.io.graf.Annotation(annotation_id, annotation_value, features))
 
         return annotations
+
+    def _find_ranges_in_annotation_parent(self, annotation_parent, annotation):
+
+        if annotation_parent is not None:
+            annotation_parent_regions = self.region_for_annotation(annotation_parent)
+
+            annotation_regions = [int(self.regions_map[annotation.attrib['TIME_SLOT_REF1']]),
+                                  int(self.regions_map[annotation.attrib['TIME_SLOT_REF2']])]
+
+            if annotation_parent_regions[0] <= annotation_regions[0]\
+            and annotation_parent_regions[1] <= annotation_regions[1]:
+                return True
+
+        return False
 
     def tier_has_regions(self, tier):
 
