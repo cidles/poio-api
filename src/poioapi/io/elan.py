@@ -111,7 +111,7 @@ class Parser(poioapi.io.graf.BaseParser):
                                   int(self.regions_map[annotation.attrib['TIME_SLOT_REF2']])]
 
             if annotation_parent_regions[0] <= annotation_regions[0]\
-            and annotation_parent_regions[1] <= annotation_regions[1]:
+            and annotation_regions[1] <= annotation_parent_regions[1] :
                 return True
 
         return False

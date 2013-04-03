@@ -94,3 +94,16 @@ class TestElan:
         expected_regions = (780, 1340)
 
         assert regions == expected_regions
+
+    def test_find_ranges_in_annotation_parent(self):
+
+        annotation_parent = poioapi.io.graf.Annotation('a8',
+            'so you go out of the Institute to the Saint Anna Straat.',
+                {'time_slot1':'ts4',
+                 'time_slot2':'ts23'})
+
+        annotation = self.elan.tree.find("TIER[@TIER_ID='W-Words']/ANNOTATION/*[@ANNOTATION_ID='a23']")
+
+        result = self.elan._find_ranges_in_annotation_parent(annotation_parent, annotation)
+
+        assert result == True
