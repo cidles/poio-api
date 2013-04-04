@@ -189,7 +189,7 @@ class AnnotationGraph():
             html = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body>\n"
 
         for i, root_node in enumerate(self.root_nodes()):
-            html += "<table>\n"
+            html += "<table border=\"1\">\n"
 
             table = [dict() for _ in range(len(
                 self.structure_type_handler.flat_data_hierarchy))]
