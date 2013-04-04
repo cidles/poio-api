@@ -66,13 +66,11 @@ class Parser(poioapi.io.graf.BaseParser):
 
         annotations = []
 
-        if annotation_parent is None:
-            tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
-        else:
+        if annotation_parent is not None:
             tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+
                                                   "']/ANNOTATION/*[@ANNOTATION_REF='"+annotation_parent.id+"']"))
-            if len(tier_annotations) is 0:
-                tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
+        else:
+            tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+"']/ANNOTATION/"))
 
         for annotation in tier_annotations:
             annotation_id = annotation.attrib['ANNOTATION_ID']
@@ -198,7 +196,7 @@ class Writer:
                        child.text is not None:
                         other_chid.text = child.text
 
-        attrib_namespace = "{http://www.w3.org/XML/1998/namespace}"
+        namespace = "{http://www.w3.org/XML/1998/namespace}"
 
         for tiers in tree.findall('./header/tier_mapping/'):
             linguistic_type = tiers.attrib['name'].replace(' ','_')
@@ -210,39 +208,31 @@ class Writer:
                     "-"+linguistic_type)).getroot()
 
                 annotations = graf_tree.findall('{http://www.xces.org/ns/GrAF/1.0/}a')
-
+                
                 tier_element_tree = element_tree.find("TIER[@TIER_ID='"+tier_id+"']")
-
+                
                 linguistic_type_ref = element_tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+
                                                         tier_element_tree.attrib['LINGUISTIC_TYPE_REF']+"']")
 
                 for annotation in annotations:
                     features_map = {}
+                    feature_structure = annotation[0]
 
                     if tier_id+"/" in annotation.attrib['ref']:
                         if linguistic_type_ref.attrib['TIME_ALIGNABLE'] == 'true':
-                            feature_structure = annotation[0]
-                            time_slot_1 = feature_structure[0].text
-                            time_slot_2 = feature_structure[1].text
-                            annotation_value = feature_structure[2].text
-
-                            features_map['ANNOTATION_ID'] = annotation.attrib[attrib_namespace+"id"]
-                            features_map['TIME_SLOT_REF1'] = time_slot_1
-                            features_map['TIME_SLOT_REF2'] = time_slot_2
+                            features_map['ANNOTATION_ID'] = annotation.attrib[namespace+"id"]
+                            features_map['TIME_SLOT_REF1'] = feature_structure[0].text
+                            features_map['TIME_SLOT_REF2'] = feature_structure[1].text
 
                             annotation_element = SubElement(tier_element_tree,
                                 'ANNOTATION')
                             alignable_annotation = SubElement(annotation_element,
                                 'ALIGNABLE_ANNOTATION',features_map)
                             SubElement(alignable_annotation,
-                                'ANNOTATION_VALUE').text = annotation_value
+                                'ANNOTATION_VALUE').text = self._get_annotation_value(feature_structure)
                         else:
-                            feature_structure = annotation[0]
-                            ref_annotation_id = feature_structure[0].text
-                            annotation_value = feature_structure[2].text
-
-                            features_map['ANNOTATION_ID'] = annotation.attrib[attrib_namespace+"id"]
-                            features_map['ANNOTATION_REF'] = ref_annotation_id
+                            features_map['ANNOTATION_ID'] = annotation.attrib[namespace+"id"]
+                            features_map['ANNOTATION_REF'] = feature_structure[0].text
 
                             for feature_element in feature_structure:
                                 if feature_element.attrib['name'] != 'ref_annotation' and\
@@ -255,9 +245,17 @@ class Writer:
                             ref_annotation = SubElement(annotation,
                                 'REF_ANNOTATION',features_map)
                             SubElement(ref_annotation, 'ANNOTATION_VALUE').text =\
-                            annotation_value
+                            self._get_annotation_value(feature_structure)
 
         file = open(self.outputfile,'wb')
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
         file.close()
+
+    def _get_annotation_value(self, feature_structure):
+        try:
+            annotation_value = feature_structure[2].text
+        except:
+            annotation_value = None
+
+        return annotation_value
