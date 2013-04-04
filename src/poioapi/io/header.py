@@ -6,6 +6,7 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """ This module is to create the header file.
 This file will contain the files that belongs to
 each raw file with the respective elements.
@@ -122,7 +123,7 @@ class HeaderFile:
         element_tree = Element('documentHeader',
                 {"xmlns":"http://www.xces.org/ns/GrAF/1.0/",
                  "xmlns:xlink":"http://www.w3.org/1999/xlink",
-                 "docID":"POIO-"+str(random.randint(1, 1000000)),
+                 "docID":"PoioAPI-"+str(random.randint(1, 1000000)),
                  "version":self.version,
                  "date.created":now.strftime("%Y-%m-%d")})
 

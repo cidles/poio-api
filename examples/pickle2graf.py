@@ -8,8 +8,10 @@
 
 import sys, getopt
 
-from poioapi import data, annotationtree
-from poioapi.io.pickle import Writer
+#from poioapi import data, annotationtree
+#from poioapi.io.pickle import Writer
+
+import poioapi.io.pickle
 
 def main(argv):
 
@@ -36,28 +38,31 @@ def main(argv):
         sys.exit()
 
     # Create the data structure
-    data_hierarchy = data.GRAID
+#    data_hierarchy = data.GRAID
+#
+#    # Create the annotation tree with the created data structure
+#    annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
+#
+#    # Open the file
+#    annotation_tree.load_tree_from_pickle(inputfile)
+#
+#    # Once not all the existing files have
+#    # the regions is important to force it.
+#    # Or else the writer doesn't work properly.
+#
+#    search_tier = 'utterance'
+#    update_tiers = [ 'clause_unit', 'word' ]
+#
+#    annotation_tree.update_elements_with_ranges(search_tier,
+#        update_tiers)
+#
+#    writer = Writer(annotation_tree, outputfile)
+#
+#    # Write the GrAF files
+#    writer.write()
 
-    # Create the annotation tree with the created data structure
-    annotation_tree = annotationtree.AnnotationTree(data_hierarchy)
-
-    # Open the file
-    annotation_tree.load_tree_from_pickle(inputfile)
-
-    # Once not all the existing files have
-    # the regions is important to force it.
-    # Or else the writer doesn't work properly.
-
-    search_tier = 'utterance'
-    update_tiers = [ 'clause_unit', 'word' ]
-
-    annotation_tree.update_elements_with_ranges(search_tier,
-        update_tiers)
-
-    writer = Writer(annotation_tree, outputfile)
-
-    # Write the GrAF files
-    writer.write()
+    pick = poioapi.io.pickle.Parser(inputfile)
+    pick.parse()
 
     print('Finished')
 

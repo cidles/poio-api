@@ -15,7 +15,8 @@ PoioAPI IO Package
 .. toctree::
    :maxdepth: 1
 
+   io.elan
    io.graf
    io.header
-   io.elan
    io.pickle
+   io.typecraft

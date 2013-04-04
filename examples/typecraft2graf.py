@@ -9,22 +9,22 @@
 
 import sys, getopt
 
-import poioapi.io.elan
+import poioapi.annotationgraph
+import poioapi.data
 
 def main(argv):
 
     inputfile = ''
-    outputfile = ''
 
     try:
         opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
     except getopt.GetoptError:
-        print('graf2elan.py -i <inputfile> -o <outputfile>')
+        print('typecraft2graf.py -i <inputfile> -o <outputfile>')
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '-h':
-            print('graf2elan.py -i <inputfile> -o <outputfile>')
+            print('typecraft2graf.py -i <inputfile> -o <outputfile>')
             sys.exit()
         elif opt in ('-i', '--ifile'):
             inputfile = arg
@@ -32,14 +32,20 @@ def main(argv):
             outputfile = arg
 
     if inputfile == "" or outputfile == "":
-        print('graf2elan.py -i <inputfile> -o <outputfile>')
+        print('typecraft2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    # Initialize
-    elan = poioapi.io.elan.Writer(inputfile, outputfile)
+    # Create the data structure
+    data_hierarchy = None
 
-    # Write the Elan file
-    elan.write()
+    # Initialize the annotation graph
+    annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
+
+    # Create a graph from an typecraft file
+    annotation_graph.from_typecraft(inputfile)
+
+    # Generate the GrAF files
+    annotation_graph.generate_graf_files(inputfile, outputfile)
 
     print('Finished')
 

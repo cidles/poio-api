@@ -13,20 +13,26 @@ import os.path
 import codecs
 import operator
 
+from xml.dom import minidom
+from xml.etree.ElementTree import Element, SubElement, tostring
+import xml.etree.ElementTree as ET
+
+import poioapi.io.elan
+import poioapi.io.header
+import poioapi.io.typecraft
+import poioapi.io.graf
+
 from poioapi import data
+
 from graf import GraphParser
 
 class AnnotationGraph():
 
     def __init__(self, data_structure_type):
-        self.data_structure_type = data_structure_type
-
-        if data_structure_type == data.GRAID:
-            self.structure_type_handler = data.DataStructureTypeGraid()
-        elif data_structure_type == data.GRAIDDIANA:
-            self.structure_type_handler = data.DataStructureTypeGraidDiana()
-        elif data_structure_type == data.MORPHSYNT:
-            self.structure_type_handler = data.DataStructureTypeMorphsynt()
+        if data_structure_type is None:
+            self.structure_type_handler = None
+        elif isinstance(data_structure_type, data.DataStructureType):
+            self.structure_type_handler = data_structure_type
         else:
             raise(
                 data.DataStructureTypeNotSupportedError(
@@ -102,11 +108,11 @@ class AnnotationGraph():
         if parent_node:
             for edge in parent_node.out_edges:
                 target_node = edge.to_node
-                if target_node.annotations.get_first().label == tier_name:
+                if target_node.id.startswith(tier_name):
                     res.append(target_node)
         else:
             for target_node in self.graf.nodes:
-                if target_node.annotations.get_first().label == tier_name:
+                if target_node.id.startswith(tier_name):
                     res.append(target_node)
         return res
 
@@ -128,9 +134,15 @@ class AnnotationGraph():
 
         """
         res = []
-        for a in node.annotations:
-            if a.label == tier_name:
+
+        if node.id.startswith(tier_name):
+            for a in node.annotations:
                 res.append(a)
+        else:
+            nodes = self.nodes_for_tier(tier_name, node)
+            for n in nodes:
+                for a in n.annotations:
+                    res.append(a)
 
         return res
 
@@ -147,7 +159,13 @@ class AnnotationGraph():
         annotation_value : str
             The annotation value.
         """
-        return annotation.features.get_value("annotation_value")
+        annotation_value = ""
+        try:
+            annotation_value = annotation.features.get_value("annotation_value")
+        except KeyError:
+            pass
+        
+        return annotation_value
 
     def as_html_table(self, filtered = False, full_html = True):
         """Return the graph as a HTML table.
@@ -234,7 +252,10 @@ class AnnotationGraph():
                 for i, n in enumerate(node_list):
                     inserted += self._node_as_table(
                         n, t, table, column + i + inserted)
-                inserted = inserted + len(node_list) - 1
+
+                if len(node_list) > 0:
+                    inserted = inserted + len(node_list) - 1
+
                 merge_rows = [ r for r in hierarchy if type(r) is not list]
                 for r in merge_rows:
                     row = self.structure_type_handler.flat_data_hierarchy.index(r)
@@ -258,3 +279,116 @@ class AnnotationGraph():
                     table[row][column] = (a, 1)
 
         return inserted
+
+    def from_elan(self, elanfile):
+        """This method generates a GrAF object
+        from a Elan file.
+
+        """
+
+        parser = poioapi.io.elan.Parser(elanfile)
+
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
+
+        self.graf = converter.graph
+
+    def from_typecraft(self, typecraftfile):
+        """This method generates a GrAF object
+        from a Typecraft file.
+
+        """
+
+        parser = poioapi.io.typecraft.Parser(typecraftfile)
+
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
+
+        self.graf = converter.graph
+
+    def from_pickle(self):
+        """This method generates a GrAF object
+        from a pickle file.
+
+        """
+        pass
+
+    def generate_graf_files(self, inputfile, outputfile):
+        """This method will create the GrAF Xml files.
+        But first is need to create the GrAF object in
+        order to get the values.
+        In some specific cases this method will also
+        create a metafile that will gathered all the
+        data information to recreate a file. Elan type
+        is one of those specific files and this metafile
+        will garante that the extra information from the
+        files like the data structure hierarchy,
+        the vocabulary, the media descriptor and etc,
+        will be stored. The header file it's created too.
+
+        Parameters
+        ----------
+        inputfile : str
+            Name of the file to generate the files.
+        outputfile: str
+            Name to the files generated by the method.
+
+        """
+
+        graf_xml_writer = poioapi.io.graf.Writer()
+        graf_xml_writer.generate_graf_files(self.graf, inputfile)
+
+        (_, file_extension) = os.path.splitext(outputfile)
+
+        if file_extension == ".eaf":
+            self._generate_metafile(inputfile)
+
+    def _generate_metafile(self, inputfile):
+        """ This method will create a metafile
+        from the original file.
+
+        """
+
+        (basedirname, _) = os.path.splitext(inputfile)
+
+        tree = ET.parse(inputfile).getroot()
+
+        # Generate the metadata file
+        element_tree = Element('metadata')
+        header_tag = SubElement(element_tree, 'header')
+        data_structure = SubElement(header_tag, 'data_structure')
+        tier_mapping = SubElement(header_tag,'tier_mapping')
+
+        data_structure_hirearchy = []
+
+        for linguistic_type in tree.findall('LINGUISTIC_TYPE'):
+            linguistic_type_id = linguistic_type.attrib['LINGUISTIC_TYPE_ID']
+
+            type = SubElement(tier_mapping,'type',
+                    {'name':str(linguistic_type_id).replace(' ','_')})
+
+            data_structure_hirearchy.append(str(linguistic_type_id).replace(' ','_'))
+
+            for tier_ref in tree.findall("TIER[@LINGUISTIC_TYPE_REF='"+linguistic_type_id+"']"):
+                SubElement(type, 'tier').text = tier_ref.attrib['TIER_ID']
+
+        SubElement(data_structure, 'hierarchy').text = str(data_structure_hirearchy)
+
+        miscellaneous = SubElement(element_tree, "miscellaneous")
+        SubElement(miscellaneous, tree.tag, tree.attrib)
+
+        for child in tree:
+            parent = SubElement(miscellaneous, child.tag, child.attrib)
+            for lower_child in child:
+                if lower_child.tag != "ANNOTATION":
+                    child_element = SubElement(parent, lower_child.tag,
+                        lower_child.attrib)
+                    if not str(lower_child.text).isspace() or\
+                       lower_child.text is not None:
+                        child_element.text = lower_child.text
+
+        filename = basedirname+"-extinfo.xml"
+        file = open(filename,'wb')
+        doc = minidom.parseString(tostring(element_tree))
+        file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+        file.close()

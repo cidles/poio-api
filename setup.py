@@ -2,7 +2,7 @@
 #
 # Poio Tools for Linguists
 #
-# Copyright (C) 2001-2012 Poio Project
+# Copyright (C) 2001-2013 Poio Project
 # Author: Peter Bouda <pbouda@cidles.eu>
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT

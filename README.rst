@@ -15,6 +15,7 @@ You need to install the following packages:
 
 - Python: http://python.org/download
 - graf-python: http://pypi.python.org/pypi/graf-python
+- regex: https://pypi.python.org/pypi/regex
 - If you want to process data with NLTK: http://www.nltk.org/download
 
 

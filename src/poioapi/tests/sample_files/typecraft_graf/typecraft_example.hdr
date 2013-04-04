@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentHeader date.created="2013-03-26" docID="PoioAPI-431536" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <fileDesc>
+    <fileName>/home/alopes/tests/typecraft/typecraft_example</fileName>
+    <extent count="0" unit="words"/>
+    <sourceDesc>
+      <author age="" sex="">alopes</author>
+      <source type="Contributor">Cont</source>
+      <publisher>self</publisher>
+      <pubDate iso8601="2013-03-26"/>
+      <idno type="ISBN">9164784</idno>
+    </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+    <textClass catRef="PT">
+      <subject>Revitatilization</subject>
+    </textClass>
+  </profileDesc>
+  <dataDesc>
+    <primaryData f.id="text" loc="typecraft_example.xml">
+      <annotations>
+        <annotation f.id="morpheme" loc="typecraft_example-morpheme.xml"/>
+        <annotation f.id="gloss" loc="typecraft_example-gloss.xml"/>
+        <annotation f.id="globaltags" loc="typecraft_example-globaltags.xml"/>
+        <annotation f.id="word" loc="typecraft_example-word.xml"/>
+        <annotation f.id="phrase" loc="typecraft_example-phrase.xml"/>
+      </annotations>
+    </primaryData>
+  </dataDesc>
+</documentHeader>

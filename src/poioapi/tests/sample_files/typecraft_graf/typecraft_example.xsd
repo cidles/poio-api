@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://typecraft.org/typecraft" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tc="http://typecraft.org/typecraft">
+
+	<complexType name="MorphemeType">
+		<sequence>
+			<element name="gloss" type="string" maxOccurs="unbounded" minOccurs="0">
+			</element>
+		</sequence>
+		<attribute name="text" type="string"/>
+		<attribute name="baseform" type="string"/>
+		<attribute name="meaning" type="string"/>
+		<attribute name="type">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="STEM"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="WordType">
+		<sequence>
+			<element name="pos" type="string" maxOccurs="1" minOccurs="1">
+			</element>
+			<element name="morpheme" type="tc:MorphemeType" maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+		<attribute name="text" type="string"/>
+		<attribute name="head" type="boolean"/>
+	</complexType>
+
+	<complexType name="PhraseType">
+		<sequence>
+			<element name="original" type="string"/>
+			<element name="translation" type="string"/>
+			<element name="description" type="string"/>
+			<element name="globaltags" type="tc:GlobalTagsType" maxOccurs="1" minOccurs="1">
+			</element>
+			<element name="word" type="tc:WordType" maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+		<attribute name="id" type="long"/>
+		<attribute name="valid">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="VALID"/>
+					<enumeration value="INVALID"/>
+					<enumeration value="UNKNOWN"/>
+					<enumeration value="SPECIAL"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="speaker" type="string"/>
+		<attribute name="offset" type="int"/>
+		<attribute name="duration" type="int"/>
+	</complexType>
+
+	<complexType name="GlobalTagsType">
+		<sequence maxOccurs="unbounded" minOccurs="0">
+			<element name="globaltag" type="tc:GlobalTagType"/>
+		</sequence>
+		<attribute name="id" type="long"/>
+		<attribute name="tagset" type="string"/>
+	</complexType>
+
+	<complexType name="GlobalTagType">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="level" type="int"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+
+	<complexType name="TextType">
+		<sequence>
+			<element name="title" type="string" maxOccurs="1" minOccurs="1"/>
+			<element name="titleTranslation" type="string" maxOccurs="1" minOccurs="1"/>
+			<element name="body" type="string" maxOccurs="1" minOccurs="0"/>
+			<element name="phrase" type="tc:PhraseType" maxOccurs="unbounded" minOccurs="0"/>
+		</sequence>
+		<attribute name="id" type="long"/>
+		<attribute name="lang" type="string"/>
+	</complexType>
+
+	<element name="typecraft">
+		<complexType>
+			<sequence>
+				<element name="text" type="tc:TextType" maxOccurs="unbounded" minOccurs="0"/>
+				<element name="phrase" type="tc:PhraseType" maxOccurs="unbounded" minOccurs="0"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

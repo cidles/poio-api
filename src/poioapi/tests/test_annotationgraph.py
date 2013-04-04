@@ -22,7 +22,7 @@ class TestAnnotationGraph:
     def setup(self):
         # Initialize the AnnotationTree class
         self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(
-            data.GRAID)
+            data.DataStructureTypeGraid())
 
         filename = os.path.join(os.path.dirname(__file__), "sample_files",
             "balochi_graf", "balochi.hdr")
