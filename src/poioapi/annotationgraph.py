@@ -216,10 +216,6 @@ class AnnotationGraph():
         if full_html:
             html += "</body></html>"
 
-        f = open("test.html", "wb")
-        f.write(html.encode("utf-8"))
-        f.close()
-
         return html
 
     def _node_as_table(self, node, hierarchy, table, column):
