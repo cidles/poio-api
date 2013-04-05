@@ -49,8 +49,12 @@ class Parser(poioapi.io.graf.BaseParser):
     def parse(self):
         self.annotation_tree = poioapi.annotationtree.AnnotationTree(self.data_structure)
         self.annotation_tree.load_tree_from_pickle(self.filepath)
-
         self.data_hierarchy = self.annotation_tree.structure_type_handler.data_hierarchy
+
+        search_tier = self.annotation_tree.structure_type_handler.types_with_regions[0]
+        update_tiers = self.annotation_tree.structure_type_handler.types_with_regions
+        self.annotation_tree.update_elements_with_ranges(search_tier, update_tiers)
+
         self._tier_map = {}
         self._find_structure_levels(self.data_hierarchy)
 
