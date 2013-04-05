@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
   <graphHeader>
     <labelsDecl/>
@@ -9,19 +9,25 @@
       <annotationSpace as.id="graid2"/>
     </annotationSpaces>
   </graphHeader>
-  <a as="graid2" label="graid2" ref="clause_unit-n0" xml:id="graid2-a0">
+  <node xml:id="graid2/n122"/>
+  <edge from="clause_unit/n121" to="graid2/n122" xml:id="e122"/>
+  <a as="graid2" label="graid2" ref="graid2/n122" xml:id="122">
+    <fs>
+      <f name="annotation_value">0.h:a</f>
+    </fs>
+  </a>
+  <node xml:id="graid2/n5"/>
+  <edge from="clause_unit/n4" to="graid2/n5" xml:id="e5"/>
+  <a as="graid2" label="graid2" ref="graid2/n5" xml:id="5">
     <fs>
       <f name="annotation_value">nc</f>
     </fs>
   </a>
-  <a as="graid2" label="graid2" ref="clause_unit-n4" xml:id="graid2-a1">
+  <node xml:id="graid2/n88"/>
+  <edge from="clause_unit/n87" to="graid2/n88" xml:id="e88"/>
+  <a as="graid2" label="graid2" ref="graid2/n88" xml:id="88">
     <fs>
       <f name="annotation_value">0:s</f>
-    </fs>
-  </a>
-  <a as="graid2" label="graid2" ref="clause_unit-n6" xml:id="graid2-a2">
-    <fs>
-      <f name="annotation_value">0.h:a</f>
     </fs>
   </a>
 </graph>
