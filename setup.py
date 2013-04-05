@@ -20,11 +20,11 @@ distribute_setup.use_setuptools()
 from setuptools import setup, find_packages
 
 setup(
-    name = "Poio API",
+    name = "poio-api",
     description = "A Python Library to access and manipulate linguistically annotated corpus files.",
     version = poioapi_version,
     url = "https://github.com/cidles/poio-api",
-    download_url = "https://github.com/downloads/cidles/poio-api/poio-api-{0}.tar.gz".format(poioapi_version),
+    download_url = "http://media.cidles.eu/static/downloads/poio/poio-api-{0}.tar.gz".format(poioapi_version),
     #long_description = "Python implementation of the Graph Annotation Framework. (http://www.americannationalcorpus.org/graf-wiki)",
     license = "Apache License, Version 2.0",
     keywords = ['NLP', 'CL', 'natural language processing',

@@ -109,11 +109,11 @@ class AnnotationGraph():
         if parent_node:
             for edge in parent_node.out_edges:
                 target_node = edge.to_node
-                if target_node.annotations.get_first().label == tier_name:
+                if target_node.id.startswith(tier_name):
                     res.append(target_node)
         else:
             for target_node in self.graf.nodes:
-                if target_node.annotations.get_first().label == tier_name:
+                if target_node.id.startswith(tier_name):
                     res.append(target_node)
         return res
 
@@ -135,9 +135,15 @@ class AnnotationGraph():
 
         """
         res = []
-        for a in node.annotations:
-            if a.label == tier_name:
+
+        if node.id.startswith(tier_name):
+            for a in node.annotations:
                 res.append(a)
+        else:
+            nodes = self.nodes_for_tier(tier_name, node)
+            for n in nodes:
+                for a in n.annotations:
+                    res.append(a)
 
         return res
 
@@ -184,7 +190,7 @@ class AnnotationGraph():
             html = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body>\n"
 
         for i, root_node in enumerate(self.root_nodes()):
-            html += "<table>\n"
+            html += "<table border=\"1\">\n"
 
             table = [dict() for _ in range(len(
                 self.structure_type_handler.flat_data_hierarchy))]
@@ -210,10 +216,6 @@ class AnnotationGraph():
 
         if full_html:
             html += "</body></html>"
-
-        f = open("test.html", "wb")
-        f.write(html.encode("utf-8"))
-        f.close()
 
         return html
 
@@ -247,7 +249,10 @@ class AnnotationGraph():
                 for i, n in enumerate(node_list):
                     inserted += self._node_as_table(
                         n, t, table, column + i + inserted)
-                inserted = inserted + len(node_list) - 1
+
+                if len(node_list) > 0:
+                    inserted = inserted + len(node_list) - 1
+
                 merge_rows = [ r for r in hierarchy if type(r) is not list]
                 for r in merge_rows:
                     row = self.structure_type_handler.flat_data_hierarchy.index(r)
