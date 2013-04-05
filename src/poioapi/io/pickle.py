@@ -25,69 +25,33 @@ class Parser(poioapi.io.graf.BaseParser):
 
     """
 
-    def __init__(self, filepath):
+    def __init__(self, filepath, data_structure):
         """Class's constructor.
 
         Parameters
         ----------
         filepath : str
             Path of the pickle file.
+        data_structure : array-like
+            Data annotation structure.
 
         """
 
         self.filepath = filepath
+        self.data_structure = data_structure
 
-#        self.parse()
+        self.parse()
 
     def parse(self):
-
-        self.annotation_tree = poioapi.annotationtree.AnnotationTree(poioapi.data.GRAID)
-        self.data_hierarchy = self.annotation_tree.structure_type_handler.data_hierarchy
-
+        self.annotation_tree = poioapi.annotationtree.AnnotationTree(self.data_structure)
         self.annotation_tree.load_tree_from_pickle(self.filepath)
 
-#        print(self.annotation_tree.tree)
+        self.data_hierarchy = self.annotation_tree.structure_type_handler.data_hierarchy
+        self._tier_map = {}
+        self._find_structure_levels(self.data_hierarchy)
 
-        #
-        #        for index, element in enumerate(self.annotation_tree.elements()):
-        #            print(index, element[0])
-        #
-        #        pass
-
-#        print(self.data_hierarchy)
-        root_tiers = self.get_root_tiers()
-
-        firs_tier = root_tiers[0]
-
-#        print(root_tiers)
-
-
-
-
-        tiers = self.get_child_tiers_for_tier(firs_tier)
-
-#        for tier in tiers:
-#            print(tier.name)
-
-        clause_unit = tiers[0]
-
-        clause_tiers = self.get_child_tiers_for_tier(clause_unit)
-
-#        for tier in clause_tiers:
-#            print(tier.name)
-
-#        print(self.annotation_tree.tree[0])
-
-        self.hierarchy_level_list = {}
-
-        self._find_hiearchy_levels(self.data_hierarchy)
-
-        tier = poioapi.io.graf.Tier('clause_unit')
-
-        annotations = self.get_annotations_for_tier(tier)
-
-        for annotation in annotations:
-            print(annotation.id, annotation.value)
+        for element in self.annotation_tree.tree:
+            self._get_elements_for_tier(element)
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier(self.data_hierarchy[0])]
@@ -97,48 +61,72 @@ class Parser(poioapi.io.graf.BaseParser):
                 self._find_tier_in_structure(tier, self.data_hierarchy)]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
-        self._tier_annotations = []
+        if annotation_parent is not None:
+            annotation_parent_id = annotation_parent.id
+        else:
+            annotation_parent_id = None
 
-        for element in self.annotation_tree.tree:
-            self.aaa(tier, element)
-
-        return [poioapi.io.graf.Annotation(i['id'],
-            i['annotation']) for i in self._tier_annotations]
-
-    def aaa(self, tier, elements, level = 0):
-        for position, element in enumerate(elements):
-            if isinstance(element, list):
-                self.aaa(tier, element, level + 1)
-            else:
-                print(tier.name)
-                print(level)
-                print(position)
-                if position == self.hierarchy_level_list[tier.name]['position']\
-                and level == self.hierarchy_level_list[tier.name]['level']:
-                    self._tier_annotations.append(element)
+        return [poioapi.io.graf.Annotation(str(i['id']), i['annotation'])
+                for i in self._tier_map[tier.name]['values']
+                if i['annotation'] is not '' and i['parent'] == annotation_parent_id]
 
     def tier_has_regions(self, tier):
-        pass
+        if 'region' in self._tier_map[tier.name]['values'][0]:
+            return True
+
+        return False
 
     def region_for_annotation(self, annotation):
-        pass
+        for key, values in self._tier_map.items():
+            for value in values['values']:
+                if annotation.id == str(value['id']):
+                    return value['region']
 
-    def _find_hiearchy_levels(self, data_hierarchy, level = 0):
+        return None
+
+    def _get_elements_for_tier(self, elements, parent_element = None, level = 0):
+        for position, element in enumerate(elements):
+            if isinstance(element, list):
+                if not isinstance(element[0], list):
+                    level += 1
+
+                self._get_elements_for_tier(element, parent_element, level)
+
+                if position + 1 <= len(elements) - 1:
+                    if isinstance(elements[position + 1], list):
+                        level -= 1
+            else:
+                key = self._find_key_in_map(level, position)
+                element['parent'] = parent_element
+                self._tier_map[key]['values'].append(element)
+                parent_element = str(element['id'])
+
+    def _find_key_in_map(self, level, position):
+        for key, values in self._tier_map.items():
+            if values['position'] == position \
+            and values['level'] == level:
+                return key
+
+        return None
+
+    def _find_structure_levels(self, data_hierarchy, level = 0):
         for position, element in enumerate(data_hierarchy):
             if isinstance(element, list):
-                self._find_hiearchy_levels(element, (level + 1))
+                self._find_structure_levels(element, (level + 1))
             else:
-                self.hierarchy_level_list[element] = {'level':level,
-                                                      'position':position}
+                self._tier_map[element] = {'level':level, 'position':position,
+                                           'values':[]}
 
     def _find_tier_in_structure(self, tier, structure):
-        for element in structure:
+        for i, element in enumerate(structure):
             if isinstance(element, list):
                 aux = self._find_tier_in_structure(tier, element)
                 if aux is not None:
                     return aux
+                else:
+                    return []
             else:
-                if element == tier.name:
+                if element == tier.name and i == 0:
                     return self._find_childs_from_structure(structure)
 
     def _find_childs_from_structure(self, structure):
