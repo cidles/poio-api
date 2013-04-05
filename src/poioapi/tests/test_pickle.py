@@ -7,8 +7,11 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+import os
+
 import poioapi.io.pickle
 import poioapi.io.graf
+import poioapi.data
 
 class TestPickle:
 
@@ -18,7 +21,10 @@ class TestPickle:
                 ['word', 'wfw', 'graid1'],
              'graid2'], 'translation', 'comment']
 
-        self.pickle_parser = poioapi.io.pickle.Parser(None)
+        filename = os.path.join(os.path.dirname(__file__), "sample_files",
+            "balochi_graf", "balochi.pickle")
+
+        self.pickle_parser = poioapi.io.pickle.Parser(filename, poioapi.data.GRAID)
 
     def test_find_childs_in_hierarchy(self):
         utterance_childs = ['clause_unit', 'translation', 'comment']
