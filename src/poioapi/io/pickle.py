@@ -13,6 +13,8 @@ from a pickle file using Annotation Tree.
 """
 
 from __future__ import absolute_import
+import codecs
+import os
 
 import poioapi.annotationtree
 import poioapi.data
@@ -38,6 +40,8 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
+        (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
+
         self.data_structure = data_structure
 
         self.parse()
@@ -52,6 +56,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
         for element in self.annotation_tree.tree:
             self._get_elements_for_tier(element)
+
+        self._create_raw_file()
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier(self.data_hierarchy[0])]
@@ -141,3 +147,24 @@ class Parser(poioapi.io.graf.BaseParser):
                 auxliar_strucutre.append(element)
 
         return auxliar_strucutre
+
+    def _create_raw_file(self):
+        """Creates an txt file with the data in the
+        Annotation Tree file. Passing only the sentences.
+
+        """
+
+        file = os.path.abspath(self.basedirname + '.txt')
+        f = codecs.open(file,'w', 'utf-8') # Need the encode
+
+        # Verify the elements
+        for element in self.annotation_tree.elements():
+
+            # Get the utterance
+            utterance = element[0]
+
+            # Write the content to the txt file
+            f.write(utterance.get('annotation') + '\n')
+
+        # Close txt file
+        f.close()
