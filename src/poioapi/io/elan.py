@@ -66,7 +66,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         annotations = []
 
-        if annotation_parent is not None:
+        if annotation_parent is not None and self.tier_has_regions(tier) == False:
             tier_annotations = self.tree.findall(("TIER[@TIER_ID='"+tier.name+
                                                   "']/ANNOTATION/*[@ANNOTATION_REF='"+annotation_parent.id+"']"))
         else:
