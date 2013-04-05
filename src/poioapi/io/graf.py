@@ -340,7 +340,7 @@ class Writer():
         filename = os.path.abspath(outputfile)
         (basedirname, file_extension) = os.path.splitext(outputfile)
         header = poioapi.io.header.HeaderFile(basedirname)
-        header.filename = os.path.splitext(filename)[0]
+        header.filename = os.path.basename(os.path.splitext(filename)[0])
         header.primaryfile = os.path.basename(outputfile)
         header.dataType = 'text'
 
