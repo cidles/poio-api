@@ -18,9 +18,10 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
 
 import poioapi.io.elan
-import poioapi.io.header
-import poioapi.io.typecraft
 import poioapi.io.graf
+import poioapi.io.header
+import poioapi.io.pickle
+import poioapi.io.typecraft
 
 from poioapi import data
 
@@ -297,12 +298,18 @@ class AnnotationGraph():
 
         self.graf = converter.graph
 
-    def from_pickle(self):
+    def from_pickle(self, picklefile, data_structure):
         """This method generates a GrAF object
         from a pickle file.
 
         """
-        pass
+
+        parser = poioapi.io.pickle.Parser(picklefile, data_structure)
+
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
+
+        self.graf = converter.graph
 
     def generate_graf_files(self, inputfile, outputfile):
         """This method will create the GrAF Xml files.
