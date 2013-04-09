@@ -110,7 +110,7 @@ class GrAFConverter:
             prefix = tier.name
             annotation_name = prefix
         else:
-            annotation_name = str(tier.linguistic_type).replace(' ','_')
+            annotation_name = tier.linguistic_type.encode("utf-8").replace(' ','_')
             prefix = annotation_name+"/"+tier.name
 
         has_regions = False
