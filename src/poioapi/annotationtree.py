@@ -626,9 +626,13 @@ class AnnotationTreeFilter():
 
         """
 
-        self.data_structure_type = data_structure_type
-        if data_structure_type == data.GRAID:
+        if isinstance(data_structure_type, data.DataStructureType):
             self.structure_type_handler = data.DataStructureTypeGraid()
+        else:
+            raise(
+                data.DataStructureTypeNotSupportedError(
+                    "Data structure type {0} not supported".format(
+                        data_structure_type)))
 
         self.filter = dict()
         for e in self.structure_type_handler.flat_data_hierarchy:
