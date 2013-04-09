@@ -60,8 +60,8 @@ class AnnotationTree():
 
         Parameters
         ----------
-        data_structure_type : int
-            The data structure type from the ENUM in poioapi.data.
+        data_structure_type : object
+            The data structure type base class DataStructureTpe in poioapi.data.
 
         Returns
         -------
@@ -70,16 +70,14 @@ class AnnotationTree():
         Raises
         ------
         poioapi.data.DataStructureTypeNotSupportedError
-            If the given data structure type is not in the ENUM.
+            If the given data structure type is not inherits from DataStructureType.
         """
         self.data_structure_type = data_structure_type
 
-        if data_structure_type == data.GRAID:
-            self.structure_type_handler = data.DataStructureTypeGraid()
-        elif data_structure_type == data.GRAIDDIANA:
-            self.structure_type_handler = data.DataStructureTypeGraidDiana()
-        elif data_structure_type == data.MORPHSYNT:
-            self.structure_type_handler = data.DataStructureTypeMorphsynt()
+        if data_structure_type is None:
+            self.structure_type_handler = None
+        elif isinstance(data_structure_type, data.DataStructureType):
+            self.structure_type_handler = data_structure_type
         else:
             raise(
                 data.DataStructureTypeNotSupportedError(
@@ -160,7 +158,7 @@ class AnnotationTree():
             self.tree = loaded_data[2]
         else:
             file.seek(0)
-            self.reset_data_structure_type(data.GRAID)
+            self.reset_data_structure_type(data.DataStructureTypeGraid())
             self.tree = pickle.load(file)
         file.close()
 
