@@ -27,27 +27,23 @@ class Parser(poioapi.io.graf.BaseParser):
 
     """
 
-    def __init__(self, filepath, data_structure):
+    def __init__(self, filepath):
         """Class's constructor.
 
         Parameters
         ----------
         filepath : str
             Path of the pickle file.
-        data_structure : array-like
-            Data annotation structure.
 
         """
 
         self.filepath = filepath
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
-        self.data_structure = data_structure
-
         self.parse()
 
     def parse(self):
-        self.annotation_tree = poioapi.annotationtree.AnnotationTree(self.data_structure)
+        self.annotation_tree = poioapi.annotationtree.AnnotationTree()
         self.annotation_tree.load_tree_from_pickle(self.filepath)
         self.data_hierarchy = self.annotation_tree.structure_type_handler.data_hierarchy
 
