@@ -307,13 +307,13 @@ class AnnotationGraph():
 
         self.graf = converter.graph
 
-    def from_pickle(self, picklefile, data_structure):
+    def from_pickle(self, picklefile):
         """This method generates a GrAF object
         from a pickle file.
 
         """
 
-        parser = poioapi.io.pickle.Parser(picklefile, data_structure)
+        parser = poioapi.io.pickle.Parser(picklefile)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
