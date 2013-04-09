@@ -9,6 +9,7 @@
 
 from __future__ import unicode_literals
 
+import sys
 import os.path
 import codecs
 import operator
@@ -283,7 +284,10 @@ class AnnotationGraph():
 
         """
 
-        parser = poioapi.io.elan.Parser(elanfile)
+        if sys.version < (2,7):
+            parser = poioapi.io.elan.Parser26(elanfile)
+        else:
+            parser = poioapi.io.elan.Parser(elanfile)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
@@ -372,8 +376,9 @@ class AnnotationGraph():
 
             data_structure_hirearchy.append(str(linguistic_type_id).replace(' ','_'))
 
-            for tier_ref in tree.findall("TIER[@LINGUISTIC_TYPE_REF='"+linguistic_type_id+"']"):
-                SubElement(type, 'tier').text = tier_ref.attrib['TIER_ID']
+            for tier_ref in tree.findall("TIER"):
+                if tier_ref.attrib["LINGUISTIC_TYPE_REF"] == linguistic_type_id:
+                    SubElement(type, 'tier').text = tier_ref.attrib['TIER_ID']
 
         SubElement(data_structure, 'hierarchy').text = str(data_structure_hirearchy)
 
