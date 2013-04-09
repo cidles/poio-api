@@ -35,14 +35,11 @@ def main(argv):
         print('pickle2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    # Create the data structure
-    data_hierarchy = poioapi.data.GRAID
-
     # Initialize the annotation graph
     annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
 
     # Create a graph from an pickle file
-    annotation_graph.from_pickle(inputfile, data_hierarchy)
+    annotation_graph.from_pickle(inputfile)
 
     # Generate the GrAF files
     annotation_graph.generate_graf_files(inputfile, outputfile)
