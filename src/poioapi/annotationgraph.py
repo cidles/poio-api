@@ -284,7 +284,7 @@ class AnnotationGraph():
 
         """
 
-        if sys.version < (2,7):
+        if sys.version_info < (2,7):
             parser = poioapi.io.elan.Parser26(elanfile)
         else:
             parser = poioapi.io.elan.Parser(elanfile)
