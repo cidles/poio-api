@@ -32,7 +32,7 @@ class TestAnnotationTree:
 
     def setup(self):
         # Initialize the DataStructureType class
-        self.data_structure_type = data.GRAID
+        self.data_structure_type = data.DataStructureTypeGraid()
 
         # Initialize the AnnotationTree class
         self.annotationtree = annotationtree.AnnotationTree(self.data_structure_type)
@@ -258,10 +258,19 @@ class TestAnnotationTree:
         anntreefilter = annotationtree.AnnotationTreeFilter(self.data_structure_type)
 
         # The result expected should be
-        expected_result = anntreefilter.data_structure_type
+        expected_result = anntreefilter.structure_type_handler
 
         # Comparing the result of the two instances
-        assert(self.annotationtree.last_filter().data_structure_type == expected_result)
+        assert(self.annotationtree.last_filter().structure_type_handler.data_hierarchy ==
+               expected_result.data_hierarchy)
+        assert(self.annotationtree.last_filter().structure_type_handler.flat_data_hierarchy ==
+               expected_result.flat_data_hierarchy)
+        assert(self.annotationtree.last_filter().structure_type_handler.name ==
+               expected_result.name)
+        assert(self.annotationtree.last_filter().structure_type_handler.nr_of_types ==
+               expected_result.nr_of_types)
+        assert(self.annotationtree.last_filter().structure_type_handler.types_with_regions ==
+               expected_result.types_with_regions)
 
     def test_pop_filter(self):
         """Raise an assertion if can't remove filter.
@@ -341,7 +350,7 @@ class TestAnnotationTreeFilter:
         """
 
         # Open the file and set it to the AnnotationTree
-        data_structure_type = data.GRAID
+        data_structure_type = data.DataStructureTypeGraid()
         anntreefilter = annotationtree.AnnotationTreeFilter(data_structure_type)
         anntreefilter.set_filter_for_type("graid2", "nc")
 
