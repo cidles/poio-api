@@ -24,7 +24,7 @@ class TestPickle:
         filename = os.path.join(os.path.dirname(__file__), "sample_files",
             "balochi_graf", "balochi.pickle")
 
-        self.pickle_parser = poioapi.io.pickle.Parser(filename, poioapi.data.GRAID)
+        self.pickle_parser = poioapi.io.pickle.Parser(filename)
 
     def test_find_childs_in_hierarchy(self):
         utterance_childs = ['clause_unit', 'translation', 'comment']
