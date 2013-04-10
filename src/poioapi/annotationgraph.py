@@ -7,8 +7,6 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
-from __future__ import unicode_literals
-
 import sys
 import os.path
 import codecs
@@ -204,15 +202,20 @@ class AnnotationGraph():
 
             for j, row in enumerate(table):
                 html += "<tr>\n"
-                if j == 0:
+                if j is 0:
                     html += "<td rowspan=\"{0}\" "\
                             "class=\"element_id\">{1}</td>\n".format(
                         len(self.structure_type_handler.flat_data_hierarchy), i)
                 html += "<td class=\"ann_type\">{0}</td>".format(
                     self.structure_type_handler.flat_data_hierarchy[j])
                 for _, column in sorted(row.items(), key=operator.itemgetter(0)):
+                    if not isinstance(column[0], str):
+                        value = column[0].encode('utf-8')
+                    else:
+                        value = column[0]
+
                     html += "<td colspan=\"{0}\" class=\"{2}\">{1}</td>\n".format(
-                        column[1], column[0],
+                        column[1], value,
                         self.structure_type_handler.flat_data_hierarchy[j])
                 html += "</tr>\n"
 
