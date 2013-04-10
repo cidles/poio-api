@@ -16,7 +16,6 @@ Elan's .eaf files, Kura's .xml file, Toolbox's .txt files etc.
 from __future__ import unicode_literals
 
 import sys
-import re as regex
 
 # Set the type of string
 if sys.version_info[:2] >= (3, 0):
