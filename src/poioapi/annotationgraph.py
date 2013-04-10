@@ -83,7 +83,10 @@ class AnnotationGraph():
             if node_id.startswith(base_tier_name):
                 res.append(node)
 
-        return sorted(res, key=lambda node: node.links[0][0].start)
+        try:
+            return sorted(res, key=lambda node: node.links[0][0].start)
+        except IndexError as indexError:
+            return sorted(res)
 
     def nodes_for_tier(self, tier_name, parent_node = None):
         """Retreive all nodes for a given tier name. The parameter
