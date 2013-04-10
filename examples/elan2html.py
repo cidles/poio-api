@@ -15,32 +15,32 @@ import poioapi.data
 
 # This class describes the data structure in the example file in
 # "example_data/turkish.eaf"
-# class DataStructureTypeElan(poioapi.data.DataStructureType):
-#     name = "ELAN"
+class DataStructureTypeElan(poioapi.data.DataStructureType):
+     name = "ELAN"
 
-#     data_hierarchy = \
-#     [ 'Äußerung',
-#         [ 'Wort',
-#             [ 'Morphem',
-#                 [ 'Glosse' ],
-#             ]
-#         ],
-#       'Übersetzung']
+     data_hierarchy = \
+     [ 'Äußerung',
+         [ 'Wort',
+             [ 'Morphem',
+                 [ 'Glosse' ],
+             ]
+         ],
+       'Übersetzung']
 
 
 # This class describes the data structure in the example file in
 # "example_data/example.eaf"
 # taken from: http://www.mpi.nl/tools/elan/elan-example.zip
-class DataStructureTypeElan(poioapi.data.DataStructureType):
-    name = "ELAN"
-
-    data_hierarchy = \
-    [ 'utterance/W-Spch',
-        [ 'words/W-Words',
-          'part_of_speech/W-POS'
-        ],
-      'phonetic_transcription/W-IPA'
-    ]
+#class DataStructureTypeElan(poioapi.data.DataStructureType):
+#    name = "ELAN"
+#
+#    data_hierarchy = \
+#    [ 'utterance/W-Spch',
+#        [ 'words/W-Words',
+#          'part_of_speech/W-POS'
+#        ],
+#      'phonetic_transcription/W-IPA'
+#    ]
 
 
 def main(argv):
@@ -73,7 +73,7 @@ def main(argv):
 
     html = annotation_graph.as_html_table()
 
-    f = codecs.open(outputfile, "w", "utf-8")
+    f = codecs.open(outputfile, "w")
     f.write(html)
     f.close()
 
