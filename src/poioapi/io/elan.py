@@ -16,11 +16,12 @@ original .eaf IDs. Because of this EafTrees are
 read-/writeable.
 """
 
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 
-from xml.dom import minidom
-from xml.etree.ElementTree import Element, SubElement, tostring
 import xml.etree.ElementTree as ET
+
+from xml.etree.ElementTree import Element, SubElement, tostring
+from xml.dom import minidom
 
 import poioapi.io.graf
 
