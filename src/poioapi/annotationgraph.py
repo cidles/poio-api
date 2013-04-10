@@ -284,47 +284,62 @@ class AnnotationGraph():
 
         return inserted
 
-    def from_elan(self, elanfile):
+    def from_elan(self, stream):
         """This method generates a GrAF object
         from a Elan file.
 
         """
 
+        if not hasattr(stream, 'read'):
+            stream = self._open_file_(stream)
+
         if sys.version_info < (2,7):
-            parser = poioapi.io.elan.Parser26(elanfile)
+            parser = poioapi.io.elan.Parser26(stream)
         else:
-            parser = poioapi.io.elan.Parser(elanfile)
+            parser = poioapi.io.elan.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
         self.graf = converter.graph
 
-    def from_typecraft(self, typecraftfile):
+    def from_typecraft(self, stream):
         """This method generates a GrAF object
         from a Typecraft file.
 
         """
 
-        parser = poioapi.io.typecraft.Parser(typecraftfile)
+        if not hasattr(stream, 'read'):
+            stream = self._open_file_(stream)
+
+        parser = poioapi.io.typecraft.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
         self.graf = converter.graph
 
-    def from_pickle(self, picklefile):
+    def from_pickle(self, stream):
         """This method generates a GrAF object
         from a pickle file.
 
         """
 
-        parser = poioapi.io.pickle.Parser(picklefile)
+        if not hasattr(stream, 'read'):
+            stream = self._open_file_(stream)
+
+        parser = poioapi.io.pickle.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
         self.graf = converter.graph
+
+    def _open_file_(self, filename):
+        if sys.version_info[:2] >= (3, 0):
+            return codecs.open(filename, "r", "utf-8")
+        else:
+            return open(filename, "r")
 
     def generate_graf_files(self, inputfile, outputfile):
         """This method will create the GrAF Xml files.
