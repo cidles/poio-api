@@ -18,7 +18,6 @@ from __future__ import absolute_import
 import abc
 import codecs
 import os
-import re
 
 from xml.dom import minidom
 
@@ -110,7 +109,11 @@ class GrAFConverter:
             prefix = tier.name
             annotation_name = prefix
         else:
-            annotation_name = tier.linguistic_type.encode("utf-8").replace(' ','_')
+            try:
+                annotation_name = tier.linguistic_type.encode("utf-8").replace(' ','_')
+            except TypeError as typeError:
+                annotation_name = tier.linguistic_type.replace(' ','_')
+
             prefix = annotation_name+"/"+tier.name
 
         has_regions = False
