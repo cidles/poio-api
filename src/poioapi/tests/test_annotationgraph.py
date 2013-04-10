@@ -29,7 +29,7 @@ class TestAnnotationGraph:
         self.annotation_graph.load_graph_from_graf(filename)
 
     def test_load_graph_from_graf(self):
-        expected_nodes = 618
+        expected_nodes = 1161
         assert(len(self.annotation_graph.graf.nodes) == expected_nodes)
 
     def test_root_nodes(self):
@@ -42,15 +42,15 @@ class TestAnnotationGraph:
         assert(len(clause_units) == 1)
 
     def test_annotations_for_tier(self):
-        node = self.annotation_graph.graf.nodes["word-n1"]
+        node = self.annotation_graph.graf.nodes["word/n1"]
         annotations = self.annotation_graph.annotations_for_tier("wfw", node)
         assert(len(annotations) == 1)
 
     def test_annotation_value_for_annotation(self):
-        node = self.annotation_graph.graf.nodes["word-n1"]
+        node = self.annotation_graph.graf.nodes["word/n1"]
         annotations = self.annotation_graph.annotations_for_tier("wfw", node)
         value = self.annotation_graph.annotation_value_for_annotation(annotations[0])
-        assert(value=="SUB")
+        assert(value=="say.PRS-3SG")
 
     def test_as_html_table(self):
         html = self.annotation_graph.as_html_table()
