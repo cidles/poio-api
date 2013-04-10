@@ -70,7 +70,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         return [poioapi.io.graf.Annotation(str(i['id']), i['annotation'])
                 for i in self._tier_map[tier.name]['values']
-                if i['annotation'] is not '' and i['parent'] == annotation_parent_id]
+                if i['annotation'] and i['parent'] == annotation_parent_id]
 
     def tier_has_regions(self, tier):
         if 'region' in self._tier_map[tier.name]['values'][0]:
@@ -101,7 +101,9 @@ class Parser(poioapi.io.graf.BaseParser):
                 key = self._find_key_in_map(level, position)
                 element['parent'] = parent_element
                 self._tier_map[key]['values'].append(element)
-                parent_element = str(element['id'])
+
+                if position is 0:
+                    parent_element = str(element['id'])
 
     def _find_key_in_map(self, level, position):
         for key, values in self._tier_map.items():
