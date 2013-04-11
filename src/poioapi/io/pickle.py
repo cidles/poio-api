@@ -37,7 +37,11 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        self.filepath = filepath.name
+        try:
+            self.filepath = filepath.name
+        except AttributeError as attributeError:
+            self.filepath = filepath
+
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
         self.parse()
