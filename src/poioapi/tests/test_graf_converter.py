@@ -6,11 +6,11 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 import os
 
 import poioapi.io.elan
 import poioapi.io.graf
-
 
 class SimpleParser(poioapi.io.graf.BaseParser):
     tiers = ["utterance", "word", "wfw", "graid"]
@@ -58,7 +58,6 @@ class SimpleParser(poioapi.io.graf.BaseParser):
 
 
 class TestGrAFConverter:
-
     def setup(self):
         self.parser = SimpleParser()
         self.converter = poioapi.io.graf.GrAFConverter(self.parser)
@@ -67,7 +66,6 @@ class TestGrAFConverter:
         self.graph = self.converter.graph
 
     def test_get_root_tiers(self):
-
         assert len(self.parser.get_root_tiers()) == 1
 
     def test_get_child_tiers_for_tier(self):
@@ -119,7 +117,6 @@ class TestGrAFConverter:
         assert len(annotation_spaces['graid']) == 8
 
     def test_append_tiers_hierarchy(self):
-
         filename = os.path.join(os.path.dirname(__file__), "sample_files",
             "elan_graf", "example.eaf")
 
