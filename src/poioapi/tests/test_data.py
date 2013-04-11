@@ -6,6 +6,7 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 """This module contains the tests to the class
 DataStrutctureType in data.py module.
 
@@ -14,8 +15,6 @@ the class DataStructureType in data.py.
 """
 
 from poioapi import data
-
-# Initialize the DataStructureType class
 
 class TestDataStructureType:
     """
