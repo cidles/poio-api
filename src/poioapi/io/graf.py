@@ -86,6 +86,7 @@ class GrAFConverter:
         self.parser = parser
         self.graph = graf.Graph()
         self.current_index = 0
+        self.tiers_hierarchy = {}
 
     def next_index(self):
         index = self.current_index
@@ -94,10 +95,20 @@ class GrAFConverter:
 
     def convert(self):
 
+        self._tiers_parent_list = []
+
         for tier in self.parser.get_root_tiers():
             self._convert_tier(tier, None, None)
 
-    def _convert_tier(self, tier, parent_node, parent_annotation):
+        i = 0
+        for t in self._tiers_parent_list:
+            if t[1] is None:
+                i += 1
+                self.tiers_hierarchy[str(i)] = [t[0]]
+            else:
+                self._append_tier_to_hierarchy(self.tiers_hierarchy[str(i)], t[1], t[0])
+
+    def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix = None):
 
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
@@ -117,6 +128,8 @@ class GrAFConverter:
         if self.parser.tier_has_regions(tier):
             has_regions = True
 
+        self._add_tier_in_hierarchy_list(prefix, parent_prefix)
+
         for annotation in self.parser.get_annotations_for_tier(tier, parent_annotation):
             regions = None
 
@@ -128,7 +141,19 @@ class GrAFConverter:
 
             if child_tiers:
                 for t in child_tiers:
-                    self._convert_tier(t, node_id, annotation)
+                    self._convert_tier(t, node_id, annotation, prefix)
+
+    def _add_tier_in_hierarchy_list(self, prefix, parent_prefix):
+        if not (prefix, parent_prefix) in self._tiers_parent_list:
+            self._tiers_parent_list.append((prefix, parent_prefix))
+
+    def _append_tier_to_hierarchy(self, tiers_list, parent_tier, tier):
+        for t in tiers_list:
+            if isinstance(t, list):
+                self._append_tier_to_hierarchy(t, parent_tier, tier)
+            else:
+                if t == parent_tier:
+                    tiers_list.append([tier])
 
     def _add_node(self, node_id, annotation, annotation_name, regions, from_node_id):
         self._add_node_to_graph(node_id, regions, from_node_id)
