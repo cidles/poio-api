@@ -31,15 +31,13 @@ class Parser(poioapi.io.graf.BaseParser):
 
     """
 
-    def __init__(self, filepath, data_structure_hierarchy=None):
+    def __init__(self, filepath):
         """Class's constructor.
 
         Parameters
         ----------
         filepath : str
             Path of the elan file.
-        data_structure_hierarchy : object
-            This object contains the data hierarchy and the constraints.
 
         """
 
