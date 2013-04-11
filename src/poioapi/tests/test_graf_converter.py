@@ -1,4 +1,16 @@
+# -*- coding: utf-8 -*-
+#
+# Poio Tools for Linguists
+#
+# Copyright (C) 2009-2013 Poio Project
+# Author: António Lopes <alopes@cidles.eu>
+# URL: <http://media.cidles.eu/poio/>
+# For license information, see LICENSE.TXT
+import os
+
+import poioapi.io.elan
 import poioapi.io.graf
+
 
 class SimpleParser(poioapi.io.graf.BaseParser):
     tiers = ["utterance", "word", "wfw", "graid"]
@@ -46,6 +58,7 @@ class SimpleParser(poioapi.io.graf.BaseParser):
 
 
 class TestGrAFConverter:
+
     def setup(self):
         self.parser = SimpleParser()
         self.converter = poioapi.io.graf.GrAFConverter(self.parser)
@@ -104,3 +117,20 @@ class TestGrAFConverter:
         assert len(annotation_spaces['utterance']) == 2
         assert len(annotation_spaces['word']) == 8
         assert len(annotation_spaces['graid']) == 8
+
+    def test_append_tiers_hierarchy(self):
+
+        filename = os.path.join(os.path.dirname(__file__), "sample_files",
+            "elan_graf", "example.eaf")
+
+        elan = poioapi.io.elan.Parser(filename)
+
+        converter = poioapi.io.graf.GrAFConverter(elan)
+        converter.convert()
+
+        expected_tiers_hierarchy = ['utterance/W-Spch',
+            ['words/W-Words',
+                ['part_of_speech/W-POS']],
+            ['phonetic_transcription/W-IPA']]
+
+        assert expected_tiers_hierarchy == converter.tiers_hierarchy['2']
