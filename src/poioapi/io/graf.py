@@ -63,6 +63,19 @@ class BaseParser(object):
     """This class is a base class to the
     parser classes in order to create
     GrAF objects.
+    This class contains some methods that must be
+    implemented other wise it will be raise a
+    exception error.
+    Although the methods that should be implemented
+    with properly code are the get_root_tiers,
+    get_child_tiers_for_tier and get_annotations_for_tier.
+    The method tier_has_regions and region_for_annotation
+    could simply return None or pass.
+
+    Raises
+    ------
+    NotImplementedError
+        Method must be implemented.
 
     """
 
@@ -70,22 +83,109 @@ class BaseParser(object):
 
     @abc.abstractmethod
     def get_root_tiers(self):
+        """Method to get the root tiers. The root tiers
+        are defined by the parser when the method is
+         implemented.
+
+        Returns
+        -------
+        list : array-like
+            List of tiers type.
+
+        """
+
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
     def get_child_tiers_for_tier(self, tier):
+        """Method that get the child tiers of a specific tier.
+
+        Parameters
+        ----------
+        tier : object
+            Tier object.
+
+        Returns
+        -------
+        list : array-like
+            List of tiers type.
+
+        See also
+        --------
+        Tier
+
+        """
+
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
     def get_annotations_for_tier(self, tier, annotation_parent=None):
+        """Method that get all the annotations for a specific tier.
+        The annotations can be filtered using an annotation parent.
+
+        Parameters
+        ----------
+        tier : object
+            Tier object.
+        annotation_parent : object
+            Annotation object.
+
+        Returns
+        -------
+        list : array-like
+            List of annotations type.
+
+        See also
+        --------
+        Tier, Annotation
+
+        """
+
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
     def tier_has_regions(self, tier):
+        """Method to verify if a tier has regions.
+
+        Parameters
+        ----------
+        tier : object
+            Tier object.
+
+        Returns
+        -------
+        has_region : bool
+            A true or false variable.
+
+        See also
+        --------
+        Tier
+
+        """
+
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
     def region_for_annotation(self, annotation):
+        """Method to get the regions values of a specific
+         annotation.
+
+        Parameters
+        ----------
+        annotation : object
+            Annotation object.
+
+        Returns
+        -------
+        regions : tuple
+            A tuple with the two regions.
+
+        See also
+        --------
+        Annotation
+
+        """
+
         raise NotImplementedError("Method must be implemented")
 
 
@@ -104,7 +204,7 @@ class GrAFConverter:
     def convert(self):
         """This method will be the responsible to transform
         the parser into a GrAF object. This method also
-        retrieves the Tiers Hierarchies.
+        retrieves the tiers hierarchies.
 
         """
 
