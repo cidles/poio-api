@@ -7,6 +7,8 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+from __future__ import absolute_import
+
 import sys
 import os.path
 import codecs
