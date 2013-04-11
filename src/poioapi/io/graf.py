@@ -329,6 +329,28 @@ class Writer():
 
     def generate_graf_files(self, graf, outputfile):
 
+        graf = self._get_graf_sorted_items(graf)
+
+        filename = os.path.abspath(outputfile)
+        (basedirname, _) = os.path.splitext(outputfile)
+        header = poioapi.io.header.HeaderFile(basedirname)
+        header.filename = os.path.basename(os.path.splitext(filename)[0])
+        header.primaryfile = os.path.basename(outputfile)
+        header.dataType = 'text'
+
+        for elements in graf.additional_information.items():
+            filepath = basedirname+"-"+elements[0]+".xml"
+            header.add_annotation(os.path.basename(filepath), elements[0])
+            file = open(filepath,'wb')
+            element_tree = elements[1]
+            doc = minidom.parseString(tostring(element_tree))
+            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+            file.close()
+
+        header.create_header()
+
+    def _get_graf_sorted_items(self, graf):
+
         for node in sorted(graf.nodes):
             if len(node.in_edges._by_ind) is not 0:
                 edge = node.in_edges._by_ind[0]
@@ -358,26 +380,7 @@ class Writer():
             else:
                 element_tree = graf.additional_information[annotation_name]
 
-            graf.additional_information[annotation_name] = self.create_graf_xml_node(element_tree, annotations,
-                annotation_ref, node, region, from_node, edge)
+            graf.additional_information[annotation_name] = self.create_graf_xml_node(element_tree,
+                annotations, annotation_ref, node, region, from_node, edge)
 
-        filename = os.path.abspath(outputfile)
-        (basedirname, file_extension) = os.path.splitext(outputfile)
-        header = poioapi.io.header.HeaderFile(basedirname)
-        header.filename = os.path.basename(os.path.splitext(filename)[0])
-        header.primaryfile = os.path.basename(outputfile)
-        header.dataType = 'text'
-
-        for elements in graf.additional_information.items():
-            file_name = elements[0]
-            extension = file_name+".xml"
-            filepath = basedirname+"-"+extension
-            loc = os.path.basename(filepath)
-            header.add_annotation(loc, file_name)
-            file = open(filepath,'wb')
-            element_tree = elements[1]
-            doc = minidom.parseString(tostring(element_tree))
-            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-            file.close()
-
-        header.create_header()
+        return graf
