@@ -26,7 +26,7 @@ import poioapi.io.typecraft
 
 from poioapi import data
 
-from graf import GraphParser
+import graf
 
 class AnnotationGraph():
 
@@ -53,7 +53,7 @@ class AnnotationGraph():
             The path to a GrAF/XML file.
 
         """
-        parser = GraphParser()
+        parser = graf.GraphParser()
         self.graf = parser.parse(filepath)
         (self.graf_basename, _) = os.path.splitext(os.path.abspath(filepath))
 
