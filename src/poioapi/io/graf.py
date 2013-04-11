@@ -26,6 +26,14 @@ import graf
 import poioapi.io.header
 
 class Tier:
+    """A list of tiers.
+    The name is the tier unique identification
+    and the linguistic type is the type of tier,
+    i. e. utterance, word, etc.
+    The linguistic type is not mandatory.
+
+    """
+
     __slots__ = ['name', 'linguistic_type']
 
     def __init__(self, name, linguistic_type=None):
@@ -34,6 +42,14 @@ class Tier:
 
 
 class Annotation:
+    """A list of annotations.
+    The id is the annotation identification, the
+    value the annotation value and the features are
+    a dict type of values containing the annotation
+    features.
+
+    """
+
     __slots__ = ['id', 'value', 'features']
 
     def __init__(self, id, value, features=None):
@@ -43,6 +59,12 @@ class Annotation:
 
 
 class NodeId:
+    """A list of nodes using a specific format.
+    The prefix is the node type and the index
+    the identification number.
+
+    """
+
     __slots__ = ['prefix', 'index']
 
     def __init__(self, prefix, index):
