@@ -37,7 +37,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        self.filepath = filepath
+        self.filepath = filepath.name
         (self.basedirname, _) = os.path.splitext(os.path.abspath(self.filepath))
 
         self.parse()
