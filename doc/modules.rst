@@ -7,6 +7,7 @@ PoioAPI Package
 
    data
    annotationtree
+   annotationgraph
 
 ******************
 PoioAPI IO Package
