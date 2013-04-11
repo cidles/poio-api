@@ -301,6 +301,8 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
+        self.tiers_hierarchies = converter.tiers_hierarchy
+
         self.graf = converter.graph
 
     def from_typecraft(self, stream):
@@ -317,6 +319,8 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
+        self.tiers_hierarchies = converter.tiers_hierarchy
+
         self.graf = converter.graph
 
     def from_pickle(self, stream):
@@ -332,6 +336,8 @@ class AnnotationGraph():
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
+
+        self.tiers_hierarchies = converter.tiers_hierarchy
 
         self.graf = converter.graph
 
