@@ -92,7 +92,7 @@ class BaseParser(object):
     with properly code are the get_root_tiers,
     get_child_tiers_for_tier and get_annotations_for_tier.
     The method tier_has_regions and region_for_annotation
-    could simply return an empty list [].
+    could simply return None or pass.
 
     Raises
     ------
