@@ -76,7 +76,7 @@ class AnnotationTree():
         if data_structure_type is None:
             self.structure_type_handler = None
         elif isinstance(data_structure_type, data.DataStructureType):
-            self.https://github.com/cidles/Poio/blob/master/src/poio/poioanalyzer.py#L302 = data_structure_type
+            self.structure_type_handler = data_structure_type
         else:
             raise(
                 data.DataStructureTypeNotSupportedError(
