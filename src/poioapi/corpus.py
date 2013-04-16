@@ -30,12 +30,12 @@ class CorpusTrees():
         if filetype == data.TREEPICKLE:
             annotation_tree = annotationtree.AnnotationTree(self.data_structure_type)
             annotation_tree.load_tree_from_pickle(filepath)
-            if annotation_tree.data_structure_type != self.data_structure_type:
+            if annotation_tree.structure_type_handler != self.data_structure_type:
                 raise(
                     data.DataStructureTypeNotCompatible(
                         "Data structure type {0} not compatible with corpus"
                         "data type {1}".format(
-                            annotation_tree.data_structure_type,
+                            annotation_tree.structure_type_handler,
                             self.data_structure_type)))
 
             annotation_tree.init_filters()
