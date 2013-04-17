@@ -41,51 +41,77 @@ class Parser(poioapi.io.graf.BaseParser):
             excel = csv.reader(csvfile, delimiter='|')
 
             i = 0
-            words_rows_list = []
+            cycle = 0
+            words_row = None
+
             for row in excel:
 
                 if i is 1:
-                    words_rows_list.append(row)
+                    words_row = row
+                elif i is 4:
+                    self._get_columns_in_rows(words_row, 1, cycle)
+                    self._get_columns_in_rows(row, i, cycle)
                 else:
-                    self._get_columns_in_rows(row, i)
+                    self._get_columns_in_rows(row, i, cycle)
 
                 if i == 7:
                     i = 0
+                    cycle += 1
                 else:
                     i += 1
 
-        for words_row in words_rows_list:
-            self._get_columns_in_rows(words_row, 1)
+    def _get_columns_in_rows(self, row, i, cycle):
 
-    def _get_columns_in_rows(self, row, i):
         for j, column in enumerate(row):
 
             if column:
-                parent = None
-
                 if i == 2:
                     self.clause_ids[j] = column
                 else:
-                    id = self._next_id(i)
+                    id = self._next_id(i, j)
 
-                    if i != 3 and i != 0:
-                        parent = self._find_parent_id(i, j)
+                    if i is 1:
+                        index = 3
+                    elif i is 3:
+                        index = 0
+                    elif i is 4:
+                        index = 1
+                    else:
+                        index = i - 1
+
+                    parent = self._find_parent_id(index, j, cycle)
 
                     self.list_map[i].append({'id':id, 'value':column,
-                                             'position':j, 'parent':parent})
+                                             'position':j, 'parent':parent,
+                                             'cycle':cycle})
 
-    def _find_parent_id(self, i, j):
+    def _find_parent_id(self, index, position, cycle):
 
-        for element in self.list_map[i-1]:
-            if element['position'] == j:
-                return element['id']
+        if index < 0:
+            return None
+        else:
+            last_position = 0
+            last_element = None
+            filter_list = [e for e in self.list_map[index]
+                           if e['cycle'] == cycle]
 
-        return None
+            for i, element in enumerate(filter_list):
+                if position in range(last_position,element['position']):
+                    if last_element is None:
+                        return element['id']
+                    else:
+                        return last_element['id']
+
+                if i == len(filter_list) - 1:
+                    return element['id']
+
+                last_position = element['position']
+                last_element = element
 
     def _next_id(self, i = 0, j = 0):
 
         if i == 3:
-            return self.clause_ids[j]
+            return self.clause_ids[j] # clause_types ids
         else:
             current_id = self._current_id + 1
             self._current_id = current_id
