@@ -125,24 +125,20 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
 
+        annotations = []
+
         if tier.linguistic_type == "ref":
-            return [poioapi.io.graf.Annotation(self._next_id(), tier['value'])
+            return [poioapi.io.graf.Annotation(tier['id'], tier['value'])
                     for tier in self.list_map[0]]
 
-#        elif tier.linguistic_type == 'clause_type':
-#            print(tier.name)
-#            for element in self.list_map.items():
-#                key = element[0]
-#                list_map = element[1]
-#                for value in list_map:
-#                    print(value['parent'])
-#                    print(annotation_parent.id)
-#                    if value['parent'] == annotation_parent.id:
+        else:
+            for key, values in self.list_map.items():
+                for tier in values:
+                    if tier['parent'] == annotation_parent.id:
+                        annotations.append(poioapi.io.graf.
+                        Annotation(tier['id'], tier['value']))
 
-#            return [poioapi.io.graf.Tier(tier['id'], 'word')
-#                    for tier in self.list_map[1]]
-
-        return []
+        return annotations
 
     def get_child_tiers_for_tier(self, tier):
         if tier.linguistic_type == 'ref':
