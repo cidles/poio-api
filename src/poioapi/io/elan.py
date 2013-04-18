@@ -169,10 +169,13 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def _retrieve_aditional_information(self):
 
-        meta_information = Element(self.root)
+        meta_information = Element(self.root._root.tag,
+            self.root._root.attrib)
 
         for element in self.tree:
-            if element.tag != 'TIER':
+            if element.tag == 'TIER':
+                meta_information.append(Element(element.tag,element.attrib))
+            else:
                 meta_information.append(element)
 
         return meta_information
