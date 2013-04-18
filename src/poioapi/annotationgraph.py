@@ -295,10 +295,7 @@ class AnnotationGraph():
         if not hasattr(stream, 'read'):
             stream = self._open_file_(stream)
 
-        if sys.version_info < (2,7):
-            parser = poioapi.io.elan.Parser26(stream)
-        else:
-            parser = poioapi.io.elan.Parser(stream)
+        parser = poioapi.io.elan.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
