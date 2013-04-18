@@ -72,7 +72,6 @@ class AnnotationTree():
         poioapi.data.DataStructureTypeNotSupportedError
             If the given data structure type is not inherits from DataStructureType.
         """
-        self.data_structure_type = data_structure_type
 
         if data_structure_type is None:
             self.structure_type_handler = None
@@ -354,7 +353,7 @@ class AnnotationTree():
         if len(self.filters) > 0:
             return self.filters[-1]
         else:
-            return AnnotationTreeFilter(self.data_structure_type)
+            return AnnotationTreeFilter(self.structure_type_handler)
 
     def update_last_filter(self, filter):
         """Update the last filter added.

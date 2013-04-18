@@ -36,12 +36,12 @@ def main(argv):
 
     parser = poioapi.io.excel.Parser(inputfile)
 
-#    converter = poioapi.io.graf.GrAFConverter(parser)
-#    converter.convert()
-#
-#    tiers_hierarchies = converter.tiers_hierarchy
-#
-#    graf = converter.graph
+    converter = poioapi.io.graf.GrAFConverter(parser)
+    converter.convert()
+
+    tiers_hierarchies = converter.tiers_hierarchy
+
+    graf = converter.graph
 
     print('Finished')
 

@@ -35,12 +35,12 @@ class CorpusTrees():
                 )
             )
             annotation_tree.load_tree_from_pickle(filepath)
-            if annotation_tree.data_structure_type != self.data_structure_type:
+            if annotation_tree.structure_type_handler != self.data_structure_type:
                 raise(
                     poioapi.data.DataStructureTypeNotCompatible(
                         "Data structure type {0} not compatible with corpus"
                         "data type {1}".format(
-                            annotation_tree.data_structure_type,
+                            annotation_tree.structure_type_handler,
                             self.data_structure_type)))
 
             annotation_tree.init_filters()
