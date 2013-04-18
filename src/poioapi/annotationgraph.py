@@ -297,12 +297,16 @@ class AnnotationGraph():
 
         parser = poioapi.io.elan.Parser(stream)
 
+        extra_information = parser.meta_information
+
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
         self.tier_hierarchies = [ v for _, v in converter.tiers_hierarchy.items()]
 
         self.graf = converter.graph
+
+        self.graf.additional_information['extra_info'] = extra_information
 
     def from_typecraft(self, stream):
         """This method generates a GrAF object
@@ -371,42 +375,39 @@ class AnnotationGraph():
         graf_xml_writer = poioapi.io.graf.Writer()
         graf_xml_writer.generate_graf_files(self.graf, inputfile)
 
-        (_, file_extension) = os.path.splitext(outputfile)
+        (filename, file_extension) = os.path.splitext(outputfile)
 
         if file_extension == ".eaf":
-            self._generate_metafile(inputfile)
+            self._generate_metafile(filename, self.graf)
 
-    def _generate_metafile(self, inputfile):
+    def _generate_metafile(self, filename, graf):
         """ This method will create a metafile
         from the original file.
 
         """
 
-        (basedirname, _) = os.path.splitext(inputfile)
+        (basedirname, _) = os.path.splitext(filename)
 
-        tree = ET.parse(inputfile).getroot()
+        tree = self.graf.additional_information['extra_info']
 
         # Generate the metadata file
         element_tree = Element('metadata')
         header_tag = SubElement(element_tree, 'header')
-        data_structure = SubElement(header_tag, 'data_structure')
-        tier_mapping = SubElement(header_tag,'tier_mapping')
+        tier_mapping = SubElement(header_tag, 'tier_mapping')
 
         data_structure_hirearchy = []
 
         for linguistic_type in tree.findall('LINGUISTIC_TYPE'):
             linguistic_type_id = linguistic_type.attrib['LINGUISTIC_TYPE_ID']
 
-            type = SubElement(tier_mapping,'type',
-                    {'name':str(linguistic_type_id).replace(' ','_')})
+            type = SubElement(tier_mapping, 'type',
+                    {'name': str(linguistic_type_id).replace(' ', '_')})
 
-            data_structure_hirearchy.append(str(linguistic_type_id).replace(' ','_'))
+            data_structure_hirearchy.append(str(linguistic_type_id).replace(' ', '_'))
 
             for tier_ref in tree.findall("TIER"):
                 if tier_ref.attrib["LINGUISTIC_TYPE_REF"] == linguistic_type_id:
                     SubElement(type, 'tier').text = tier_ref.attrib['TIER_ID']
-
-        SubElement(data_structure, 'hierarchy').text = str(data_structure_hirearchy)
 
         miscellaneous = SubElement(element_tree, "miscellaneous")
         SubElement(miscellaneous, tree.tag, tree.attrib)
@@ -421,8 +422,8 @@ class AnnotationGraph():
                        lower_child.text is not None:
                         child_element.text = lower_child.text
 
-        filename = basedirname+"-extinfo.xml"
-        file = open(filename,'wb')
+        filename = basedirname + "-extinfo.xml"
+        file = open(filename, 'wb')
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
