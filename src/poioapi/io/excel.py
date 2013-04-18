@@ -6,14 +6,17 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
-import codecs
+
+"""This module contains classes to access
+excel data.
+
+"""
 
 import csv
 
 import poioapi.io.graf
 
 class Parser(poioapi.io.graf.BaseParser):
-
     def __init__(self, filepath):
         """Class's constructor.
 
@@ -36,16 +39,14 @@ class Parser(poioapi.io.graf.BaseParser):
         self.current_parent = None
         self.clause_ids = {}
 
-#        with open(self.filepath, 'rb') as csvfile: without the enonding Python 2.x
-        with codecs.open(self.filepath, 'rb', "utf-8") as csvfile:
-            excel = csv.reader(csvfile, delimiter='|')
+        with open(self.filepath, 'rt') as csvfile:
+            rows = csv.reader(csvfile, delimiter='|')
 
             i = 0
             cycle = 0
             words_row = None
 
-            for row in excel:
-
+            for row in rows:
                 if i is 1:
                     words_row = row
                 elif i is 4:
@@ -61,9 +62,7 @@ class Parser(poioapi.io.graf.BaseParser):
                     i += 1
 
     def _get_columns_in_rows(self, row, i, cycle):
-
         for j, column in enumerate(row):
-
             if column:
                 if i == 2:
                     self.clause_ids[j] = column
@@ -76,17 +75,18 @@ class Parser(poioapi.io.graf.BaseParser):
                         index = 0
                     elif i is 4:
                         index = 1
+                    elif i >= 5:
+                        index = 4
                     else:
                         index = i - 1
 
                     parent = self._find_parent_id(index, j, cycle)
 
-                    self.list_map[i].append({'id':id, 'value':column,
-                                             'position':j, 'parent':parent,
-                                             'cycle':cycle})
+                    self.list_map[i].append({'id': id, 'value': column,
+                                             'position': j, 'parent': parent,
+                                             'cycle': cycle})
 
     def _find_parent_id(self, index, position, cycle):
-
         if index < 0:
             return None
         else:
@@ -96,7 +96,7 @@ class Parser(poioapi.io.graf.BaseParser):
                            if e['cycle'] == cycle]
 
             for i, element in enumerate(filter_list):
-                if position in range(last_position,element['position']):
+                if position in range(last_position, element['position']):
                     if last_element is None:
                         return element['id']
                     else:
@@ -108,8 +108,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 last_position = element['position']
                 last_element = element
 
-    def _next_id(self, i = 0, j = 0):
-
+    def _next_id(self, i=0, j=0):
         if i == 3:
             return self.clause_ids[j] # clause_types ids
         else:
@@ -119,53 +118,67 @@ class Parser(poioapi.io.graf.BaseParser):
         return str(current_id)
 
     def get_root_tiers(self):
+        return [poioapi.io.graf.Tier('ref')]
 
-        return [poioapi.io.graf.Tier(tier['id'], 'ref')
-                for tier in self.list_map[0]]
+    def get_child_tiers_for_tier(self, tier):
+        if tier.name == 'ref':
+            return [poioapi.io.graf.Tier('clause_type')]
+
+        elif tier.name == 'clause_type':
+            return [poioapi.io.graf.Tier('word')]
+
+        elif tier.name == 'word':
+            return [poioapi.io.graf.Tier('grammatical_relation')]
+
+        elif tier.name == 'grammatical_relation':
+            return [poioapi.io.graf.Tier('part_of_spech')] +\
+                   [poioapi.io.graf.Tier('translation')] +\
+                   [poioapi.io.graf.Tier('reference_tracking')]
+
+        return None
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
-
         annotations = []
 
-        if tier.linguistic_type == "ref":
+        if tier.name == "ref":
             return [poioapi.io.graf.Annotation(tier['id'], tier['value'])
                     for tier in self.list_map[0]]
 
-        else:
-            for key, values in self.list_map.items():
-                for tier in values:
-                    if tier['parent'] == annotation_parent.id:
-                        annotations.append(poioapi.io.graf.
-                        Annotation(tier['id'], tier['value']))
+        elif tier.name == 'clause_type':
+            annotations = self._get_annotations_from_list(3,
+                annotation_parent.id)
+
+        elif tier.name == 'word':
+            annotations = self._get_annotations_from_list(1,
+                annotation_parent.id)
+
+        elif tier.name == 'grammatical_relation':
+            annotations = self._get_annotations_from_list(4,
+                annotation_parent.id)
+
+        elif tier.name == 'part_of_spech':
+            annotations = self._get_annotations_from_list(5,
+                annotation_parent.id)
+
+        elif tier.name == 'translation':
+            annotations = self._get_annotations_from_list(6,
+                annotation_parent.id)
+
+        elif tier.name == 'reference_tracking':
+            annotations = self._get_annotations_from_list(7,
+                annotation_parent.id)
 
         return annotations
 
-    def get_child_tiers_for_tier(self, tier):
-        if tier.linguistic_type == 'ref':
-            return [poioapi.io.graf.Tier(tier['id'], 'clause_type')
-                    for tier in self.list_map[3]]
+    def _get_annotations_from_list(self, i, parent_id):
+        annotations = []
 
-        elif tier.linguistic_type == 'clause_type':
-            return [poioapi.io.graf.Tier(tier['id'], 'word')
-                    for tier in self.list_map[1]]
+        for tier in self.list_map[i]:
+            if tier['parent'] == parent_id:
+                annotations.append(poioapi.io.graf.
+                Annotation(tier['id'], tier['value']))
 
-        elif tier.linguistic_type == 'word':
-            return [poioapi.io.graf.Tier(tier['id'],
-                'grammatical_relation') for tier in self.list_map[4]]
-
-        elif tier.linguistic_type == 'grammatical_relation':
-            parts_of_spech = [poioapi.io.graf.Tier(tier['id'],
-                'part_of_spech') for tier in self.list_map[5]]
-
-            translations = [poioapi.io.graf.Tier(tier['id'],
-                'translation') for tier in self.list_map[6]]
-
-            reference_trackings = [poioapi.io.graf.Tier(tier['id'],
-                'reference_tracking') for tier in self.list_map[7]]
-
-            return parts_of_spech + translations + reference_trackings
-
-        return None
+        return annotations
 
     def tier_has_regions(self, tier):
         pass
