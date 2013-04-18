@@ -73,7 +73,7 @@ def main(argv):
 
     html = annotation_graph.as_html_table()
 
-    f = codecs.open(outputfile, "w")
+    f = codecs.open(outputfile, "w", "utf-8")
     f.write(html)
     f.close()
 

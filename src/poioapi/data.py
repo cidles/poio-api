@@ -39,6 +39,18 @@ class DataStructureTypeNotSupportedError(Exception): pass
 class DataStructureTypeNotCompatible(Exception): pass
 class UnknownAnnotationTypeError(Exception): pass
 
+def data_structure_handler_for_type(data_structure_type):
+    if data_structure_type == GRAID:
+        return DataStructureTypeGraid()
+    elif data_structure_type == GRAIDDIANA:
+        return DataStructureTypeGraidDiana()
+
+    else:
+        raise(DataStructureTypeNotSupportedError(
+            "Data structure type {0} not supported".format(
+            data_structure_type)))
+
+
 class DataStructureType(object):
     """
     Data structure type constructor.
@@ -57,10 +69,12 @@ class DataStructureType(object):
     data_hierarchy = [ 'utterance', ['word'], 'translation']
     types_with_regions = [ 'utterance', 'clause_unit', 'word' ]
 
-    def __init__(self):
+    def __init__(self, custom_data_hierarchy = None):
         """Class's constructor.....
 
         """
+        if custom_data_hierarchy != None:
+            self.data_hierarchy = custom_data_hierarchy
 
         self.flat_data_hierarchy = self._flatten_hierarchy_elements(
             self.data_hierarchy)

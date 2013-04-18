@@ -17,8 +17,9 @@ work items.
 
 from __future__ import unicode_literals
 
-from poioapi import data
-from poioapi import annotationtree
+import poioapi.data
+import poioapi.annotationtree
+import poioapi.annotationgraph
 
 class CorpusTrees():
 
@@ -27,12 +28,16 @@ class CorpusTrees():
         self.data_structure_type = data_structure_type
 
     def add_item(self, filepath, filetype):
-        if filetype == data.TREEPICKLE:
-            annotation_tree = annotationtree.AnnotationTree(self.data_structure_type)
+        if filetype == poioapi.data.TREEPICKLE:
+            annotation_tree = poioapi.annotationtree.AnnotationTree(
+                poioapi.data.data_structure_handler_for_type(
+                    self.data_structure_type
+                )
+            )
             annotation_tree.load_tree_from_pickle(filepath)
             if annotation_tree.data_structure_type != self.data_structure_type:
                 raise(
-                    data.DataStructureTypeNotCompatible(
+                    poioapi.data.DataStructureTypeNotCompatible(
                         "Data structure type {0} not compatible with corpus"
                         "data type {1}".format(
                             annotation_tree.data_structure_type,
@@ -41,4 +46,27 @@ class CorpusTrees():
             annotation_tree.init_filters()
             self.items.append( (filepath, annotation_tree) )
         else:
-            raise data.UnknownFileFormatError()
+            raise poioapi.data.UnknownFileFormatError()
+
+
+class CorpusGraphs():
+
+    def __init__(self, data_structure_type):
+        self.items = []
+        self.data_structure_type = data_structure_type
+
+    def add_item(self, filepath, filetype):
+        if filetype == poioapi.data.EAF:
+            annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
+            annotation_graph.from_elan(filepath)
+            print(annotation_graph.tier_hierarchies)
+            if len(annotation_graph.tier_hierarchies) > 0:
+                annotation_graph.structure_type_handler = \
+                    poioapi.data.DataStructureType(
+                        annotation_graph.tier_hierarchies[0]
+                    )
+
+            #annotation_tree.init_filters()
+            self.items.append( (filepath, annotation_graph) )
+        else:
+            raise poioapi.data.UnknownFileFormatError()

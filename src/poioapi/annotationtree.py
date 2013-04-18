@@ -154,7 +154,9 @@ class AnnotationTree():
         file = open(filepath, 'rb')
         loaded_data = pickle.load(file)
         if loaded_data[0] == 'poio_pickle_v2':
-            self.reset_data_structure_type(loaded_data[1])
+            self.reset_data_structure_type(
+                data.data_structure_handler_for_type(loaded_data[1])
+            )
             self.tree = loaded_data[2]
         else:
             file.seek(0)
@@ -626,13 +628,14 @@ class AnnotationTreeFilter():
 
         """
 
-        if isinstance(data_structure_type, data.DataStructureType):
-            self.structure_type_handler = data.DataStructureTypeGraid()
-        else:
-            raise(
-                data.DataStructureTypeNotSupportedError(
-                    "Data structure type {0} not supported".format(
-                        data_structure_type)))
+        self.structure_type_handler = data_structure_type
+#        if isinstance(data_structure_type, data.DataStructureType):
+#            self.structure_type_handler = data.DataStructureTypeGraid()
+#        else:
+#            raise(
+#                data.DataStructureTypeNotSupportedError(
+#                    "Data structure type {0} not supported".format(
+#                        data_structure_type)))
 
         self.filter = dict()
         for e in self.structure_type_handler.flat_data_hierarchy:
