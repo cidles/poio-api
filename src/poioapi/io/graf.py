@@ -482,14 +482,15 @@ class Writer():
         header.primaryfile = os.path.basename(outputfile)
         header.dataType = 'text'
 
-        for elements in graf.additional_information.items():
-            filepath = basedirname + "-" + elements[0] + ".xml"
-            header.add_annotation(os.path.basename(filepath), elements[0])
-            file = open(filepath, 'wb')
-            element_tree = elements[1]
-            doc = minidom.parseString(tostring(element_tree))
-            file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-            file.close()
+        for key, elements in graf.additional_information.items():
+            if key != 'extra_info':
+                filepath = basedirname + "-" + key + ".xml"
+                header.add_annotation(os.path.basename(filepath), key)
+                file = open(filepath, 'wb')
+                element_tree = elements
+                doc = minidom.parseString(tostring(element_tree))
+                file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
+                file.close()
 
         header.create_header()
 
