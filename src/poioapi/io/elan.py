@@ -49,8 +49,11 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def parse(self):
 
-        self.tree = ET.parse(self.filepath).getroot()
+        self.root = ET.parse(self.filepath)
+        self.tree = self.root.getroot()
         self.regions_map = self._map_time_slots()
+        self.meta_information = self._retrieve_aditional_information()
+
 
     def get_root_tiers(self):
 
@@ -163,6 +166,16 @@ class Parser(poioapi.io.graf.BaseParser):
             time_order_dict[key] = value
 
         return time_order_dict
+
+    def _retrieve_aditional_information(self):
+
+        meta_information = Element(self.root)
+
+        for element in self.tree:
+            if element.tag != 'TIER':
+                meta_information.append(element)
+
+        return meta_information
 
 class Writer:
     """
