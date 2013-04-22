@@ -13,6 +13,7 @@ Welcome to Poio API's documentation!
    :maxdepth: 2
 
    howto
+   parserwriter
    modules
 
     
