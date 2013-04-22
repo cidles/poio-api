@@ -16,7 +16,6 @@ import operator
 
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
-import xml.etree.ElementTree as ET
 
 import poioapi.io.elan
 import poioapi.io.graf
@@ -395,15 +394,11 @@ class AnnotationGraph():
         header_tag = SubElement(element_tree, 'header')
         tier_mapping = SubElement(header_tag, 'tier_mapping')
 
-        data_structure_hirearchy = []
-
         for linguistic_type in tree.findall('LINGUISTIC_TYPE'):
             linguistic_type_id = linguistic_type.attrib['LINGUISTIC_TYPE_ID']
 
             type = SubElement(tier_mapping, 'type',
                     {'name': str(linguistic_type_id).replace(' ', '_')})
-
-            data_structure_hirearchy.append(str(linguistic_type_id).replace(' ', '_'))
 
             for tier_ref in tree.findall("TIER"):
                 if tier_ref.attrib["LINGUISTIC_TYPE_REF"] == linguistic_type_id:
@@ -427,3 +422,177 @@ class AnnotationGraph():
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
+
+class AnnotationGraphFilter():
+    """
+    AnnotationGraphFilter tree-like structure constructor.
+
+    The main objective of this class is to make it possible
+    to make searches in the a GrAF object.
+
+    """
+
+    (AND, OR)  = range(2)
+
+    def __init__(self, data_structure_type):
+        """Class constructor.
+
+        """
+
+        self.structure_type_handler = data_structure_type
+
+        self.filter = dict()
+        for e in self.structure_type_handler.flat_data_hierarchy:
+            self.filter[e] = ""
+
+        self.reset_match_object()
+        self.inverted = False
+        self.boolean_operation = self.AND
+        self.contained_matches = False
+
+    def reset_match_object(self):
+        """Reset a match object.
+
+        """
+
+        self.matchobject = dict()
+        for e in self.structure_type_handler.flat_data_hierarchy:
+            self.matchobject[e] = dict()
+
+    def set_filter_for_type(self, ann_type, filter_string):
+        """Set a filter for a given type.
+
+        Parameters
+        ----------
+        ann_type : str
+            Value of the field in the data structure hierarchy.
+        filter_string: str
+            String of the filter.
+
+        """
+
+        self.filter[ann_type] = filter_string
+
+    def set_inverted_filter(self, inverted):
+        """Set the inverted value to a filter.
+
+        Parameters
+        ----------
+        inverted : bool
+
+        """
+
+        self.inverted = inverted
+
+    def set_contained_matches(self, contained_matches):
+        """Set the contained matches for a filter.
+
+        Parameters
+        ----------
+        contained_matches : bool
+
+        """
+
+        self.contained_matches = contained_matches
+
+    def set_boolean_operation(self, type):
+        """Set the operation type to the filter.
+
+        Parameters
+        ----------
+        type : str
+            Could be AND or OR
+
+        """
+
+        self.boolean_operation = type
+
+    def element_passes_filter(self, element):
+        """Verify if a specific element passes in through a filter.
+
+        Parameters
+        ----------
+        element : array_like
+            An array of string values.
+
+        Returns
+        -------
+        passed : bool
+            Passes or not.
+
+        See also
+        --------
+        _passes_filter
+
+        """
+
+        # is there a filter defined?
+        all_filter_empty = True
+        for ann_type in self.filter.keys():
+            if self.filter[ann_type] != "":
+                all_filter_empty = False
+        if all_filter_empty:
+            return True
+
+        if self.boolean_operation == self.AND:
+            passed = True
+        else:
+            passed = False
+
+        passed = self._passes_filter(passed, element, self.structure_type_handler.data_hierarchy)
+
+        if self.inverted:
+            passed = not passed
+
+        return passed
+
+    def _passes_filter(self, passed, elements, hierarchy):
+        """Verify if a specific element passes in through a filter.
+
+        Parameters
+        ----------
+        passed : bool
+            Passes or not.
+        elements : array_like
+            An array of string values.
+        hirerarchy : array_like
+            Structure of the array.
+
+        Returns
+        -------
+        passed : bool
+            Passes or not.
+
+        """
+
+        for i, t in enumerate(hierarchy):
+            if type(t) is list:
+                elements_list = elements[i]
+                local_passes = False
+                for i, e in enumerate(elements_list):
+                    passes = self._passes_filter(passed, e, t)
+                    local_passes = (local_passes or passes)
+
+                if self.boolean_operation == self.AND:
+                    passed = (passed and local_passes)
+                else:
+                    passed = (passed or local_passes)
+            else:
+                passes = False
+                if self.filter[t] != "":
+                    match = regex.search(
+                        self.filter[t], elements[i]["annotation"])
+                    if match:
+                        self.matchobject[t][elements[i]["id"]] =\
+                        [ [m.start(), m.end()] for m in regex.finditer(
+                            self.filter[t], elements[i]["annotation"]) ]
+                        passes = True
+                elif self.boolean_operation == self.AND:
+                    passes = True
+
+                if self.boolean_operation == self.AND:
+                    passed = (passed and passes)
+                else:
+                    passed = (passed or passes)
+
+        return passed
