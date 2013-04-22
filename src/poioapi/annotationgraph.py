@@ -43,6 +43,9 @@ class AnnotationGraph():
         self.graf = None
         self.graf_basename = None
 
+        self.filters = []
+        self.filtered_element_ids = [[]]
+
     def load_graph_from_graf(self, filepath):
         """Load the project annotation graph from a GrAF/XML file.
 
@@ -422,6 +425,88 @@ class AnnotationGraph():
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
+
+    def append_filter(self, filter):
+        """Append a filter to the search.
+
+        Parameters
+        ----------
+        filter : str
+            Value to set the fiter.
+
+        """
+
+        self.filters.append(filter)
+        new_filtered_elements = [i
+                                 for i, e in enumerate(self.tree)
+                                 if i in self.filtered_element_ids[-1] and
+                                    filter.element_passes_filter(e)]
+        self.filtered_element_ids.append(new_filtered_elements)
+
+    def last_filter(self):
+        """Return the latest added filter.
+
+        Returns
+        -------
+        filters = array_like
+            An array with the filters.
+        AnnotationTreeFilter : class
+            Return the class AnnotationTreeFilter.
+
+        """
+
+        if len(self.filters) > 0:
+            return self.filters[-1]
+        else:
+            return AnnotationTreeFilter(self.structure_type_handler)
+
+    def update_last_filter(self, filter):
+        """Update the last filter added.
+
+        Parameters
+        ----------
+        filter : str
+            Value to set the fiter.
+
+        """
+
+        self.pop_filter()
+        self.append_filter(filter)
+
+    def pop_filter(self):
+        """Remove and return item at index.
+
+        Returns
+        -------
+        filters.pop = str
+            Item at index.
+
+        """
+
+        if len(self.filters) > 0:
+            self.filtered_element_ids.pop()
+            return self.filters.pop()
+        return None
+
+    def init_filters(self):
+        """Initialize the filters array.
+
+        """
+
+        self.filters = []
+        self.filtered_element_ids = [ range(len(self.tree)) ]
+
+    def reset_filters(self):
+        """Reset the filters array.
+
+        """
+
+        self.filtered_element_ids = [ range(len(self.tree)) ]
+        for filter in self.filters:
+            new_filtered_elements = [i for i, e in enumerate(self.tree)
+                                     if i in self.filtered_element_ids[-1] and
+                                        filter.element_passes_filter(e)]
+            self.filtered_element_ids.append(new_filtered_elements)
 
 class AnnotationGraphFilter():
     """
