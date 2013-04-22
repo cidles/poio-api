@@ -11,6 +11,7 @@ from __future__ import absolute_import
 
 import sys
 import os.path
+import re
 import codecs
 import operator
 
@@ -438,7 +439,7 @@ class AnnotationGraph():
 
         self.filters.append(filter)
         new_filtered_elements = [i
-                                 for i, e in enumerate(self.tree)
+                                 for i, e in enumerate(self.graf)
                                  if i in self.filtered_element_ids[-1] and
                                     filter.element_passes_filter(e)]
         self.filtered_element_ids.append(new_filtered_elements)
@@ -458,7 +459,7 @@ class AnnotationGraph():
         if len(self.filters) > 0:
             return self.filters[-1]
         else:
-            return AnnotationTreeFilter(self.structure_type_handler)
+            return AnnotationGraphFilter(self.structure_type_handler)
 
     def update_last_filter(self, filter):
         """Update the last filter added.
@@ -494,16 +495,16 @@ class AnnotationGraph():
         """
 
         self.filters = []
-        self.filtered_element_ids = [ range(len(self.tree)) ]
+        self.filtered_element_ids = [ range(len(self.graf)) ]
 
     def reset_filters(self):
         """Reset the filters array.
 
         """
 
-        self.filtered_element_ids = [ range(len(self.tree)) ]
+        self.filtered_element_ids = [ range(len(self.graf)) ]
         for filter in self.filters:
-            new_filtered_elements = [i for i, e in enumerate(self.tree)
+            new_filtered_elements = [i for i, e in enumerate(self.graf)
                                      if i in self.filtered_element_ids[-1] and
                                         filter.element_passes_filter(e)]
             self.filtered_element_ids.append(new_filtered_elements)
@@ -665,11 +666,11 @@ class AnnotationGraphFilter():
             else:
                 passes = False
                 if self.filter[t] != "":
-                    match = regex.search(
+                    match = re.search(
                         self.filter[t], elements[i]["annotation"])
                     if match:
                         self.matchobject[t][elements[i]["id"]] =\
-                        [ [m.start(), m.end()] for m in regex.finditer(
+                        [ [m.start(), m.end()] for m in re.finditer(
                             self.filter[t], elements[i]["annotation"]) ]
                         passes = True
                 elif self.boolean_operation == self.AND:
