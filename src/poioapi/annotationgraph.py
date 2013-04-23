@@ -197,42 +197,22 @@ class AnnotationGraph():
             html = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body>\n"
 
         for i, root_node in enumerate(self.root_nodes()):
-            html += "<table border=\"1\">\n"
+            html += "<table style=\"border-collapse:collapse;border:1px solid black;margin-bottom:20px;\">"
+            html += "<tr><td style=\"padding:4px;border:1px solid black;\">{0}</td>".format(i)
+            html += "<td style=\"border:1px solid black;\">"
 
-            table = [dict() for _ in range(len(
-                self.structure_type_handler.flat_data_hierarchy))]
+            html += self._node_as_html_table(
+                root_node, self.structure_type_handler.data_hierarchy)
 
-            self._node_as_table(
-                root_node, self.structure_type_handler.data_hierarchy, table, 0)
-
-            for j, row in enumerate(table):
-                html += "<tr>\n"
-                if j is 0:
-                    html += "<td rowspan=\"{0}\" "\
-                            "class=\"element_id\">{1}</td>\n".format(
-                        len(self.structure_type_handler.flat_data_hierarchy), i)
-                html += "<td class=\"ann_type\">{0}</td>".format(
-                    self.structure_type_handler.flat_data_hierarchy[j])
-                for _, column in sorted(row.items(), key=operator.itemgetter(0)):
-                    if not isinstance(column[0], str):
-                        value = column[0].encode('utf-8')
-                    else:
-                        value = column[0]
-
-                    html += "<td colspan=\"{0}\" class=\"{2}\">{1}</td>\n".format(
-                        column[1], value,
-                        self.structure_type_handler.flat_data_hierarchy[j])
-                html += "</tr>\n"
-
-            html += "</table>\n"
+            html += "</td></tr></table>"
 
         if full_html:
             html += "</body></html>"
 
         return html
 
-    def _node_as_table(self, node, hierarchy, table, column):
-        """Insert an element into a table.
+    def _node_as_html_table(self, node, hierarchy):
+        """Create an html table for a node.
 
         Parameters
         ----------
@@ -240,40 +220,31 @@ class AnnotationGraph():
             The root node to start the traversal.
         hierarchy: array_like
             An array with the data structure hierarchy.
-        table : array_like
-            The table to store the annotations to.
-        column: int
-            The current column number.
 
         Returns
         -------
-        inserted : int
-            Number of elements inserted.
+        html : str
+            An html table of the node.
 
         """
+
+        table = "<table style=\"margin:0;padding:0;float:left;border-collapse:collapse;\">"
 
         inserted = 0
 
         for i, t in enumerate(hierarchy):
 
+            table += "<tr style=\"margin:0;padding:0;\">"
+
             if type(t) is list:
+                table += "<td style=\"margin:0;padding:0px;\">"
                 node_list = self.nodes_for_tier(t[0], node)
                 for i, n in enumerate(node_list):
-                    inserted += self._node_as_table(
-                        n, t, table, column + i + inserted)
+                    table += self._node_as_table(n, t)
 
-                if len(node_list) > 0:
-                    inserted = inserted + len(node_list) - 1
-
-                merge_rows = [ r for r in hierarchy if type(r) is not list]
-                for r in merge_rows:
-                    row = self.structure_type_handler.flat_data_hierarchy.index(r)
-                    if column in table[row]:
-                        table[row][column] = (table[row][column][0], inserted + 1)
-                    else:
-                        table[row][column] = ("", inserted + 1)
+                table += "</td>"
             else:
-                row = self.structure_type_handler.flat_data_hierarchy.index(t)
+                #row = self.structure_type_handler.flat_data_hierarchy.index(t)
 
                 a_list = self.annotations_for_tier(t, node)
                 a = ""
@@ -282,12 +253,17 @@ class AnnotationGraph():
                 if a == "":
                     a = "&nbsp;"
 
-                if column in table[row]:
-                    table[row][column] = (a, table[row][column][1])
-                else:
-                    table[row][column] = (a, 1)
+                #if column in table[row]:
+                #    table[row][column] = (a, table[row][column][1])
+                #else:
+                #    table[row][column] = (a, 1)
+                table += "<td style=\"margin:0;padding:3px;\">{0}</td>".format(a)
 
-        return inserted
+            table += "</tr>"
+
+        table += "</table>"
+        return table
+
 
     def from_elan(self, stream):
         """This method generates a GrAF object
