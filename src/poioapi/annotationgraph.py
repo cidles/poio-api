@@ -45,7 +45,7 @@ class AnnotationGraph():
         self.graf_basename = None
 
         self.filters = []
-        self.filtered_node_ids = [[]]
+        self.filtered_node_ids = []
 
     def load_graph_from_graf(self, filepath):
         """Load the project annotation graph from a GrAF/XML file.
@@ -427,6 +427,17 @@ class AnnotationGraph():
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
 
+    def _find_node_from_edge_filter(self, node, filter):
+
+        self._element_passes.append(filter.element_passes_filter(node))
+
+        for out_edge in node.out_edges:
+            self._find_node_from_edge_filter(self.graf.edges[out_edge.id].to_node,
+                filter)
+
+        if node.is_root:
+            return node
+
     def append_filter(self, filter):
         """Append a filter to the search.
 
@@ -438,8 +449,14 @@ class AnnotationGraph():
         """
 
         self.filters.append(filter)
-        new_filtered_elements = [e for e in self.graf.nodes
-                                 if filter.element_passes_filter(e)]
+
+        new_filtered_elements = []
+
+        for node in self.root_nodes():
+            self._element_passes = []
+            self._find_node_from_edge_filter(node, filter)
+            if True in self._element_passes:
+                new_filtered_elements.append(node.id)
 
         self.filtered_node_ids.append(new_filtered_elements)
 
@@ -494,18 +511,18 @@ class AnnotationGraph():
         """
 
         self.filters = []
-        self.filtered_node_ids = self.graf.nodes
+        self.filtered_node_ids = [ [ n.id for n in self.root_nodes() ] ]
 
     def reset_filters(self):
         """Reset the filters array.
 
         """
 
-        self.filtered_node_ids = self.graf.nodes
+        self.filtered_node_ids = [ [ n.id for n in self.root_nodes() ] ]
 
         for filter in self.filters:
-            new_filtered_elements = [e for e in self.graf.nodes
-                                     if filter.element_passes_filter(e)]
+            new_filtered_elements = [n.id for n in self.root_nodes()
+                                     if filter.element_passes_filter(n)]
 
             self.filtered_node_ids.append(new_filtered_elements)
 
