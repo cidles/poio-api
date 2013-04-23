@@ -28,6 +28,9 @@ class TestAnnotationGraph:
             "balochi_graf", "balochi.hdr")
         self.annotation_graph.load_graph_from_graf(filename)
 
+        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(
+            data.DataStructureTypeGraid())
+
     def test_load_graph_from_graf(self):
         expected_nodes = 1161
         assert(len(self.annotation_graph.graf.nodes) == expected_nodes)
@@ -55,6 +58,19 @@ class TestAnnotationGraph:
     def test_as_html_table(self):
         html = self.annotation_graph.as_html_table()
         assert(len(html) > 0)
+
+    def test_append_filter(self):
+        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+        self.annotation_graph.append_filter(self.anngraphfilter)
+
+        assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
+
+    def test_reset_filters(self):
+        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+        self.annotation_graph.append_filter(self.anngraphfilter)
+        self.anngraphfilter.reset_match_object()
+
+        assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
 
 
 class TestAnnotationGraphFilter:
