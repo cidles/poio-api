@@ -72,7 +72,7 @@ class TestAnnotationGraph:
 
         assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
 
-        
+
 class TestAnnotationGraphFilter:
 
     def setup(self):
