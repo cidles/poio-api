@@ -65,6 +65,13 @@ class TestAnnotationGraph:
 
         assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
 
+    def test_reset_filters(self):
+        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+        self.annotation_graph.append_filter(self.anngraphfilter)
+        self.anngraphfilter.reset_match_object()
+
+        assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
+
 class TestAnnotationGraphFilter:
 
     def setup(self):
