@@ -13,7 +13,6 @@ import sys
 import os.path
 import re
 import codecs
-import operator
 
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
