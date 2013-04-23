@@ -8,6 +8,7 @@
 # For license information, see LICENSE.TXT
 
 import os
+import re
 
 from poioapi import data
 import poioapi.annotationgraph
@@ -20,7 +21,6 @@ class TestAnnotationGraph:
     """
 
     def setup(self):
-        # Initialize the AnnotationTree class
         self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(
             data.DataStructureTypeGraid())
 
@@ -60,7 +60,27 @@ class TestAnnotationGraph:
 class TestAnnotationGraphFilter:
 
     def setup(self):
-        pass
+        self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(
+            data.DataStructureTypeGraid())
+
+        filename = os.path.join(os.path.dirname(__file__), "sample_files",
+            "balochi_graf", "balochi.hdr")
+        self.annotation_graph.load_graph_from_graf(filename)
+
+        self.data_structure_type = data.DataStructureTypeGraid()
+        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(self.data_structure_type)
 
     def test_element_passes_filter(self):
-        pass
+        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+
+        element = self.annotation_graph.graf.nodes
+        expected_result = True
+
+        assert(self.anngraphfilter.element_passes_filter(element)
+               == expected_result)
+
+        element = self.annotation_graph.graf.nodes['clause_unit/n1001']
+        expected_result = False
+
+        assert(self.anngraphfilter.element_passes_filter(element)
+               == expected_result)
