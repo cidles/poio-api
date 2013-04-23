@@ -45,7 +45,7 @@ class AnnotationGraph():
         self.graf_basename = None
 
         self.filters = []
-        self.filtered_element_ids = [[]]
+        self.filtered_node_ids = [[]]
 
     def load_graph_from_graf(self, filepath):
         """Load the project annotation graph from a GrAF/XML file.
@@ -438,11 +438,10 @@ class AnnotationGraph():
         """
 
         self.filters.append(filter)
-        new_filtered_elements = [i
-                                 for i, e in enumerate(self.graf)
-                                 if i in self.filtered_element_ids[-1] and
-                                    filter.element_passes_filter(e)]
-        self.filtered_element_ids.append(new_filtered_elements)
+        new_filtered_elements = [e for e in self.graf.nodes
+                                 if filter.element_passes_filter(e)]
+
+        self.filtered_node_ids.append(new_filtered_elements)
 
     def last_filter(self):
         """Return the latest added filter.
@@ -485,7 +484,7 @@ class AnnotationGraph():
         """
 
         if len(self.filters) > 0:
-            self.filtered_element_ids.pop()
+            self.filtered_node_ids.pop()
             return self.filters.pop()
         return None
 
@@ -495,19 +494,20 @@ class AnnotationGraph():
         """
 
         self.filters = []
-        self.filtered_element_ids = [ range(len(self.graf)) ]
+        self.filtered_node_ids = self.graf.nodes
 
     def reset_filters(self):
         """Reset the filters array.
 
         """
 
-        self.filtered_element_ids = [ range(len(self.graf)) ]
+        self.filtered_node_ids = self.graf.nodes
+
         for filter in self.filters:
-            new_filtered_elements = [i for i, e in enumerate(self.graf)
-                                     if i in self.filtered_element_ids[-1] and
-                                        filter.element_passes_filter(e)]
-            self.filtered_element_ids.append(new_filtered_elements)
+            new_filtered_elements = [e for e in self.graf.nodes
+                                     if filter.element_passes_filter(e)]
+
+            self.filtered_node_ids.append(new_filtered_elements)
 
 class AnnotationGraphFilter():
     """
@@ -598,8 +598,8 @@ class AnnotationGraphFilter():
 
         Parameters
         ----------
-        element : array_like
-            An array of string values.
+        element : object
+            An node object type.
 
         Returns
         -------
@@ -639,8 +639,8 @@ class AnnotationGraphFilter():
         ----------
         passed : bool
             Passes or not.
-        elements : array_like
-            An array of string values.
+        elements : object
+            An list of node object type.
         hirerarchy : array_like
             Structure of the array.
 
@@ -653,10 +653,14 @@ class AnnotationGraphFilter():
 
         for i, t in enumerate(hierarchy):
             if type(t) is list:
-                elements_list = elements[i]
                 local_passes = False
-                for i, e in enumerate(elements_list):
-                    passes = self._passes_filter(passed, e, t)
+
+                if isinstance(elements, dict):
+                    for e in elements:
+                        passes = self._passes_filter(passed, e, t)
+                        local_passes = (local_passes or passes)
+                else:
+                    passes = self._passes_filter(passed, elements, t)
                     local_passes = (local_passes or passes)
 
                 if self.boolean_operation == self.AND:
@@ -666,13 +670,19 @@ class AnnotationGraphFilter():
             else:
                 passes = False
                 if self.filter[t] != "":
-                    match = re.search(
-                        self.filter[t], elements[i]["annotation"])
-                    if match:
-                        self.matchobject[t][elements[i]["id"]] =\
-                        [ [m.start(), m.end()] for m in re.finditer(
-                            self.filter[t], elements[i]["annotation"]) ]
-                        passes = True
+                    if isinstance(elements, dict):
+                        el = elements[i]
+                    else:
+                        el = elements
+
+                    for key, value in el.annotations._elements[0].features.items():
+                        match = re.search(self.filter[t], value)
+
+                        if match:
+                            self.matchobject[t][el.id] =\
+                            [ [m.start(), m.end()] for m in re.finditer(
+                                self.filter[t], value) ]
+                            passes = True
                 elif self.boolean_operation == self.AND:
                     passes = True
 
