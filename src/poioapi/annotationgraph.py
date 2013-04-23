@@ -520,9 +520,14 @@ class AnnotationGraph():
 
         self.filtered_node_ids = [ [ n.id for n in self.root_nodes() ] ]
 
+        new_filtered_elements = []
+
         for filter in self.filters:
-            new_filtered_elements = [n.id for n in self.root_nodes()
-                                     if filter.element_passes_filter(n)]
+            for node in self.root_nodes():
+                self._element_passes = []
+                self._find_node_from_edge_filter(node, filter)
+                if True in self._element_passes:
+                    new_filtered_elements.append(node.id)
 
             self.filtered_node_ids.append(new_filtered_elements)
 
