@@ -305,7 +305,7 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
-        self.tier_hierarchies = [ v for _, v in converter.tiers_hierarchy.items()]
+        self.tier_hierarchies = converter.tiers_hierarchy
 
         self.graf = converter.graph
 
