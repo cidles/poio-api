@@ -240,7 +240,7 @@ class AnnotationGraph():
                 table += "<td style=\"margin:0;padding:0px;\">"
                 node_list = self.nodes_for_tier(t[0], node)
                 for i, n in enumerate(node_list):
-                    table += self._node_as_table(n, t)
+                    table += self._node_as_html_table(n, t)
 
                 table += "</td>"
             else:
