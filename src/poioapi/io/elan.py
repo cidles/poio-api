@@ -54,7 +54,6 @@ class Parser(poioapi.io.graf.BaseParser):
         self.regions_map = self._map_time_slots()
         self.meta_information = self._retrieve_aditional_information()
 
-
     def get_root_tiers(self):
 
         return [poioapi.io.graf.Tier(tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
@@ -161,11 +160,43 @@ class Parser(poioapi.io.graf.BaseParser):
             if 'TIME_VALUE' in time.attrib:
                 value = time.attrib['TIME_VALUE']
             else:
-                value = 0
+                value = None
 
             time_order_dict[key] = value
 
+        time_order_dict = self._fix_time_slots(time_order_dict)
+
         return time_order_dict
+
+    def _fix_time_slots(self, time_order_dict):
+        for time_slot, value in time_order_dict.items():
+            if value is None:
+                time_order_dict[time_slot] = self._find_time_slot_value(time_slot,
+                    time_order_dict)
+
+        return time_order_dict
+
+    def _find_time_slot_value(self, time_slot, time_order_dict):
+        tiers = self.tree.findall('TIER')
+        range_time_slots = []
+
+        for tier in tiers:
+            annotations = tier.findall('ANNOTATION')
+            for annotation in annotations:
+                if annotation[0].tag == 'ALIGNABLE_ANNOTATION':
+                    if annotation[0].attrib['TIME_SLOT_REF1'] == time_slot:
+                        range_time_slots.append(annotation[0].attrib['TIME_SLOT_REF2'])
+                    if annotation[0].attrib['TIME_SLOT_REF2'] == time_slot:
+                        range_time_slots.append(annotation[0].attrib['TIME_SLOT_REF1'])
+
+        time_slot_value = 0
+
+        for time_slot in range_time_slots:
+            time_slot_value += int(time_order_dict[time_slot])
+
+        time_slot_value = (time_slot_value / len(range_time_slots))
+
+        return time_slot_value
 
     def _retrieve_aditional_information(self):
 
