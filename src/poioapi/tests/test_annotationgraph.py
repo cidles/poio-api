@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Poio Tools for Linguists
-#cd
+#
 # Copyright (C) 2009-2013 Poio Project
 # Author: Peter Bouda <pbouda@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
@@ -57,26 +57,10 @@ class TestAnnotationGraph:
         assert(len(html) > 0)
 
 
-class AnnotationGraphFilter:
+class TestAnnotationGraphFilter:
+
+    def setup(self):
+        pass
 
     def test_element_passes_filter(self):
-        # Open the file and set it to the AnnotationTree
-        data_structure_type = data.DataStructureTypeGraid()
-        anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(data_structure_type)
-        anngraphfilter.set_filter_for_type("graid2", "nc")
-
-        # If the variables value equal like this
-        element = [{'id': 6, 'annotation': 'gu\u0161-\u012bt:'},
-            [[{'id': 4, 'annotation': 'gu\u0161-\u012bt:'},
-                [[{'id': 1, 'annotation': 'gu\u0161-\u012bt:'},
-                        {'id': 2, 'annotation': 'say.PRS-3SG'},
-                        {'id': 3, 'annotation': ''}]],
-                    {'id': 5, 'annotation': 'nc'}]],
-                {'id': 7, 'annotation': 'They say:'},
-                {'id': 8, 'annotation': ''}]
-
-        # The result expected should be
-        expected_result = True # Boolean value
-
-        assert(anngraphfilter.element_passes_filter(element)
-               == expected_result)
+        pass
