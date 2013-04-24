@@ -9,7 +9,7 @@
 
 import sys, getopt
 
-import poioapi.io.excel
+import poioapi.annotationgraph
 
 def main(argv):
     inputfile = ''
@@ -34,14 +34,17 @@ def main(argv):
         print('excel2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    parser = poioapi.io.excel.Parser(inputfile)
+    # Create the data structure
+    data_hierarchy = None
 
-    converter = poioapi.io.graf.GrAFConverter(parser)
-    converter.convert()
+    # Initialize the annotation graph
+    annotation_graph = poioapi.annotationgraph.AnnotationGraph(data_hierarchy)
 
-    tiers_hierarchies = converter.tiers_hierarchy
+    # Create a graph from an elan file
+    annotation_graph.from_excel(inputfile)
 
-    graf = converter.graph
+    # Generate the GrAF files
+    annotation_graph.generate_graf_files(inputfile, outputfile)
 
     print('Finished')
 
