@@ -18,6 +18,7 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import poioapi.io.elan
+import poioapi.io.excel
 import poioapi.io.graf
 import poioapi.io.header
 import poioapi.io.pickle
@@ -314,6 +315,21 @@ class AnnotationGraph():
             stream = self._open_file_(stream)
 
         parser = poioapi.io.pickle.Parser(stream)
+
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
+
+        self.tier_hierarchies = converter.tiers_hierarchy
+
+        self.graf = converter.graph
+
+    def from_excel(self, stream):
+        """This method generates a GrAF object
+        from a excel file.
+
+        """
+
+        parser = poioapi.io.excel.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
