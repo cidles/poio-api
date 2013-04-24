@@ -237,6 +237,19 @@ class Parser(poioapi.io.graf.BaseParser):
         return False
 
     def _map_time_slots(self):
+        """This method map "TIME_SLOT_ID"s with
+        their respective values.
+
+        Returns
+        -------
+        time_order_dict : dict
+            A dictonary with the time slot's and their values.
+
+        See also
+        --------
+        _fix_time_slots
+
+        """
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
@@ -256,6 +269,27 @@ class Parser(poioapi.io.graf.BaseParser):
         return time_order_dict
 
     def _fix_time_slots(self, time_order_dict):
+        """Helper function that fix some of the missing
+        values in the time slots. Some of the "TIME_SLOT_ID"
+        doesn't contain the "TIME_VALUE" since this
+        attribute is optional.
+
+        Parameters
+        ----------
+        time_order_dict : dict
+            A dictonary with the time slot's and their values.
+
+        Returns
+        -------
+        time_order_dict : dict
+            A dictonary with the time slot's and their values.
+
+        See also
+        --------
+        _find_time_slot_value
+
+        """
+
         for time_slot, value in time_order_dict.items():
             if value is None:
                 time_order_dict[time_slot] = self._find_time_slot_value(time_slot,
@@ -264,6 +298,27 @@ class Parser(poioapi.io.graf.BaseParser):
         return time_order_dict
 
     def _find_time_slot_value(self, time_slot, time_order_dict):
+        """Helper function to find and calculate the missing
+        time value. The calculation is made base in the range
+        where the time slot is used. First it's obtain the values
+        of the ranges then is made a summation of that values
+        and divide by the number of values. In the end it's
+        a mean count.
+
+        Parameters
+        ----------
+        time_slot : str
+            Id of a "TIME_ORDER".
+        time_order_dict : dict
+            A dictonary with the time slot's and their values.
+
+        Returns
+        -------
+        time_slot_value : int
+            Time value of a specific time slot.
+
+        """
+
         tiers = self.tree.findall('TIER')
         range_time_slots = []
 
@@ -286,6 +341,17 @@ class Parser(poioapi.io.graf.BaseParser):
         return time_slot_value
 
     def _retrieve_aditional_information(self):
+        """This method retrieve all the elan
+        core file, except the ANNOTATION tags,
+        to make it possible to reconstruct the
+        elan file again.
+
+        Returns
+        -------
+        meta_information : ElementTree
+            Element with all the elan elements.
+
+        """
 
         meta_information = Element(self.root._root.tag,
             self.root._root.attrib)
@@ -298,6 +364,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         return meta_information
 
+    
 class Writer:
     """
     Class that will handle the writing of
