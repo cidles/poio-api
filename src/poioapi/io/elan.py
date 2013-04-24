@@ -48,6 +48,11 @@ class Parser(poioapi.io.graf.BaseParser):
         self.parse()
 
     def parse(self):
+        """This method will set the variables
+        to make possible to do the parsing
+        correctly.
+
+        """
 
         self.root = ET.parse(self.filepath)
         self.tree = self.root.getroot()
@@ -55,12 +60,39 @@ class Parser(poioapi.io.graf.BaseParser):
         self.meta_information = self._retrieve_aditional_information()
 
     def get_root_tiers(self):
+        """This method retrieves all the root tiers.
+        In this case the root tiers are all those
+        that doesn't contain "PARENT_REF".
+
+        Returns
+        -------
+        list : array-like
+            List of tiers type.
+
+        """
 
         return [poioapi.io.graf.Tier(tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
                 for tier in self.tree.findall('TIER')
                 if not 'PARENT_REF' in tier.attrib]
 
     def get_child_tiers_for_tier(self, tier):
+        """This method retrieves all the child tiers
+        of a specific tier. The children of a tier
+        are all the "TIERS" that has the "PARENT_REF"
+        equal to the specific tier name.
+
+        Parameters
+        ----------
+        tier : object
+            Tier to find the children from.
+
+        Returns
+        -------
+        child_tiers : array-like
+            List of tiers type.
+
+        """
+
         child_tiers = []
 
         for t in self.tree.findall("TIER"):
@@ -71,6 +103,30 @@ class Parser(poioapi.io.graf.BaseParser):
         return child_tiers
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
+        """This method retrieves all the annotations
+        of a specific tier. In elan type files there
+        are two different types of annotations,
+        ANNOTATION_REF and ALIGNABLE_ANNOTATION. For
+        the ANNOTATION_REF the annotation_parent it's
+        specified in the attribute "ANNOTATION_REF".
+        As for the ALIGNABLE_ANNOTATION in order to
+        use the annotation_parent it's necessary to
+        try to match if the ranges of theirs
+        "TIME_SLOT_REF".
+
+        Parameters
+        ----------
+        tier : object
+            Tier to find the annotations.
+        annotation_parent : object
+            Annotation parent it is the reference.
+
+        Returns
+        -------
+        annotations : array-like
+            List of annotations type.
+
+        """
 
         annotations = []
         tier_annotations = []
@@ -129,18 +185,49 @@ class Parser(poioapi.io.graf.BaseParser):
         return False
 
     def region_for_annotation(self, annotation):
+        """This method retrieves the region for a
+        specific annotation. The region are obtained
+        through the time slots references.
+
+        Parameters
+        ----------
+        annotation : object
+            Annotation to get the region.
+
+        Returns
+        -------
+        region : tuple
+            Region of an annotation.
+
+        """
 
         if 'time_slot1' in annotation.features:
-            region_1 = int(self.regions_map[annotation.features['time_slot1']])
-            region_2 = int(self.regions_map[annotation.features['time_slot2']])
+            part_1 = int(self.regions_map[annotation.features['time_slot1']])
+            part_2 = int(self.regions_map[annotation.features['time_slot2']])
 
-            regions = (region_1, region_2)
+            region = (part_1, part_2)
 
-            return regions
+            return region
 
         return None
 
     def tier_has_regions(self, tier):
+        """This method check if a tier has regions.
+        The tiers that are considerate with regions
+        are the ones that theirs "LINGUISTIC_TYPE"
+        is "TIME_ALIGNABLE" true.
+
+        Parameters
+        ----------
+        tier : object
+            Tier to check if has regions.
+
+        Returns
+        -------
+        boolean : bool
+            Result of the TIME_ALIGNABLE check.
+
+        """
 
         for l in self.tree.findall("LINGUISTIC_TYPE"):
             if l.attrib["LINGUISTIC_TYPE_ID"] == tier.linguistic_type:
@@ -267,9 +354,9 @@ class Writer:
                     "-"+linguistic_type)).getroot()
 
                 annotations = graf_tree.findall('{http://www.xces.org/ns/GrAF/1.0/}a')
-                
+
                 tier_element_tree = element_tree.find("TIER[@TIER_ID='"+tier_id+"']")
-                
+
                 linguistic_type_ref = element_tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+
                                                         tier_element_tree.attrib['LINGUISTIC_TYPE_REF']+"']")
 
