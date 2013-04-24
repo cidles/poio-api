@@ -300,8 +300,8 @@ class Parser(poioapi.io.graf.BaseParser):
     def _find_time_slot_value(self, time_slot, time_order_dict):
         """Helper function to find and calculate the missing
         time value. The calculation is made base in the range
-        where the time slot is used. First it's obtain the values
-        of the ranges then is made a summation of that values
+        where the time slot is used. The First it's obtain the
+        range values then is made a summation of that values
         and divide by the number of values. In the end it's
         a mean count.
 
@@ -364,7 +364,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         return meta_information
 
-    
+
 class Writer:
     """
     Class that will handle the writing of
