@@ -51,22 +51,24 @@ class CorpusTrees():
 
 class CorpusGraphs():
 
-    def __init__(self, data_structure_type):
+    def __init__(self):
         self.items = []
-        self.data_structure_type = data_structure_type
+        #self.data_structure_type = None
+        self.tier_names = set()
 
     def add_item(self, filepath, filetype):
         if filetype == poioapi.data.EAF:
             annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
             annotation_graph.from_elan(filepath)
-            print(annotation_graph.tier_hierarchies)
-            if len(annotation_graph.tier_hierarchies) > 0:
-                annotation_graph.structure_type_handler = \
-                    poioapi.data.DataStructureType(
-                        annotation_graph.tier_hierarchies[0]
-                    )
-
-            #annotation_tree.init_filters()
-            self.items.append( (filepath, annotation_graph) )
         else:
             raise poioapi.data.UnknownFileFormatError()
+
+        annotation_graph.structure_type_handler = \
+            poioapi.data.DataStructureType(
+                annotation_graph.tier_hierarchies[0]
+            )
+
+        self.tier_names.update(annotation_graph.structure_type_handler.flat_data_hierarchy)
+
+        #annotation_tree.init_filters()
+        self.items.append( (filepath, annotation_graph) )
