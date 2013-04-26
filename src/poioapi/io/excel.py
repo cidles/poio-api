@@ -15,6 +15,7 @@ excel data.
 from __future__ import absolute_import
 
 import csv
+import codecs
 
 import poioapi.io.graf
 
@@ -41,7 +42,7 @@ class Parser(poioapi.io.graf.BaseParser):
         self.current_parent = None
         self.clause_ids = {}
 
-        with open(self.filepath, 'rt') as csvfile:
+        with codecs.open(self.filepath, 'r', 'utf-8') as csvfile:
             rows = csv.reader(csvfile, delimiter='|')
 
             i = 0
