@@ -114,8 +114,7 @@ class AnnotationGraph():
         #node = self.graf.nodes[node_id]
         res = []
         if parent_node:
-            for edge in parent_node.out_edges:
-                target_node = edge.to_node
+            for target_node in parent_node.iter_children():
                 if target_node.id.startswith(tier_name):
                     res.append(target_node)
         else:
