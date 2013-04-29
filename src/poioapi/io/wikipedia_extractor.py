@@ -8,6 +8,7 @@
 # For license information, see LICENSE.TXT
 
 from __future__ import absolute_import, unicode_literals
+
 import sys
 import os
 import codecs
@@ -40,7 +41,7 @@ class Parser(poioapi.io.graf.BaseParser):
         last_position = 0
 
         if tier.name == "doc":
-            for annotation in self.root:
+            for a, annotation in enumerate(self.root):
                 text = annotation.text
                 id = annotation.attrib["id"]
 
@@ -50,11 +51,14 @@ class Parser(poioapi.io.graf.BaseParser):
                 annotations.append(poioapi.io.graf.Annotation(id,
                     None, features))
 
+                if len(annotation) is not 0:
+                    text += annotation[0].tail
+
                 self.documents_map[id] = (last_position, last_position +
                                                          len(text))
                 self.documents.append(text)
 
-                last_position = len(text)
+                last_position += len(text)
 
         return annotations
 
