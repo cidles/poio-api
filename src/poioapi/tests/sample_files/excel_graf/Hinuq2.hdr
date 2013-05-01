@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentHeader date.created="2013-05-01" docID="PoioAPI-247204" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <fileDesc>
+    <fileName>Hinuq2</fileName>
+    <extent count="0" unit="words"/>
+    <sourceDesc>
+      <author age="" sex="">alopes</author>
+      <source type="Contributor">Cont</source>
+      <publisher>self</publisher>
+      <pubDate iso8601="2013-05-01"/>
+      <idno type="ISBN">9164784</idno>
+    </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+    <textClass catRef="PT">
+      <subject>Revitatilization</subject>
+    </textClass>
+  </profileDesc>
+  <dataDesc>
+    <primaryData f.id="text" loc="Hinuq2.csv">
+      <annotations>
+        <annotation f.id="word" loc="Hinuq2-word.xml"/>
+        <annotation f.id="clause_type" loc="Hinuq2-clause_type.xml"/>
+        <annotation f.id="reference_tracking" loc="Hinuq2-reference_tracking.xml"/>
+        <annotation f.id="grammatical_relation" loc="Hinuq2-grammatical_relation.xml"/>
+        <annotation f.id="clause_id" loc="Hinuq2-clause_id.xml"/>
+        <annotation f.id="translation" loc="Hinuq2-translation.xml"/>
+        <annotation f.id="ref" loc="Hinuq2-ref.xml"/>
+        <annotation f.id="part_of_spech" loc="Hinuq2-part_of_spech.xml"/>
+      </annotations>
+    </primaryData>
+  </dataDesc>
+</documentHeader>

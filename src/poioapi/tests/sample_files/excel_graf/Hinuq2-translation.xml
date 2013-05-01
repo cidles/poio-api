@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="word"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="translation"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="translation/n109"/>
+  <edge from="word/n68" to="translation/n109" xml:id="e109"/>
+  <a as="translation" label="translation" ref="translation/n109" xml:id="109">
+    <fs>
+      <f name="annotation_value">month</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n110"/>
+  <edge from="word/n70" to="translation/n110" xml:id="e110"/>
+  <a as="translation" label="translation" ref="translation/n110" xml:id="110">
+    <fs>
+      <f name="annotation_value">husband</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n111"/>
+  <edge from="word/n71" to="translation/n111" xml:id="e111"/>
+  <a as="translation" label="translation" ref="translation/n111" xml:id="111">
+    <fs>
+      <f name="annotation_value">mother</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n112"/>
+  <edge from="word/n72" to="translation/n112" xml:id="e112"/>
+  <a as="translation" label="translation" ref="translation/n112" xml:id="112">
+    <fs>
+      <f name="annotation_value">work</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n113"/>
+  <edge from="word/n75" to="translation/n113" xml:id="e113"/>
+  <a as="translation" label="translation" ref="translation/n113" xml:id="113">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n114"/>
+  <edge from="word/n76" to="translation/n114" xml:id="e114"/>
+  <a as="translation" label="translation" ref="translation/n114" xml:id="114">
+    <fs>
+      <f name="annotation_value">wife</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n115"/>
+  <edge from="word/n78" to="translation/n115" xml:id="e115"/>
+  <a as="translation" label="translation" ref="translation/n115" xml:id="115">
+    <fs>
+      <f name="annotation_value">work</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n116"/>
+  <edge from="word/n80" to="translation/n116" xml:id="e116"/>
+  <a as="translation" label="translation" ref="translation/n116" xml:id="116">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n150"/>
+  <edge from="word/n126" to="translation/n150" xml:id="e150"/>
+  <a as="translation" label="translation" ref="translation/n150" xml:id="150">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n151"/>
+  <edge from="word/n127" to="translation/n151" xml:id="e151"/>
+  <a as="translation" label="translation" ref="translation/n151" xml:id="151">
+    <fs>
+      <f name="annotation_value">reproach</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n152"/>
+  <edge from="word/n129" to="translation/n152" xml:id="e152"/>
+  <a as="translation" label="translation" ref="translation/n152" xml:id="152">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n214"/>
+  <edge from="word/n163" to="translation/n214" xml:id="e214"/>
+  <a as="translation" label="translation" ref="translation/n214" xml:id="214">
+    <fs>
+      <f name="annotation_value">she;</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n215"/>
+  <edge from="word/n164" to="translation/n215" xml:id="e215"/>
+  <a as="translation" label="translation" ref="translation/n215" xml:id="215">
+    <fs>
+      <f name="annotation_value">wife</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n216"/>
+  <edge from="word/n165" to="translation/n216" xml:id="e216"/>
+  <a as="translation" label="translation" ref="translation/n216" xml:id="216">
+    <fs>
+      <f name="annotation_value">patience</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n217"/>
+  <edge from="word/n168" to="translation/n217" xml:id="e217"/>
+  <a as="translation" label="translation" ref="translation/n217" xml:id="217">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n218"/>
+  <edge from="word/n170" to="translation/n218" xml:id="e218"/>
+  <a as="translation" label="translation" ref="translation/n218" xml:id="218">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n219"/>
+  <edge from="word/n172" to="translation/n219" xml:id="e219"/>
+  <a as="translation" label="translation" ref="translation/n219" xml:id="219">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n220"/>
+  <edge from="word/n173" to="translation/n220" xml:id="e220"/>
+  <a as="translation" label="translation" ref="translation/n220" xml:id="220">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n221"/>
+  <edge from="word/n175" to="translation/n221" xml:id="e221"/>
+  <a as="translation" label="translation" ref="translation/n221" xml:id="221">
+    <fs>
+      <f name="annotation_value">it</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n222"/>
+  <edge from="word/n177" to="translation/n222" xml:id="e222"/>
+  <a as="translation" label="translation" ref="translation/n222" xml:id="222">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n223"/>
+  <edge from="word/n178" to="translation/n223" xml:id="e223"/>
+  <a as="translation" label="translation" ref="translation/n223" xml:id="223">
+    <fs>
+      <f name="annotation_value">thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n224"/>
+  <edge from="word/n180" to="translation/n224" xml:id="e224"/>
+  <a as="translation" label="translation" ref="translation/n224" xml:id="224">
+    <fs>
+      <f name="annotation_value">thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n25"/>
+  <edge from="word/n6" to="translation/n25" xml:id="e25"/>
+  <a as="translation" label="translation" ref="translation/n25" xml:id="25">
+    <fs>
+      <f name="annotation_value">husband-wife</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n26"/>
+  <edge from="word/n7" to="translation/n26" xml:id="e26"/>
+  <a as="translation" label="translation" ref="translation/n26" xml:id="26">
+    <fs>
+      <f name="annotation_value">they</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n27"/>
+  <edge from="word/n9" to="translation/n27" xml:id="e27"/>
+  <a as="translation" label="translation" ref="translation/n27" xml:id="27">
+    <fs>
+      <f name="annotation_value">refl</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n279"/>
+  <edge from="word/n237" to="translation/n279" xml:id="e279"/>
+  <a as="translation" label="translation" ref="translation/n279" xml:id="279">
+    <fs>
+      <f name="annotation_value">time</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n280"/>
+  <edge from="word/n240" to="translation/n280" xml:id="e280"/>
+  <a as="translation" label="translation" ref="translation/n280" xml:id="280">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n281"/>
+  <edge from="word/n242" to="translation/n281" xml:id="e281"/>
+  <a as="translation" label="translation" ref="translation/n281" xml:id="281">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n282"/>
+  <edge from="word/n250" to="translation/n282" xml:id="e282"/>
+  <a as="translation" label="translation" ref="translation/n282" xml:id="282">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n283"/>
+  <edge from="word/n251" to="translation/n283" xml:id="e283"/>
+  <a as="translation" label="translation" ref="translation/n283" xml:id="283">
+    <fs>
+      <f name="annotation_value">life</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n284"/>
+  <edge from="word/n253" to="translation/n284" xml:id="e284"/>
+  <a as="translation" label="translation" ref="translation/n284" xml:id="284">
+    <fs>
+      <f name="annotation_value">good.thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n328"/>
+  <edge from="word/n291" to="translation/n328" xml:id="e328"/>
+  <a as="translation" label="translation" ref="translation/n328" xml:id="328">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n329"/>
+  <edge from="word/n293" to="translation/n329" xml:id="e329"/>
+  <a as="translation" label="translation" ref="translation/n329" xml:id="329">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n330"/>
+  <edge from="word/n295" to="translation/n330" xml:id="e330"/>
+  <a as="translation" label="translation" ref="translation/n330" xml:id="330">
+    <fs>
+      <f name="annotation_value">life</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n331"/>
+  <edge from="word/n296" to="translation/n331" xml:id="e331"/>
+  <a as="translation" label="translation" ref="translation/n331" xml:id="331">
+    <fs>
+      <f name="annotation_value">man</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n332"/>
+  <edge from="word/n297" to="translation/n332" xml:id="e332"/>
+  <a as="translation" label="translation" ref="translation/n332" xml:id="332">
+    <fs>
+      <f name="annotation_value">present</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n333"/>
+  <edge from="word/n301" to="translation/n333" xml:id="e333"/>
+  <a as="translation" label="translation" ref="translation/n333" xml:id="333">
+    <fs>
+      <f name="annotation_value">broom</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n334"/>
+  <edge from="word/n303" to="translation/n334" xml:id="e334"/>
+  <a as="translation" label="translation" ref="translation/n334" xml:id="334">
+    <fs>
+      <f name="annotation_value">kerchief</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n335"/>
+  <edge from="word/n305" to="translation/n335" xml:id="e335"/>
+  <a as="translation" label="translation" ref="translation/n335" xml:id="335">
+    <fs>
+      <f name="annotation_value">spade</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n371"/>
+  <edge from="word/n341" to="translation/n371" xml:id="e371"/>
+  <a as="translation" label="translation" ref="translation/n371" xml:id="371">
+    <fs>
+      <f name="annotation_value">thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n372"/>
+  <edge from="word/n344" to="translation/n372" xml:id="e372"/>
+  <a as="translation" label="translation" ref="translation/n372" xml:id="372">
+    <fs>
+      <f name="annotation_value">present</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n373"/>
+  <edge from="word/n345" to="translation/n373" xml:id="e373"/>
+  <a as="translation" label="translation" ref="translation/n373" xml:id="373">
+    <fs>
+      <f name="annotation_value">life</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n374"/>
+  <edge from="word/n346" to="translation/n374" xml:id="e374"/>
+  <a as="translation" label="translation" ref="translation/n374" xml:id="374">
+    <fs>
+      <f name="annotation_value">good.thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n375"/>
+  <edge from="word/n348" to="translation/n375" xml:id="e375"/>
+  <a as="translation" label="translation" ref="translation/n375" xml:id="375">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n376"/>
+  <edge from="word/n349" to="translation/n376" xml:id="e376"/>
+  <a as="translation" label="translation" ref="translation/n376" xml:id="376">
+    <fs>
+      <f name="annotation_value">man</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n423"/>
+  <edge from="word/n382" to="translation/n423" xml:id="e423"/>
+  <a as="translation" label="translation" ref="translation/n423" xml:id="423">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n424"/>
+  <edge from="word/n384" to="translation/n424" xml:id="e424"/>
+  <a as="translation" label="translation" ref="translation/n424" xml:id="424">
+    <fs>
+      <f name="annotation_value">pro</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n425"/>
+  <edge from="word/n387" to="translation/n425" xml:id="e425"/>
+  <a as="translation" label="translation" ref="translation/n425" xml:id="425">
+    <fs>
+      <f name="annotation_value">bier</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n426"/>
+  <edge from="word/n391" to="translation/n426" xml:id="e426"/>
+  <a as="translation" label="translation" ref="translation/n426" xml:id="426">
+    <fs>
+      <f name="annotation_value">flag</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n427"/>
+  <edge from="word/n393" to="translation/n427" xml:id="e427"/>
+  <a as="translation" label="translation" ref="translation/n427" xml:id="427">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n428"/>
+  <edge from="word/n396" to="translation/n428" xml:id="e428"/>
+  <a as="translation" label="translation" ref="translation/n428" xml:id="428">
+    <fs>
+      <f name="annotation_value">present</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n429"/>
+  <edge from="word/n404" to="translation/n429" xml:id="e429"/>
+  <a as="translation" label="translation" ref="translation/n429" xml:id="429">
+    <fs>
+      <f name="annotation_value">good.thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n496"/>
+  <edge from="word/n439" to="translation/n496" xml:id="e496"/>
+  <a as="translation" label="translation" ref="translation/n496" xml:id="496">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n497"/>
+  <edge from="word/n441" to="translation/n497" xml:id="e497"/>
+  <a as="translation" label="translation" ref="translation/n497" xml:id="497">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n498"/>
+  <edge from="word/n442" to="translation/n498" xml:id="e498"/>
+  <a as="translation" label="translation" ref="translation/n498" xml:id="498">
+    <fs>
+      <f name="annotation_value">laughter</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n499"/>
+  <edge from="word/n444" to="translation/n499" xml:id="e499"/>
+  <a as="translation" label="translation" ref="translation/n499" xml:id="499">
+    <fs>
+      <f name="annotation_value">laughter</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n500"/>
+  <edge from="word/n446" to="translation/n500" xml:id="e500"/>
+  <a as="translation" label="translation" ref="translation/n500" xml:id="500">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n501"/>
+  <edge from="word/n447" to="translation/n501" xml:id="e501"/>
+  <a as="translation" label="translation" ref="translation/n501" xml:id="501">
+    <fs>
+      <f name="annotation_value">life</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n502"/>
+  <edge from="word/n449" to="translation/n502" xml:id="e502"/>
+  <a as="translation" label="translation" ref="translation/n502" xml:id="502">
+    <fs>
+      <f name="annotation_value">good.thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n503"/>
+  <edge from="word/n451" to="translation/n503" xml:id="e503"/>
+  <a as="translation" label="translation" ref="translation/n503" xml:id="503">
+    <fs>
+      <f name="annotation_value">life</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n504"/>
+  <edge from="word/n455" to="translation/n504" xml:id="e504"/>
+  <a as="translation" label="translation" ref="translation/n504" xml:id="504">
+    <fs>
+      <f name="annotation_value">time</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n505"/>
+  <edge from="word/n456" to="translation/n505" xml:id="e505"/>
+  <a as="translation" label="translation" ref="translation/n505" xml:id="505">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n506"/>
+  <edge from="word/n459" to="translation/n506" xml:id="e506"/>
+  <a as="translation" label="translation" ref="translation/n506" xml:id="506">
+    <fs>
+      <f name="annotation_value">good.thing</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n54"/>
+  <edge from="word/n35" to="translation/n54" xml:id="e54"/>
+  <a as="translation" label="translation" ref="translation/n54" xml:id="54">
+    <fs>
+      <f name="annotation_value">husband</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n55"/>
+  <edge from="word/n37" to="translation/n55" xml:id="e55"/>
+  <a as="translation" label="translation" ref="translation/n55" xml:id="55">
+    <fs>
+      <f name="annotation_value">mother</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n56"/>
+  <edge from="word/n40" to="translation/n56" xml:id="e56"/>
+  <a as="translation" label="translation" ref="translation/n56" xml:id="56">
+    <fs>
+      <f name="annotation_value">she</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n57"/>
+  <edge from="word/n43" to="translation/n57" xml:id="e57"/>
+  <a as="translation" label="translation" ref="translation/n57" xml:id="57">
+    <fs>
+      <f name="annotation_value">woman</f>
+    </fs>
+  </a>
+</graph>

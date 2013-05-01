@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies/>
+    <annotationSpaces>
+      <annotationSpace as.id="ref"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="ref/n1"/>
+  <a as="ref" label="ref" ref="ref/n1" xml:id="1">
+    <fs>
+      <f name="annotation_value">XoddonBarun.001</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n122"/>
+  <a as="ref" label="ref" ref="ref/n122" xml:id="122">
+    <fs>
+      <f name="annotation_value">XoddonBarun.004</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n157"/>
+  <a as="ref" label="ref" ref="ref/n157" xml:id="157">
+    <fs>
+      <f name="annotation_value">XoddonBarun.005</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n231"/>
+  <a as="ref" label="ref" ref="ref/n231" xml:id="231">
+    <fs>
+      <f name="annotation_value">XoddonBarun.006</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n288"/>
+  <a as="ref" label="ref" ref="ref/n288" xml:id="288">
+    <fs>
+      <f name="annotation_value">XoddonBarun.007</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n32"/>
+  <a as="ref" label="ref" ref="ref/n32" xml:id="32">
+    <fs>
+      <f name="annotation_value">XoddonBarun.002</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n338"/>
+  <a as="ref" label="ref" ref="ref/n338" xml:id="338">
+    <fs>
+      <f name="annotation_value">XoddonBarun.008</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n379"/>
+  <a as="ref" label="ref" ref="ref/n379" xml:id="379">
+    <fs>
+      <f name="annotation_value">XoddonBarun.009</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n433"/>
+  <a as="ref" label="ref" ref="ref/n433" xml:id="433">
+    <fs>
+      <f name="annotation_value">XoddonBarun.010</f>
+    </fs>
+  </a>
+  <node xml:id="ref/n61"/>
+  <a as="ref" label="ref" ref="ref/n61" xml:id="61">
+    <fs>
+      <f name="annotation_value">XoddonBarun.003</f>
+    </fs>
+  </a>
+</graph>

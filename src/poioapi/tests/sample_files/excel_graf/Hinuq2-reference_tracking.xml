@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="word"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="reference_tracking"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="reference_tracking/n117"/>
+  <edge from="word/n70" to="reference_tracking/n117" xml:id="e117"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n117" xml:id="117">
+    <fs>
+      <f name="annotation_value">xod</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n118"/>
+  <edge from="word/n71" to="reference_tracking/n118" xml:id="e118"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n118" xml:id="118">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n119"/>
+  <edge from="word/n75" to="reference_tracking/n119" xml:id="e119"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n119" xml:id="119">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n120"/>
+  <edge from="word/n76" to="reference_tracking/n120" xml:id="e120"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n120" xml:id="120">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n121"/>
+  <edge from="word/n80" to="reference_tracking/n121" xml:id="e121"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n121" xml:id="121">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n153"/>
+  <edge from="word/n125" to="reference_tracking/n153" xml:id="e153"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n153" xml:id="153">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n154"/>
+  <edge from="word/n126" to="reference_tracking/n154" xml:id="e154"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n154" xml:id="154">
+    <fs>
+      <f name="annotation_value">bar;</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n155"/>
+  <edge from="word/n128" to="reference_tracking/n155" xml:id="e155"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n155" xml:id="155">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n156"/>
+  <edge from="word/n129" to="reference_tracking/n156" xml:id="e156"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n156" xml:id="156">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n225"/>
+  <edge from="word/n163" to="reference_tracking/n225" xml:id="e225"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n225" xml:id="225">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n226"/>
+  <edge from="word/n164" to="reference_tracking/n226" xml:id="e226"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n226" xml:id="226">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n227"/>
+  <edge from="word/n168" to="reference_tracking/n227" xml:id="e227"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n227" xml:id="227">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n228"/>
+  <edge from="word/n170" to="reference_tracking/n228" xml:id="e228"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n228" xml:id="228">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n229"/>
+  <edge from="word/n173" to="reference_tracking/n229" xml:id="e229"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n229" xml:id="229">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n230"/>
+  <edge from="word/n177" to="reference_tracking/n230" xml:id="e230"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n230" xml:id="230">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n28"/>
+  <edge from="word/n6" to="reference_tracking/n28" xml:id="e28"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n28" xml:id="28">
+    <fs>
+      <f name="annotation_value">xod-bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n285"/>
+  <edge from="word/n240" to="reference_tracking/n285" xml:id="e285"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n285" xml:id="285">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n286"/>
+  <edge from="word/n242" to="reference_tracking/n286" xml:id="e286"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n286" xml:id="286">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n287"/>
+  <edge from="word/n250" to="reference_tracking/n287" xml:id="e287"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n287" xml:id="287">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n29"/>
+  <edge from="word/n7" to="reference_tracking/n29" xml:id="e29"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n29" xml:id="29">
+    <fs>
+      <f name="annotation_value">xod-bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n30"/>
+  <edge from="word/n9" to="reference_tracking/n30" xml:id="e30"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n30" xml:id="30">
+    <fs>
+      <f name="annotation_value">xod-bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n31"/>
+  <edge from="word/n9" to="reference_tracking/n31" xml:id="e31"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n31" xml:id="31">
+    <fs>
+      <f name="annotation_value">xod-bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n336"/>
+  <edge from="word/n291" to="reference_tracking/n336" xml:id="e336"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n336" xml:id="336">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n337"/>
+  <edge from="word/n293" to="reference_tracking/n337" xml:id="e337"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n337" xml:id="337">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n377"/>
+  <edge from="word/n341" to="reference_tracking/n377" xml:id="e377"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n377" xml:id="377">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n378"/>
+  <edge from="word/n348" to="reference_tracking/n378" xml:id="e378"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n378" xml:id="378">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n430"/>
+  <edge from="word/n382" to="reference_tracking/n430" xml:id="e430"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n430" xml:id="430">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n431"/>
+  <edge from="word/n384" to="reference_tracking/n431" xml:id="e431"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n431" xml:id="431">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n432"/>
+  <edge from="word/n393" to="reference_tracking/n432" xml:id="e432"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n432" xml:id="432">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n507"/>
+  <edge from="word/n439" to="reference_tracking/n507" xml:id="e507"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n507" xml:id="507">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n508"/>
+  <edge from="word/n441" to="reference_tracking/n508" xml:id="e508"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n508" xml:id="508">
+    <fs>
+      <f name="annotation_value">bar</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n509"/>
+  <edge from="word/n446" to="reference_tracking/n509" xml:id="e509"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n509" xml:id="509">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n510"/>
+  <edge from="word/n450" to="reference_tracking/n510" xml:id="e510"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n510" xml:id="510">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n511"/>
+  <edge from="word/n456" to="reference_tracking/n511" xml:id="e511"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n511" xml:id="511">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n58"/>
+  <edge from="word/n35" to="reference_tracking/n58" xml:id="e58"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n58" xml:id="58">
+    <fs>
+      <f name="annotation_value">xod</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n59"/>
+  <edge from="word/n37" to="reference_tracking/n59" xml:id="e59"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n59" xml:id="59">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+  <node xml:id="reference_tracking/n60"/>
+  <edge from="word/n40" to="reference_tracking/n60" xml:id="e60"/>
+  <a as="reference_tracking" label="reference_tracking" ref="reference_tracking/n60" xml:id="60">
+    <fs>
+      <f name="annotation_value">iyo</f>
+    </fs>
+  </a>
+</graph>

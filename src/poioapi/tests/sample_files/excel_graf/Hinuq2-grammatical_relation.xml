@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="word"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="grammatical_relation"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="grammatical_relation/n12"/>
+  <edge from="word/n5" to="grammatical_relation/n12" xml:id="e12"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n12" xml:id="12">
+    <fs>
+      <f name="annotation_value">COP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n13"/>
+  <edge from="word/n6" to="grammatical_relation/n13" xml:id="e13"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n13" xml:id="13">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n136"/>
+  <edge from="word/n125" to="grammatical_relation/n136" xml:id="e136"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n136" xml:id="136">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n137"/>
+  <edge from="word/n126" to="grammatical_relation/n137" xml:id="e137"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n137" xml:id="137">
+    <fs>
+      <f name="annotation_value">ADD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n138"/>
+  <edge from="word/n127" to="grammatical_relation/n138" xml:id="e138"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n138" xml:id="138">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n139"/>
+  <edge from="word/n128" to="grammatical_relation/n139" xml:id="e139"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n139" xml:id="139">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n14"/>
+  <edge from="word/n7" to="grammatical_relation/n14" xml:id="e14"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n14" xml:id="14">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n140"/>
+  <edge from="word/n128" to="grammatical_relation/n140" xml:id="e140"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n140" xml:id="140">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n141"/>
+  <edge from="word/n129" to="grammatical_relation/n141" xml:id="e141"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n141" xml:id="141">
+    <fs>
+      <f name="annotation_value">ADD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n142"/>
+  <edge from="word/n134" to="grammatical_relation/n142" xml:id="e142"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n142" xml:id="142">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n15"/>
+  <edge from="word/n8" to="grammatical_relation/n15" xml:id="e15"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n15" xml:id="15">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n16"/>
+  <edge from="word/n9" to="grammatical_relation/n16" xml:id="e16"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n16" xml:id="16">
+    <fs>
+      <f name="annotation_value">EXP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n17"/>
+  <edge from="word/n9" to="grammatical_relation/n17" xml:id="e17"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n17" xml:id="17">
+    <fs>
+      <f name="annotation_value">STIM</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n18"/>
+  <edge from="word/n10" to="grammatical_relation/n18" xml:id="e18"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n18" xml:id="18">
+    <fs>
+      <f name="annotation_value">v.aff</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n183"/>
+  <edge from="word/n163" to="grammatical_relation/n183" xml:id="e183"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n183" xml:id="183">
+    <fs>
+      <f name="annotation_value">LD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n184"/>
+  <edge from="word/n164" to="grammatical_relation/n184" xml:id="e184"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n184" xml:id="184">
+    <fs>
+      <f name="annotation_value">A;</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n185"/>
+  <edge from="word/n165" to="grammatical_relation/n185" xml:id="e185"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n185" xml:id="185">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n186"/>
+  <edge from="word/n166" to="grammatical_relation/n186" xml:id="e186"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n186" xml:id="186">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n187"/>
+  <edge from="word/n167" to="grammatical_relation/n187" xml:id="e187"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n187" xml:id="187">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n188"/>
+  <edge from="word/n168" to="grammatical_relation/n188" xml:id="e188"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n188" xml:id="188">
+    <fs>
+      <f name="annotation_value">S;</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n189"/>
+  <edge from="word/n170" to="grammatical_relation/n189" xml:id="e189"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n189" xml:id="189">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n190"/>
+  <edge from="word/n171" to="grammatical_relation/n190" xml:id="e190"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n190" xml:id="190">
+    <fs>
+      <f name="annotation_value">COP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n191"/>
+  <edge from="word/n172" to="grammatical_relation/n191" xml:id="e191"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n191" xml:id="191">
+    <fs>
+      <f name="annotation_value">pred</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n192"/>
+  <edge from="word/n173" to="grammatical_relation/n192" xml:id="e192"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n192" xml:id="192">
+    <fs>
+      <f name="annotation_value">EXP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n193"/>
+  <edge from="word/n174" to="grammatical_relation/n193" xml:id="e193"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n193" xml:id="193">
+    <fs>
+      <f name="annotation_value">v.aff</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n194"/>
+  <edge from="word/n175" to="grammatical_relation/n194" xml:id="e194"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n194" xml:id="194">
+    <fs>
+      <f name="annotation_value">STIM</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n195"/>
+  <edge from="word/n177" to="grammatical_relation/n195" xml:id="e195"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n195" xml:id="195">
+    <fs>
+      <f name="annotation_value">EXP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n196"/>
+  <edge from="word/n178" to="grammatical_relation/n196" xml:id="e196"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n196" xml:id="196">
+    <fs>
+      <f name="annotation_value">STIM</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n197"/>
+  <edge from="word/n179" to="grammatical_relation/n197" xml:id="e197"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n197" xml:id="197">
+    <fs>
+      <f name="annotation_value">v.aff</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n198"/>
+  <edge from="word/n180" to="grammatical_relation/n198" xml:id="e198"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n198" xml:id="198">
+    <fs>
+      <f name="annotation_value">RD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n257"/>
+  <edge from="word/n237" to="grammatical_relation/n257" xml:id="e257"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n257" xml:id="257">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n258"/>
+  <edge from="word/n238" to="grammatical_relation/n258" xml:id="e258"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n258" xml:id="258">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n259"/>
+  <edge from="word/n239" to="grammatical_relation/n259" xml:id="e259"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n259" xml:id="259">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n260"/>
+  <edge from="word/n240" to="grammatical_relation/n260" xml:id="e260"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n260" xml:id="260">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n261"/>
+  <edge from="word/n241" to="grammatical_relation/n261" xml:id="e261"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n261" xml:id="261">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n262"/>
+  <edge from="word/n242" to="grammatical_relation/n262" xml:id="e262"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n262" xml:id="262">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n263"/>
+  <edge from="word/n243" to="grammatical_relation/n263" xml:id="e263"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n263" xml:id="263">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n264"/>
+  <edge from="word/n250" to="grammatical_relation/n264" xml:id="e264"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n264" xml:id="264">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n265"/>
+  <edge from="word/n251" to="grammatical_relation/n265" xml:id="e265"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n265" xml:id="265">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n266"/>
+  <edge from="word/n253" to="grammatical_relation/n266" xml:id="e266"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n266" xml:id="266">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n267"/>
+  <edge from="word/n254" to="grammatical_relation/n267" xml:id="e267"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n267" xml:id="267">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n306"/>
+  <edge from="word/n291" to="grammatical_relation/n306" xml:id="e306"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n306" xml:id="306">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n307"/>
+  <edge from="word/n291" to="grammatical_relation/n307" xml:id="e307"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n307" xml:id="307">
+    <fs>
+      <f name="annotation_value">P;</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n308"/>
+  <edge from="word/n292" to="grammatical_relation/n308" xml:id="e308"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n308" xml:id="308">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n309"/>
+  <edge from="word/n293" to="grammatical_relation/n309" xml:id="e309"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n309" xml:id="309">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n310"/>
+  <edge from="word/n295" to="grammatical_relation/n310" xml:id="e310"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n310" xml:id="310">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n311"/>
+  <edge from="word/n296" to="grammatical_relation/n311" xml:id="e311"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n311" xml:id="311">
+    <fs>
+      <f name="annotation_value">BEN</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n312"/>
+  <edge from="word/n297" to="grammatical_relation/n312" xml:id="e312"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n312" xml:id="312">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n313"/>
+  <edge from="word/n298" to="grammatical_relation/n313" xml:id="e313"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n313" xml:id="313">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n314"/>
+  <edge from="word/n301" to="grammatical_relation/n314" xml:id="e314"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n314" xml:id="314">
+    <fs>
+      <f name="annotation_value">RD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n315"/>
+  <edge from="word/n303" to="grammatical_relation/n315" xml:id="e315"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n315" xml:id="315">
+    <fs>
+      <f name="annotation_value">RD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n316"/>
+  <edge from="word/n305" to="grammatical_relation/n316" xml:id="e316"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n316" xml:id="316">
+    <fs>
+      <f name="annotation_value">RD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n353"/>
+  <edge from="word/n341" to="grammatical_relation/n353" xml:id="e353"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n353" xml:id="353">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n354"/>
+  <edge from="word/n341" to="grammatical_relation/n354" xml:id="e354"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n354" xml:id="354">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n355"/>
+  <edge from="word/n342" to="grammatical_relation/n355" xml:id="e355"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n355" xml:id="355">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n356"/>
+  <edge from="word/n344" to="grammatical_relation/n356" xml:id="e356"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n356" xml:id="356">
+    <fs>
+      <f name="annotation_value">G</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n357"/>
+  <edge from="word/n345" to="grammatical_relation/n357" xml:id="e357"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n357" xml:id="357">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n358"/>
+  <edge from="word/n346" to="grammatical_relation/n358" xml:id="e358"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n358" xml:id="358">
+    <fs>
+      <f name="annotation_value">P;</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n359"/>
+  <edge from="word/n348" to="grammatical_relation/n359" xml:id="e359"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n359" xml:id="359">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n360"/>
+  <edge from="word/n349" to="grammatical_relation/n360" xml:id="e360"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n360" xml:id="360">
+    <fs>
+      <f name="annotation_value">BEN</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n361"/>
+  <edge from="word/n350" to="grammatical_relation/n361" xml:id="e361"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n361" xml:id="361">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n405"/>
+  <edge from="word/n382" to="grammatical_relation/n405" xml:id="e405"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n405" xml:id="405">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n406"/>
+  <edge from="word/n383" to="grammatical_relation/n406" xml:id="e406"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n406" xml:id="406">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n407"/>
+  <edge from="word/n384" to="grammatical_relation/n407" xml:id="e407"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n407" xml:id="407">
+    <fs>
+      <f name="annotation_value">EXP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n408"/>
+  <edge from="word/n385" to="grammatical_relation/n408" xml:id="e408"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n408" xml:id="408">
+    <fs>
+      <f name="annotation_value">v.aff</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n409"/>
+  <edge from="word/n387" to="grammatical_relation/n409" xml:id="e409"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n409" xml:id="409">
+    <fs>
+      <f name="annotation_value">LOC</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n410"/>
+  <edge from="word/n391" to="grammatical_relation/n410" xml:id="e410"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n410" xml:id="410">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n411"/>
+  <edge from="word/n393" to="grammatical_relation/n411" xml:id="e411"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n411" xml:id="411">
+    <fs>
+      <f name="annotation_value">GEN</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n412"/>
+  <edge from="word/n396" to="grammatical_relation/n412" xml:id="e412"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n412" xml:id="412">
+    <fs>
+      <f name="annotation_value">STIM</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n413"/>
+  <edge from="word/n404" to="grammatical_relation/n413" xml:id="e413"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n413" xml:id="413">
+    <fs>
+      <f name="annotation_value">RD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n44"/>
+  <edge from="word/n35" to="grammatical_relation/n44" xml:id="e44"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n44" xml:id="44">
+    <fs>
+      <f name="annotation_value">GEN</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n45"/>
+  <edge from="word/n36" to="grammatical_relation/n45" xml:id="e45"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n45" xml:id="45">
+    <fs>
+      <f name="annotation_value">COP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n46"/>
+  <edge from="word/n37" to="grammatical_relation/n46" xml:id="e46"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n46" xml:id="46">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n462"/>
+  <edge from="word/n439" to="grammatical_relation/n462" xml:id="e462"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n462" xml:id="462">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n463"/>
+  <edge from="word/n441" to="grammatical_relation/n463" xml:id="e463"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n463" xml:id="463">
+    <fs>
+      <f name="annotation_value">GEN</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n464"/>
+  <edge from="word/n442" to="grammatical_relation/n464" xml:id="e464"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n464" xml:id="464">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n465"/>
+  <edge from="word/n443" to="grammatical_relation/n465" xml:id="e465"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n465" xml:id="465">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n466"/>
+  <edge from="word/n444" to="grammatical_relation/n466" xml:id="e466"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n466" xml:id="466">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n467"/>
+  <edge from="word/n445" to="grammatical_relation/n467" xml:id="e467"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n467" xml:id="467">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n468"/>
+  <edge from="word/n446" to="grammatical_relation/n468" xml:id="e468"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n468" xml:id="468">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n469"/>
+  <edge from="word/n447" to="grammatical_relation/n469" xml:id="e469"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n469" xml:id="469">
+    <fs>
+      <f name="annotation_value">OTHER</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n47"/>
+  <edge from="word/n40" to="grammatical_relation/n47" xml:id="e47"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n47" xml:id="47">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n470"/>
+  <edge from="word/n449" to="grammatical_relation/n470" xml:id="e470"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n470" xml:id="470">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n471"/>
+  <edge from="word/n450" to="grammatical_relation/n471" xml:id="e471"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n471" xml:id="471">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n472"/>
+  <edge from="word/n450" to="grammatical_relation/n472" xml:id="e472"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n472" xml:id="472">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n473"/>
+  <edge from="word/n451" to="grammatical_relation/n473" xml:id="e473"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n473" xml:id="473">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n474"/>
+  <edge from="word/n453" to="grammatical_relation/n474" xml:id="e474"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n474" xml:id="474">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n475"/>
+  <edge from="word/n455" to="grammatical_relation/n475" xml:id="e475"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n475" xml:id="475">
+    <fs>
+      <f name="annotation_value">TIME</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n476"/>
+  <edge from="word/n456" to="grammatical_relation/n476" xml:id="e476"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n476" xml:id="476">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n477"/>
+  <edge from="word/n459" to="grammatical_relation/n477" xml:id="e477"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n477" xml:id="477">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n478"/>
+  <edge from="word/n460" to="grammatical_relation/n478" xml:id="e478"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n478" xml:id="478">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n48"/>
+  <edge from="word/n41" to="grammatical_relation/n48" xml:id="e48"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n48" xml:id="48">
+    <fs>
+      <f name="annotation_value">COP</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n49"/>
+  <edge from="word/n43" to="grammatical_relation/n49" xml:id="e49"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n49" xml:id="49">
+    <fs>
+      <f name="annotation_value">pred</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n85"/>
+  <edge from="word/n66" to="grammatical_relation/n85" xml:id="e85"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n85" xml:id="85">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n86"/>
+  <edge from="word/n68" to="grammatical_relation/n86" xml:id="e86"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n86" xml:id="86">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n87"/>
+  <edge from="word/n70" to="grammatical_relation/n87" xml:id="e87"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n87" xml:id="87">
+    <fs>
+      <f name="annotation_value">GEN</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n88"/>
+  <edge from="word/n71" to="grammatical_relation/n88" xml:id="e88"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n88" xml:id="88">
+    <fs>
+      <f name="annotation_value">LD</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n89"/>
+  <edge from="word/n72" to="grammatical_relation/n89" xml:id="e89"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n89" xml:id="89">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n90"/>
+  <edge from="word/n73" to="grammatical_relation/n90" xml:id="e90"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n90" xml:id="90">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n91"/>
+  <edge from="word/n75" to="grammatical_relation/n91" xml:id="e91"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n91" xml:id="91">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n92"/>
+  <edge from="word/n76" to="grammatical_relation/n92" xml:id="e92"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n92" xml:id="92">
+    <fs>
+      <f name="annotation_value">A</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n93"/>
+  <edge from="word/n78" to="grammatical_relation/n93" xml:id="e93"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n93" xml:id="93">
+    <fs>
+      <f name="annotation_value">P</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n94"/>
+  <edge from="word/n79" to="grammatical_relation/n94" xml:id="e94"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n94" xml:id="94">
+    <fs>
+      <f name="annotation_value">v.tr</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n95"/>
+  <edge from="word/n80" to="grammatical_relation/n95" xml:id="e95"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n95" xml:id="95">
+    <fs>
+      <f name="annotation_value">S</f>
+    </fs>
+  </a>
+  <node xml:id="grammatical_relation/n96"/>
+  <edge from="word/n82" to="grammatical_relation/n96" xml:id="e96"/>
+  <a as="grammatical_relation" label="grammatical_relation" ref="grammatical_relation/n96" xml:id="96">
+    <fs>
+      <f name="annotation_value">v.intr</f>
+    </fs>
+  </a>
+</graph>
