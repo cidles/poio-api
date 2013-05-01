@@ -16,6 +16,7 @@ from __future__ import absolute_import
 
 import csv
 import codecs
+import sys
 
 import poioapi.io.graf
 
@@ -42,14 +43,16 @@ class Parser(poioapi.io.graf.BaseParser):
         self.current_parent = None
         self.clause_ids = {}
 
-        with codecs.open(self.filepath, 'r', 'utf-8') as csvfile:
-            rows = csv.reader(csvfile, delimiter='|')
+        with self._open_file(self.filepath) as csvfile:
+            rows = csv.reader(csvfile, delimiter="|", quotechar=None, doublequote=False)
 
             i = 0
             cycle = 0
             words_row = None
 
             for row in rows:
+                row = self._decode_row(row)
+
                 if i is 1:
                     words_row = row
                 elif i is 4:
@@ -64,9 +67,23 @@ class Parser(poioapi.io.graf.BaseParser):
                 else:
                     i += 1
 
+    def _decode_row(self, row):
+        if sys.version_info[:2] < (3, 0):
+            return [r.decode('utf8') for r in row]
+
+        return row
+
+    def _open_file(self, filename):
+        if sys.version_info[:2] < (3, 0):
+            return open(filename, 'r')
+        else:
+            return codecs.open(self.filepath, 'r', 'utf-8')
+
     def _get_columns_in_rows(self, row, i, cycle):
         for j, column in enumerate(row):
-            if column:
+            if ";" in column and j == len(row) - 1:
+                continue
+            elif column and column != ";;":
                 if i is 1:
                     index = 2
                 elif i is 2:
