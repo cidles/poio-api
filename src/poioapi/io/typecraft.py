@@ -37,162 +37,119 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
+
         self.parse()
 
     def parse(self):
         self.tree = ET.parse(self.filepath).getroot()
         self.namespace = {'xmlns': re.findall(r"\{(.*?)\}", self.tree.tag)[0]}
-        self._tier_information = dict()
+        self._current_phrase_id = 0
+        self._current_id = None
 
     def get_root_tiers(self):
-        text_tiers = [poioapi.io.graf.Tier(tier.attrib['id'], "text")
-                      for tier in self.tree.findall("xmlns:text", self.namespace)]
-
-        phrase_tiers = [poioapi.io.graf.Tier(tier.attrib['id'], "phrase")
-                        for tier in self.tree.findall("xmlns:phrase", self.namespace)]
-
-        return text_tiers + phrase_tiers
+        return [poioapi.io.graf.Tier("phrase")]
 
     def get_child_tiers_for_tier(self, tier):
-        tiers = []
+        if tier.name == "phrase":
+            return [poioapi.io.graf.Tier("word"),
+                    poioapi.io.graf.Tier("translation"),
+                    poioapi.io.graf.Tier("description")]
 
-        if tier.linguistic_type == "text":
-            return [poioapi.io.graf.Tier(child_tier.attrib['id'], "text")
-                    for child_tier in self.tree.findall("xmlns:text[@id='" + tier.name +
-                                                        "']/xmlns:phrase", self.namespace)]
-        elif tier.linguistic_type == "phrase":
-            for (i, _) in enumerate(self.tree.findall("xmlns:phrase[@id='" + tier.name
-            + "']/xmlns:word", self.namespace)):
-                tiers.append(poioapi.io.graf.Tier(self._add_child_tier(tier.name,
-                    "word", i), "word"))
+        elif tier.name == "word":
+            return [poioapi.io.graf.Tier("pos"),
+                    poioapi.io.graf.Tier("morpheme")]
 
-            for (i, _) in enumerate(self.tree.findall("xmlns:phrase[@id='" + tier.name
-            + "']/xmlns:globaltags", self.namespace)):
-                tiers.append(poioapi.io.graf.Tier(self._add_child_tier(tier.name,
-                    "globaltags", i), "globaltags"))
-        else:
-            if tier.linguistic_type == "word":
-                words = self._find_words(tier.name)
-
-                for (i, _) in enumerate(words.findall("xmlns:morpheme", self.namespace)):
-                    tiers.append(poioapi.io.graf.Tier(self._add_child_tier(tier.name,
-                        "morpheme", i), "morpheme"))
-
-            elif tier.linguistic_type == "globaltags":
-                globaltags = self._find_globaltags(tier.name)
-
-                for (i, _) in enumerate(globaltags.findall("xmlns:globaltag", self.namespace)):
-                    tiers.append(poioapi.io.graf.Tier(self._add_child_tier(tier.name,
-                        "globaltag", i), "globaltag"))
-
-            elif tier.linguistic_type == "morpheme":
-                (word_name, morpheme_position) = self._find_child_position(tier.name,
-                    tier.linguistic_type)
-
-                words = self._find_words(word_name)
-
-                morpheme = words.findall("xmlns:morpheme", self.namespace)[morpheme_position]
-
-                for (i, _) in enumerate(morpheme.findall("xmlns:gloss", self.namespace)):
-                    tiers.append(poioapi.io.graf.Tier(self._add_child_tier(tier.name,
-                        "gloss", i), "gloss"))
-        return tiers
+        elif tier.name == "morpheme":
+            return [poioapi.io.graf.Tier("gloss")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
-        if tier.linguistic_type == "text" or tier.linguistic_type == "phrase":
-            elements = self.tree.find("xmlns:" + tier.linguistic_type +
-                                      "[@id='" + tier.name + "']", self.namespace)
-        else:
-            elements = self._get_tier_elements(tier)
+        if tier.name == "phrase":
+            return [self._element_as_annotation(annotation, "original")
+                    for annotation in self.tree.findall("xmlns:phrase",
+                self.namespace)]
 
+        elif tier.name == "word" or tier.name == "translation" or \
+             tier.name == "description":
+            return self._get_child_phrases(tier, annotation_parent)
+
+        elif tier.name == "pos" or tier.name == "morpheme":
+            return self._get_child_words(tier, annotation_parent)
+
+        elif tier.name == "gloss":
+            return self._get_child_morphemes(tier, annotation_parent)
+
+    def _get_child_phrases(self, tier, annotation_parent):
+        for phrase in self.tree.findall("xmlns:phrase", self.namespace):
+            if phrase.attrib["id"] == annotation_parent.id:
+                return [self._element_as_annotation(annotation, tier.name)
+                        for annotation in phrase.findall("xmlns:"+tier.name,
+                    self.namespace)]
+
+    def _get_child_words(self, tier, annotation_parent):
+        for phrase in self.tree.findall("xmlns:phrase", self.namespace):
+            if phrase.attrib["id"] == annotation_parent.features["parent_phrase"]:
+                for word in phrase.findall("xmlns:word", self.namespace):
+                    features = self._get_features(word.attrib)
+                    diff = set(annotation_parent.features.keys()) -\
+                           set(features.keys())
+                    if len(diff) == 1 or len(diff) == 0 and diff == "parent_phrase":
+                        return [self._element_as_annotation(element, tier.name)
+                                for element in word
+                                if element.tag == "{" + self.namespace['xmlns']
+                                                  + "}" + tier.name]
+
+    def _get_child_morphemes(self, tier, annotation_parent):
+        for phrase in self.tree.findall("xmlns:phrase", self.namespace):
+            if phrase.attrib["id"] == annotation_parent.features["parent_phrase"]:
+                for word in phrase.findall("xmlns:word", self.namespace):
+                    for m in word.findall("xmlns:morpheme", self.namespace):
+                        features = self._get_features(m.attrib)
+                        diff = set(annotation_parent.features.keys()) -\
+                               set(features.keys())
+                        if len(diff) == 1 or len(diff) == 0 and diff == "parent_phrase":
+                            return [self._element_as_annotation(element, tier.name)
+                                    for element in m
+                                    if element.tag == "{" + self.namespace['xmlns']
+                                                      + "}" + tier.name]
+
+    def _element_as_annotation(self, element, value_key = None):
+        features = self._get_features(element.attrib)
+        features["parent_phrase"] = self._current_phrase_id
+        value = None
+
+        if "id" in features:
+            id = features["id"]
+            self._current_phrase_id = id
+            self._current_id = id
+        else:
+            id = self._next_id()
+
+        if "text" in features:
+            value = features["text"]
+            features.pop("text")
+        elif value_key == "pos" or value_key == "gloss" or \
+             value_key == "description" or value_key == "translation":
+            value = element.text
+        else:
+            for el in element:
+                if el.tag == "{" + self.namespace['xmlns'] + "}" + value_key:
+                    value = el.text
+
+        return poioapi.io.graf.Annotation(id, value, features)
+
+    def _get_features(self, attributes):
         features = {}
 
-        if tier.linguistic_type == "gloss":
-            annotation_value = elements.text
-        else:
-            annotation_value = None
+        for key, value in attributes.items():
+            features[key] = value
 
-        for attribute in elements.attrib:
-            features[attribute] = elements.attrib[attribute]
+        return features
 
-        _namespace = re.search('\{(.*)\}', self.tree.tag).group()
-
-        for element in elements:
-            if len(element) is 0:
-                key = str(element.tag).replace(_namespace, '')
-
-                if key != "gloss" and key != "globaltags" and key != "morpheme":
-                    features[key] = element.text
-
-        return [poioapi.io.graf.Annotation(tier.name, annotation_value, features)]
-
-    def _get_tier_elements(self, tier):
-        (parent_id, tier_position) = self._find_child_position(tier.name, tier.linguistic_type)
-
-        if tier.linguistic_type == "word":
-            elements = self.tree.findall("xmlns:phrase[@id='" + parent_id + "']/xmlns:word",
-                self.namespace)[tier_position]
-
-        if tier.linguistic_type == "globaltags":
-            elements = self.tree.findall("xmlns:phrase[@id='" + parent_id + "']/xmlns:globaltags",
-                self.namespace)[tier_position]
-
-        elif tier.linguistic_type == "morpheme":
-            words = self._find_words(parent_id)
-
-            elements = words.findall("xmlns:morpheme", self.namespace)[tier_position]
-
-        elif tier.linguistic_type == "gloss":
-            (morpheme_name, gloss_position) = self._find_child_position(tier.name, "gloss")
-            (word_name, morpheme_position) = self._find_child_position(morpheme_name, "morpheme")
-
-            words = self._find_words(word_name)
-
-            morphemes = words.findall("xmlns:morpheme", self.namespace)[morpheme_position]
-            elements = morphemes.findall("xmlns:gloss", self.namespace)[gloss_position]
-
-        return elements
-
-    def _add_child_tier(self, tier_name, linguistic_type, position):
-        if linguistic_type not in self._tier_information:
-            self._tier_information[linguistic_type] = {'last_id': 1,
-                                                       'id': 1, 'childs': []}
-
-        name = str(self._next_id(linguistic_type))
-
-        self._tier_information[linguistic_type]['childs']\
-        .append({'id': name, 'parent_id': tier_name, 'position': position})
-
-        return name
-
-    def _find_words(self, word_name):
-        (phrase_name, word_position) = self._find_child_position(word_name, "word")
-
-        words = self.tree.findall("xmlns:phrase[@id='" + phrase_name + "']/xmlns:word",
-            self.namespace)[word_position]
-
-        return words
-
-    def _find_globaltags(self, globaltag_name):
-        (phrase_name, globaltag_position) = self._find_child_position(globaltag_name, "globaltags")
-
-        globaltags = self.tree.findall("xmlns:phrase[@id='" + phrase_name + "']/xmlns:globaltags",
-            self.namespace)[globaltag_position]
-
-        return globaltags
-
-    def _next_id(self, name):
-        current_id = self._tier_information[name]['id']
-
-        self._tier_information[name]['id'] = current_id + 1
-        self._tier_information[name]['last_id'] = current_id
+    def _next_id(self):
+        current_id = str(int(self._current_id) + 1)
+        self._current_id = current_id
 
         return current_id
-
-    def _find_child_position(self, name, linguistic_type):
-        for child in self._tier_information[linguistic_type]['childs']:
-            if child['id'] == name:
-                return child['parent_id'], child['position']
 
     def region_for_annotation(self, annotation):
         pass
