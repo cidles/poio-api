@@ -54,14 +54,14 @@ class TestTypecraft:
     def test_phrase_annotation_features(self):
         node_phrase = self.root.find(self.xml_namespace+"phrase")
 
-        expected_features_number = len(node_phrase.attrib)
+        expected_features_number = len(node_phrase.attrib) - 1
 
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
             if key[1] != "word" and key[1] != "globaltags":
                 expected_features_number+=1
 
-        node = self.graph.nodes["phrase/1818/n1818"]
+        node = self.graph.nodes["phrase/n1818"]
 
         node_annotations = node.annotations._elements
 
