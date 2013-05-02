@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="phrase"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="description"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="description/n35360"/>
+  <edge from="phrase/n1818" to="description/n35360" xml:id="e35360"/>
+  <a as="description" label="description" ref="description/n35360" xml:id="35360">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35402"/>
+  <edge from="phrase/n9064" to="description/n35402" xml:id="e35402"/>
+  <a as="description" label="description" ref="description/n35402" xml:id="35402">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35444"/>
+  <edge from="phrase/n9121" to="description/n35444" xml:id="e35444"/>
+  <a as="description" label="description" ref="description/n35444" xml:id="35444">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35474"/>
+  <edge from="phrase/n9764" to="description/n35474" xml:id="e35474"/>
+  <a as="description" label="description" ref="description/n35474" xml:id="35474">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35508"/>
+  <edge from="phrase/n10429" to="description/n35508" xml:id="e35508"/>
+  <a as="description" label="description" ref="description/n35508" xml:id="35508">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35558"/>
+  <edge from="phrase/n10432" to="description/n35558" xml:id="e35558"/>
+  <a as="description" label="description" ref="description/n35558" xml:id="35558">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">firi: can firi inflect like a verb?</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35588"/>
+  <edge from="phrase/n10437" to="description/n35588" xml:id="e35588"/>
+  <a as="description" label="description" ref="description/n35588" xml:id="35588">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35630"/>
+  <edge from="phrase/n10491" to="description/n35630" xml:id="e35630"/>
+  <a as="description" label="description" ref="description/n35630" xml:id="35630">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35660"/>
+  <edge from="phrase/n34986" to="description/n35660" xml:id="e35660"/>
+  <a as="description" label="description" ref="description/n35660" xml:id="35660">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+  <node xml:id="description/n35698"/>
+  <edge from="phrase/n35334" to="description/n35698" xml:id="e35698"/>
+  <a as="description" label="description" ref="description/n35698" xml:id="35698">
+    <fs>
+      <f name="parent_phrase">35334</f>
+    </fs>
+  </a>
+</graph>

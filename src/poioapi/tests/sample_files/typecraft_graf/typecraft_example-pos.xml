@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="word"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="pos"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="pos/n35341"/>
+  <edge from="word/n35335" to="pos/n35341" xml:id="e35341"/>
+  <a as="pos" label="pos" ref="pos/n35341" xml:id="35341">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35344"/>
+  <edge from="word/n35336" to="pos/n35344" xml:id="e35344"/>
+  <a as="pos" label="pos" ref="pos/n35344" xml:id="35344">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35347"/>
+  <edge from="word/n35337" to="pos/n35347" xml:id="e35347"/>
+  <a as="pos" label="pos" ref="pos/n35347" xml:id="35347">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35350"/>
+  <edge from="word/n35338" to="pos/n35350" xml:id="e35350"/>
+  <a as="pos" label="pos" ref="pos/n35350" xml:id="35350">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35353"/>
+  <edge from="word/n35339" to="pos/n35353" xml:id="e35353"/>
+  <a as="pos" label="pos" ref="pos/n35353" xml:id="35353">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35356"/>
+  <edge from="word/n35340" to="pos/n35356" xml:id="e35356"/>
+  <a as="pos" label="pos" ref="pos/n35356" xml:id="35356">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35371"/>
+  <edge from="word/n35361" to="pos/n35371" xml:id="e35371"/>
+  <a as="pos" label="pos" ref="pos/n35371" xml:id="35371">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35374"/>
+  <edge from="word/n35362" to="pos/n35374" xml:id="e35374"/>
+  <a as="pos" label="pos" ref="pos/n35374" xml:id="35374">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35377"/>
+  <edge from="word/n35363" to="pos/n35377" xml:id="e35377"/>
+  <a as="pos" label="pos" ref="pos/n35377" xml:id="35377">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35380"/>
+  <edge from="word/n35364" to="pos/n35380" xml:id="e35380"/>
+  <a as="pos" label="pos" ref="pos/n35380" xml:id="35380">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35383"/>
+  <edge from="word/n35365" to="pos/n35383" xml:id="e35383"/>
+  <a as="pos" label="pos" ref="pos/n35383" xml:id="35383">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35386"/>
+  <edge from="word/n35366" to="pos/n35386" xml:id="e35386"/>
+  <a as="pos" label="pos" ref="pos/n35386" xml:id="35386">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35389"/>
+  <edge from="word/n35367" to="pos/n35389" xml:id="e35389"/>
+  <a as="pos" label="pos" ref="pos/n35389" xml:id="35389">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35392"/>
+  <edge from="word/n35368" to="pos/n35392" xml:id="e35392"/>
+  <a as="pos" label="pos" ref="pos/n35392" xml:id="35392">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35395"/>
+  <edge from="word/n35369" to="pos/n35395" xml:id="e35395"/>
+  <a as="pos" label="pos" ref="pos/n35395" xml:id="35395">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35398"/>
+  <edge from="word/n35370" to="pos/n35398" xml:id="e35398"/>
+  <a as="pos" label="pos" ref="pos/n35398" xml:id="35398">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35413"/>
+  <edge from="word/n35403" to="pos/n35413" xml:id="e35413"/>
+  <a as="pos" label="pos" ref="pos/n35413" xml:id="35413">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35416"/>
+  <edge from="word/n35404" to="pos/n35416" xml:id="e35416"/>
+  <a as="pos" label="pos" ref="pos/n35416" xml:id="35416">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35419"/>
+  <edge from="word/n35405" to="pos/n35419" xml:id="e35419"/>
+  <a as="pos" label="pos" ref="pos/n35419" xml:id="35419">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35422"/>
+  <edge from="word/n35406" to="pos/n35422" xml:id="e35422"/>
+  <a as="pos" label="pos" ref="pos/n35422" xml:id="35422">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35425"/>
+  <edge from="word/n35407" to="pos/n35425" xml:id="e35425"/>
+  <a as="pos" label="pos" ref="pos/n35425" xml:id="35425">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35428"/>
+  <edge from="word/n35408" to="pos/n35428" xml:id="e35428"/>
+  <a as="pos" label="pos" ref="pos/n35428" xml:id="35428">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35431"/>
+  <edge from="word/n35409" to="pos/n35431" xml:id="e35431"/>
+  <a as="pos" label="pos" ref="pos/n35431" xml:id="35431">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35434"/>
+  <edge from="word/n35410" to="pos/n35434" xml:id="e35434"/>
+  <a as="pos" label="pos" ref="pos/n35434" xml:id="35434">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35437"/>
+  <edge from="word/n35411" to="pos/n35437" xml:id="e35437"/>
+  <a as="pos" label="pos" ref="pos/n35437" xml:id="35437">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35440"/>
+  <edge from="word/n35412" to="pos/n35440" xml:id="e35440"/>
+  <a as="pos" label="pos" ref="pos/n35440" xml:id="35440">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35452"/>
+  <edge from="word/n35445" to="pos/n35452" xml:id="e35452"/>
+  <a as="pos" label="pos" ref="pos/n35452" xml:id="35452">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35455"/>
+  <edge from="word/n35446" to="pos/n35455" xml:id="e35455"/>
+  <a as="pos" label="pos" ref="pos/n35455" xml:id="35455">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35458"/>
+  <edge from="word/n35447" to="pos/n35458" xml:id="e35458"/>
+  <a as="pos" label="pos" ref="pos/n35458" xml:id="35458">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35461"/>
+  <edge from="word/n35448" to="pos/n35461" xml:id="e35461"/>
+  <a as="pos" label="pos" ref="pos/n35461" xml:id="35461">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35464"/>
+  <edge from="word/n35449" to="pos/n35464" xml:id="e35464"/>
+  <a as="pos" label="pos" ref="pos/n35464" xml:id="35464">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35467"/>
+  <edge from="word/n35450" to="pos/n35467" xml:id="e35467"/>
+  <a as="pos" label="pos" ref="pos/n35467" xml:id="35467">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35470"/>
+  <edge from="word/n35451" to="pos/n35470" xml:id="e35470"/>
+  <a as="pos" label="pos" ref="pos/n35470" xml:id="35470">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35483"/>
+  <edge from="word/n35475" to="pos/n35483" xml:id="e35483"/>
+  <a as="pos" label="pos" ref="pos/n35483" xml:id="35483">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35486"/>
+  <edge from="word/n35476" to="pos/n35486" xml:id="e35486"/>
+  <a as="pos" label="pos" ref="pos/n35486" xml:id="35486">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35489"/>
+  <edge from="word/n35477" to="pos/n35489" xml:id="e35489"/>
+  <a as="pos" label="pos" ref="pos/n35489" xml:id="35489">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35492"/>
+  <edge from="word/n35478" to="pos/n35492" xml:id="e35492"/>
+  <a as="pos" label="pos" ref="pos/n35492" xml:id="35492">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35495"/>
+  <edge from="word/n35479" to="pos/n35495" xml:id="e35495"/>
+  <a as="pos" label="pos" ref="pos/n35495" xml:id="35495">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35498"/>
+  <edge from="word/n35480" to="pos/n35498" xml:id="e35498"/>
+  <a as="pos" label="pos" ref="pos/n35498" xml:id="35498">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35501"/>
+  <edge from="word/n35481" to="pos/n35501" xml:id="e35501"/>
+  <a as="pos" label="pos" ref="pos/n35501" xml:id="35501">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35504"/>
+  <edge from="word/n35482" to="pos/n35504" xml:id="e35504"/>
+  <a as="pos" label="pos" ref="pos/n35504" xml:id="35504">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35521"/>
+  <edge from="word/n35509" to="pos/n35521" xml:id="e35521"/>
+  <a as="pos" label="pos" ref="pos/n35521" xml:id="35521">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35524"/>
+  <edge from="word/n35510" to="pos/n35524" xml:id="e35524"/>
+  <a as="pos" label="pos" ref="pos/n35524" xml:id="35524">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35527"/>
+  <edge from="word/n35511" to="pos/n35527" xml:id="e35527"/>
+  <a as="pos" label="pos" ref="pos/n35527" xml:id="35527">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35530"/>
+  <edge from="word/n35512" to="pos/n35530" xml:id="e35530"/>
+  <a as="pos" label="pos" ref="pos/n35530" xml:id="35530">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35533"/>
+  <edge from="word/n35513" to="pos/n35533" xml:id="e35533"/>
+  <a as="pos" label="pos" ref="pos/n35533" xml:id="35533">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35536"/>
+  <edge from="word/n35514" to="pos/n35536" xml:id="e35536"/>
+  <a as="pos" label="pos" ref="pos/n35536" xml:id="35536">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35539"/>
+  <edge from="word/n35515" to="pos/n35539" xml:id="e35539"/>
+  <a as="pos" label="pos" ref="pos/n35539" xml:id="35539">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35542"/>
+  <edge from="word/n35516" to="pos/n35542" xml:id="e35542"/>
+  <a as="pos" label="pos" ref="pos/n35542" xml:id="35542">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35545"/>
+  <edge from="word/n35517" to="pos/n35545" xml:id="e35545"/>
+  <a as="pos" label="pos" ref="pos/n35545" xml:id="35545">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35548"/>
+  <edge from="word/n35518" to="pos/n35548" xml:id="e35548"/>
+  <a as="pos" label="pos" ref="pos/n35548" xml:id="35548">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35551"/>
+  <edge from="word/n35519" to="pos/n35551" xml:id="e35551"/>
+  <a as="pos" label="pos" ref="pos/n35551" xml:id="35551">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35554"/>
+  <edge from="word/n35520" to="pos/n35554" xml:id="e35554"/>
+  <a as="pos" label="pos" ref="pos/n35554" xml:id="35554">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35566"/>
+  <edge from="word/n35559" to="pos/n35566" xml:id="e35566"/>
+  <a as="pos" label="pos" ref="pos/n35566" xml:id="35566">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35569"/>
+  <edge from="word/n35560" to="pos/n35569" xml:id="e35569"/>
+  <a as="pos" label="pos" ref="pos/n35569" xml:id="35569">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35572"/>
+  <edge from="word/n35561" to="pos/n35572" xml:id="e35572"/>
+  <a as="pos" label="pos" ref="pos/n35572" xml:id="35572">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35575"/>
+  <edge from="word/n35562" to="pos/n35575" xml:id="e35575"/>
+  <a as="pos" label="pos" ref="pos/n35575" xml:id="35575">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35578"/>
+  <edge from="word/n35563" to="pos/n35578" xml:id="e35578"/>
+  <a as="pos" label="pos" ref="pos/n35578" xml:id="35578">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35581"/>
+  <edge from="word/n35564" to="pos/n35581" xml:id="e35581"/>
+  <a as="pos" label="pos" ref="pos/n35581" xml:id="35581">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35584"/>
+  <edge from="word/n35565" to="pos/n35584" xml:id="e35584"/>
+  <a as="pos" label="pos" ref="pos/n35584" xml:id="35584">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35599"/>
+  <edge from="word/n35589" to="pos/n35599" xml:id="e35599"/>
+  <a as="pos" label="pos" ref="pos/n35599" xml:id="35599">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35602"/>
+  <edge from="word/n35590" to="pos/n35602" xml:id="e35602"/>
+  <a as="pos" label="pos" ref="pos/n35602" xml:id="35602">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35605"/>
+  <edge from="word/n35591" to="pos/n35605" xml:id="e35605"/>
+  <a as="pos" label="pos" ref="pos/n35605" xml:id="35605">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35608"/>
+  <edge from="word/n35592" to="pos/n35608" xml:id="e35608"/>
+  <a as="pos" label="pos" ref="pos/n35608" xml:id="35608">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35611"/>
+  <edge from="word/n35593" to="pos/n35611" xml:id="e35611"/>
+  <a as="pos" label="pos" ref="pos/n35611" xml:id="35611">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35614"/>
+  <edge from="word/n35594" to="pos/n35614" xml:id="e35614"/>
+  <a as="pos" label="pos" ref="pos/n35614" xml:id="35614">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35617"/>
+  <edge from="word/n35595" to="pos/n35617" xml:id="e35617"/>
+  <a as="pos" label="pos" ref="pos/n35617" xml:id="35617">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35620"/>
+  <edge from="word/n35596" to="pos/n35620" xml:id="e35620"/>
+  <a as="pos" label="pos" ref="pos/n35620" xml:id="35620">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35623"/>
+  <edge from="word/n35597" to="pos/n35623" xml:id="e35623"/>
+  <a as="pos" label="pos" ref="pos/n35623" xml:id="35623">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35626"/>
+  <edge from="word/n35598" to="pos/n35626" xml:id="e35626"/>
+  <a as="pos" label="pos" ref="pos/n35626" xml:id="35626">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35638"/>
+  <edge from="word/n35631" to="pos/n35638" xml:id="e35638"/>
+  <a as="pos" label="pos" ref="pos/n35638" xml:id="35638">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35641"/>
+  <edge from="word/n35632" to="pos/n35641" xml:id="e35641"/>
+  <a as="pos" label="pos" ref="pos/n35641" xml:id="35641">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35644"/>
+  <edge from="word/n35633" to="pos/n35644" xml:id="e35644"/>
+  <a as="pos" label="pos" ref="pos/n35644" xml:id="35644">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35647"/>
+  <edge from="word/n35634" to="pos/n35647" xml:id="e35647"/>
+  <a as="pos" label="pos" ref="pos/n35647" xml:id="35647">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35650"/>
+  <edge from="word/n35635" to="pos/n35650" xml:id="e35650"/>
+  <a as="pos" label="pos" ref="pos/n35650" xml:id="35650">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35653"/>
+  <edge from="word/n35636" to="pos/n35653" xml:id="e35653"/>
+  <a as="pos" label="pos" ref="pos/n35653" xml:id="35653">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35656"/>
+  <edge from="word/n35637" to="pos/n35656" xml:id="e35656"/>
+  <a as="pos" label="pos" ref="pos/n35656" xml:id="35656">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35670"/>
+  <edge from="word/n35661" to="pos/n35670" xml:id="e35670"/>
+  <a as="pos" label="pos" ref="pos/n35670" xml:id="35670">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35673"/>
+  <edge from="word/n35662" to="pos/n35673" xml:id="e35673"/>
+  <a as="pos" label="pos" ref="pos/n35673" xml:id="35673">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35676"/>
+  <edge from="word/n35663" to="pos/n35676" xml:id="e35676"/>
+  <a as="pos" label="pos" ref="pos/n35676" xml:id="35676">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35679"/>
+  <edge from="word/n35664" to="pos/n35679" xml:id="e35679"/>
+  <a as="pos" label="pos" ref="pos/n35679" xml:id="35679">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35682"/>
+  <edge from="word/n35665" to="pos/n35682" xml:id="e35682"/>
+  <a as="pos" label="pos" ref="pos/n35682" xml:id="35682">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35685"/>
+  <edge from="word/n35666" to="pos/n35685" xml:id="e35685"/>
+  <a as="pos" label="pos" ref="pos/n35685" xml:id="35685">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35688"/>
+  <edge from="word/n35667" to="pos/n35688" xml:id="e35688"/>
+  <a as="pos" label="pos" ref="pos/n35688" xml:id="35688">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35691"/>
+  <edge from="word/n35668" to="pos/n35691" xml:id="e35691"/>
+  <a as="pos" label="pos" ref="pos/n35691" xml:id="35691">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+  <node xml:id="pos/n35694"/>
+  <edge from="word/n35669" to="pos/n35694" xml:id="e35694"/>
+  <a as="pos" label="pos" ref="pos/n35694" xml:id="35694">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">CONJ</f>
+    </fs>
+  </a>
+</graph>

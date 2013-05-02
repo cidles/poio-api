@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl/>
+    <dependencies>
+      <dependsOn f.id="phrase"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="translation"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="translation/n35359"/>
+  <edge from="phrase/n1818" to="translation/n35359" xml:id="e35359"/>
+  <a as="translation" label="translation" ref="translation/n35359" xml:id="35359">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">The big bed cannot enter the room</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35401"/>
+  <edge from="phrase/n9064" to="translation/n35401" xml:id="e35401"/>
+  <a as="translation" label="translation" ref="translation/n35401" xml:id="35401">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">twelve periods that add up to one year</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35443"/>
+  <edge from="phrase/n9121" to="translation/n35443" xml:id="e35443"/>
+  <a as="translation" label="translation" ref="translation/n35443" xml:id="35443">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">twelve periods which add up to a year</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35473"/>
+  <edge from="phrase/n9764" to="translation/n35473" xml:id="e35473"/>
+  <a as="translation" label="translation" ref="translation/n35473" xml:id="35473">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">Travelling in search of water has become dangerous in the villages.</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35507"/>
+  <edge from="phrase/n10429" to="translation/n35507" xml:id="e35507"/>
+  <a as="translation" label="translation" ref="translation/n35507" xml:id="35507">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">Akosua poured water through the hole</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35557"/>
+  <edge from="phrase/n10432" to="translation/n35557" xml:id="e35557"/>
+  <a as="translation" label="translation" ref="translation/n35557" xml:id="35557">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">I drove the car from the house through the school to church</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35587"/>
+  <edge from="phrase/n10437" to="translation/n35587" xml:id="e35587"/>
+  <a as="translation" label="translation" ref="translation/n35587" xml:id="35587">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">She passes through the school to the market.</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35629"/>
+  <edge from="phrase/n10491" to="translation/n35629" xml:id="e35629"/>
+  <a as="translation" label="translation" ref="translation/n35629" xml:id="35629">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">Government is doing things to enhance tourism in the country.</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35659"/>
+  <edge from="phrase/n34986" to="translation/n35659" xml:id="e35659"/>
+  <a as="translation" label="translation" ref="translation/n35659" xml:id="35659">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">I pass through the farm to school</f>
+    </fs>
+  </a>
+  <node xml:id="translation/n35697"/>
+  <edge from="phrase/n35334" to="translation/n35697" xml:id="e35697"/>
+  <a as="translation" label="translation" ref="translation/n35697" xml:id="35697">
+    <fs>
+      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">It is school that I wanted to send it</f>
+    </fs>
+  </a>
+</graph>
