@@ -142,14 +142,14 @@ class Parser(poioapi.io.graf.BaseParser):
             return [poioapi.io.graf.Tier('clause_id')]
 
         elif tier.name == 'clause_id':
-            return [poioapi.io.graf.Tier('clause_type')] +\
-                   [poioapi.io.graf.Tier('word')]
+            return [poioapi.io.graf.Tier('clause_type'),
+                    poioapi.io.graf.Tier('word')]
 
         elif tier.name == 'word':
-            return [poioapi.io.graf.Tier('grammatical_relation')]+\
-                   [poioapi.io.graf.Tier('part_of_spech')] +\
-                   [poioapi.io.graf.Tier('translation')] +\
-                   [poioapi.io.graf.Tier('reference_tracking')]
+            return [poioapi.io.graf.Tier('grammatical_relation'),
+                    poioapi.io.graf.Tier('part_of_spech'),
+                    poioapi.io.graf.Tier('translation'),
+                    poioapi.io.graf.Tier('reference_tracking')]
 
         return None
 
