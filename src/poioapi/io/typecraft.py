@@ -74,11 +74,9 @@ class Parser(poioapi.io.graf.BaseParser):
              tier.name == "description":
             return self._get_child_phrases(tier, annotation_parent)
 
-        elif tier.name == "pos" or tier.name == "morpheme":
+        elif tier.name == "pos" or tier.name == "morpheme" or \
+             tier.name == "gloss":
             return self._get_child_words(tier, annotation_parent)
-
-        elif tier.name == "gloss":
-            return self._get_child_morphemes(tier, annotation_parent)
 
     def _get_child_phrases(self, tier, annotation_parent):
         annotations = []
@@ -93,9 +91,14 @@ class Parser(poioapi.io.graf.BaseParser):
         return annotations
 
     def _get_child_words(self, tier, annotation_parent):
+        if tier.name == "gloss":
+            path = "xmlns:word/xmlns:morpheme"
+        else:
+            path = "xmlns:word"
+
         for phrase in self.tree.findall("xmlns:phrase", self.namespace):
             if phrase.attrib["id"] == annotation_parent.features["parent_phrase"]:
-                for word in phrase.findall("xmlns:word", self.namespace):
+                for word in phrase.findall(path, self.namespace):
                     features = self._get_features(word.attrib)
                     diff = set(annotation_parent.features.keys()) -\
                            set(features.keys())
@@ -104,20 +107,6 @@ class Parser(poioapi.io.graf.BaseParser):
                                 for element in word
                                 if element.tag == "{" + self.namespace['xmlns']
                                                   + "}" + tier.name]
-
-    def _get_child_morphemes(self, tier, annotation_parent):
-        for phrase in self.tree.findall("xmlns:phrase", self.namespace):
-            if phrase.attrib["id"] == annotation_parent.features["parent_phrase"]:
-                for word in phrase.findall("xmlns:word", self.namespace):
-                    for m in word.findall("xmlns:morpheme", self.namespace):
-                        features = self._get_features(m.attrib)
-                        diff = set(annotation_parent.features.keys()) -\
-                               set(features.keys())
-                        if len(diff) == 1 or len(diff) == 0 and diff == "parent_phrase":
-                            return [self._element_as_annotation(element, tier.name)
-                                    for element in m
-                                    if element.tag == "{" + self.namespace['xmlns']
-                                                      + "}" + tier.name]
 
     def _element_as_annotation(self, element, value_key = None):
         features = self._get_features(element.attrib)
