@@ -37,7 +37,6 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
-
         self.parse()
 
     def parse(self):
@@ -45,6 +44,7 @@ class Parser(poioapi.io.graf.BaseParser):
         self.namespace = {'xmlns': re.findall(r"\{(.*?)\}", self.tree.tag)[0]}
         self._current_phrase_id = 0
         self._current_id = None
+        self._current_tier = None
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier("phrase")]
@@ -63,6 +63,8 @@ class Parser(poioapi.io.graf.BaseParser):
             return [poioapi.io.graf.Tier("gloss")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
+        self._current_tier = tier
+
         if tier.name == "phrase":
             return [self._element_as_annotation(annotation, "original")
                     for annotation in self.tree.findall("xmlns:phrase",
@@ -79,11 +81,16 @@ class Parser(poioapi.io.graf.BaseParser):
             return self._get_child_morphemes(tier, annotation_parent)
 
     def _get_child_phrases(self, tier, annotation_parent):
+        annotations = []
+
         for phrase in self.tree.findall("xmlns:phrase", self.namespace):
             if phrase.attrib["id"] == annotation_parent.id:
-                return [self._element_as_annotation(annotation, tier.name)
-                        for annotation in phrase.findall("xmlns:"+tier.name,
-                    self.namespace)]
+                for annotation in phrase.findall("xmlns:"+tier.name,self.namespace):
+                    a = self._element_as_annotation(annotation, tier.name)
+                    if a is not None:
+                        annotations.append(a)
+
+        return annotations
 
     def _get_child_words(self, tier, annotation_parent):
         for phrase in self.tree.findall("xmlns:phrase", self.namespace):
@@ -114,8 +121,10 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def _element_as_annotation(self, element, value_key = None):
         features = self._get_features(element.attrib)
-        features["parent_phrase"] = self._current_phrase_id
         value = None
+
+        if self._current_tier.name is not "phrase":
+            features["parent_phrase"] = self._current_phrase_id
 
         if "id" in features:
             id = features["id"]
@@ -134,6 +143,9 @@ class Parser(poioapi.io.graf.BaseParser):
             for el in element:
                 if el.tag == "{" + self.namespace['xmlns'] + "}" + value_key:
                     value = el.text
+
+        if len(features) is 1 and value is None:
+            return None
 
         return poioapi.io.graf.Annotation(id, value, features)
 

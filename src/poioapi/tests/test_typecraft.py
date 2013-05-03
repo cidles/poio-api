@@ -54,7 +54,7 @@ class TestTypecraft:
     def test_phrase_annotation_features(self):
         node_phrase = self.root.find(self.xml_namespace+"phrase")
 
-        expected_features_number = len(node_phrase.attrib) - 1
+        expected_features_number = len(node_phrase.attrib) - 2
 
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
@@ -68,3 +68,23 @@ class TestTypecraft:
         features_number = len(node_annotations[0].features)
 
         assert(features_number == expected_features_number)
+
+    def test_get_root_tiers(self):
+        root_tiers = self.parser.get_root_tiers()
+
+        assert len(root_tiers) == 1
+
+    def test_get_child_tiers_for_tier(self):
+        root_tiers = self.parser.get_root_tiers()
+
+        tier = root_tiers[0]
+
+        child_tier = self.parser.get_child_tiers_for_tier(tier)
+
+        assert len(child_tier) == 3
+
+    def test_get_annotations_for_tier(self):
+        root_tiers = self.parser.get_root_tiers()
+        child_tier_annotations = self.parser.get_annotations_for_tier(root_tiers[0])
+
+        assert len(child_tier_annotations) == 10
