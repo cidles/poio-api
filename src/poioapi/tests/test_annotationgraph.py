@@ -72,6 +72,14 @@ class TestAnnotationGraph:
 
         assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
 
+    def test_create_filter_for_dict(self):
+        search_terms = { "clause_unit": "nc" }
+        self.anngraphfilter = self.annotation_graph.create_filter_for_dict(search_terms)
+        self.annotation_graph.append_filter(self.anngraphfilter)
+        self.anngraphfilter.reset_match_object()
+
+        assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
+
 
 class TestAnnotationGraphFilter:
 

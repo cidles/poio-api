@@ -485,8 +485,8 @@ class AnnotationGraph():
 
         Returns
         -------
-        filters.pop = str
-            Item at index.
+        filter : AnnotationGraphFilter
+            Last filter in self.filters.
 
         """
 
@@ -520,6 +520,31 @@ class AnnotationGraph():
                     new_filtered_elements.append(node.id)
 
             self.filtered_node_ids.append(new_filtered_elements)
+
+    def create_filter_for_dict(self, search_dict):
+        """Creates a filter based on a give dict. The keys of the dict are
+        matched against the data structure hierarchy. Only for those fields
+        that are part of the data structure there will be a search term
+        added to the filter. The search term is the value in the dict.
+
+        Parameters
+        ----------
+        search_dict : dict
+            Dictionary with search terms for different tiers.
+
+        Returns
+        -------
+        filter : AnnotationGraphFilter
+            A new annotation graph filter.
+        """
+
+        filter = AnnotationGraphFilter(self.structure_type_handler)
+        for k in search_dict:
+            if k in self.structure_type_handler.flat_data_hierarchy:
+                filter.set_filter_for_type(k, search_dict[k])
+        return filter
+
+
 
 class AnnotationGraphFilter():
     """
@@ -564,46 +589,12 @@ class AnnotationGraphFilter():
         ----------
         ann_type : str
             Value of the field in the data structure hierarchy.
-        filter_string: str
+        filter_string : str
             String of the filter.
 
         """
 
         self.filter[ann_type] = filter_string
-
-    def set_inverted_filter(self, inverted):
-        """Set the inverted value to a filter.
-
-        Parameters
-        ----------
-        inverted : bool
-
-        """
-
-        self.inverted = inverted
-
-    def set_contained_matches(self, contained_matches):
-        """Set the contained matches for a filter.
-
-        Parameters
-        ----------
-        contained_matches : bool
-
-        """
-
-        self.contained_matches = contained_matches
-
-    def set_boolean_operation(self, type):
-        """Set the operation type to the filter.
-
-        Parameters
-        ----------
-        type : str
-            Could be AND or OR
-
-        """
-
-        self.boolean_operation = type
 
     def element_passes_filter(self, element):
         """Verify if a specific element passes in through a filter.
