@@ -31,10 +31,11 @@ class Tier:
 
     """
 
-    __slots__ = ['name']
+    __slots__ = ['name', 'annotation_space']
 
-    def __init__(self, name):
+    def __init__(self, name, annotaion_space = None):
         self.name = name
+        self.annotation_space = annotaion_space
 
 
 class Annotation:
@@ -246,7 +247,11 @@ class GrAFConverter:
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
         prefix = tier.name
-        annotation_name = prefix
+
+        if tier.annotation_space is None:
+            annotation_name = prefix
+        else:
+            annotation_name = tier.annotation_space
 
         has_regions = False
 
