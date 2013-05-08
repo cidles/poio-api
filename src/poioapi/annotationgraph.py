@@ -45,7 +45,7 @@ class AnnotationGraph():
         self.graf_basename = None
 
         self.filters = []
-        self.filtered_node_ids = []
+        self.filtered_node_ids = [[]]
 
     def load_graph_from_graf(self, filepath):
         """Load the project annotation graph from a GrAF/XML file.
@@ -196,6 +196,9 @@ class AnnotationGraph():
             html = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body>\n"
 
         for i, root_node in enumerate(self.root_nodes()):
+            if filtered and root_node.id not in self.filtered_node_ids[-1]:
+                continue
+
             html += "<table style=\"border-collapse:collapse;border:1px solid black;margin-bottom:20px;\">"
             html += "<tr><td style=\"padding:4px;border:1px solid black;\">{0}</td>".format(i)
             html += "<td style=\"border:1px solid black;\">"
@@ -440,14 +443,18 @@ class AnnotationGraph():
 
         self.filters.append(filter)
 
-        new_filtered_elements = []
+        #new_filtered_elements = []
 
-        for node in self.root_nodes():
-            self._element_passes = []
-            self._find_node_from_edge_filter(node, filter)
-            if True in self._element_passes:
-                new_filtered_elements.append(node.id)
-
+        #for node in self.root_nodes():
+        #    self._element_passes = []
+        #    self._find_node_from_edge_filter(node, filter)
+        #    if True in self._element_passes:
+        #        new_filtered_elements.append(node.id)
+        new_filtered_elements = \
+            [ node.id
+              for node in self.root_nodes()
+              if node.id in self.filtered_node_ids[-1] and
+                  filter.element_passes_filter(node)]
         self.filtered_node_ids.append(new_filtered_elements)
 
     def last_filter(self):
