@@ -33,7 +33,7 @@ class ElanTier(poioapi.io.graf.Tier):
 
         try:
             self.annotation_space = self.linguistic_type.encode("utf-8").replace(' ', '_')
-        except TypeError as typeError:
+        except :
             self.annotation_space = self.linguistic_type.replace(' ', '_')
 
         self.name = self.annotation_space + "/" + name
