@@ -20,13 +20,10 @@ considered important.
 
 Apart from BaseParser class must also have the knowledge of the classes Tier
 and Annotation.
-The class Tier is a list of tiers. Each tier is represented at least with a 
-name and can have in addition also a type or linguistic.
-The class Annnotation is a list of annotations. Each annotation is 
-represented by an id and can contain a value and features.
-
-Note that the methods from the BaseParser base class shall only use and return
-Tiers and Annotations types values.
+The class Tier represents a Tier. Each tier is defined with an name but in some cases
+it is necessary to create a subclass with more characteristics.
+The class Annnotation represents a Annotation. Each annotation is represented by an id
+and can contain a value and features.
 
 Classes and Documentation:
 
