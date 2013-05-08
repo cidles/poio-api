@@ -45,7 +45,7 @@ class AnnotationGraph():
         self.graf_basename = None
 
         self.filters = []
-        self.filtered_node_ids = [[]]
+        self.filtered_node_ids = []
 
     def load_graph_from_graf(self, filepath):
         """Load the project annotation graph from a GrAF/XML file.
@@ -394,8 +394,9 @@ class AnnotationGraph():
         for linguistic_type in tree.findall('LINGUISTIC_TYPE'):
             linguistic_type_id = linguistic_type.attrib['LINGUISTIC_TYPE_ID']
 
-            type = SubElement(tier_mapping, 'type',
-                    {'name': str(linguistic_type_id).replace(' ', '_')})
+            name = linguistic_type_id.replace(' ', '_')
+
+            type = SubElement(tier_mapping, 'type', {'name': name})
 
             for tier_ref in tree.findall("TIER"):
                 if tier_ref.attrib["LINGUISTIC_TYPE_REF"] == linguistic_type_id:
@@ -420,17 +421,6 @@ class AnnotationGraph():
         file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
         file.close()
 
-    def _find_node_from_edge_filter(self, node, filter):
-
-        self._element_passes.append(filter.element_passes_filter(node))
-
-        for out_edge in node.out_edges:
-            self._find_node_from_edge_filter(self.graf.edges[out_edge.id].to_node,
-                filter)
-
-        if node.is_root:
-            return node
-
     def append_filter(self, filter):
         """Append a filter to the search.
 
@@ -443,18 +433,10 @@ class AnnotationGraph():
 
         self.filters.append(filter)
 
-        #new_filtered_elements = []
-
-        #for node in self.root_nodes():
-        #    self._element_passes = []
-        #    self._find_node_from_edge_filter(node, filter)
-        #    if True in self._element_passes:
-        #        new_filtered_elements.append(node.id)
         new_filtered_elements = \
             [ node.id
               for node in self.root_nodes()
-              if node.id in self.filtered_node_ids[-1] and
-                  filter.element_passes_filter(node)]
+              if filter.element_passes_filter(node)]
         self.filtered_node_ids.append(new_filtered_elements)
 
     def last_filter(self):
@@ -545,7 +527,7 @@ class AnnotationGraph():
             A new annotation graph filter.
         """
 
-        filter = AnnotationGraphFilter(self.structure_type_handler)
+        filter = AnnotationGraphFilter(self.structure_type_handler, self.graf)
         for k in search_dict:
             if k in self.structure_type_handler.flat_data_hierarchy:
                 filter.set_filter_for_type(k, search_dict[k])
@@ -564,7 +546,7 @@ class AnnotationGraphFilter():
 
     (AND, OR)  = range(2)
 
-    def __init__(self, data_structure_type):
+    def __init__(self, data_structure_type, graf):
         """Class constructor.
 
         """
@@ -579,6 +561,8 @@ class AnnotationGraphFilter():
         self.inverted = False
         self.boolean_operation = self.AND
         self.contained_matches = False
+
+        self.graf = graf
 
     def reset_match_object(self):
         """Reset a match object.
@@ -685,14 +669,12 @@ class AnnotationGraphFilter():
                     else:
                         el = elements
 
-                    for key, value in el.annotations._elements[0].features.items():
-                        match = re.search(self.filter[t], value)
+                    self._element_passes = []
+                    self._search_nodes_for_match(el, t)
 
-                        if match:
-                            self.matchobject[t][el.id] =\
-                            [ [m.start(), m.end()] for m in re.finditer(
-                                self.filter[t], value) ]
-                            passes = True
+                    if len(self._element_passes) > 0:
+                        passes = True
+
                 elif self.boolean_operation == self.AND:
                     passes = True
 
@@ -702,3 +684,29 @@ class AnnotationGraphFilter():
                     passed = (passed or passes)
 
         return passed
+
+    def _search_nodes_for_match(self, node, t):
+        """Search for the child nodes of a root node
+        in order to find a match for the filter.
+
+        Parameters
+        ----------
+        node : object
+            Node object from graf.
+        t : str
+            Structure element from the hierarchy.
+
+        """
+
+        for key, value in node.annotations._elements[0].features.items():
+            match = re.search(self.filter[t], value)
+
+            if match:
+                self.matchobject[t][node.id] =\
+                [ [m.start(), m.end()] for m in re.finditer(
+                    self.filter[t], value) ]
+                self._element_passes.append(node.id)
+
+        for out_edge in node.out_edges:
+            self._search_nodes_for_match(self.graf.edges[out_edge.id].to_node,
+                t)
