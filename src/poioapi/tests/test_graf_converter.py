@@ -130,4 +130,7 @@ class TestGrAFConverter:
                 ['part_of_speech/W-POS']],
             ['phonetic_transcription/W-IPA']]
 
-        assert expected_tiers_hierarchy in converter.tiers_hierarchy
+        print(expected_tiers_hierarchy)
+        print(converter.tiers_hierarchy[2])
+
+        assert expected_tiers_hierarchy == converter.tiers_hierarchy[2]
