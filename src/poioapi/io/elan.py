@@ -25,6 +25,20 @@ from xml.dom import minidom
 
 import poioapi.io.graf
 
+class ElanTier(poioapi.io.graf.Tier):
+    __slots__ = ["linguistic_type"]
+
+    def __init__(self, name, linguistic_type):
+        self.linguistic_type = linguistic_type
+
+        try:
+            self.annotation_space = self.linguistic_type.encode("utf-8").replace(' ', '_')
+        except TypeError as typeError:
+            self.annotation_space = self.linguistic_type.replace(' ', '_')
+
+        self.name = self.annotation_space + "/" + name
+
+
 class Parser(poioapi.io.graf.BaseParser):
     """
     Class that will handle parse Elan files.
@@ -71,7 +85,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        return [poioapi.io.graf.Tier(tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
+        return [ElanTier(tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
                 for tier in self.tree.findall('TIER')
                 if not 'PARENT_REF' in tier.attrib]
 
@@ -95,9 +109,11 @@ class Parser(poioapi.io.graf.BaseParser):
 
         child_tiers = []
 
+        tier_name = tier.name.split("/")[1]
+
         for t in self.tree.findall("TIER"):
-            if "PARENT_REF" in t.attrib and t.attrib["PARENT_REF"] == tier.name:
-                child_tiers.append(poioapi.io.graf.Tier(t.attrib['TIER_ID'],
+            if "PARENT_REF" in t.attrib and t.attrib["PARENT_REF"] == tier_name:
+                child_tiers.append(ElanTier(t.attrib['TIER_ID'],
                     t.attrib['LINGUISTIC_TYPE_REF']))
 
         return child_tiers
@@ -131,8 +147,10 @@ class Parser(poioapi.io.graf.BaseParser):
         annotations = []
         tier_annotations = []
 
+        tier_name = tier.name.split("/")[1]
+
         for t in self.tree.findall("TIER"):
-            if t.attrib["TIER_ID"] == tier.name:
+            if t.attrib["TIER_ID"] == tier_name:
                 if annotation_parent is not None and self.tier_has_regions(tier) == False:
                     for a in t.findall("ANNOTATION/*"):
                         if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
@@ -158,8 +176,9 @@ class Parser(poioapi.io.graf.BaseParser):
             else:
                 annotation_ref = annotation.attrib['ANNOTATION_REF']
 
+
                 features = {'ref_annotation':annotation_ref,
-                            'tier_id':tier.name}
+                            'tier_id':tier_name}
 
                 for attribute in annotation.attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
