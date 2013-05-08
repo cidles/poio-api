@@ -27,18 +27,14 @@ import poioapi.io.header
 
 class Tier:
     """A list of tiers.
-    The name is the tier unique identification
-    and the linguistic type is the type of tier,
-    i. e. utterance, word, etc.
-    The linguistic type is not mandatory.
+    The name is the tier unique identification.
 
     """
 
-    __slots__ = ['name', 'linguistic_type']
+    __slots__ = ['name']
 
-    def __init__(self, name, linguistic_type=None):
+    def __init__(self, name):
         self.name = name
-        self.linguistic_type = linguistic_type
 
 
 class Annotation:
@@ -249,16 +245,8 @@ class GrAFConverter:
     def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix=None):
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
-        if tier.linguistic_type is None:
-            prefix = tier.name
-            annotation_name = prefix
-        else:
-            try:
-                annotation_name = tier.linguistic_type.encode("utf-8").replace(' ', '_')
-            except TypeError as typeError:
-                annotation_name = tier.linguistic_type.replace(' ', '_')
-
-            prefix = annotation_name + "/" + tier.name
+        prefix = tier.name
+        annotation_name = prefix
 
         has_regions = False
 
