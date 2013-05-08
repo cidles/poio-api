@@ -42,9 +42,53 @@ class Parser(poioapi.io.graf.BaseParser):
     def parse(self):
         self.tree = ET.parse(self.filepath).getroot()
         self.namespace = {'xmlns': re.findall(r"\{(.*?)\}", self.tree.tag)[0]}
-        self._current_phrase_id = 0
-        self._current_id = None
-        self._current_tier = None
+        self._current_id = 0
+        self._elements_map = { "phrase" : [], "word" : [], "translation" : [],
+                               "description" : [], "pos" : [], "morpheme" : [],
+                               "gloss" : []}
+
+        self.parse_element_tree(self.tree)
+
+    def parse_element_tree(self, tree):
+        for element in tree:
+            if element.tag == "{" + self.namespace['xmlns'] + "}" + "phrase":
+                self._elements_map["phrase"].append({"id":element.attrib["id"],
+                                                     "attrib":element.attrib})
+                self._current_phrase_id = element.attrib["id"]
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "original":
+                for i, el in enumerate(self._elements_map["phrase"]):
+                    if el["id"] == self._current_phrase_id:
+                        el["value"] = element.text
+                        self._elements_map["phrase"][0] = el
+
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "word":
+                self._current_word_id = self._next_id()
+                self._elements_map["word"].append({"id": self._current_word_id,
+                                                   "attrib":element.attrib,
+                                                   "parent":self._current_phrase_id})
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "pos":
+                self._elements_map["pos"].append({"id": self._next_id(),
+                                                   "value":element.text,
+                                                   "parent":self._current_word_id})
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "morpheme":
+                self._current_morpheme_id = self._next_id()
+                self._elements_map["morpheme"].append({"id": self._current_morpheme_id,
+                                                   "attrib":element.attrib,
+                                                   "parent":self._current_word_id})
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "gloss":
+                self._elements_map["gloss"].append({"id": self._next_id(),
+                                                  "value":element.text,
+                                                  "parent":self._current_morpheme_id})
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "description":
+                self._elements_map["description"].append({"id": self._next_id(),
+                                                   "value": element.text,
+                                                   "parent":self._current_phrase_id})
+            elif element.tag == "{" + self.namespace['xmlns'] + "}" + "translation":
+                self._elements_map["translation"].append({"id": self._next_id(),
+                                                   "value": element.text,
+                                                   "parent":self._current_phrase_id})
+            if element._children:
+                self.parse_element_tree(element)
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier("phrase")]
@@ -63,86 +107,34 @@ class Parser(poioapi.io.graf.BaseParser):
             return [poioapi.io.graf.Tier("gloss")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
-        self._current_tier = tier
-
         if tier.name == "phrase":
-            return [self._element_as_annotation(annotation, "original")
-                    for annotation in self.tree.findall("xmlns:phrase",
-                self.namespace)]
+            return [poioapi.io.graf.Annotation(e["id"], e["value"],
+                self._get_features(e["attrib"]))
+                    for e in self._elements_map[tier.name]]
 
-        elif tier.name == "word" or tier.name == "translation" or \
-             tier.name == "description":
-            return self._get_child_phrases(tier, annotation_parent)
+        elif tier.name == "word" or tier.name == "morpheme":
+            annotations = []
+            for e in self._elements_map[tier.name]:
+                if e["parent"] == annotation_parent.id:
+                    features = self._get_features(e["attrib"])
+                    value = e["attrib"]["text"]
+                    annotations.append(poioapi.io.graf.Annotation(e["id"],
+                        value, features))
 
-        elif tier.name == "pos" or tier.name == "morpheme" or \
-             tier.name == "gloss":
-            return self._get_child_words(tier, annotation_parent)
+            return annotations
 
-    def _get_child_phrases(self, tier, annotation_parent):
-        annotations = []
-
-        for phrase in self.tree.findall("xmlns:phrase", self.namespace):
-            if phrase.attrib["id"] == annotation_parent.id:
-                for annotation in phrase.findall("xmlns:"+tier.name,self.namespace):
-                    a = self._element_as_annotation(annotation, tier.name)
-                    if a is not None:
-                        annotations.append(a)
-
-        return annotations
-
-    def _get_child_words(self, tier, annotation_parent):
-        if tier.name == "gloss":
-            path = "xmlns:word/xmlns:morpheme"
         else:
-            path = "xmlns:word"
-
-        for phrase in self.tree.findall("xmlns:phrase", self.namespace):
-            if phrase.attrib["id"] == annotation_parent.features["parent_phrase"]:
-                for word in phrase.findall(path, self.namespace):
-                    features = self._get_features(word.attrib)
-                    diff = set(annotation_parent.features.keys()) -\
-                           set(features.keys())
-                    if len(diff) == 1 or len(diff) == 0 and diff == "parent_phrase":
-                        return [self._element_as_annotation(element, tier.name)
-                                for element in word
-                                if element.tag == "{" + self.namespace['xmlns']
-                                                  + "}" + tier.name]
-
-    def _element_as_annotation(self, element, value_key = None):
-        features = self._get_features(element.attrib)
-        value = None
-
-        if self._current_tier.name is not "phrase":
-            features["parent_phrase"] = self._current_phrase_id
-
-        if "id" in features:
-            id = features["id"]
-            self._current_phrase_id = id
-            self._current_id = id
-        else:
-            id = self._next_id()
-
-        if "text" in features:
-            value = features["text"]
-            features.pop("text")
-        elif value_key == "pos" or value_key == "gloss" or \
-             value_key == "description" or value_key == "translation":
-            value = element.text
-        else:
-            for el in element:
-                if el.tag == "{" + self.namespace['xmlns'] + "}" + value_key:
-                    value = el.text
-
-        if len(features) is 1 and value is None:
-            return None
-
-        return poioapi.io.graf.Annotation(id, value, features)
+            return [poioapi.io.graf.Annotation(e["id"], e["value"])
+                    for e in self._elements_map[tier.name]
+                    if e["parent"] == annotation_parent.id]
 
     def _get_features(self, attributes):
         features = {}
 
         for key, value in attributes.items():
-            features[key] = value
+            if key != "id":
+                if key != "text":
+                    features[key] = value
 
         return features
 

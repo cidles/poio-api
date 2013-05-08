@@ -9,692 +9,270 @@
       <annotationSpace as.id="gloss"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="gloss/n35343"/>
-  <edge from="morpheme/n35342" to="gloss/n35343" xml:id="e35343"/>
-  <a as="gloss" label="gloss" ref="gloss/n35343" xml:id="35343">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35346"/>
-  <edge from="morpheme/n35345" to="gloss/n35346" xml:id="e35346"/>
-  <a as="gloss" label="gloss" ref="gloss/n35346" xml:id="35346">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35349"/>
-  <edge from="morpheme/n35348" to="gloss/n35349" xml:id="e35349"/>
-  <a as="gloss" label="gloss" ref="gloss/n35349" xml:id="35349">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35352"/>
-  <edge from="morpheme/n35351" to="gloss/n35352" xml:id="e35352"/>
-  <a as="gloss" label="gloss" ref="gloss/n35352" xml:id="35352">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35355"/>
-  <edge from="morpheme/n35354" to="gloss/n35355" xml:id="e35355"/>
-  <a as="gloss" label="gloss" ref="gloss/n35355" xml:id="35355">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35358"/>
-  <edge from="morpheme/n35357" to="gloss/n35358" xml:id="e35358"/>
-  <a as="gloss" label="gloss" ref="gloss/n35358" xml:id="35358">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35373"/>
-  <edge from="morpheme/n35372" to="gloss/n35373" xml:id="e35373"/>
-  <a as="gloss" label="gloss" ref="gloss/n35373" xml:id="35373">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35376"/>
-  <edge from="morpheme/n35375" to="gloss/n35376" xml:id="e35376"/>
-  <a as="gloss" label="gloss" ref="gloss/n35376" xml:id="35376">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35379"/>
-  <edge from="morpheme/n35378" to="gloss/n35379" xml:id="e35379"/>
-  <a as="gloss" label="gloss" ref="gloss/n35379" xml:id="35379">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35382"/>
-  <edge from="morpheme/n35381" to="gloss/n35382" xml:id="e35382"/>
-  <a as="gloss" label="gloss" ref="gloss/n35382" xml:id="35382">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35385"/>
-  <edge from="morpheme/n35384" to="gloss/n35385" xml:id="e35385"/>
-  <a as="gloss" label="gloss" ref="gloss/n35385" xml:id="35385">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35388"/>
-  <edge from="morpheme/n35387" to="gloss/n35388" xml:id="e35388"/>
-  <a as="gloss" label="gloss" ref="gloss/n35388" xml:id="35388">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35391"/>
-  <edge from="morpheme/n35390" to="gloss/n35391" xml:id="e35391"/>
-  <a as="gloss" label="gloss" ref="gloss/n35391" xml:id="35391">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35394"/>
-  <edge from="morpheme/n35393" to="gloss/n35394" xml:id="e35394"/>
-  <a as="gloss" label="gloss" ref="gloss/n35394" xml:id="35394">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35397"/>
-  <edge from="morpheme/n35396" to="gloss/n35397" xml:id="e35397"/>
-  <a as="gloss" label="gloss" ref="gloss/n35397" xml:id="35397">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35400"/>
-  <edge from="morpheme/n35399" to="gloss/n35400" xml:id="e35400"/>
-  <a as="gloss" label="gloss" ref="gloss/n35400" xml:id="35400">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35415"/>
-  <edge from="morpheme/n35414" to="gloss/n35415" xml:id="e35415"/>
-  <a as="gloss" label="gloss" ref="gloss/n35415" xml:id="35415">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35418"/>
-  <edge from="morpheme/n35417" to="gloss/n35418" xml:id="e35418"/>
-  <a as="gloss" label="gloss" ref="gloss/n35418" xml:id="35418">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35421"/>
-  <edge from="morpheme/n35420" to="gloss/n35421" xml:id="e35421"/>
-  <a as="gloss" label="gloss" ref="gloss/n35421" xml:id="35421">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35424"/>
-  <edge from="morpheme/n35423" to="gloss/n35424" xml:id="e35424"/>
-  <a as="gloss" label="gloss" ref="gloss/n35424" xml:id="35424">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35427"/>
-  <edge from="morpheme/n35426" to="gloss/n35427" xml:id="e35427"/>
-  <a as="gloss" label="gloss" ref="gloss/n35427" xml:id="35427">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35430"/>
-  <edge from="morpheme/n35429" to="gloss/n35430" xml:id="e35430"/>
-  <a as="gloss" label="gloss" ref="gloss/n35430" xml:id="35430">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35433"/>
-  <edge from="morpheme/n35432" to="gloss/n35433" xml:id="e35433"/>
-  <a as="gloss" label="gloss" ref="gloss/n35433" xml:id="35433">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35436"/>
-  <edge from="morpheme/n35435" to="gloss/n35436" xml:id="e35436"/>
-  <a as="gloss" label="gloss" ref="gloss/n35436" xml:id="35436">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35439"/>
-  <edge from="morpheme/n35438" to="gloss/n35439" xml:id="e35439"/>
-  <a as="gloss" label="gloss" ref="gloss/n35439" xml:id="35439">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35442"/>
-  <edge from="morpheme/n35441" to="gloss/n35442" xml:id="e35442"/>
-  <a as="gloss" label="gloss" ref="gloss/n35442" xml:id="35442">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35454"/>
-  <edge from="morpheme/n35453" to="gloss/n35454" xml:id="e35454"/>
-  <a as="gloss" label="gloss" ref="gloss/n35454" xml:id="35454">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35457"/>
-  <edge from="morpheme/n35456" to="gloss/n35457" xml:id="e35457"/>
-  <a as="gloss" label="gloss" ref="gloss/n35457" xml:id="35457">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35460"/>
-  <edge from="morpheme/n35459" to="gloss/n35460" xml:id="e35460"/>
-  <a as="gloss" label="gloss" ref="gloss/n35460" xml:id="35460">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35463"/>
-  <edge from="morpheme/n35462" to="gloss/n35463" xml:id="e35463"/>
-  <a as="gloss" label="gloss" ref="gloss/n35463" xml:id="35463">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35466"/>
-  <edge from="morpheme/n35465" to="gloss/n35466" xml:id="e35466"/>
-  <a as="gloss" label="gloss" ref="gloss/n35466" xml:id="35466">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35469"/>
-  <edge from="morpheme/n35468" to="gloss/n35469" xml:id="e35469"/>
-  <a as="gloss" label="gloss" ref="gloss/n35469" xml:id="35469">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35472"/>
-  <edge from="morpheme/n35471" to="gloss/n35472" xml:id="e35472"/>
-  <a as="gloss" label="gloss" ref="gloss/n35472" xml:id="35472">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35485"/>
-  <edge from="morpheme/n35484" to="gloss/n35485" xml:id="e35485"/>
-  <a as="gloss" label="gloss" ref="gloss/n35485" xml:id="35485">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35488"/>
-  <edge from="morpheme/n35487" to="gloss/n35488" xml:id="e35488"/>
-  <a as="gloss" label="gloss" ref="gloss/n35488" xml:id="35488">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35491"/>
-  <edge from="morpheme/n35490" to="gloss/n35491" xml:id="e35491"/>
-  <a as="gloss" label="gloss" ref="gloss/n35491" xml:id="35491">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35494"/>
-  <edge from="morpheme/n35493" to="gloss/n35494" xml:id="e35494"/>
-  <a as="gloss" label="gloss" ref="gloss/n35494" xml:id="35494">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35497"/>
-  <edge from="morpheme/n35496" to="gloss/n35497" xml:id="e35497"/>
-  <a as="gloss" label="gloss" ref="gloss/n35497" xml:id="35497">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35500"/>
-  <edge from="morpheme/n35499" to="gloss/n35500" xml:id="e35500"/>
-  <a as="gloss" label="gloss" ref="gloss/n35500" xml:id="35500">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35503"/>
-  <edge from="morpheme/n35502" to="gloss/n35503" xml:id="e35503"/>
-  <a as="gloss" label="gloss" ref="gloss/n35503" xml:id="35503">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35506"/>
-  <edge from="morpheme/n35505" to="gloss/n35506" xml:id="e35506"/>
-  <a as="gloss" label="gloss" ref="gloss/n35506" xml:id="35506">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35523"/>
-  <edge from="morpheme/n35522" to="gloss/n35523" xml:id="e35523"/>
-  <a as="gloss" label="gloss" ref="gloss/n35523" xml:id="35523">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35526"/>
-  <edge from="morpheme/n35525" to="gloss/n35526" xml:id="e35526"/>
-  <a as="gloss" label="gloss" ref="gloss/n35526" xml:id="35526">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35529"/>
-  <edge from="morpheme/n35528" to="gloss/n35529" xml:id="e35529"/>
-  <a as="gloss" label="gloss" ref="gloss/n35529" xml:id="35529">
+  <node xml:id="gloss/n105"/>
+  <edge from="morpheme/n104" to="gloss/n105" xml:id="e105"/>
+  <a as="gloss" label="gloss" ref="gloss/n105" xml:id="105">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35532"/>
-  <edge from="morpheme/n35531" to="gloss/n35532" xml:id="e35532"/>
-  <a as="gloss" label="gloss" ref="gloss/n35532" xml:id="35532">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35535"/>
-  <edge from="morpheme/n35534" to="gloss/n35535" xml:id="e35535"/>
-  <a as="gloss" label="gloss" ref="gloss/n35535" xml:id="35535">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35538"/>
-  <edge from="morpheme/n35537" to="gloss/n35538" xml:id="e35538"/>
-  <a as="gloss" label="gloss" ref="gloss/n35538" xml:id="35538">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35541"/>
-  <edge from="morpheme/n35540" to="gloss/n35541" xml:id="e35541"/>
-  <a as="gloss" label="gloss" ref="gloss/n35541" xml:id="35541">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n35544"/>
-  <edge from="morpheme/n35543" to="gloss/n35544" xml:id="e35544"/>
-  <a as="gloss" label="gloss" ref="gloss/n35544" xml:id="35544">
-    <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35547"/>
-  <edge from="morpheme/n35546" to="gloss/n35547" xml:id="e35547"/>
-  <a as="gloss" label="gloss" ref="gloss/n35547" xml:id="35547">
+  <node xml:id="gloss/n125"/>
+  <edge from="morpheme/n124" to="gloss/n125" xml:id="e125"/>
+  <a as="gloss" label="gloss" ref="gloss/n125" xml:id="125">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35550"/>
-  <edge from="morpheme/n35549" to="gloss/n35550" xml:id="e35550"/>
-  <a as="gloss" label="gloss" ref="gloss/n35550" xml:id="35550">
+  <node xml:id="gloss/n134"/>
+  <edge from="morpheme/n133" to="gloss/n134" xml:id="e134"/>
+  <a as="gloss" label="gloss" ref="gloss/n134" xml:id="134">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35553"/>
-  <edge from="morpheme/n35552" to="gloss/n35553" xml:id="e35553"/>
-  <a as="gloss" label="gloss" ref="gloss/n35553" xml:id="35553">
+  <node xml:id="gloss/n141"/>
+  <edge from="morpheme/n140" to="gloss/n141" xml:id="e141"/>
+  <a as="gloss" label="gloss" ref="gloss/n141" xml:id="141">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35556"/>
-  <edge from="morpheme/n35555" to="gloss/n35556" xml:id="e35556"/>
-  <a as="gloss" label="gloss" ref="gloss/n35556" xml:id="35556">
+  <node xml:id="gloss/n145"/>
+  <edge from="morpheme/n144" to="gloss/n145" xml:id="e145"/>
+  <a as="gloss" label="gloss" ref="gloss/n145" xml:id="145">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35568"/>
-  <edge from="morpheme/n35567" to="gloss/n35568" xml:id="e35568"/>
-  <a as="gloss" label="gloss" ref="gloss/n35568" xml:id="35568">
+  <node xml:id="gloss/n152"/>
+  <edge from="morpheme/n151" to="gloss/n152" xml:id="e152"/>
+  <a as="gloss" label="gloss" ref="gloss/n152" xml:id="152">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ2</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35571"/>
-  <edge from="morpheme/n35570" to="gloss/n35571" xml:id="e35571"/>
-  <a as="gloss" label="gloss" ref="gloss/n35571" xml:id="35571">
+  <node xml:id="gloss/n156"/>
+  <edge from="morpheme/n155" to="gloss/n156" xml:id="e156"/>
+  <a as="gloss" label="gloss" ref="gloss/n156" xml:id="156">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35574"/>
-  <edge from="morpheme/n35573" to="gloss/n35574" xml:id="e35574"/>
-  <a as="gloss" label="gloss" ref="gloss/n35574" xml:id="35574">
+  <node xml:id="gloss/n160"/>
+  <edge from="morpheme/n159" to="gloss/n160" xml:id="e160"/>
+  <a as="gloss" label="gloss" ref="gloss/n160" xml:id="160">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">LOC</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35577"/>
-  <edge from="morpheme/n35576" to="gloss/n35577" xml:id="e35577"/>
-  <a as="gloss" label="gloss" ref="gloss/n35577" xml:id="35577">
+  <node xml:id="gloss/n166"/>
+  <edge from="morpheme/n165" to="gloss/n166" xml:id="e166"/>
+  <a as="gloss" label="gloss" ref="gloss/n166" xml:id="166">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35580"/>
-  <edge from="morpheme/n35579" to="gloss/n35580" xml:id="e35580"/>
-  <a as="gloss" label="gloss" ref="gloss/n35580" xml:id="35580">
+  <node xml:id="gloss/n167"/>
+  <edge from="morpheme/n165" to="gloss/n167" xml:id="e167"/>
+  <a as="gloss" label="gloss" ref="gloss/n167" xml:id="167">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">1SG</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35583"/>
-  <edge from="morpheme/n35582" to="gloss/n35583" xml:id="e35583"/>
-  <a as="gloss" label="gloss" ref="gloss/n35583" xml:id="35583">
+  <node xml:id="gloss/n174"/>
+  <edge from="morpheme/n173" to="gloss/n174" xml:id="e174"/>
+  <a as="gloss" label="gloss" ref="gloss/n174" xml:id="174">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35586"/>
-  <edge from="morpheme/n35585" to="gloss/n35586" xml:id="e35586"/>
-  <a as="gloss" label="gloss" ref="gloss/n35586" xml:id="35586">
+  <node xml:id="gloss/n178"/>
+  <edge from="morpheme/n177" to="gloss/n178" xml:id="e178"/>
+  <a as="gloss" label="gloss" ref="gloss/n178" xml:id="178">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35601"/>
-  <edge from="morpheme/n35600" to="gloss/n35601" xml:id="e35601"/>
-  <a as="gloss" label="gloss" ref="gloss/n35601" xml:id="35601">
+  <node xml:id="gloss/n194"/>
+  <edge from="morpheme/n193" to="gloss/n194" xml:id="e194"/>
+  <a as="gloss" label="gloss" ref="gloss/n194" xml:id="194">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35604"/>
-  <edge from="morpheme/n35603" to="gloss/n35604" xml:id="e35604"/>
-  <a as="gloss" label="gloss" ref="gloss/n35604" xml:id="35604">
+  <node xml:id="gloss/n209"/>
+  <edge from="morpheme/n208" to="gloss/n209" xml:id="e209"/>
+  <a as="gloss" label="gloss" ref="gloss/n209" xml:id="209">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35607"/>
-  <edge from="morpheme/n35606" to="gloss/n35607" xml:id="e35607"/>
-  <a as="gloss" label="gloss" ref="gloss/n35607" xml:id="35607">
+  <node xml:id="gloss/n210"/>
+  <edge from="morpheme/n208" to="gloss/n210" xml:id="e210"/>
+  <a as="gloss" label="gloss" ref="gloss/n210" xml:id="210">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">3SG</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35610"/>
-  <edge from="morpheme/n35609" to="gloss/n35610" xml:id="e35610"/>
-  <a as="gloss" label="gloss" ref="gloss/n35610" xml:id="35610">
+  <node xml:id="gloss/n214"/>
+  <edge from="morpheme/n213" to="gloss/n214" xml:id="e214"/>
+  <a as="gloss" label="gloss" ref="gloss/n214" xml:id="214">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">PATH</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35613"/>
-  <edge from="morpheme/n35612" to="gloss/n35613" xml:id="e35613"/>
-  <a as="gloss" label="gloss" ref="gloss/n35613" xml:id="35613">
+  <node xml:id="gloss/n221"/>
+  <edge from="morpheme/n220" to="gloss/n221" xml:id="e221"/>
+  <a as="gloss" label="gloss" ref="gloss/n221" xml:id="221">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35616"/>
-  <edge from="morpheme/n35615" to="gloss/n35616" xml:id="e35616"/>
-  <a as="gloss" label="gloss" ref="gloss/n35616" xml:id="35616">
+  <node xml:id="gloss/n236"/>
+  <edge from="morpheme/n235" to="gloss/n236" xml:id="e236"/>
+  <a as="gloss" label="gloss" ref="gloss/n236" xml:id="236">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35619"/>
-  <edge from="morpheme/n35618" to="gloss/n35619" xml:id="e35619"/>
-  <a as="gloss" label="gloss" ref="gloss/n35619" xml:id="35619">
+  <node xml:id="gloss/n246"/>
+  <edge from="morpheme/n245" to="gloss/n246" xml:id="e246"/>
+  <a as="gloss" label="gloss" ref="gloss/n246" xml:id="246">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35622"/>
-  <edge from="morpheme/n35621" to="gloss/n35622" xml:id="e35622"/>
-  <a as="gloss" label="gloss" ref="gloss/n35622" xml:id="35622">
+  <node xml:id="gloss/n263"/>
+  <edge from="morpheme/n262" to="gloss/n263" xml:id="e263"/>
+  <a as="gloss" label="gloss" ref="gloss/n263" xml:id="263">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35625"/>
-  <edge from="morpheme/n35624" to="gloss/n35625" xml:id="e35625"/>
-  <a as="gloss" label="gloss" ref="gloss/n35625" xml:id="35625">
+  <node xml:id="gloss/n272"/>
+  <edge from="morpheme/n271" to="gloss/n272" xml:id="e272"/>
+  <a as="gloss" label="gloss" ref="gloss/n272" xml:id="272">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35628"/>
-  <edge from="morpheme/n35627" to="gloss/n35628" xml:id="e35628"/>
-  <a as="gloss" label="gloss" ref="gloss/n35628" xml:id="35628">
+  <node xml:id="gloss/n279"/>
+  <edge from="morpheme/n278" to="gloss/n279" xml:id="e279"/>
+  <a as="gloss" label="gloss" ref="gloss/n279" xml:id="279">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35640"/>
-  <edge from="morpheme/n35639" to="gloss/n35640" xml:id="e35640"/>
-  <a as="gloss" label="gloss" ref="gloss/n35640" xml:id="35640">
+  <node xml:id="gloss/n283"/>
+  <edge from="morpheme/n282" to="gloss/n283" xml:id="e283"/>
+  <a as="gloss" label="gloss" ref="gloss/n283" xml:id="283">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">DEF</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35643"/>
-  <edge from="morpheme/n35642" to="gloss/n35643" xml:id="e35643"/>
-  <a as="gloss" label="gloss" ref="gloss/n35643" xml:id="35643">
+  <node xml:id="gloss/n293"/>
+  <edge from="morpheme/n292" to="gloss/n293" xml:id="e293"/>
+  <a as="gloss" label="gloss" ref="gloss/n293" xml:id="293">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35646"/>
-  <edge from="morpheme/n35645" to="gloss/n35646" xml:id="e35646"/>
-  <a as="gloss" label="gloss" ref="gloss/n35646" xml:id="35646">
+  <node xml:id="gloss/n299"/>
+  <edge from="morpheme/n298" to="gloss/n299" xml:id="e299"/>
+  <a as="gloss" label="gloss" ref="gloss/n299" xml:id="299">
     <fs>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">FOC</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35649"/>
-  <edge from="morpheme/n35648" to="gloss/n35649" xml:id="e35649"/>
-  <a as="gloss" label="gloss" ref="gloss/n35649" xml:id="35649">
+  <node xml:id="gloss/n303"/>
+  <edge from="morpheme/n302" to="gloss/n303" xml:id="e303"/>
+  <a as="gloss" label="gloss" ref="gloss/n303" xml:id="303">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">OBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35652"/>
-  <edge from="morpheme/n35651" to="gloss/n35652" xml:id="e35652"/>
-  <a as="gloss" label="gloss" ref="gloss/n35652" xml:id="35652">
+  <node xml:id="gloss/n307"/>
+  <edge from="morpheme/n306" to="gloss/n307" xml:id="e307"/>
+  <a as="gloss" label="gloss" ref="gloss/n307" xml:id="307">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">LOC</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35655"/>
-  <edge from="morpheme/n35654" to="gloss/n35655" xml:id="e35655"/>
-  <a as="gloss" label="gloss" ref="gloss/n35655" xml:id="35655">
+  <node xml:id="gloss/n314"/>
+  <edge from="morpheme/n313" to="gloss/n314" xml:id="e314"/>
+  <a as="gloss" label="gloss" ref="gloss/n314" xml:id="314">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">1SG</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35658"/>
-  <edge from="morpheme/n35657" to="gloss/n35658" xml:id="e35658"/>
-  <a as="gloss" label="gloss" ref="gloss/n35658" xml:id="35658">
+  <node xml:id="gloss/n319"/>
+  <edge from="morpheme/n318" to="gloss/n319" xml:id="e319"/>
+  <a as="gloss" label="gloss" ref="gloss/n319" xml:id="319">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">COND</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35672"/>
-  <edge from="morpheme/n35671" to="gloss/n35672" xml:id="e35672"/>
-  <a as="gloss" label="gloss" ref="gloss/n35672" xml:id="35672">
+  <node xml:id="gloss/n323"/>
+  <edge from="morpheme/n322" to="gloss/n323" xml:id="e323"/>
+  <a as="gloss" label="gloss" ref="gloss/n323" xml:id="323">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">1SG</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35675"/>
-  <edge from="morpheme/n35674" to="gloss/n35675" xml:id="e35675"/>
-  <a as="gloss" label="gloss" ref="gloss/n35675" xml:id="35675">
+  <node xml:id="gloss/n324"/>
+  <edge from="morpheme/n322" to="gloss/n324" xml:id="e324"/>
+  <a as="gloss" label="gloss" ref="gloss/n324" xml:id="324">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">SBJ</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35678"/>
-  <edge from="morpheme/n35677" to="gloss/n35678" xml:id="e35678"/>
-  <a as="gloss" label="gloss" ref="gloss/n35678" xml:id="35678">
+  <node xml:id="gloss/n40"/>
+  <edge from="morpheme/n39" to="gloss/n40" xml:id="e40"/>
+  <a as="gloss" label="gloss" ref="gloss/n40" xml:id="40">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">REL</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35681"/>
-  <edge from="morpheme/n35680" to="gloss/n35681" xml:id="e35681"/>
-  <a as="gloss" label="gloss" ref="gloss/n35681" xml:id="35681">
+  <node xml:id="gloss/n44"/>
+  <edge from="morpheme/n43" to="gloss/n44" xml:id="e44"/>
+  <a as="gloss" label="gloss" ref="gloss/n44" xml:id="44">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">3SG</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35684"/>
-  <edge from="morpheme/n35683" to="gloss/n35684" xml:id="e35684"/>
-  <a as="gloss" label="gloss" ref="gloss/n35684" xml:id="35684">
+  <node xml:id="gloss/n45"/>
+  <edge from="morpheme/n43" to="gloss/n45" xml:id="e45"/>
+  <a as="gloss" label="gloss" ref="gloss/n45" xml:id="45">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">INANIM</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35687"/>
-  <edge from="morpheme/n35686" to="gloss/n35687" xml:id="e35687"/>
-  <a as="gloss" label="gloss" ref="gloss/n35687" xml:id="35687">
+  <node xml:id="gloss/n70"/>
+  <edge from="morpheme/n69" to="gloss/n70" xml:id="e70"/>
+  <a as="gloss" label="gloss" ref="gloss/n70" xml:id="70">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">x</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35690"/>
-  <edge from="morpheme/n35689" to="gloss/n35690" xml:id="e35690"/>
-  <a as="gloss" label="gloss" ref="gloss/n35690" xml:id="35690">
+  <node xml:id="gloss/n78"/>
+  <edge from="morpheme/n77" to="gloss/n78" xml:id="e78"/>
+  <a as="gloss" label="gloss" ref="gloss/n78" xml:id="78">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">REL</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35693"/>
-  <edge from="morpheme/n35692" to="gloss/n35693" xml:id="e35693"/>
-  <a as="gloss" label="gloss" ref="gloss/n35693" xml:id="35693">
+  <node xml:id="gloss/n82"/>
+  <edge from="morpheme/n81" to="gloss/n82" xml:id="e82"/>
+  <a as="gloss" label="gloss" ref="gloss/n82" xml:id="82">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">3SG</f>
     </fs>
   </a>
-  <node xml:id="gloss/n35696"/>
-  <edge from="morpheme/n35695" to="gloss/n35696" xml:id="e35696"/>
-  <a as="gloss" label="gloss" ref="gloss/n35696" xml:id="35696">
+  <node xml:id="gloss/n83"/>
+  <edge from="morpheme/n81" to="gloss/n83" xml:id="e83"/>
+  <a as="gloss" label="gloss" ref="gloss/n83" xml:id="83">
     <fs>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">FOC</f>
+      <f name="annotation_value">INANIM</f>
     </fs>
   </a>
 </graph>

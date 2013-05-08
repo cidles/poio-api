@@ -8,10 +8,21 @@
 # For license information, see LICENSE.TXT
 
 import os
-import re
 
 from poioapi import data
 import poioapi.annotationgraph
+
+class DataStructureTypeElan(poioapi.data.DataStructureType):
+    name = "ELAN"
+
+    data_hierarchy =\
+    [ 'Äußerung',
+        [ 'Wort',
+            [ 'Morphem',
+                [ 'Glosse' ],
+              ]
+        ],
+      'Übersetzung']
 
 class TestAnnotationGraph:
     """
@@ -21,39 +32,34 @@ class TestAnnotationGraph:
     """
 
     def setup(self):
-        self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(
-            data.DataStructureTypeGraid())
+        self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(DataStructureTypeElan())
 
         filename = os.path.join(os.path.dirname(__file__), "sample_files",
-            "balochi_graf", "balochi.hdr")
-        self.annotation_graph.load_graph_from_graf(filename)
+            "elan_graf", "turkish.eaf")
 
-        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(
-            data.DataStructureTypeGraid())
+        self.annotation_graph.from_elan(filename)
 
-    def test_load_graph_from_graf(self):
-        expected_nodes = 1161
-        assert(len(self.annotation_graph.graf.nodes) == expected_nodes)
+        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(DataStructureTypeElan())
 
     def test_root_nodes(self):
         root_nodes = self.annotation_graph.root_nodes()
-        assert(len(root_nodes) == 111)
+        assert(len(root_nodes) == 9)
 
     def test_nodes_for_tier(self):
         root_nodes = self.annotation_graph.root_nodes()
-        clause_units = self.annotation_graph.nodes_for_tier("clause_unit", root_nodes[0])
+        clause_units = self.annotation_graph.nodes_for_tier("Äußerung", root_nodes[0])
         assert(len(clause_units) == 1)
 
     def test_annotations_for_tier(self):
-        node = self.annotation_graph.graf.nodes["word/n1"]
-        annotations = self.annotation_graph.annotations_for_tier("wfw", node)
+        node = self.annotation_graph.graf.nodes["Glosse/P-Gloss/na262"]
+        annotations = self.annotation_graph.annotations_for_tier("Glosse", node)
         assert(len(annotations) == 1)
 
     def test_annotation_value_for_annotation(self):
-        node = self.annotation_graph.graf.nodes["word/n1"]
-        annotations = self.annotation_graph.annotations_for_tier("wfw", node)
+        node = self.annotation_graph.graf.nodes["Glosse/P-Gloss/na262"]
+        annotations = self.annotation_graph.annotations_for_tier("Glosse", node)
         value = self.annotation_graph.annotation_value_for_annotation(annotations[0])
-        assert(value=="say.PRS-3SG")
+        assert(value=="REPPAST")
 
     def test_as_html_table(self):
         html = self.annotation_graph.as_html_table()
@@ -66,7 +72,7 @@ class TestAnnotationGraph:
         assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
 
     def test_reset_filters(self):
-        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+        self.anngraphfilter.set_filter_for_type("Glosse", "nc")
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
@@ -79,7 +85,6 @@ class TestAnnotationGraph:
         self.anngraphfilter.reset_match_object()
 
         assert self.annotation_graph.filtered_node_ids == [['utterance/n1207', 'utterance/n6']]
-
 
 class TestAnnotationGraphFilter:
 

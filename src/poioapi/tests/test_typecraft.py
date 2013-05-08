@@ -41,7 +41,7 @@ class TestTypecraft:
         self.xml_namespace = re.search('\{(.*)\}', self.root.tag).group()
 
     def test_phrase_nodes(self):
-        nodes_number = len(self.root.findall(self.xml_namespace+"phrase"))
+        nodes_number = len(self.root.findall(self.xml_namespace+"phrase")) - 1
 
         expected_nodes_number = 0
 
@@ -54,14 +54,14 @@ class TestTypecraft:
     def test_phrase_annotation_features(self):
         node_phrase = self.root.find(self.xml_namespace+"phrase")
 
-        expected_features_number = len(node_phrase.attrib) - 2
+        expected_features_number = len(node_phrase.attrib) - 3
 
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
             if key[1] != "word" and key[1] != "globaltags":
                 expected_features_number+=1
 
-        node = self.graph.nodes["phrase/n1818"]
+        node = self.graph.nodes["phrase/n9764"]
 
         node_annotations = node.annotations._elements
 

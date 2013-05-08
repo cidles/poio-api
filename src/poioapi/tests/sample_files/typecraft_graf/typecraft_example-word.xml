@@ -9,778 +9,644 @@
       <annotationSpace as.id="word"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="word/n35335"/>
-  <edge from="phrase/n1818" to="word/n35335" xml:id="e35335"/>
-  <a as="word" label="word" ref="word/n35335" xml:id="35335">
+  <node xml:id="word/n102"/>
+  <edge from="phrase/n9764" to="word/n102" xml:id="e102"/>
+  <a as="word" label="word" ref="word/n102" xml:id="102">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">Mpa</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35336"/>
-  <edge from="phrase/n1818" to="word/n35336" xml:id="e35336"/>
-  <a as="word" label="word" ref="word/n35336" xml:id="35336">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">kɛseɛ</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35337"/>
-  <edge from="phrase/n1818" to="word/n35337" xml:id="e35337"/>
-  <a as="word" label="word" ref="word/n35337" xml:id="35337">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">nkɔ</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35338"/>
-  <edge from="phrase/n1818" to="word/n35338" xml:id="e35338"/>
-  <a as="word" label="word" ref="word/n35338" xml:id="35338">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">dan</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35339"/>
-  <edge from="phrase/n1818" to="word/n35339" xml:id="e35339"/>
-  <a as="word" label="word" ref="word/n35339" xml:id="35339">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">nó</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35340"/>
-  <edge from="phrase/n1818" to="word/n35340" xml:id="e35340"/>
-  <a as="word" label="word" ref="word/n35340" xml:id="35340">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">mu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35361"/>
-  <edge from="phrase/n9064" to="word/n35361" xml:id="e35361"/>
-  <a as="word" label="word" ref="word/n35361" xml:id="35361">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">bere</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35362"/>
-  <edge from="phrase/n9064" to="word/n35362" xml:id="e35362"/>
-  <a as="word" label="word" ref="word/n35362" xml:id="35362">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">ahorow</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35363"/>
-  <edge from="phrase/n9064" to="word/n35363" xml:id="e35363"/>
-  <a as="word" label="word" ref="word/n35363" xml:id="35363">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">dumbienu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35364"/>
-  <edge from="phrase/n9064" to="word/n35364" xml:id="e35364"/>
-  <a as="word" label="word" ref="word/n35364" xml:id="35364">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35365"/>
-  <edge from="phrase/n9064" to="word/n35365" xml:id="e35365"/>
-  <a as="word" label="word" ref="word/n35365" xml:id="35365">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">εka</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35366"/>
-  <edge from="phrase/n9064" to="word/n35366" xml:id="e35366"/>
-  <a as="word" label="word" ref="word/n35366" xml:id="35366">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">bɔ</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35367"/>
-  <edge from="phrase/n9064" to="word/n35367" xml:id="e35367"/>
-  <a as="word" label="word" ref="word/n35367" xml:id="35367">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">mu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35368"/>
-  <edge from="phrase/n9064" to="word/n35368" xml:id="e35368"/>
-  <a as="word" label="word" ref="word/n35368" xml:id="35368">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">yε</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35369"/>
-  <edge from="phrase/n9064" to="word/n35369" xml:id="e35369"/>
-  <a as="word" label="word" ref="word/n35369" xml:id="35369">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">afe</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35370"/>
-  <edge from="phrase/n9064" to="word/n35370" xml:id="e35370"/>
-  <a as="word" label="word" ref="word/n35370" xml:id="35370">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">baako</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35403"/>
-  <edge from="phrase/n9121" to="word/n35403" xml:id="e35403"/>
-  <a as="word" label="word" ref="word/n35403" xml:id="35403">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">bere</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35404"/>
-  <edge from="phrase/n9121" to="word/n35404" xml:id="e35404"/>
-  <a as="word" label="word" ref="word/n35404" xml:id="35404">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">ahorow</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35405"/>
-  <edge from="phrase/n9121" to="word/n35405" xml:id="e35405"/>
-  <a as="word" label="word" ref="word/n35405" xml:id="35405">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">dumbienu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35406"/>
-  <edge from="phrase/n9121" to="word/n35406" xml:id="e35406"/>
-  <a as="word" label="word" ref="word/n35406" xml:id="35406">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35407"/>
-  <edge from="phrase/n9121" to="word/n35407" xml:id="e35407"/>
-  <a as="word" label="word" ref="word/n35407" xml:id="35407">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">εka</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35408"/>
-  <edge from="phrase/n9121" to="word/n35408" xml:id="e35408"/>
-  <a as="word" label="word" ref="word/n35408" xml:id="35408">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">bɔ</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35409"/>
-  <edge from="phrase/n9121" to="word/n35409" xml:id="e35409"/>
-  <a as="word" label="word" ref="word/n35409" xml:id="35409">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">mu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35410"/>
-  <edge from="phrase/n9121" to="word/n35410" xml:id="e35410"/>
-  <a as="word" label="word" ref="word/n35410" xml:id="35410">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">yε</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35411"/>
-  <edge from="phrase/n9121" to="word/n35411" xml:id="e35411"/>
-  <a as="word" label="word" ref="word/n35411" xml:id="35411">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">afe</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35412"/>
-  <edge from="phrase/n9121" to="word/n35412" xml:id="e35412"/>
-  <a as="word" label="word" ref="word/n35412" xml:id="35412">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
-      <f name="annotation_value">baako</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35445"/>
-  <edge from="phrase/n9764" to="word/n35445" xml:id="e35445"/>
-  <a as="word" label="word" ref="word/n35445" xml:id="35445">
-    <fs>
-      <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">Kwantwakɔsansuo</f>
     </fs>
   </a>
-  <node xml:id="word/n35446"/>
-  <edge from="phrase/n9764" to="word/n35446" xml:id="e35446"/>
-  <a as="word" label="word" ref="word/n35446" xml:id="35446">
+  <node xml:id="word/n110"/>
+  <edge from="phrase/n9764" to="word/n110" xml:id="e110"/>
+  <a as="word" label="word" ref="word/n110" xml:id="110">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">a</f>
     </fs>
   </a>
-  <node xml:id="word/n35447"/>
-  <edge from="phrase/n9764" to="word/n35447" xml:id="e35447"/>
-  <a as="word" label="word" ref="word/n35447" xml:id="35447">
+  <node xml:id="word/n113"/>
+  <edge from="phrase/n9764" to="word/n113" xml:id="e113"/>
+  <a as="word" label="word" ref="word/n113" xml:id="113">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">yɛ</f>
     </fs>
   </a>
-  <node xml:id="word/n35448"/>
-  <edge from="phrase/n9764" to="word/n35448" xml:id="e35448"/>
-  <a as="word" label="word" ref="word/n35448" xml:id="35448">
+  <node xml:id="word/n116"/>
+  <edge from="phrase/n9764" to="word/n116" xml:id="e116"/>
+  <a as="word" label="word" ref="word/n116" xml:id="116">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">hu</f>
     </fs>
   </a>
-  <node xml:id="word/n35449"/>
-  <edge from="phrase/n9764" to="word/n35449" xml:id="e35449"/>
-  <a as="word" label="word" ref="word/n35449" xml:id="35449">
+  <node xml:id="word/n119"/>
+  <edge from="phrase/n9764" to="word/n119" xml:id="e119"/>
+  <a as="word" label="word" ref="word/n119" xml:id="119">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">wɔ</f>
     </fs>
   </a>
-  <node xml:id="word/n35450"/>
-  <edge from="phrase/n9764" to="word/n35450" xml:id="e35450"/>
-  <a as="word" label="word" ref="word/n35450" xml:id="35450">
+  <node xml:id="word/n122"/>
+  <edge from="phrase/n9764" to="word/n122" xml:id="e122"/>
+  <a as="word" label="word" ref="word/n122" xml:id="122">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ekorasi</f>
     </fs>
   </a>
-  <node xml:id="word/n35451"/>
-  <edge from="phrase/n9764" to="word/n35451" xml:id="e35451"/>
-  <a as="word" label="word" ref="word/n35451" xml:id="35451">
+  <node xml:id="word/n126"/>
+  <edge from="phrase/n9764" to="word/n126" xml:id="e126"/>
+  <a as="word" label="word" ref="word/n126" xml:id="126">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35475"/>
-  <edge from="phrase/n10429" to="word/n35475" xml:id="e35475"/>
-  <a as="word" label="word" ref="word/n35475" xml:id="35475">
+  <node xml:id="word/n131"/>
+  <edge from="phrase/n10429" to="word/n131" xml:id="e131"/>
+  <a as="word" label="word" ref="word/n131" xml:id="131">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">Akosua</f>
     </fs>
   </a>
-  <node xml:id="word/n35476"/>
-  <edge from="phrase/n10429" to="word/n35476" xml:id="e35476"/>
-  <a as="word" label="word" ref="word/n35476" xml:id="35476">
+  <node xml:id="word/n135"/>
+  <edge from="phrase/n10429" to="word/n135" xml:id="e135"/>
+  <a as="word" label="word" ref="word/n135" xml:id="135">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">hwiee</f>
     </fs>
   </a>
-  <node xml:id="word/n35477"/>
-  <edge from="phrase/n10429" to="word/n35477" xml:id="e35477"/>
-  <a as="word" label="word" ref="word/n35477" xml:id="35477">
+  <node xml:id="word/n138"/>
+  <edge from="phrase/n10429" to="word/n138" xml:id="e138"/>
+  <a as="word" label="word" ref="word/n138" xml:id="138">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nsuo</f>
     </fs>
   </a>
-  <node xml:id="word/n35478"/>
-  <edge from="phrase/n10429" to="word/n35478" xml:id="e35478"/>
-  <a as="word" label="word" ref="word/n35478" xml:id="35478">
+  <node xml:id="word/n142"/>
+  <edge from="phrase/n10429" to="word/n142" xml:id="e142"/>
+  <a as="word" label="word" ref="word/n142" xml:id="142">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nó</f>
     </fs>
   </a>
-  <node xml:id="word/n35479"/>
-  <edge from="phrase/n10429" to="word/n35479" xml:id="e35479"/>
-  <a as="word" label="word" ref="word/n35479" xml:id="35479">
+  <node xml:id="word/n146"/>
+  <edge from="phrase/n10429" to="word/n146" xml:id="e146"/>
+  <a as="word" label="word" ref="word/n146" xml:id="146">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">faa</f>
     </fs>
   </a>
-  <node xml:id="word/n35480"/>
-  <edge from="phrase/n10429" to="word/n35480" xml:id="e35480"/>
-  <a as="word" label="word" ref="word/n35480" xml:id="35480">
+  <node xml:id="word/n149"/>
+  <edge from="phrase/n10429" to="word/n149" xml:id="e149"/>
+  <a as="word" label="word" ref="word/n149" xml:id="149">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">tokuro</f>
     </fs>
   </a>
-  <node xml:id="word/n35481"/>
-  <edge from="phrase/n10429" to="word/n35481" xml:id="e35481"/>
-  <a as="word" label="word" ref="word/n35481" xml:id="35481">
+  <node xml:id="word/n153"/>
+  <edge from="phrase/n10429" to="word/n153" xml:id="e153"/>
+  <a as="word" label="word" ref="word/n153" xml:id="153">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nò</f>
     </fs>
   </a>
-  <node xml:id="word/n35482"/>
-  <edge from="phrase/n10429" to="word/n35482" xml:id="e35482"/>
-  <a as="word" label="word" ref="word/n35482" xml:id="35482">
+  <node xml:id="word/n157"/>
+  <edge from="phrase/n10429" to="word/n157" xml:id="e157"/>
+  <a as="word" label="word" ref="word/n157" xml:id="157">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35509"/>
-  <edge from="phrase/n10432" to="word/n35509" xml:id="e35509"/>
-  <a as="word" label="word" ref="word/n35509" xml:id="35509">
+  <node xml:id="word/n163"/>
+  <edge from="phrase/n10432" to="word/n163" xml:id="e163"/>
+  <a as="word" label="word" ref="word/n163" xml:id="163">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">Mɪ</f>
     </fs>
   </a>
-  <node xml:id="word/n35510"/>
-  <edge from="phrase/n10432" to="word/n35510" xml:id="e35510"/>
-  <a as="word" label="word" ref="word/n35510" xml:id="35510">
+  <node xml:id="word/n168"/>
+  <edge from="phrase/n10432" to="word/n168" xml:id="e168"/>
+  <a as="word" label="word" ref="word/n168" xml:id="168">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">twii</f>
     </fs>
   </a>
-  <node xml:id="word/n35511"/>
-  <edge from="phrase/n10432" to="word/n35511" xml:id="e35511"/>
-  <a as="word" label="word" ref="word/n35511" xml:id="35511">
+  <node xml:id="word/n171"/>
+  <edge from="phrase/n10432" to="word/n171" xml:id="e171"/>
+  <a as="word" label="word" ref="word/n171" xml:id="171">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">kaa</f>
     </fs>
   </a>
-  <node xml:id="word/n35512"/>
-  <edge from="phrase/n10432" to="word/n35512" xml:id="e35512"/>
-  <a as="word" label="word" ref="word/n35512" xml:id="35512">
+  <node xml:id="word/n175"/>
+  <edge from="phrase/n10432" to="word/n175" xml:id="e175"/>
+  <a as="word" label="word" ref="word/n175" xml:id="175">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nó</f>
     </fs>
   </a>
-  <node xml:id="word/n35513"/>
-  <edge from="phrase/n10432" to="word/n35513" xml:id="e35513"/>
-  <a as="word" label="word" ref="word/n35513" xml:id="35513">
+  <node xml:id="word/n179"/>
+  <edge from="phrase/n10432" to="word/n179" xml:id="e179"/>
+  <a as="word" label="word" ref="word/n179" xml:id="179">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">firii</f>
     </fs>
   </a>
-  <node xml:id="word/n35514"/>
-  <edge from="phrase/n10432" to="word/n35514" xml:id="e35514"/>
-  <a as="word" label="word" ref="word/n35514" xml:id="35514">
+  <node xml:id="word/n182"/>
+  <edge from="phrase/n10432" to="word/n182" xml:id="e182"/>
+  <a as="word" label="word" ref="word/n182" xml:id="182">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">fie</f>
     </fs>
   </a>
-  <node xml:id="word/n35515"/>
-  <edge from="phrase/n10432" to="word/n35515" xml:id="e35515"/>
-  <a as="word" label="word" ref="word/n35515" xml:id="35515">
+  <node xml:id="word/n185"/>
+  <edge from="phrase/n10432" to="word/n185" xml:id="e185"/>
+  <a as="word" label="word" ref="word/n185" xml:id="185">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">faa</f>
     </fs>
   </a>
-  <node xml:id="word/n35516"/>
-  <edge from="phrase/n10432" to="word/n35516" xml:id="e35516"/>
-  <a as="word" label="word" ref="word/n35516" xml:id="35516">
+  <node xml:id="word/n188"/>
+  <edge from="phrase/n10432" to="word/n188" xml:id="e188"/>
+  <a as="word" label="word" ref="word/n188" xml:id="188">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="word/n35517"/>
-  <edge from="phrase/n10432" to="word/n35517" xml:id="e35517"/>
-  <a as="word" label="word" ref="word/n35517" xml:id="35517">
+  <node xml:id="word/n191"/>
+  <edge from="phrase/n10432" to="word/n191" xml:id="e191"/>
+  <a as="word" label="word" ref="word/n191" xml:id="191">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nò</f>
     </fs>
   </a>
-  <node xml:id="word/n35518"/>
-  <edge from="phrase/n10432" to="word/n35518" xml:id="e35518"/>
-  <a as="word" label="word" ref="word/n35518" xml:id="35518">
+  <node xml:id="word/n195"/>
+  <edge from="phrase/n10432" to="word/n195" xml:id="e195"/>
+  <a as="word" label="word" ref="word/n195" xml:id="195">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35519"/>
-  <edge from="phrase/n10432" to="word/n35519" xml:id="e35519"/>
-  <a as="word" label="word" ref="word/n35519" xml:id="35519">
+  <node xml:id="word/n198"/>
+  <edge from="phrase/n10432" to="word/n198" xml:id="e198"/>
+  <a as="word" label="word" ref="word/n198" xml:id="198">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">kɔɔ</f>
     </fs>
   </a>
-  <node xml:id="word/n35520"/>
-  <edge from="phrase/n10432" to="word/n35520" xml:id="e35520"/>
-  <a as="word" label="word" ref="word/n35520" xml:id="35520">
+  <node xml:id="word/n201"/>
+  <edge from="phrase/n10432" to="word/n201" xml:id="e201"/>
+  <a as="word" label="word" ref="word/n201" xml:id="201">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">asɔrɪ</f>
     </fs>
   </a>
-  <node xml:id="word/n35559"/>
-  <edge from="phrase/n10437" to="word/n35559" xml:id="e35559"/>
-  <a as="word" label="word" ref="word/n35559" xml:id="35559">
+  <node xml:id="word/n206"/>
+  <edge from="phrase/n10437" to="word/n206" xml:id="e206"/>
+  <a as="word" label="word" ref="word/n206" xml:id="206">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ɔ</f>
     </fs>
   </a>
-  <node xml:id="word/n35560"/>
-  <edge from="phrase/n10437" to="word/n35560" xml:id="e35560"/>
-  <a as="word" label="word" ref="word/n35560" xml:id="35560">
+  <node xml:id="word/n211"/>
+  <edge from="phrase/n10437" to="word/n211" xml:id="e211"/>
+  <a as="word" label="word" ref="word/n211" xml:id="211">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">fa</f>
     </fs>
   </a>
-  <node xml:id="word/n35561"/>
-  <edge from="phrase/n10437" to="word/n35561" xml:id="e35561"/>
-  <a as="word" label="word" ref="word/n35561" xml:id="35561">
+  <node xml:id="word/n215"/>
+  <edge from="phrase/n10437" to="word/n215" xml:id="e215"/>
+  <a as="word" label="word" ref="word/n215" xml:id="215">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="word/n35562"/>
-  <edge from="phrase/n10437" to="word/n35562" xml:id="e35562"/>
-  <a as="word" label="word" ref="word/n35562" xml:id="35562">
+  <node xml:id="word/n218"/>
+  <edge from="phrase/n10437" to="word/n218" xml:id="e218"/>
+  <a as="word" label="word" ref="word/n218" xml:id="218">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">no</f>
     </fs>
   </a>
-  <node xml:id="word/n35563"/>
-  <edge from="phrase/n10437" to="word/n35563" xml:id="e35563"/>
-  <a as="word" label="word" ref="word/n35563" xml:id="35563">
+  <node xml:id="word/n222"/>
+  <edge from="phrase/n10437" to="word/n222" xml:id="e222"/>
+  <a as="word" label="word" ref="word/n222" xml:id="222">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35564"/>
-  <edge from="phrase/n10437" to="word/n35564" xml:id="e35564"/>
-  <a as="word" label="word" ref="word/n35564" xml:id="35564">
+  <node xml:id="word/n225"/>
+  <edge from="phrase/n10437" to="word/n225" xml:id="e225"/>
+  <a as="word" label="word" ref="word/n225" xml:id="225">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">kɔ</f>
     </fs>
   </a>
-  <node xml:id="word/n35565"/>
-  <edge from="phrase/n10437" to="word/n35565" xml:id="e35565"/>
-  <a as="word" label="word" ref="word/n35565" xml:id="35565">
+  <node xml:id="word/n228"/>
+  <edge from="phrase/n10437" to="word/n228" xml:id="e228"/>
+  <a as="word" label="word" ref="word/n228" xml:id="228">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">dwaso</f>
     </fs>
   </a>
-  <node xml:id="word/n35589"/>
-  <edge from="phrase/n10491" to="word/n35589" xml:id="e35589"/>
-  <a as="word" label="word" ref="word/n35589" xml:id="35589">
+  <node xml:id="word/n233"/>
+  <edge from="phrase/n10491" to="word/n233" xml:id="e233"/>
+  <a as="word" label="word" ref="word/n233" xml:id="233">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">Abain</f>
     </fs>
   </a>
-  <node xml:id="word/n35590"/>
-  <edge from="phrase/n10491" to="word/n35590" xml:id="e35590"/>
-  <a as="word" label="word" ref="word/n35590" xml:id="35590">
+  <node xml:id="word/n237"/>
+  <edge from="phrase/n10491" to="word/n237" xml:id="e237"/>
+  <a as="word" label="word" ref="word/n237" xml:id="237">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ɛyɛ</f>
     </fs>
   </a>
-  <node xml:id="word/n35591"/>
-  <edge from="phrase/n10491" to="word/n35591" xml:id="e35591"/>
-  <a as="word" label="word" ref="word/n35591" xml:id="35591">
+  <node xml:id="word/n240"/>
+  <edge from="phrase/n10491" to="word/n240" xml:id="e240"/>
+  <a as="word" label="word" ref="word/n240" xml:id="240">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nyuɔma</f>
     </fs>
   </a>
-  <node xml:id="word/n35592"/>
-  <edge from="phrase/n10491" to="word/n35592" xml:id="e35592"/>
-  <a as="word" label="word" ref="word/n35592" xml:id="35592">
+  <node xml:id="word/n243"/>
+  <edge from="phrase/n10491" to="word/n243" xml:id="e243"/>
+  <a as="word" label="word" ref="word/n243" xml:id="243">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">a</f>
     </fs>
   </a>
-  <node xml:id="word/n35593"/>
-  <edge from="phrase/n10491" to="word/n35593" xml:id="e35593"/>
-  <a as="word" label="word" ref="word/n35593" xml:id="35593">
+  <node xml:id="word/n247"/>
+  <edge from="phrase/n10491" to="word/n247" xml:id="e247"/>
+  <a as="word" label="word" ref="word/n247" xml:id="247">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ɛbe</f>
     </fs>
   </a>
-  <node xml:id="word/n35594"/>
-  <edge from="phrase/n10491" to="word/n35594" xml:id="e35594"/>
-  <a as="word" label="word" ref="word/n35594" xml:id="35594">
+  <node xml:id="word/n250"/>
+  <edge from="phrase/n10491" to="word/n250" xml:id="e250"/>
+  <a as="word" label="word" ref="word/n250" xml:id="250">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">bua</f>
     </fs>
   </a>
-  <node xml:id="word/n35595"/>
-  <edge from="phrase/n10491" to="word/n35595" xml:id="e35595"/>
-  <a as="word" label="word" ref="word/n35595" xml:id="35595">
+  <node xml:id="word/n253"/>
+  <edge from="phrase/n10491" to="word/n253" xml:id="e253"/>
+  <a as="word" label="word" ref="word/n253" xml:id="253">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nsrahwɛ</f>
     </fs>
   </a>
-  <node xml:id="word/n35596"/>
-  <edge from="phrase/n10491" to="word/n35596" xml:id="e35596"/>
-  <a as="word" label="word" ref="word/n35596" xml:id="35596">
+  <node xml:id="word/n257"/>
+  <edge from="phrase/n10491" to="word/n257" xml:id="e257"/>
+  <a as="word" label="word" ref="word/n257" xml:id="257">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ewɔ</f>
     </fs>
   </a>
-  <node xml:id="word/n35597"/>
-  <edge from="phrase/n10491" to="word/n35597" xml:id="e35597"/>
-  <a as="word" label="word" ref="word/n35597" xml:id="35597">
+  <node xml:id="word/n260"/>
+  <edge from="phrase/n10491" to="word/n260" xml:id="e260"/>
+  <a as="word" label="word" ref="word/n260" xml:id="260">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ɔmain</f>
     </fs>
   </a>
-  <node xml:id="word/n35598"/>
-  <edge from="phrase/n10491" to="word/n35598" xml:id="e35598"/>
-  <a as="word" label="word" ref="word/n35598" xml:id="35598">
+  <node xml:id="word/n264"/>
+  <edge from="phrase/n10491" to="word/n264" xml:id="e264"/>
+  <a as="word" label="word" ref="word/n264" xml:id="264">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35631"/>
-  <edge from="phrase/n34986" to="word/n35631" xml:id="e35631"/>
-  <a as="word" label="word" ref="word/n35631" xml:id="35631">
+  <node xml:id="word/n269"/>
+  <edge from="phrase/n34986" to="word/n269" xml:id="e269"/>
+  <a as="word" label="word" ref="word/n269" xml:id="269">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">me</f>
     </fs>
   </a>
-  <node xml:id="word/n35632"/>
-  <edge from="phrase/n34986" to="word/n35632" xml:id="e35632"/>
-  <a as="word" label="word" ref="word/n35632" xml:id="35632">
+  <node xml:id="word/n27"/>
+  <edge from="phrase/n9064" to="word/n27" xml:id="e27"/>
+  <a as="word" label="word" ref="word/n27" xml:id="27">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">bere</f>
+    </fs>
+  </a>
+  <node xml:id="word/n273"/>
+  <edge from="phrase/n34986" to="word/n273" xml:id="e273"/>
+  <a as="word" label="word" ref="word/n273" xml:id="273">
+    <fs>
+      <f name="head">false</f>
       <f name="annotation_value">fa</f>
     </fs>
   </a>
-  <node xml:id="word/n35633"/>
-  <edge from="phrase/n34986" to="word/n35633" xml:id="e35633"/>
-  <a as="word" label="word" ref="word/n35633" xml:id="35633">
+  <node xml:id="word/n276"/>
+  <edge from="phrase/n34986" to="word/n276" xml:id="e276"/>
+  <a as="word" label="word" ref="word/n276" xml:id="276">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">afuo</f>
     </fs>
   </a>
-  <node xml:id="word/n35634"/>
-  <edge from="phrase/n34986" to="word/n35634" xml:id="e35634"/>
-  <a as="word" label="word" ref="word/n35634" xml:id="35634">
+  <node xml:id="word/n280"/>
+  <edge from="phrase/n34986" to="word/n280" xml:id="e280"/>
+  <a as="word" label="word" ref="word/n280" xml:id="280">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">no</f>
     </fs>
   </a>
-  <node xml:id="word/n35635"/>
-  <edge from="phrase/n34986" to="word/n35635" xml:id="e35635"/>
-  <a as="word" label="word" ref="word/n35635" xml:id="35635">
+  <node xml:id="word/n284"/>
+  <edge from="phrase/n34986" to="word/n284" xml:id="e284"/>
+  <a as="word" label="word" ref="word/n284" xml:id="284">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35636"/>
-  <edge from="phrase/n34986" to="word/n35636" xml:id="e35636"/>
-  <a as="word" label="word" ref="word/n35636" xml:id="35636">
+  <node xml:id="word/n287"/>
+  <edge from="phrase/n34986" to="word/n287" xml:id="e287"/>
+  <a as="word" label="word" ref="word/n287" xml:id="287">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">kɔ</f>
     </fs>
   </a>
-  <node xml:id="word/n35637"/>
-  <edge from="phrase/n34986" to="word/n35637" xml:id="e35637"/>
-  <a as="word" label="word" ref="word/n35637" xml:id="35637">
+  <node xml:id="word/n290"/>
+  <edge from="phrase/n34986" to="word/n290" xml:id="e290"/>
+  <a as="word" label="word" ref="word/n290" xml:id="290">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="word/n35661"/>
-  <edge from="phrase/n35334" to="word/n35661" xml:id="e35661"/>
-  <a as="word" label="word" ref="word/n35661" xml:id="35661">
+  <node xml:id="word/n296"/>
+  <edge from="phrase/n35334" to="word/n296" xml:id="e296"/>
+  <a as="word" label="word" ref="word/n296" xml:id="296">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">ná</f>
     </fs>
   </a>
-  <node xml:id="word/n35662"/>
-  <edge from="phrase/n35334" to="word/n35662" xml:id="e35662"/>
-  <a as="word" label="word" ref="word/n35662" xml:id="35662">
+  <node xml:id="word/n30"/>
+  <edge from="phrase/n9064" to="word/n30" xml:id="e30"/>
+  <a as="word" label="word" ref="word/n30" xml:id="30">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">ahorow</f>
+    </fs>
+  </a>
+  <node xml:id="word/n300"/>
+  <edge from="phrase/n35334" to="word/n300" xml:id="e300"/>
+  <a as="word" label="word" ref="word/n300" xml:id="300">
+    <fs>
+      <f name="head">false</f>
       <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="word/n35663"/>
-  <edge from="phrase/n35334" to="word/n35663" xml:id="e35663"/>
-  <a as="word" label="word" ref="word/n35663" xml:id="35663">
+  <node xml:id="word/n304"/>
+  <edge from="phrase/n35334" to="word/n304" xml:id="e304"/>
+  <a as="word" label="word" ref="word/n304" xml:id="304">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="word/n35664"/>
-  <edge from="phrase/n35334" to="word/n35664" xml:id="e35664"/>
-  <a as="word" label="word" ref="word/n35664" xml:id="35664">
+  <node xml:id="word/n308"/>
+  <edge from="phrase/n35334" to="word/n308" xml:id="e308"/>
+  <a as="word" label="word" ref="word/n308" xml:id="308">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">nà</f>
     </fs>
   </a>
-  <node xml:id="word/n35665"/>
-  <edge from="phrase/n35334" to="word/n35665" xml:id="e35665"/>
-  <a as="word" label="word" ref="word/n35665" xml:id="35665">
+  <node xml:id="word/n311"/>
+  <edge from="phrase/n35334" to="word/n311" xml:id="e311"/>
+  <a as="word" label="word" ref="word/n311" xml:id="311">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">mepɛ</f>
     </fs>
   </a>
-  <node xml:id="word/n35666"/>
-  <edge from="phrase/n35334" to="word/n35666" xml:id="e35666"/>
-  <a as="word" label="word" ref="word/n35666" xml:id="35666">
+  <node xml:id="word/n316"/>
+  <edge from="phrase/n35334" to="word/n316" xml:id="e316"/>
+  <a as="word" label="word" ref="word/n316" xml:id="316">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">sɛ</f>
     </fs>
   </a>
-  <node xml:id="word/n35667"/>
-  <edge from="phrase/n35334" to="word/n35667" xml:id="e35667"/>
-  <a as="word" label="word" ref="word/n35667" xml:id="35667">
+  <node xml:id="word/n320"/>
+  <edge from="phrase/n35334" to="word/n320" xml:id="e320"/>
+  <a as="word" label="word" ref="word/n320" xml:id="320">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">me</f>
     </fs>
   </a>
-  <node xml:id="word/n35668"/>
-  <edge from="phrase/n35334" to="word/n35668" xml:id="e35668"/>
-  <a as="word" label="word" ref="word/n35668" xml:id="35668">
+  <node xml:id="word/n325"/>
+  <edge from="phrase/n35334" to="word/n325" xml:id="e325"/>
+  <a as="word" label="word" ref="word/n325" xml:id="325">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">de</f>
     </fs>
   </a>
-  <node xml:id="word/n35669"/>
-  <edge from="phrase/n35334" to="word/n35669" xml:id="e35669"/>
-  <a as="word" label="word" ref="word/n35669" xml:id="35669">
+  <node xml:id="word/n328"/>
+  <edge from="phrase/n35334" to="word/n328" xml:id="e328"/>
+  <a as="word" label="word" ref="word/n328" xml:id="328">
     <fs>
       <f name="head">false</f>
-      <f name="parent_phrase">35334</f>
       <f name="annotation_value">kɔ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n33"/>
+  <edge from="phrase/n9064" to="word/n33" xml:id="e33"/>
+  <a as="word" label="word" ref="word/n33" xml:id="33">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">dumbienu</f>
+    </fs>
+  </a>
+  <node xml:id="word/n37"/>
+  <edge from="phrase/n9064" to="word/n37" xml:id="e37"/>
+  <a as="word" label="word" ref="word/n37" xml:id="37">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">a</f>
+    </fs>
+  </a>
+  <node xml:id="word/n41"/>
+  <edge from="phrase/n9064" to="word/n41" xml:id="e41"/>
+  <a as="word" label="word" ref="word/n41" xml:id="41">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">εka</f>
+    </fs>
+  </a>
+  <node xml:id="word/n47"/>
+  <edge from="phrase/n9064" to="word/n47" xml:id="e47"/>
+  <a as="word" label="word" ref="word/n47" xml:id="47">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">bɔ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n50"/>
+  <edge from="phrase/n9064" to="word/n50" xml:id="e50"/>
+  <a as="word" label="word" ref="word/n50" xml:id="50">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">mu</f>
+    </fs>
+  </a>
+  <node xml:id="word/n53"/>
+  <edge from="phrase/n9064" to="word/n53" xml:id="e53"/>
+  <a as="word" label="word" ref="word/n53" xml:id="53">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">yε</f>
+    </fs>
+  </a>
+  <node xml:id="word/n56"/>
+  <edge from="phrase/n9064" to="word/n56" xml:id="e56"/>
+  <a as="word" label="word" ref="word/n56" xml:id="56">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">afe</f>
+    </fs>
+  </a>
+  <node xml:id="word/n59"/>
+  <edge from="phrase/n9064" to="word/n59" xml:id="e59"/>
+  <a as="word" label="word" ref="word/n59" xml:id="59">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">baako</f>
+    </fs>
+  </a>
+  <node xml:id="word/n64"/>
+  <edge from="phrase/n9121" to="word/n64" xml:id="e64"/>
+  <a as="word" label="word" ref="word/n64" xml:id="64">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">bere</f>
+    </fs>
+  </a>
+  <node xml:id="word/n67"/>
+  <edge from="phrase/n9121" to="word/n67" xml:id="e67"/>
+  <a as="word" label="word" ref="word/n67" xml:id="67">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">ahorow</f>
+    </fs>
+  </a>
+  <node xml:id="word/n71"/>
+  <edge from="phrase/n9121" to="word/n71" xml:id="e71"/>
+  <a as="word" label="word" ref="word/n71" xml:id="71">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">dumbienu</f>
+    </fs>
+  </a>
+  <node xml:id="word/n75"/>
+  <edge from="phrase/n9121" to="word/n75" xml:id="e75"/>
+  <a as="word" label="word" ref="word/n75" xml:id="75">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">a</f>
+    </fs>
+  </a>
+  <node xml:id="word/n79"/>
+  <edge from="phrase/n9121" to="word/n79" xml:id="e79"/>
+  <a as="word" label="word" ref="word/n79" xml:id="79">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">εka</f>
+    </fs>
+  </a>
+  <node xml:id="word/n85"/>
+  <edge from="phrase/n9121" to="word/n85" xml:id="e85"/>
+  <a as="word" label="word" ref="word/n85" xml:id="85">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">bɔ</f>
+    </fs>
+  </a>
+  <node xml:id="word/n88"/>
+  <edge from="phrase/n9121" to="word/n88" xml:id="e88"/>
+  <a as="word" label="word" ref="word/n88" xml:id="88">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">mu</f>
+    </fs>
+  </a>
+  <node xml:id="word/n91"/>
+  <edge from="phrase/n9121" to="word/n91" xml:id="e91"/>
+  <a as="word" label="word" ref="word/n91" xml:id="91">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">yε</f>
+    </fs>
+  </a>
+  <node xml:id="word/n94"/>
+  <edge from="phrase/n9121" to="word/n94" xml:id="e94"/>
+  <a as="word" label="word" ref="word/n94" xml:id="94">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">afe</f>
+    </fs>
+  </a>
+  <node xml:id="word/n97"/>
+  <edge from="phrase/n9121" to="word/n97" xml:id="e97"/>
+  <a as="word" label="word" ref="word/n97" xml:id="97">
+    <fs>
+      <f name="head">false</f>
+      <f name="annotation_value">baako</f>
     </fs>
   </a>
 </graph>

@@ -9,864 +9,810 @@
       <annotationSpace as.id="morpheme"/>
     </annotationSpaces>
   </graphHeader>
-  <node xml:id="morpheme/n35342"/>
-  <edge from="word/n35335" to="morpheme/n35342" xml:id="e35342"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35342" xml:id="35342">
+  <node xml:id="morpheme/n104"/>
+  <edge from="word/n102" to="morpheme/n104" xml:id="e104"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n104" xml:id="104">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">road</f>
+      <f name="baseform">kwan</f>
+      <f name="annotation_value">kwan</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35345"/>
-  <edge from="word/n35336" to="morpheme/n35345" xml:id="e35345"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35345" xml:id="35345">
+  <node xml:id="morpheme/n106"/>
+  <edge from="word/n102" to="morpheme/n106" xml:id="e106"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n106" xml:id="106">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">cross</f>
+      <f name="baseform">twa</f>
+      <f name="annotation_value">twa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35348"/>
-  <edge from="word/n35337" to="morpheme/n35348" xml:id="e35348"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35348" xml:id="35348">
+  <node xml:id="morpheme/n107"/>
+  <edge from="word/n102" to="morpheme/n107" xml:id="e107"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n107" xml:id="107">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">go</f>
+      <f name="baseform">kɔ</f>
+      <f name="annotation_value">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35351"/>
-  <edge from="word/n35338" to="morpheme/n35351" xml:id="e35351"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35351" xml:id="35351">
+  <node xml:id="morpheme/n108"/>
+  <edge from="word/n102" to="morpheme/n108" xml:id="e108"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n108" xml:id="108">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">fetch</f>
+      <f name="baseform">sa</f>
+      <f name="annotation_value">sa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35354"/>
-  <edge from="word/n35339" to="morpheme/n35354" xml:id="e35354"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35354" xml:id="35354">
+  <node xml:id="morpheme/n109"/>
+  <edge from="word/n102" to="morpheme/n109" xml:id="e109"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n109" xml:id="109">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">water</f>
+      <f name="baseform">nsuo</f>
+      <f name="annotation_value">nsuo</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35357"/>
-  <edge from="word/n35340" to="morpheme/n35357" xml:id="e35357"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35357" xml:id="35357">
+  <node xml:id="morpheme/n112"/>
+  <edge from="word/n110" to="morpheme/n112" xml:id="e112"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n112" xml:id="112">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">a</f>
+      <f name="annotation_value">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35372"/>
-  <edge from="word/n35361" to="morpheme/n35372" xml:id="e35372"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35372" xml:id="35372">
+  <node xml:id="morpheme/n115"/>
+  <edge from="word/n113" to="morpheme/n115" xml:id="e115"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n115" xml:id="115">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">do</f>
+      <f name="baseform">yɛ</f>
+      <f name="annotation_value">yɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35375"/>
-  <edge from="word/n35362" to="morpheme/n35375" xml:id="e35375"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35375" xml:id="35375">
+  <node xml:id="morpheme/n118"/>
+  <edge from="word/n116" to="morpheme/n118" xml:id="e118"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n118" xml:id="118">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">dangerous</f>
+      <f name="baseform">hu</f>
+      <f name="annotation_value">hu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35378"/>
-  <edge from="word/n35363" to="morpheme/n35378" xml:id="e35378"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35378" xml:id="35378">
+  <node xml:id="morpheme/n121"/>
+  <edge from="word/n119" to="morpheme/n121" xml:id="e121"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n121" xml:id="121">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">in</f>
+      <f name="baseform">wɔ</f>
+      <f name="annotation_value">wɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35381"/>
-  <edge from="word/n35364" to="morpheme/n35381" xml:id="e35381"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35381" xml:id="35381">
+  <node xml:id="morpheme/n124"/>
+  <edge from="word/n122" to="morpheme/n124" xml:id="e124"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n124" xml:id="124">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">village</f>
+      <f name="baseform">ekorasi</f>
+      <f name="annotation_value">ekorasi</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35384"/>
-  <edge from="word/n35365" to="morpheme/n35384" xml:id="e35384"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35384" xml:id="35384">
+  <node xml:id="morpheme/n128"/>
+  <edge from="word/n126" to="morpheme/n128" xml:id="e128"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n128" xml:id="128">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35387"/>
-  <edge from="word/n35366" to="morpheme/n35387" xml:id="e35387"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35387" xml:id="35387">
+  <node xml:id="morpheme/n133"/>
+  <edge from="word/n131" to="morpheme/n133" xml:id="e133"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n133" xml:id="133">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">Akosua</f>
+      <f name="baseform">akosua</f>
+      <f name="annotation_value">akosua</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35390"/>
-  <edge from="word/n35367" to="morpheme/n35390" xml:id="e35390"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35390" xml:id="35390">
+  <node xml:id="morpheme/n137"/>
+  <edge from="word/n135" to="morpheme/n137" xml:id="e137"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n137" xml:id="137">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">pour</f>
+      <f name="baseform">hwie</f>
+      <f name="annotation_value">hwiee</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35393"/>
-  <edge from="word/n35368" to="morpheme/n35393" xml:id="e35393"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35393" xml:id="35393">
+  <node xml:id="morpheme/n140"/>
+  <edge from="word/n138" to="morpheme/n140" xml:id="e140"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n140" xml:id="140">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">water</f>
+      <f name="baseform">nsuo</f>
+      <f name="annotation_value">nsuo</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35396"/>
-  <edge from="word/n35369" to="morpheme/n35396" xml:id="e35396"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35396" xml:id="35396">
+  <node xml:id="morpheme/n144"/>
+  <edge from="word/n142" to="morpheme/n144" xml:id="e144"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n144" xml:id="144">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">nó</f>
+      <f name="annotation_value">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35399"/>
-  <edge from="word/n35370" to="morpheme/n35399" xml:id="e35399"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35399" xml:id="35399">
+  <node xml:id="morpheme/n148"/>
+  <edge from="word/n146" to="morpheme/n148" xml:id="e148"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n148" xml:id="148">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">pass</f>
+      <f name="baseform">fa</f>
+      <f name="annotation_value">faa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35414"/>
-  <edge from="word/n35403" to="morpheme/n35414" xml:id="e35414"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35414" xml:id="35414">
+  <node xml:id="morpheme/n151"/>
+  <edge from="word/n149" to="morpheme/n151" xml:id="e151"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n151" xml:id="151">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">hole</f>
+      <f name="baseform">tokuro</f>
+      <f name="annotation_value">tokuro</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35417"/>
-  <edge from="word/n35404" to="morpheme/n35417" xml:id="e35417"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35417" xml:id="35417">
+  <node xml:id="morpheme/n155"/>
+  <edge from="word/n153" to="morpheme/n155" xml:id="e155"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n155" xml:id="155">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">nó</f>
+      <f name="annotation_value">nò</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35420"/>
-  <edge from="word/n35405" to="morpheme/n35420" xml:id="e35420"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35420" xml:id="35420">
+  <node xml:id="morpheme/n159"/>
+  <edge from="word/n157" to="morpheme/n159" xml:id="e159"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n159" xml:id="159">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35423"/>
-  <edge from="word/n35406" to="morpheme/n35423" xml:id="e35423"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35423" xml:id="35423">
+  <node xml:id="morpheme/n165"/>
+  <edge from="word/n163" to="morpheme/n165" xml:id="e165"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n165" xml:id="165">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">mɪ</f>
+      <f name="annotation_value">mɪ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35426"/>
-  <edge from="word/n35407" to="morpheme/n35426" xml:id="e35426"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35426" xml:id="35426">
+  <node xml:id="morpheme/n170"/>
+  <edge from="word/n168" to="morpheme/n170" xml:id="e170"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n170" xml:id="170">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">drive</f>
+      <f name="baseform">twi</f>
+      <f name="annotation_value">twii</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35429"/>
-  <edge from="word/n35408" to="morpheme/n35429" xml:id="e35429"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35429" xml:id="35429">
+  <node xml:id="morpheme/n173"/>
+  <edge from="word/n171" to="morpheme/n173" xml:id="e173"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n173" xml:id="173">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">car</f>
+      <f name="baseform">kaa</f>
+      <f name="annotation_value">kaa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35432"/>
-  <edge from="word/n35409" to="morpheme/n35432" xml:id="e35432"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35432" xml:id="35432">
+  <node xml:id="morpheme/n177"/>
+  <edge from="word/n175" to="morpheme/n177" xml:id="e177"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n177" xml:id="177">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">nó</f>
+      <f name="annotation_value">nó</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35435"/>
-  <edge from="word/n35410" to="morpheme/n35435" xml:id="e35435"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35435" xml:id="35435">
+  <node xml:id="morpheme/n181"/>
+  <edge from="word/n179" to="morpheme/n181" xml:id="e181"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n181" xml:id="181">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">from</f>
+      <f name="baseform">firi</f>
+      <f name="annotation_value">firii</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35438"/>
-  <edge from="word/n35411" to="morpheme/n35438" xml:id="e35438"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35438" xml:id="35438">
+  <node xml:id="morpheme/n184"/>
+  <edge from="word/n182" to="morpheme/n184" xml:id="e184"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n184" xml:id="184">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">house</f>
+      <f name="baseform">fie</f>
+      <f name="annotation_value">fie</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35441"/>
-  <edge from="word/n35412" to="morpheme/n35441" xml:id="e35441"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35441" xml:id="35441">
+  <node xml:id="morpheme/n187"/>
+  <edge from="word/n185" to="morpheme/n187" xml:id="e187"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n187" xml:id="187">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">pass</f>
+      <f name="baseform">fa</f>
+      <f name="annotation_value">faa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35453"/>
-  <edge from="word/n35445" to="morpheme/n35453" xml:id="e35453"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35453" xml:id="35453">
+  <node xml:id="morpheme/n190"/>
+  <edge from="word/n188" to="morpheme/n190" xml:id="e190"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n190" xml:id="190">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">school</f>
+      <f name="baseform">sukuu</f>
+      <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35456"/>
-  <edge from="word/n35446" to="morpheme/n35456" xml:id="e35456"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35456" xml:id="35456">
+  <node xml:id="morpheme/n193"/>
+  <edge from="word/n191" to="morpheme/n193" xml:id="e193"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n193" xml:id="193">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">nó</f>
+      <f name="annotation_value">nò</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35459"/>
-  <edge from="word/n35447" to="morpheme/n35459" xml:id="e35459"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35459" xml:id="35459">
+  <node xml:id="morpheme/n197"/>
+  <edge from="word/n195" to="morpheme/n197" xml:id="e197"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n197" xml:id="197">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35462"/>
-  <edge from="word/n35448" to="morpheme/n35462" xml:id="e35462"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35462" xml:id="35462">
+  <node xml:id="morpheme/n200"/>
+  <edge from="word/n198" to="morpheme/n200" xml:id="e200"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n200" xml:id="200">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">go</f>
+      <f name="baseform">kɔ</f>
+      <f name="annotation_value">kɔɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35465"/>
-  <edge from="word/n35449" to="morpheme/n35465" xml:id="e35465"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35465" xml:id="35465">
+  <node xml:id="morpheme/n203"/>
+  <edge from="word/n201" to="morpheme/n203" xml:id="e203"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n203" xml:id="203">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">church</f>
+      <f name="baseform">asɔrɪ</f>
+      <f name="annotation_value">asɔrɪ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35468"/>
-  <edge from="word/n35450" to="morpheme/n35468" xml:id="e35468"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35468" xml:id="35468">
+  <node xml:id="morpheme/n208"/>
+  <edge from="word/n206" to="morpheme/n208" xml:id="e208"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n208" xml:id="208">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">ɔ</f>
+      <f name="annotation_value">ɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35471"/>
-  <edge from="word/n35451" to="morpheme/n35471" xml:id="e35471"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35471" xml:id="35471">
+  <node xml:id="morpheme/n213"/>
+  <edge from="word/n211" to="morpheme/n213" xml:id="e213"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n213" xml:id="213">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">pass</f>
+      <f name="baseform">fa</f>
+      <f name="annotation_value">fa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35484"/>
-  <edge from="word/n35475" to="morpheme/n35484" xml:id="e35484"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35484" xml:id="35484">
+  <node xml:id="morpheme/n217"/>
+  <edge from="word/n215" to="morpheme/n217" xml:id="e217"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n217" xml:id="217">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">school</f>
+      <f name="baseform">sukuu</f>
+      <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35487"/>
-  <edge from="word/n35476" to="morpheme/n35487" xml:id="e35487"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35487" xml:id="35487">
+  <node xml:id="morpheme/n220"/>
+  <edge from="word/n218" to="morpheme/n220" xml:id="e220"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n220" xml:id="220">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">no</f>
+      <f name="annotation_value">no</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35490"/>
-  <edge from="word/n35477" to="morpheme/n35490" xml:id="e35490"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35490" xml:id="35490">
+  <node xml:id="morpheme/n224"/>
+  <edge from="word/n222" to="morpheme/n224" xml:id="e224"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n224" xml:id="224">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35493"/>
-  <edge from="word/n35478" to="morpheme/n35493" xml:id="e35493"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35493" xml:id="35493">
+  <node xml:id="morpheme/n227"/>
+  <edge from="word/n225" to="morpheme/n227" xml:id="e227"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n227" xml:id="227">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">go</f>
+      <f name="baseform">kɔ</f>
+      <f name="annotation_value">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35496"/>
-  <edge from="word/n35479" to="morpheme/n35496" xml:id="e35496"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35496" xml:id="35496">
+  <node xml:id="morpheme/n230"/>
+  <edge from="word/n228" to="morpheme/n230" xml:id="e230"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n230" xml:id="230">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">market</f>
+      <f name="baseform">dwaso</f>
+      <f name="annotation_value">dwaso</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35499"/>
-  <edge from="word/n35480" to="morpheme/n35499" xml:id="e35499"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35499" xml:id="35499">
+  <node xml:id="morpheme/n235"/>
+  <edge from="word/n233" to="morpheme/n235" xml:id="e235"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n235" xml:id="235">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">government</f>
+      <f name="baseform">abain</f>
+      <f name="annotation_value">abain</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35502"/>
-  <edge from="word/n35481" to="morpheme/n35502" xml:id="e35502"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35502" xml:id="35502">
+  <node xml:id="morpheme/n239"/>
+  <edge from="word/n237" to="morpheme/n239" xml:id="e239"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n239" xml:id="239">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">do</f>
+      <f name="baseform">ɛyɛ</f>
+      <f name="annotation_value">ɛyɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35505"/>
-  <edge from="word/n35482" to="morpheme/n35505" xml:id="e35505"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35505" xml:id="35505">
+  <node xml:id="morpheme/n242"/>
+  <edge from="word/n240" to="morpheme/n242" xml:id="e242"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n242" xml:id="242">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">things</f>
+      <f name="baseform">nyuɔma</f>
+      <f name="annotation_value">nyuɔma</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35522"/>
-  <edge from="word/n35509" to="morpheme/n35522" xml:id="e35522"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35522" xml:id="35522">
+  <node xml:id="morpheme/n245"/>
+  <edge from="word/n243" to="morpheme/n245" xml:id="e245"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n245" xml:id="245">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">that</f>
+      <f name="baseform">a</f>
+      <f name="annotation_value">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35525"/>
-  <edge from="word/n35510" to="morpheme/n35525" xml:id="e35525"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35525" xml:id="35525">
+  <node xml:id="morpheme/n249"/>
+  <edge from="word/n247" to="morpheme/n249" xml:id="e249"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n249" xml:id="249">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">will</f>
+      <f name="baseform">ɛbe</f>
+      <f name="annotation_value">ɛbe</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35528"/>
-  <edge from="word/n35511" to="morpheme/n35528" xml:id="e35528"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35528" xml:id="35528">
+  <node xml:id="morpheme/n252"/>
+  <edge from="word/n250" to="morpheme/n252" xml:id="e252"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n252" xml:id="252">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">help</f>
+      <f name="baseform">bua</f>
+      <f name="annotation_value">bua</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35531"/>
-  <edge from="word/n35512" to="morpheme/n35531" xml:id="e35531"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35531" xml:id="35531">
+  <node xml:id="morpheme/n255"/>
+  <edge from="word/n253" to="morpheme/n255" xml:id="e255"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n255" xml:id="255">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">visit</f>
+      <f name="baseform">nsra</f>
+      <f name="annotation_value">nsra</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35534"/>
-  <edge from="word/n35513" to="morpheme/n35534" xml:id="e35534"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35534" xml:id="35534">
+  <node xml:id="morpheme/n256"/>
+  <edge from="word/n253" to="morpheme/n256" xml:id="e256"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n256" xml:id="256">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">see</f>
+      <f name="baseform">hwɛ</f>
+      <f name="annotation_value">hwɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35537"/>
-  <edge from="word/n35514" to="morpheme/n35537" xml:id="e35537"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35537" xml:id="35537">
+  <node xml:id="morpheme/n259"/>
+  <edge from="word/n257" to="morpheme/n259" xml:id="e259"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n259" xml:id="259">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">at</f>
+      <f name="baseform">ewɔ</f>
+      <f name="annotation_value">ewɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35540"/>
-  <edge from="word/n35515" to="morpheme/n35540" xml:id="e35540"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35540" xml:id="35540">
+  <node xml:id="morpheme/n262"/>
+  <edge from="word/n260" to="morpheme/n262" xml:id="e262"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n262" xml:id="262">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">state</f>
+      <f name="baseform">ɔmain</f>
+      <f name="annotation_value">ɔmain</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35543"/>
-  <edge from="word/n35516" to="morpheme/n35543" xml:id="e35543"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35543" xml:id="35543">
+  <node xml:id="morpheme/n266"/>
+  <edge from="word/n264" to="morpheme/n266" xml:id="e266"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n266" xml:id="266">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35546"/>
-  <edge from="word/n35517" to="morpheme/n35546" xml:id="e35546"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35546" xml:id="35546">
+  <node xml:id="morpheme/n271"/>
+  <edge from="word/n269" to="morpheme/n271" xml:id="e271"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n271" xml:id="271">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">I</f>
+      <f name="baseform">me</f>
+      <f name="annotation_value">me</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35549"/>
-  <edge from="word/n35518" to="morpheme/n35549" xml:id="e35549"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35549" xml:id="35549">
+  <node xml:id="morpheme/n275"/>
+  <edge from="word/n273" to="morpheme/n275" xml:id="e275"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n275" xml:id="275">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">pass</f>
+      <f name="baseform">fa</f>
+      <f name="annotation_value">fa</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35552"/>
-  <edge from="word/n35519" to="morpheme/n35552" xml:id="e35552"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35552" xml:id="35552">
+  <node xml:id="morpheme/n278"/>
+  <edge from="word/n276" to="morpheme/n278" xml:id="e278"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n278" xml:id="278">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">farm</f>
+      <f name="baseform">afuo</f>
+      <f name="annotation_value">afuo</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35555"/>
-  <edge from="word/n35520" to="morpheme/n35555" xml:id="e35555"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35555" xml:id="35555">
+  <node xml:id="morpheme/n282"/>
+  <edge from="word/n280" to="morpheme/n282" xml:id="e282"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n282" xml:id="282">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">no</f>
+      <f name="annotation_value">no</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35567"/>
-  <edge from="word/n35559" to="morpheme/n35567" xml:id="e35567"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35567" xml:id="35567">
+  <node xml:id="morpheme/n286"/>
+  <edge from="word/n284" to="morpheme/n286" xml:id="e286"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n286" xml:id="286">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35570"/>
-  <edge from="word/n35560" to="morpheme/n35570" xml:id="e35570"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35570" xml:id="35570">
+  <node xml:id="morpheme/n289"/>
+  <edge from="word/n287" to="morpheme/n289" xml:id="e289"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n289" xml:id="289">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">go</f>
+      <f name="baseform">kɔ</f>
+      <f name="annotation_value">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35573"/>
-  <edge from="word/n35561" to="morpheme/n35573" xml:id="e35573"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35573" xml:id="35573">
+  <node xml:id="morpheme/n29"/>
+  <edge from="word/n27" to="morpheme/n29" xml:id="e29"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n29" xml:id="29">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">time</f>
+      <f name="baseform">bere</f>
+      <f name="annotation_value">bere</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35576"/>
-  <edge from="word/n35562" to="morpheme/n35576" xml:id="e35576"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35576" xml:id="35576">
+  <node xml:id="morpheme/n292"/>
+  <edge from="word/n290" to="morpheme/n292" xml:id="e292"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n292" xml:id="292">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">school</f>
+      <f name="baseform">sukuu</f>
+      <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35579"/>
-  <edge from="word/n35563" to="morpheme/n35579" xml:id="e35579"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35579" xml:id="35579">
+  <node xml:id="morpheme/n298"/>
+  <edge from="word/n296" to="morpheme/n298" xml:id="e298"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n298" xml:id="298">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
       <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">ná</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35582"/>
-  <edge from="word/n35564" to="morpheme/n35582" xml:id="e35582"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35582" xml:id="35582">
+  <node xml:id="morpheme/n302"/>
+  <edge from="word/n300" to="morpheme/n302" xml:id="e302"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n302" xml:id="302">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">school</f>
+      <f name="baseform">sukuu</f>
+      <f name="annotation_value">sukuu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35585"/>
-  <edge from="word/n35565" to="morpheme/n35585" xml:id="e35585"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35585" xml:id="35585">
+  <node xml:id="morpheme/n306"/>
+  <edge from="word/n304" to="morpheme/n306" xml:id="e306"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n306" xml:id="306">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35600"/>
-  <edge from="word/n35589" to="morpheme/n35600" xml:id="e35600"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35600" xml:id="35600">
+  <node xml:id="morpheme/n310"/>
+  <edge from="word/n308" to="morpheme/n310" xml:id="e310"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n310" xml:id="310">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
+      <f name="meaning">and</f>
       <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="annotation_value">nà</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35603"/>
-  <edge from="word/n35590" to="morpheme/n35603" xml:id="e35603"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35603" xml:id="35603">
+  <node xml:id="morpheme/n313"/>
+  <edge from="word/n311" to="morpheme/n313" xml:id="e313"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n313" xml:id="313">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">me</f>
+      <f name="annotation_value">me</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35606"/>
-  <edge from="word/n35591" to="morpheme/n35606" xml:id="e35606"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35606" xml:id="35606">
+  <node xml:id="morpheme/n315"/>
+  <edge from="word/n311" to="morpheme/n315" xml:id="e315"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n315" xml:id="315">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">want</f>
+      <f name="baseform">pɛ</f>
+      <f name="annotation_value">pɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35609"/>
-  <edge from="word/n35592" to="morpheme/n35609" xml:id="e35609"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35609" xml:id="35609">
+  <node xml:id="morpheme/n318"/>
+  <edge from="word/n316" to="morpheme/n318" xml:id="e318"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n318" xml:id="318">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">sɛ</f>
+      <f name="annotation_value">sɛ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35612"/>
-  <edge from="word/n35593" to="morpheme/n35612" xml:id="e35612"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35612" xml:id="35612">
+  <node xml:id="morpheme/n32"/>
+  <edge from="word/n30" to="morpheme/n32" xml:id="e32"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n32" xml:id="32">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">multiply</f>
+      <f name="baseform">ahorow</f>
+      <f name="annotation_value">ahorow</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35615"/>
-  <edge from="word/n35594" to="morpheme/n35615" xml:id="e35615"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35615" xml:id="35615">
+  <node xml:id="morpheme/n322"/>
+  <edge from="word/n320" to="morpheme/n322" xml:id="e322"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n322" xml:id="322">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">me</f>
+      <f name="annotation_value">me</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35618"/>
-  <edge from="word/n35595" to="morpheme/n35618" xml:id="e35618"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35618" xml:id="35618">
+  <node xml:id="morpheme/n327"/>
+  <edge from="word/n325" to="morpheme/n327" xml:id="e327"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n327" xml:id="327">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">use</f>
+      <f name="baseform">de</f>
+      <f name="annotation_value">de</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35621"/>
-  <edge from="word/n35596" to="morpheme/n35621" xml:id="e35621"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35621" xml:id="35621">
+  <node xml:id="morpheme/n330"/>
+  <edge from="word/n328" to="morpheme/n330" xml:id="e330"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n330" xml:id="330">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">go</f>
+      <f name="baseform">kɔ</f>
+      <f name="annotation_value">kɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35624"/>
-  <edge from="word/n35597" to="morpheme/n35624" xml:id="e35624"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35624" xml:id="35624">
+  <node xml:id="morpheme/n35"/>
+  <edge from="word/n33" to="morpheme/n35" xml:id="e35"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n35" xml:id="35">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">ten</f>
+      <f name="baseform">du</f>
+      <f name="annotation_value">du</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35627"/>
-  <edge from="word/n35598" to="morpheme/n35627" xml:id="e35627"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35627" xml:id="35627">
+  <node xml:id="morpheme/n36"/>
+  <edge from="word/n33" to="morpheme/n36" xml:id="e36"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n36" xml:id="36">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">two</f>
+      <f name="baseform">mbienu</f>
+      <f name="annotation_value">mbienu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35639"/>
-  <edge from="word/n35631" to="morpheme/n35639" xml:id="e35639"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35639" xml:id="35639">
+  <node xml:id="morpheme/n39"/>
+  <edge from="word/n37" to="morpheme/n39" xml:id="e39"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n39" xml:id="39">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">a</f>
+      <f name="annotation_value">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35642"/>
-  <edge from="word/n35632" to="morpheme/n35642" xml:id="e35642"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35642" xml:id="35642">
+  <node xml:id="morpheme/n43"/>
+  <edge from="word/n41" to="morpheme/n43" xml:id="e43"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n43" xml:id="43">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">ε</f>
+      <f name="annotation_value">ε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35645"/>
-  <edge from="word/n35633" to="morpheme/n35645" xml:id="e35645"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35645" xml:id="35645">
+  <node xml:id="morpheme/n46"/>
+  <edge from="word/n41" to="morpheme/n46" xml:id="e46"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n46" xml:id="46">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">push</f>
+      <f name="baseform">ka</f>
+      <f name="annotation_value">ka</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35648"/>
-  <edge from="word/n35634" to="morpheme/n35648" xml:id="e35648"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35648" xml:id="35648">
+  <node xml:id="morpheme/n49"/>
+  <edge from="word/n47" to="morpheme/n49" xml:id="e49"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n49" xml:id="49">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">hit</f>
+      <f name="baseform">bɔ</f>
+      <f name="annotation_value">bɔ</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35651"/>
-  <edge from="word/n35635" to="morpheme/n35651" xml:id="e35651"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35651" xml:id="35651">
+  <node xml:id="morpheme/n52"/>
+  <edge from="word/n50" to="morpheme/n52" xml:id="e52"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n52" xml:id="52">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35654"/>
-  <edge from="word/n35636" to="morpheme/n35654" xml:id="e35654"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35654" xml:id="35654">
+  <node xml:id="morpheme/n55"/>
+  <edge from="word/n53" to="morpheme/n55" xml:id="e55"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n55" xml:id="55">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">be</f>
+      <f name="baseform">yε</f>
+      <f name="annotation_value">yε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35657"/>
-  <edge from="word/n35637" to="morpheme/n35657" xml:id="e35657"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35657" xml:id="35657">
+  <node xml:id="morpheme/n58"/>
+  <edge from="word/n56" to="morpheme/n58" xml:id="e58"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n58" xml:id="58">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">year</f>
+      <f name="baseform">afe</f>
+      <f name="annotation_value">afe</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35671"/>
-  <edge from="word/n35661" to="morpheme/n35671" xml:id="e35671"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35671" xml:id="35671">
+  <node xml:id="morpheme/n61"/>
+  <edge from="word/n59" to="morpheme/n61" xml:id="e61"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n61" xml:id="61">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">one</f>
+      <f name="baseform">baako</f>
+      <f name="annotation_value">baako</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35674"/>
-  <edge from="word/n35662" to="morpheme/n35674" xml:id="e35674"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35674" xml:id="35674">
+  <node xml:id="morpheme/n66"/>
+  <edge from="word/n64" to="morpheme/n66" xml:id="e66"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n66" xml:id="66">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">time</f>
+      <f name="baseform">bere</f>
+      <f name="annotation_value">bere</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35677"/>
-  <edge from="word/n35663" to="morpheme/n35677" xml:id="e35677"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35677" xml:id="35677">
+  <node xml:id="morpheme/n69"/>
+  <edge from="word/n67" to="morpheme/n69" xml:id="e69"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n69" xml:id="69">
     <fs>
-      <f name="annotation_value">ná</f>
       <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">ahorow</f>
+      <f name="annotation_value">ahorow</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35680"/>
-  <edge from="word/n35664" to="morpheme/n35680" xml:id="e35680"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35680" xml:id="35680">
+  <node xml:id="morpheme/n73"/>
+  <edge from="word/n71" to="morpheme/n73" xml:id="e73"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n73" xml:id="73">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">ten</f>
+      <f name="baseform">du</f>
+      <f name="annotation_value">du</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35683"/>
-  <edge from="word/n35665" to="morpheme/n35683" xml:id="e35683"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35683" xml:id="35683">
+  <node xml:id="morpheme/n74"/>
+  <edge from="word/n71" to="morpheme/n74" xml:id="e74"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n74" xml:id="74">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">two</f>
+      <f name="baseform">mbienu</f>
+      <f name="annotation_value">mbienu</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35686"/>
-  <edge from="word/n35666" to="morpheme/n35686" xml:id="e35686"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35686" xml:id="35686">
+  <node xml:id="morpheme/n77"/>
+  <edge from="word/n75" to="morpheme/n77" xml:id="e77"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n77" xml:id="77">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">a</f>
+      <f name="annotation_value">a</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35689"/>
-  <edge from="word/n35667" to="morpheme/n35689" xml:id="e35689"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35689" xml:id="35689">
+  <node xml:id="morpheme/n81"/>
+  <edge from="word/n79" to="morpheme/n81" xml:id="e81"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n81" xml:id="81">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="baseform">ε</f>
+      <f name="annotation_value">ε</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35692"/>
-  <edge from="word/n35668" to="morpheme/n35692" xml:id="e35692"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35692" xml:id="35692">
+  <node xml:id="morpheme/n84"/>
+  <edge from="word/n79" to="morpheme/n84" xml:id="e84"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n84" xml:id="84">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">push</f>
+      <f name="baseform">ka</f>
+      <f name="annotation_value">ka</f>
     </fs>
   </a>
-  <node xml:id="morpheme/n35695"/>
-  <edge from="word/n35669" to="morpheme/n35695" xml:id="e35695"/>
-  <a as="morpheme" label="morpheme" ref="morpheme/n35695" xml:id="35695">
+  <node xml:id="morpheme/n87"/>
+  <edge from="word/n85" to="morpheme/n87" xml:id="e87"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n87" xml:id="87">
     <fs>
-      <f name="annotation_value">ná</f>
-      <f name="meaning"/>
-      <f name="baseform">na</f>
-      <f name="parent_phrase">35334</f>
+      <f name="meaning">hit</f>
+      <f name="baseform">bɔ</f>
+      <f name="annotation_value">bɔ</f>
+    </fs>
+  </a>
+  <node xml:id="morpheme/n90"/>
+  <edge from="word/n88" to="morpheme/n90" xml:id="e90"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n90" xml:id="90">
+    <fs>
+      <f name="meaning">inside</f>
+      <f name="baseform">mu</f>
+      <f name="annotation_value">mu</f>
+    </fs>
+  </a>
+  <node xml:id="morpheme/n93"/>
+  <edge from="word/n91" to="morpheme/n93" xml:id="e93"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n93" xml:id="93">
+    <fs>
+      <f name="meaning">make</f>
+      <f name="baseform">yε</f>
+      <f name="annotation_value">yε</f>
+    </fs>
+  </a>
+  <node xml:id="morpheme/n96"/>
+  <edge from="word/n94" to="morpheme/n96" xml:id="e96"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n96" xml:id="96">
+    <fs>
+      <f name="meaning">year</f>
+      <f name="baseform">afe</f>
+      <f name="annotation_value">afe</f>
+    </fs>
+  </a>
+  <node xml:id="morpheme/n99"/>
+  <edge from="word/n97" to="morpheme/n99" xml:id="e99"/>
+  <a as="morpheme" label="morpheme" ref="morpheme/n99" xml:id="99">
+    <fs>
+      <f name="meaning">one</f>
+      <f name="baseform">baako</f>
+      <f name="annotation_value">baako</f>
     </fs>
   </a>
 </graph>
