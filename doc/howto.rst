@@ -2,16 +2,17 @@
 Introduction to Poio API
 ************************
 
-Poio API provides access to language documentation data and a wide range of annotations schemes stored in different file
-formats. It's based on a common and standardized representational format: annotation graphs as defined by "ISO 24612 -
-Language resource management -- Linguistic annotation framework (LAF)". The data and annotations can then be used
-with existing NLP tools and workflows and hence be combined with any other data source that is isomorphic to the
-representations in this framework.
+Poio API is a free and open source Python library to access and search data from language documentation
+in your linguistic analysis workflow. It converts file formats like Elan's EAF, Toolbox files,
+Typecraft XML and others into annotation graphs as defined in ISO 24612. Those graphs, for which we use
+an implementation called "Graph Annotation Framework" (GrAF), allow unified access to linguistic data
+from a wide range sources.
 
 Poio API is developed as a part of the `curation project of the F-AG 3 within CLARIN-D <http://de.clarin.eu/de/fachspezifische-arbeitsgruppen/f-ag-3-linguistische-feldforschung/kurationsprojekt-1.html>`_.
 
 **References:**
   * ISO 24612 (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
+  * Graph Annotation Framework (GrAF): http://www.americannationalcorpus.org/graf-wiki
 
 .. _data_structure_types:
 
