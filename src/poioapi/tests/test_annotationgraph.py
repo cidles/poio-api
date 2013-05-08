@@ -47,8 +47,9 @@ class TestAnnotationGraph:
 
     def test_nodes_for_tier(self):
         root_nodes = self.annotation_graph.root_nodes()
-        clause_units = self.annotation_graph.nodes_for_tier("Äußerung", root_nodes[0])
-        assert(len(clause_units) == 1)
+        nodes = self.annotation_graph.nodes_for_tier("Äußerung", root_nodes[0])
+        
+        assert(len(nodes) == 0)
 
     def test_annotations_for_tier(self):
         node = self.annotation_graph.graf.nodes["Glosse/P-Gloss/na262"]
