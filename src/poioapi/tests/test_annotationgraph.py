@@ -34,8 +34,8 @@ class TestAnnotationGraph:
     def setup(self):
         self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(DataStructureTypeElan())
 
-        filename = os.path.join(os.path.dirname(__file__), "sample_files",
-            "elan_graf", "turkish.eaf")
+        filename = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..',
+            '..', '..', 'example_data', 'turkish.eaf'))
 
         self.annotation_graph.from_elan(filename)
 
