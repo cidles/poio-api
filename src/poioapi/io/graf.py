@@ -246,12 +246,16 @@ class GrAFConverter:
     def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix=None):
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
-        prefix = tier.name
-
         if tier.annotation_space is None:
+            prefix = tier.name
             annotation_name = prefix
         else:
-            annotation_name = tier.annotation_space
+            try:
+                annotation_name = tier.annotation_space.encode("utf-8").replace(' ', '_')
+            except :
+                annotation_name = tier.annotation_space.replace(' ', '_')
+
+            prefix = annotation_name + "/" + tier.name
 
         has_regions = False
 
