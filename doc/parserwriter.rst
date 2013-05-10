@@ -3,27 +3,41 @@ How to wrote a Parser/Writer for a new file format
 **************************************************
 
 In order to create a parser with PoioAPI is necessary to implement the base 
-class "BaseParser". This a abstract class (interface) that contains the abstract 
-methods needed to be implemented to the proper functioning of the parser and 
-to be able to convert the data to GrAF format.
+class "BaseParser".
 
-This base class has five abstract methods that must be implemented. Of these 
-five methods three of them (get_root_tiers, get_child_tiers_for_tier and 
-get_annotations_for_tier) should at least returns an empty list while the 
-other two (tier_has_regions and region_for_annotation) may simply do 
-nothing(*pass*).
-All the methods must be implemented otherwise it will be raised an exception.
+The base class contains five abstract methods that will allow the GrAF converter to
+make the parsing of the files correctly. The five methods are:
 
-It is necessary to have in mind that each format is different in its construction. 
-So the user will be responsible for defining / choosing what and which data 
-considered important.
+* get_root_tiers() - Get all the root tiers.
+* get_child_tiers_for_tier(tier) - Get the child tiers of a particular tier.
+* get_annotations_for_tier(tier, annotation_parent) - Get the annotations of a certain tier.
+* tier_has_regions(tier) - Verify if a specific tier contains regions.
+* region_for_annotation(annotation) - Get the region for a specific annotation.
 
-Apart from BaseParser class must also have the knowledge of the classes Tier
-and Annotation.
-The class Tier represents a Tier. Each tier is defined with an name but in some cases
-it is necessary to create a subclass with more characteristics.
-The class Annnotation represents a Annotation. Each annotation is represented by an id
-and can contain a value and features.
+*Note: All the methods must be implemented otherwise it will be raised an exception.*
+
+The tiers and the annotations should inherit from the classes Tier and Annotation respectively.
+Each Tier is defined with a name and with a annotation_space (which is None by default), but in
+some cases it might be necessary to create a subclass of it with more characteristics. E. g. the
+elan structure use the "linguistic_type" to distinguish the tiers type. So a new Tier class could
+be like this:
+
+.. code-block:: python
+
+    class ElanTier(poioapi.io.graf.Tier):
+        __slots__ = ["linguistic_type"]
+
+        def __init__(self, name, linguistic_type):
+            self.name = name
+            self.linguistic_type = linguistic_type
+            self.annotation_space = linguistic_type
+
+The annotation_space represents a group of a Tier with the same characteristics. If the annotation_space
+of a Tier is None the GrAF converter will assume that the annotation_space is the same as Tier name.
+
+Each Annotation is defined with a unique id and can contain a value and features. The features are
+dictionaries with additional or essential information to the annotation and will be in the
+feature_structure of the annotation in GrAF representation.
 
 Classes and Documentation:
 
