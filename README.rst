@@ -1,31 +1,18 @@
 Poio API
 ========
-Poio API is a Python Library to access and manipulate linguistically
-annotated corpus files. Supported file format is currently only Elan XML,
-with Kura XML and Toolbox files support planned for future releases. A
-Corpus Reader API is provided to support statistical analysis within the
-Natural Language Toolkit.
+Poio API is a free and open source Python library to access and search data from
+language documentation in your linguistic analysis workflow. It converts file
+formats like Elan's EAF, Toolbox files, Typecraft XML and others into annotation
+graphs as defined in ISO 24612. Those graphs, for which we use an implementation
+called "Graph Annotation Framework" (GrAF), allow unified access to linguistic
+data from a wide range sources.
 
-The software is licensed under the Apache License Version 2.0. 
+For documentation, please visit http://media.cidles.eu/poio/poio-api/
 
+License
+-------
 
-Requirements
-------------
-You need to install the following packages:
+Poio API source code is distributed under the Apache 2.0 License.
 
-- Python: http://python.org/download
-- graf-python: http://pypi.python.org/pypi/graf-python
-- regex: https://pypi.python.org/pypi/regex
-- If you want to process data with NLTK: http://www.nltk.org/download
-
-
-API Documentation
------------------
-http://poio.readthedocs.org/projects/poio-api/en/latest/
-
-
-Site
-----
-The website of this project is:
-
-http://media.cidles.eu/poio/poio-api/
+Poio API documentation is distributed under the Creative Commons Attribution
+3.0 Unported.
