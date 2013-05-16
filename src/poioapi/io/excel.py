@@ -40,8 +40,6 @@ class Parser(poioapi.io.graf.BaseParser):
                          4: [], 5: [], 6: [], 7: []}
 
         self._current_id = 0
-        self.current_parent = None
-        self.clause_ids = {}
 
         with self._open_file(self.filepath) as csvfile:
             rows = csv.reader(csvfile, delimiter="|", quotechar=None, doublequote=False)
@@ -54,6 +52,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 row = self._decode_row(row)
 
                 if i is 1:
+                    self._empty_clause = self._next_id()
                     words_row = row
                 elif i is 4:
                     self._get_columns_in_rows(words_row, 1, cycle)
@@ -84,49 +83,79 @@ class Parser(poioapi.io.graf.BaseParser):
             if ";" in column and j == len(row) - 1:
                 continue
             elif column and column != ";;":
-                if i is 1:
+                if i is 1 or i is 3:
                     index = 2
-                elif i is 2:
-                    index = 0
                 elif i >= 4:
                     index = 1
                 else:
-                    index = i - 1
+                    index = None
 
                 if i is 2:
-                    if not "#" in column:
-                        continue
                     id = column
+                    index = 0
                 else:
                     id = self._next_id()
 
-                parent = self._find_parent_id(index, j, cycle)
+                if index is None:
+                    parent = None
+                    self._ref_id = id
+                else:
+                    parent = self._find_parent_id(index, i, j, cycle)
 
-                self.list_map[i].append({'id': id, 'value': column,
-                                         'position': j, 'parent': parent,
-                                         'cycle': cycle})
+                self._add_element_list_map(i, id, column, j, parent, cycle)
 
-    def _find_parent_id(self, index, position, cycle):
-        if index < 0:
-            return None
-
-        last_position = 0
-        last_element = None
+    def _find_parent_id(self, index, i, position, cycle):
+        last_element = {'position':0}
         filter_list = [e for e in self.list_map[index]
                        if e['cycle'] == cycle]
 
-        for i, element in enumerate(filter_list):
-            if position in range(last_position, element['position']):
-                if last_element is None:
-                    return element['id']
-                else:
-                    return last_element['id']
-
-            if i == len(filter_list) - 1:
+        for f, element in enumerate(filter_list):
+            if i == 2:
                 return element['id']
 
-            last_position = element['position']
-            last_element = element
+            if i == 1:
+                if position <= element['position']:
+                    if position >= last_element['position']:
+                        if 'id' in last_element and position != element['position']:
+                            return last_element['id']
+                        else:
+                            return element['id']
+
+                last_element = element
+
+                if f == len(filter_list) - 1:
+                    return last_element['id']
+
+            elif position == element['position']:
+                return element['id']
+
+        parent = None
+        last_element = {'position':0}
+
+        for e in filter_list:
+            if position <= e['position']:
+                if position >= last_element['position']:
+                    parent = e['parent']
+
+            last_element = e
+
+        if parent is not None or i is 1:
+            if i == 1:
+                parent = self._ref_id
+
+            parent_id = self._next_id()
+
+            self._add_element_list_map(index, parent_id, 'empty_value',
+                position, parent, cycle)
+
+            return parent_id
+
+    def _add_element_list_map(self, index, id, value, position, parent, cycle):
+        self.list_map[index].append({'id': id,
+                                     'value': value,
+                                     'position': position,
+                                     'parent': parent,
+                                     'cycle': cycle})
 
     def _next_id(self):
         current_id = self._current_id + 1
