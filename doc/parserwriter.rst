@@ -16,10 +16,12 @@ make the parsing of the files correctly. The five methods are:
 
 *Note: All the methods must be implemented otherwise it will be raised an exception.*
 
-The tiers and the annotations should inherit from the classes Tier and Annotation respectively.
+The tiers and the annotations should inherit from the classes poioapi.io.graf.Tier and
+poioapi.io.graf.Annotation respectively.
+
 Each Tier is defined with a name and with a annotation_space (which is None by default), but in
 some cases it might be necessary to create a subclass of it with more characteristics. E. g. the
-elan structure use the "linguistic_type" to distinguish the tiers type. So a new Tier class could
+Elan structure use the "linguistic_type" to distinguish the tiers type. So a new Tier class could
 be like this:
 
 .. code-block:: python
@@ -50,8 +52,11 @@ Classes and Documentation:
 Writing a parser to transform a file into GrAF
 ==============================================
 
-First create a class based on the BaseParser interface and create all the 
-interface required methods.
+The transformation of the file into GrAF will be done by the poioapi.io.graf.GrAFConverter.
+This class it will use the parser methods to retrieve the information from the file. So the conversion
+it will rely mainly in the parser.
+
+To write the parser is need to create a subclass of poioapi.io.graf.BaseParser:
 
 .. code-block:: python
 
@@ -75,7 +80,8 @@ interface required methods.
         def region_for_annotation(self, annotation):
             pass    
             
-In this example we will assume that the tiers will be the elements in the **tiers** 
+
+In this example we will assume that the tiers will be the elements in the **tiers**
 list. For each of those tiers there will be a list with the respective data:
 
 .. code-block:: python
@@ -96,7 +102,24 @@ list. For each of those tiers there will be a list with the respective data:
             pass
             
         [...]
-        
+
+See `Methods Implementation`_ for more detailed information.
+
+Using the parser to convert the new file format into GrAF:
+
+.. code-block:: python
+
+    parser = SimpleParser()
+
+    converter = poioapi.io.graf.GrAFConverter(parser)
+    converter.convert()
+
+    graph = converter.graph
+
+Classes and Documentation:
+
+* :py:class:`poioapi.io.graf.GrAFConverter`
+
 ----------------------
 Methods Implementation
 ----------------------
