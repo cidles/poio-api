@@ -331,6 +331,9 @@ class AnnotationGraph():
 
         """
 
+        if not hasattr(stream, 'read'):
+            stream = self._open_file_(stream)
+
         parser = poioapi.io.excel.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
