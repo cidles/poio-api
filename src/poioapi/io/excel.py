@@ -15,7 +15,6 @@ excel data.
 from __future__ import absolute_import
 
 import csv
-import codecs
 import sys
 
 import poioapi.io.graf
