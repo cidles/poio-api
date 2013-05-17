@@ -41,7 +41,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         self._current_id = 0
 
-        with self._open_file(self.filepath) as csvfile:
+        with self.filepath as csvfile:
             rows = csv.reader(csvfile, delimiter="|", quotechar=None, doublequote=False)
 
             i = 0
@@ -68,15 +68,9 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def _decode_row(self, row):
         if sys.version_info[:2] < (3, 0):
-            return [r.decode('utf8') for r in row]
+            return [r.decode('utf-8') for r in row]
 
         return row
-
-    def _open_file(self, filename):
-        if sys.version_info[:2] < (3, 0):
-            return open(filename, 'r')
-        else:
-            return codecs.open(self.filepath, 'r', 'utf-8')
 
     def _get_columns_in_rows(self, row, i, cycle):
         for j, column in enumerate(row):
