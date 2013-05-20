@@ -325,24 +325,6 @@ class AnnotationGraph():
 
         self.graf = converter.graph
 
-    def from_excel(self, stream):
-        """This method generates a GrAF object
-        from a excel file.
-
-        """
-
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
-
-        parser = poioapi.io.excel.Parser(stream)
-
-        converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.convert()
-
-        self.tier_hierarchies = converter.tiers_hierarchy
-
-        self.graf = converter.graph
-
     def _open_file_(self, filename):
         if sys.version_info[:2] >= (3, 0):
             return codecs.open(filename, "r", "utf-8")
