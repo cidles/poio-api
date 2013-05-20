@@ -310,10 +310,22 @@ class AnnotationGraph():
         self.graf = parser.parse(stream)
 
     def to_elan(self, outputfile):
+        """Write the annotation graph as Elan EAF files.
+        """
         pass
 
     def to_graf(self, outputfile):
-        converter = poioapi.io.graf.GrAFConverter(None, poioapi.io.graf.Writer())
+        """Write the annotation graph as GrAX/XML files.
+        
+        Parameters
+        ----------
+        outputfile : str or io stream
+            The path to the output file. This filename is the header file of the
+            GrAF/XML files, it should have the extension ".hdr".
+
+        """
+        converter = poioapi.io.graf.GrAFConverter(
+            None, poioapi.io.graf.Writer())
         converter.graf = self.graf
         converter.tier_hierarchies = self.tier_hierarchies
         converter.meta_information = self.meta_information
