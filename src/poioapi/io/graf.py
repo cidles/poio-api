@@ -217,7 +217,7 @@ class GrAFConverter:
     def __init__(self, parser):
         self.parser = parser
         self.graph = graf.Graph()
-        self.tiers_hierarchy = []
+        self.tier_hierarchies = []
 
     def convert(self):
         """This method will be the responsible to transform
@@ -241,7 +241,7 @@ class GrAFConverter:
                 self._append_tier_to_hierarchy(tiers_hierarchy_map[str(i)], t[1], t[0])
 
         for i, hierarchy in tiers_hierarchy_map.items():
-            self.tiers_hierarchy.append(hierarchy)
+            self.tier_hierarchies.append(hierarchy)
 
     def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix=None):
         child_tiers = self.parser.get_child_tiers_for_tier(tier)

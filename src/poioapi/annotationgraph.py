@@ -267,6 +267,9 @@ class AnnotationGraph():
         return table
 
 
+    def _from_file(self, stream, type):
+
+
     def from_elan(self, stream):
         """This method generates a GrAF object
         from a Elan file.
@@ -283,7 +286,8 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
-        self.tier_hierarchies = converter.tiers_hierarchy
+        self.tier_hierarchies = converter.tier_hierarchies
+        self.meta_information = converter.meta_information
 
         self.graf = converter.graph
 
@@ -303,7 +307,8 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
-        self.tier_hierarchies = converter.tiers_hierarchy
+        self.tier_hierarchies = converter.tier_hierarchies
+        self.meta_information = converter.meta_information
 
         self.graf = converter.graph
 
@@ -321,7 +326,8 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
-        self.tier_hierarchies = converter.tiers_hierarchy
+        self.tier_hierarchies = converter.tier_hierarchies
+        self.meta_information = converter.meta_information
 
         self.graf = converter.graph
 
@@ -339,7 +345,8 @@ class AnnotationGraph():
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.convert()
 
-        self.tier_hierarchies = converter.tiers_hierarchy
+        self.tier_hierarchies = converter.tier_hierarchies
+        self.meta_information = converter.meta_information
 
         self.graf = converter.graph
 
@@ -348,6 +355,12 @@ class AnnotationGraph():
             return codecs.open(filename, "r", "utf-8")
         else:
             return open(filename, "r")
+
+    def to_elan(self, outputfile):
+        pass
+
+    def to_graf(self, outputfile):
+        pass
 
     def generate_graf_files(self, inputfile, outputfile):
         """This method will create the GrAF Xml files.
