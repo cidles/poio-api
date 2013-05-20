@@ -264,7 +264,9 @@ class GrAFConverter:
 
         self._add_tier_in_hierarchy_list(prefix, parent_prefix)
 
-        for annotation in self.parser.get_annotations_for_tier(tier, parent_annotation):
+        annotations = self.parser.get_annotations_for_tier(tier, parent_annotation)
+
+        for annotation in annotations:
             regions = None
 
             if has_regions:
@@ -276,6 +278,11 @@ class GrAFConverter:
             if child_tiers:
                 for t in child_tiers:
                     self._convert_tier(t, node_id, annotation, prefix)
+
+        if annotations == []:
+            if child_tiers:
+                for t in child_tiers:
+                    self._convert_tier(t, None, None, prefix)
 
     def _add_tier_in_hierarchy_list(self, prefix, parent_prefix):
         if not (prefix, parent_prefix) in self._tiers_parent_list:
