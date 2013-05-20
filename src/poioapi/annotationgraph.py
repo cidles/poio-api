@@ -29,7 +29,7 @@ import graf
 
 class AnnotationGraph():
 
-    def __init__(self, data_structure_type):
+    def __init__(self, data_structure_type = None):
         if data_structure_type is None:
             self.structure_type_handler = None
         elif isinstance(data_structure_type, data.DataStructureType):
@@ -45,6 +45,8 @@ class AnnotationGraph():
 
         self.filters = []
         self.filtered_node_ids = []
+        self.tier_hierarchies = None
+        self.meta_information = None
 
 
     def root_nodes(self):
@@ -258,14 +260,16 @@ class AnnotationGraph():
             parser = poioapi.io.elan.Parser(stream)
         elif stream_type == poioapi.data.TYPECRAFT:
             parser = poioapi.io.typecraft.Parser(stream)
+        elif stream_type == poioapi.data.TREEPICKLE:
+            parser = poioapi.io.pickle.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.convert()
+        converter.parse()
 
         self.tier_hierarchies = converter.tier_hierarchies
         self.meta_information = converter.meta_information
 
-        self.graf = converter.graph
+        self.graf = converter.graf
 
 
     def from_elan(self, stream):
@@ -309,7 +313,11 @@ class AnnotationGraph():
         pass
 
     def to_graf(self, outputfile):
-        pass
+        converter = poioapi.io.graf.GrAFConverter(None, poioapi.io.graf.Writer())
+        converter.graf = self.graf
+        converter.tier_hierarchies = self.tier_hierarchies
+        converter.meta_information = self.meta_information
+        converter.write(outputfile)
 
     def generate_graf_files(self, inputfile, outputfile):
         """This method will create the GrAF Xml files.

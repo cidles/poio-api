@@ -209,18 +209,28 @@ class BaseParser(object):
 
 
 class GrAFConverter:
-    """This class will handle the conversion of parser
-    objects into GrAF objects.
+    """This class handles the conversion of different file formats into GrAF
+    objects and back again. It uses a sub-class of BaseParser to get the
+    annotations and the tier hierarchies. A sub-class of BaseWriter is used
+    to write back the files. Please be aware that meta-data might get lost
+    if you write to a file format from another one. This depends on whether the
+    output file format can store all meta-data from the input file format.
+    In any case all the data and annotation will be stored.
 
     """
 
-    def __init__(self, parser):
+    def __init__(self, parser, writer = None):
         self.parser = parser
-        self.graph = graf.Graph()
+        self.writer = writer
+        self.graf = graf.Graph()
         self.tier_hierarchies = []
         self.meta_information = None
 
-    def convert(self):
+    def write(self, outputfile):
+        if self.writer:
+            self.writer.write(outputfile, self.graf, self.tier_hierarchies)
+
+    def parse(self):
         """This method will be the responsible to transform
         the parser into a GrAF object. This method also
         retrieves the tiers hierarchies.
@@ -313,16 +323,16 @@ class GrAFConverter:
         if annotation_value is not None:
             annotation.features['annotation_value'] = annotation_value
 
-        self.graph.nodes[str(annotation_ref)].annotations.add(annotation)
+        self.graf.nodes[str(annotation_ref)].annotations.add(annotation)
 
-        if annotation_name in self.graph.annotation_spaces:
-            if annotation not in self.graph.annotation_spaces[annotation_name]:
-                self.graph.annotation_spaces[annotation_name].add(annotation)
+        if annotation_name in self.graf.annotation_spaces:
+            if annotation not in self.graf.annotation_spaces[annotation_name]:
+                self.graf.annotation_spaces[annotation_name].add(annotation)
         else:
             annotation_space = graf.AnnotationSpace(annotation_name)
             annotation_space.add(annotation)
 
-            self.graph.annotation_spaces.add(annotation_space)
+            self.graf.annotation_spaces.add(annotation_space)
 
     def _add_node_to_graph(self, node_id, regions=None,
                            from_node_id=None):
@@ -330,21 +340,74 @@ class GrAFConverter:
 
         if from_node_id is not None:
             edge_id = node_id.str_edge()
-            edge = graf.Edge(edge_id, self.graph.nodes[str(from_node_id)], node)
+            edge = graf.Edge(edge_id, self.graf.nodes[str(from_node_id)], node)
 
-            self.graph.edges.add(edge)
+            self.graf.edges.add(edge)
 
         if regions is not None:
             region_id = node_id.str_region()
             region = graf.Region(region_id, *regions)
             node.add_region(region)
 
-            self.graph.regions.add(region)
+            self.graf.regions.add(region)
 
-        self.graph.nodes.add(node)
-
+        self.graf.nodes.add(node)
 
 class Writer():
+
+    def __init__(self):
+        self.tier_hierarchies = None
+        self.meta_information = None
+
+    def _flatten_hierarchy_elements(self, elements):
+        """Flat the elements appended to a new list of elements.
+
+        Parameters
+        ----------
+        elements : array_like
+            An array of string values.
+
+        Returns
+        -------
+        flat_elements : array_like
+            An array of flattened `elements`.
+
+        """
+
+        flat_elements = []
+        for e in elements:
+            if type(e) is list:
+                flat_elements.extend(self._flatten_hierarchy_elements(e))
+            else:
+                flat_elements.append(e)
+        return flat_elements
+
+    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information = None):
+        """Writes the converter object as GrAF files.
+
+        Parameters
+        ----------
+        outputfile : str
+            The filename of the output file. The filename should be the header
+            file for GrAF with the extension ".hdr".
+
+        """
+        (base_dir_name, _) = os.path.splitext(outputfile)
+
+        for tier_name in self._flatten_hierarchy_elements(
+                tier_hierarchies):
+            out_graf = graf.Graph()
+            renderer = graf.GrafRenderer("{0}-{1}.xml".format(
+                base_dir_name, tier_name
+                ))
+            out_graf.nodes = [n for n in graf_graph.nodes
+                if n.id.startswith(tier_name)]
+            out_graf.edges = [e for e in graf_graph.edges
+                if e.to_node.id.startswith(tier_name)]
+
+            renderer.render(out_graf)
+
+class WriterOld():
     """
     This class contain the methods to write the GrAF files.
 
