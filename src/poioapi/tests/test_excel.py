@@ -8,6 +8,8 @@
 # For license information, see LICENSE.TXT
 
 import os
+import codecs
+import sys
 
 import poioapi.annotationgraph
 import poioapi.io.excel
@@ -24,13 +26,21 @@ class TestExcel:
         self.filename = os.path.join(os.path.dirname(__file__), "sample_files",
             "excel_graf", "Hinuq2.csv")
 
-        self.excel = poioapi.io.excel.Parser(self.filename)
+        self.filepath = self.open_file_(self.filename)
+
+        self.excel = poioapi.io.excel.Parser(self.filepath)
 
         headerfile = os.path.join(os.path.dirname(__file__), "sample_files",
             "excel_graf", "Hinuq2.hdr")
 
         self.annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
         self.annotation_graph.load_graph_from_graf(headerfile)
+
+    def open_file_(self, filename):
+        if sys.version_info[:2] >= (3, 0):
+            return codecs.open(filename, "r", "utf-8")
+        else:
+            return open(filename, "r")
 
     def test_get_root_tiers(self):
         root_tiers = self.excel.get_root_tiers()
@@ -78,17 +88,3 @@ class TestExcel:
         assert annotations[0].id == "#1"
         assert annotations[1].id == "#2"
         assert annotations[2].id == "#3"
-
-    def test_find_parent(self):
-        parent = self.excel._find_parent_id(0, 0, 1)
-        assert parent == '32'
-
-    def test_compare_graf_objects(self):
-        graf_from_header = self.annotation_graph.graf
-        self.annotation_graph.from_excel(self.filename)
-        graf_from_excel = self.annotation_graph.graf
-
-        assert graf_from_excel.nodes == graf_from_header.nodes
-        assert len(graf_from_excel.annotation_spaces) == \
-               len(graf_from_header.annotation_spaces)
-        assert len(graf_from_excel.edges) == len(graf_from_header.edges)

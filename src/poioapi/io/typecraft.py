@@ -87,7 +87,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 self._elements_map["translation"].append({"id": self._next_id(),
                                                    "value": element.text,
                                                    "parent":self._current_phrase_id})
-            if element._children:
+            if len(element.getchildren()) > 0:
                 self.parse_element_tree(element)
 
     def get_root_tiers(self):
