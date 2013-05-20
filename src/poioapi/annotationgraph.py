@@ -18,7 +18,6 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import poioapi.io.elan
-import poioapi.io.excel
 import poioapi.io.graf
 import poioapi.io.header
 import poioapi.io.pickle
@@ -267,7 +266,25 @@ class AnnotationGraph():
         return table
 
 
-    def _from_file(self, stream, type):
+    def _from_file(self, stream, stream_type):
+        if not hasattr(stream, 'read'):
+            stream = self._open_file_(stream)
+
+        parser = None
+        if stream_type == poioapi.data.EAF:
+            parser = poioapi.io.elan.Parser(stream)
+        elif stream_type == poioapi.data.TYPECRAFT:
+            parser = poioapi.io.typecraft.Parser(stream)
+        elif stream_type == poioapi.data.GRAF:
+            parser = poioapi.io.typecraft.Parser(stream)
+
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.convert()
+
+        self.tier_hierarchies = converter.tier_hierarchies
+        self.meta_information = converter.meta_information
+
+        self.graf = converter.graph
 
 
     def from_elan(self, stream):
@@ -275,80 +292,30 @@ class AnnotationGraph():
         from a Elan file.
 
         """
+        self._from_file(stream, poioapi.data.EAF)
 
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
-
-        parser = poioapi.io.elan.Parser(stream)
-
-        extra_information = parser.meta_information
-
-        converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.convert()
-
-        self.tier_hierarchies = converter.tier_hierarchies
-        self.meta_information = converter.meta_information
-
-        self.graf = converter.graph
-
-        self.graf.additional_information['extra_info'] = extra_information
 
     def from_typecraft(self, stream):
         """This method generates a GrAF object
         from a Typecraft file.
 
         """
-
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
-
-        parser = poioapi.io.typecraft.Parser(stream)
-
-        converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.convert()
-
-        self.tier_hierarchies = converter.tier_hierarchies
-        self.meta_information = converter.meta_information
-
-        self.graf = converter.graph
+        self._from_file(stream, poioapi.data.TYPECRAFT)
 
     def from_pickle(self, stream):
         """This method generates a GrAF object
         from a pickle file.
 
         """
+        self._from_file(stream, poioapi.data.TREEPICKLE)
 
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
-
-        parser = poioapi.io.pickle.Parser(stream)
-
-        converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.convert()
-
-        self.tier_hierarchies = converter.tier_hierarchies
-        self.meta_information = converter.meta_information
-
-        self.graf = converter.graph
-
-    def from_excel(self, stream):
+    def from_graf(self, stream):
         """This method generates a GrAF object
-        from a excel file.
+        from a GrAF file.
 
         """
+        self._from_file(stream, poioapi.data.GRAF)
 
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
-
-        parser = poioapi.io.excel.Parser(stream)
-
-        converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.convert()
-
-        self.tier_hierarchies = converter.tier_hierarchies
-        self.meta_information = converter.meta_information
-
-        self.graf = converter.graph
 
     def _open_file_(self, filename):
         if sys.version_info[:2] >= (3, 0):
