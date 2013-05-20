@@ -96,7 +96,7 @@ class TestAnnotationGraphFilter:
 
         filename = os.path.join(os.path.dirname(__file__), "sample_files",
             "balochi_graf", "balochi.hdr")
-        self.annotation_graph.load_graph_from_graf(filename)
+        self.annotation_graph.from_graf(filename)
 
         self.data_structure_type = data.DataStructureTypeGraid()
         self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(self.data_structure_type,

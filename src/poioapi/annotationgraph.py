@@ -46,26 +46,6 @@ class AnnotationGraph():
         self.filters = []
         self.filtered_node_ids = []
 
-    def load_graph_from_graf(self, filepath):
-        """Load the project annotation graph from a GrAF/XML file.
-
-        Parameters
-        ----------
-        filepath : str
-            The path to a GrAF/XML file.
-
-        """
-        parser = graf.GraphParser()
-        self.graf = parser.parse(filepath)
-        (self.graf_basename, _) = os.path.splitext(os.path.abspath(filepath))
-
-        # read the base data to get string for regions
-        base_data_file = self.graf_basename + ".txt"
-        try:
-            with codecs.open(base_data_file, "r", "utf-8") as f:
-                self.base_data = f.read()
-        except:
-            pass
 
     def root_nodes(self):
         """Retrieve the root nodes from the annotation graph. Root nodes are
@@ -266,6 +246,9 @@ class AnnotationGraph():
         return table
 
 
+    def _open_file_(self, filename):
+        return codecs.open(filename, "r", "utf-8")
+
     def _from_file(self, stream, stream_type):
         if not hasattr(stream, 'read'):
             stream = self._open_file_(stream)
@@ -274,8 +257,6 @@ class AnnotationGraph():
         if stream_type == poioapi.data.EAF:
             parser = poioapi.io.elan.Parser(stream)
         elif stream_type == poioapi.data.TYPECRAFT:
-            parser = poioapi.io.typecraft.Parser(stream)
-        elif stream_type == poioapi.data.GRAF:
             parser = poioapi.io.typecraft.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
@@ -310,18 +291,19 @@ class AnnotationGraph():
         self._from_file(stream, poioapi.data.TREEPICKLE)
 
     def from_graf(self, stream):
-        """This method generates a GrAF object
-        from a GrAF file.
+        """Load the project annotation graph from a GrAF/XML file or stream.
+
+        Parameters
+        ----------
+        stream : str or io.stream
+            The path to a GrAF/XML file.
 
         """
-        self._from_file(stream, poioapi.data.GRAF)
+        if not hasattr(stream, 'read'):
+            stream = self._open_file_(stream)
 
-
-    def _open_file_(self, filename):
-        if sys.version_info[:2] >= (3, 0):
-            return codecs.open(filename, "r", "utf-8")
-        else:
-            return open(filename, "r")
+        parser = graf.GraphParser()
+        self.graf = parser.parse(stream)
 
     def to_elan(self, outputfile):
         pass
