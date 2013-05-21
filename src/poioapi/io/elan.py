@@ -155,18 +155,18 @@ class Parser(poioapi.io.graf.BaseParser):
 
             if annotation.tag == "ALIGNABLE_ANNOTATION":
                 if annotation_parent is None:
-                    features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
-                                'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
+                    features = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
+                                'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
                 elif self._find_ranges_in_annotation_parent(annotation_parent, annotation):
-                    features = {'time_slot1':annotation.attrib['TIME_SLOT_REF1'],
-                                'time_slot2':annotation.attrib['TIME_SLOT_REF2']}
+                    features = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
+                                'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
                 else:
                     continue
             else:
                 annotation_ref = annotation.attrib['ANNOTATION_REF']
 
-                features = {'ref_annotation':annotation_ref,
-                            'tier_id':tier.name}
+                features = {'ref_annotation': annotation_ref,
+                            'tier_id': tier.name}
 
                 for attribute in annotation.attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
@@ -178,7 +178,6 @@ class Parser(poioapi.io.graf.BaseParser):
         return annotations
 
     def _find_ranges_in_annotation_parent(self, annotation_parent, annotation):
-
         if annotation_parent is not None:
             annotation_parent_regions = self.region_for_annotation(annotation_parent)
 
@@ -186,7 +185,7 @@ class Parser(poioapi.io.graf.BaseParser):
                                   int(self.regions_map[annotation.attrib['TIME_SLOT_REF2']])]
 
             if annotation_parent_regions[0] <= annotation_regions[0]\
-            and annotation_regions[1] <= annotation_parent_regions[1] :
+            and annotation_regions[1] <= annotation_parent_regions[1]:
                 return True
 
         return False
@@ -356,7 +355,8 @@ class Parser(poioapi.io.graf.BaseParser):
         Returns
         -------
         meta_information : ElementTree
-            Element with all the elan elements.
+            Element with all the elan elements except the Tiers
+            annotations.
 
         """
 
@@ -364,10 +364,19 @@ class Parser(poioapi.io.graf.BaseParser):
             self.root._root.attrib)
 
         for element in self.tree:
-            if element.tag == 'TIER':
-                meta_information.append(Element(element.tag,element.attrib))
-            else:
-                meta_information.append(element)
+            if element.tag != 'ANNOTATION_DOCUMENT':
+                if element.tag == 'TIER':
+                    meta_information.append(Element(element.tag,
+                        element.attrib))
+                else:
+                    parent_element = SubElement(meta_information,
+                        element.tag, element.attrib)
+                    for child in element:
+                        other_chid = SubElement(parent_element,
+                            child.tag, child.attrib)
+                        if not str(child.text).isspace() or\
+                           child.text is not None:
+                            other_chid.text = child.text
 
         return meta_information
 
@@ -379,103 +388,97 @@ class Writer:
 
     """
 
-    def __init__(self, extinfofile, outputfile):
-        """Class's constructor.
+    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information=None):
+        """Write the GrAF object into a Elan file.
 
         Parameters
         ----------
-        extinfofile : str
-            Path of the metafile.
         outputfile : str
-            Path and name of the new elan file.
+            The filename of the output file. The filename should have
+            the Elan extension ".eaf".
+        graf_graph : obejct
+            A GrAF object.
+        tier_hierarchies : array_like
+            Array with all the tier hierarchies from the GrAF.
+        meta_information : ElementTree
+            Element tree contains all the information in Elan file
+            besides the Tiers annotations.
 
         """
 
-        self.extinfofile = extinfofile
-        self.outputfile = outputfile
+        for tier in self._flatten_hierarchy_elements(tier_hierarchies):
+            tier_name = tier.split('/')[-1]
 
-    def write(self):
-        """This method will look into the metafile
-        and then reconstruct the Elan file.
+            for et in meta_information.findall("TIER"):
+                if et.attrib["TIER_ID"] == tier_name:
+                    for node in graf_graph.nodes:
+                        if tier_name in node.id:
+                            for ann in node.annotations:
+                                features = {'ANNOTATION_ID': ann.id}
+                                annotation_value = None
+
+                                if "ref_annotation" in ann.features:
+                                    ann_type = "REF_ANNOTATION"
+                                    features['ANNOTATION_REF'] = ann.features["ref_annotation"]
+                                else:
+                                    ann_type = "ALIGNABLE_ANNOTATION"
+                                    features['TIME_SLOT_REF1'] = ann.features['time_slot1']
+                                    features['TIME_SLOT_REF2'] = ann.features['time_slot2']
+
+                                if "annotation_value" in ann.features:
+                                    annotation_value = ann.features['annotation_value']
+
+                                for key, feature in ann.features.items():
+                                    if key != 'ref_annotation' and\
+                                       key != 'annotation_value' and\
+                                       key != 'tier_id' and not 'time_slot' in key:
+                                        features[key] = feature
+
+                                annotation_element = SubElement(et, 'ANNOTATION')
+                                new_ann = SubElement(annotation_element, ann_type, features)
+                                SubElement(new_ann, 'ANNOTATION_VALUE').text =\
+                                annotation_value
+
+        self._write_file(outputfile, meta_information)
+
+    def _write_file(self, outputfile, element_tree):
+        """Write and indent the element tree into a
+        Elan file.
+
+        Parameters
+        ----------
+        outputfile : str
+            The filename of the output file. The filename should have
+            the Elan extension ".eaf".
+        element_tree : ElementTree
+            Element tree with all the information.
 
         """
 
-        tree = ET.parse(self.extinfofile).getroot()
-
-        miscellaneous = tree.findall('./miscellaneous/')
-        element_tree = Element(miscellaneous[0].tag, miscellaneous[0].attrib)
-
-        for element in miscellaneous:
-            if element.tag != 'ANNOTATION_DOCUMENT':
-                parent_element = SubElement(element_tree, element.tag,
-                    element.attrib)
-                for child in element:
-                    other_chid = SubElement(parent_element, child.tag,
-                        child.attrib)
-                    if not str(child.text).isspace() or\
-                       child.text is not None:
-                        other_chid.text = child.text
-
-        namespace = "{http://www.w3.org/XML/1998/namespace}"
-
-        for tiers in tree.findall('./header/tier_mapping/'):
-            linguistic_type = tiers.attrib['name'].replace(' ','_')
-
-            for tiers_id in tiers:
-                tier_id = tiers_id.text
-
-                graf_tree = ET.parse(self.extinfofile.replace("-extinfo",
-                    "-"+linguistic_type)).getroot()
-
-                annotations = graf_tree.findall('{http://www.xces.org/ns/GrAF/1.0/}a')
-
-                tier_element_tree = element_tree.find("TIER[@TIER_ID='"+tier_id+"']")
-
-                linguistic_type_ref = element_tree.find("LINGUISTIC_TYPE[@LINGUISTIC_TYPE_ID='"+
-                                                        tier_element_tree.attrib['LINGUISTIC_TYPE_REF']+"']")
-
-                for annotation in annotations:
-                    features_map = {}
-                    feature_structure = annotation[0]
-
-                    if tier_id+"/" in annotation.attrib['ref']:
-                        if linguistic_type_ref.attrib['TIME_ALIGNABLE'] == 'true':
-                            features_map['ANNOTATION_ID'] = annotation.attrib[namespace+"id"]
-                            features_map['TIME_SLOT_REF1'] = feature_structure[0].text
-                            features_map['TIME_SLOT_REF2'] = feature_structure[1].text
-
-                            annotation_element = SubElement(tier_element_tree,
-                                'ANNOTATION')
-                            alignable_annotation = SubElement(annotation_element,
-                                'ALIGNABLE_ANNOTATION',features_map)
-                            SubElement(alignable_annotation,
-                                'ANNOTATION_VALUE').text = self._get_annotation_value(feature_structure)
-                        else:
-                            features_map['ANNOTATION_ID'] = annotation.attrib[namespace+"id"]
-                            features_map['ANNOTATION_REF'] = feature_structure[0].text
-
-                            for feature_element in feature_structure:
-                                if feature_element.attrib['name'] != 'ref_annotation' and\
-                                   feature_element.attrib['name'] != 'annotation_value' and\
-                                   feature_element.attrib['name'] != 'tier_id':
-                                    key = feature_element.attrib['name']
-                                    features_map[key] = feature_element.text
-
-                            annotation = SubElement(tier_element_tree, 'ANNOTATION')
-                            ref_annotation = SubElement(annotation,
-                                'REF_ANNOTATION',features_map)
-                            SubElement(ref_annotation, 'ANNOTATION_VALUE').text =\
-                            self._get_annotation_value(feature_structure)
-
-        file = open(self.outputfile,'wb')
+        file = open(outputfile, 'wb')
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
         file.close()
 
-    def _get_annotation_value(self, feature_structure):
-        try:
-            annotation_value = feature_structure[2].text
-        except:
-            annotation_value = None
+    def _flatten_hierarchy_elements(self, elements):
+        """Flat the elements appended to a new list of elements.
 
-        return annotation_value
+        Parameters
+        ----------
+        elements : array_like
+            An array of string values.
+
+        Returns
+        -------
+        flat_elements : array_like
+            An array of flattened `elements`.
+
+        """
+
+        flat_elements = []
+        for e in elements:
+            if type(e) is list:
+                flat_elements.extend(self._flatten_hierarchy_elements(e))
+            else:
+                flat_elements.append(e)
+        return flat_elements
