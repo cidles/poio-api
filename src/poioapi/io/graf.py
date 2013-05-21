@@ -398,12 +398,14 @@ class Writer():
                 tier_hierarchies):
             out_graf = graf.Graph()
             renderer = graf.GrafRenderer("{0}-{1}.xml".format(
-                base_dir_name, tier_name
+                base_dir_name, tier_name.split('/')[0]
                 ))
             out_graf.nodes = [n for n in graf_graph.nodes
                 if n.id.startswith(tier_name)]
             out_graf.edges = [e for e in graf_graph.edges
                 if e.to_node.id.startswith(tier_name)]
+            out_graf.regions = [r for r in graf_graph.regions
+                if r.id.startswith(tier_name)]
 
             renderer.render(out_graf)
 
