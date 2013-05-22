@@ -388,7 +388,7 @@ class Writer:
 
     """
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information=None):
+    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information):
         """Write the GrAF object into a Elan file.
 
         Parameters
@@ -411,7 +411,7 @@ class Writer:
 
             for et in meta_information.findall("TIER"):
                 if et.attrib["TIER_ID"] == tier_name:
-                    for node in graf_graph.nodes:
+                    for node in graf_graph.nodes.iter_ordered():
                         if tier_name in node.id:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
@@ -419,7 +419,9 @@ class Writer:
 
                                 if "ref_annotation" in ann.features:
                                     ann_type = "REF_ANNOTATION"
-                                    features['ANNOTATION_REF'] = ann.features["ref_annotation"]
+                                    features["ANNOTATION_REF"] = ann.features["ref_annotation"]
+                                    if "previous_annotation" in ann.features:
+                                        features["PREVIOUS_ANNOTATION"] = ann.features["previous_annotation"]
                                 else:
                                     ann_type = "ALIGNABLE_ANNOTATION"
                                     features['TIME_SLOT_REF1'] = ann.features['time_slot1']
@@ -431,7 +433,8 @@ class Writer:
                                 for key, feature in ann.features.items():
                                     if key != 'ref_annotation' and\
                                        key != 'annotation_value' and\
-                                       key != 'tier_id' and not 'time_slot' in key:
+                                       key != 'tier_id' and\
+                                       key != 'previous_annotation' and not 'time_slot' in key:
                                         features[key] = feature
 
                                 annotation_element = SubElement(et, 'ANNOTATION')

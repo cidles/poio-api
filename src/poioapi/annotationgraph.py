@@ -99,7 +99,7 @@ class AnnotationGraph():
                 if target_node.id.startswith(tier_name):
                     res.append(target_node)
         else:
-            for target_node in self.graf.nodes:
+            for target_node in self.graf.nodes.iter_ordered():
                 if target_node.id.startswith(tier_name):
                     res.append(target_node)
         return res
@@ -312,7 +312,12 @@ class AnnotationGraph():
     def to_elan(self, outputfile):
         """Write the annotation graph as Elan EAF files.
         """
-        pass
+        converter = poioapi.io.graf.GrAFConverter(
+            None, poioapi.io.elan.Writer())
+        converter.graf = self.graf
+        converter.tier_hierarchies = self.tier_hierarchies
+        converter.meta_information = self.meta_information
+        converter.write(outputfile)
 
     def to_graf(self, outputfile):
         """Write the annotation graph as GrAX/XML files.
