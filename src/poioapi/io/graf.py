@@ -22,6 +22,7 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import graf
+from graf.annotations import AnnotationSpace
 
 import poioapi.io.header
 
@@ -394,6 +395,11 @@ class Writer():
         """
         (base_dir_name, _) = os.path.splitext(outputfile)
 
+
+        self._parent = {}
+        for h in tier_hierarchies:
+            self._get_hierarchy_parents(h, None)
+
         for tier_name in self._flatten_hierarchy_elements(
                 tier_hierarchies):
             out_graf = graf.Graph()
@@ -406,8 +412,21 @@ class Writer():
                 if e.to_node.id.startswith(tier_name)]
             out_graf.regions = [r for r in graf_graph.regions
                 if r.id.startswith(tier_name)]
+            out_graf.annotation_spaces.add(graf.AnnotationSpace(
+                tier_name.split('/')[0]))
+            out_graf.header.add_dependency(self._parent[tier_name])
 
             renderer.render(out_graf)
+
+    def _get_hierarchy_parents(self, hierarchy, parent):
+        for i, h in enumerate(hierarchy):
+            if isinstance(h, list):
+                self._get_hierarchy_parents(h, parent)
+            else:
+                self._parent[h] = parent
+
+                if i is 0:
+                    parent = h.split('/')[0]
 
 class WriterOld():
     """
