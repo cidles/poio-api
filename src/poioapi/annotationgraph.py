@@ -44,7 +44,7 @@ class AnnotationGraph():
         self.graf_basename = None
 
         self.filters = []
-        self.filtered_node_ids = []
+        self.filtered_node_ids = [[]]
         self.tier_hierarchies = None
         self.meta_information = None
 
@@ -444,7 +444,7 @@ class AnnotationGraph():
         if len(self.filters) > 0:
             return self.filters[-1]
         else:
-            return AnnotationGraphFilter(self.structure_type_handler)
+            return AnnotationGraphFilter(self)
 
     def update_last_filter(self, filter):
         """Update the last filter added.
@@ -489,13 +489,10 @@ class AnnotationGraph():
 
         self.filtered_node_ids = [ [ n.id for n in self.root_nodes() ] ]
 
-        new_filtered_elements = []
-
         for filter in self.filters:
+            new_filtered_elements = []
             for node in self.root_nodes():
-                self._element_passes = []
-                self._find_node_from_edge_filter(node, filter)
-                if True in self._element_passes:
+                if filter.element_passes_filter(node):
                     new_filtered_elements.append(node.id)
 
             self.filtered_node_ids.append(new_filtered_elements)
@@ -517,7 +514,7 @@ class AnnotationGraph():
             A new annotation graph filter.
         """
 
-        filter = AnnotationGraphFilter(self.structure_type_handler, self.graf)
+        filter = AnnotationGraphFilter(self)
         for k in search_dict:
             if k in self.structure_type_handler.flat_data_hierarchy:
                 filter.set_filter_for_type(k, search_dict[k])
@@ -536,15 +533,15 @@ class AnnotationGraphFilter():
 
     (AND, OR)  = range(2)
 
-    def __init__(self, data_structure_type, graf):
+    def __init__(self, annotation_graph):
         """Class constructor.
 
         """
 
-        self.structure_type_handler = data_structure_type
+        self.annotation_graph = annotation_graph
 
         self.filter = dict()
-        for e in self.structure_type_handler.flat_data_hierarchy:
+        for e in self.annotation_graph.structure_type_handler.flat_data_hierarchy:
             self.filter[e] = ""
 
         self.reset_match_object()
@@ -552,15 +549,13 @@ class AnnotationGraphFilter():
         self.boolean_operation = self.AND
         self.contained_matches = False
 
-        self.graf = graf
-
     def reset_match_object(self):
         """Reset a match object.
 
         """
 
         self.matchobject = dict()
-        for e in self.structure_type_handler.flat_data_hierarchy:
+        for e in self.annotation_graph.structure_type_handler.flat_data_hierarchy:
             self.matchobject[e] = dict()
 
     def set_filter_for_type(self, ann_type, filter_string):
@@ -577,13 +572,13 @@ class AnnotationGraphFilter():
 
         self.filter[ann_type] = filter_string
 
-    def element_passes_filter(self, element):
+    def element_passes_filter(self, node):
         """Verify if a specific element passes in through a filter.
 
         Parameters
         ----------
-        element : object
-            An node object type.
+        node : graf.Node
+            The start node for the search.
 
         Returns
         -------
@@ -598,35 +593,45 @@ class AnnotationGraphFilter():
 
         # is there a filter defined?
         all_filter_empty = True
-        for ann_type in self.filter.keys():
+        result_dict = {}
+        for ann_type in self.filter:
             if self.filter[ann_type] != "":
                 all_filter_empty = False
+            result_dict[ann_type] = False
+
         if all_filter_empty:
             return True
+
+        self._passes_filter(
+            result_dict, node, self.annotation_graph.structure_type_handler.data_hierarchy)
 
         if self.boolean_operation == self.AND:
             passed = True
         else:
             passed = False
 
-        passed = self._passes_filter(passed, element, self.structure_type_handler.data_hierarchy)
+        for ann_type in self.filter:
+            if self.boolean_operation == self.AND:
+                passed = (passed and result_dict[ann_type])
+            else:
+                passed = (passed or result_dict[ann_type])
 
         if self.inverted:
             passed = not passed
 
         return passed
 
-    def _passes_filter(self, passed, elements, hierarchy):
+    def _passes_filter(self, result_dict, node, hierarchy):
         """Verify if a specific element passes in through a filter.
 
         Parameters
         ----------
         passed : bool
             Passes or not.
-        elements : object
-            An list of node object type.
-        hirerarchy : array_like
-            Structure of the array.
+        node : graf.Node
+            The start node for the search.
+        hirerarchy : list of lists
+            The hierarchical data structure for the search.
 
         Returns
         -------
@@ -638,65 +643,20 @@ class AnnotationGraphFilter():
         for i, t in enumerate(hierarchy):
             if type(t) is list:
                 local_passes = False
+                node_list = self.annotation_graph.nodes_for_tier(t[0], node)
+                for i, n in enumerate(node_list):
+                    self._passes_filter(result_dict, n, t)
 
-                if isinstance(elements, dict):
-                    for e in elements:
-                        passes = self._passes_filter(passed, e, t)
-                        local_passes = (local_passes or passes)
-                else:
-                    passes = self._passes_filter(passed, elements, t)
-                    local_passes = (local_passes or passes)
-
-                if self.boolean_operation == self.AND:
-                    passed = (passed and local_passes)
-                else:
-                    passed = (passed or local_passes)
             else:
-                passes = False
+                a_list = self.annotation_graph.annotations_for_tier(t, node)
                 if self.filter[t] != "":
-                    if isinstance(elements, dict):
-                        el = elements[i]
-                    else:
-                        el = elements
-
-                    self._element_passes = []
-                    self._search_nodes_for_match(el, t)
-
-                    if len(self._element_passes) > 0:
-                        passes = True
-
-                elif self.boolean_operation == self.AND:
-                    passes = True
-
-                if self.boolean_operation == self.AND:
-                    passed = (passed and passes)
+                    if len(a_list) > 0:
+                        a = self.annotation_graph.annotation_value_for_annotation(a_list[0])
+                        match = re.search(self.filter[t], a)
+                        if match:
+                            self.matchobject[t][node.id] =\
+                            [ [m.start(), m.end()] for m in re.finditer(
+                                self.filter[t], a) ]
+                            result_dict[t] = True
                 else:
-                    passed = (passed or passes)
-
-        return passed
-
-    def _search_nodes_for_match(self, node, t):
-        """Search for the child nodes of a root node
-        in order to find a match for the filter.
-
-        Parameters
-        ----------
-        node : object
-            Node object from graf.
-        t : str
-            Structure element from the hierarchy.
-
-        """
-
-        for key, value in node.annotations._elements[0].features.items():
-            match = re.search(self.filter[t], value)
-
-            if match:
-                self.matchobject[t][node.id] =\
-                [ [m.start(), m.end()] for m in re.finditer(
-                    self.filter[t], value) ]
-                self._element_passes.append(node.id)
-
-        for out_edge in node.out_edges:
-            self._search_nodes_for_match(self.graf.edges[out_edge.id].to_node,
-                t)
+                    result_dict[t] = True

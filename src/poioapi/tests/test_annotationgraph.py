@@ -39,8 +39,8 @@ class TestAnnotationGraph:
 
         self.annotation_graph.from_elan(filename)
 
-        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(DataStructureTypeElan(),
-        self.annotation_graph.graf)
+        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(
+            self.annotation_graph)
 
     def test_root_nodes(self):
         root_nodes = self.annotation_graph.root_nodes()
@@ -70,15 +70,16 @@ class TestAnnotationGraph:
     def test_append_filter(self):
         self.anngraphfilter.set_filter_for_type("Glosse", "ANOM")
         self.annotation_graph.append_filter(self.anngraphfilter)
+        self.anngraphfilter.reset_match_object()
 
-        assert self.annotation_graph.filtered_node_ids == [['Äußerung/P-Spch/na2', 'Äußerung/P-Spch/na9']]
+        assert self.annotation_graph.filtered_node_ids == [[], ['Äußerung/P-Spch/na2', 'Äußerung/P-Spch/na9']]
 
     def test_reset_filters(self):
         self.anngraphfilter.set_filter_for_type("Glosse", "ANOM")
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
-        assert self.annotation_graph.filtered_node_ids == [['Äußerung/P-Spch/na2', 'Äußerung/P-Spch/na9']]
+        assert self.annotation_graph.filtered_node_ids == [[], ['Äußerung/P-Spch/na2', 'Äußerung/P-Spch/na9']]
 
     def test_create_filter_for_dict(self):
         search_terms = { "Glosse": "yesterday" }
@@ -86,7 +87,7 @@ class TestAnnotationGraph:
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
-        assert self.annotation_graph.filtered_node_ids == [['Äußerung/P-Spch/na1']]
+        assert self.annotation_graph.filtered_node_ids == [[], ['Äußerung/P-Spch/na1']]
 
 class TestAnnotationGraphFilter:
 
@@ -99,19 +100,26 @@ class TestAnnotationGraphFilter:
         self.annotation_graph.from_graf(filename)
 
         self.data_structure_type = data.DataStructureTypeGraid()
-        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(self.data_structure_type,
-            self.annotation_graph.graf)
+        self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(self.annotation_graph)
 
     def test_element_passes_filter(self):
-        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+        self.anngraphfilter.set_filter_for_type("graid2", "nc")
 
-        element = self.annotation_graph.graf.nodes
+        element = self.annotation_graph.graf.nodes['utterance/n898']
+        expected_result = False
+
+        assert(self.anngraphfilter.element_passes_filter(element)
+               == expected_result)
+
+        element = self.annotation_graph.graf.nodes['utterance/n6']
         expected_result = True
 
         assert(self.anngraphfilter.element_passes_filter(element)
                == expected_result)
 
-        element = self.annotation_graph.graf.nodes['clause_unit/n1001']
+        #element = self.annotation_graph.graf.nodes['utterance/n89']
+        self.anngraphfilter.set_filter_for_type("graid2", "")
+        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
         expected_result = False
 
         assert(self.anngraphfilter.element_passes_filter(element)
