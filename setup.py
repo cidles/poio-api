@@ -23,7 +23,7 @@ setup(
     name = "poio-api",
     description = "A Python Library to access and manipulate linguistically annotated corpus files.",
     version = poioapi_version,
-    url = "https://github.com/cidles/poio-api",
+    url = "http://media.cidles.eu/poio/poio-api/",
     download_url = "https://s3.amazonaws.com/cidles/downloads/poio-api/poio-api-{0}.tar.gz".format(poioapi_version),
     #long_description = "Python implementation of the Graph Annotation Framework. (http://www.americannationalcorpus.org/graf-wiki)",
     license = "Apache License, Version 2.0",
