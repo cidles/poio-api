@@ -426,7 +426,9 @@ class AnnotationGraph():
         new_filtered_elements = \
             [ node.id
               for node in self.root_nodes()
-              if filter.element_passes_filter(node)]
+              if node.id in self.filtered_node_ids[-1] and \
+                 filter.element_passes_filter(node)]
+
         self.filtered_node_ids.append(new_filtered_elements)
 
     def last_filter(self):
@@ -492,7 +494,8 @@ class AnnotationGraph():
         for filter in self.filters:
             new_filtered_elements = []
             for node in self.root_nodes():
-                if filter.element_passes_filter(node):
+                if node.id in self.filtered_node_ids[-1] and \
+                        filter.element_passes_filter(node):
                     new_filtered_elements.append(node.id)
 
             self.filtered_node_ids.append(new_filtered_elements)

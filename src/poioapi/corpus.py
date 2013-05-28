@@ -57,9 +57,11 @@ class CorpusGraphs():
         self.tier_names = set()
 
     def add_item(self, filepath, filetype):
+        annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
         if filetype == poioapi.data.EAF:
-            annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
             annotation_graph.from_elan(filepath)
+        elif filetype == poioapi.data.TYPECRAFT:
+            annotation_graph.from_typecraft(filepath)
         else:
             raise poioapi.data.UnknownFileFormatError()
 
