@@ -54,7 +54,7 @@ class CorpusGraphs():
     def __init__(self):
         self.items = []
         #self.data_structure_type = None
-        self.tier_names = set()
+        self.tier_names = list()
 
     def add_item(self, filepath, filetype):
         annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
@@ -70,7 +70,9 @@ class CorpusGraphs():
                 annotation_graph.tier_hierarchies[0]
             )
 
-        self.tier_names.update(annotation_graph.structure_type_handler.flat_data_hierarchy)
+        for tier in annotation_graph.structure_type_handler.flat_data_hierarchy:
+            if tier not in self.tier_names:
+                self.tier_names.append(tier)
 
         #annotation_tree.init_filters()
         self.items.append( (filepath, annotation_graph) )
