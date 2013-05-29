@@ -249,6 +249,9 @@ class AnnotationGraph():
 
 
     def _open_file_(self, filename):
+        if sys.version_info[:2] < (3, 0):
+            return codecs.open(filename, "rb")
+
         return codecs.open(filename, "r", "utf-8")
 
     def _from_file(self, stream, stream_type):
