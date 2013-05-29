@@ -35,7 +35,9 @@ def main(argv):
         print('excel2graf.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    parser = poioapi.io.wikipedia_extractor.Parser(outputfile)
+    #print(outputfile)
+
+    parser = poioapi.io.wikipedia_extractor.Parser(inputfile)
 
     converter = poioapi.io.graf.GrAFConverter(parser)
     converter.convert()
