@@ -6,10 +6,12 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+import os
 
 import sys, getopt
 
 import poioapi.annotationgraph
+import poioapi.io.graf
 
 def main(argv):
     inputfile = ''
@@ -43,8 +45,22 @@ def main(argv):
     # Create a graph from an elan file
     annotation_graph.from_elan(inputfile)
 
-    # Generate the GrAF files
-    annotation_graph.generate_graf_files(inputfile, outputfile)
+    graf_graph = annotation_graph.graf
+    tier_hierarchies = annotation_graph.tier_hierarchies
+
+    writer = poioapi.io.graf.Writer()
+
+    # Set values for the document header
+    writer.standoffheader.filedesc.titlestmt = "Elan Example"
+    writer.standoffheader.profiledesc.catRef = "EN"
+
+    primary_file = os.path.basename(inputfile)
+    primary_type = "audio"
+
+    meta_information = {'primaryData':{'loc':primary_file,
+                                       'f.id':primary_type}}
+
+    writer.write(outputfile, graf_graph, tier_hierarchies, meta_information)
 
     print('Finished')
 
