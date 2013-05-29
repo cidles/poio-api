@@ -18,13 +18,7 @@ from __future__ import absolute_import
 import abc
 import os
 
-from xml.dom import minidom
-from xml.etree.ElementTree import Element, SubElement, tostring
-
 import graf
-from graf.annotations import AnnotationSpace
-
-import poioapi.io.header
 
 class Tier:
     """A list of tiers.
@@ -34,7 +28,7 @@ class Tier:
 
     __slots__ = ['name', 'annotation_space']
 
-    def __init__(self, name, annotaion_space = None):
+    def __init__(self, name, annotaion_space=None):
         self.name = name
         self.annotation_space = annotaion_space
 
@@ -220,7 +214,7 @@ class GrAFConverter:
 
     """
 
-    def __init__(self, parser, writer = None):
+    def __init__(self, parser, writer=None):
         self.parser = parser
         self.writer = writer
         self.graf = graf.Graph()
@@ -229,8 +223,7 @@ class GrAFConverter:
 
     def write(self, outputfile):
         if self.writer:
-            self.writer.write(outputfile, self.graf, self.tier_hierarchies,
-                self.meta_information)
+            self.writer.write(outputfile, self.graf, self.tier_hierarchies)
 
     def parse(self):
         """This method will be the responsible to transform
@@ -266,10 +259,7 @@ class GrAFConverter:
             prefix = tier.name
             annotation_name = prefix
         else:
-            try:
-                annotation_name = tier.annotation_space.encode("utf-8").replace(' ', '_')
-            except :
-                annotation_name = tier.annotation_space.replace(' ', '_')
+            annotation_name = tier.annotation_space.replace(' ', '_')
 
             prefix = annotation_name + "/" + tier.name
 
@@ -295,10 +285,9 @@ class GrAFConverter:
                 for t in child_tiers:
                     self._convert_tier(t, node_id, annotation, prefix)
 
-        if annotations == []:
-            if child_tiers:
-                for t in child_tiers:
-                    self._convert_tier(t, None, None, prefix)
+        if annotations == [] and child_tiers:
+            for t in child_tiers:
+                self._convert_tier(t, None, None, prefix)
 
     def _add_tier_in_hierarchy_list(self, prefix, parent_prefix):
         if not (prefix, parent_prefix) in self._tiers_parent_list:
@@ -315,12 +304,12 @@ class GrAFConverter:
     def _add_node(self, node_id, annotation, annotation_name, regions, from_node_id):
         self._add_node_to_graph(node_id, regions, from_node_id)
         self._add_graf_annotation(annotation_name, annotation.id, node_id,
-            annotation.value, annotation.features)
+                                  annotation.value, annotation.features)
 
     def _add_graf_annotation(self, annotation_name, annotation_id,
                              annotation_ref, annotation_value, annotation_features=None):
         annotation = graf.Annotation(annotation_name, annotation_features,
-            annotation_id)
+                                     annotation_id)
 
         if annotation_value is not None:
             annotation.features['annotation_value'] = annotation_value
@@ -355,11 +344,13 @@ class GrAFConverter:
 
         self.graf.nodes.add(node)
 
+
 class Writer():
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         self.tier_hierarchies = None
         self.meta_information = None
+        self.standoffheader = graf.StandoffHeader(**kwargs)
 
     def _flatten_hierarchy_elements(self, elements):
         """Flat the elements appended to a new list of elements.
@@ -384,7 +375,7 @@ class Writer():
                 flat_elements.append(e)
         return flat_elements
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information = None):
+    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information=None):
         """Writes the converter object as GrAF files.
 
         Parameters
@@ -392,32 +383,52 @@ class Writer():
         outputfile : str
             The filename of the output file. The filename should be the header
             file for GrAF with the extension ".hdr".
+        graf_graph : GrAF
+        tier_hierarchies : array_like
 
         """
         (base_dir_name, _) = os.path.splitext(outputfile)
 
-
-        self._parent = {}
-        for h in tier_hierarchies:
-            self._get_hierarchy_parents(h, None)
+        self._get_parents(tier_hierarchies)
+        self._update_primary_data(meta_information)
 
         for tier_name in self._flatten_hierarchy_elements(
                 tier_hierarchies):
+            annotation_space = tier_name.split('/')[0]
             out_graf = graf.Graph()
             renderer = graf.GrafRenderer("{0}-{1}.xml".format(
-                base_dir_name, tier_name.split('/')[0]
-                ))
+                base_dir_name, annotation_space
+            ))
             out_graf.nodes = [n for n in graf_graph.nodes
-                if n.id.startswith(tier_name)]
+                              if n.id.startswith(tier_name)]
             out_graf.edges = [e for e in graf_graph.edges
-                if e.to_node.id.startswith(tier_name)]
+                              if e.to_node.id.startswith(tier_name)]
             out_graf.regions = [r for r in graf_graph.regions
-                if r.id.startswith(tier_name)]
+                                if r.id.startswith(tier_name)]
             out_graf.annotation_spaces.add(graf.AnnotationSpace(
-                tier_name.split('/')[0]))
+                annotation_space))
             out_graf.header.add_dependency(self._parent[tier_name])
 
             renderer.render(out_graf)
+
+            self.standoffheader.datadesc.add_annotation("{0}.xml".
+                                                        format(annotation_space), annotation_space)
+
+        self.standoffheader.write_file_header(outputfile)
+
+    def _update_primary_data(self, meta_information):
+        if 'primaryData' in meta_information:
+            self.standoffheader.datadesc.primaryData = meta_information['primaryData']
+        else:
+            self.standoffheader.datadesc.primaryData = {'loc': "empty",
+                                                        'f.id': "empty"}
+
+    def _get_parents(self, tier_hierarchies):
+        self._parent = {}
+
+        for h in tier_hierarchies:
+            self._get_hierarchy_parents(h, None)
+
 
     def _get_hierarchy_parents(self, hierarchy, parent):
         for i, h in enumerate(hierarchy):
@@ -428,213 +439,3 @@ class Writer():
 
                 if i is 0:
                     parent = h.split('/')[0]
-
-class WriterOld():
-    """
-    This class contain the methods to write the GrAF files.
-
-    """
-
-    def create_graf_xml_node(self, element_tree, annotations,
-                             annotation_ref, node, region=None,
-                             from_node=None, edge=None):
-        """Create the nodes with the regions from
-        a values with ids.
-
-        Parameters
-        ----------
-        element_tree : Element Tree
-            Xml element.
-        annotations : object
-            Annotation GrAF object.
-        annotation_ref : str
-            Reference that this annotation appoints to.
-        node : object
-            GrAF node object.
-        region : object
-            GrAF region node object.
-        from_node : object
-            GrAF node object representing the begin of an edge.
-        edge : object
-            GrAF edge node object.
-
-        Returns
-        -------
-        element_tree : Element Tree
-            Xml element.
-
-        """
-
-        graph_node = SubElement(element_tree, 'node',
-                {'xml:id': node.id})
-
-        if from_node is not None:
-            SubElement(element_tree, 'edge', {'from': from_node.id,
-                                              'to': node.id,
-                                              'xml:id': edge.id})
-
-        if region is not None:
-            SubElement(graph_node, 'link', {'targets': region.id})
-
-            SubElement(element_tree, 'region',
-                    {'anchors': str(region.anchors[0]) + " " + str(region.anchors[1]),
-                     'xml:id': region.id})
-
-        for annotation in annotations:
-            element_tree = self.create_graf_xml_node_annotation(element_tree,
-                annotation, annotation_ref)
-
-        return element_tree
-
-    def create_graf_xml_node_annotation(self, element_tree, annotation, annotation_ref):
-        """Create the annotations of the nodes with
-        ids.
-
-        Parameters
-        ----------
-        element_tree : Element Tree
-            Xml element.
-        annotation : object
-            Annotation graf object.
-        annotation_ref : str
-            Reference that this annotation appoints to.
-
-        Returns
-        -------
-        element_tree : Element Tree
-            Xml element.
-
-        """
-
-        graph_annotation = SubElement(element_tree, 'a',
-                {'as': annotation.label,
-                 'label': annotation.label,
-                 'ref': annotation_ref,
-                 'xml:id': annotation.id})
-
-        features = SubElement(graph_annotation, 'fs')
-
-        for feature in annotation.features._elements.items():
-            key = feature[0]
-            value = feature[1]
-            SubElement(features, 'f', {'name': key}).text = value
-
-        return element_tree
-
-    def create_xml_graph_header(self, annotation, depends):
-        """Create the GrAF header of the Xml document.
-
-        Parameters
-        ----------
-        annotation : str
-            Name of the annotation.
-        depends : str
-            Name of the node that the element belongs to.
-
-        Returns
-        -------
-        element_tree : Element Tree
-            Xml element.
-
-        """
-
-        element_tree = Element('graph',
-                {'xmlns': 'http://www.xces.org/ns/GrAF/1.0/'})
-        graph_header = SubElement(element_tree,
-            'graphHeader')
-        SubElement(graph_header, 'labelsDecl')
-        dependencies = SubElement(graph_header,
-            'dependencies')
-
-        if depends is not None and depends is not '':
-            SubElement(dependencies, 'dependsOn', {'f.id': depends})
-
-        annotation_spaces = SubElement(graph_header,
-            'annotationSpaces')
-        SubElement(annotation_spaces,
-            'annotationSpace', {'as.id': annotation})
-
-        return element_tree
-
-    def generate_graf_files(self, graf, outputfile):
-        """Generate the graf files of a determinated GrAF
-        object.
-
-        Parameters
-        ----------
-        graf : object
-            GrAF object.
-        outputfile : str
-            Name that will be the prefix of files and also the destination of the files.
-
-        """
-
-        graf = self._sort_graf_items(graf)
-
-        filename = os.path.abspath(outputfile)
-        (basedirname, _) = os.path.splitext(outputfile)
-        header = poioapi.io.header.HeaderFile(basedirname)
-        header.filename = os.path.basename(os.path.splitext(filename)[0])
-        header.primaryfile = os.path.basename(outputfile)
-        header.dataType = 'text'
-
-        for key, elements in graf.additional_information.items():
-            if key != 'extra_info':
-                filepath = basedirname + "-" + key + ".xml"
-                header.add_annotation(os.path.basename(filepath), key)
-                file = open(filepath, 'wb')
-                element_tree = elements
-                doc = minidom.parseString(tostring(element_tree))
-                file.write(doc.toprettyxml(indent='  ', encoding='utf-8'))
-                file.close()
-
-        header.create_header()
-
-    def _sort_graf_items(self, graf):
-        """Order the nodes in the GrAF object.
-
-        Parameters
-        ----------
-        graf : object
-            GrAF object.
-
-        Returns
-        -------
-        graf : object
-            GrAF object with the nodes order.
-
-        """
-
-        for node in sorted(graf.nodes):
-            if len(node.in_edges._by_ind) is not 0:
-                edge = node.in_edges._by_ind[0]
-                from_node = edge.from_node
-            else:
-                edge = None
-                from_node = None
-
-            if len(node.links) is not 0:
-                links = node.links[0]
-                region = links[0]
-            else:
-                region = None
-
-            annotation_ref = node.id
-            annotations = node.annotations
-
-            annotation_name = str(node.id).split('/')[0]
-
-            if annotation_name not in graf.additional_information:
-                try:
-                    dependencie = str(node.parent.id).split('/')[0]
-                except AttributeError:
-                    dependencie = None
-
-                element_tree = self.create_xml_graph_header(annotation_name, dependencie)
-            else:
-                element_tree = graf.additional_information[annotation_name]
-
-            graf.additional_information[annotation_name] = self.create_graf_xml_node(element_tree,
-                annotations, annotation_ref, node, region, from_node, edge)
-
-        return graf
