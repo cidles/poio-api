@@ -412,7 +412,7 @@ class Writer:
             for et in meta_information.findall("TIER"):
                 if et.attrib["TIER_ID"] == tier_name:
                     for node in graf_graph.nodes.iter_ordered():
-                        if tier_name in str(node.id).split('/')[1]:
+                        if tier_name == str(node.id).split('/')[1]:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
