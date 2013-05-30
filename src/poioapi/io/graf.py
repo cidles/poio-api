@@ -18,6 +18,9 @@ from __future__ import absolute_import
 import abc
 import os
 
+from xml.etree.ElementTree import tostring
+from xml.dom import minidom
+
 import graf
 
 class Tier:
@@ -390,7 +393,6 @@ class Writer():
         (base_dir_name, _) = os.path.splitext(outputfile)
 
         self._get_parents(tier_hierarchies)
-        self._update_primary_data(meta_information)
 
         standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(base_dir_name))
 
@@ -417,13 +419,7 @@ class Writer():
                                                         format(annotation_space), annotation_space)
 
         standoffrenderer.render(self.standoffheader)
-
-    def _update_primary_data(self, meta_information):
-        if 'primaryData' in meta_information:
-            self.standoffheader.datadesc.primaryData = meta_information['primaryData']
-        else:
-            self.standoffheader.datadesc.primaryData = {'loc': "empty",
-                                                        'f.id': "empty"}
+        self._generate_metafile(base_dir_name, meta_information)
 
     def _get_parents(self, tier_hierarchies):
         self._parent = {}
@@ -441,3 +437,22 @@ class Writer():
 
                 if i is 0:
                     parent = h.split('/')[0]
+
+    def _generate_metafile(self, basedirname, meta_information = None):
+        """Generate a metafile with all the extra information
+        extracted from a file when it is parsed.
+
+        Parameters
+        ----------
+        basedirname : str
+            Base name of the inpufile.
+        meta_information: ElementTree
+            ElementTree with the extra information.
+
+        """
+
+        if meta_information:
+            out = open("{0}-extinfo.xml".format(basedirname), "wb")
+            doc = minidom.parseString(tostring(meta_information, encoding="utf-8"))
+            out.write(doc.toprettyxml(encoding='utf-8'))
+            out.close()
