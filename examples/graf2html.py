@@ -55,7 +55,7 @@ def main(argv):
     annotation_graph.structure_type_handler = DataStructureTypeElan()
 
     # Open the file
-    annotation_graph.load_graph_from_graf(inputfile)
+    annotation_graph.from_graf(inputfile)
     html = annotation_graph.as_html_table(full_html = True)
 
     f = codecs.open(outputfile, "w", "utf-8")
