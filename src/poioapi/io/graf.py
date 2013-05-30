@@ -392,6 +392,8 @@ class Writer():
         self._get_parents(tier_hierarchies)
         self._update_primary_data(meta_information)
 
+        standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(base_dir_name))
+
         for tier_name in self._flatten_hierarchy_elements(
                 tier_hierarchies):
             annotation_space = tier_name.split('/')[0]
@@ -414,7 +416,7 @@ class Writer():
             self.standoffheader.datadesc.add_annotation("{0}.xml".
                                                         format(annotation_space), annotation_space)
 
-        self.standoffheader.write_file_header(outputfile)
+        standoffrenderer.render(self.standoffheader)
 
     def _update_primary_data(self, meta_information):
         if 'primaryData' in meta_information:

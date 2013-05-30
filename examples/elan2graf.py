@@ -53,6 +53,7 @@ def main(argv):
     # Set values for the document header
     writer.standoffheader.filedesc.titlestmt = "Elan Example"
     writer.standoffheader.profiledesc.catRef = "EN"
+    writer.standoffheader.filedesc.documentation = "Documentation Place"
 
     primary_file = os.path.basename(inputfile)
     primary_type = "audio"
