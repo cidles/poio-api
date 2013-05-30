@@ -415,8 +415,9 @@ class Writer():
 
             renderer.render(out_graf)
 
-            self.standoffheader.datadesc.add_annotation("{0}.xml".
-                                                        format(annotation_space), annotation_space)
+            basename = os.path.basename(base_dir_name)
+            self.standoffheader.datadesc.add_annotation("{0}-{1}.xml".
+                                                        format(basename, annotation_space), annotation_space)
 
         standoffrenderer.render(self.standoffheader)
         self._generate_metafile(base_dir_name, meta_information)
