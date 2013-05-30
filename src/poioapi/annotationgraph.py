@@ -19,7 +19,6 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 
 import poioapi.io.elan
 import poioapi.io.graf
-import poioapi.io.header
 import poioapi.io.pickle
 import poioapi.io.typecraft
 

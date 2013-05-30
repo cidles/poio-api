@@ -18,6 +18,5 @@ PoioAPI IO Package
 
    io.elan
    io.graf
-   io.header
    io.pickle
    io.typecraft
