@@ -6,9 +6,11 @@
 # Author: António Lopes <alopes@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
+
 import os
 
-import sys, getopt
+import sys
+import getopt
 
 import poioapi.annotationgraph
 import poioapi.io.graf

@@ -7,17 +7,20 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
-import sys, getopt
+import os
+
+import sys
+import getopt
 
 import poioapi.annotationgraph
-import poioapi.data
+import poioapi.io.graf
+
 
 def main(argv):
-
     inputfile = ''
 
     try:
-        opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+        opts, args = getopt.getopt(argv, "hi:o:", ["ifile=", "ofile="])
     except getopt.GetoptError:
         print('typecraft2graf.py -i <inputfile> -o <outputfile>')
         sys.exit(2)
@@ -44,10 +47,26 @@ def main(argv):
     # Create a graph from an typecraft file
     annotation_graph.from_typecraft(inputfile)
 
-    # Generate the GrAF files
-    annotation_graph.generate_graf_files(inputfile, outputfile)
+    graf_graph = annotation_graph.graf
+    tier_hierarchies = annotation_graph.tier_hierarchies
+
+    writer = poioapi.io.graf.Writer()
+
+    # Set some values for the document header
+    writer.standoffheader.filedesc.titlestmt = "Typecraft Example"
+    writer.standoffheader.profiledesc.catRef = "EN"
+    writer.standoffheader.filedesc.subdomain = "Sub domain"
+
+    primary_file = os.path.basename(inputfile)
+    primary_type = "xml"
+
+    meta_information = {'primaryData': {'loc': primary_file,
+                                        'f.id': primary_type}}
+
+    writer.write(outputfile, graf_graph, tier_hierarchies, meta_information)
 
     print('Finished')
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
