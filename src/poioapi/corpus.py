@@ -60,6 +60,8 @@ class CorpusGraphs():
         annotation_graph = poioapi.annotationgraph.AnnotationGraph(None)
         if filetype == poioapi.data.EAF:
             annotation_graph.from_elan(filepath)
+        if filetype == poioapi.data.EAFFROMTOOLBOX:
+            annotation_graph.from_elan(filepath)
         elif filetype == poioapi.data.TYPECRAFT:
             annotation_graph.from_typecraft(filepath)
         else:
