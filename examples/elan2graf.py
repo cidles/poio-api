@@ -49,6 +49,7 @@ def main(argv):
 
     graf_graph = annotation_graph.graf
     tier_hierarchies = annotation_graph.tier_hierarchies
+    meta_information = annotation_graph.meta_information
 
     writer = poioapi.io.graf.Writer()
 
@@ -56,12 +57,8 @@ def main(argv):
     writer.standoffheader.filedesc.titlestmt = "Elan Example"
     writer.standoffheader.profiledesc.catRef = "EN"
     writer.standoffheader.filedesc.documentation = "Documentation Place"
-
-    primary_file = os.path.basename(inputfile)
-    primary_type = "audio"
-
-    meta_information = {'primaryData':{'loc':primary_file,
-                                       'f.id':primary_type}}
+    writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
+                                                  'f.id': "audio"}
 
     writer.write(outputfile, graf_graph, tier_hierarchies, meta_information)
 
