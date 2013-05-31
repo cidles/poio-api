@@ -44,21 +44,30 @@ def main(argv):
         (basedirname, _) = os.path.splitext(file)
         inputfile = inputdir+file
 
-        print(inputfile)
         # Create a graph from an elan file
         annotation_graph.from_elan(inputfile)
 
-        # Generate the GrAF files
-        annotation_graph.generate_graf_files(inputfile, inputfile)
+        graf_graph = annotation_graph.graf
+        tier_hierarchies = annotation_graph.tier_hierarchies
+        meta_information = annotation_graph.meta_information
 
-        inputfile = inputdir+basedirname+"-extinfo.xml"
-        outputfile = inputdir+basedirname+"_result.eaf"
+        writer = poioapi.io.graf.Writer()
+
+        # Set values for the document header
+        writer.standoffheader.filedesc.titlestmt = "Elan File"
+        writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
+                                                      'f.id': "audio"}
+
+        outputfile = inputdir+basedirname+".hdr"
+        writer.write(outputfile, graf_graph, tier_hierarchies, meta_information)
 
         # Initialize
-        elan = poioapi.io.elan.Writer(inputfile, outputfile)
+        elan = poioapi.io.elan.Writer()
 
-        # Write the Elan file
-        elan.write()
+        outputfile = inputdir+basedirname+"_new.eaf"
+
+        # Write back the Elan file
+        elan.write(outputfile, graf_graph, tier_hierarchies, meta_information)
 
     print('Finished')
 
