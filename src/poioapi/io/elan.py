@@ -140,7 +140,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         for t in self.tree.findall("TIER"):
             if t.attrib["TIER_ID"] == tier.name:
-                if annotation_parent is not None and self.tier_has_regions(tier) == False:
+                if annotation_parent is not None and not self.tier_has_regions(tier):
                     for a in t.findall("ANNOTATION/*"):
                         if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
                             tier_annotations.append(a)
@@ -342,7 +342,8 @@ class Parser(poioapi.io.graf.BaseParser):
         for time_slot in range_time_slots:
             time_slot_value += int(time_order_dict[time_slot])
 
-        time_slot_value = (time_slot_value / len(range_time_slots))
+        if len(range_time_slots) is not 0:
+            time_slot_value = (time_slot_value / len(range_time_slots))
 
         return time_slot_value
 
@@ -407,12 +408,11 @@ class Writer:
         """
 
         for tier in self._flatten_hierarchy_elements(tier_hierarchies):
-            tier_name = tier.split('/')[-1]
 
             for et in meta_information.findall("TIER"):
-                if et.attrib["TIER_ID"] == tier_name:
-                    for node in graf_graph.nodes.iter_ordered():
-                        if tier_name == str(node.id).split('/')[1]:
+                if et.attrib["TIER_ID"] == tier.split('/')[-1]:
+                    for node in graf_graph.nodes:
+                        if tier == str(node.id).split('/na')[0]:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
@@ -439,8 +439,7 @@ class Writer:
 
                                 annotation_element = SubElement(et, 'ANNOTATION')
                                 new_ann = SubElement(annotation_element, ann_type, features)
-                                SubElement(new_ann, 'ANNOTATION_VALUE').text =\
-                                annotation_value
+                                SubElement(new_ann, 'ANNOTATION_VALUE').text = annotation_value
 
         self._write_file(outputfile, meta_information)
 
