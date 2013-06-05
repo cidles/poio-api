@@ -1,789 +1,791 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="utterance"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="translation"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="translation/n1004"/>
-  <edge from="utterance/n1003" to="translation/n1004" xml:id="e1004"/>
-  <a as="translation" label="translation" ref="translation/n1004" xml:id="1004">
-    <fs>
-      <f name="annotation_value">this very seed, it also gave me this,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1024"/>
-  <edge from="utterance/n1023" to="translation/n1024" xml:id="e1024"/>
-  <a as="translation" label="translation" ref="translation/n1024" xml:id="1024">
-    <fs>
-      <f name="annotation_value">it threw it from its mouth.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1032"/>
-  <edge from="utterance/n1031" to="translation/n1032" xml:id="e1032"/>
-  <a as="translation" label="translation" ref="translation/n1032" xml:id="1032">
-    <fs>
-      <f name="annotation_value">He (the king) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1046"/>
-  <edge from="utterance/n1045" to="translation/n1046" xml:id="e1046"/>
-  <a as="translation" label="translation" ref="translation/n1046" xml:id="1046">
-    <fs>
-      <f name="annotation_value">Well, this is certainly jewelry,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1060"/>
-  <edge from="utterance/n1059" to="translation/n1060" xml:id="e1060"/>
-  <a as="translation" label="translation" ref="translation/n1060" xml:id="1060">
-    <fs>
-      <f name="annotation_value">(but) we don't know this.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n107"/>
-  <edge from="utterance/n106" to="translation/n107" xml:id="e107"/>
-  <a as="translation" label="translation" ref="translation/n107" xml:id="107">
-    <fs>
-      <f name="annotation_value">anyone who had a petition,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1074"/>
-  <edge from="utterance/n1073" to="translation/n1074" xml:id="e1074"/>
-  <a as="translation" label="translation" ref="translation/n1074" xml:id="1074">
-    <fs>
-      <f name="annotation_value">They (the king and his consultants) consulted,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1082"/>
-  <edge from="utterance/n1081" to="translation/n1082" xml:id="e1082"/>
-  <a as="translation" label="translation" ref="translation/n1082" xml:id="1082">
-    <fs>
-      <f name="annotation_value">(and) they said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1099"/>
-  <edge from="utterance/n1098" to="translation/n1099" xml:id="e1099"/>
-  <a as="translation" label="translation" ref="translation/n1099" xml:id="1099">
-    <fs>
-      <f name="annotation_value">Let's sow this.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1134"/>
-  <edge from="utterance/n1133" to="translation/n1134" xml:id="e1134"/>
-  <a as="translation" label="translation" ref="translation/n1134" xml:id="1134">
-    <fs>
-      <f name="annotation_value">They sowed it in a good place, in a garden, in a plot and in (fertile) and soft soil and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1148"/>
-  <edge from="utterance/n1147" to="translation/n1148" xml:id="e1148"/>
-  <a as="translation" label="translation" ref="translation/n1148" xml:id="1148">
-    <fs>
-      <f name="annotation_value">a melon bush grew up and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1165"/>
-  <edge from="utterance/n1164" to="translation/n1165" xml:id="e1165"/>
-  <a as="translation" label="translation" ref="translation/n1165" xml:id="1165">
-    <fs>
-      <f name="annotation_value">it gave so many melons.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1188"/>
-  <edge from="utterance/n1187" to="translation/n1188" xml:id="e1188"/>
-  <a as="translation" label="translation" ref="translation/n1188" xml:id="1188">
-    <fs>
-      <f name="annotation_value">Nobody ate these melons out of fear</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1208"/>
-  <edge from="utterance/n1207" to="translation/n1208" xml:id="e1208"/>
-  <a as="translation" label="translation" ref="translation/n1208" xml:id="1208">
-    <fs>
-      <f name="annotation_value">since they were from the mouth of the dragon,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1219"/>
-  <edge from="utterance/n1218" to="translation/n1219" xml:id="e1219"/>
-  <a as="translation" label="translation" ref="translation/n1219" xml:id="1219">
-    <fs>
-      <f name="annotation_value">they were snake's poison.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1236"/>
-  <edge from="utterance/n1235" to="translation/n1236" xml:id="e1236"/>
-  <a as="translation" label="translation" ref="translation/n1236" xml:id="1236">
-    <fs>
-      <f name="annotation_value">They (the melons) produce so many seeds and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n124"/>
-  <edge from="utterance/n123" to="translation/n124" xml:id="e124"/>
-  <a as="translation" label="translation" ref="translation/n124" xml:id="124">
-    <fs>
-      <f name="annotation_value">when he shook this (light post),</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1244"/>
-  <edge from="utterance/n1243" to="translation/n1244" xml:id="e1244"/>
-  <a as="translation" label="translation" ref="translation/n1244" xml:id="1244">
-    <fs>
-      <f name="annotation_value">they (the king’s servants) went (and told the king),</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1261"/>
-  <edge from="utterance/n1260" to="translation/n1261" xml:id="e1261"/>
-  <a as="translation" label="translation" ref="translation/n1261" xml:id="1261">
-    <fs>
-      <f name="annotation_value">the king sowed a large melon-bed and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1278"/>
-  <edge from="utterance/n1277" to="translation/n1278" xml:id="e1278"/>
-  <a as="translation" label="translation" ref="translation/n1278" xml:id="1278">
-    <fs>
-      <f name="annotation_value">made an old man the gardener.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1301"/>
-  <edge from="utterance/n1300" to="translation/n1301" xml:id="e1301"/>
-  <a as="translation" label="translation" ref="translation/n1301" xml:id="1301">
-    <fs>
-      <f name="annotation_value">It began, this melon-bed, to grow melons and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1315"/>
-  <edge from="utterance/n1314" to="translation/n1315" xml:id="e1315"/>
-  <a as="translation" label="translation" ref="translation/n1315" xml:id="1315">
-    <fs>
-      <f name="annotation_value">produced a lot of melons.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1332"/>
-  <edge from="utterance/n1331" to="translation/n1332" xml:id="e1332"/>
-  <a as="translation" label="translation" ref="translation/n1332" xml:id="1332">
-    <fs>
-      <f name="annotation_value">The old man didn't do, you know, at first,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1343"/>
-  <edge from="utterance/n1342" to="translation/n1343" xml:id="e1343"/>
-  <a as="translation" label="translation" ref="translation/n1343" xml:id="1343">
-    <fs>
-      <f name="annotation_value">he didn't trust and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1354"/>
-  <edge from="utterance/n1353" to="translation/n1354" xml:id="e1354"/>
-  <a as="translation" label="translation" ref="translation/n1354" xml:id="1354">
-    <fs>
-      <f name="annotation_value">and he had a little donkey,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1380"/>
-  <edge from="utterance/n1379" to="translation/n1380" xml:id="e1380"/>
-  <a as="translation" label="translation" ref="translation/n1380" xml:id="1380">
-    <fs>
-      <f name="annotation_value">first, he cut these very melons to pieces in front of the donkey and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1388"/>
-  <edge from="utterance/n1387" to="translation/n1388" xml:id="e1388"/>
-  <a as="translation" label="translation" ref="translation/n1388" xml:id="1388">
-    <fs>
-      <f name="annotation_value">gave (them to the donkey).</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1405"/>
-  <edge from="utterance/n1404" to="translation/n1405" xml:id="e1405"/>
-  <a as="translation" label="translation" ref="translation/n1405" xml:id="1405">
-    <fs>
-      <f name="annotation_value">So this donkey became strong.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n141"/>
-  <edge from="utterance/n140" to="translation/n141" xml:id="e141"/>
-  <a as="translation" label="translation" ref="translation/n141" xml:id="141">
-    <fs>
-      <f name="annotation_value">the king was informed there (in his palace).</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1422"/>
-  <edge from="utterance/n1421" to="translation/n1422" xml:id="e1422"/>
-  <a as="translation" label="translation" ref="translation/n1422" xml:id="1422">
-    <fs>
-      <f name="annotation_value">The old man began to eat,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1439"/>
-  <edge from="utterance/n1438" to="translation/n1439" xml:id="e1439"/>
-  <a as="translation" label="translation" ref="translation/n1439" xml:id="1439">
-    <fs>
-      <f name="annotation_value">Wow, what (good) things these are.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1453"/>
-  <edge from="utterance/n1452" to="translation/n1453" xml:id="e1453"/>
-  <a as="translation" label="translation" ref="translation/n1453" xml:id="1453">
-    <fs>
-      <f name="annotation_value">The old man became strong as well.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1473"/>
-  <edge from="utterance/n1472" to="translation/n1473" xml:id="e1473"/>
-  <a as="translation" label="translation" ref="translation/n1473" xml:id="1473">
-    <fs>
-      <f name="annotation_value">One day when the king came,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1481"/>
-  <edge from="utterance/n1480" to="translation/n1481" xml:id="e1481"/>
-  <a as="translation" label="translation" ref="translation/n1481" xml:id="1481">
-    <fs>
-      <f name="annotation_value">he (the king) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1501"/>
-  <edge from="utterance/n1500" to="translation/n1501" xml:id="e1501"/>
-  <a as="translation" label="translation" ref="translation/n1501" xml:id="1501">
-    <fs>
-      <f name="annotation_value">(Dear) old man what are these?</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1509"/>
-  <edge from="utterance/n1508" to="translation/n1509" xml:id="e1509"/>
-  <a as="translation" label="translation" ref="translation/n1509" xml:id="1509">
-    <fs>
-      <f name="annotation_value">He (the old man) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1526"/>
-  <edge from="utterance/n1525" to="translation/n1526" xml:id="e1526"/>
-  <a as="translation" label="translation" ref="translation/n1526" xml:id="1526">
-    <fs>
-      <f name="annotation_value">These are very good things,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1537"/>
-  <edge from="utterance/n1536" to="translation/n1537" xml:id="e1537"/>
-  <a as="translation" label="translation" ref="translation/n1537" xml:id="1537">
-    <fs>
-      <f name="annotation_value">I have also eaten (from them),</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n155"/>
-  <edge from="utterance/n154" to="translation/n155" xml:id="e155"/>
-  <a as="translation" label="translation" ref="translation/n155" xml:id="155">
-    <fs>
-      <f name="annotation_value">One day he noticed</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1551"/>
-  <edge from="utterance/n1550" to="translation/n1551" xml:id="e1551"/>
-  <a as="translation" label="translation" ref="translation/n1551" xml:id="1551">
-    <fs>
-      <f name="annotation_value">I have also given (them) to this donkey and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1562"/>
-  <edge from="utterance/n1561" to="translation/n1562" xml:id="e1562"/>
-  <a as="translation" label="translation" ref="translation/n1562" xml:id="1562">
-    <fs>
-      <f name="annotation_value">you, too, (should) eat (it).</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1573"/>
-  <edge from="utterance/n1572" to="translation/n1573" xml:id="e1573"/>
-  <a as="translation" label="translation" ref="translation/n1573" xml:id="1573">
-    <fs>
-      <f name="annotation_value">The vizier said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1590"/>
-  <edge from="utterance/n1589" to="translation/n1590" xml:id="e1590"/>
-  <a as="translation" label="translation" ref="translation/n1590" xml:id="1590">
-    <fs>
-      <f name="annotation_value">No, first I will eat,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1607"/>
-  <edge from="utterance/n1606" to="translation/n1607" xml:id="e1607"/>
-  <a as="translation" label="translation" ref="translation/n1607" xml:id="1607">
-    <fs>
-      <f name="annotation_value">don't eat, oh king!</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1618"/>
-  <edge from="utterance/n1617" to="translation/n1618" xml:id="e1618"/>
-  <a as="translation" label="translation" ref="translation/n1618" xml:id="1618">
-    <fs>
-      <f name="annotation_value">The vizier ate,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1638"/>
-  <edge from="utterance/n1637" to="translation/n1638" xml:id="e1638"/>
-  <a as="translation" label="translation" ref="translation/n1638" xml:id="1638">
-    <fs>
-      <f name="annotation_value">wow what tasty things are these.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1646"/>
-  <edge from="utterance/n1645" to="translation/n1646" xml:id="e1646"/>
-  <a as="translation" label="translation" ref="translation/n1646" xml:id="1646">
-    <fs>
-      <f name="annotation_value">They ate and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1657"/>
-  <edge from="utterance/n1656" to="translation/n1657" xml:id="e1657"/>
-  <a as="translation" label="translation" ref="translation/n1657" xml:id="1657">
-    <fs>
-      <f name="annotation_value">when they had eaten,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1668"/>
-  <edge from="utterance/n1667" to="translation/n1668" xml:id="e1668"/>
-  <a as="translation" label="translation" ref="translation/n1668" xml:id="1668">
-    <fs>
-      <f name="annotation_value">now they said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1688"/>
-  <edge from="utterance/n1687" to="translation/n1688" xml:id="e1688"/>
-  <a as="translation" label="translation" ref="translation/n1688" xml:id="1688">
-    <fs>
-      <f name="annotation_value">Let’s give it a name.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1708"/>
-  <edge from="utterance/n1707" to="translation/n1708" xml:id="e1708"/>
-  <a as="translation" label="translation" ref="translation/n1708" xml:id="1708">
-    <fs>
-      <f name="annotation_value">Then they named the melon 'xarmizza' (which means donkey-taste),</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n172"/>
-  <edge from="utterance/n171" to="translation/n172" xml:id="e172"/>
-  <a as="translation" label="translation" ref="translation/n172" xml:id="172">
-    <fs>
-      <f name="annotation_value">that a dragon had come and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1728"/>
-  <edge from="utterance/n1727" to="translation/n1728" xml:id="e1728"/>
-  <a as="translation" label="translation" ref="translation/n1728" xml:id="1728">
-    <fs>
-      <f name="annotation_value">because for the first time it was the donkey that tasted it.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n1742"/>
-  <edge from="utterance/n1741" to="translation/n1742" xml:id="e1742"/>
-  <a as="translation" label="translation" ref="translation/n1742" xml:id="1742">
-    <fs>
-      <f name="annotation_value">(the name) xarmizza remained from there</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n186"/>
-  <edge from="utterance/n185" to="translation/n186" xml:id="e186"/>
-  <a as="translation" label="translation" ref="translation/n186" xml:id="186">
-    <fs>
-      <f name="annotation_value">was shaking this (light post).</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n203"/>
-  <edge from="utterance/n202" to="translation/n203" xml:id="e203"/>
-  <a as="translation" label="translation" ref="translation/n203" xml:id="203">
-    <fs>
-      <f name="annotation_value">The king sent a person</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n21"/>
-  <edge from="utterance/n20" to="translation/n21" xml:id="e21"/>
-  <a as="translation" label="translation" ref="translation/n21" xml:id="21">
-    <fs>
-      <f name="annotation_value">that there was a king.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n217"/>
-  <edge from="utterance/n216" to="translation/n217" xml:id="e217"/>
-  <a as="translation" label="translation" ref="translation/n217" xml:id="217">
-    <fs>
-      <f name="annotation_value">(to check) what this was.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n225"/>
-  <edge from="utterance/n224" to="translation/n225" xml:id="e225"/>
-  <a as="translation" label="translation" ref="translation/n225" xml:id="225">
-    <fs>
-      <f name="annotation_value">They (the ones whom the king had sent) came (back),</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n233"/>
-  <edge from="utterance/n232" to="translation/n233" xml:id="e233"/>
-  <a as="translation" label="translation" ref="translation/n233" xml:id="233">
-    <fs>
-      <f name="annotation_value">he (one of them) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n247"/>
-  <edge from="utterance/n246" to="translation/n247" xml:id="e247"/>
-  <a as="translation" label="translation" ref="translation/n247" xml:id="247">
-    <fs>
-      <f name="annotation_value">Lord king, it is a dragon.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n255"/>
-  <edge from="utterance/n254" to="translation/n255" xml:id="e255"/>
-  <a as="translation" label="translation" ref="translation/n255" xml:id="255">
-    <fs>
-      <f name="annotation_value">He (the king) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n275"/>
-  <edge from="utterance/n274" to="translation/n275" xml:id="e275"/>
-  <a as="translation" label="translation" ref="translation/n275" xml:id="275">
-    <fs>
-      <f name="annotation_value">Oh… this dragon has something to say,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n286"/>
-  <edge from="utterance/n285" to="translation/n286" xml:id="e286"/>
-  <a as="translation" label="translation" ref="translation/n286" xml:id="286">
-    <fs>
-      <f name="annotation_value">it has a petition,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n306"/>
-  <edge from="utterance/n305" to="translation/n306" xml:id="e306"/>
-  <a as="translation" label="translation" ref="translation/n306" xml:id="306">
-    <fs>
-      <f name="annotation_value">who can bring its petition to me,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n320"/>
-  <edge from="utterance/n319" to="translation/n320" xml:id="e320"/>
-  <a as="translation" label="translation" ref="translation/n320" xml:id="320">
-    <fs>
-      <f name="annotation_value">as for me, I don't know</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n331"/>
-  <edge from="utterance/n330" to="translation/n331" xml:id="e331"/>
-  <a as="translation" label="translation" ref="translation/n331" xml:id="331">
-    <fs>
-      <f name="annotation_value">it cannot talk.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n345"/>
-  <edge from="utterance/n344" to="translation/n345" xml:id="e345"/>
-  <a as="translation" label="translation" ref="translation/n345" xml:id="345">
-    <fs>
-      <f name="annotation_value">A carpenter said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n356"/>
-  <edge from="utterance/n355" to="translation/n356" xml:id="e356"/>
-  <a as="translation" label="translation" ref="translation/n356" xml:id="356">
-    <fs>
-      <f name="annotation_value">I know (what the dragon wants).</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n364"/>
-  <edge from="utterance/n363" to="translation/n364" xml:id="e364"/>
-  <a as="translation" label="translation" ref="translation/n364" xml:id="364">
-    <fs>
-      <f name="annotation_value">He (the king) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n375"/>
-  <edge from="utterance/n374" to="translation/n375" xml:id="e375"/>
-  <a as="translation" label="translation" ref="translation/n375" xml:id="375">
-    <fs>
-      <f name="annotation_value">(If) you know</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n389"/>
-  <edge from="utterance/n388" to="translation/n389" xml:id="e389"/>
-  <a as="translation" label="translation" ref="translation/n389" xml:id="389">
-    <fs>
-      <f name="annotation_value">(and if) you bring its petition,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n409"/>
-  <edge from="utterance/n408" to="translation/n409" xml:id="e409"/>
-  <a as="translation" label="translation" ref="translation/n409" xml:id="409">
-    <fs>
-      <f name="annotation_value">I will give you this much reward.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n417"/>
-  <edge from="utterance/n416" to="translation/n417" xml:id="e417"/>
-  <a as="translation" label="translation" ref="translation/n417" xml:id="417">
-    <fs>
-      <f name="annotation_value">He (the carpenter) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n428"/>
-  <edge from="utterance/n427" to="translation/n428" xml:id="e428"/>
-  <a as="translation" label="translation" ref="translation/n428" xml:id="428">
-    <fs>
-      <f name="annotation_value">Very well.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n454"/>
-  <edge from="utterance/n453" to="translation/n454" xml:id="e454"/>
-  <a as="translation" label="translation" ref="translation/n454" xml:id="454">
-    <fs>
-      <f name="annotation_value">When the carpenter came with blades and saws,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n471"/>
-  <edge from="utterance/n470" to="translation/n471" xml:id="e471"/>
-  <a as="translation" label="translation" ref="translation/n471" xml:id="471">
-    <fs>
-      <f name="annotation_value">the dragon released (the light post) and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n482"/>
-  <edge from="utterance/n481" to="translation/n482" xml:id="e482"/>
-  <a as="translation" label="translation" ref="translation/n482" xml:id="482">
-    <fs>
-      <f name="annotation_value">set out and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n502"/>
-  <edge from="utterance/n501" to="translation/n502" xml:id="e502"/>
-  <a as="translation" label="translation" ref="translation/n502" xml:id="502">
-    <fs>
-      <f name="annotation_value">the dragon gave the carpenter one hint after another and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n519"/>
-  <edge from="utterance/n518" to="translation/n519" xml:id="e519"/>
-  <a as="translation" label="translation" ref="translation/n519" xml:id="519">
-    <fs>
-      <f name="annotation_value">went into the mountain.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n533"/>
-  <edge from="utterance/n532" to="translation/n533" xml:id="e533"/>
-  <a as="translation" label="translation" ref="translation/n533" xml:id="533">
-    <fs>
-      <f name="annotation_value">When he went there,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n559"/>
-  <edge from="utterance/n558" to="translation/n559" xml:id="e559"/>
-  <a as="translation" label="translation" ref="translation/n559" xml:id="559">
-    <fs>
-      <f name="annotation_value">good heavens ohhh ... this dragon has a mother as well.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n56"/>
-  <edge from="utterance/n55" to="translation/n56" xml:id="e56"/>
-  <a as="translation" label="translation" ref="translation/n56" xml:id="56">
-    <fs>
-      <f name="annotation_value">This king had a light post in the centre of his town</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n588"/>
-  <edge from="utterance/n587" to="translation/n588" xml:id="e588"/>
-  <a as="translation" label="translation" ref="translation/n588" xml:id="588">
-    <fs>
-      <f name="annotation_value">Its mother, there are this kind of wild mountain goats with big horns,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n602"/>
-  <edge from="utterance/n601" to="translation/n602" xml:id="e602"/>
-  <a as="translation" label="translation" ref="translation/n602" xml:id="602">
-    <fs>
-      <f name="annotation_value">it has caught (one) of them and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n625"/>
-  <edge from="utterance/n624" to="translation/n625" xml:id="e625"/>
-  <a as="translation" label="translation" ref="translation/n625" xml:id="625">
-    <fs>
-      <f name="annotation_value">its horns have got stuck in its (the mother’s) throat and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n636"/>
-  <edge from="utterance/n635" to="translation/n636" xml:id="e636"/>
-  <a as="translation" label="translation" ref="translation/n636" xml:id="636">
-    <fs>
-      <f name="annotation_value">it is short of breath,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n647"/>
-  <edge from="utterance/n646" to="translation/n647" xml:id="e647"/>
-  <a as="translation" label="translation" ref="translation/n647" xml:id="647">
-    <fs>
-      <f name="annotation_value">it (the dragon) has come here</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n664"/>
-  <edge from="utterance/n663" to="translation/n664" xml:id="e664"/>
-  <a as="translation" label="translation" ref="translation/n664" xml:id="664">
-    <fs>
-      <f name="annotation_value">(and) it has informed the king.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n675"/>
-  <edge from="utterance/n674" to="translation/n675" xml:id="e675"/>
-  <a as="translation" label="translation" ref="translation/n675" xml:id="675">
-    <fs>
-      <f name="annotation_value">It (the dragon) gave a hint and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n695"/>
-  <edge from="utterance/n694" to="translation/n695" xml:id="e695"/>
-  <a as="translation" label="translation" ref="translation/n695" xml:id="695">
-    <fs>
-      <f name="annotation_value">he (the carpenter) sawed the wild goat's horns and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n7"/>
-  <edge from="utterance/n6" to="translation/n7" xml:id="e7"/>
-  <a as="translation" label="translation" ref="translation/n7" xml:id="7">
-    <fs>
-      <f name="annotation_value">They say:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n709"/>
-  <edge from="utterance/n708" to="translation/n709" xml:id="e709"/>
-  <a as="translation" label="translation" ref="translation/n709" xml:id="709">
-    <fs>
-      <f name="annotation_value">it was rescued,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n720"/>
-  <edge from="utterance/n719" to="translation/n720" xml:id="e720"/>
-  <a as="translation" label="translation" ref="translation/n720" xml:id="720">
-    <fs>
-      <f name="annotation_value">(and) became free.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n740"/>
-  <edge from="utterance/n739" to="translation/n740" xml:id="e740"/>
-  <a as="translation" label="translation" ref="translation/n740" xml:id="740">
-    <fs>
-      <f name="annotation_value">This dragon went to another place and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n76"/>
-  <edge from="utterance/n75" to="translation/n76" xml:id="e76"/>
-  <a as="translation" label="translation" ref="translation/n76" xml:id="76">
-    <fs>
-      <f name="annotation_value">and whatever phone wires there were,</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n760"/>
-  <edge from="utterance/n759" to="translation/n760" xml:id="e760"/>
-  <a as="translation" label="translation" ref="translation/n760" xml:id="760">
-    <fs>
-      <f name="annotation_value">it gave him (the carpenter) a big rewards, jewelry.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n780"/>
-  <edge from="utterance/n779" to="translation/n780" xml:id="e780"/>
-  <a as="translation" label="translation" ref="translation/n780" xml:id="780">
-    <fs>
-      <f name="annotation_value">Then when he (the carpenter) went a little</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n797"/>
-  <edge from="utterance/n796" to="translation/n797" xml:id="e797"/>
-  <a as="translation" label="translation" ref="translation/n797" xml:id="797">
-    <fs>
-      <f name="annotation_value">again it (the dragon) gave him a hint.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n805"/>
-  <edge from="utterance/n804" to="translation/n805" xml:id="e805"/>
-  <a as="translation" label="translation" ref="translation/n805" xml:id="805">
-    <fs>
-      <f name="annotation_value">He (the carpenter) stopped.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n819"/>
-  <edge from="utterance/n818" to="translation/n819" xml:id="e819"/>
-  <a as="translation" label="translation" ref="translation/n819" xml:id="819">
-    <fs>
-      <f name="annotation_value">It (the dragon) took a seed of such a size and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n860"/>
-  <edge from="utterance/n859" to="translation/n860" xml:id="e860"/>
-  <a as="translation" label="translation" ref="translation/n860" xml:id="860">
-    <fs>
-      <f name="annotation_value">from its mouth threw it among the jewels, inside his bag.</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n871"/>
-  <edge from="utterance/n870" to="translation/n871" xml:id="e871"/>
-  <a as="translation" label="translation" ref="translation/n871" xml:id="871">
-    <fs>
-      <f name="annotation_value">When he came (back to the king),</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n882"/>
-  <edge from="utterance/n881" to="translation/n882" xml:id="e882"/>
-  <a as="translation" label="translation" ref="translation/n882" xml:id="882">
-    <fs>
-      <f name="annotation_value">the king said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n899"/>
-  <edge from="utterance/n898" to="translation/n899" xml:id="e899"/>
-  <a as="translation" label="translation" ref="translation/n899" xml:id="899">
-    <fs>
-      <f name="annotation_value">What petition did it (the dragon) have?</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n90"/>
-  <edge from="utterance/n89" to="translation/n90" xml:id="e90"/>
-  <a as="translation" label="translation" ref="translation/n90" xml:id="90">
-    <fs>
-      <f name="annotation_value">they were connected to this (light post)</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n907"/>
-  <edge from="utterance/n906" to="translation/n907" xml:id="e907"/>
-  <a as="translation" label="translation" ref="translation/n907" xml:id="907">
-    <fs>
-      <f name="annotation_value">He (the carpenter) said:</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n939"/>
-  <edge from="utterance/n938" to="translation/n939" xml:id="e939"/>
-  <a as="translation" label="translation" ref="translation/n939" xml:id="939">
-    <fs>
-      <f name="annotation_value">Actually, its mother was strangled in this way and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n947"/>
-  <edge from="utterance/n946" to="translation/n947" xml:id="e947"/>
-  <a as="translation" label="translation" ref="translation/n947" xml:id="947">
-    <fs>
-      <f name="annotation_value">it (the dragon) came and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n961"/>
-  <edge from="utterance/n960" to="translation/n961" xml:id="e961"/>
-  <a as="translation" label="translation" ref="translation/n961" xml:id="961">
-    <fs>
-      <f name="annotation_value">I freed (and I rescued it) and</f>
-    </fs>
-  </a>
-  <node xml:id="translation/n981"/>
-  <edge from="utterance/n980" to="translation/n981" xml:id="e981"/>
-  <a as="translation" label="translation" ref="translation/n981" xml:id="981">
-    <fs>
-      <f name="annotation_value">then it gave me this much jewelry and</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="translation" occurs="111"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="utterance"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="translation"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="translation..na1004"/>
+	<edge from="utterance..na1003" to="translation..na1004" xml:id="ea1004"/>
+	<a as="translation" label="translation" ref="translation..na1004" xml:id="a1004">
+		<fs>
+			<f name="annotation_value">this very seed, it also gave me this,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1024"/>
+	<edge from="utterance..na1023" to="translation..na1024" xml:id="ea1024"/>
+	<a as="translation" label="translation" ref="translation..na1024" xml:id="a1024">
+		<fs>
+			<f name="annotation_value">it threw it from its mouth.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1032"/>
+	<edge from="utterance..na1031" to="translation..na1032" xml:id="ea1032"/>
+	<a as="translation" label="translation" ref="translation..na1032" xml:id="a1032">
+		<fs>
+			<f name="annotation_value">He (the king) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1046"/>
+	<edge from="utterance..na1045" to="translation..na1046" xml:id="ea1046"/>
+	<a as="translation" label="translation" ref="translation..na1046" xml:id="a1046">
+		<fs>
+			<f name="annotation_value">Well, this is certainly jewelry,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1060"/>
+	<edge from="utterance..na1059" to="translation..na1060" xml:id="ea1060"/>
+	<a as="translation" label="translation" ref="translation..na1060" xml:id="a1060">
+		<fs>
+			<f name="annotation_value">(but) we don't know this.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na107"/>
+	<edge from="utterance..na106" to="translation..na107" xml:id="ea107"/>
+	<a as="translation" label="translation" ref="translation..na107" xml:id="a107">
+		<fs>
+			<f name="annotation_value">anyone who had a petition,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1074"/>
+	<edge from="utterance..na1073" to="translation..na1074" xml:id="ea1074"/>
+	<a as="translation" label="translation" ref="translation..na1074" xml:id="a1074">
+		<fs>
+			<f name="annotation_value">They (the king and his consultants) consulted,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1082"/>
+	<edge from="utterance..na1081" to="translation..na1082" xml:id="ea1082"/>
+	<a as="translation" label="translation" ref="translation..na1082" xml:id="a1082">
+		<fs>
+			<f name="annotation_value">(and) they said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1099"/>
+	<edge from="utterance..na1098" to="translation..na1099" xml:id="ea1099"/>
+	<a as="translation" label="translation" ref="translation..na1099" xml:id="a1099">
+		<fs>
+			<f name="annotation_value">Let's sow this.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1134"/>
+	<edge from="utterance..na1133" to="translation..na1134" xml:id="ea1134"/>
+	<a as="translation" label="translation" ref="translation..na1134" xml:id="a1134">
+		<fs>
+			<f name="annotation_value">They sowed it in a good place, in a garden, in a plot and in (fertile) and soft soil and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1148"/>
+	<edge from="utterance..na1147" to="translation..na1148" xml:id="ea1148"/>
+	<a as="translation" label="translation" ref="translation..na1148" xml:id="a1148">
+		<fs>
+			<f name="annotation_value">a melon bush grew up and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1165"/>
+	<edge from="utterance..na1164" to="translation..na1165" xml:id="ea1165"/>
+	<a as="translation" label="translation" ref="translation..na1165" xml:id="a1165">
+		<fs>
+			<f name="annotation_value">it gave so many melons.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1188"/>
+	<edge from="utterance..na1187" to="translation..na1188" xml:id="ea1188"/>
+	<a as="translation" label="translation" ref="translation..na1188" xml:id="a1188">
+		<fs>
+			<f name="annotation_value">Nobody ate these melons out of fear</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1208"/>
+	<edge from="utterance..na1207" to="translation..na1208" xml:id="ea1208"/>
+	<a as="translation" label="translation" ref="translation..na1208" xml:id="a1208">
+		<fs>
+			<f name="annotation_value">since they were from the mouth of the dragon,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1219"/>
+	<edge from="utterance..na1218" to="translation..na1219" xml:id="ea1219"/>
+	<a as="translation" label="translation" ref="translation..na1219" xml:id="a1219">
+		<fs>
+			<f name="annotation_value">they were snake's poison.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1236"/>
+	<edge from="utterance..na1235" to="translation..na1236" xml:id="ea1236"/>
+	<a as="translation" label="translation" ref="translation..na1236" xml:id="a1236">
+		<fs>
+			<f name="annotation_value">They (the melons) produce so many seeds and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na124"/>
+	<edge from="utterance..na123" to="translation..na124" xml:id="ea124"/>
+	<a as="translation" label="translation" ref="translation..na124" xml:id="a124">
+		<fs>
+			<f name="annotation_value">when he shook this (light post),</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1244"/>
+	<edge from="utterance..na1243" to="translation..na1244" xml:id="ea1244"/>
+	<a as="translation" label="translation" ref="translation..na1244" xml:id="a1244">
+		<fs>
+			<f name="annotation_value">they (the king’s servants) went (and told the king),</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1261"/>
+	<edge from="utterance..na1260" to="translation..na1261" xml:id="ea1261"/>
+	<a as="translation" label="translation" ref="translation..na1261" xml:id="a1261">
+		<fs>
+			<f name="annotation_value">the king sowed a large melon-bed and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1278"/>
+	<edge from="utterance..na1277" to="translation..na1278" xml:id="ea1278"/>
+	<a as="translation" label="translation" ref="translation..na1278" xml:id="a1278">
+		<fs>
+			<f name="annotation_value">made an old man the gardener.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1301"/>
+	<edge from="utterance..na1300" to="translation..na1301" xml:id="ea1301"/>
+	<a as="translation" label="translation" ref="translation..na1301" xml:id="a1301">
+		<fs>
+			<f name="annotation_value">It began, this melon-bed, to grow melons and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1315"/>
+	<edge from="utterance..na1314" to="translation..na1315" xml:id="ea1315"/>
+	<a as="translation" label="translation" ref="translation..na1315" xml:id="a1315">
+		<fs>
+			<f name="annotation_value">produced a lot of melons.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1332"/>
+	<edge from="utterance..na1331" to="translation..na1332" xml:id="ea1332"/>
+	<a as="translation" label="translation" ref="translation..na1332" xml:id="a1332">
+		<fs>
+			<f name="annotation_value">The old man didn't do, you know, at first,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1343"/>
+	<edge from="utterance..na1342" to="translation..na1343" xml:id="ea1343"/>
+	<a as="translation" label="translation" ref="translation..na1343" xml:id="a1343">
+		<fs>
+			<f name="annotation_value">he didn't trust and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1354"/>
+	<edge from="utterance..na1353" to="translation..na1354" xml:id="ea1354"/>
+	<a as="translation" label="translation" ref="translation..na1354" xml:id="a1354">
+		<fs>
+			<f name="annotation_value">and he had a little donkey,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1380"/>
+	<edge from="utterance..na1379" to="translation..na1380" xml:id="ea1380"/>
+	<a as="translation" label="translation" ref="translation..na1380" xml:id="a1380">
+		<fs>
+			<f name="annotation_value">first, he cut these very melons to pieces in front of the donkey and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1388"/>
+	<edge from="utterance..na1387" to="translation..na1388" xml:id="ea1388"/>
+	<a as="translation" label="translation" ref="translation..na1388" xml:id="a1388">
+		<fs>
+			<f name="annotation_value">gave (them to the donkey).</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1405"/>
+	<edge from="utterance..na1404" to="translation..na1405" xml:id="ea1405"/>
+	<a as="translation" label="translation" ref="translation..na1405" xml:id="a1405">
+		<fs>
+			<f name="annotation_value">So this donkey became strong.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na141"/>
+	<edge from="utterance..na140" to="translation..na141" xml:id="ea141"/>
+	<a as="translation" label="translation" ref="translation..na141" xml:id="a141">
+		<fs>
+			<f name="annotation_value">the king was informed there (in his palace).</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1422"/>
+	<edge from="utterance..na1421" to="translation..na1422" xml:id="ea1422"/>
+	<a as="translation" label="translation" ref="translation..na1422" xml:id="a1422">
+		<fs>
+			<f name="annotation_value">The old man began to eat,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1439"/>
+	<edge from="utterance..na1438" to="translation..na1439" xml:id="ea1439"/>
+	<a as="translation" label="translation" ref="translation..na1439" xml:id="a1439">
+		<fs>
+			<f name="annotation_value">Wow, what (good) things these are.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1453"/>
+	<edge from="utterance..na1452" to="translation..na1453" xml:id="ea1453"/>
+	<a as="translation" label="translation" ref="translation..na1453" xml:id="a1453">
+		<fs>
+			<f name="annotation_value">The old man became strong as well.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1473"/>
+	<edge from="utterance..na1472" to="translation..na1473" xml:id="ea1473"/>
+	<a as="translation" label="translation" ref="translation..na1473" xml:id="a1473">
+		<fs>
+			<f name="annotation_value">One day when the king came,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1481"/>
+	<edge from="utterance..na1480" to="translation..na1481" xml:id="ea1481"/>
+	<a as="translation" label="translation" ref="translation..na1481" xml:id="a1481">
+		<fs>
+			<f name="annotation_value">he (the king) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1501"/>
+	<edge from="utterance..na1500" to="translation..na1501" xml:id="ea1501"/>
+	<a as="translation" label="translation" ref="translation..na1501" xml:id="a1501">
+		<fs>
+			<f name="annotation_value">(Dear) old man what are these?</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1509"/>
+	<edge from="utterance..na1508" to="translation..na1509" xml:id="ea1509"/>
+	<a as="translation" label="translation" ref="translation..na1509" xml:id="a1509">
+		<fs>
+			<f name="annotation_value">He (the old man) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1526"/>
+	<edge from="utterance..na1525" to="translation..na1526" xml:id="ea1526"/>
+	<a as="translation" label="translation" ref="translation..na1526" xml:id="a1526">
+		<fs>
+			<f name="annotation_value">These are very good things,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1537"/>
+	<edge from="utterance..na1536" to="translation..na1537" xml:id="ea1537"/>
+	<a as="translation" label="translation" ref="translation..na1537" xml:id="a1537">
+		<fs>
+			<f name="annotation_value">I have also eaten (from them),</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na155"/>
+	<edge from="utterance..na154" to="translation..na155" xml:id="ea155"/>
+	<a as="translation" label="translation" ref="translation..na155" xml:id="a155">
+		<fs>
+			<f name="annotation_value">One day he noticed</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1551"/>
+	<edge from="utterance..na1550" to="translation..na1551" xml:id="ea1551"/>
+	<a as="translation" label="translation" ref="translation..na1551" xml:id="a1551">
+		<fs>
+			<f name="annotation_value">I have also given (them) to this donkey and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1562"/>
+	<edge from="utterance..na1561" to="translation..na1562" xml:id="ea1562"/>
+	<a as="translation" label="translation" ref="translation..na1562" xml:id="a1562">
+		<fs>
+			<f name="annotation_value">you, too, (should) eat (it).</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1573"/>
+	<edge from="utterance..na1572" to="translation..na1573" xml:id="ea1573"/>
+	<a as="translation" label="translation" ref="translation..na1573" xml:id="a1573">
+		<fs>
+			<f name="annotation_value">The vizier said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1590"/>
+	<edge from="utterance..na1589" to="translation..na1590" xml:id="ea1590"/>
+	<a as="translation" label="translation" ref="translation..na1590" xml:id="a1590">
+		<fs>
+			<f name="annotation_value">No, first I will eat,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1607"/>
+	<edge from="utterance..na1606" to="translation..na1607" xml:id="ea1607"/>
+	<a as="translation" label="translation" ref="translation..na1607" xml:id="a1607">
+		<fs>
+			<f name="annotation_value">don't eat, oh king!</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1618"/>
+	<edge from="utterance..na1617" to="translation..na1618" xml:id="ea1618"/>
+	<a as="translation" label="translation" ref="translation..na1618" xml:id="a1618">
+		<fs>
+			<f name="annotation_value">The vizier ate,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1638"/>
+	<edge from="utterance..na1637" to="translation..na1638" xml:id="ea1638"/>
+	<a as="translation" label="translation" ref="translation..na1638" xml:id="a1638">
+		<fs>
+			<f name="annotation_value">wow what tasty things are these.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1646"/>
+	<edge from="utterance..na1645" to="translation..na1646" xml:id="ea1646"/>
+	<a as="translation" label="translation" ref="translation..na1646" xml:id="a1646">
+		<fs>
+			<f name="annotation_value">They ate and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1657"/>
+	<edge from="utterance..na1656" to="translation..na1657" xml:id="ea1657"/>
+	<a as="translation" label="translation" ref="translation..na1657" xml:id="a1657">
+		<fs>
+			<f name="annotation_value">when they had eaten,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1668"/>
+	<edge from="utterance..na1667" to="translation..na1668" xml:id="ea1668"/>
+	<a as="translation" label="translation" ref="translation..na1668" xml:id="a1668">
+		<fs>
+			<f name="annotation_value">now they said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1688"/>
+	<edge from="utterance..na1687" to="translation..na1688" xml:id="ea1688"/>
+	<a as="translation" label="translation" ref="translation..na1688" xml:id="a1688">
+		<fs>
+			<f name="annotation_value">Let’s give it a name.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1708"/>
+	<edge from="utterance..na1707" to="translation..na1708" xml:id="ea1708"/>
+	<a as="translation" label="translation" ref="translation..na1708" xml:id="a1708">
+		<fs>
+			<f name="annotation_value">Then they named the melon 'xarmizza' (which means donkey-taste),</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na172"/>
+	<edge from="utterance..na171" to="translation..na172" xml:id="ea172"/>
+	<a as="translation" label="translation" ref="translation..na172" xml:id="a172">
+		<fs>
+			<f name="annotation_value">that a dragon had come and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1728"/>
+	<edge from="utterance..na1727" to="translation..na1728" xml:id="ea1728"/>
+	<a as="translation" label="translation" ref="translation..na1728" xml:id="a1728">
+		<fs>
+			<f name="annotation_value">because for the first time it was the donkey that tasted it.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na1742"/>
+	<edge from="utterance..na1741" to="translation..na1742" xml:id="ea1742"/>
+	<a as="translation" label="translation" ref="translation..na1742" xml:id="a1742">
+		<fs>
+			<f name="annotation_value">(the name) xarmizza remained from there</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na186"/>
+	<edge from="utterance..na185" to="translation..na186" xml:id="ea186"/>
+	<a as="translation" label="translation" ref="translation..na186" xml:id="a186">
+		<fs>
+			<f name="annotation_value">was shaking this (light post).</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na203"/>
+	<edge from="utterance..na202" to="translation..na203" xml:id="ea203"/>
+	<a as="translation" label="translation" ref="translation..na203" xml:id="a203">
+		<fs>
+			<f name="annotation_value">The king sent a person</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na21"/>
+	<edge from="utterance..na20" to="translation..na21" xml:id="ea21"/>
+	<a as="translation" label="translation" ref="translation..na21" xml:id="a21">
+		<fs>
+			<f name="annotation_value">that there was a king.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na217"/>
+	<edge from="utterance..na216" to="translation..na217" xml:id="ea217"/>
+	<a as="translation" label="translation" ref="translation..na217" xml:id="a217">
+		<fs>
+			<f name="annotation_value">(to check) what this was.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na225"/>
+	<edge from="utterance..na224" to="translation..na225" xml:id="ea225"/>
+	<a as="translation" label="translation" ref="translation..na225" xml:id="a225">
+		<fs>
+			<f name="annotation_value">They (the ones whom the king had sent) came (back),</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na233"/>
+	<edge from="utterance..na232" to="translation..na233" xml:id="ea233"/>
+	<a as="translation" label="translation" ref="translation..na233" xml:id="a233">
+		<fs>
+			<f name="annotation_value">he (one of them) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na247"/>
+	<edge from="utterance..na246" to="translation..na247" xml:id="ea247"/>
+	<a as="translation" label="translation" ref="translation..na247" xml:id="a247">
+		<fs>
+			<f name="annotation_value">Lord king, it is a dragon.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na255"/>
+	<edge from="utterance..na254" to="translation..na255" xml:id="ea255"/>
+	<a as="translation" label="translation" ref="translation..na255" xml:id="a255">
+		<fs>
+			<f name="annotation_value">He (the king) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na275"/>
+	<edge from="utterance..na274" to="translation..na275" xml:id="ea275"/>
+	<a as="translation" label="translation" ref="translation..na275" xml:id="a275">
+		<fs>
+			<f name="annotation_value">Oh… this dragon has something to say,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na286"/>
+	<edge from="utterance..na285" to="translation..na286" xml:id="ea286"/>
+	<a as="translation" label="translation" ref="translation..na286" xml:id="a286">
+		<fs>
+			<f name="annotation_value">it has a petition,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na306"/>
+	<edge from="utterance..na305" to="translation..na306" xml:id="ea306"/>
+	<a as="translation" label="translation" ref="translation..na306" xml:id="a306">
+		<fs>
+			<f name="annotation_value">who can bring its petition to me,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na320"/>
+	<edge from="utterance..na319" to="translation..na320" xml:id="ea320"/>
+	<a as="translation" label="translation" ref="translation..na320" xml:id="a320">
+		<fs>
+			<f name="annotation_value">as for me, I don't know</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na331"/>
+	<edge from="utterance..na330" to="translation..na331" xml:id="ea331"/>
+	<a as="translation" label="translation" ref="translation..na331" xml:id="a331">
+		<fs>
+			<f name="annotation_value">it cannot talk.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na345"/>
+	<edge from="utterance..na344" to="translation..na345" xml:id="ea345"/>
+	<a as="translation" label="translation" ref="translation..na345" xml:id="a345">
+		<fs>
+			<f name="annotation_value">A carpenter said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na356"/>
+	<edge from="utterance..na355" to="translation..na356" xml:id="ea356"/>
+	<a as="translation" label="translation" ref="translation..na356" xml:id="a356">
+		<fs>
+			<f name="annotation_value">I know (what the dragon wants).</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na364"/>
+	<edge from="utterance..na363" to="translation..na364" xml:id="ea364"/>
+	<a as="translation" label="translation" ref="translation..na364" xml:id="a364">
+		<fs>
+			<f name="annotation_value">He (the king) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na375"/>
+	<edge from="utterance..na374" to="translation..na375" xml:id="ea375"/>
+	<a as="translation" label="translation" ref="translation..na375" xml:id="a375">
+		<fs>
+			<f name="annotation_value">(If) you know</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na389"/>
+	<edge from="utterance..na388" to="translation..na389" xml:id="ea389"/>
+	<a as="translation" label="translation" ref="translation..na389" xml:id="a389">
+		<fs>
+			<f name="annotation_value">(and if) you bring its petition,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na409"/>
+	<edge from="utterance..na408" to="translation..na409" xml:id="ea409"/>
+	<a as="translation" label="translation" ref="translation..na409" xml:id="a409">
+		<fs>
+			<f name="annotation_value">I will give you this much reward.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na417"/>
+	<edge from="utterance..na416" to="translation..na417" xml:id="ea417"/>
+	<a as="translation" label="translation" ref="translation..na417" xml:id="a417">
+		<fs>
+			<f name="annotation_value">He (the carpenter) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na428"/>
+	<edge from="utterance..na427" to="translation..na428" xml:id="ea428"/>
+	<a as="translation" label="translation" ref="translation..na428" xml:id="a428">
+		<fs>
+			<f name="annotation_value">Very well.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na454"/>
+	<edge from="utterance..na453" to="translation..na454" xml:id="ea454"/>
+	<a as="translation" label="translation" ref="translation..na454" xml:id="a454">
+		<fs>
+			<f name="annotation_value">When the carpenter came with blades and saws,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na471"/>
+	<edge from="utterance..na470" to="translation..na471" xml:id="ea471"/>
+	<a as="translation" label="translation" ref="translation..na471" xml:id="a471">
+		<fs>
+			<f name="annotation_value">the dragon released (the light post) and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na482"/>
+	<edge from="utterance..na481" to="translation..na482" xml:id="ea482"/>
+	<a as="translation" label="translation" ref="translation..na482" xml:id="a482">
+		<fs>
+			<f name="annotation_value">set out and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na502"/>
+	<edge from="utterance..na501" to="translation..na502" xml:id="ea502"/>
+	<a as="translation" label="translation" ref="translation..na502" xml:id="a502">
+		<fs>
+			<f name="annotation_value">the dragon gave the carpenter one hint after another and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na519"/>
+	<edge from="utterance..na518" to="translation..na519" xml:id="ea519"/>
+	<a as="translation" label="translation" ref="translation..na519" xml:id="a519">
+		<fs>
+			<f name="annotation_value">went into the mountain.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na533"/>
+	<edge from="utterance..na532" to="translation..na533" xml:id="ea533"/>
+	<a as="translation" label="translation" ref="translation..na533" xml:id="a533">
+		<fs>
+			<f name="annotation_value">When he went there,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na559"/>
+	<edge from="utterance..na558" to="translation..na559" xml:id="ea559"/>
+	<a as="translation" label="translation" ref="translation..na559" xml:id="a559">
+		<fs>
+			<f name="annotation_value">good heavens ohhh ... this dragon has a mother as well.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na56"/>
+	<edge from="utterance..na55" to="translation..na56" xml:id="ea56"/>
+	<a as="translation" label="translation" ref="translation..na56" xml:id="a56">
+		<fs>
+			<f name="annotation_value">This king had a light post in the centre of his town</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na588"/>
+	<edge from="utterance..na587" to="translation..na588" xml:id="ea588"/>
+	<a as="translation" label="translation" ref="translation..na588" xml:id="a588">
+		<fs>
+			<f name="annotation_value">Its mother, there are this kind of wild mountain goats with big horns,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na602"/>
+	<edge from="utterance..na601" to="translation..na602" xml:id="ea602"/>
+	<a as="translation" label="translation" ref="translation..na602" xml:id="a602">
+		<fs>
+			<f name="annotation_value">it has caught (one) of them and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na625"/>
+	<edge from="utterance..na624" to="translation..na625" xml:id="ea625"/>
+	<a as="translation" label="translation" ref="translation..na625" xml:id="a625">
+		<fs>
+			<f name="annotation_value">its horns have got stuck in its (the mother’s) throat and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na636"/>
+	<edge from="utterance..na635" to="translation..na636" xml:id="ea636"/>
+	<a as="translation" label="translation" ref="translation..na636" xml:id="a636">
+		<fs>
+			<f name="annotation_value">it is short of breath,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na647"/>
+	<edge from="utterance..na646" to="translation..na647" xml:id="ea647"/>
+	<a as="translation" label="translation" ref="translation..na647" xml:id="a647">
+		<fs>
+			<f name="annotation_value">it (the dragon) has come here</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na664"/>
+	<edge from="utterance..na663" to="translation..na664" xml:id="ea664"/>
+	<a as="translation" label="translation" ref="translation..na664" xml:id="a664">
+		<fs>
+			<f name="annotation_value">(and) it has informed the king.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na675"/>
+	<edge from="utterance..na674" to="translation..na675" xml:id="ea675"/>
+	<a as="translation" label="translation" ref="translation..na675" xml:id="a675">
+		<fs>
+			<f name="annotation_value">It (the dragon) gave a hint and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na695"/>
+	<edge from="utterance..na694" to="translation..na695" xml:id="ea695"/>
+	<a as="translation" label="translation" ref="translation..na695" xml:id="a695">
+		<fs>
+			<f name="annotation_value">he (the carpenter) sawed the wild goat's horns and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na7"/>
+	<edge from="utterance..na6" to="translation..na7" xml:id="ea7"/>
+	<a as="translation" label="translation" ref="translation..na7" xml:id="a7">
+		<fs>
+			<f name="annotation_value">They say:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na709"/>
+	<edge from="utterance..na708" to="translation..na709" xml:id="ea709"/>
+	<a as="translation" label="translation" ref="translation..na709" xml:id="a709">
+		<fs>
+			<f name="annotation_value">it was rescued,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na720"/>
+	<edge from="utterance..na719" to="translation..na720" xml:id="ea720"/>
+	<a as="translation" label="translation" ref="translation..na720" xml:id="a720">
+		<fs>
+			<f name="annotation_value">(and) became free.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na740"/>
+	<edge from="utterance..na739" to="translation..na740" xml:id="ea740"/>
+	<a as="translation" label="translation" ref="translation..na740" xml:id="a740">
+		<fs>
+			<f name="annotation_value">This dragon went to another place and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na76"/>
+	<edge from="utterance..na75" to="translation..na76" xml:id="ea76"/>
+	<a as="translation" label="translation" ref="translation..na76" xml:id="a76">
+		<fs>
+			<f name="annotation_value">and whatever phone wires there were,</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na760"/>
+	<edge from="utterance..na759" to="translation..na760" xml:id="ea760"/>
+	<a as="translation" label="translation" ref="translation..na760" xml:id="a760">
+		<fs>
+			<f name="annotation_value">it gave him (the carpenter) a big rewards, jewelry.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na780"/>
+	<edge from="utterance..na779" to="translation..na780" xml:id="ea780"/>
+	<a as="translation" label="translation" ref="translation..na780" xml:id="a780">
+		<fs>
+			<f name="annotation_value">Then when he (the carpenter) went a little</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na797"/>
+	<edge from="utterance..na796" to="translation..na797" xml:id="ea797"/>
+	<a as="translation" label="translation" ref="translation..na797" xml:id="a797">
+		<fs>
+			<f name="annotation_value">again it (the dragon) gave him a hint.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na805"/>
+	<edge from="utterance..na804" to="translation..na805" xml:id="ea805"/>
+	<a as="translation" label="translation" ref="translation..na805" xml:id="a805">
+		<fs>
+			<f name="annotation_value">He (the carpenter) stopped.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na819"/>
+	<edge from="utterance..na818" to="translation..na819" xml:id="ea819"/>
+	<a as="translation" label="translation" ref="translation..na819" xml:id="a819">
+		<fs>
+			<f name="annotation_value">It (the dragon) took a seed of such a size and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na860"/>
+	<edge from="utterance..na859" to="translation..na860" xml:id="ea860"/>
+	<a as="translation" label="translation" ref="translation..na860" xml:id="a860">
+		<fs>
+			<f name="annotation_value">from its mouth threw it among the jewels, inside his bag.</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na871"/>
+	<edge from="utterance..na870" to="translation..na871" xml:id="ea871"/>
+	<a as="translation" label="translation" ref="translation..na871" xml:id="a871">
+		<fs>
+			<f name="annotation_value">When he came (back to the king),</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na882"/>
+	<edge from="utterance..na881" to="translation..na882" xml:id="ea882"/>
+	<a as="translation" label="translation" ref="translation..na882" xml:id="a882">
+		<fs>
+			<f name="annotation_value">the king said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na899"/>
+	<edge from="utterance..na898" to="translation..na899" xml:id="ea899"/>
+	<a as="translation" label="translation" ref="translation..na899" xml:id="a899">
+		<fs>
+			<f name="annotation_value">What petition did it (the dragon) have?</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na90"/>
+	<edge from="utterance..na89" to="translation..na90" xml:id="ea90"/>
+	<a as="translation" label="translation" ref="translation..na90" xml:id="a90">
+		<fs>
+			<f name="annotation_value">they were connected to this (light post)</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na907"/>
+	<edge from="utterance..na906" to="translation..na907" xml:id="ea907"/>
+	<a as="translation" label="translation" ref="translation..na907" xml:id="a907">
+		<fs>
+			<f name="annotation_value">He (the carpenter) said:</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na939"/>
+	<edge from="utterance..na938" to="translation..na939" xml:id="ea939"/>
+	<a as="translation" label="translation" ref="translation..na939" xml:id="a939">
+		<fs>
+			<f name="annotation_value">Actually, its mother was strangled in this way and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na947"/>
+	<edge from="utterance..na946" to="translation..na947" xml:id="ea947"/>
+	<a as="translation" label="translation" ref="translation..na947" xml:id="a947">
+		<fs>
+			<f name="annotation_value">it (the dragon) came and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na961"/>
+	<edge from="utterance..na960" to="translation..na961" xml:id="ea961"/>
+	<a as="translation" label="translation" ref="translation..na961" xml:id="a961">
+		<fs>
+			<f name="annotation_value">I freed (and I rescued it) and</f>
+		</fs>
+	</a>
+	<node xml:id="translation..na981"/>
+	<edge from="utterance..na980" to="translation..na981" xml:id="ea981"/>
+	<a as="translation" label="translation" ref="translation..na981" xml:id="a981">
+		<fs>
+			<f name="annotation_value">then it gave me this much jewelry and</f>
+		</fs>
+	</a>
 </graph>

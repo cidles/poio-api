@@ -1,2784 +1,2786 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="clause_unit"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="word"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="word/n1"/>
-  <edge from="clause_unit/n4" to="word/n1" xml:id="e1"/>
-  <a as="word" label="word" ref="word/n1" xml:id="1">
-    <fs>
-      <f name="annotation_value">guš-īt:</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1006"/>
-  <edge from="clause_unit/n1021" to="word/n1006" xml:id="e1006"/>
-  <a as="word" label="word" ref="word/n1006" xml:id="1006">
-    <fs>
-      <f name="annotation_value">ša</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1009"/>
-  <edge from="clause_unit/n1021" to="word/n1009" xml:id="e1009"/>
-  <a as="word" label="word" ref="word/n1009" xml:id="1009">
-    <fs>
-      <f name="annotation_value">wat-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n101"/>
-  <edge from="clause_unit/n104" to="word/n101" xml:id="e101"/>
-  <a as="word" label="word" ref="word/n101" xml:id="101">
-    <fs>
-      <f name="annotation_value">b-dāšt-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1012"/>
-  <edge from="clause_unit/n1021" to="word/n1012" xml:id="e1012"/>
-  <a as="word" label="word" ref="word/n1012" xml:id="1012">
-    <fs>
-      <f name="annotation_value">dap-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1015"/>
-  <edge from="clause_unit/n1021" to="word/n1015" xml:id="e1015"/>
-  <a as="word" label="word" ref="word/n1015" xml:id="1015">
-    <fs>
-      <f name="annotation_value">tā=ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1018"/>
-  <edge from="clause_unit/n1021" to="word/n1018" xml:id="e1018"/>
-  <a as="word" label="word" ref="word/n1018" xml:id="1018">
-    <fs>
-      <f name="annotation_value">prēnt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1026"/>
-  <edge from="clause_unit/n1029" to="word/n1026" xml:id="e1026"/>
-  <a as="word" label="word" ref="word/n1026" xml:id="1026">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1034"/>
-  <edge from="clause_unit/n1043" to="word/n1034" xml:id="e1034"/>
-  <a as="word" label="word" ref="word/n1034" xml:id="1034">
-    <fs>
-      <f name="annotation_value">ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1037"/>
-  <edge from="clause_unit/n1043" to="word/n1037" xml:id="e1037"/>
-  <a as="word" label="word" ref="word/n1037" xml:id="1037">
-    <fs>
-      <f name="annotation_value">dgar=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1040"/>
-  <edge from="clause_unit/n1043" to="word/n1040" xml:id="e1040"/>
-  <a as="word" label="word" ref="word/n1040" xml:id="1040">
-    <fs>
-      <f name="annotation_value">ǰawāir=ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1048"/>
-  <edge from="clause_unit/n1057" to="word/n1048" xml:id="e1048"/>
-  <a as="word" label="word" ref="word/n1048" xml:id="1048">
-    <fs>
-      <f name="annotation_value">am-ēš-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1051"/>
-  <edge from="clause_unit/n1057" to="word/n1051" xml:id="e1051"/>
-  <a as="word" label="word" ref="word/n1051" xml:id="1051">
-    <fs>
-      <f name="annotation_value">mašmā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1054"/>
-  <edge from="clause_unit/n1057" to="word/n1054" xml:id="e1054"/>
-  <a as="word" label="word" ref="word/n1054" xml:id="1054">
-    <fs>
-      <f name="annotation_value">na-zān-an</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1062"/>
-  <edge from="clause_unit/n1071" to="word/n1062" xml:id="e1062"/>
-  <a as="word" label="word" ref="word/n1062" xml:id="1062">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1065"/>
-  <edge from="clause_unit/n1071" to="word/n1065" xml:id="e1065"/>
-  <a as="word" label="word" ref="word/n1065" xml:id="1065">
-    <fs>
-      <f name="annotation_value">maššōra</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1068"/>
-  <edge from="clause_unit/n1071" to="word/n1068" xml:id="e1068"/>
-  <a as="word" label="word" ref="word/n1068" xml:id="1068">
-    <fs>
-      <f name="annotation_value">kurt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1076"/>
-  <edge from="clause_unit/n1079" to="word/n1076" xml:id="e1076"/>
-  <a as="word" label="word" ref="word/n1076" xml:id="1076">
-    <fs>
-      <f name="annotation_value">gušt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1084"/>
-  <edge from="clause_unit/n1096" to="word/n1084" xml:id="e1084"/>
-  <a as="word" label="word" ref="word/n1084" xml:id="1084">
-    <fs>
-      <f name="annotation_value">b-(y)ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1087"/>
-  <edge from="clause_unit/n1096" to="word/n1087" xml:id="e1087"/>
-  <a as="word" label="word" ref="word/n1087" xml:id="1087">
-    <fs>
-      <f name="annotation_value">ēš-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n109"/>
-  <edge from="clause_unit/n121" to="word/n109" xml:id="e109"/>
-  <a as="word" label="word" ref="word/n109" xml:id="109">
-    <fs>
-      <f name="annotation_value">am-ēširā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1090"/>
-  <edge from="clause_unit/n1096" to="word/n1090" xml:id="e1090"/>
-  <a as="word" label="word" ref="word/n1090" xml:id="1090">
-    <fs>
-      <f name="annotation_value">p-kiš-an</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1093"/>
-  <edge from="clause_unit/n1096" to="word/n1093" xml:id="e1093"/>
-  <a as="word" label="word" ref="word/n1093" xml:id="1093">
-    <fs>
-      <f name="annotation_value">mašmā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1101"/>
-  <edge from="clause_unit/n1131" to="word/n1101" xml:id="e1101"/>
-  <a as="word" label="word" ref="word/n1101" xml:id="1101">
-    <fs>
-      <f name="annotation_value">ēš-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1104"/>
-  <edge from="clause_unit/n1131" to="word/n1104" xml:id="e1104"/>
-  <a as="word" label="word" ref="word/n1104" xml:id="1104">
-    <fs>
-      <f name="annotation_value">ǰwān-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1107"/>
-  <edge from="clause_unit/n1131" to="word/n1107" xml:id="e1107"/>
-  <a as="word" label="word" ref="word/n1107" xml:id="1107">
-    <fs>
-      <f name="annotation_value">ǰā-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1110"/>
-  <edge from="clause_unit/n1131" to="word/n1110" xml:id="e1110"/>
-  <a as="word" label="word" ref="word/n1110" xml:id="1110">
-    <fs>
-      <f name="annotation_value">bāg-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1113"/>
-  <edge from="clause_unit/n1131" to="word/n1113" xml:id="e1113"/>
-  <a as="word" label="word" ref="word/n1113" xml:id="1113">
-    <fs>
-      <f name="annotation_value">ḍigār-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1116"/>
-  <edge from="clause_unit/n1131" to="word/n1116" xml:id="e1116"/>
-  <a as="word" label="word" ref="word/n1116" xml:id="1116">
-    <fs>
-      <f name="annotation_value">tā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1119"/>
-  <edge from="clause_unit/n1131" to="word/n1119" xml:id="e1119"/>
-  <a as="word" label="word" ref="word/n1119" xml:id="1119">
-    <fs>
-      <f name="annotation_value">kišt-ant=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n112"/>
-  <edge from="clause_unit/n121" to="word/n112" xml:id="e112"/>
-  <a as="word" label="word" ref="word/n112" xml:id="112">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1122"/>
-  <edge from="clause_unit/n1131" to="word/n1122" xml:id="e1122"/>
-  <a as="word" label="word" ref="word/n1122" xml:id="1122">
-    <fs>
-      <f name="annotation_value">ǰwān-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1125"/>
-  <edge from="clause_unit/n1131" to="word/n1125" xml:id="e1125"/>
-  <a as="word" label="word" ref="word/n1125" xml:id="1125">
-    <fs>
-      <f name="annotation_value">narm-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1128"/>
-  <edge from="clause_unit/n1131" to="word/n1128" xml:id="e1128"/>
-  <a as="word" label="word" ref="word/n1128" xml:id="1128">
-    <fs>
-      <f name="annotation_value">ḍigār-ē=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1136"/>
-  <edge from="clause_unit/n1145" to="word/n1136" xml:id="e1136"/>
-  <a as="word" label="word" ref="word/n1136" xml:id="1136">
-    <fs>
-      <f name="annotation_value">wall-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1139"/>
-  <edge from="clause_unit/n1145" to="word/n1139" xml:id="e1139"/>
-  <a as="word" label="word" ref="word/n1139" xml:id="1139">
-    <fs>
-      <f name="annotation_value">sabz</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1142"/>
-  <edge from="clause_unit/n1145" to="word/n1142" xml:id="e1142"/>
-  <a as="word" label="word" ref="word/n1142" xml:id="1142">
-    <fs>
-      <f name="annotation_value">kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n115"/>
-  <edge from="clause_unit/n121" to="word/n115" xml:id="e115"/>
-  <a as="word" label="word" ref="word/n115" xml:id="115">
-    <fs>
-      <f name="annotation_value">takān</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1150"/>
-  <edge from="clause_unit/n1162" to="word/n1150" xml:id="e1150"/>
-  <a as="word" label="word" ref="word/n1150" xml:id="1150">
-    <fs>
-      <f name="annotation_value">ēš</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1153"/>
-  <edge from="clause_unit/n1162" to="word/n1153" xml:id="e1153"/>
-  <a as="word" label="word" ref="word/n1153" xml:id="1153">
-    <fs>
-      <f name="annotation_value">činkas</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1156"/>
-  <edge from="clause_unit/n1162" to="word/n1156" xml:id="e1156"/>
-  <a as="word" label="word" ref="word/n1156" xml:id="1156">
-    <fs>
-      <f name="annotation_value">galaw</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1159"/>
-  <edge from="clause_unit/n1162" to="word/n1159" xml:id="e1159"/>
-  <a as="word" label="word" ref="word/n1159" xml:id="1159">
-    <fs>
-      <f name="annotation_value">ku</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1167"/>
-  <edge from="clause_unit/n1185" to="word/n1167" xml:id="e1167"/>
-  <a as="word" label="word" ref="word/n1167" xml:id="1167">
-    <fs>
-      <f name="annotation_value">ša</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1170"/>
-  <edge from="clause_unit/n1185" to="word/n1170" xml:id="e1170"/>
-  <a as="word" label="word" ref="word/n1170" xml:id="1170">
-    <fs>
-      <f name="annotation_value">truss-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1173"/>
-  <edge from="clause_unit/n1185" to="word/n1173" xml:id="e1173"/>
-  <a as="word" label="word" ref="word/n1173" xml:id="1173">
-    <fs>
-      <f name="annotation_value">kass-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1176"/>
-  <edge from="clause_unit/n1185" to="word/n1176" xml:id="e1176"/>
-  <a as="word" label="word" ref="word/n1176" xml:id="1176">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1179"/>
-  <edge from="clause_unit/n1185" to="word/n1179" xml:id="e1179"/>
-  <a as="word" label="word" ref="word/n1179" xml:id="1179">
-    <fs>
-      <f name="annotation_value">galaw-ān-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n118"/>
-  <edge from="clause_unit/n121" to="word/n118" xml:id="e118"/>
-  <a as="word" label="word" ref="word/n118" xml:id="118">
-    <fs>
-      <f name="annotation_value">dāt-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1182"/>
-  <edge from="clause_unit/n1185" to="word/n1182" xml:id="e1182"/>
-  <a as="word" label="word" ref="word/n1182" xml:id="1182">
-    <fs>
-      <f name="annotation_value">na-wārt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1190"/>
-  <edge from="clause_unit/n1205" to="word/n1190" xml:id="e1190"/>
-  <a as="word" label="word" ref="word/n1190" xml:id="1190">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1193"/>
-  <edge from="clause_unit/n1205" to="word/n1193" xml:id="e1193"/>
-  <a as="word" label="word" ref="word/n1193" xml:id="1193">
-    <fs>
-      <f name="annotation_value">ša</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1196"/>
-  <edge from="clause_unit/n1205" to="word/n1196" xml:id="e1196"/>
-  <a as="word" label="word" ref="word/n1196" xml:id="1196">
-    <fs>
-      <f name="annotation_value">aždiyā-(y)ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1199"/>
-  <edge from="clause_unit/n1205" to="word/n1199" xml:id="e1199"/>
-  <a as="word" label="word" ref="word/n1199" xml:id="1199">
-    <fs>
-      <f name="annotation_value">dap-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n12"/>
-  <edge from="clause_unit/n18" to="word/n12" xml:id="e12"/>
-  <a as="word" label="word" ref="word/n12" xml:id="12">
-    <fs>
-      <f name="annotation_value">yag</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1202"/>
-  <edge from="clause_unit/n1205" to="word/n1202" xml:id="e1202"/>
-  <a as="word" label="word" ref="word/n1202" xml:id="1202">
-    <fs>
-      <f name="annotation_value">tā=ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1210"/>
-  <edge from="clause_unit/n1216" to="word/n1210" xml:id="e1210"/>
-  <a as="word" label="word" ref="word/n1210" xml:id="1210">
-    <fs>
-      <f name="annotation_value">mār-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1213"/>
-  <edge from="clause_unit/n1216" to="word/n1213" xml:id="e1213"/>
-  <a as="word" label="word" ref="word/n1213" xml:id="1213">
-    <fs>
-      <f name="annotation_value">zār=ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1221"/>
-  <edge from="clause_unit/n1233" to="word/n1221" xml:id="e1221"/>
-  <a as="word" label="word" ref="word/n1221" xml:id="1221">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1224"/>
-  <edge from="clause_unit/n1233" to="word/n1224" xml:id="e1224"/>
-  <a as="word" label="word" ref="word/n1224" xml:id="1224">
-    <fs>
-      <f name="annotation_value">činka</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1227"/>
-  <edge from="clause_unit/n1233" to="word/n1227" xml:id="e1227"/>
-  <a as="word" label="word" ref="word/n1227" xml:id="1227">
-    <fs>
-      <f name="annotation_value">tōm</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1230"/>
-  <edge from="clause_unit/n1233" to="word/n1230" xml:id="e1230"/>
-  <a as="word" label="word" ref="word/n1230" xml:id="1230">
-    <fs>
-      <f name="annotation_value">kurt-ant=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1238"/>
-  <edge from="clause_unit/n1241" to="word/n1238" xml:id="e1238"/>
-  <a as="word" label="word" ref="word/n1238" xml:id="1238">
-    <fs>
-      <f name="annotation_value">šut-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1246"/>
-  <edge from="clause_unit/n1258" to="word/n1246" xml:id="e1246"/>
-  <a as="word" label="word" ref="word/n1246" xml:id="1246">
-    <fs>
-      <f name="annotation_value">ṭū-(y)ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1249"/>
-  <edge from="clause_unit/n1258" to="word/n1249" xml:id="e1249"/>
-  <a as="word" label="word" ref="word/n1249" xml:id="1249">
-    <fs>
-      <f name="annotation_value">pālēz-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1252"/>
-  <edge from="clause_unit/n1258" to="word/n1252" xml:id="e1252"/>
-  <a as="word" label="word" ref="word/n1252" xml:id="1252">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1255"/>
-  <edge from="clause_unit/n1258" to="word/n1255" xml:id="e1255"/>
-  <a as="word" label="word" ref="word/n1255" xml:id="1255">
-    <fs>
-      <f name="annotation_value">kišt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n126"/>
-  <edge from="clause_unit/n138" to="word/n126" xml:id="e126"/>
-  <a as="word" label="word" ref="word/n126" xml:id="126">
-    <fs>
-      <f name="annotation_value">bādišā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1263"/>
-  <edge from="clause_unit/n1275" to="word/n1263" xml:id="e1263"/>
-  <a as="word" label="word" ref="word/n1263" xml:id="1263">
-    <fs>
-      <f name="annotation_value">yakk</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1266"/>
-  <edge from="clause_unit/n1275" to="word/n1266" xml:id="e1266"/>
-  <a as="word" label="word" ref="word/n1266" xml:id="1266">
-    <fs>
-      <f name="annotation_value">pīramard-ē-rā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1269"/>
-  <edge from="clause_unit/n1275" to="word/n1269" xml:id="e1269"/>
-  <a as="word" label="word" ref="word/n1269" xml:id="1269">
-    <fs>
-      <f name="annotation_value">sawzwān</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1272"/>
-  <edge from="clause_unit/n1275" to="word/n1272" xml:id="e1272"/>
-  <a as="word" label="word" ref="word/n1272" xml:id="1272">
-    <fs>
-      <f name="annotation_value">ku</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1280"/>
-  <edge from="clause_unit/n1298" to="word/n1280" xml:id="e1280"/>
-  <a as="word" label="word" ref="word/n1280" xml:id="1280">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1283"/>
-  <edge from="clause_unit/n1298" to="word/n1283" xml:id="e1283"/>
-  <a as="word" label="word" ref="word/n1283" xml:id="1283">
-    <fs>
-      <f name="annotation_value">laggit</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1286"/>
-  <edge from="clause_unit/n1298" to="word/n1286" xml:id="e1286"/>
-  <a as="word" label="word" ref="word/n1286" xml:id="1286">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1289"/>
-  <edge from="clause_unit/n1298" to="word/n1289" xml:id="e1289"/>
-  <a as="word" label="word" ref="word/n1289" xml:id="1289">
-    <fs>
-      <f name="annotation_value">pālēz</f>
-    </fs>
-  </a>
-  <node xml:id="word/n129"/>
-  <edge from="clause_unit/n138" to="word/n129" xml:id="e129"/>
-  <a as="word" label="word" ref="word/n129" xml:id="129">
-    <fs>
-      <f name="annotation_value">ōdā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1292"/>
-  <edge from="clause_unit/n1298" to="word/n1292" xml:id="e1292"/>
-  <a as="word" label="word" ref="word/n1292" xml:id="1292">
-    <fs>
-      <f name="annotation_value">bi</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1295"/>
-  <edge from="clause_unit/n1298" to="word/n1295" xml:id="e1295"/>
-  <a as="word" label="word" ref="word/n1295" xml:id="1295">
-    <fs>
-      <f name="annotation_value">galaw-ā=ō</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1303"/>
-  <edge from="clause_unit/n1312" to="word/n1303" xml:id="e1303"/>
-  <a as="word" label="word" ref="word/n1303" xml:id="1303">
-    <fs>
-      <f name="annotation_value">bēxī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1306"/>
-  <edge from="clause_unit/n1312" to="word/n1306" xml:id="e1306"/>
-  <a as="word" label="word" ref="word/n1306" xml:id="1306">
-    <fs>
-      <f name="annotation_value">galaw</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1309"/>
-  <edge from="clause_unit/n1312" to="word/n1309" xml:id="e1309"/>
-  <a as="word" label="word" ref="word/n1309" xml:id="1309">
-    <fs>
-      <f name="annotation_value">ku</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1317"/>
-  <edge from="clause_unit/n1329" to="word/n1317" xml:id="e1317"/>
-  <a as="word" label="word" ref="word/n1317" xml:id="1317">
-    <fs>
-      <f name="annotation_value">pīramard=am</f>
-    </fs>
-  </a>
-  <node xml:id="word/n132"/>
-  <edge from="clause_unit/n138" to="word/n132" xml:id="e132"/>
-  <a as="word" label="word" ref="word/n132" xml:id="132">
-    <fs>
-      <f name="annotation_value">sī=(y)a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1320"/>
-  <edge from="clause_unit/n1329" to="word/n1320" xml:id="e1320"/>
-  <a as="word" label="word" ref="word/n1320" xml:id="1320">
-    <fs>
-      <f name="annotation_value">awal</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1323"/>
-  <edge from="clause_unit/n1329" to="word/n1323" xml:id="e1323"/>
-  <a as="word" label="word" ref="word/n1323" xml:id="1323">
-    <fs>
-      <f name="annotation_value">čē=(w)a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1326"/>
-  <edge from="clause_unit/n1329" to="word/n1326" xml:id="e1326"/>
-  <a as="word" label="word" ref="word/n1326" xml:id="1326">
-    <fs>
-      <f name="annotation_value">na-ku</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1334"/>
-  <edge from="clause_unit/n1340" to="word/n1334" xml:id="e1334"/>
-  <a as="word" label="word" ref="word/n1334" xml:id="1334">
-    <fs>
-      <f name="annotation_value">tawkal=a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1337"/>
-  <edge from="clause_unit/n1340" to="word/n1337" xml:id="e1337"/>
-  <a as="word" label="word" ref="word/n1337" xml:id="1337">
-    <fs>
-      <f name="annotation_value">na-kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1345"/>
-  <edge from="clause_unit/n1351" to="word/n1345" xml:id="e1345"/>
-  <a as="word" label="word" ref="word/n1345" xml:id="1345">
-    <fs>
-      <f name="annotation_value">ar-uk-(k)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1348"/>
-  <edge from="clause_unit/n1351" to="word/n1348" xml:id="e1348"/>
-  <a as="word" label="word" ref="word/n1348" xml:id="1348">
-    <fs>
-      <f name="annotation_value">dāšt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n135"/>
-  <edge from="clause_unit/n138" to="word/n135" xml:id="e135"/>
-  <a as="word" label="word" ref="word/n135" xml:id="135">
-    <fs>
-      <f name="annotation_value">būt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1356"/>
-  <edge from="clause_unit/n1377" to="word/n1356" xml:id="e1356"/>
-  <a as="word" label="word" ref="word/n1356" xml:id="1356">
-    <fs>
-      <f name="annotation_value">am-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1359"/>
-  <edge from="clause_unit/n1377" to="word/n1359" xml:id="e1359"/>
-  <a as="word" label="word" ref="word/n1359" xml:id="1359">
-    <fs>
-      <f name="annotation_value">galaw-ān-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1362"/>
-  <edge from="clause_unit/n1377" to="word/n1362" xml:id="e1362"/>
-  <a as="word" label="word" ref="word/n1362" xml:id="1362">
-    <fs>
-      <f name="annotation_value">dēmā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1365"/>
-  <edge from="clause_unit/n1377" to="word/n1365" xml:id="e1365"/>
-  <a as="word" label="word" ref="word/n1365" xml:id="1365">
-    <fs>
-      <f name="annotation_value">bi=m-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1368"/>
-  <edge from="clause_unit/n1377" to="word/n1368" xml:id="e1368"/>
-  <a as="word" label="word" ref="word/n1368" xml:id="1368">
-    <fs>
-      <f name="annotation_value">ar-uk-(k)ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1371"/>
-  <edge from="clause_unit/n1377" to="word/n1371" xml:id="e1371"/>
-  <a as="word" label="word" ref="word/n1371" xml:id="1371">
-    <fs>
-      <f name="annotation_value">dēmā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1374"/>
-  <edge from="clause_unit/n1377" to="word/n1374" xml:id="e1374"/>
-  <a as="word" label="word" ref="word/n1374" xml:id="1374">
-    <fs>
-      <f name="annotation_value">kōṭit=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1382"/>
-  <edge from="clause_unit/n1385" to="word/n1382" xml:id="e1382"/>
-  <a as="word" label="word" ref="word/n1382" xml:id="1382">
-    <fs>
-      <f name="annotation_value">dāt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1390"/>
-  <edge from="clause_unit/n1402" to="word/n1390" xml:id="e1390"/>
-  <a as="word" label="word" ref="word/n1390" xml:id="1390">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1393"/>
-  <edge from="clause_unit/n1402" to="word/n1393" xml:id="e1393"/>
-  <a as="word" label="word" ref="word/n1393" xml:id="1393">
-    <fs>
-      <f name="annotation_value">ar=am</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1396"/>
-  <edge from="clause_unit/n1402" to="word/n1396" xml:id="e1396"/>
-  <a as="word" label="word" ref="word/n1396" xml:id="1396">
-    <fs>
-      <f name="annotation_value">pazzōr</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1399"/>
-  <edge from="clause_unit/n1402" to="word/n1399" xml:id="e1399"/>
-  <a as="word" label="word" ref="word/n1399" xml:id="1399">
-    <fs>
-      <f name="annotation_value">ūt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1407"/>
-  <edge from="clause_unit/n1419" to="word/n1407" xml:id="e1407"/>
-  <a as="word" label="word" ref="word/n1407" xml:id="1407">
-    <fs>
-      <f name="annotation_value">pīramard</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1410"/>
-  <edge from="clause_unit/n1419" to="word/n1410" xml:id="e1410"/>
-  <a as="word" label="word" ref="word/n1410" xml:id="1410">
-    <fs>
-      <f name="annotation_value">šurū</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1413"/>
-  <edge from="clause_unit/n1419" to="word/n1413" xml:id="e1413"/>
-  <a as="word" label="word" ref="word/n1413" xml:id="1413">
-    <fs>
-      <f name="annotation_value">ku</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1416"/>
-  <edge from="clause_unit/n1419" to="word/n1416" xml:id="e1416"/>
-  <a as="word" label="word" ref="word/n1416" xml:id="1416">
-    <fs>
-      <f name="annotation_value">wārtin-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1424"/>
-  <edge from="clause_unit/n1436" to="word/n1424" xml:id="e1424"/>
-  <a as="word" label="word" ref="word/n1424" xml:id="1424">
-    <fs>
-      <f name="annotation_value">ta</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1427"/>
-  <edge from="clause_unit/n1436" to="word/n1427" xml:id="e1427"/>
-  <a as="word" label="word" ref="word/n1427" xml:id="1427">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n143"/>
-  <edge from="clause_unit/n152" to="word/n143" xml:id="e143"/>
-  <a as="word" label="word" ref="word/n143" xml:id="143">
-    <fs>
-      <f name="annotation_value">yag</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1430"/>
-  <edge from="clause_unit/n1436" to="word/n1430" xml:id="e1430"/>
-  <a as="word" label="word" ref="word/n1430" xml:id="1430">
-    <fs>
-      <f name="annotation_value">či</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1433"/>
-  <edge from="clause_unit/n1436" to="word/n1433" xml:id="e1433"/>
-  <a as="word" label="word" ref="word/n1433" xml:id="1433">
-    <fs>
-      <f name="annotation_value">čīz=ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1441"/>
-  <edge from="clause_unit/n1450" to="word/n1441" xml:id="e1441"/>
-  <a as="word" label="word" ref="word/n1441" xml:id="1441">
-    <fs>
-      <f name="annotation_value">pīramard=am</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1444"/>
-  <edge from="clause_unit/n1450" to="word/n1444" xml:id="e1444"/>
-  <a as="word" label="word" ref="word/n1444" xml:id="1444">
-    <fs>
-      <f name="annotation_value">pazzōr</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1447"/>
-  <edge from="clause_unit/n1450" to="word/n1447" xml:id="e1447"/>
-  <a as="word" label="word" ref="word/n1447" xml:id="1447">
-    <fs>
-      <f name="annotation_value">ūt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1455"/>
-  <edge from="clause_unit/n1470" to="word/n1455" xml:id="e1455"/>
-  <a as="word" label="word" ref="word/n1455" xml:id="1455">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1458"/>
-  <edge from="clause_unit/n1470" to="word/n1458" xml:id="e1458"/>
-  <a as="word" label="word" ref="word/n1458" xml:id="1458">
-    <fs>
-      <f name="annotation_value">yag</f>
-    </fs>
-  </a>
-  <node xml:id="word/n146"/>
-  <edge from="clause_unit/n152" to="word/n146" xml:id="e146"/>
-  <a as="word" label="word" ref="word/n146" xml:id="146">
-    <fs>
-      <f name="annotation_value">rōč-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1461"/>
-  <edge from="clause_unit/n1470" to="word/n1461" xml:id="e1461"/>
-  <a as="word" label="word" ref="word/n1461" xml:id="1461">
-    <fs>
-      <f name="annotation_value">rōč-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1464"/>
-  <edge from="clause_unit/n1470" to="word/n1464" xml:id="e1464"/>
-  <a as="word" label="word" ref="word/n1464" xml:id="1464">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1467"/>
-  <edge from="clause_unit/n1470" to="word/n1467" xml:id="e1467"/>
-  <a as="word" label="word" ref="word/n1467" xml:id="1467">
-    <fs>
-      <f name="annotation_value">āt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1475"/>
-  <edge from="clause_unit/n1478" to="word/n1475" xml:id="e1475"/>
-  <a as="word" label="word" ref="word/n1475" xml:id="1475">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1483"/>
-  <edge from="clause_unit/n1498" to="word/n1483" xml:id="e1483"/>
-  <a as="word" label="word" ref="word/n1483" xml:id="1483">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1486"/>
-  <edge from="clause_unit/n1498" to="word/n1486" xml:id="e1486"/>
-  <a as="word" label="word" ref="word/n1486" xml:id="1486">
-    <fs>
-      <f name="annotation_value">pīramard</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1489"/>
-  <edge from="clause_unit/n1498" to="word/n1489" xml:id="e1489"/>
-  <a as="word" label="word" ref="word/n1489" xml:id="1489">
-    <fs>
-      <f name="annotation_value">bābā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n149"/>
-  <edge from="clause_unit/n152" to="word/n149" xml:id="e149"/>
-  <a as="word" label="word" ref="word/n149" xml:id="149">
-    <fs>
-      <f name="annotation_value">dīst</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1492"/>
-  <edge from="clause_unit/n1498" to="word/n1492" xml:id="e1492"/>
-  <a as="word" label="word" ref="word/n1492" xml:id="1492">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1495"/>
-  <edge from="clause_unit/n1498" to="word/n1495" xml:id="e1495"/>
-  <a as="word" label="word" ref="word/n1495" xml:id="1495">
-    <fs>
-      <f name="annotation_value">čē=(w)ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n15"/>
-  <edge from="clause_unit/n18" to="word/n15" xml:id="e15"/>
-  <a as="word" label="word" ref="word/n15" xml:id="15">
-    <fs>
-      <f name="annotation_value">bādišā=(y)ē=at</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1503"/>
-  <edge from="clause_unit/n1506" to="word/n1503" xml:id="e1503"/>
-  <a as="word" label="word" ref="word/n1503" xml:id="1503">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1511"/>
-  <edge from="clause_unit/n1523" to="word/n1511" xml:id="e1511"/>
-  <a as="word" label="word" ref="word/n1511" xml:id="1511">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1514"/>
-  <edge from="clause_unit/n1523" to="word/n1514" xml:id="e1514"/>
-  <a as="word" label="word" ref="word/n1514" xml:id="1514">
-    <fs>
-      <f name="annotation_value">bēxī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1517"/>
-  <edge from="clause_unit/n1523" to="word/n1517" xml:id="e1517"/>
-  <a as="word" label="word" ref="word/n1517" xml:id="1517">
-    <fs>
-      <f name="annotation_value">ǰwān-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1520"/>
-  <edge from="clause_unit/n1523" to="word/n1520" xml:id="e1520"/>
-  <a as="word" label="word" ref="word/n1520" xml:id="1520">
-    <fs>
-      <f name="annotation_value">čīz=ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1528"/>
-  <edge from="clause_unit/n1534" to="word/n1528" xml:id="e1528"/>
-  <a as="word" label="word" ref="word/n1528" xml:id="1528">
-    <fs>
-      <f name="annotation_value">man=um</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1531"/>
-  <edge from="clause_unit/n1534" to="word/n1531" xml:id="e1531"/>
-  <a as="word" label="word" ref="word/n1531" xml:id="1531">
-    <fs>
-      <f name="annotation_value">wārt-a,</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1539"/>
-  <edge from="clause_unit/n1548" to="word/n1539" xml:id="e1539"/>
-  <a as="word" label="word" ref="word/n1539" xml:id="1539">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1542"/>
-  <edge from="clause_unit/n1548" to="word/n1542" xml:id="e1542"/>
-  <a as="word" label="word" ref="word/n1542" xml:id="1542">
-    <fs>
-      <f name="annotation_value">ar-ā=um</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1545"/>
-  <edge from="clause_unit/n1548" to="word/n1545" xml:id="e1545"/>
-  <a as="word" label="word" ref="word/n1545" xml:id="1545">
-    <fs>
-      <f name="annotation_value">dāt-a=un=ō</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1553"/>
-  <edge from="clause_unit/n1559" to="word/n1553" xml:id="e1553"/>
-  <a as="word" label="word" ref="word/n1553" xml:id="1553">
-    <fs>
-      <f name="annotation_value">šumā=um</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1556"/>
-  <edge from="clause_unit/n1559" to="word/n1556" xml:id="e1556"/>
-  <a as="word" label="word" ref="word/n1556" xml:id="1556">
-    <fs>
-      <f name="annotation_value">bōr-it.</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1564"/>
-  <edge from="clause_unit/n1570" to="word/n1564" xml:id="e1564"/>
-  <a as="word" label="word" ref="word/n1564" xml:id="1564">
-    <fs>
-      <f name="annotation_value">wazīr</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1567"/>
-  <edge from="clause_unit/n1570" to="word/n1567" xml:id="e1567"/>
-  <a as="word" label="word" ref="word/n1567" xml:id="1567">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n157"/>
-  <edge from="clause_unit/n169" to="word/n157" xml:id="e157"/>
-  <a as="word" label="word" ref="word/n157" xml:id="157">
-    <fs>
-      <f name="annotation_value">ta</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1575"/>
-  <edge from="clause_unit/n1587" to="word/n1575" xml:id="e1575"/>
-  <a as="word" label="word" ref="word/n1575" xml:id="1575">
-    <fs>
-      <f name="annotation_value">na</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1578"/>
-  <edge from="clause_unit/n1587" to="word/n1578" xml:id="e1578"/>
-  <a as="word" label="word" ref="word/n1578" xml:id="1578">
-    <fs>
-      <f name="annotation_value">dēmā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1581"/>
-  <edge from="clause_unit/n1587" to="word/n1581" xml:id="e1581"/>
-  <a as="word" label="word" ref="word/n1581" xml:id="1581">
-    <fs>
-      <f name="annotation_value">man=a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1584"/>
-  <edge from="clause_unit/n1587" to="word/n1584" xml:id="e1584"/>
-  <a as="word" label="word" ref="word/n1584" xml:id="1584">
-    <fs>
-      <f name="annotation_value">war-īn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1592"/>
-  <edge from="clause_unit/n1604" to="word/n1592" xml:id="e1592"/>
-  <a as="word" label="word" ref="word/n1592" xml:id="1592">
-    <fs>
-      <f name="annotation_value">ta</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1595"/>
-  <edge from="clause_unit/n1604" to="word/n1595" xml:id="e1595"/>
-  <a as="word" label="word" ref="word/n1595" xml:id="1595">
-    <fs>
-      <f name="annotation_value">ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1598"/>
-  <edge from="clause_unit/n1604" to="word/n1598" xml:id="e1598"/>
-  <a as="word" label="word" ref="word/n1598" xml:id="1598">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n160"/>
-  <edge from="clause_unit/n169" to="word/n160" xml:id="e160"/>
-  <a as="word" label="word" ref="word/n160" xml:id="160">
-    <fs>
-      <f name="annotation_value">am-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1601"/>
-  <edge from="clause_unit/n1604" to="word/n1601" xml:id="e1601"/>
-  <a as="word" label="word" ref="word/n1601" xml:id="1601">
-    <fs>
-      <f name="annotation_value">ma-war</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1609"/>
-  <edge from="clause_unit/n1615" to="word/n1609" xml:id="e1609"/>
-  <a as="word" label="word" ref="word/n1609" xml:id="1609">
-    <fs>
-      <f name="annotation_value">wazīr</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1612"/>
-  <edge from="clause_unit/n1615" to="word/n1612" xml:id="e1612"/>
-  <a as="word" label="word" ref="word/n1612" xml:id="1612">
-    <fs>
-      <f name="annotation_value">wārt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1620"/>
-  <edge from="clause_unit/n1635" to="word/n1620" xml:id="e1620"/>
-  <a as="word" label="word" ref="word/n1620" xml:id="1620">
-    <fs>
-      <f name="annotation_value">ta</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1623"/>
-  <edge from="clause_unit/n1635" to="word/n1623" xml:id="e1623"/>
-  <a as="word" label="word" ref="word/n1623" xml:id="1623">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1626"/>
-  <edge from="clause_unit/n1635" to="word/n1626" xml:id="e1626"/>
-  <a as="word" label="word" ref="word/n1626" xml:id="1626">
-    <fs>
-      <f name="annotation_value">aǰab-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1629"/>
-  <edge from="clause_unit/n1635" to="word/n1629" xml:id="e1629"/>
-  <a as="word" label="word" ref="word/n1629" xml:id="1629">
-    <fs>
-      <f name="annotation_value">xušmizzag-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n163"/>
-  <edge from="clause_unit/n169" to="word/n163" xml:id="e163"/>
-  <a as="word" label="word" ref="word/n163" xml:id="163">
-    <fs>
-      <f name="annotation_value">aždiyā-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1632"/>
-  <edge from="clause_unit/n1635" to="word/n1632" xml:id="e1632"/>
-  <a as="word" label="word" ref="word/n1632" xml:id="1632">
-    <fs>
-      <f name="annotation_value">čīz=ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1640"/>
-  <edge from="clause_unit/n1643" to="word/n1640" xml:id="e1640"/>
-  <a as="word" label="word" ref="word/n1640" xml:id="1640">
-    <fs>
-      <f name="annotation_value">wārt-ant=ō</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1648"/>
-  <edge from="clause_unit/n1654" to="word/n1648" xml:id="e1648"/>
-  <a as="word" label="word" ref="word/n1648" xml:id="1648">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1651"/>
-  <edge from="clause_unit/n1654" to="word/n1651" xml:id="e1651"/>
-  <a as="word" label="word" ref="word/n1651" xml:id="1651">
-    <fs>
-      <f name="annotation_value">wārt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1659"/>
-  <edge from="clause_unit/n1665" to="word/n1659" xml:id="e1659"/>
-  <a as="word" label="word" ref="word/n1659" xml:id="1659">
-    <fs>
-      <f name="annotation_value">nūn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n166"/>
-  <edge from="clause_unit/n169" to="word/n166" xml:id="e166"/>
-  <a as="word" label="word" ref="word/n166" xml:id="166">
-    <fs>
-      <f name="annotation_value">āt-a=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1662"/>
-  <edge from="clause_unit/n1665" to="word/n1662" xml:id="e1662"/>
-  <a as="word" label="word" ref="word/n1662" xml:id="1662">
-    <fs>
-      <f name="annotation_value">gušt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1670"/>
-  <edge from="clause_unit/n1685" to="word/n1670" xml:id="e1670"/>
-  <a as="word" label="word" ref="word/n1670" xml:id="1670">
-    <fs>
-      <f name="annotation_value">b-(y)ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1673"/>
-  <edge from="clause_unit/n1685" to="word/n1673" xml:id="e1673"/>
-  <a as="word" label="word" ref="word/n1673" xml:id="1673">
-    <fs>
-      <f name="annotation_value">mašmā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1676"/>
-  <edge from="clause_unit/n1685" to="word/n1676" xml:id="e1676"/>
-  <a as="word" label="word" ref="word/n1676" xml:id="1676">
-    <fs>
-      <f name="annotation_value">p=ēšī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1679"/>
-  <edge from="clause_unit/n1685" to="word/n1679" xml:id="e1679"/>
-  <a as="word" label="word" ref="word/n1679" xml:id="1679">
-    <fs>
-      <f name="annotation_value">nām=ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1682"/>
-  <edge from="clause_unit/n1685" to="word/n1682" xml:id="e1682"/>
-  <a as="word" label="word" ref="word/n1682" xml:id="1682">
-    <fs>
-      <f name="annotation_value">b-ill-an</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1690"/>
-  <edge from="clause_unit/n1705" to="word/n1690" xml:id="e1690"/>
-  <a as="word" label="word" ref="word/n1690" xml:id="1690">
-    <fs>
-      <f name="annotation_value">nām=ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1693"/>
-  <edge from="clause_unit/n1705" to="word/n1693" xml:id="e1693"/>
-  <a as="word" label="word" ref="word/n1693" xml:id="1693">
-    <fs>
-      <f name="annotation_value">guṛā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1696"/>
-  <edge from="clause_unit/n1705" to="word/n1696" xml:id="e1696"/>
-  <a as="word" label="word" ref="word/n1696" xml:id="1696">
-    <fs>
-      <f name="annotation_value">galaw-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1699"/>
-  <edge from="clause_unit/n1705" to="word/n1699" xml:id="e1699"/>
-  <a as="word" label="word" ref="word/n1699" xml:id="1699">
-    <fs>
-      <f name="annotation_value">išt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1702"/>
-  <edge from="clause_unit/n1705" to="word/n1702" xml:id="e1702"/>
-  <a as="word" label="word" ref="word/n1702" xml:id="1702">
-    <fs>
-      <f name="annotation_value">xarmizza</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1710"/>
-  <edge from="clause_unit/n1725" to="word/n1710" xml:id="e1710"/>
-  <a as="word" label="word" ref="word/n1710" xml:id="1710">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1713"/>
-  <edge from="clause_unit/n1725" to="word/n1713" xml:id="e1713"/>
-  <a as="word" label="word" ref="word/n1713" xml:id="1713">
-    <fs>
-      <f name="annotation_value">mizzag-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1716"/>
-  <edge from="clause_unit/n1725" to="word/n1716" xml:id="e1716"/>
-  <a as="word" label="word" ref="word/n1716" xml:id="1716">
-    <fs>
-      <f name="annotation_value">awal</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1719"/>
-  <edge from="clause_unit/n1725" to="word/n1719" xml:id="e1719"/>
-  <a as="word" label="word" ref="word/n1719" xml:id="1719">
-    <fs>
-      <f name="annotation_value">xar</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1722"/>
-  <edge from="clause_unit/n1725" to="word/n1722" xml:id="e1722"/>
-  <a as="word" label="word" ref="word/n1722" xml:id="1722">
-    <fs>
-      <f name="annotation_value">burt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1730"/>
-  <edge from="clause_unit/n1739" to="word/n1730" xml:id="e1730"/>
-  <a as="word" label="word" ref="word/n1730" xml:id="1730">
-    <fs>
-      <f name="annotation_value">xarmizza</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1733"/>
-  <edge from="clause_unit/n1739" to="word/n1733" xml:id="e1733"/>
-  <a as="word" label="word" ref="word/n1733" xml:id="1733">
-    <fs>
-      <f name="annotation_value">š=ōdā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n1736"/>
-  <edge from="clause_unit/n1739" to="word/n1736" xml:id="e1736"/>
-  <a as="word" label="word" ref="word/n1736" xml:id="1736">
-    <fs>
-      <f name="annotation_value">mant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n174"/>
-  <edge from="clause_unit/n183" to="word/n174" xml:id="e174"/>
-  <a as="word" label="word" ref="word/n174" xml:id="174">
-    <fs>
-      <f name="annotation_value">am-ēš-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n177"/>
-  <edge from="clause_unit/n183" to="word/n177" xml:id="e177"/>
-  <a as="word" label="word" ref="word/n177" xml:id="177">
-    <fs>
-      <f name="annotation_value">takān=a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n180"/>
-  <edge from="clause_unit/n183" to="word/n180" xml:id="e180"/>
-  <a as="word" label="word" ref="word/n180" xml:id="180">
-    <fs>
-      <f name="annotation_value">dant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n188"/>
-  <edge from="clause_unit/n200" to="word/n188" xml:id="e188"/>
-  <a as="word" label="word" ref="word/n188" xml:id="188">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n191"/>
-  <edge from="clause_unit/n200" to="word/n191" xml:id="e191"/>
-  <a as="word" label="word" ref="word/n191" xml:id="191">
-    <fs>
-      <f name="annotation_value">dēm</f>
-    </fs>
-  </a>
-  <node xml:id="word/n194"/>
-  <edge from="clause_unit/n200" to="word/n194" xml:id="e194"/>
-  <a as="word" label="word" ref="word/n194" xml:id="194">
-    <fs>
-      <f name="annotation_value">dāt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n197"/>
-  <edge from="clause_unit/n200" to="word/n197" xml:id="e197"/>
-  <a as="word" label="word" ref="word/n197" xml:id="197">
-    <fs>
-      <f name="annotation_value">yakk-ē-rā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n205"/>
-  <edge from="clause_unit/n214" to="word/n205" xml:id="e205"/>
-  <a as="word" label="word" ref="word/n205" xml:id="205">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n208"/>
-  <edge from="clause_unit/n214" to="word/n208" xml:id="e208"/>
-  <a as="word" label="word" ref="word/n208" xml:id="208">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n211"/>
-  <edge from="clause_unit/n214" to="word/n211" xml:id="e211"/>
-  <a as="word" label="word" ref="word/n211" xml:id="211">
-    <fs>
-      <f name="annotation_value">čī-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n219"/>
-  <edge from="clause_unit/n222" to="word/n219" xml:id="e219"/>
-  <a as="word" label="word" ref="word/n219" xml:id="219">
-    <fs>
-      <f name="annotation_value">āt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n227"/>
-  <edge from="clause_unit/n230" to="word/n227" xml:id="e227"/>
-  <a as="word" label="word" ref="word/n227" xml:id="227">
-    <fs>
-      <f name="annotation_value">gušt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n23"/>
-  <edge from="clause_unit/n53" to="word/n23" xml:id="e23"/>
-  <a as="word" label="word" ref="word/n23" xml:id="23">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n235"/>
-  <edge from="clause_unit/n244" to="word/n235" xml:id="e235"/>
-  <a as="word" label="word" ref="word/n235" xml:id="235">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n238"/>
-  <edge from="clause_unit/n244" to="word/n238" xml:id="e238"/>
-  <a as="word" label="word" ref="word/n238" xml:id="238">
-    <fs>
-      <f name="annotation_value">sāib</f>
-    </fs>
-  </a>
-  <node xml:id="word/n241"/>
-  <edge from="clause_unit/n244" to="word/n241" xml:id="e241"/>
-  <a as="word" label="word" ref="word/n241" xml:id="241">
-    <fs>
-      <f name="annotation_value">aždiyā-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n249"/>
-  <edge from="clause_unit/n252" to="word/n249" xml:id="e249"/>
-  <a as="word" label="word" ref="word/n249" xml:id="249">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n257"/>
-  <edge from="clause_unit/n272" to="word/n257" xml:id="e257"/>
-  <a as="word" label="word" ref="word/n257" xml:id="257">
-    <fs>
-      <f name="annotation_value">hā…</f>
-    </fs>
-  </a>
-  <node xml:id="word/n26"/>
-  <edge from="clause_unit/n53" to="word/n26" xml:id="e26"/>
-  <a as="word" label="word" ref="word/n26" xml:id="26">
-    <fs>
-      <f name="annotation_value">bādišā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n260"/>
-  <edge from="clause_unit/n272" to="word/n260" xml:id="e260"/>
-  <a as="word" label="word" ref="word/n260" xml:id="260">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n263"/>
-  <edge from="clause_unit/n272" to="word/n263" xml:id="e263"/>
-  <a as="word" label="word" ref="word/n263" xml:id="263">
-    <fs>
-      <f name="annotation_value">aždiyā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n266"/>
-  <edge from="clause_unit/n272" to="word/n266" xml:id="e266"/>
-  <a as="word" label="word" ref="word/n266" xml:id="266">
-    <fs>
-      <f name="annotation_value">amr-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n269"/>
-  <edge from="clause_unit/n272" to="word/n269" xml:id="e269"/>
-  <a as="word" label="word" ref="word/n269" xml:id="269">
-    <fs>
-      <f name="annotation_value">dār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n277"/>
-  <edge from="clause_unit/n283" to="word/n277" xml:id="e277"/>
-  <a as="word" label="word" ref="word/n277" xml:id="277">
-    <fs>
-      <f name="annotation_value">arz-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n280"/>
-  <edge from="clause_unit/n283" to="word/n280" xml:id="e280"/>
-  <a as="word" label="word" ref="word/n280" xml:id="280">
-    <fs>
-      <f name="annotation_value">dār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n288"/>
-  <edge from="clause_unit/n303" to="word/n288" xml:id="e288"/>
-  <a as="word" label="word" ref="word/n288" xml:id="288">
-    <fs>
-      <f name="annotation_value">ēš-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n29"/>
-  <edge from="clause_unit/n53" to="word/n29" xml:id="e29"/>
-  <a as="word" label="word" ref="word/n29" xml:id="29">
-    <fs>
-      <f name="annotation_value">bi=m-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n291"/>
-  <edge from="clause_unit/n303" to="word/n291" xml:id="e291"/>
-  <a as="word" label="word" ref="word/n291" xml:id="291">
-    <fs>
-      <f name="annotation_value">arz-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n294"/>
-  <edge from="clause_unit/n303" to="word/n294" xml:id="e294"/>
-  <a as="word" label="word" ref="word/n294" xml:id="294">
-    <fs>
-      <f name="annotation_value">kay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n297"/>
-  <edge from="clause_unit/n303" to="word/n297" xml:id="e297"/>
-  <a as="word" label="word" ref="word/n297" xml:id="297">
-    <fs>
-      <f name="annotation_value">pa=(m)man</f>
-    </fs>
-  </a>
-  <node xml:id="word/n300"/>
-  <edge from="clause_unit/n303" to="word/n300" xml:id="e300"/>
-  <a as="word" label="word" ref="word/n300" xml:id="300">
-    <fs>
-      <f name="annotation_value">b-(y)ār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n308"/>
-  <edge from="clause_unit/n317" to="word/n308" xml:id="e308"/>
-  <a as="word" label="word" ref="word/n308" xml:id="308">
-    <fs>
-      <f name="annotation_value">man</f>
-    </fs>
-  </a>
-  <node xml:id="word/n311"/>
-  <edge from="clause_unit/n317" to="word/n311" xml:id="e311"/>
-  <a as="word" label="word" ref="word/n311" xml:id="311">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n314"/>
-  <edge from="clause_unit/n317" to="word/n314" xml:id="e314"/>
-  <a as="word" label="word" ref="word/n314" xml:id="314">
-    <fs>
-      <f name="annotation_value">na-zān-īn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n32"/>
-  <edge from="clause_unit/n53" to="word/n32" xml:id="e32"/>
-  <a as="word" label="word" ref="word/n32" xml:id="32">
-    <fs>
-      <f name="annotation_value">wat-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n322"/>
-  <edge from="clause_unit/n328" to="word/n322" xml:id="e322"/>
-  <a as="word" label="word" ref="word/n322" xml:id="322">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n325"/>
-  <edge from="clause_unit/n328" to="word/n325" xml:id="e325"/>
-  <a as="word" label="word" ref="word/n325" xml:id="325">
-    <fs>
-      <f name="annotation_value">bē-zuwān-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n333"/>
-  <edge from="clause_unit/n342" to="word/n333" xml:id="e333"/>
-  <a as="word" label="word" ref="word/n333" xml:id="333">
-    <fs>
-      <f name="annotation_value">yakk</f>
-    </fs>
-  </a>
-  <node xml:id="word/n336"/>
-  <edge from="clause_unit/n342" to="word/n336" xml:id="e336"/>
-  <a as="word" label="word" ref="word/n336" xml:id="336">
-    <fs>
-      <f name="annotation_value">naǰǰār-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n339"/>
-  <edge from="clause_unit/n342" to="word/n339" xml:id="e339"/>
-  <a as="word" label="word" ref="word/n339" xml:id="339">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n347"/>
-  <edge from="clause_unit/n353" to="word/n347" xml:id="e347"/>
-  <a as="word" label="word" ref="word/n347" xml:id="347">
-    <fs>
-      <f name="annotation_value">man=a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n35"/>
-  <edge from="clause_unit/n53" to="word/n35" xml:id="e35"/>
-  <a as="word" label="word" ref="word/n35" xml:id="35">
-    <fs>
-      <f name="annotation_value">šār-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n350"/>
-  <edge from="clause_unit/n353" to="word/n350" xml:id="e350"/>
-  <a as="word" label="word" ref="word/n350" xml:id="350">
-    <fs>
-      <f name="annotation_value">zān-īn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n358"/>
-  <edge from="clause_unit/n361" to="word/n358" xml:id="e358"/>
-  <a as="word" label="word" ref="word/n358" xml:id="358">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n366"/>
-  <edge from="clause_unit/n372" to="word/n366" xml:id="e366"/>
-  <a as="word" label="word" ref="word/n366" xml:id="366">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n369"/>
-  <edge from="clause_unit/n372" to="word/n369" xml:id="e369"/>
-  <a as="word" label="word" ref="word/n369" xml:id="369">
-    <fs>
-      <f name="annotation_value">zān-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n377"/>
-  <edge from="clause_unit/n386" to="word/n377" xml:id="e377"/>
-  <a as="word" label="word" ref="word/n377" xml:id="377">
-    <fs>
-      <f name="annotation_value">ēš-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n38"/>
-  <edge from="clause_unit/n53" to="word/n38" xml:id="e38"/>
-  <a as="word" label="word" ref="word/n38" xml:id="38">
-    <fs>
-      <f name="annotation_value">wasat-(t)ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n380"/>
-  <edge from="clause_unit/n386" to="word/n380" xml:id="e380"/>
-  <a as="word" label="word" ref="word/n380" xml:id="380">
-    <fs>
-      <f name="annotation_value">arz-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n383"/>
-  <edge from="clause_unit/n386" to="word/n383" xml:id="e383"/>
-  <a as="word" label="word" ref="word/n383" xml:id="383">
-    <fs>
-      <f name="annotation_value">āwurt-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n391"/>
-  <edge from="clause_unit/n406" to="word/n391" xml:id="e391"/>
-  <a as="word" label="word" ref="word/n391" xml:id="391">
-    <fs>
-      <f name="annotation_value">man</f>
-    </fs>
-  </a>
-  <node xml:id="word/n394"/>
-  <edge from="clause_unit/n406" to="word/n394" xml:id="e394"/>
-  <a as="word" label="word" ref="word/n394" xml:id="394">
-    <fs>
-      <f name="annotation_value">trā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n397"/>
-  <edge from="clause_unit/n406" to="word/n397" xml:id="e397"/>
-  <a as="word" label="word" ref="word/n397" xml:id="397">
-    <fs>
-      <f name="annotation_value">inka</f>
-    </fs>
-  </a>
-  <node xml:id="word/n400"/>
-  <edge from="clause_unit/n406" to="word/n400" xml:id="e400"/>
-  <a as="word" label="word" ref="word/n400" xml:id="400">
-    <fs>
-      <f name="annotation_value">xalāit=(t)a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n403"/>
-  <edge from="clause_unit/n406" to="word/n403" xml:id="e403"/>
-  <a as="word" label="word" ref="word/n403" xml:id="403">
-    <fs>
-      <f name="annotation_value">day-īn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n41"/>
-  <edge from="clause_unit/n53" to="word/n41" xml:id="e41"/>
-  <a as="word" label="word" ref="word/n41" xml:id="41">
-    <fs>
-      <f name="annotation_value">yakk</f>
-    </fs>
-  </a>
-  <node xml:id="word/n411"/>
-  <edge from="clause_unit/n414" to="word/n411" xml:id="e411"/>
-  <a as="word" label="word" ref="word/n411" xml:id="411">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n419"/>
-  <edge from="clause_unit/n425" to="word/n419" xml:id="e419"/>
-  <a as="word" label="word" ref="word/n419" xml:id="419">
-    <fs>
-      <f name="annotation_value">xayli</f>
-    </fs>
-  </a>
-  <node xml:id="word/n422"/>
-  <edge from="clause_unit/n425" to="word/n422" xml:id="e422"/>
-  <a as="word" label="word" ref="word/n422" xml:id="422">
-    <fs>
-      <f name="annotation_value">xub</f>
-    </fs>
-  </a>
-  <node xml:id="word/n430"/>
-  <edge from="clause_unit/n451" to="word/n430" xml:id="e430"/>
-  <a as="word" label="word" ref="word/n430" xml:id="430">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n433"/>
-  <edge from="clause_unit/n451" to="word/n433" xml:id="e433"/>
-  <a as="word" label="word" ref="word/n433" xml:id="433">
-    <fs>
-      <f name="annotation_value">naǰǰār</f>
-    </fs>
-  </a>
-  <node xml:id="word/n436"/>
-  <edge from="clause_unit/n451" to="word/n436" xml:id="e436"/>
-  <a as="word" label="word" ref="word/n436" xml:id="436">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n439"/>
-  <edge from="clause_unit/n451" to="word/n439" xml:id="e439"/>
-  <a as="word" label="word" ref="word/n439" xml:id="439">
-    <fs>
-      <f name="annotation_value">āt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n44"/>
-  <edge from="clause_unit/n53" to="word/n44" xml:id="e44"/>
-  <a as="word" label="word" ref="word/n44" xml:id="44">
-    <fs>
-      <f name="annotation_value">tīr=i</f>
-    </fs>
-  </a>
-  <node xml:id="word/n442"/>
-  <edge from="clause_unit/n451" to="word/n442" xml:id="e442"/>
-  <a as="word" label="word" ref="word/n442" xml:id="442">
-    <fs>
-      <f name="annotation_value">gō</f>
-    </fs>
-  </a>
-  <node xml:id="word/n445"/>
-  <edge from="clause_unit/n451" to="word/n445" xml:id="e445"/>
-  <a as="word" label="word" ref="word/n445" xml:id="445">
-    <fs>
-      <f name="annotation_value">tēγ=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n448"/>
-  <edge from="clause_unit/n451" to="word/n448" xml:id="e448"/>
-  <a as="word" label="word" ref="word/n448" xml:id="448">
-    <fs>
-      <f name="annotation_value">arrag-ān</f>
-    </fs>
-  </a>
-  <node xml:id="word/n456"/>
-  <edge from="clause_unit/n468" to="word/n456" xml:id="e456"/>
-  <a as="word" label="word" ref="word/n456" xml:id="456">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n459"/>
-  <edge from="clause_unit/n468" to="word/n459" xml:id="e459"/>
-  <a as="word" label="word" ref="word/n459" xml:id="459">
-    <fs>
-      <f name="annotation_value">aždiyā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n462"/>
-  <edge from="clause_unit/n468" to="word/n462" xml:id="e462"/>
-  <a as="word" label="word" ref="word/n462" xml:id="462">
-    <fs>
-      <f name="annotation_value">wayl</f>
-    </fs>
-  </a>
-  <node xml:id="word/n465"/>
-  <edge from="clause_unit/n468" to="word/n465" xml:id="e465"/>
-  <a as="word" label="word" ref="word/n465" xml:id="465">
-    <fs>
-      <f name="annotation_value">kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n47"/>
-  <edge from="clause_unit/n53" to="word/n47" xml:id="e47"/>
-  <a as="word" label="word" ref="word/n47" xml:id="47">
-    <fs>
-      <f name="annotation_value">barγ-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n473"/>
-  <edge from="clause_unit/n479" to="word/n473" xml:id="e473"/>
-  <a as="word" label="word" ref="word/n473" xml:id="473">
-    <fs>
-      <f name="annotation_value">rāda</f>
-    </fs>
-  </a>
-  <node xml:id="word/n476"/>
-  <edge from="clause_unit/n479" to="word/n476" xml:id="e476"/>
-  <a as="word" label="word" ref="word/n476" xml:id="476">
-    <fs>
-      <f name="annotation_value">būt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n484"/>
-  <edge from="clause_unit/n499" to="word/n484" xml:id="e484"/>
-  <a as="word" label="word" ref="word/n484" xml:id="484">
-    <fs>
-      <f name="annotation_value">aždīyā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n487"/>
-  <edge from="clause_unit/n499" to="word/n487" xml:id="e487"/>
-  <a as="word" label="word" ref="word/n487" xml:id="487">
-    <fs>
-      <f name="annotation_value">naǰǰār-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n490"/>
-  <edge from="clause_unit/n499" to="word/n490" xml:id="e490"/>
-  <a as="word" label="word" ref="word/n490" xml:id="490">
-    <fs>
-      <f name="annotation_value">išāra</f>
-    </fs>
-  </a>
-  <node xml:id="word/n493"/>
-  <edge from="clause_unit/n499" to="word/n493" xml:id="e493"/>
-  <a as="word" label="word" ref="word/n493" xml:id="493">
-    <fs>
-      <f name="annotation_value">dāt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n496"/>
-  <edge from="clause_unit/n499" to="word/n496" xml:id="e496"/>
-  <a as="word" label="word" ref="word/n496" xml:id="496">
-    <fs>
-      <f name="annotation_value">išāra=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n50"/>
-  <edge from="clause_unit/n53" to="word/n50" xml:id="e50"/>
-  <a as="word" label="word" ref="word/n50" xml:id="50">
-    <fs>
-      <f name="annotation_value">dāšt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n504"/>
-  <edge from="clause_unit/n516" to="word/n504" xml:id="e504"/>
-  <a as="word" label="word" ref="word/n504" xml:id="504">
-    <fs>
-      <f name="annotation_value">bi</f>
-    </fs>
-  </a>
-  <node xml:id="word/n507"/>
-  <edge from="clause_unit/n516" to="word/n507" xml:id="e507"/>
-  <a as="word" label="word" ref="word/n507" xml:id="507">
-    <fs>
-      <f name="annotation_value">kō-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n510"/>
-  <edge from="clause_unit/n516" to="word/n510" xml:id="e510"/>
-  <a as="word" label="word" ref="word/n510" xml:id="510">
-    <fs>
-      <f name="annotation_value">tā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n513"/>
-  <edge from="clause_unit/n516" to="word/n513" xml:id="e513"/>
-  <a as="word" label="word" ref="word/n513" xml:id="513">
-    <fs>
-      <f name="annotation_value">šut</f>
-    </fs>
-  </a>
-  <node xml:id="word/n521"/>
-  <edge from="clause_unit/n530" to="word/n521" xml:id="e521"/>
-  <a as="word" label="word" ref="word/n521" xml:id="521">
-    <fs>
-      <f name="annotation_value">ōdā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n524"/>
-  <edge from="clause_unit/n530" to="word/n524" xml:id="e524"/>
-  <a as="word" label="word" ref="word/n524" xml:id="524">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n527"/>
-  <edge from="clause_unit/n530" to="word/n527" xml:id="e527"/>
-  <a as="word" label="word" ref="word/n527" xml:id="527">
-    <fs>
-      <f name="annotation_value">šut</f>
-    </fs>
-  </a>
-  <node xml:id="word/n535"/>
-  <edge from="clause_unit/n556" to="word/n535" xml:id="e535"/>
-  <a as="word" label="word" ref="word/n535" xml:id="535">
-    <fs>
-      <f name="annotation_value">ta</f>
-    </fs>
-  </a>
-  <node xml:id="word/n538"/>
-  <edge from="clause_unit/n556" to="word/n538" xml:id="e538"/>
-  <a as="word" label="word" ref="word/n538" xml:id="538">
-    <fs>
-      <f name="annotation_value">uhō…</f>
-    </fs>
-  </a>
-  <node xml:id="word/n541"/>
-  <edge from="clause_unit/n556" to="word/n541" xml:id="e541"/>
-  <a as="word" label="word" ref="word/n541" xml:id="541">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n544"/>
-  <edge from="clause_unit/n556" to="word/n544" xml:id="e544"/>
-  <a as="word" label="word" ref="word/n544" xml:id="544">
-    <fs>
-      <f name="annotation_value">aždiyā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n547"/>
-  <edge from="clause_unit/n556" to="word/n547" xml:id="e547"/>
-  <a as="word" label="word" ref="word/n547" xml:id="547">
-    <fs>
-      <f name="annotation_value">diga</f>
-    </fs>
-  </a>
-  <node xml:id="word/n550"/>
-  <edge from="clause_unit/n556" to="word/n550" xml:id="e550"/>
-  <a as="word" label="word" ref="word/n550" xml:id="550">
-    <fs>
-      <f name="annotation_value">mās-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n553"/>
-  <edge from="clause_unit/n556" to="word/n553" xml:id="e553"/>
-  <a as="word" label="word" ref="word/n553" xml:id="553">
-    <fs>
-      <f name="annotation_value">dār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n561"/>
-  <edge from="clause_unit/n585" to="word/n561" xml:id="e561"/>
-  <a as="word" label="word" ref="word/n561" xml:id="561">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n564"/>
-  <edge from="clause_unit/n585" to="word/n564" xml:id="e564"/>
-  <a as="word" label="word" ref="word/n564" xml:id="564">
-    <fs>
-      <f name="annotation_value">mās=ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n567"/>
-  <edge from="clause_unit/n585" to="word/n567" xml:id="e567"/>
-  <a as="word" label="word" ref="word/n567" xml:id="567">
-    <fs>
-      <f name="annotation_value">ša=m-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n570"/>
-  <edge from="clause_unit/n585" to="word/n570" xml:id="e570"/>
-  <a as="word" label="word" ref="word/n570" xml:id="570">
-    <fs>
-      <f name="annotation_value">kōh-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n573"/>
-  <edge from="clause_unit/n585" to="word/n573" xml:id="e573"/>
-  <a as="word" label="word" ref="word/n573" xml:id="573">
-    <fs>
-      <f name="annotation_value">pāčin</f>
-    </fs>
-  </a>
-  <node xml:id="word/n576"/>
-  <edge from="clause_unit/n585" to="word/n576" xml:id="e576"/>
-  <a as="word" label="word" ref="word/n576" xml:id="576">
-    <fs>
-      <f name="annotation_value">na-(w)ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n579"/>
-  <edge from="clause_unit/n585" to="word/n579" xml:id="e579"/>
-  <a as="word" label="word" ref="word/n579" xml:id="579">
-    <fs>
-      <f name="annotation_value">mazan</f>
-    </fs>
-  </a>
-  <node xml:id="word/n58"/>
-  <edge from="clause_unit/n73" to="word/n58" xml:id="e58"/>
-  <a as="word" label="word" ref="word/n58" xml:id="58">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n582"/>
-  <edge from="clause_unit/n585" to="word/n582" xml:id="e582"/>
-  <a as="word" label="word" ref="word/n582" xml:id="582">
-    <fs>
-      <f name="annotation_value">šāx</f>
-    </fs>
-  </a>
-  <node xml:id="word/n590"/>
-  <edge from="clause_unit/n599" to="word/n590" xml:id="e590"/>
-  <a as="word" label="word" ref="word/n590" xml:id="590">
-    <fs>
-      <f name="annotation_value">ša=m-ēš-ān</f>
-    </fs>
-  </a>
-  <node xml:id="word/n593"/>
-  <edge from="clause_unit/n599" to="word/n593" xml:id="e593"/>
-  <a as="word" label="word" ref="word/n593" xml:id="593">
-    <fs>
-      <f name="annotation_value">šikār</f>
-    </fs>
-  </a>
-  <node xml:id="word/n596"/>
-  <edge from="clause_unit/n599" to="word/n596" xml:id="e596"/>
-  <a as="word" label="word" ref="word/n596" xml:id="596">
-    <fs>
-      <f name="annotation_value">kurt-a=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n604"/>
-  <edge from="clause_unit/n622" to="word/n604" xml:id="e604"/>
-  <a as="word" label="word" ref="word/n604" xml:id="604">
-    <fs>
-      <f name="annotation_value">am-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n607"/>
-  <edge from="clause_unit/n622" to="word/n607" xml:id="e607"/>
-  <a as="word" label="word" ref="word/n607" xml:id="607">
-    <fs>
-      <f name="annotation_value">šāx=ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n61"/>
-  <edge from="clause_unit/n73" to="word/n61" xml:id="e61"/>
-  <a as="word" label="word" ref="word/n61" xml:id="61">
-    <fs>
-      <f name="annotation_value">harčī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n610"/>
-  <edge from="clause_unit/n622" to="word/n610" xml:id="e610"/>
-  <a as="word" label="word" ref="word/n610" xml:id="610">
-    <fs>
-      <f name="annotation_value">ēš-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n613"/>
-  <edge from="clause_unit/n622" to="word/n613" xml:id="e613"/>
-  <a as="word" label="word" ref="word/n613" xml:id="613">
-    <fs>
-      <f name="annotation_value">guṭṭ-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n616"/>
-  <edge from="clause_unit/n622" to="word/n616" xml:id="e616"/>
-  <a as="word" label="word" ref="word/n616" xml:id="616">
-    <fs>
-      <f name="annotation_value">gīr</f>
-    </fs>
-  </a>
-  <node xml:id="word/n619"/>
-  <edge from="clause_unit/n622" to="word/n619" xml:id="e619"/>
-  <a as="word" label="word" ref="word/n619" xml:id="619">
-    <fs>
-      <f name="annotation_value">kurt-ag=ant=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n627"/>
-  <edge from="clause_unit/n633" to="word/n627" xml:id="e627"/>
-  <a as="word" label="word" ref="word/n627" xml:id="627">
-    <fs>
-      <f name="annotation_value">napas</f>
-    </fs>
-  </a>
-  <node xml:id="word/n630"/>
-  <edge from="clause_unit/n633" to="word/n630" xml:id="e630"/>
-  <a as="word" label="word" ref="word/n630" xml:id="630">
-    <fs>
-      <f name="annotation_value">tank=int</f>
-    </fs>
-  </a>
-  <node xml:id="word/n638"/>
-  <edge from="clause_unit/n644" to="word/n638" xml:id="e638"/>
-  <a as="word" label="word" ref="word/n638" xml:id="638">
-    <fs>
-      <f name="annotation_value">āt-a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n64"/>
-  <edge from="clause_unit/n73" to="word/n64" xml:id="e64"/>
-  <a as="word" label="word" ref="word/n64" xml:id="64">
-    <fs>
-      <f name="annotation_value">am-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n641"/>
-  <edge from="clause_unit/n644" to="word/n641" xml:id="e641"/>
-  <a as="word" label="word" ref="word/n641" xml:id="641">
-    <fs>
-      <f name="annotation_value">idā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n649"/>
-  <edge from="clause_unit/n661" to="word/n649" xml:id="e649"/>
-  <a as="word" label="word" ref="word/n649" xml:id="649">
-    <fs>
-      <f name="annotation_value">bi</f>
-    </fs>
-  </a>
-  <node xml:id="word/n652"/>
-  <edge from="clause_unit/n661" to="word/n652" xml:id="e652"/>
-  <a as="word" label="word" ref="word/n652" xml:id="652">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n655"/>
-  <edge from="clause_unit/n661" to="word/n655" xml:id="e655"/>
-  <a as="word" label="word" ref="word/n655" xml:id="655">
-    <fs>
-      <f name="annotation_value">arz</f>
-    </fs>
-  </a>
-  <node xml:id="word/n658"/>
-  <edge from="clause_unit/n661" to="word/n658" xml:id="e658"/>
-  <a as="word" label="word" ref="word/n658" xml:id="658">
-    <fs>
-      <f name="annotation_value">kurt-a</f>
-    </fs>
-  </a>
-  <node xml:id="word/n666"/>
-  <edge from="clause_unit/n672" to="word/n666" xml:id="e666"/>
-  <a as="word" label="word" ref="word/n666" xml:id="666">
-    <fs>
-      <f name="annotation_value">išāra</f>
-    </fs>
-  </a>
-  <node xml:id="word/n669"/>
-  <edge from="clause_unit/n672" to="word/n669" xml:id="e669"/>
-  <a as="word" label="word" ref="word/n669" xml:id="669">
-    <fs>
-      <f name="annotation_value">kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n67"/>
-  <edge from="clause_unit/n73" to="word/n67" xml:id="e67"/>
-  <a as="word" label="word" ref="word/n67" xml:id="67">
-    <fs>
-      <f name="annotation_value">tilīpun-ān-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n677"/>
-  <edge from="clause_unit/n692" to="word/n677" xml:id="e677"/>
-  <a as="word" label="word" ref="word/n677" xml:id="677">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n680"/>
-  <edge from="clause_unit/n692" to="word/n680" xml:id="e680"/>
-  <a as="word" label="word" ref="word/n680" xml:id="680">
-    <fs>
-      <f name="annotation_value">šāx-ān-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n683"/>
-  <edge from="clause_unit/n692" to="word/n683" xml:id="e683"/>
-  <a as="word" label="word" ref="word/n683" xml:id="683">
-    <fs>
-      <f name="annotation_value">pāčin-ē-ān-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n686"/>
-  <edge from="clause_unit/n692" to="word/n686" xml:id="e686"/>
-  <a as="word" label="word" ref="word/n686" xml:id="686">
-    <fs>
-      <f name="annotation_value">arra</f>
-    </fs>
-  </a>
-  <node xml:id="word/n689"/>
-  <edge from="clause_unit/n692" to="word/n689" xml:id="e689"/>
-  <a as="word" label="word" ref="word/n689" xml:id="689">
-    <fs>
-      <f name="annotation_value">kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n697"/>
-  <edge from="clause_unit/n706" to="word/n697" xml:id="e697"/>
-  <a as="word" label="word" ref="word/n697" xml:id="697">
-    <fs>
-      <f name="annotation_value">ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n70"/>
-  <edge from="clause_unit/n73" to="word/n70" xml:id="e70"/>
-  <a as="word" label="word" ref="word/n70" xml:id="70">
-    <fs>
-      <f name="annotation_value">sīm=at-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n700"/>
-  <edge from="clause_unit/n706" to="word/n700" xml:id="e700"/>
-  <a as="word" label="word" ref="word/n700" xml:id="700">
-    <fs>
-      <f name="annotation_value">alās</f>
-    </fs>
-  </a>
-  <node xml:id="word/n703"/>
-  <edge from="clause_unit/n706" to="word/n703" xml:id="e703"/>
-  <a as="word" label="word" ref="word/n703" xml:id="703">
-    <fs>
-      <f name="annotation_value">ūt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n711"/>
-  <edge from="clause_unit/n717" to="word/n711" xml:id="e711"/>
-  <a as="word" label="word" ref="word/n711" xml:id="711">
-    <fs>
-      <f name="annotation_value">āzāt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n714"/>
-  <edge from="clause_unit/n717" to="word/n714" xml:id="e714"/>
-  <a as="word" label="word" ref="word/n714" xml:id="714">
-    <fs>
-      <f name="annotation_value">būt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n722"/>
-  <edge from="clause_unit/n737" to="word/n722" xml:id="e722"/>
-  <a as="word" label="word" ref="word/n722" xml:id="722">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n725"/>
-  <edge from="clause_unit/n737" to="word/n725" xml:id="e725"/>
-  <a as="word" label="word" ref="word/n725" xml:id="725">
-    <fs>
-      <f name="annotation_value">aždiyā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n728"/>
-  <edge from="clause_unit/n737" to="word/n728" xml:id="e728"/>
-  <a as="word" label="word" ref="word/n728" xml:id="728">
-    <fs>
-      <f name="annotation_value">diga</f>
-    </fs>
-  </a>
-  <node xml:id="word/n731"/>
-  <edge from="clause_unit/n737" to="word/n731" xml:id="e731"/>
-  <a as="word" label="word" ref="word/n731" xml:id="731">
-    <fs>
-      <f name="annotation_value">ǰā-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n734"/>
-  <edge from="clause_unit/n737" to="word/n734" xml:id="e734"/>
-  <a as="word" label="word" ref="word/n734" xml:id="734">
-    <fs>
-      <f name="annotation_value">šut=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n742"/>
-  <edge from="clause_unit/n757" to="word/n742" xml:id="e742"/>
-  <a as="word" label="word" ref="word/n742" xml:id="742">
-    <fs>
-      <f name="annotation_value">ēš-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n745"/>
-  <edge from="clause_unit/n757" to="word/n745" xml:id="e745"/>
-  <a as="word" label="word" ref="word/n745" xml:id="745">
-    <fs>
-      <f name="annotation_value">mazan-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n748"/>
-  <edge from="clause_unit/n757" to="word/n748" xml:id="e748"/>
-  <a as="word" label="word" ref="word/n748" xml:id="748">
-    <fs>
-      <f name="annotation_value">xalāit-(t)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n751"/>
-  <edge from="clause_unit/n757" to="word/n751" xml:id="e751"/>
-  <a as="word" label="word" ref="word/n751" xml:id="751">
-    <fs>
-      <f name="annotation_value">dāt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n754"/>
-  <edge from="clause_unit/n757" to="word/n754" xml:id="e754"/>
-  <a as="word" label="word" ref="word/n754" xml:id="754">
-    <fs>
-      <f name="annotation_value">ǰawāir</f>
-    </fs>
-  </a>
-  <node xml:id="word/n762"/>
-  <edge from="clause_unit/n777" to="word/n762" xml:id="e762"/>
-  <a as="word" label="word" ref="word/n762" xml:id="762">
-    <fs>
-      <f name="annotation_value">guṛā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n765"/>
-  <edge from="clause_unit/n777" to="word/n765" xml:id="e765"/>
-  <a as="word" label="word" ref="word/n765" xml:id="765">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n768"/>
-  <edge from="clause_unit/n777" to="word/n768" xml:id="e768"/>
-  <a as="word" label="word" ref="word/n768" xml:id="768">
-    <fs>
-      <f name="annotation_value">ṭukkur-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n771"/>
-  <edge from="clause_unit/n777" to="word/n771" xml:id="e771"/>
-  <a as="word" label="word" ref="word/n771" xml:id="771">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n774"/>
-  <edge from="clause_unit/n777" to="word/n774" xml:id="e774"/>
-  <a as="word" label="word" ref="word/n774" xml:id="774">
-    <fs>
-      <f name="annotation_value">šut</f>
-    </fs>
-  </a>
-  <node xml:id="word/n78"/>
-  <edge from="clause_unit/n87" to="word/n78" xml:id="e78"/>
-  <a as="word" label="word" ref="word/n78" xml:id="78">
-    <fs>
-      <f name="annotation_value">bi</f>
-    </fs>
-  </a>
-  <node xml:id="word/n782"/>
-  <edge from="clause_unit/n794" to="word/n782" xml:id="e782"/>
-  <a as="word" label="word" ref="word/n782" xml:id="782">
-    <fs>
-      <f name="annotation_value">padā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n785"/>
-  <edge from="clause_unit/n794" to="word/n785" xml:id="e785"/>
-  <a as="word" label="word" ref="word/n785" xml:id="785">
-    <fs>
-      <f name="annotation_value">ēš-ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n788"/>
-  <edge from="clause_unit/n794" to="word/n788" xml:id="e788"/>
-  <a as="word" label="word" ref="word/n788" xml:id="788">
-    <fs>
-      <f name="annotation_value">išāra-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n791"/>
-  <edge from="clause_unit/n794" to="word/n791" xml:id="e791"/>
-  <a as="word" label="word" ref="word/n791" xml:id="791">
-    <fs>
-      <f name="annotation_value">ku</f>
-    </fs>
-  </a>
-  <node xml:id="word/n799"/>
-  <edge from="clause_unit/n802" to="word/n799" xml:id="e799"/>
-  <a as="word" label="word" ref="word/n799" xml:id="799">
-    <fs>
-      <f name="annotation_value">ōštāt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n807"/>
-  <edge from="clause_unit/n816" to="word/n807" xml:id="e807"/>
-  <a as="word" label="word" ref="word/n807" xml:id="807">
-    <fs>
-      <f name="annotation_value">am-inkas-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="word/n81"/>
-  <edge from="clause_unit/n87" to="word/n81" xml:id="e81"/>
-  <a as="word" label="word" ref="word/n81" xml:id="81">
-    <fs>
-      <f name="annotation_value">am-ēš-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n810"/>
-  <edge from="clause_unit/n816" to="word/n810" xml:id="e810"/>
-  <a as="word" label="word" ref="word/n810" xml:id="810">
-    <fs>
-      <f name="annotation_value">tōm-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n813"/>
-  <edge from="clause_unit/n816" to="word/n813" xml:id="e813"/>
-  <a as="word" label="word" ref="word/n813" xml:id="813">
-    <fs>
-      <f name="annotation_value">zurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n821"/>
-  <edge from="clause_unit/n857" to="word/n821" xml:id="e821"/>
-  <a as="word" label="word" ref="word/n821" xml:id="821">
-    <fs>
-      <f name="annotation_value">ša</f>
-    </fs>
-  </a>
-  <node xml:id="word/n824"/>
-  <edge from="clause_unit/n857" to="word/n824" xml:id="e824"/>
-  <a as="word" label="word" ref="word/n824" xml:id="824">
-    <fs>
-      <f name="annotation_value">wat-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n827"/>
-  <edge from="clause_unit/n857" to="word/n827" xml:id="e827"/>
-  <a as="word" label="word" ref="word/n827" xml:id="827">
-    <fs>
-      <f name="annotation_value">dap-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n830"/>
-  <edge from="clause_unit/n857" to="word/n830" xml:id="e830"/>
-  <a as="word" label="word" ref="word/n830" xml:id="830">
-    <fs>
-      <f name="annotation_value">tā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n833"/>
-  <edge from="clause_unit/n857" to="word/n833" xml:id="e833"/>
-  <a as="word" label="word" ref="word/n833" xml:id="833">
-    <fs>
-      <f name="annotation_value">prēnt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n836"/>
-  <edge from="clause_unit/n857" to="word/n836" xml:id="e836"/>
-  <a as="word" label="word" ref="word/n836" xml:id="836">
-    <fs>
-      <f name="annotation_value">bi</f>
-    </fs>
-  </a>
-  <node xml:id="word/n839"/>
-  <edge from="clause_unit/n857" to="word/n839" xml:id="e839"/>
-  <a as="word" label="word" ref="word/n839" xml:id="839">
-    <fs>
-      <f name="annotation_value">am-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n84"/>
-  <edge from="clause_unit/n87" to="word/n84" xml:id="e84"/>
-  <a as="word" label="word" ref="word/n84" xml:id="84">
-    <fs>
-      <f name="annotation_value">wasl=at-ant</f>
-    </fs>
-  </a>
-  <node xml:id="word/n842"/>
-  <edge from="clause_unit/n857" to="word/n842" xml:id="e842"/>
-  <a as="word" label="word" ref="word/n842" xml:id="842">
-    <fs>
-      <f name="annotation_value">ǰawāir-ān-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n845"/>
-  <edge from="clause_unit/n857" to="word/n845" xml:id="e845"/>
-  <a as="word" label="word" ref="word/n845" xml:id="845">
-    <fs>
-      <f name="annotation_value">tā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n848"/>
-  <edge from="clause_unit/n857" to="word/n848" xml:id="e848"/>
-  <a as="word" label="word" ref="word/n848" xml:id="848">
-    <fs>
-      <f name="annotation_value">ēš-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n851"/>
-  <edge from="clause_unit/n857" to="word/n851" xml:id="e851"/>
-  <a as="word" label="word" ref="word/n851" xml:id="851">
-    <fs>
-      <f name="annotation_value">tūrag-ay</f>
-    </fs>
-  </a>
-  <node xml:id="word/n854"/>
-  <edge from="clause_unit/n857" to="word/n854" xml:id="e854"/>
-  <a as="word" label="word" ref="word/n854" xml:id="854">
-    <fs>
-      <f name="annotation_value">tā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n862"/>
-  <edge from="clause_unit/n868" to="word/n862" xml:id="e862"/>
-  <a as="word" label="word" ref="word/n862" xml:id="862">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n865"/>
-  <edge from="clause_unit/n868" to="word/n865" xml:id="e865"/>
-  <a as="word" label="word" ref="word/n865" xml:id="865">
-    <fs>
-      <f name="annotation_value">āt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n873"/>
-  <edge from="clause_unit/n879" to="word/n873" xml:id="e873"/>
-  <a as="word" label="word" ref="word/n873" xml:id="873">
-    <fs>
-      <f name="annotation_value">bādšā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n876"/>
-  <edge from="clause_unit/n879" to="word/n876" xml:id="e876"/>
-  <a as="word" label="word" ref="word/n876" xml:id="876">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="word/n884"/>
-  <edge from="clause_unit/n896" to="word/n884" xml:id="e884"/>
-  <a as="word" label="word" ref="word/n884" xml:id="884">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n887"/>
-  <edge from="clause_unit/n896" to="word/n887" xml:id="e887"/>
-  <a as="word" label="word" ref="word/n887" xml:id="887">
-    <fs>
-      <f name="annotation_value">čē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n890"/>
-  <edge from="clause_unit/n896" to="word/n890" xml:id="e890"/>
-  <a as="word" label="word" ref="word/n890" xml:id="890">
-    <fs>
-      <f name="annotation_value">arz-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n893"/>
-  <edge from="clause_unit/n896" to="word/n893" xml:id="e893"/>
-  <a as="word" label="word" ref="word/n893" xml:id="893">
-    <fs>
-      <f name="annotation_value">dāšt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n9"/>
-  <edge from="clause_unit/n18" to="word/n9" xml:id="e9"/>
-  <a as="word" label="word" ref="word/n9" xml:id="9">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n901"/>
-  <edge from="clause_unit/n904" to="word/n901" xml:id="e901"/>
-  <a as="word" label="word" ref="word/n901" xml:id="901">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n909"/>
-  <edge from="clause_unit/n936" to="word/n909" xml:id="e909"/>
-  <a as="word" label="word" ref="word/n909" xml:id="909">
-    <fs>
-      <f name="annotation_value">b-(y)ā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n912"/>
-  <edge from="clause_unit/n936" to="word/n912" xml:id="e912"/>
-  <a as="word" label="word" ref="word/n912" xml:id="912">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n915"/>
-  <edge from="clause_unit/n936" to="word/n915" xml:id="e915"/>
-  <a as="word" label="word" ref="word/n915" xml:id="915">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n918"/>
-  <edge from="clause_unit/n936" to="word/n918" xml:id="e918"/>
-  <a as="word" label="word" ref="word/n918" xml:id="918">
-    <fs>
-      <f name="annotation_value">rang</f>
-    </fs>
-  </a>
-  <node xml:id="word/n92"/>
-  <edge from="clause_unit/n104" to="word/n92" xml:id="e92"/>
-  <a as="word" label="word" ref="word/n92" xml:id="92">
-    <fs>
-      <f name="annotation_value">harka</f>
-    </fs>
-  </a>
-  <node xml:id="word/n921"/>
-  <edge from="clause_unit/n936" to="word/n921" xml:id="e921"/>
-  <a as="word" label="word" ref="word/n921" xml:id="921">
-    <fs>
-      <f name="annotation_value">ēš-ī</f>
-    </fs>
-  </a>
-  <node xml:id="word/n924"/>
-  <edge from="clause_unit/n936" to="word/n924" xml:id="e924"/>
-  <a as="word" label="word" ref="word/n924" xml:id="924">
-    <fs>
-      <f name="annotation_value">mās</f>
-    </fs>
-  </a>
-  <node xml:id="word/n927"/>
-  <edge from="clause_unit/n936" to="word/n927" xml:id="e927"/>
-  <a as="word" label="word" ref="word/n927" xml:id="927">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n930"/>
-  <edge from="clause_unit/n936" to="word/n930" xml:id="e930"/>
-  <a as="word" label="word" ref="word/n930" xml:id="930">
-    <fs>
-      <f name="annotation_value">rang</f>
-    </fs>
-  </a>
-  <node xml:id="word/n933"/>
-  <edge from="clause_unit/n936" to="word/n933" xml:id="e933"/>
-  <a as="word" label="word" ref="word/n933" xml:id="933">
-    <fs>
-      <f name="annotation_value">guṭṭō=at=ō</f>
-    </fs>
-  </a>
-  <node xml:id="word/n941"/>
-  <edge from="clause_unit/n944" to="word/n941" xml:id="e941"/>
-  <a as="word" label="word" ref="word/n941" xml:id="941">
-    <fs>
-      <f name="annotation_value">āt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n949"/>
-  <edge from="clause_unit/n958" to="word/n949" xml:id="e949"/>
-  <a as="word" label="word" ref="word/n949" xml:id="949">
-    <fs>
-      <f name="annotation_value">man</f>
-    </fs>
-  </a>
-  <node xml:id="word/n95"/>
-  <edge from="clause_unit/n104" to="word/n95" xml:id="e95"/>
-  <a as="word" label="word" ref="word/n95" xml:id="95">
-    <fs>
-      <f name="annotation_value">ki</f>
-    </fs>
-  </a>
-  <node xml:id="word/n952"/>
-  <edge from="clause_unit/n958" to="word/n952" xml:id="e952"/>
-  <a as="word" label="word" ref="word/n952" xml:id="952">
-    <fs>
-      <f name="annotation_value">āzāt</f>
-    </fs>
-  </a>
-  <node xml:id="word/n955"/>
-  <edge from="clause_unit/n958" to="word/n955" xml:id="e955"/>
-  <a as="word" label="word" ref="word/n955" xml:id="955">
-    <fs>
-      <f name="annotation_value">kurt-un=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n963"/>
-  <edge from="clause_unit/n978" to="word/n963" xml:id="e963"/>
-  <a as="word" label="word" ref="word/n963" xml:id="963">
-    <fs>
-      <f name="annotation_value">guṛā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n966"/>
-  <edge from="clause_unit/n978" to="word/n966" xml:id="e966"/>
-  <a as="word" label="word" ref="word/n966" xml:id="966">
-    <fs>
-      <f name="annotation_value">mnā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n969"/>
-  <edge from="clause_unit/n978" to="word/n969" xml:id="e969"/>
-  <a as="word" label="word" ref="word/n969" xml:id="969">
-    <fs>
-      <f name="annotation_value">inka</f>
-    </fs>
-  </a>
-  <node xml:id="word/n972"/>
-  <edge from="clause_unit/n978" to="word/n972" xml:id="e972"/>
-  <a as="word" label="word" ref="word/n972" xml:id="972">
-    <fs>
-      <f name="annotation_value">ǰawāir</f>
-    </fs>
-  </a>
-  <node xml:id="word/n975"/>
-  <edge from="clause_unit/n978" to="word/n975" xml:id="e975"/>
-  <a as="word" label="word" ref="word/n975" xml:id="975">
-    <fs>
-      <f name="annotation_value">dāt=u</f>
-    </fs>
-  </a>
-  <node xml:id="word/n98"/>
-  <edge from="clause_unit/n104" to="word/n98" xml:id="e98"/>
-  <a as="word" label="word" ref="word/n98" xml:id="98">
-    <fs>
-      <f name="annotation_value">arz-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n983"/>
-  <edge from="clause_unit/n1001" to="word/n983" xml:id="e983"/>
-  <a as="word" label="word" ref="word/n983" xml:id="983">
-    <fs>
-      <f name="annotation_value">am-ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n986"/>
-  <edge from="clause_unit/n1001" to="word/n986" xml:id="e986"/>
-  <a as="word" label="word" ref="word/n986" xml:id="986">
-    <fs>
-      <f name="annotation_value">tōm-ā=um</f>
-    </fs>
-  </a>
-  <node xml:id="word/n989"/>
-  <edge from="clause_unit/n1001" to="word/n989" xml:id="e989"/>
-  <a as="word" label="word" ref="word/n989" xml:id="989">
-    <fs>
-      <f name="annotation_value">am-ēš-ā=um</f>
-    </fs>
-  </a>
-  <node xml:id="word/n992"/>
-  <edge from="clause_unit/n1001" to="word/n992" xml:id="e992"/>
-  <a as="word" label="word" ref="word/n992" xml:id="992">
-    <fs>
-      <f name="annotation_value">mnā</f>
-    </fs>
-  </a>
-  <node xml:id="word/n995"/>
-  <edge from="clause_unit/n1001" to="word/n995" xml:id="e995"/>
-  <a as="word" label="word" ref="word/n995" xml:id="995">
-    <fs>
-      <f name="annotation_value">ē</f>
-    </fs>
-  </a>
-  <node xml:id="word/n998"/>
-  <edge from="clause_unit/n1001" to="word/n998" xml:id="e998"/>
-  <a as="word" label="word" ref="word/n998" xml:id="998">
-    <fs>
-      <f name="annotation_value">dā</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="word" occurs="396"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="clause_unit"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="word"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="word..na1"/>
+	<edge from="clause_unit..na4" to="word..na1" xml:id="ea1"/>
+	<a as="word" label="word" ref="word..na1" xml:id="a1">
+		<fs>
+			<f name="annotation_value">guš-īt:</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1006"/>
+	<edge from="clause_unit..na1021" to="word..na1006" xml:id="ea1006"/>
+	<a as="word" label="word" ref="word..na1006" xml:id="a1006">
+		<fs>
+			<f name="annotation_value">ša</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1009"/>
+	<edge from="clause_unit..na1021" to="word..na1009" xml:id="ea1009"/>
+	<a as="word" label="word" ref="word..na1009" xml:id="a1009">
+		<fs>
+			<f name="annotation_value">wat-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na101"/>
+	<edge from="clause_unit..na104" to="word..na101" xml:id="ea101"/>
+	<a as="word" label="word" ref="word..na101" xml:id="a101">
+		<fs>
+			<f name="annotation_value">b-dāšt-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1012"/>
+	<edge from="clause_unit..na1021" to="word..na1012" xml:id="ea1012"/>
+	<a as="word" label="word" ref="word..na1012" xml:id="a1012">
+		<fs>
+			<f name="annotation_value">dap-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1015"/>
+	<edge from="clause_unit..na1021" to="word..na1015" xml:id="ea1015"/>
+	<a as="word" label="word" ref="word..na1015" xml:id="a1015">
+		<fs>
+			<f name="annotation_value">tā=ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1018"/>
+	<edge from="clause_unit..na1021" to="word..na1018" xml:id="ea1018"/>
+	<a as="word" label="word" ref="word..na1018" xml:id="a1018">
+		<fs>
+			<f name="annotation_value">prēnt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1026"/>
+	<edge from="clause_unit..na1029" to="word..na1026" xml:id="ea1026"/>
+	<a as="word" label="word" ref="word..na1026" xml:id="a1026">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1034"/>
+	<edge from="clause_unit..na1043" to="word..na1034" xml:id="ea1034"/>
+	<a as="word" label="word" ref="word..na1034" xml:id="a1034">
+		<fs>
+			<f name="annotation_value">ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1037"/>
+	<edge from="clause_unit..na1043" to="word..na1037" xml:id="ea1037"/>
+	<a as="word" label="word" ref="word..na1037" xml:id="a1037">
+		<fs>
+			<f name="annotation_value">dgar=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1040"/>
+	<edge from="clause_unit..na1043" to="word..na1040" xml:id="ea1040"/>
+	<a as="word" label="word" ref="word..na1040" xml:id="a1040">
+		<fs>
+			<f name="annotation_value">ǰawāir=ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1048"/>
+	<edge from="clause_unit..na1057" to="word..na1048" xml:id="ea1048"/>
+	<a as="word" label="word" ref="word..na1048" xml:id="a1048">
+		<fs>
+			<f name="annotation_value">am-ēš-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1051"/>
+	<edge from="clause_unit..na1057" to="word..na1051" xml:id="ea1051"/>
+	<a as="word" label="word" ref="word..na1051" xml:id="a1051">
+		<fs>
+			<f name="annotation_value">mašmā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1054"/>
+	<edge from="clause_unit..na1057" to="word..na1054" xml:id="ea1054"/>
+	<a as="word" label="word" ref="word..na1054" xml:id="a1054">
+		<fs>
+			<f name="annotation_value">na-zān-an</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1062"/>
+	<edge from="clause_unit..na1071" to="word..na1062" xml:id="ea1062"/>
+	<a as="word" label="word" ref="word..na1062" xml:id="a1062">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1065"/>
+	<edge from="clause_unit..na1071" to="word..na1065" xml:id="ea1065"/>
+	<a as="word" label="word" ref="word..na1065" xml:id="a1065">
+		<fs>
+			<f name="annotation_value">maššōra</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1068"/>
+	<edge from="clause_unit..na1071" to="word..na1068" xml:id="ea1068"/>
+	<a as="word" label="word" ref="word..na1068" xml:id="a1068">
+		<fs>
+			<f name="annotation_value">kurt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1076"/>
+	<edge from="clause_unit..na1079" to="word..na1076" xml:id="ea1076"/>
+	<a as="word" label="word" ref="word..na1076" xml:id="a1076">
+		<fs>
+			<f name="annotation_value">gušt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1084"/>
+	<edge from="clause_unit..na1096" to="word..na1084" xml:id="ea1084"/>
+	<a as="word" label="word" ref="word..na1084" xml:id="a1084">
+		<fs>
+			<f name="annotation_value">b-(y)ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1087"/>
+	<edge from="clause_unit..na1096" to="word..na1087" xml:id="ea1087"/>
+	<a as="word" label="word" ref="word..na1087" xml:id="a1087">
+		<fs>
+			<f name="annotation_value">ēš-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na109"/>
+	<edge from="clause_unit..na121" to="word..na109" xml:id="ea109"/>
+	<a as="word" label="word" ref="word..na109" xml:id="a109">
+		<fs>
+			<f name="annotation_value">am-ēširā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1090"/>
+	<edge from="clause_unit..na1096" to="word..na1090" xml:id="ea1090"/>
+	<a as="word" label="word" ref="word..na1090" xml:id="a1090">
+		<fs>
+			<f name="annotation_value">p-kiš-an</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1093"/>
+	<edge from="clause_unit..na1096" to="word..na1093" xml:id="ea1093"/>
+	<a as="word" label="word" ref="word..na1093" xml:id="a1093">
+		<fs>
+			<f name="annotation_value">mašmā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1101"/>
+	<edge from="clause_unit..na1131" to="word..na1101" xml:id="ea1101"/>
+	<a as="word" label="word" ref="word..na1101" xml:id="a1101">
+		<fs>
+			<f name="annotation_value">ēš-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1104"/>
+	<edge from="clause_unit..na1131" to="word..na1104" xml:id="ea1104"/>
+	<a as="word" label="word" ref="word..na1104" xml:id="a1104">
+		<fs>
+			<f name="annotation_value">ǰwān-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1107"/>
+	<edge from="clause_unit..na1131" to="word..na1107" xml:id="ea1107"/>
+	<a as="word" label="word" ref="word..na1107" xml:id="a1107">
+		<fs>
+			<f name="annotation_value">ǰā-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1110"/>
+	<edge from="clause_unit..na1131" to="word..na1110" xml:id="ea1110"/>
+	<a as="word" label="word" ref="word..na1110" xml:id="a1110">
+		<fs>
+			<f name="annotation_value">bāg-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1113"/>
+	<edge from="clause_unit..na1131" to="word..na1113" xml:id="ea1113"/>
+	<a as="word" label="word" ref="word..na1113" xml:id="a1113">
+		<fs>
+			<f name="annotation_value">ḍigār-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1116"/>
+	<edge from="clause_unit..na1131" to="word..na1116" xml:id="ea1116"/>
+	<a as="word" label="word" ref="word..na1116" xml:id="a1116">
+		<fs>
+			<f name="annotation_value">tā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1119"/>
+	<edge from="clause_unit..na1131" to="word..na1119" xml:id="ea1119"/>
+	<a as="word" label="word" ref="word..na1119" xml:id="a1119">
+		<fs>
+			<f name="annotation_value">kišt-ant=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na112"/>
+	<edge from="clause_unit..na121" to="word..na112" xml:id="ea112"/>
+	<a as="word" label="word" ref="word..na112" xml:id="a112">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1122"/>
+	<edge from="clause_unit..na1131" to="word..na1122" xml:id="ea1122"/>
+	<a as="word" label="word" ref="word..na1122" xml:id="a1122">
+		<fs>
+			<f name="annotation_value">ǰwān-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1125"/>
+	<edge from="clause_unit..na1131" to="word..na1125" xml:id="ea1125"/>
+	<a as="word" label="word" ref="word..na1125" xml:id="a1125">
+		<fs>
+			<f name="annotation_value">narm-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1128"/>
+	<edge from="clause_unit..na1131" to="word..na1128" xml:id="ea1128"/>
+	<a as="word" label="word" ref="word..na1128" xml:id="a1128">
+		<fs>
+			<f name="annotation_value">ḍigār-ē=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1136"/>
+	<edge from="clause_unit..na1145" to="word..na1136" xml:id="ea1136"/>
+	<a as="word" label="word" ref="word..na1136" xml:id="a1136">
+		<fs>
+			<f name="annotation_value">wall-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1139"/>
+	<edge from="clause_unit..na1145" to="word..na1139" xml:id="ea1139"/>
+	<a as="word" label="word" ref="word..na1139" xml:id="a1139">
+		<fs>
+			<f name="annotation_value">sabz</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1142"/>
+	<edge from="clause_unit..na1145" to="word..na1142" xml:id="ea1142"/>
+	<a as="word" label="word" ref="word..na1142" xml:id="a1142">
+		<fs>
+			<f name="annotation_value">kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na115"/>
+	<edge from="clause_unit..na121" to="word..na115" xml:id="ea115"/>
+	<a as="word" label="word" ref="word..na115" xml:id="a115">
+		<fs>
+			<f name="annotation_value">takān</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1150"/>
+	<edge from="clause_unit..na1162" to="word..na1150" xml:id="ea1150"/>
+	<a as="word" label="word" ref="word..na1150" xml:id="a1150">
+		<fs>
+			<f name="annotation_value">ēš</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1153"/>
+	<edge from="clause_unit..na1162" to="word..na1153" xml:id="ea1153"/>
+	<a as="word" label="word" ref="word..na1153" xml:id="a1153">
+		<fs>
+			<f name="annotation_value">činkas</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1156"/>
+	<edge from="clause_unit..na1162" to="word..na1156" xml:id="ea1156"/>
+	<a as="word" label="word" ref="word..na1156" xml:id="a1156">
+		<fs>
+			<f name="annotation_value">galaw</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1159"/>
+	<edge from="clause_unit..na1162" to="word..na1159" xml:id="ea1159"/>
+	<a as="word" label="word" ref="word..na1159" xml:id="a1159">
+		<fs>
+			<f name="annotation_value">ku</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1167"/>
+	<edge from="clause_unit..na1185" to="word..na1167" xml:id="ea1167"/>
+	<a as="word" label="word" ref="word..na1167" xml:id="a1167">
+		<fs>
+			<f name="annotation_value">ša</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1170"/>
+	<edge from="clause_unit..na1185" to="word..na1170" xml:id="ea1170"/>
+	<a as="word" label="word" ref="word..na1170" xml:id="a1170">
+		<fs>
+			<f name="annotation_value">truss-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1173"/>
+	<edge from="clause_unit..na1185" to="word..na1173" xml:id="ea1173"/>
+	<a as="word" label="word" ref="word..na1173" xml:id="a1173">
+		<fs>
+			<f name="annotation_value">kass-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1176"/>
+	<edge from="clause_unit..na1185" to="word..na1176" xml:id="ea1176"/>
+	<a as="word" label="word" ref="word..na1176" xml:id="a1176">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1179"/>
+	<edge from="clause_unit..na1185" to="word..na1179" xml:id="ea1179"/>
+	<a as="word" label="word" ref="word..na1179" xml:id="a1179">
+		<fs>
+			<f name="annotation_value">galaw-ān-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na118"/>
+	<edge from="clause_unit..na121" to="word..na118" xml:id="ea118"/>
+	<a as="word" label="word" ref="word..na118" xml:id="a118">
+		<fs>
+			<f name="annotation_value">dāt-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1182"/>
+	<edge from="clause_unit..na1185" to="word..na1182" xml:id="ea1182"/>
+	<a as="word" label="word" ref="word..na1182" xml:id="a1182">
+		<fs>
+			<f name="annotation_value">na-wārt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1190"/>
+	<edge from="clause_unit..na1205" to="word..na1190" xml:id="ea1190"/>
+	<a as="word" label="word" ref="word..na1190" xml:id="a1190">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1193"/>
+	<edge from="clause_unit..na1205" to="word..na1193" xml:id="ea1193"/>
+	<a as="word" label="word" ref="word..na1193" xml:id="a1193">
+		<fs>
+			<f name="annotation_value">ša</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1196"/>
+	<edge from="clause_unit..na1205" to="word..na1196" xml:id="ea1196"/>
+	<a as="word" label="word" ref="word..na1196" xml:id="a1196">
+		<fs>
+			<f name="annotation_value">aždiyā-(y)ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1199"/>
+	<edge from="clause_unit..na1205" to="word..na1199" xml:id="ea1199"/>
+	<a as="word" label="word" ref="word..na1199" xml:id="a1199">
+		<fs>
+			<f name="annotation_value">dap-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na12"/>
+	<edge from="clause_unit..na18" to="word..na12" xml:id="ea12"/>
+	<a as="word" label="word" ref="word..na12" xml:id="a12">
+		<fs>
+			<f name="annotation_value">yag</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1202"/>
+	<edge from="clause_unit..na1205" to="word..na1202" xml:id="ea1202"/>
+	<a as="word" label="word" ref="word..na1202" xml:id="a1202">
+		<fs>
+			<f name="annotation_value">tā=ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1210"/>
+	<edge from="clause_unit..na1216" to="word..na1210" xml:id="ea1210"/>
+	<a as="word" label="word" ref="word..na1210" xml:id="a1210">
+		<fs>
+			<f name="annotation_value">mār-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1213"/>
+	<edge from="clause_unit..na1216" to="word..na1213" xml:id="ea1213"/>
+	<a as="word" label="word" ref="word..na1213" xml:id="a1213">
+		<fs>
+			<f name="annotation_value">zār=ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1221"/>
+	<edge from="clause_unit..na1233" to="word..na1221" xml:id="ea1221"/>
+	<a as="word" label="word" ref="word..na1221" xml:id="a1221">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1224"/>
+	<edge from="clause_unit..na1233" to="word..na1224" xml:id="ea1224"/>
+	<a as="word" label="word" ref="word..na1224" xml:id="a1224">
+		<fs>
+			<f name="annotation_value">činka</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1227"/>
+	<edge from="clause_unit..na1233" to="word..na1227" xml:id="ea1227"/>
+	<a as="word" label="word" ref="word..na1227" xml:id="a1227">
+		<fs>
+			<f name="annotation_value">tōm</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1230"/>
+	<edge from="clause_unit..na1233" to="word..na1230" xml:id="ea1230"/>
+	<a as="word" label="word" ref="word..na1230" xml:id="a1230">
+		<fs>
+			<f name="annotation_value">kurt-ant=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1238"/>
+	<edge from="clause_unit..na1241" to="word..na1238" xml:id="ea1238"/>
+	<a as="word" label="word" ref="word..na1238" xml:id="a1238">
+		<fs>
+			<f name="annotation_value">šut-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1246"/>
+	<edge from="clause_unit..na1258" to="word..na1246" xml:id="ea1246"/>
+	<a as="word" label="word" ref="word..na1246" xml:id="a1246">
+		<fs>
+			<f name="annotation_value">ṭū-(y)ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1249"/>
+	<edge from="clause_unit..na1258" to="word..na1249" xml:id="ea1249"/>
+	<a as="word" label="word" ref="word..na1249" xml:id="a1249">
+		<fs>
+			<f name="annotation_value">pālēz-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1252"/>
+	<edge from="clause_unit..na1258" to="word..na1252" xml:id="ea1252"/>
+	<a as="word" label="word" ref="word..na1252" xml:id="a1252">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1255"/>
+	<edge from="clause_unit..na1258" to="word..na1255" xml:id="ea1255"/>
+	<a as="word" label="word" ref="word..na1255" xml:id="a1255">
+		<fs>
+			<f name="annotation_value">kišt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na126"/>
+	<edge from="clause_unit..na138" to="word..na126" xml:id="ea126"/>
+	<a as="word" label="word" ref="word..na126" xml:id="a126">
+		<fs>
+			<f name="annotation_value">bādišā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1263"/>
+	<edge from="clause_unit..na1275" to="word..na1263" xml:id="ea1263"/>
+	<a as="word" label="word" ref="word..na1263" xml:id="a1263">
+		<fs>
+			<f name="annotation_value">yakk</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1266"/>
+	<edge from="clause_unit..na1275" to="word..na1266" xml:id="ea1266"/>
+	<a as="word" label="word" ref="word..na1266" xml:id="a1266">
+		<fs>
+			<f name="annotation_value">pīramard-ē-rā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1269"/>
+	<edge from="clause_unit..na1275" to="word..na1269" xml:id="ea1269"/>
+	<a as="word" label="word" ref="word..na1269" xml:id="a1269">
+		<fs>
+			<f name="annotation_value">sawzwān</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1272"/>
+	<edge from="clause_unit..na1275" to="word..na1272" xml:id="ea1272"/>
+	<a as="word" label="word" ref="word..na1272" xml:id="a1272">
+		<fs>
+			<f name="annotation_value">ku</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1280"/>
+	<edge from="clause_unit..na1298" to="word..na1280" xml:id="ea1280"/>
+	<a as="word" label="word" ref="word..na1280" xml:id="a1280">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1283"/>
+	<edge from="clause_unit..na1298" to="word..na1283" xml:id="ea1283"/>
+	<a as="word" label="word" ref="word..na1283" xml:id="a1283">
+		<fs>
+			<f name="annotation_value">laggit</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1286"/>
+	<edge from="clause_unit..na1298" to="word..na1286" xml:id="ea1286"/>
+	<a as="word" label="word" ref="word..na1286" xml:id="a1286">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1289"/>
+	<edge from="clause_unit..na1298" to="word..na1289" xml:id="ea1289"/>
+	<a as="word" label="word" ref="word..na1289" xml:id="a1289">
+		<fs>
+			<f name="annotation_value">pālēz</f>
+		</fs>
+	</a>
+	<node xml:id="word..na129"/>
+	<edge from="clause_unit..na138" to="word..na129" xml:id="ea129"/>
+	<a as="word" label="word" ref="word..na129" xml:id="a129">
+		<fs>
+			<f name="annotation_value">ōdā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1292"/>
+	<edge from="clause_unit..na1298" to="word..na1292" xml:id="ea1292"/>
+	<a as="word" label="word" ref="word..na1292" xml:id="a1292">
+		<fs>
+			<f name="annotation_value">bi</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1295"/>
+	<edge from="clause_unit..na1298" to="word..na1295" xml:id="ea1295"/>
+	<a as="word" label="word" ref="word..na1295" xml:id="a1295">
+		<fs>
+			<f name="annotation_value">galaw-ā=ō</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1303"/>
+	<edge from="clause_unit..na1312" to="word..na1303" xml:id="ea1303"/>
+	<a as="word" label="word" ref="word..na1303" xml:id="a1303">
+		<fs>
+			<f name="annotation_value">bēxī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1306"/>
+	<edge from="clause_unit..na1312" to="word..na1306" xml:id="ea1306"/>
+	<a as="word" label="word" ref="word..na1306" xml:id="a1306">
+		<fs>
+			<f name="annotation_value">galaw</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1309"/>
+	<edge from="clause_unit..na1312" to="word..na1309" xml:id="ea1309"/>
+	<a as="word" label="word" ref="word..na1309" xml:id="a1309">
+		<fs>
+			<f name="annotation_value">ku</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1317"/>
+	<edge from="clause_unit..na1329" to="word..na1317" xml:id="ea1317"/>
+	<a as="word" label="word" ref="word..na1317" xml:id="a1317">
+		<fs>
+			<f name="annotation_value">pīramard=am</f>
+		</fs>
+	</a>
+	<node xml:id="word..na132"/>
+	<edge from="clause_unit..na138" to="word..na132" xml:id="ea132"/>
+	<a as="word" label="word" ref="word..na132" xml:id="a132">
+		<fs>
+			<f name="annotation_value">sī=(y)a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1320"/>
+	<edge from="clause_unit..na1329" to="word..na1320" xml:id="ea1320"/>
+	<a as="word" label="word" ref="word..na1320" xml:id="a1320">
+		<fs>
+			<f name="annotation_value">awal</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1323"/>
+	<edge from="clause_unit..na1329" to="word..na1323" xml:id="ea1323"/>
+	<a as="word" label="word" ref="word..na1323" xml:id="a1323">
+		<fs>
+			<f name="annotation_value">čē=(w)a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1326"/>
+	<edge from="clause_unit..na1329" to="word..na1326" xml:id="ea1326"/>
+	<a as="word" label="word" ref="word..na1326" xml:id="a1326">
+		<fs>
+			<f name="annotation_value">na-ku</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1334"/>
+	<edge from="clause_unit..na1340" to="word..na1334" xml:id="ea1334"/>
+	<a as="word" label="word" ref="word..na1334" xml:id="a1334">
+		<fs>
+			<f name="annotation_value">tawkal=a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1337"/>
+	<edge from="clause_unit..na1340" to="word..na1337" xml:id="ea1337"/>
+	<a as="word" label="word" ref="word..na1337" xml:id="a1337">
+		<fs>
+			<f name="annotation_value">na-kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1345"/>
+	<edge from="clause_unit..na1351" to="word..na1345" xml:id="ea1345"/>
+	<a as="word" label="word" ref="word..na1345" xml:id="a1345">
+		<fs>
+			<f name="annotation_value">ar-uk-(k)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1348"/>
+	<edge from="clause_unit..na1351" to="word..na1348" xml:id="ea1348"/>
+	<a as="word" label="word" ref="word..na1348" xml:id="a1348">
+		<fs>
+			<f name="annotation_value">dāšt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na135"/>
+	<edge from="clause_unit..na138" to="word..na135" xml:id="ea135"/>
+	<a as="word" label="word" ref="word..na135" xml:id="a135">
+		<fs>
+			<f name="annotation_value">būt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1356"/>
+	<edge from="clause_unit..na1377" to="word..na1356" xml:id="ea1356"/>
+	<a as="word" label="word" ref="word..na1356" xml:id="a1356">
+		<fs>
+			<f name="annotation_value">am-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1359"/>
+	<edge from="clause_unit..na1377" to="word..na1359" xml:id="ea1359"/>
+	<a as="word" label="word" ref="word..na1359" xml:id="a1359">
+		<fs>
+			<f name="annotation_value">galaw-ān-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1362"/>
+	<edge from="clause_unit..na1377" to="word..na1362" xml:id="ea1362"/>
+	<a as="word" label="word" ref="word..na1362" xml:id="a1362">
+		<fs>
+			<f name="annotation_value">dēmā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1365"/>
+	<edge from="clause_unit..na1377" to="word..na1365" xml:id="ea1365"/>
+	<a as="word" label="word" ref="word..na1365" xml:id="a1365">
+		<fs>
+			<f name="annotation_value">bi=m-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1368"/>
+	<edge from="clause_unit..na1377" to="word..na1368" xml:id="ea1368"/>
+	<a as="word" label="word" ref="word..na1368" xml:id="a1368">
+		<fs>
+			<f name="annotation_value">ar-uk-(k)ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1371"/>
+	<edge from="clause_unit..na1377" to="word..na1371" xml:id="ea1371"/>
+	<a as="word" label="word" ref="word..na1371" xml:id="a1371">
+		<fs>
+			<f name="annotation_value">dēmā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1374"/>
+	<edge from="clause_unit..na1377" to="word..na1374" xml:id="ea1374"/>
+	<a as="word" label="word" ref="word..na1374" xml:id="a1374">
+		<fs>
+			<f name="annotation_value">kōṭit=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1382"/>
+	<edge from="clause_unit..na1385" to="word..na1382" xml:id="ea1382"/>
+	<a as="word" label="word" ref="word..na1382" xml:id="a1382">
+		<fs>
+			<f name="annotation_value">dāt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1390"/>
+	<edge from="clause_unit..na1402" to="word..na1390" xml:id="ea1390"/>
+	<a as="word" label="word" ref="word..na1390" xml:id="a1390">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1393"/>
+	<edge from="clause_unit..na1402" to="word..na1393" xml:id="ea1393"/>
+	<a as="word" label="word" ref="word..na1393" xml:id="a1393">
+		<fs>
+			<f name="annotation_value">ar=am</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1396"/>
+	<edge from="clause_unit..na1402" to="word..na1396" xml:id="ea1396"/>
+	<a as="word" label="word" ref="word..na1396" xml:id="a1396">
+		<fs>
+			<f name="annotation_value">pazzōr</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1399"/>
+	<edge from="clause_unit..na1402" to="word..na1399" xml:id="ea1399"/>
+	<a as="word" label="word" ref="word..na1399" xml:id="a1399">
+		<fs>
+			<f name="annotation_value">ūt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1407"/>
+	<edge from="clause_unit..na1419" to="word..na1407" xml:id="ea1407"/>
+	<a as="word" label="word" ref="word..na1407" xml:id="a1407">
+		<fs>
+			<f name="annotation_value">pīramard</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1410"/>
+	<edge from="clause_unit..na1419" to="word..na1410" xml:id="ea1410"/>
+	<a as="word" label="word" ref="word..na1410" xml:id="a1410">
+		<fs>
+			<f name="annotation_value">šurū</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1413"/>
+	<edge from="clause_unit..na1419" to="word..na1413" xml:id="ea1413"/>
+	<a as="word" label="word" ref="word..na1413" xml:id="a1413">
+		<fs>
+			<f name="annotation_value">ku</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1416"/>
+	<edge from="clause_unit..na1419" to="word..na1416" xml:id="ea1416"/>
+	<a as="word" label="word" ref="word..na1416" xml:id="a1416">
+		<fs>
+			<f name="annotation_value">wārtin-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1424"/>
+	<edge from="clause_unit..na1436" to="word..na1424" xml:id="ea1424"/>
+	<a as="word" label="word" ref="word..na1424" xml:id="a1424">
+		<fs>
+			<f name="annotation_value">ta</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1427"/>
+	<edge from="clause_unit..na1436" to="word..na1427" xml:id="ea1427"/>
+	<a as="word" label="word" ref="word..na1427" xml:id="a1427">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na143"/>
+	<edge from="clause_unit..na152" to="word..na143" xml:id="ea143"/>
+	<a as="word" label="word" ref="word..na143" xml:id="a143">
+		<fs>
+			<f name="annotation_value">yag</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1430"/>
+	<edge from="clause_unit..na1436" to="word..na1430" xml:id="ea1430"/>
+	<a as="word" label="word" ref="word..na1430" xml:id="a1430">
+		<fs>
+			<f name="annotation_value">či</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1433"/>
+	<edge from="clause_unit..na1436" to="word..na1433" xml:id="ea1433"/>
+	<a as="word" label="word" ref="word..na1433" xml:id="a1433">
+		<fs>
+			<f name="annotation_value">čīz=ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1441"/>
+	<edge from="clause_unit..na1450" to="word..na1441" xml:id="ea1441"/>
+	<a as="word" label="word" ref="word..na1441" xml:id="a1441">
+		<fs>
+			<f name="annotation_value">pīramard=am</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1444"/>
+	<edge from="clause_unit..na1450" to="word..na1444" xml:id="ea1444"/>
+	<a as="word" label="word" ref="word..na1444" xml:id="a1444">
+		<fs>
+			<f name="annotation_value">pazzōr</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1447"/>
+	<edge from="clause_unit..na1450" to="word..na1447" xml:id="ea1447"/>
+	<a as="word" label="word" ref="word..na1447" xml:id="a1447">
+		<fs>
+			<f name="annotation_value">ūt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1455"/>
+	<edge from="clause_unit..na1470" to="word..na1455" xml:id="ea1455"/>
+	<a as="word" label="word" ref="word..na1455" xml:id="a1455">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1458"/>
+	<edge from="clause_unit..na1470" to="word..na1458" xml:id="ea1458"/>
+	<a as="word" label="word" ref="word..na1458" xml:id="a1458">
+		<fs>
+			<f name="annotation_value">yag</f>
+		</fs>
+	</a>
+	<node xml:id="word..na146"/>
+	<edge from="clause_unit..na152" to="word..na146" xml:id="ea146"/>
+	<a as="word" label="word" ref="word..na146" xml:id="a146">
+		<fs>
+			<f name="annotation_value">rōč-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1461"/>
+	<edge from="clause_unit..na1470" to="word..na1461" xml:id="ea1461"/>
+	<a as="word" label="word" ref="word..na1461" xml:id="a1461">
+		<fs>
+			<f name="annotation_value">rōč-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1464"/>
+	<edge from="clause_unit..na1470" to="word..na1464" xml:id="ea1464"/>
+	<a as="word" label="word" ref="word..na1464" xml:id="a1464">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1467"/>
+	<edge from="clause_unit..na1470" to="word..na1467" xml:id="ea1467"/>
+	<a as="word" label="word" ref="word..na1467" xml:id="a1467">
+		<fs>
+			<f name="annotation_value">āt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1475"/>
+	<edge from="clause_unit..na1478" to="word..na1475" xml:id="ea1475"/>
+	<a as="word" label="word" ref="word..na1475" xml:id="a1475">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1483"/>
+	<edge from="clause_unit..na1498" to="word..na1483" xml:id="ea1483"/>
+	<a as="word" label="word" ref="word..na1483" xml:id="a1483">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1486"/>
+	<edge from="clause_unit..na1498" to="word..na1486" xml:id="ea1486"/>
+	<a as="word" label="word" ref="word..na1486" xml:id="a1486">
+		<fs>
+			<f name="annotation_value">pīramard</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1489"/>
+	<edge from="clause_unit..na1498" to="word..na1489" xml:id="ea1489"/>
+	<a as="word" label="word" ref="word..na1489" xml:id="a1489">
+		<fs>
+			<f name="annotation_value">bābā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na149"/>
+	<edge from="clause_unit..na152" to="word..na149" xml:id="ea149"/>
+	<a as="word" label="word" ref="word..na149" xml:id="a149">
+		<fs>
+			<f name="annotation_value">dīst</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1492"/>
+	<edge from="clause_unit..na1498" to="word..na1492" xml:id="ea1492"/>
+	<a as="word" label="word" ref="word..na1492" xml:id="a1492">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1495"/>
+	<edge from="clause_unit..na1498" to="word..na1495" xml:id="ea1495"/>
+	<a as="word" label="word" ref="word..na1495" xml:id="a1495">
+		<fs>
+			<f name="annotation_value">čē=(w)ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na15"/>
+	<edge from="clause_unit..na18" to="word..na15" xml:id="ea15"/>
+	<a as="word" label="word" ref="word..na15" xml:id="a15">
+		<fs>
+			<f name="annotation_value">bādišā=(y)ē=at</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1503"/>
+	<edge from="clause_unit..na1506" to="word..na1503" xml:id="ea1503"/>
+	<a as="word" label="word" ref="word..na1503" xml:id="a1503">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1511"/>
+	<edge from="clause_unit..na1523" to="word..na1511" xml:id="ea1511"/>
+	<a as="word" label="word" ref="word..na1511" xml:id="a1511">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1514"/>
+	<edge from="clause_unit..na1523" to="word..na1514" xml:id="ea1514"/>
+	<a as="word" label="word" ref="word..na1514" xml:id="a1514">
+		<fs>
+			<f name="annotation_value">bēxī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1517"/>
+	<edge from="clause_unit..na1523" to="word..na1517" xml:id="ea1517"/>
+	<a as="word" label="word" ref="word..na1517" xml:id="a1517">
+		<fs>
+			<f name="annotation_value">ǰwān-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1520"/>
+	<edge from="clause_unit..na1523" to="word..na1520" xml:id="ea1520"/>
+	<a as="word" label="word" ref="word..na1520" xml:id="a1520">
+		<fs>
+			<f name="annotation_value">čīz=ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1528"/>
+	<edge from="clause_unit..na1534" to="word..na1528" xml:id="ea1528"/>
+	<a as="word" label="word" ref="word..na1528" xml:id="a1528">
+		<fs>
+			<f name="annotation_value">man=um</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1531"/>
+	<edge from="clause_unit..na1534" to="word..na1531" xml:id="ea1531"/>
+	<a as="word" label="word" ref="word..na1531" xml:id="a1531">
+		<fs>
+			<f name="annotation_value">wārt-a,</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1539"/>
+	<edge from="clause_unit..na1548" to="word..na1539" xml:id="ea1539"/>
+	<a as="word" label="word" ref="word..na1539" xml:id="a1539">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1542"/>
+	<edge from="clause_unit..na1548" to="word..na1542" xml:id="ea1542"/>
+	<a as="word" label="word" ref="word..na1542" xml:id="a1542">
+		<fs>
+			<f name="annotation_value">ar-ā=um</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1545"/>
+	<edge from="clause_unit..na1548" to="word..na1545" xml:id="ea1545"/>
+	<a as="word" label="word" ref="word..na1545" xml:id="a1545">
+		<fs>
+			<f name="annotation_value">dāt-a=un=ō</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1553"/>
+	<edge from="clause_unit..na1559" to="word..na1553" xml:id="ea1553"/>
+	<a as="word" label="word" ref="word..na1553" xml:id="a1553">
+		<fs>
+			<f name="annotation_value">šumā=um</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1556"/>
+	<edge from="clause_unit..na1559" to="word..na1556" xml:id="ea1556"/>
+	<a as="word" label="word" ref="word..na1556" xml:id="a1556">
+		<fs>
+			<f name="annotation_value">bōr-it.</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1564"/>
+	<edge from="clause_unit..na1570" to="word..na1564" xml:id="ea1564"/>
+	<a as="word" label="word" ref="word..na1564" xml:id="a1564">
+		<fs>
+			<f name="annotation_value">wazīr</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1567"/>
+	<edge from="clause_unit..na1570" to="word..na1567" xml:id="ea1567"/>
+	<a as="word" label="word" ref="word..na1567" xml:id="a1567">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="word..na157"/>
+	<edge from="clause_unit..na169" to="word..na157" xml:id="ea157"/>
+	<a as="word" label="word" ref="word..na157" xml:id="a157">
+		<fs>
+			<f name="annotation_value">ta</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1575"/>
+	<edge from="clause_unit..na1587" to="word..na1575" xml:id="ea1575"/>
+	<a as="word" label="word" ref="word..na1575" xml:id="a1575">
+		<fs>
+			<f name="annotation_value">na</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1578"/>
+	<edge from="clause_unit..na1587" to="word..na1578" xml:id="ea1578"/>
+	<a as="word" label="word" ref="word..na1578" xml:id="a1578">
+		<fs>
+			<f name="annotation_value">dēmā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1581"/>
+	<edge from="clause_unit..na1587" to="word..na1581" xml:id="ea1581"/>
+	<a as="word" label="word" ref="word..na1581" xml:id="a1581">
+		<fs>
+			<f name="annotation_value">man=a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1584"/>
+	<edge from="clause_unit..na1587" to="word..na1584" xml:id="ea1584"/>
+	<a as="word" label="word" ref="word..na1584" xml:id="a1584">
+		<fs>
+			<f name="annotation_value">war-īn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1592"/>
+	<edge from="clause_unit..na1604" to="word..na1592" xml:id="ea1592"/>
+	<a as="word" label="word" ref="word..na1592" xml:id="a1592">
+		<fs>
+			<f name="annotation_value">ta</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1595"/>
+	<edge from="clause_unit..na1604" to="word..na1595" xml:id="ea1595"/>
+	<a as="word" label="word" ref="word..na1595" xml:id="a1595">
+		<fs>
+			<f name="annotation_value">ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1598"/>
+	<edge from="clause_unit..na1604" to="word..na1598" xml:id="ea1598"/>
+	<a as="word" label="word" ref="word..na1598" xml:id="a1598">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na160"/>
+	<edge from="clause_unit..na169" to="word..na160" xml:id="ea160"/>
+	<a as="word" label="word" ref="word..na160" xml:id="a160">
+		<fs>
+			<f name="annotation_value">am-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1601"/>
+	<edge from="clause_unit..na1604" to="word..na1601" xml:id="ea1601"/>
+	<a as="word" label="word" ref="word..na1601" xml:id="a1601">
+		<fs>
+			<f name="annotation_value">ma-war</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1609"/>
+	<edge from="clause_unit..na1615" to="word..na1609" xml:id="ea1609"/>
+	<a as="word" label="word" ref="word..na1609" xml:id="a1609">
+		<fs>
+			<f name="annotation_value">wazīr</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1612"/>
+	<edge from="clause_unit..na1615" to="word..na1612" xml:id="ea1612"/>
+	<a as="word" label="word" ref="word..na1612" xml:id="a1612">
+		<fs>
+			<f name="annotation_value">wārt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1620"/>
+	<edge from="clause_unit..na1635" to="word..na1620" xml:id="ea1620"/>
+	<a as="word" label="word" ref="word..na1620" xml:id="a1620">
+		<fs>
+			<f name="annotation_value">ta</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1623"/>
+	<edge from="clause_unit..na1635" to="word..na1623" xml:id="ea1623"/>
+	<a as="word" label="word" ref="word..na1623" xml:id="a1623">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1626"/>
+	<edge from="clause_unit..na1635" to="word..na1626" xml:id="ea1626"/>
+	<a as="word" label="word" ref="word..na1626" xml:id="a1626">
+		<fs>
+			<f name="annotation_value">aǰab-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1629"/>
+	<edge from="clause_unit..na1635" to="word..na1629" xml:id="ea1629"/>
+	<a as="word" label="word" ref="word..na1629" xml:id="a1629">
+		<fs>
+			<f name="annotation_value">xušmizzag-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na163"/>
+	<edge from="clause_unit..na169" to="word..na163" xml:id="ea163"/>
+	<a as="word" label="word" ref="word..na163" xml:id="a163">
+		<fs>
+			<f name="annotation_value">aždiyā-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1632"/>
+	<edge from="clause_unit..na1635" to="word..na1632" xml:id="ea1632"/>
+	<a as="word" label="word" ref="word..na1632" xml:id="a1632">
+		<fs>
+			<f name="annotation_value">čīz=ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1640"/>
+	<edge from="clause_unit..na1643" to="word..na1640" xml:id="ea1640"/>
+	<a as="word" label="word" ref="word..na1640" xml:id="a1640">
+		<fs>
+			<f name="annotation_value">wārt-ant=ō</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1648"/>
+	<edge from="clause_unit..na1654" to="word..na1648" xml:id="ea1648"/>
+	<a as="word" label="word" ref="word..na1648" xml:id="a1648">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1651"/>
+	<edge from="clause_unit..na1654" to="word..na1651" xml:id="ea1651"/>
+	<a as="word" label="word" ref="word..na1651" xml:id="a1651">
+		<fs>
+			<f name="annotation_value">wārt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1659"/>
+	<edge from="clause_unit..na1665" to="word..na1659" xml:id="ea1659"/>
+	<a as="word" label="word" ref="word..na1659" xml:id="a1659">
+		<fs>
+			<f name="annotation_value">nūn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na166"/>
+	<edge from="clause_unit..na169" to="word..na166" xml:id="ea166"/>
+	<a as="word" label="word" ref="word..na166" xml:id="a166">
+		<fs>
+			<f name="annotation_value">āt-a=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1662"/>
+	<edge from="clause_unit..na1665" to="word..na1662" xml:id="ea1662"/>
+	<a as="word" label="word" ref="word..na1662" xml:id="a1662">
+		<fs>
+			<f name="annotation_value">gušt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1670"/>
+	<edge from="clause_unit..na1685" to="word..na1670" xml:id="ea1670"/>
+	<a as="word" label="word" ref="word..na1670" xml:id="a1670">
+		<fs>
+			<f name="annotation_value">b-(y)ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1673"/>
+	<edge from="clause_unit..na1685" to="word..na1673" xml:id="ea1673"/>
+	<a as="word" label="word" ref="word..na1673" xml:id="a1673">
+		<fs>
+			<f name="annotation_value">mašmā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1676"/>
+	<edge from="clause_unit..na1685" to="word..na1676" xml:id="ea1676"/>
+	<a as="word" label="word" ref="word..na1676" xml:id="a1676">
+		<fs>
+			<f name="annotation_value">p=ēšī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1679"/>
+	<edge from="clause_unit..na1685" to="word..na1679" xml:id="ea1679"/>
+	<a as="word" label="word" ref="word..na1679" xml:id="a1679">
+		<fs>
+			<f name="annotation_value">nām=ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1682"/>
+	<edge from="clause_unit..na1685" to="word..na1682" xml:id="ea1682"/>
+	<a as="word" label="word" ref="word..na1682" xml:id="a1682">
+		<fs>
+			<f name="annotation_value">b-ill-an</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1690"/>
+	<edge from="clause_unit..na1705" to="word..na1690" xml:id="ea1690"/>
+	<a as="word" label="word" ref="word..na1690" xml:id="a1690">
+		<fs>
+			<f name="annotation_value">nām=ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1693"/>
+	<edge from="clause_unit..na1705" to="word..na1693" xml:id="ea1693"/>
+	<a as="word" label="word" ref="word..na1693" xml:id="a1693">
+		<fs>
+			<f name="annotation_value">guṛā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1696"/>
+	<edge from="clause_unit..na1705" to="word..na1696" xml:id="ea1696"/>
+	<a as="word" label="word" ref="word..na1696" xml:id="a1696">
+		<fs>
+			<f name="annotation_value">galaw-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1699"/>
+	<edge from="clause_unit..na1705" to="word..na1699" xml:id="ea1699"/>
+	<a as="word" label="word" ref="word..na1699" xml:id="a1699">
+		<fs>
+			<f name="annotation_value">išt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1702"/>
+	<edge from="clause_unit..na1705" to="word..na1702" xml:id="ea1702"/>
+	<a as="word" label="word" ref="word..na1702" xml:id="a1702">
+		<fs>
+			<f name="annotation_value">xarmizza</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1710"/>
+	<edge from="clause_unit..na1725" to="word..na1710" xml:id="ea1710"/>
+	<a as="word" label="word" ref="word..na1710" xml:id="a1710">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1713"/>
+	<edge from="clause_unit..na1725" to="word..na1713" xml:id="ea1713"/>
+	<a as="word" label="word" ref="word..na1713" xml:id="a1713">
+		<fs>
+			<f name="annotation_value">mizzag-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1716"/>
+	<edge from="clause_unit..na1725" to="word..na1716" xml:id="ea1716"/>
+	<a as="word" label="word" ref="word..na1716" xml:id="a1716">
+		<fs>
+			<f name="annotation_value">awal</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1719"/>
+	<edge from="clause_unit..na1725" to="word..na1719" xml:id="ea1719"/>
+	<a as="word" label="word" ref="word..na1719" xml:id="a1719">
+		<fs>
+			<f name="annotation_value">xar</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1722"/>
+	<edge from="clause_unit..na1725" to="word..na1722" xml:id="ea1722"/>
+	<a as="word" label="word" ref="word..na1722" xml:id="a1722">
+		<fs>
+			<f name="annotation_value">burt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1730"/>
+	<edge from="clause_unit..na1739" to="word..na1730" xml:id="ea1730"/>
+	<a as="word" label="word" ref="word..na1730" xml:id="a1730">
+		<fs>
+			<f name="annotation_value">xarmizza</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1733"/>
+	<edge from="clause_unit..na1739" to="word..na1733" xml:id="ea1733"/>
+	<a as="word" label="word" ref="word..na1733" xml:id="a1733">
+		<fs>
+			<f name="annotation_value">š=ōdā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na1736"/>
+	<edge from="clause_unit..na1739" to="word..na1736" xml:id="ea1736"/>
+	<a as="word" label="word" ref="word..na1736" xml:id="a1736">
+		<fs>
+			<f name="annotation_value">mant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na174"/>
+	<edge from="clause_unit..na183" to="word..na174" xml:id="ea174"/>
+	<a as="word" label="word" ref="word..na174" xml:id="a174">
+		<fs>
+			<f name="annotation_value">am-ēš-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na177"/>
+	<edge from="clause_unit..na183" to="word..na177" xml:id="ea177"/>
+	<a as="word" label="word" ref="word..na177" xml:id="a177">
+		<fs>
+			<f name="annotation_value">takān=a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na180"/>
+	<edge from="clause_unit..na183" to="word..na180" xml:id="ea180"/>
+	<a as="word" label="word" ref="word..na180" xml:id="a180">
+		<fs>
+			<f name="annotation_value">dant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na188"/>
+	<edge from="clause_unit..na200" to="word..na188" xml:id="ea188"/>
+	<a as="word" label="word" ref="word..na188" xml:id="a188">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na191"/>
+	<edge from="clause_unit..na200" to="word..na191" xml:id="ea191"/>
+	<a as="word" label="word" ref="word..na191" xml:id="a191">
+		<fs>
+			<f name="annotation_value">dēm</f>
+		</fs>
+	</a>
+	<node xml:id="word..na194"/>
+	<edge from="clause_unit..na200" to="word..na194" xml:id="ea194"/>
+	<a as="word" label="word" ref="word..na194" xml:id="a194">
+		<fs>
+			<f name="annotation_value">dāt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na197"/>
+	<edge from="clause_unit..na200" to="word..na197" xml:id="ea197"/>
+	<a as="word" label="word" ref="word..na197" xml:id="a197">
+		<fs>
+			<f name="annotation_value">yakk-ē-rā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na205"/>
+	<edge from="clause_unit..na214" to="word..na205" xml:id="ea205"/>
+	<a as="word" label="word" ref="word..na205" xml:id="a205">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na208"/>
+	<edge from="clause_unit..na214" to="word..na208" xml:id="ea208"/>
+	<a as="word" label="word" ref="word..na208" xml:id="a208">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na211"/>
+	<edge from="clause_unit..na214" to="word..na211" xml:id="ea211"/>
+	<a as="word" label="word" ref="word..na211" xml:id="a211">
+		<fs>
+			<f name="annotation_value">čī-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na219"/>
+	<edge from="clause_unit..na222" to="word..na219" xml:id="ea219"/>
+	<a as="word" label="word" ref="word..na219" xml:id="a219">
+		<fs>
+			<f name="annotation_value">āt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na227"/>
+	<edge from="clause_unit..na230" to="word..na227" xml:id="ea227"/>
+	<a as="word" label="word" ref="word..na227" xml:id="a227">
+		<fs>
+			<f name="annotation_value">gušt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na23"/>
+	<edge from="clause_unit..na53" to="word..na23" xml:id="ea23"/>
+	<a as="word" label="word" ref="word..na23" xml:id="a23">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na235"/>
+	<edge from="clause_unit..na244" to="word..na235" xml:id="ea235"/>
+	<a as="word" label="word" ref="word..na235" xml:id="a235">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na238"/>
+	<edge from="clause_unit..na244" to="word..na238" xml:id="ea238"/>
+	<a as="word" label="word" ref="word..na238" xml:id="a238">
+		<fs>
+			<f name="annotation_value">sāib</f>
+		</fs>
+	</a>
+	<node xml:id="word..na241"/>
+	<edge from="clause_unit..na244" to="word..na241" xml:id="ea241"/>
+	<a as="word" label="word" ref="word..na241" xml:id="a241">
+		<fs>
+			<f name="annotation_value">aždiyā-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na249"/>
+	<edge from="clause_unit..na252" to="word..na249" xml:id="ea249"/>
+	<a as="word" label="word" ref="word..na249" xml:id="a249">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="word..na257"/>
+	<edge from="clause_unit..na272" to="word..na257" xml:id="ea257"/>
+	<a as="word" label="word" ref="word..na257" xml:id="a257">
+		<fs>
+			<f name="annotation_value">hā…</f>
+		</fs>
+	</a>
+	<node xml:id="word..na26"/>
+	<edge from="clause_unit..na53" to="word..na26" xml:id="ea26"/>
+	<a as="word" label="word" ref="word..na26" xml:id="a26">
+		<fs>
+			<f name="annotation_value">bādišā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na260"/>
+	<edge from="clause_unit..na272" to="word..na260" xml:id="ea260"/>
+	<a as="word" label="word" ref="word..na260" xml:id="a260">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na263"/>
+	<edge from="clause_unit..na272" to="word..na263" xml:id="ea263"/>
+	<a as="word" label="word" ref="word..na263" xml:id="a263">
+		<fs>
+			<f name="annotation_value">aždiyā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na266"/>
+	<edge from="clause_unit..na272" to="word..na266" xml:id="ea266"/>
+	<a as="word" label="word" ref="word..na266" xml:id="a266">
+		<fs>
+			<f name="annotation_value">amr-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na269"/>
+	<edge from="clause_unit..na272" to="word..na269" xml:id="ea269"/>
+	<a as="word" label="word" ref="word..na269" xml:id="a269">
+		<fs>
+			<f name="annotation_value">dār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na277"/>
+	<edge from="clause_unit..na283" to="word..na277" xml:id="ea277"/>
+	<a as="word" label="word" ref="word..na277" xml:id="a277">
+		<fs>
+			<f name="annotation_value">arz-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na280"/>
+	<edge from="clause_unit..na283" to="word..na280" xml:id="ea280"/>
+	<a as="word" label="word" ref="word..na280" xml:id="a280">
+		<fs>
+			<f name="annotation_value">dār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na288"/>
+	<edge from="clause_unit..na303" to="word..na288" xml:id="ea288"/>
+	<a as="word" label="word" ref="word..na288" xml:id="a288">
+		<fs>
+			<f name="annotation_value">ēš-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na29"/>
+	<edge from="clause_unit..na53" to="word..na29" xml:id="ea29"/>
+	<a as="word" label="word" ref="word..na29" xml:id="a29">
+		<fs>
+			<f name="annotation_value">bi=m-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na291"/>
+	<edge from="clause_unit..na303" to="word..na291" xml:id="ea291"/>
+	<a as="word" label="word" ref="word..na291" xml:id="a291">
+		<fs>
+			<f name="annotation_value">arz-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na294"/>
+	<edge from="clause_unit..na303" to="word..na294" xml:id="ea294"/>
+	<a as="word" label="word" ref="word..na294" xml:id="a294">
+		<fs>
+			<f name="annotation_value">kay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na297"/>
+	<edge from="clause_unit..na303" to="word..na297" xml:id="ea297"/>
+	<a as="word" label="word" ref="word..na297" xml:id="a297">
+		<fs>
+			<f name="annotation_value">pa=(m)man</f>
+		</fs>
+	</a>
+	<node xml:id="word..na300"/>
+	<edge from="clause_unit..na303" to="word..na300" xml:id="ea300"/>
+	<a as="word" label="word" ref="word..na300" xml:id="a300">
+		<fs>
+			<f name="annotation_value">b-(y)ār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na308"/>
+	<edge from="clause_unit..na317" to="word..na308" xml:id="ea308"/>
+	<a as="word" label="word" ref="word..na308" xml:id="a308">
+		<fs>
+			<f name="annotation_value">man</f>
+		</fs>
+	</a>
+	<node xml:id="word..na311"/>
+	<edge from="clause_unit..na317" to="word..na311" xml:id="ea311"/>
+	<a as="word" label="word" ref="word..na311" xml:id="a311">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na314"/>
+	<edge from="clause_unit..na317" to="word..na314" xml:id="ea314"/>
+	<a as="word" label="word" ref="word..na314" xml:id="a314">
+		<fs>
+			<f name="annotation_value">na-zān-īn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na32"/>
+	<edge from="clause_unit..na53" to="word..na32" xml:id="ea32"/>
+	<a as="word" label="word" ref="word..na32" xml:id="a32">
+		<fs>
+			<f name="annotation_value">wat-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na322"/>
+	<edge from="clause_unit..na328" to="word..na322" xml:id="ea322"/>
+	<a as="word" label="word" ref="word..na322" xml:id="a322">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na325"/>
+	<edge from="clause_unit..na328" to="word..na325" xml:id="ea325"/>
+	<a as="word" label="word" ref="word..na325" xml:id="a325">
+		<fs>
+			<f name="annotation_value">bē-zuwān-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na333"/>
+	<edge from="clause_unit..na342" to="word..na333" xml:id="ea333"/>
+	<a as="word" label="word" ref="word..na333" xml:id="a333">
+		<fs>
+			<f name="annotation_value">yakk</f>
+		</fs>
+	</a>
+	<node xml:id="word..na336"/>
+	<edge from="clause_unit..na342" to="word..na336" xml:id="ea336"/>
+	<a as="word" label="word" ref="word..na336" xml:id="a336">
+		<fs>
+			<f name="annotation_value">naǰǰār-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na339"/>
+	<edge from="clause_unit..na342" to="word..na339" xml:id="ea339"/>
+	<a as="word" label="word" ref="word..na339" xml:id="a339">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="word..na347"/>
+	<edge from="clause_unit..na353" to="word..na347" xml:id="ea347"/>
+	<a as="word" label="word" ref="word..na347" xml:id="a347">
+		<fs>
+			<f name="annotation_value">man=a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na35"/>
+	<edge from="clause_unit..na53" to="word..na35" xml:id="ea35"/>
+	<a as="word" label="word" ref="word..na35" xml:id="a35">
+		<fs>
+			<f name="annotation_value">šār-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na350"/>
+	<edge from="clause_unit..na353" to="word..na350" xml:id="ea350"/>
+	<a as="word" label="word" ref="word..na350" xml:id="a350">
+		<fs>
+			<f name="annotation_value">zān-īn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na358"/>
+	<edge from="clause_unit..na361" to="word..na358" xml:id="ea358"/>
+	<a as="word" label="word" ref="word..na358" xml:id="a358">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na366"/>
+	<edge from="clause_unit..na372" to="word..na366" xml:id="ea366"/>
+	<a as="word" label="word" ref="word..na366" xml:id="a366">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na369"/>
+	<edge from="clause_unit..na372" to="word..na369" xml:id="ea369"/>
+	<a as="word" label="word" ref="word..na369" xml:id="a369">
+		<fs>
+			<f name="annotation_value">zān-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na377"/>
+	<edge from="clause_unit..na386" to="word..na377" xml:id="ea377"/>
+	<a as="word" label="word" ref="word..na377" xml:id="a377">
+		<fs>
+			<f name="annotation_value">ēš-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na38"/>
+	<edge from="clause_unit..na53" to="word..na38" xml:id="ea38"/>
+	<a as="word" label="word" ref="word..na38" xml:id="a38">
+		<fs>
+			<f name="annotation_value">wasat-(t)ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na380"/>
+	<edge from="clause_unit..na386" to="word..na380" xml:id="ea380"/>
+	<a as="word" label="word" ref="word..na380" xml:id="a380">
+		<fs>
+			<f name="annotation_value">arz-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na383"/>
+	<edge from="clause_unit..na386" to="word..na383" xml:id="ea383"/>
+	<a as="word" label="word" ref="word..na383" xml:id="a383">
+		<fs>
+			<f name="annotation_value">āwurt-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na391"/>
+	<edge from="clause_unit..na406" to="word..na391" xml:id="ea391"/>
+	<a as="word" label="word" ref="word..na391" xml:id="a391">
+		<fs>
+			<f name="annotation_value">man</f>
+		</fs>
+	</a>
+	<node xml:id="word..na394"/>
+	<edge from="clause_unit..na406" to="word..na394" xml:id="ea394"/>
+	<a as="word" label="word" ref="word..na394" xml:id="a394">
+		<fs>
+			<f name="annotation_value">trā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na397"/>
+	<edge from="clause_unit..na406" to="word..na397" xml:id="ea397"/>
+	<a as="word" label="word" ref="word..na397" xml:id="a397">
+		<fs>
+			<f name="annotation_value">inka</f>
+		</fs>
+	</a>
+	<node xml:id="word..na400"/>
+	<edge from="clause_unit..na406" to="word..na400" xml:id="ea400"/>
+	<a as="word" label="word" ref="word..na400" xml:id="a400">
+		<fs>
+			<f name="annotation_value">xalāit=(t)a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na403"/>
+	<edge from="clause_unit..na406" to="word..na403" xml:id="ea403"/>
+	<a as="word" label="word" ref="word..na403" xml:id="a403">
+		<fs>
+			<f name="annotation_value">day-īn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na41"/>
+	<edge from="clause_unit..na53" to="word..na41" xml:id="ea41"/>
+	<a as="word" label="word" ref="word..na41" xml:id="a41">
+		<fs>
+			<f name="annotation_value">yakk</f>
+		</fs>
+	</a>
+	<node xml:id="word..na411"/>
+	<edge from="clause_unit..na414" to="word..na411" xml:id="ea411"/>
+	<a as="word" label="word" ref="word..na411" xml:id="a411">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="word..na419"/>
+	<edge from="clause_unit..na425" to="word..na419" xml:id="ea419"/>
+	<a as="word" label="word" ref="word..na419" xml:id="a419">
+		<fs>
+			<f name="annotation_value">xayli</f>
+		</fs>
+	</a>
+	<node xml:id="word..na422"/>
+	<edge from="clause_unit..na425" to="word..na422" xml:id="ea422"/>
+	<a as="word" label="word" ref="word..na422" xml:id="a422">
+		<fs>
+			<f name="annotation_value">xub</f>
+		</fs>
+	</a>
+	<node xml:id="word..na430"/>
+	<edge from="clause_unit..na451" to="word..na430" xml:id="ea430"/>
+	<a as="word" label="word" ref="word..na430" xml:id="a430">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na433"/>
+	<edge from="clause_unit..na451" to="word..na433" xml:id="ea433"/>
+	<a as="word" label="word" ref="word..na433" xml:id="a433">
+		<fs>
+			<f name="annotation_value">naǰǰār</f>
+		</fs>
+	</a>
+	<node xml:id="word..na436"/>
+	<edge from="clause_unit..na451" to="word..na436" xml:id="ea436"/>
+	<a as="word" label="word" ref="word..na436" xml:id="a436">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na439"/>
+	<edge from="clause_unit..na451" to="word..na439" xml:id="ea439"/>
+	<a as="word" label="word" ref="word..na439" xml:id="a439">
+		<fs>
+			<f name="annotation_value">āt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na44"/>
+	<edge from="clause_unit..na53" to="word..na44" xml:id="ea44"/>
+	<a as="word" label="word" ref="word..na44" xml:id="a44">
+		<fs>
+			<f name="annotation_value">tīr=i</f>
+		</fs>
+	</a>
+	<node xml:id="word..na442"/>
+	<edge from="clause_unit..na451" to="word..na442" xml:id="ea442"/>
+	<a as="word" label="word" ref="word..na442" xml:id="a442">
+		<fs>
+			<f name="annotation_value">gō</f>
+		</fs>
+	</a>
+	<node xml:id="word..na445"/>
+	<edge from="clause_unit..na451" to="word..na445" xml:id="ea445"/>
+	<a as="word" label="word" ref="word..na445" xml:id="a445">
+		<fs>
+			<f name="annotation_value">tēγ=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na448"/>
+	<edge from="clause_unit..na451" to="word..na448" xml:id="ea448"/>
+	<a as="word" label="word" ref="word..na448" xml:id="a448">
+		<fs>
+			<f name="annotation_value">arrag-ān</f>
+		</fs>
+	</a>
+	<node xml:id="word..na456"/>
+	<edge from="clause_unit..na468" to="word..na456" xml:id="ea456"/>
+	<a as="word" label="word" ref="word..na456" xml:id="a456">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na459"/>
+	<edge from="clause_unit..na468" to="word..na459" xml:id="ea459"/>
+	<a as="word" label="word" ref="word..na459" xml:id="a459">
+		<fs>
+			<f name="annotation_value">aždiyā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na462"/>
+	<edge from="clause_unit..na468" to="word..na462" xml:id="ea462"/>
+	<a as="word" label="word" ref="word..na462" xml:id="a462">
+		<fs>
+			<f name="annotation_value">wayl</f>
+		</fs>
+	</a>
+	<node xml:id="word..na465"/>
+	<edge from="clause_unit..na468" to="word..na465" xml:id="ea465"/>
+	<a as="word" label="word" ref="word..na465" xml:id="a465">
+		<fs>
+			<f name="annotation_value">kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na47"/>
+	<edge from="clause_unit..na53" to="word..na47" xml:id="ea47"/>
+	<a as="word" label="word" ref="word..na47" xml:id="a47">
+		<fs>
+			<f name="annotation_value">barγ-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na473"/>
+	<edge from="clause_unit..na479" to="word..na473" xml:id="ea473"/>
+	<a as="word" label="word" ref="word..na473" xml:id="a473">
+		<fs>
+			<f name="annotation_value">rāda</f>
+		</fs>
+	</a>
+	<node xml:id="word..na476"/>
+	<edge from="clause_unit..na479" to="word..na476" xml:id="ea476"/>
+	<a as="word" label="word" ref="word..na476" xml:id="a476">
+		<fs>
+			<f name="annotation_value">būt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na484"/>
+	<edge from="clause_unit..na499" to="word..na484" xml:id="ea484"/>
+	<a as="word" label="word" ref="word..na484" xml:id="a484">
+		<fs>
+			<f name="annotation_value">aždīyā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na487"/>
+	<edge from="clause_unit..na499" to="word..na487" xml:id="ea487"/>
+	<a as="word" label="word" ref="word..na487" xml:id="a487">
+		<fs>
+			<f name="annotation_value">naǰǰār-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na490"/>
+	<edge from="clause_unit..na499" to="word..na490" xml:id="ea490"/>
+	<a as="word" label="word" ref="word..na490" xml:id="a490">
+		<fs>
+			<f name="annotation_value">išāra</f>
+		</fs>
+	</a>
+	<node xml:id="word..na493"/>
+	<edge from="clause_unit..na499" to="word..na493" xml:id="ea493"/>
+	<a as="word" label="word" ref="word..na493" xml:id="a493">
+		<fs>
+			<f name="annotation_value">dāt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na496"/>
+	<edge from="clause_unit..na499" to="word..na496" xml:id="ea496"/>
+	<a as="word" label="word" ref="word..na496" xml:id="a496">
+		<fs>
+			<f name="annotation_value">išāra=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na50"/>
+	<edge from="clause_unit..na53" to="word..na50" xml:id="ea50"/>
+	<a as="word" label="word" ref="word..na50" xml:id="a50">
+		<fs>
+			<f name="annotation_value">dāšt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na504"/>
+	<edge from="clause_unit..na516" to="word..na504" xml:id="ea504"/>
+	<a as="word" label="word" ref="word..na504" xml:id="a504">
+		<fs>
+			<f name="annotation_value">bi</f>
+		</fs>
+	</a>
+	<node xml:id="word..na507"/>
+	<edge from="clause_unit..na516" to="word..na507" xml:id="ea507"/>
+	<a as="word" label="word" ref="word..na507" xml:id="a507">
+		<fs>
+			<f name="annotation_value">kō-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na510"/>
+	<edge from="clause_unit..na516" to="word..na510" xml:id="ea510"/>
+	<a as="word" label="word" ref="word..na510" xml:id="a510">
+		<fs>
+			<f name="annotation_value">tā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na513"/>
+	<edge from="clause_unit..na516" to="word..na513" xml:id="ea513"/>
+	<a as="word" label="word" ref="word..na513" xml:id="a513">
+		<fs>
+			<f name="annotation_value">šut</f>
+		</fs>
+	</a>
+	<node xml:id="word..na521"/>
+	<edge from="clause_unit..na530" to="word..na521" xml:id="ea521"/>
+	<a as="word" label="word" ref="word..na521" xml:id="a521">
+		<fs>
+			<f name="annotation_value">ōdā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na524"/>
+	<edge from="clause_unit..na530" to="word..na524" xml:id="ea524"/>
+	<a as="word" label="word" ref="word..na524" xml:id="a524">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na527"/>
+	<edge from="clause_unit..na530" to="word..na527" xml:id="ea527"/>
+	<a as="word" label="word" ref="word..na527" xml:id="a527">
+		<fs>
+			<f name="annotation_value">šut</f>
+		</fs>
+	</a>
+	<node xml:id="word..na535"/>
+	<edge from="clause_unit..na556" to="word..na535" xml:id="ea535"/>
+	<a as="word" label="word" ref="word..na535" xml:id="a535">
+		<fs>
+			<f name="annotation_value">ta</f>
+		</fs>
+	</a>
+	<node xml:id="word..na538"/>
+	<edge from="clause_unit..na556" to="word..na538" xml:id="ea538"/>
+	<a as="word" label="word" ref="word..na538" xml:id="a538">
+		<fs>
+			<f name="annotation_value">uhō…</f>
+		</fs>
+	</a>
+	<node xml:id="word..na541"/>
+	<edge from="clause_unit..na556" to="word..na541" xml:id="ea541"/>
+	<a as="word" label="word" ref="word..na541" xml:id="a541">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na544"/>
+	<edge from="clause_unit..na556" to="word..na544" xml:id="ea544"/>
+	<a as="word" label="word" ref="word..na544" xml:id="a544">
+		<fs>
+			<f name="annotation_value">aždiyā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na547"/>
+	<edge from="clause_unit..na556" to="word..na547" xml:id="ea547"/>
+	<a as="word" label="word" ref="word..na547" xml:id="a547">
+		<fs>
+			<f name="annotation_value">diga</f>
+		</fs>
+	</a>
+	<node xml:id="word..na550"/>
+	<edge from="clause_unit..na556" to="word..na550" xml:id="ea550"/>
+	<a as="word" label="word" ref="word..na550" xml:id="a550">
+		<fs>
+			<f name="annotation_value">mās-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na553"/>
+	<edge from="clause_unit..na556" to="word..na553" xml:id="ea553"/>
+	<a as="word" label="word" ref="word..na553" xml:id="a553">
+		<fs>
+			<f name="annotation_value">dār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na561"/>
+	<edge from="clause_unit..na585" to="word..na561" xml:id="ea561"/>
+	<a as="word" label="word" ref="word..na561" xml:id="a561">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na564"/>
+	<edge from="clause_unit..na585" to="word..na564" xml:id="ea564"/>
+	<a as="word" label="word" ref="word..na564" xml:id="a564">
+		<fs>
+			<f name="annotation_value">mās=ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na567"/>
+	<edge from="clause_unit..na585" to="word..na567" xml:id="ea567"/>
+	<a as="word" label="word" ref="word..na567" xml:id="a567">
+		<fs>
+			<f name="annotation_value">ša=m-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na570"/>
+	<edge from="clause_unit..na585" to="word..na570" xml:id="ea570"/>
+	<a as="word" label="word" ref="word..na570" xml:id="a570">
+		<fs>
+			<f name="annotation_value">kōh-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na573"/>
+	<edge from="clause_unit..na585" to="word..na573" xml:id="ea573"/>
+	<a as="word" label="word" ref="word..na573" xml:id="a573">
+		<fs>
+			<f name="annotation_value">pāčin</f>
+		</fs>
+	</a>
+	<node xml:id="word..na576"/>
+	<edge from="clause_unit..na585" to="word..na576" xml:id="ea576"/>
+	<a as="word" label="word" ref="word..na576" xml:id="a576">
+		<fs>
+			<f name="annotation_value">na-(w)ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na579"/>
+	<edge from="clause_unit..na585" to="word..na579" xml:id="ea579"/>
+	<a as="word" label="word" ref="word..na579" xml:id="a579">
+		<fs>
+			<f name="annotation_value">mazan</f>
+		</fs>
+	</a>
+	<node xml:id="word..na58"/>
+	<edge from="clause_unit..na73" to="word..na58" xml:id="ea58"/>
+	<a as="word" label="word" ref="word..na58" xml:id="a58">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na582"/>
+	<edge from="clause_unit..na585" to="word..na582" xml:id="ea582"/>
+	<a as="word" label="word" ref="word..na582" xml:id="a582">
+		<fs>
+			<f name="annotation_value">šāx</f>
+		</fs>
+	</a>
+	<node xml:id="word..na590"/>
+	<edge from="clause_unit..na599" to="word..na590" xml:id="ea590"/>
+	<a as="word" label="word" ref="word..na590" xml:id="a590">
+		<fs>
+			<f name="annotation_value">ša=m-ēš-ān</f>
+		</fs>
+	</a>
+	<node xml:id="word..na593"/>
+	<edge from="clause_unit..na599" to="word..na593" xml:id="ea593"/>
+	<a as="word" label="word" ref="word..na593" xml:id="a593">
+		<fs>
+			<f name="annotation_value">šikār</f>
+		</fs>
+	</a>
+	<node xml:id="word..na596"/>
+	<edge from="clause_unit..na599" to="word..na596" xml:id="ea596"/>
+	<a as="word" label="word" ref="word..na596" xml:id="a596">
+		<fs>
+			<f name="annotation_value">kurt-a=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na604"/>
+	<edge from="clause_unit..na622" to="word..na604" xml:id="ea604"/>
+	<a as="word" label="word" ref="word..na604" xml:id="a604">
+		<fs>
+			<f name="annotation_value">am-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na607"/>
+	<edge from="clause_unit..na622" to="word..na607" xml:id="ea607"/>
+	<a as="word" label="word" ref="word..na607" xml:id="a607">
+		<fs>
+			<f name="annotation_value">šāx=ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na61"/>
+	<edge from="clause_unit..na73" to="word..na61" xml:id="ea61"/>
+	<a as="word" label="word" ref="word..na61" xml:id="a61">
+		<fs>
+			<f name="annotation_value">harčī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na610"/>
+	<edge from="clause_unit..na622" to="word..na610" xml:id="ea610"/>
+	<a as="word" label="word" ref="word..na610" xml:id="a610">
+		<fs>
+			<f name="annotation_value">ēš-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na613"/>
+	<edge from="clause_unit..na622" to="word..na613" xml:id="ea613"/>
+	<a as="word" label="word" ref="word..na613" xml:id="a613">
+		<fs>
+			<f name="annotation_value">guṭṭ-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na616"/>
+	<edge from="clause_unit..na622" to="word..na616" xml:id="ea616"/>
+	<a as="word" label="word" ref="word..na616" xml:id="a616">
+		<fs>
+			<f name="annotation_value">gīr</f>
+		</fs>
+	</a>
+	<node xml:id="word..na619"/>
+	<edge from="clause_unit..na622" to="word..na619" xml:id="ea619"/>
+	<a as="word" label="word" ref="word..na619" xml:id="a619">
+		<fs>
+			<f name="annotation_value">kurt-ag=ant=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na627"/>
+	<edge from="clause_unit..na633" to="word..na627" xml:id="ea627"/>
+	<a as="word" label="word" ref="word..na627" xml:id="a627">
+		<fs>
+			<f name="annotation_value">napas</f>
+		</fs>
+	</a>
+	<node xml:id="word..na630"/>
+	<edge from="clause_unit..na633" to="word..na630" xml:id="ea630"/>
+	<a as="word" label="word" ref="word..na630" xml:id="a630">
+		<fs>
+			<f name="annotation_value">tank=int</f>
+		</fs>
+	</a>
+	<node xml:id="word..na638"/>
+	<edge from="clause_unit..na644" to="word..na638" xml:id="ea638"/>
+	<a as="word" label="word" ref="word..na638" xml:id="a638">
+		<fs>
+			<f name="annotation_value">āt-a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na64"/>
+	<edge from="clause_unit..na73" to="word..na64" xml:id="ea64"/>
+	<a as="word" label="word" ref="word..na64" xml:id="a64">
+		<fs>
+			<f name="annotation_value">am-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na641"/>
+	<edge from="clause_unit..na644" to="word..na641" xml:id="ea641"/>
+	<a as="word" label="word" ref="word..na641" xml:id="a641">
+		<fs>
+			<f name="annotation_value">idā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na649"/>
+	<edge from="clause_unit..na661" to="word..na649" xml:id="ea649"/>
+	<a as="word" label="word" ref="word..na649" xml:id="a649">
+		<fs>
+			<f name="annotation_value">bi</f>
+		</fs>
+	</a>
+	<node xml:id="word..na652"/>
+	<edge from="clause_unit..na661" to="word..na652" xml:id="ea652"/>
+	<a as="word" label="word" ref="word..na652" xml:id="a652">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na655"/>
+	<edge from="clause_unit..na661" to="word..na655" xml:id="ea655"/>
+	<a as="word" label="word" ref="word..na655" xml:id="a655">
+		<fs>
+			<f name="annotation_value">arz</f>
+		</fs>
+	</a>
+	<node xml:id="word..na658"/>
+	<edge from="clause_unit..na661" to="word..na658" xml:id="ea658"/>
+	<a as="word" label="word" ref="word..na658" xml:id="a658">
+		<fs>
+			<f name="annotation_value">kurt-a</f>
+		</fs>
+	</a>
+	<node xml:id="word..na666"/>
+	<edge from="clause_unit..na672" to="word..na666" xml:id="ea666"/>
+	<a as="word" label="word" ref="word..na666" xml:id="a666">
+		<fs>
+			<f name="annotation_value">išāra</f>
+		</fs>
+	</a>
+	<node xml:id="word..na669"/>
+	<edge from="clause_unit..na672" to="word..na669" xml:id="ea669"/>
+	<a as="word" label="word" ref="word..na669" xml:id="a669">
+		<fs>
+			<f name="annotation_value">kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na67"/>
+	<edge from="clause_unit..na73" to="word..na67" xml:id="ea67"/>
+	<a as="word" label="word" ref="word..na67" xml:id="a67">
+		<fs>
+			<f name="annotation_value">tilīpun-ān-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na677"/>
+	<edge from="clause_unit..na692" to="word..na677" xml:id="ea677"/>
+	<a as="word" label="word" ref="word..na677" xml:id="a677">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na680"/>
+	<edge from="clause_unit..na692" to="word..na680" xml:id="ea680"/>
+	<a as="word" label="word" ref="word..na680" xml:id="a680">
+		<fs>
+			<f name="annotation_value">šāx-ān-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na683"/>
+	<edge from="clause_unit..na692" to="word..na683" xml:id="ea683"/>
+	<a as="word" label="word" ref="word..na683" xml:id="a683">
+		<fs>
+			<f name="annotation_value">pāčin-ē-ān-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na686"/>
+	<edge from="clause_unit..na692" to="word..na686" xml:id="ea686"/>
+	<a as="word" label="word" ref="word..na686" xml:id="a686">
+		<fs>
+			<f name="annotation_value">arra</f>
+		</fs>
+	</a>
+	<node xml:id="word..na689"/>
+	<edge from="clause_unit..na692" to="word..na689" xml:id="ea689"/>
+	<a as="word" label="word" ref="word..na689" xml:id="a689">
+		<fs>
+			<f name="annotation_value">kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na697"/>
+	<edge from="clause_unit..na706" to="word..na697" xml:id="ea697"/>
+	<a as="word" label="word" ref="word..na697" xml:id="a697">
+		<fs>
+			<f name="annotation_value">ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na70"/>
+	<edge from="clause_unit..na73" to="word..na70" xml:id="ea70"/>
+	<a as="word" label="word" ref="word..na70" xml:id="a70">
+		<fs>
+			<f name="annotation_value">sīm=at-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na700"/>
+	<edge from="clause_unit..na706" to="word..na700" xml:id="ea700"/>
+	<a as="word" label="word" ref="word..na700" xml:id="a700">
+		<fs>
+			<f name="annotation_value">alās</f>
+		</fs>
+	</a>
+	<node xml:id="word..na703"/>
+	<edge from="clause_unit..na706" to="word..na703" xml:id="ea703"/>
+	<a as="word" label="word" ref="word..na703" xml:id="a703">
+		<fs>
+			<f name="annotation_value">ūt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na711"/>
+	<edge from="clause_unit..na717" to="word..na711" xml:id="ea711"/>
+	<a as="word" label="word" ref="word..na711" xml:id="a711">
+		<fs>
+			<f name="annotation_value">āzāt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na714"/>
+	<edge from="clause_unit..na717" to="word..na714" xml:id="ea714"/>
+	<a as="word" label="word" ref="word..na714" xml:id="a714">
+		<fs>
+			<f name="annotation_value">būt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na722"/>
+	<edge from="clause_unit..na737" to="word..na722" xml:id="ea722"/>
+	<a as="word" label="word" ref="word..na722" xml:id="a722">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na725"/>
+	<edge from="clause_unit..na737" to="word..na725" xml:id="ea725"/>
+	<a as="word" label="word" ref="word..na725" xml:id="a725">
+		<fs>
+			<f name="annotation_value">aždiyā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na728"/>
+	<edge from="clause_unit..na737" to="word..na728" xml:id="ea728"/>
+	<a as="word" label="word" ref="word..na728" xml:id="a728">
+		<fs>
+			<f name="annotation_value">diga</f>
+		</fs>
+	</a>
+	<node xml:id="word..na731"/>
+	<edge from="clause_unit..na737" to="word..na731" xml:id="ea731"/>
+	<a as="word" label="word" ref="word..na731" xml:id="a731">
+		<fs>
+			<f name="annotation_value">ǰā-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na734"/>
+	<edge from="clause_unit..na737" to="word..na734" xml:id="ea734"/>
+	<a as="word" label="word" ref="word..na734" xml:id="a734">
+		<fs>
+			<f name="annotation_value">šut=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na742"/>
+	<edge from="clause_unit..na757" to="word..na742" xml:id="ea742"/>
+	<a as="word" label="word" ref="word..na742" xml:id="a742">
+		<fs>
+			<f name="annotation_value">ēš-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na745"/>
+	<edge from="clause_unit..na757" to="word..na745" xml:id="ea745"/>
+	<a as="word" label="word" ref="word..na745" xml:id="a745">
+		<fs>
+			<f name="annotation_value">mazan-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na748"/>
+	<edge from="clause_unit..na757" to="word..na748" xml:id="ea748"/>
+	<a as="word" label="word" ref="word..na748" xml:id="a748">
+		<fs>
+			<f name="annotation_value">xalāit-(t)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na751"/>
+	<edge from="clause_unit..na757" to="word..na751" xml:id="ea751"/>
+	<a as="word" label="word" ref="word..na751" xml:id="a751">
+		<fs>
+			<f name="annotation_value">dāt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na754"/>
+	<edge from="clause_unit..na757" to="word..na754" xml:id="ea754"/>
+	<a as="word" label="word" ref="word..na754" xml:id="a754">
+		<fs>
+			<f name="annotation_value">ǰawāir</f>
+		</fs>
+	</a>
+	<node xml:id="word..na762"/>
+	<edge from="clause_unit..na777" to="word..na762" xml:id="ea762"/>
+	<a as="word" label="word" ref="word..na762" xml:id="a762">
+		<fs>
+			<f name="annotation_value">guṛā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na765"/>
+	<edge from="clause_unit..na777" to="word..na765" xml:id="ea765"/>
+	<a as="word" label="word" ref="word..na765" xml:id="a765">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na768"/>
+	<edge from="clause_unit..na777" to="word..na768" xml:id="ea768"/>
+	<a as="word" label="word" ref="word..na768" xml:id="a768">
+		<fs>
+			<f name="annotation_value">ṭukkur-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na771"/>
+	<edge from="clause_unit..na777" to="word..na771" xml:id="ea771"/>
+	<a as="word" label="word" ref="word..na771" xml:id="a771">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na774"/>
+	<edge from="clause_unit..na777" to="word..na774" xml:id="ea774"/>
+	<a as="word" label="word" ref="word..na774" xml:id="a774">
+		<fs>
+			<f name="annotation_value">šut</f>
+		</fs>
+	</a>
+	<node xml:id="word..na78"/>
+	<edge from="clause_unit..na87" to="word..na78" xml:id="ea78"/>
+	<a as="word" label="word" ref="word..na78" xml:id="a78">
+		<fs>
+			<f name="annotation_value">bi</f>
+		</fs>
+	</a>
+	<node xml:id="word..na782"/>
+	<edge from="clause_unit..na794" to="word..na782" xml:id="ea782"/>
+	<a as="word" label="word" ref="word..na782" xml:id="a782">
+		<fs>
+			<f name="annotation_value">padā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na785"/>
+	<edge from="clause_unit..na794" to="word..na785" xml:id="ea785"/>
+	<a as="word" label="word" ref="word..na785" xml:id="a785">
+		<fs>
+			<f name="annotation_value">ēš-ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na788"/>
+	<edge from="clause_unit..na794" to="word..na788" xml:id="ea788"/>
+	<a as="word" label="word" ref="word..na788" xml:id="a788">
+		<fs>
+			<f name="annotation_value">išāra-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na791"/>
+	<edge from="clause_unit..na794" to="word..na791" xml:id="ea791"/>
+	<a as="word" label="word" ref="word..na791" xml:id="a791">
+		<fs>
+			<f name="annotation_value">ku</f>
+		</fs>
+	</a>
+	<node xml:id="word..na799"/>
+	<edge from="clause_unit..na802" to="word..na799" xml:id="ea799"/>
+	<a as="word" label="word" ref="word..na799" xml:id="a799">
+		<fs>
+			<f name="annotation_value">ōštāt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na807"/>
+	<edge from="clause_unit..na816" to="word..na807" xml:id="ea807"/>
+	<a as="word" label="word" ref="word..na807" xml:id="a807">
+		<fs>
+			<f name="annotation_value">am-inkas-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="word..na81"/>
+	<edge from="clause_unit..na87" to="word..na81" xml:id="ea81"/>
+	<a as="word" label="word" ref="word..na81" xml:id="a81">
+		<fs>
+			<f name="annotation_value">am-ēš-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na810"/>
+	<edge from="clause_unit..na816" to="word..na810" xml:id="ea810"/>
+	<a as="word" label="word" ref="word..na810" xml:id="a810">
+		<fs>
+			<f name="annotation_value">tōm-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na813"/>
+	<edge from="clause_unit..na816" to="word..na813" xml:id="ea813"/>
+	<a as="word" label="word" ref="word..na813" xml:id="a813">
+		<fs>
+			<f name="annotation_value">zurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na821"/>
+	<edge from="clause_unit..na857" to="word..na821" xml:id="ea821"/>
+	<a as="word" label="word" ref="word..na821" xml:id="a821">
+		<fs>
+			<f name="annotation_value">ša</f>
+		</fs>
+	</a>
+	<node xml:id="word..na824"/>
+	<edge from="clause_unit..na857" to="word..na824" xml:id="ea824"/>
+	<a as="word" label="word" ref="word..na824" xml:id="a824">
+		<fs>
+			<f name="annotation_value">wat-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na827"/>
+	<edge from="clause_unit..na857" to="word..na827" xml:id="ea827"/>
+	<a as="word" label="word" ref="word..na827" xml:id="a827">
+		<fs>
+			<f name="annotation_value">dap-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na830"/>
+	<edge from="clause_unit..na857" to="word..na830" xml:id="ea830"/>
+	<a as="word" label="word" ref="word..na830" xml:id="a830">
+		<fs>
+			<f name="annotation_value">tā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na833"/>
+	<edge from="clause_unit..na857" to="word..na833" xml:id="ea833"/>
+	<a as="word" label="word" ref="word..na833" xml:id="a833">
+		<fs>
+			<f name="annotation_value">prēnt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na836"/>
+	<edge from="clause_unit..na857" to="word..na836" xml:id="ea836"/>
+	<a as="word" label="word" ref="word..na836" xml:id="a836">
+		<fs>
+			<f name="annotation_value">bi</f>
+		</fs>
+	</a>
+	<node xml:id="word..na839"/>
+	<edge from="clause_unit..na857" to="word..na839" xml:id="ea839"/>
+	<a as="word" label="word" ref="word..na839" xml:id="a839">
+		<fs>
+			<f name="annotation_value">am-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na84"/>
+	<edge from="clause_unit..na87" to="word..na84" xml:id="ea84"/>
+	<a as="word" label="word" ref="word..na84" xml:id="a84">
+		<fs>
+			<f name="annotation_value">wasl=at-ant</f>
+		</fs>
+	</a>
+	<node xml:id="word..na842"/>
+	<edge from="clause_unit..na857" to="word..na842" xml:id="ea842"/>
+	<a as="word" label="word" ref="word..na842" xml:id="a842">
+		<fs>
+			<f name="annotation_value">ǰawāir-ān-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na845"/>
+	<edge from="clause_unit..na857" to="word..na845" xml:id="ea845"/>
+	<a as="word" label="word" ref="word..na845" xml:id="a845">
+		<fs>
+			<f name="annotation_value">tā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na848"/>
+	<edge from="clause_unit..na857" to="word..na848" xml:id="ea848"/>
+	<a as="word" label="word" ref="word..na848" xml:id="a848">
+		<fs>
+			<f name="annotation_value">ēš-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na851"/>
+	<edge from="clause_unit..na857" to="word..na851" xml:id="ea851"/>
+	<a as="word" label="word" ref="word..na851" xml:id="a851">
+		<fs>
+			<f name="annotation_value">tūrag-ay</f>
+		</fs>
+	</a>
+	<node xml:id="word..na854"/>
+	<edge from="clause_unit..na857" to="word..na854" xml:id="ea854"/>
+	<a as="word" label="word" ref="word..na854" xml:id="a854">
+		<fs>
+			<f name="annotation_value">tā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na862"/>
+	<edge from="clause_unit..na868" to="word..na862" xml:id="ea862"/>
+	<a as="word" label="word" ref="word..na862" xml:id="a862">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na865"/>
+	<edge from="clause_unit..na868" to="word..na865" xml:id="ea865"/>
+	<a as="word" label="word" ref="word..na865" xml:id="a865">
+		<fs>
+			<f name="annotation_value">āt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na873"/>
+	<edge from="clause_unit..na879" to="word..na873" xml:id="ea873"/>
+	<a as="word" label="word" ref="word..na873" xml:id="a873">
+		<fs>
+			<f name="annotation_value">bādšā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na876"/>
+	<edge from="clause_unit..na879" to="word..na876" xml:id="ea876"/>
+	<a as="word" label="word" ref="word..na876" xml:id="a876">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="word..na884"/>
+	<edge from="clause_unit..na896" to="word..na884" xml:id="ea884"/>
+	<a as="word" label="word" ref="word..na884" xml:id="a884">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na887"/>
+	<edge from="clause_unit..na896" to="word..na887" xml:id="ea887"/>
+	<a as="word" label="word" ref="word..na887" xml:id="a887">
+		<fs>
+			<f name="annotation_value">čē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na890"/>
+	<edge from="clause_unit..na896" to="word..na890" xml:id="ea890"/>
+	<a as="word" label="word" ref="word..na890" xml:id="a890">
+		<fs>
+			<f name="annotation_value">arz-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na893"/>
+	<edge from="clause_unit..na896" to="word..na893" xml:id="ea893"/>
+	<a as="word" label="word" ref="word..na893" xml:id="a893">
+		<fs>
+			<f name="annotation_value">dāšt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na9"/>
+	<edge from="clause_unit..na18" to="word..na9" xml:id="ea9"/>
+	<a as="word" label="word" ref="word..na9" xml:id="a9">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na901"/>
+	<edge from="clause_unit..na904" to="word..na901" xml:id="ea901"/>
+	<a as="word" label="word" ref="word..na901" xml:id="a901">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na909"/>
+	<edge from="clause_unit..na936" to="word..na909" xml:id="ea909"/>
+	<a as="word" label="word" ref="word..na909" xml:id="a909">
+		<fs>
+			<f name="annotation_value">b-(y)ā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na912"/>
+	<edge from="clause_unit..na936" to="word..na912" xml:id="ea912"/>
+	<a as="word" label="word" ref="word..na912" xml:id="a912">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na915"/>
+	<edge from="clause_unit..na936" to="word..na915" xml:id="ea915"/>
+	<a as="word" label="word" ref="word..na915" xml:id="a915">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na918"/>
+	<edge from="clause_unit..na936" to="word..na918" xml:id="ea918"/>
+	<a as="word" label="word" ref="word..na918" xml:id="a918">
+		<fs>
+			<f name="annotation_value">rang</f>
+		</fs>
+	</a>
+	<node xml:id="word..na92"/>
+	<edge from="clause_unit..na104" to="word..na92" xml:id="ea92"/>
+	<a as="word" label="word" ref="word..na92" xml:id="a92">
+		<fs>
+			<f name="annotation_value">harka</f>
+		</fs>
+	</a>
+	<node xml:id="word..na921"/>
+	<edge from="clause_unit..na936" to="word..na921" xml:id="ea921"/>
+	<a as="word" label="word" ref="word..na921" xml:id="a921">
+		<fs>
+			<f name="annotation_value">ēš-ī</f>
+		</fs>
+	</a>
+	<node xml:id="word..na924"/>
+	<edge from="clause_unit..na936" to="word..na924" xml:id="ea924"/>
+	<a as="word" label="word" ref="word..na924" xml:id="a924">
+		<fs>
+			<f name="annotation_value">mās</f>
+		</fs>
+	</a>
+	<node xml:id="word..na927"/>
+	<edge from="clause_unit..na936" to="word..na927" xml:id="ea927"/>
+	<a as="word" label="word" ref="word..na927" xml:id="a927">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na930"/>
+	<edge from="clause_unit..na936" to="word..na930" xml:id="ea930"/>
+	<a as="word" label="word" ref="word..na930" xml:id="a930">
+		<fs>
+			<f name="annotation_value">rang</f>
+		</fs>
+	</a>
+	<node xml:id="word..na933"/>
+	<edge from="clause_unit..na936" to="word..na933" xml:id="ea933"/>
+	<a as="word" label="word" ref="word..na933" xml:id="a933">
+		<fs>
+			<f name="annotation_value">guṭṭō=at=ō</f>
+		</fs>
+	</a>
+	<node xml:id="word..na941"/>
+	<edge from="clause_unit..na944" to="word..na941" xml:id="ea941"/>
+	<a as="word" label="word" ref="word..na941" xml:id="a941">
+		<fs>
+			<f name="annotation_value">āt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na949"/>
+	<edge from="clause_unit..na958" to="word..na949" xml:id="ea949"/>
+	<a as="word" label="word" ref="word..na949" xml:id="a949">
+		<fs>
+			<f name="annotation_value">man</f>
+		</fs>
+	</a>
+	<node xml:id="word..na95"/>
+	<edge from="clause_unit..na104" to="word..na95" xml:id="ea95"/>
+	<a as="word" label="word" ref="word..na95" xml:id="a95">
+		<fs>
+			<f name="annotation_value">ki</f>
+		</fs>
+	</a>
+	<node xml:id="word..na952"/>
+	<edge from="clause_unit..na958" to="word..na952" xml:id="ea952"/>
+	<a as="word" label="word" ref="word..na952" xml:id="a952">
+		<fs>
+			<f name="annotation_value">āzāt</f>
+		</fs>
+	</a>
+	<node xml:id="word..na955"/>
+	<edge from="clause_unit..na958" to="word..na955" xml:id="ea955"/>
+	<a as="word" label="word" ref="word..na955" xml:id="a955">
+		<fs>
+			<f name="annotation_value">kurt-un=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na963"/>
+	<edge from="clause_unit..na978" to="word..na963" xml:id="ea963"/>
+	<a as="word" label="word" ref="word..na963" xml:id="a963">
+		<fs>
+			<f name="annotation_value">guṛā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na966"/>
+	<edge from="clause_unit..na978" to="word..na966" xml:id="ea966"/>
+	<a as="word" label="word" ref="word..na966" xml:id="a966">
+		<fs>
+			<f name="annotation_value">mnā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na969"/>
+	<edge from="clause_unit..na978" to="word..na969" xml:id="ea969"/>
+	<a as="word" label="word" ref="word..na969" xml:id="a969">
+		<fs>
+			<f name="annotation_value">inka</f>
+		</fs>
+	</a>
+	<node xml:id="word..na972"/>
+	<edge from="clause_unit..na978" to="word..na972" xml:id="ea972"/>
+	<a as="word" label="word" ref="word..na972" xml:id="a972">
+		<fs>
+			<f name="annotation_value">ǰawāir</f>
+		</fs>
+	</a>
+	<node xml:id="word..na975"/>
+	<edge from="clause_unit..na978" to="word..na975" xml:id="ea975"/>
+	<a as="word" label="word" ref="word..na975" xml:id="a975">
+		<fs>
+			<f name="annotation_value">dāt=u</f>
+		</fs>
+	</a>
+	<node xml:id="word..na98"/>
+	<edge from="clause_unit..na104" to="word..na98" xml:id="ea98"/>
+	<a as="word" label="word" ref="word..na98" xml:id="a98">
+		<fs>
+			<f name="annotation_value">arz-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na983"/>
+	<edge from="clause_unit..na1001" to="word..na983" xml:id="ea983"/>
+	<a as="word" label="word" ref="word..na983" xml:id="a983">
+		<fs>
+			<f name="annotation_value">am-ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na986"/>
+	<edge from="clause_unit..na1001" to="word..na986" xml:id="ea986"/>
+	<a as="word" label="word" ref="word..na986" xml:id="a986">
+		<fs>
+			<f name="annotation_value">tōm-ā=um</f>
+		</fs>
+	</a>
+	<node xml:id="word..na989"/>
+	<edge from="clause_unit..na1001" to="word..na989" xml:id="ea989"/>
+	<a as="word" label="word" ref="word..na989" xml:id="a989">
+		<fs>
+			<f name="annotation_value">am-ēš-ā=um</f>
+		</fs>
+	</a>
+	<node xml:id="word..na992"/>
+	<edge from="clause_unit..na1001" to="word..na992" xml:id="ea992"/>
+	<a as="word" label="word" ref="word..na992" xml:id="a992">
+		<fs>
+			<f name="annotation_value">mnā</f>
+		</fs>
+	</a>
+	<node xml:id="word..na995"/>
+	<edge from="clause_unit..na1001" to="word..na995" xml:id="ea995"/>
+	<a as="word" label="word" ref="word..na995" xml:id="a995">
+		<fs>
+			<f name="annotation_value">ē</f>
+		</fs>
+	</a>
+	<node xml:id="word..na998"/>
+	<edge from="clause_unit..na1001" to="word..na998" xml:id="ea998"/>
+	<a as="word" label="word" ref="word..na998" xml:id="a998">
+		<fs>
+			<f name="annotation_value">dā</f>
+		</fs>
+	</a>
 </graph>

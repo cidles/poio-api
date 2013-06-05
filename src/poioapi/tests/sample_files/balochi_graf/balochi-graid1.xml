@@ -1,243 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="word"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="graid1"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="graid1/n100"/>
-  <edge from="word/n98" to="graid1/n100" xml:id="e100"/>
-  <a as="graid1" label="graid1" ref="graid1/n100" xml:id="100">
-    <fs>
-      <f name="annotation_value">np:p=deti</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n103"/>
-  <edge from="word/n101" to="graid1/n103" xml:id="e103"/>
-  <a as="graid1" label="graid1" ref="graid1/n103" xml:id="103">
-    <fs>
-      <f name="annotation_value">possv:predp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n11"/>
-  <edge from="word/n9" to="graid1/n11" xml:id="e11"/>
-  <a as="graid1" label="graid1" ref="graid1/n11" xml:id="11">
-    <fs>
-      <f name="annotation_value">comp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n111"/>
-  <edge from="word/n109" to="graid1/n111" xml:id="e111"/>
-  <a as="graid1" label="graid1" ref="graid1/n111" xml:id="111">
-    <fs>
-      <f name="annotation_value">pro:p</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n114"/>
-  <edge from="word/n112" to="graid1/n114" xml:id="e114"/>
-  <a as="graid1" label="graid1" ref="graid1/n114" xml:id="114">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n117"/>
-  <edge from="word/n115" to="graid1/n117" xml:id="e117"/>
-  <a as="graid1" label="graid1" ref="graid1/n117" xml:id="117">
-    <fs>
-      <f name="annotation_value">np:other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n120"/>
-  <edge from="word/n118" to="graid1/n120" xml:id="e120"/>
-  <a as="graid1" label="graid1" ref="graid1/n120" xml:id="120">
-    <fs>
-      <f name="annotation_value">v:predp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n128"/>
-  <edge from="word/n126" to="graid1/n128" xml:id="e128"/>
-  <a as="graid1" label="graid1" ref="graid1/n128" xml:id="128">
-    <fs>
-      <f name="annotation_value">np.h:s</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n131"/>
-  <edge from="word/n129" to="graid1/n131" xml:id="e131"/>
-  <a as="graid1" label="graid1" ref="graid1/n131" xml:id="131">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n134"/>
-  <edge from="word/n132" to="graid1/n134" xml:id="e134"/>
-  <a as="graid1" label="graid1" ref="graid1/n134" xml:id="134">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n137"/>
-  <edge from="word/n135" to="graid1/n137" xml:id="e137"/>
-  <a as="graid1" label="graid1" ref="graid1/n137" xml:id="137">
-    <fs>
-      <f name="annotation_value">cop:predp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n14"/>
-  <edge from="word/n12" to="graid1/n14" xml:id="e14"/>
-  <a as="graid1" label="graid1" ref="graid1/n14" xml:id="14">
-    <fs>
-      <f name="annotation_value">deti</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n17"/>
-  <edge from="word/n15" to="graid1/n17" xml:id="e17"/>
-  <a as="graid1" label="graid1" ref="graid1/n17" xml:id="17">
-    <fs>
-      <f name="annotation_value">np.h:s=cop:predp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n25"/>
-  <edge from="word/n23" to="graid1/n25" xml:id="e25"/>
-  <a as="graid1" label="graid1" ref="graid1/n25" xml:id="25">
-    <fs>
-      <f name="annotation_value">det</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n28"/>
-  <edge from="word/n26" to="graid1/n28" xml:id="e28"/>
-  <a as="graid1" label="graid1" ref="graid1/n28" xml:id="28">
-    <fs>
-      <f name="annotation_value">np.h:a</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n31"/>
-  <edge from="word/n29" to="graid1/n31" xml:id="e31"/>
-  <a as="graid1" label="graid1" ref="graid1/n31" xml:id="31">
-    <fs>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n34"/>
-  <edge from="word/n32" to="graid1/n34" xml:id="e34"/>
-  <a as="graid1" label="graid1" ref="graid1/n34" xml:id="34">
-    <fs>
-      <f name="annotation_value">refl:poss</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n37"/>
-  <edge from="word/n35" to="graid1/n37" xml:id="e37"/>
-  <a as="graid1" label="graid1" ref="graid1/n37" xml:id="37">
-    <fs>
-      <f name="annotation_value">np:poss</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n40"/>
-  <edge from="word/n38" to="graid1/n40" xml:id="e40"/>
-  <a as="graid1" label="graid1" ref="graid1/n40" xml:id="40">
-    <fs>
-      <f name="annotation_value">np:l</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n43"/>
-  <edge from="word/n41" to="graid1/n43" xml:id="e43"/>
-  <a as="graid1" label="graid1" ref="graid1/n43" xml:id="43">
-    <fs>
-      <f name="annotation_value">deti</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n46"/>
-  <edge from="word/n44" to="graid1/n46" xml:id="e46"/>
-  <a as="graid1" label="graid1" ref="graid1/n46" xml:id="46">
-    <fs>
-      <f name="annotation_value">np:p</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n49"/>
-  <edge from="word/n47" to="graid1/n49" xml:id="e49"/>
-  <a as="graid1" label="graid1" ref="graid1/n49" xml:id="49">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n52"/>
-  <edge from="word/n50" to="graid1/n52" xml:id="e52"/>
-  <a as="graid1" label="graid1" ref="graid1/n52" xml:id="52">
-    <fs>
-      <f name="annotation_value">possv:predp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n60"/>
-  <edge from="word/n58" to="graid1/n60" xml:id="e60"/>
-  <a as="graid1" label="graid1" ref="graid1/n60" xml:id="60">
-    <fs>
-      <f name="annotation_value">comp</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n63"/>
-  <edge from="word/n61" to="graid1/n63" xml:id="e63"/>
-  <a as="graid1" label="graid1" ref="graid1/n63" xml:id="63">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n66"/>
-  <edge from="word/n64" to="graid1/n66" xml:id="e66"/>
-  <a as="graid1" label="graid1" ref="graid1/n66" xml:id="66">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n69"/>
-  <edge from="word/n67" to="graid1/n69" xml:id="e69"/>
-  <a as="graid1" label="graid1" ref="graid1/n69" xml:id="69">
-    <fs>
-      <f name="annotation_value">np:poss</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n72"/>
-  <edge from="word/n70" to="graid1/n72" xml:id="e72"/>
-  <a as="graid1" label="graid1" ref="graid1/n72" xml:id="72">
-    <fs>
-      <f name="annotation_value">np:s=cop:predp-p</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n80"/>
-  <edge from="word/n78" to="graid1/n80" xml:id="e80"/>
-  <a as="graid1" label="graid1" ref="graid1/n80" xml:id="80">
-    <fs>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n83"/>
-  <edge from="word/n81" to="graid1/n83" xml:id="e83"/>
-  <a as="graid1" label="graid1" ref="graid1/n83" xml:id="83">
-    <fs>
-      <f name="annotation_value">det</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n86"/>
-  <edge from="word/n84" to="graid1/n86" xml:id="e86"/>
-  <a as="graid1" label="graid1" ref="graid1/n86" xml:id="86">
-    <fs>
-      <f name="annotation_value">other=cop:predp-p</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n94"/>
-  <edge from="word/n92" to="graid1/n94" xml:id="e94"/>
-  <a as="graid1" label="graid1" ref="graid1/n94" xml:id="94">
-    <fs>
-      <f name="annotation_value">other:s</f>
-    </fs>
-  </a>
-  <node xml:id="graid1/n97"/>
-  <edge from="word/n95" to="graid1/n97" xml:id="e97"/>
-  <a as="graid1" label="graid1" ref="graid1/n97" xml:id="97">
-    <fs>
-      <f name="annotation_value">other</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="graid1" occurs="33"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="word"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="graid1"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="graid1..na100"/>
+	<edge from="word..na98" to="graid1..na100" xml:id="ea100"/>
+	<a as="graid1" label="graid1" ref="graid1..na100" xml:id="a100">
+		<fs>
+			<f name="annotation_value">np:p=deti</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na103"/>
+	<edge from="word..na101" to="graid1..na103" xml:id="ea103"/>
+	<a as="graid1" label="graid1" ref="graid1..na103" xml:id="a103">
+		<fs>
+			<f name="annotation_value">possv:predp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na11"/>
+	<edge from="word..na9" to="graid1..na11" xml:id="ea11"/>
+	<a as="graid1" label="graid1" ref="graid1..na11" xml:id="a11">
+		<fs>
+			<f name="annotation_value">comp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na111"/>
+	<edge from="word..na109" to="graid1..na111" xml:id="ea111"/>
+	<a as="graid1" label="graid1" ref="graid1..na111" xml:id="a111">
+		<fs>
+			<f name="annotation_value">pro:p</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na114"/>
+	<edge from="word..na112" to="graid1..na114" xml:id="ea114"/>
+	<a as="graid1" label="graid1" ref="graid1..na114" xml:id="a114">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na117"/>
+	<edge from="word..na115" to="graid1..na117" xml:id="ea117"/>
+	<a as="graid1" label="graid1" ref="graid1..na117" xml:id="a117">
+		<fs>
+			<f name="annotation_value">np:other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na120"/>
+	<edge from="word..na118" to="graid1..na120" xml:id="ea120"/>
+	<a as="graid1" label="graid1" ref="graid1..na120" xml:id="a120">
+		<fs>
+			<f name="annotation_value">v:predp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na128"/>
+	<edge from="word..na126" to="graid1..na128" xml:id="ea128"/>
+	<a as="graid1" label="graid1" ref="graid1..na128" xml:id="a128">
+		<fs>
+			<f name="annotation_value">np.h:s</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na131"/>
+	<edge from="word..na129" to="graid1..na131" xml:id="ea131"/>
+	<a as="graid1" label="graid1" ref="graid1..na131" xml:id="a131">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na134"/>
+	<edge from="word..na132" to="graid1..na134" xml:id="ea134"/>
+	<a as="graid1" label="graid1" ref="graid1..na134" xml:id="a134">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na137"/>
+	<edge from="word..na135" to="graid1..na137" xml:id="ea137"/>
+	<a as="graid1" label="graid1" ref="graid1..na137" xml:id="a137">
+		<fs>
+			<f name="annotation_value">cop:predp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na14"/>
+	<edge from="word..na12" to="graid1..na14" xml:id="ea14"/>
+	<a as="graid1" label="graid1" ref="graid1..na14" xml:id="a14">
+		<fs>
+			<f name="annotation_value">deti</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na17"/>
+	<edge from="word..na15" to="graid1..na17" xml:id="ea17"/>
+	<a as="graid1" label="graid1" ref="graid1..na17" xml:id="a17">
+		<fs>
+			<f name="annotation_value">np.h:s=cop:predp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na25"/>
+	<edge from="word..na23" to="graid1..na25" xml:id="ea25"/>
+	<a as="graid1" label="graid1" ref="graid1..na25" xml:id="a25">
+		<fs>
+			<f name="annotation_value">det</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na28"/>
+	<edge from="word..na26" to="graid1..na28" xml:id="ea28"/>
+	<a as="graid1" label="graid1" ref="graid1..na28" xml:id="a28">
+		<fs>
+			<f name="annotation_value">np.h:a</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na31"/>
+	<edge from="word..na29" to="graid1..na31" xml:id="ea31"/>
+	<a as="graid1" label="graid1" ref="graid1..na31" xml:id="a31">
+		<fs>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na34"/>
+	<edge from="word..na32" to="graid1..na34" xml:id="ea34"/>
+	<a as="graid1" label="graid1" ref="graid1..na34" xml:id="a34">
+		<fs>
+			<f name="annotation_value">refl:poss</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na37"/>
+	<edge from="word..na35" to="graid1..na37" xml:id="ea37"/>
+	<a as="graid1" label="graid1" ref="graid1..na37" xml:id="a37">
+		<fs>
+			<f name="annotation_value">np:poss</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na40"/>
+	<edge from="word..na38" to="graid1..na40" xml:id="ea40"/>
+	<a as="graid1" label="graid1" ref="graid1..na40" xml:id="a40">
+		<fs>
+			<f name="annotation_value">np:l</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na43"/>
+	<edge from="word..na41" to="graid1..na43" xml:id="ea43"/>
+	<a as="graid1" label="graid1" ref="graid1..na43" xml:id="a43">
+		<fs>
+			<f name="annotation_value">deti</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na46"/>
+	<edge from="word..na44" to="graid1..na46" xml:id="ea46"/>
+	<a as="graid1" label="graid1" ref="graid1..na46" xml:id="a46">
+		<fs>
+			<f name="annotation_value">np:p</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na49"/>
+	<edge from="word..na47" to="graid1..na49" xml:id="ea49"/>
+	<a as="graid1" label="graid1" ref="graid1..na49" xml:id="a49">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na52"/>
+	<edge from="word..na50" to="graid1..na52" xml:id="ea52"/>
+	<a as="graid1" label="graid1" ref="graid1..na52" xml:id="a52">
+		<fs>
+			<f name="annotation_value">possv:predp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na60"/>
+	<edge from="word..na58" to="graid1..na60" xml:id="ea60"/>
+	<a as="graid1" label="graid1" ref="graid1..na60" xml:id="a60">
+		<fs>
+			<f name="annotation_value">comp</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na63"/>
+	<edge from="word..na61" to="graid1..na63" xml:id="ea63"/>
+	<a as="graid1" label="graid1" ref="graid1..na63" xml:id="a63">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na66"/>
+	<edge from="word..na64" to="graid1..na66" xml:id="ea66"/>
+	<a as="graid1" label="graid1" ref="graid1..na66" xml:id="a66">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na69"/>
+	<edge from="word..na67" to="graid1..na69" xml:id="ea69"/>
+	<a as="graid1" label="graid1" ref="graid1..na69" xml:id="a69">
+		<fs>
+			<f name="annotation_value">np:poss</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na72"/>
+	<edge from="word..na70" to="graid1..na72" xml:id="ea72"/>
+	<a as="graid1" label="graid1" ref="graid1..na72" xml:id="a72">
+		<fs>
+			<f name="annotation_value">np:s=cop:predp-p</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na80"/>
+	<edge from="word..na78" to="graid1..na80" xml:id="ea80"/>
+	<a as="graid1" label="graid1" ref="graid1..na80" xml:id="a80">
+		<fs>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na83"/>
+	<edge from="word..na81" to="graid1..na83" xml:id="ea83"/>
+	<a as="graid1" label="graid1" ref="graid1..na83" xml:id="a83">
+		<fs>
+			<f name="annotation_value">det</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na86"/>
+	<edge from="word..na84" to="graid1..na86" xml:id="ea86"/>
+	<a as="graid1" label="graid1" ref="graid1..na86" xml:id="a86">
+		<fs>
+			<f name="annotation_value">other=cop:predp-p</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na94"/>
+	<edge from="word..na92" to="graid1..na94" xml:id="ea94"/>
+	<a as="graid1" label="graid1" ref="graid1..na94" xml:id="a94">
+		<fs>
+			<f name="annotation_value">other:s</f>
+		</fs>
+	</a>
+	<node xml:id="graid1..na97"/>
+	<edge from="word..na95" to="graid1..na97" xml:id="ea97"/>
+	<a as="graid1" label="graid1" ref="graid1..na97" xml:id="a97">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
 </graph>

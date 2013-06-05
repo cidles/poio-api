@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="clause_unit"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="graid2"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="graid2/n122"/>
-  <edge from="clause_unit/n121" to="graid2/n122" xml:id="e122"/>
-  <a as="graid2" label="graid2" ref="graid2/n122" xml:id="122">
-    <fs>
-      <f name="annotation_value">0.h:a</f>
-    </fs>
-  </a>
-  <node xml:id="graid2/n5"/>
-  <edge from="clause_unit/n4" to="graid2/n5" xml:id="e5"/>
-  <a as="graid2" label="graid2" ref="graid2/n5" xml:id="5">
-    <fs>
-      <f name="annotation_value">nc</f>
-    </fs>
-  </a>
-  <node xml:id="graid2/n88"/>
-  <edge from="clause_unit/n87" to="graid2/n88" xml:id="e88"/>
-  <a as="graid2" label="graid2" ref="graid2/n88" xml:id="88">
-    <fs>
-      <f name="annotation_value">0:s</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="graid2" occurs="3"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="clause_unit"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="graid2"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="graid2..na122"/>
+	<edge from="clause_unit..na121" to="graid2..na122" xml:id="ea122"/>
+	<a as="graid2" label="graid2" ref="graid2..na122" xml:id="a122">
+		<fs>
+			<f name="annotation_value">0.h:a</f>
+		</fs>
+	</a>
+	<node xml:id="graid2..na5"/>
+	<edge from="clause_unit..na4" to="graid2..na5" xml:id="ea5"/>
+	<a as="graid2" label="graid2" ref="graid2..na5" xml:id="a5">
+		<fs>
+			<f name="annotation_value">nc</f>
+		</fs>
+	</a>
+	<node xml:id="graid2..na88"/>
+	<edge from="clause_unit..na87" to="graid2..na88" xml:id="ea88"/>
+	<a as="graid2" label="graid2" ref="graid2..na88" xml:id="a88">
+		<fs>
+			<f name="annotation_value">0:s</f>
+		</fs>
+	</a>
 </graph>

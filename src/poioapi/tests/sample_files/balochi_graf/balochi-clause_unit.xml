@@ -1,789 +1,791 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="utterance"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="clause_unit"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="clause_unit/n1001"/>
-  <edge from="utterance/n1003" to="clause_unit/n1001" xml:id="e1001"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1001" xml:id="1001">
-    <fs>
-      <f name="annotation_value">am-ē	tōm-ā=um	am-ēš-ā=um	mnā	ē	dā</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1021"/>
-  <edge from="utterance/n1023" to="clause_unit/n1021" xml:id="e1021"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1021" xml:id="1021">
-    <fs>
-      <f name="annotation_value">ša	wat-ī	dap-ay	tā=ē	prēnt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1029"/>
-  <edge from="utterance/n1031" to="clause_unit/n1029" xml:id="e1029"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1029" xml:id="1029">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n104"/>
-  <edge from="utterance/n106" to="clause_unit/n104" xml:id="e104"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n104" xml:id="104">
-    <fs>
-      <f name="annotation_value">harka	ki	arz-ē	b-dāšt-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1043"/>
-  <edge from="utterance/n1045" to="clause_unit/n1043" xml:id="e1043"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1043" xml:id="1043">
-    <fs>
-      <f name="annotation_value">ī	dgar=u	ǰawāir=ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1057"/>
-  <edge from="utterance/n1059" to="clause_unit/n1057" xml:id="e1057"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1057" xml:id="1057">
-    <fs>
-      <f name="annotation_value">am-ēš-ā	mašmā	na-zān-an</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1071"/>
-  <edge from="utterance/n1073" to="clause_unit/n1071" xml:id="e1071"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1071" xml:id="1071">
-    <fs>
-      <f name="annotation_value">ē	maššōra	kurt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1079"/>
-  <edge from="utterance/n1081" to="clause_unit/n1079" xml:id="e1079"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1079" xml:id="1079">
-    <fs>
-      <f name="annotation_value">gušt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1096"/>
-  <edge from="utterance/n1098" to="clause_unit/n1096" xml:id="e1096"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1096" xml:id="1096">
-    <fs>
-      <f name="annotation_value">b-(y)ā	ēš-ā	p-kiš-an	mašmā</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1131"/>
-  <edge from="utterance/n1133" to="clause_unit/n1131" xml:id="e1131"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1131" xml:id="1131">
-    <fs>
-      <f name="annotation_value">ēš-ā	ǰwān-ēn	ǰā-(y)ē	bāg-ē	ḍigār-ay	tā	kišt-ant=u		ǰwān-ēn	narm-ēn	ḍigār-ē=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1145"/>
-  <edge from="utterance/n1147" to="clause_unit/n1145" xml:id="e1145"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1145" xml:id="1145">
-    <fs>
-      <f name="annotation_value">wall-ē	sabz	kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1162"/>
-  <edge from="utterance/n1164" to="clause_unit/n1162" xml:id="e1162"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1162" xml:id="1162">
-    <fs>
-      <f name="annotation_value">ēš	činkas	galaw	ku</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1185"/>
-  <edge from="utterance/n1187" to="clause_unit/n1185" xml:id="e1185"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1185" xml:id="1185">
-    <fs>
-      <f name="annotation_value">ša	truss-ā	kass-ē	ē	galaw-ān-ā	na-wārt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1205"/>
-  <edge from="utterance/n1207" to="clause_unit/n1205" xml:id="e1205"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1205" xml:id="1205">
-    <fs>
-      <f name="annotation_value">ki	ša	aždiyā-(y)ay	dap-ay	tā=ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n121"/>
-  <edge from="utterance/n123" to="clause_unit/n121" xml:id="e121"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n121" xml:id="121">
-    <fs>
-      <f name="annotation_value">am-ēširā	ki	takān	dāt-ēn</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1216"/>
-  <edge from="utterance/n1218" to="clause_unit/n1216" xml:id="e1216"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1216" xml:id="1216">
-    <fs>
-      <f name="annotation_value">mār-ay	zār=ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1233"/>
-  <edge from="utterance/n1235" to="clause_unit/n1233" xml:id="e1233"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1233" xml:id="1233">
-    <fs>
-      <f name="annotation_value">ē	činka	tōm	kurt-ant=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1241"/>
-  <edge from="utterance/n1243" to="clause_unit/n1241" xml:id="e1241"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1241" xml:id="1241">
-    <fs>
-      <f name="annotation_value">šut-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1258"/>
-  <edge from="utterance/n1260" to="clause_unit/n1258" xml:id="e1258"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1258" xml:id="1258">
-    <fs>
-      <f name="annotation_value">ṭū-(y)ēn	pālēz-ē	bādšā	kišt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1275"/>
-  <edge from="utterance/n1277" to="clause_unit/n1275" xml:id="e1275"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1275" xml:id="1275">
-    <fs>
-      <f name="annotation_value">yakk	pīramard-ē-rā	sawzwān	ku</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1298"/>
-  <edge from="utterance/n1300" to="clause_unit/n1298" xml:id="e1298"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1298" xml:id="1298">
-    <fs>
-      <f name="annotation_value">ē	laggit	ē	pālēz	bi	galaw-ā=ō</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1312"/>
-  <edge from="utterance/n1314" to="clause_unit/n1312" xml:id="e1312"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1312" xml:id="1312">
-    <fs>
-      <f name="annotation_value">bēxī	galaw	ku</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1329"/>
-  <edge from="utterance/n1331" to="clause_unit/n1329" xml:id="e1329"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1329" xml:id="1329">
-    <fs>
-      <f name="annotation_value">pīramard=am	awal	čē=(w)a	na-ku</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1340"/>
-  <edge from="utterance/n1342" to="clause_unit/n1340" xml:id="e1340"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1340" xml:id="1340">
-    <fs>
-      <f name="annotation_value">tawkal=a	na-kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1351"/>
-  <edge from="utterance/n1353" to="clause_unit/n1351" xml:id="e1351"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1351" xml:id="1351">
-    <fs>
-      <f name="annotation_value">ar-uk-(k)ē	dāšt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1377"/>
-  <edge from="utterance/n1379" to="clause_unit/n1377" xml:id="e1377"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1377" xml:id="1377">
-    <fs>
-      <f name="annotation_value">am-ē	galaw-ān-ā	dēmā 	bi=m-ē	ar-uk-(k)ay	dēmā	kōṭit=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n138"/>
-  <edge from="utterance/n140" to="clause_unit/n138" xml:id="e138"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n138" xml:id="138">
-    <fs>
-      <f name="annotation_value">bādišā	ōdā	sī=(y)a		būt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1385"/>
-  <edge from="utterance/n1387" to="clause_unit/n1385" xml:id="e1385"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1385" xml:id="1385">
-    <fs>
-      <f name="annotation_value">dāt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1402"/>
-  <edge from="utterance/n1404" to="clause_unit/n1402" xml:id="e1402"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1402" xml:id="1402">
-    <fs>
-      <f name="annotation_value">ē	ar=am	pazzōr 	ūt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1419"/>
-  <edge from="utterance/n1421" to="clause_unit/n1419" xml:id="e1419"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1419" xml:id="1419">
-    <fs>
-      <f name="annotation_value">pīramard	šurū	ku	wārtin-ā</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1436"/>
-  <edge from="utterance/n1438" to="clause_unit/n1436" xml:id="e1436"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1436" xml:id="1436">
-    <fs>
-      <f name="annotation_value">ta	ē	či	čīz=ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1450"/>
-  <edge from="utterance/n1452" to="clause_unit/n1450" xml:id="e1450"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1450" xml:id="1450">
-    <fs>
-      <f name="annotation_value">pīramard=am	pazzōr	ūt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1470"/>
-  <edge from="utterance/n1472" to="clause_unit/n1470" xml:id="e1470"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1470" xml:id="1470">
-    <fs>
-      <f name="annotation_value">bādšā	yag	rōč-ē	ki	āt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1478"/>
-  <edge from="utterance/n1480" to="clause_unit/n1478" xml:id="e1478"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1478" xml:id="1478">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1498"/>
-  <edge from="utterance/n1500" to="clause_unit/n1498" xml:id="e1498"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1498" xml:id="1498">
-    <fs>
-      <f name="annotation_value">ki	pīramard	bābā	ē	čē=(w)ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1506"/>
-  <edge from="utterance/n1508" to="clause_unit/n1506" xml:id="e1506"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1506" xml:id="1506">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n152"/>
-  <edge from="utterance/n154" to="clause_unit/n152" xml:id="e152"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n152" xml:id="152">
-    <fs>
-      <f name="annotation_value">yag	rōč-ē	dīst</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1523"/>
-  <edge from="utterance/n1525" to="clause_unit/n1523" xml:id="e1523"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1523" xml:id="1523">
-    <fs>
-      <f name="annotation_value">ē	bēxī	ǰwān-ēn	čīz=ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1534"/>
-  <edge from="utterance/n1536" to="clause_unit/n1534" xml:id="e1534"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1534" xml:id="1534">
-    <fs>
-      <f name="annotation_value">man=um	wārt-a,</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1548"/>
-  <edge from="utterance/n1550" to="clause_unit/n1548" xml:id="e1548"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1548" xml:id="1548">
-    <fs>
-      <f name="annotation_value">ē	ar-ā=um	dāt-a=un=ō</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1559"/>
-  <edge from="utterance/n1561" to="clause_unit/n1559" xml:id="e1559"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1559" xml:id="1559">
-    <fs>
-      <f name="annotation_value">šumā=um	bōr-it.</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1570"/>
-  <edge from="utterance/n1572" to="clause_unit/n1570" xml:id="e1570"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1570" xml:id="1570">
-    <fs>
-      <f name="annotation_value">wazīr	gu</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1587"/>
-  <edge from="utterance/n1589" to="clause_unit/n1587" xml:id="e1587"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1587" xml:id="1587">
-    <fs>
-      <f name="annotation_value">na	dēmā	man=a	war-īn</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1604"/>
-  <edge from="utterance/n1606" to="clause_unit/n1604" xml:id="e1604"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1604" xml:id="1604">
-    <fs>
-      <f name="annotation_value">ta	ay	bādšā	ma-war</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1615"/>
-  <edge from="utterance/n1617" to="clause_unit/n1615" xml:id="e1615"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1615" xml:id="1615">
-    <fs>
-      <f name="annotation_value">wazīr	wārt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1635"/>
-  <edge from="utterance/n1637" to="clause_unit/n1635" xml:id="e1635"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1635" xml:id="1635">
-    <fs>
-      <f name="annotation_value">ta	ē	aǰab-ēn	xušmizzag-ēn	čīz=ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1643"/>
-  <edge from="utterance/n1645" to="clause_unit/n1643" xml:id="e1643"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1643" xml:id="1643">
-    <fs>
-      <f name="annotation_value">wārt-ant=ō</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1654"/>
-  <edge from="utterance/n1656" to="clause_unit/n1654" xml:id="e1654"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1654" xml:id="1654">
-    <fs>
-      <f name="annotation_value">ki	wārt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1665"/>
-  <edge from="utterance/n1667" to="clause_unit/n1665" xml:id="e1665"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1665" xml:id="1665">
-    <fs>
-      <f name="annotation_value">nūn	gušt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1685"/>
-  <edge from="utterance/n1687" to="clause_unit/n1685" xml:id="e1685"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1685" xml:id="1685">
-    <fs>
-      <f name="annotation_value">b-(y)ā	mašmā	p=ēšī	nām=ē	b-ill-an</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n169"/>
-  <edge from="utterance/n171" to="clause_unit/n169" xml:id="e169"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n169" xml:id="169">
-    <fs>
-      <f name="annotation_value">ta	am-ē	aždiyā-(y)ē	āt-a=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1705"/>
-  <edge from="utterance/n1707" to="clause_unit/n1705" xml:id="e1705"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1705" xml:id="1705">
-    <fs>
-      <f name="annotation_value">nām=ay	guṛā	galaw-ā	išt-ant	xarmizza</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1725"/>
-  <edge from="utterance/n1727" to="clause_unit/n1725" xml:id="e1725"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1725" xml:id="1725">
-    <fs>
-      <f name="annotation_value">ki	mizzag-ay	awal	xar	burt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n1739"/>
-  <edge from="utterance/n1741" to="clause_unit/n1739" xml:id="e1739"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n1739" xml:id="1739">
-    <fs>
-      <f name="annotation_value">xarmizza	š=ōdā	mant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n18"/>
-  <edge from="utterance/n20" to="clause_unit/n18" xml:id="e18"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n18" xml:id="18">
-    <fs>
-      <f name="annotation_value">ki	yag	bādišā=(y)ē=at</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n183"/>
-  <edge from="utterance/n185" to="clause_unit/n183" xml:id="e183"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n183" xml:id="183">
-    <fs>
-      <f name="annotation_value">am-ēš-ā	takān=a	dant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n200"/>
-  <edge from="utterance/n202" to="clause_unit/n200" xml:id="e200"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n200" xml:id="200">
-    <fs>
-      <f name="annotation_value">bādšā	dēm	dāt	yakk-ē-rā</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n214"/>
-  <edge from="utterance/n216" to="clause_unit/n214" xml:id="e214"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n214" xml:id="214">
-    <fs>
-      <f name="annotation_value">ki	ē	čī-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n222"/>
-  <edge from="utterance/n224" to="clause_unit/n222" xml:id="e222"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n222" xml:id="222">
-    <fs>
-      <f name="annotation_value">āt-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n230"/>
-  <edge from="utterance/n232" to="clause_unit/n230" xml:id="e230"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n230" xml:id="230">
-    <fs>
-      <f name="annotation_value">gušt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n244"/>
-  <edge from="utterance/n246" to="clause_unit/n244" xml:id="e244"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n244" xml:id="244">
-    <fs>
-      <f name="annotation_value">bādšā	sāib	aždiyā-(y)ē</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n252"/>
-  <edge from="utterance/n254" to="clause_unit/n252" xml:id="e252"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n252" xml:id="252">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n272"/>
-  <edge from="utterance/n274" to="clause_unit/n272" xml:id="e272"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n272" xml:id="272">
-    <fs>
-      <f name="annotation_value">hā…	ē	aždiyā	amr-ē	dār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n283"/>
-  <edge from="utterance/n285" to="clause_unit/n283" xml:id="e283"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n283" xml:id="283">
-    <fs>
-      <f name="annotation_value">arz-ē	dār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n303"/>
-  <edge from="utterance/n305" to="clause_unit/n303" xml:id="e303"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n303" xml:id="303">
-    <fs>
-      <f name="annotation_value">ēš-ī	arz-ā	kay	pa=(m)man	b-(y)ār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n317"/>
-  <edge from="utterance/n319" to="clause_unit/n317" xml:id="e317"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n317" xml:id="317">
-    <fs>
-      <f name="annotation_value">man	ki	na-zān-īn</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n328"/>
-  <edge from="utterance/n330" to="clause_unit/n328" xml:id="e328"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n328" xml:id="328">
-    <fs>
-      <f name="annotation_value">ē	bē-zuwān-ē</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n342"/>
-  <edge from="utterance/n344" to="clause_unit/n342" xml:id="e342"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n342" xml:id="342">
-    <fs>
-      <f name="annotation_value">yakk	naǰǰār-ē	gu</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n353"/>
-  <edge from="utterance/n355" to="clause_unit/n353" xml:id="e353"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n353" xml:id="353">
-    <fs>
-      <f name="annotation_value">man=a	zān-īn</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n361"/>
-  <edge from="utterance/n363" to="clause_unit/n361" xml:id="e361"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n361" xml:id="361">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n372"/>
-  <edge from="utterance/n374" to="clause_unit/n372" xml:id="e372"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n372" xml:id="372">
-    <fs>
-      <f name="annotation_value">ki	zān-ay</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n386"/>
-  <edge from="utterance/n388" to="clause_unit/n386" xml:id="e386"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n386" xml:id="386">
-    <fs>
-      <f name="annotation_value">ēš-ī	arz-ā	āwurt-ay</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n4"/>
-  <edge from="utterance/n6" to="clause_unit/n4" xml:id="e4"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n4" xml:id="4">
-    <fs>
-      <f name="annotation_value">guš-īt:</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n406"/>
-  <edge from="utterance/n408" to="clause_unit/n406" xml:id="e406"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n406" xml:id="406">
-    <fs>
-      <f name="annotation_value">man	trā	inka	xalāit=(t)a	day-īn</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n414"/>
-  <edge from="utterance/n416" to="clause_unit/n414" xml:id="e414"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n414" xml:id="414">
-    <fs>
-      <f name="annotation_value">gu</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n425"/>
-  <edge from="utterance/n427" to="clause_unit/n425" xml:id="e425"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n425" xml:id="425">
-    <fs>
-      <f name="annotation_value">xayli	xub</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n451"/>
-  <edge from="utterance/n453" to="clause_unit/n451" xml:id="e451"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n451" xml:id="451">
-    <fs>
-      <f name="annotation_value">ē	naǰǰār	ki	āt	gō	tēγ=u		arrag-ān</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n468"/>
-  <edge from="utterance/n470" to="clause_unit/n468" xml:id="e468"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n468" xml:id="468">
-    <fs>
-      <f name="annotation_value">ē	aždiyā	wayl	kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n479"/>
-  <edge from="utterance/n481" to="clause_unit/n479" xml:id="e479"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n479" xml:id="479">
-    <fs>
-      <f name="annotation_value">rāda	būt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n499"/>
-  <edge from="utterance/n501" to="clause_unit/n499" xml:id="e499"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n499" xml:id="499">
-    <fs>
-      <f name="annotation_value">aždīyā	naǰǰār-ā	išāra	dāt=u		išāra=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n516"/>
-  <edge from="utterance/n518" to="clause_unit/n516" xml:id="e516"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n516" xml:id="516">
-    <fs>
-      <f name="annotation_value">bi	kō-ay	tā	šut</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n53"/>
-  <edge from="utterance/n55" to="clause_unit/n53" xml:id="e53"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n53" xml:id="53">
-    <fs>
-      <f name="annotation_value">ē	bādišā	bi=m-ē	wat-ī	šār-ay	wasat-(t)ā	yakk	tīr=i	barγ-ē		dāšt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n530"/>
-  <edge from="utterance/n532" to="clause_unit/n530" xml:id="e530"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n530" xml:id="530">
-    <fs>
-      <f name="annotation_value">ōdā	ki	šut</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n556"/>
-  <edge from="utterance/n558" to="clause_unit/n556" xml:id="e556"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n556" xml:id="556">
-    <fs>
-      <f name="annotation_value">ta	uhō…	ē	aždiyā	diga	mās-ē	dār-īt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n585"/>
-  <edge from="utterance/n587" to="clause_unit/n585" xml:id="e585"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n585" xml:id="585">
-    <fs>
-      <f name="annotation_value">ē	mās=ay	ša=m-ē	kōh-ay	pāčin	na-(w)ant	mazan	šāx</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n599"/>
-  <edge from="utterance/n601" to="clause_unit/n599" xml:id="e599"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n599" xml:id="599">
-    <fs>
-      <f name="annotation_value">ša=m-ēš-ān	šikār	kurt-a=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n622"/>
-  <edge from="utterance/n624" to="clause_unit/n622" xml:id="e622"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n622" xml:id="622">
-    <fs>
-      <f name="annotation_value">am-ē	šāx=ay	ēš-ī	guṭṭ-ā	gīr	kurt-ag=ant=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n633"/>
-  <edge from="utterance/n635" to="clause_unit/n633" xml:id="e633"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n633" xml:id="633">
-    <fs>
-      <f name="annotation_value">napas	tank=int</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n644"/>
-  <edge from="utterance/n646" to="clause_unit/n644" xml:id="e644"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n644" xml:id="644">
-    <fs>
-      <f name="annotation_value">āt-a		idā</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n661"/>
-  <edge from="utterance/n663" to="clause_unit/n661" xml:id="e661"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n661" xml:id="661">
-    <fs>
-      <f name="annotation_value">bi	bādšā	arz	kurt-a</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n672"/>
-  <edge from="utterance/n674" to="clause_unit/n672" xml:id="e672"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n672" xml:id="672">
-    <fs>
-      <f name="annotation_value">išāra	kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n692"/>
-  <edge from="utterance/n694" to="clause_unit/n692" xml:id="e692"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n692" xml:id="692">
-    <fs>
-      <f name="annotation_value">ē	šāx-ān-ā	pāčin-ē-ān-ā	arra	kurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n706"/>
-  <edge from="utterance/n708" to="clause_unit/n706" xml:id="e706"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n706" xml:id="706">
-    <fs>
-      <f name="annotation_value">ā	alās	ūt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n717"/>
-  <edge from="utterance/n719" to="clause_unit/n717" xml:id="e717"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n717" xml:id="717">
-    <fs>
-      <f name="annotation_value">āzāt	būt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n73"/>
-  <edge from="utterance/n75" to="clause_unit/n73" xml:id="e73"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n73" xml:id="73">
-    <fs>
-      <f name="annotation_value">ki	harčī	am-ē	tilīpun-ān-ī 	sīm=at-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n737"/>
-  <edge from="utterance/n739" to="clause_unit/n737" xml:id="e737"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n737" xml:id="737">
-    <fs>
-      <f name="annotation_value">ē	aždiyā	diga	ǰā-(y)ē	šut=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n757"/>
-  <edge from="utterance/n759" to="clause_unit/n757" xml:id="e757"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n757" xml:id="757">
-    <fs>
-      <f name="annotation_value">ēš-ā	mazan-ēn	xalāit-(t)ē	dāt	ǰawāir</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n777"/>
-  <edge from="utterance/n779" to="clause_unit/n777" xml:id="e777"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n777" xml:id="777">
-    <fs>
-      <f name="annotation_value">guṛā	ē	ṭukkur-ē	ki	šut</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n794"/>
-  <edge from="utterance/n796" to="clause_unit/n794" xml:id="e794"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n794" xml:id="794">
-    <fs>
-      <f name="annotation_value">padā	ēš-ā	išāra-(y)ē	ku</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n802"/>
-  <edge from="utterance/n804" to="clause_unit/n802" xml:id="e802"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n802" xml:id="802">
-    <fs>
-      <f name="annotation_value">ōštāt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n816"/>
-  <edge from="utterance/n818" to="clause_unit/n816" xml:id="e816"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n816" xml:id="816">
-    <fs>
-      <f name="annotation_value">am-inkas-ēn	tōm-ē	zurt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n857"/>
-  <edge from="utterance/n859" to="clause_unit/n857" xml:id="e857"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n857" xml:id="857">
-    <fs>
-      <f name="annotation_value">ša	wat-ī	dap-ay	tā	prēnt	bi	am-ē	ǰawāir-ān-ī	tā	ēš-ī	tūrag-ay	tā</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n868"/>
-  <edge from="utterance/n870" to="clause_unit/n868" xml:id="e868"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n868" xml:id="868">
-    <fs>
-      <f name="annotation_value">ki	āt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n87"/>
-  <edge from="utterance/n89" to="clause_unit/n87" xml:id="e87"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n87" xml:id="87">
-    <fs>
-      <f name="annotation_value">bi	am-ēš-ī	wasl=at-ant</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n879"/>
-  <edge from="utterance/n881" to="clause_unit/n879" xml:id="e879"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n879" xml:id="879">
-    <fs>
-      <f name="annotation_value">bādšā	gu</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n896"/>
-  <edge from="utterance/n898" to="clause_unit/n896" xml:id="e896"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n896" xml:id="896">
-    <fs>
-      <f name="annotation_value">ē	čē	arz-ē	dāšt</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n904"/>
-  <edge from="utterance/n906" to="clause_unit/n904" xml:id="e904"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n904" xml:id="904">
-    <fs>
-      <f name="annotation_value">gušt=ī</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n936"/>
-  <edge from="utterance/n938" to="clause_unit/n936" xml:id="e936"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n936" xml:id="936">
-    <fs>
-      <f name="annotation_value">b-(y)ā	ki	ē	rang	ēš-ī	mās	ē	rang	guṭṭō=at=ō</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n944"/>
-  <edge from="utterance/n946" to="clause_unit/n944" xml:id="e944"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n944" xml:id="944">
-    <fs>
-      <f name="annotation_value">āt=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n958"/>
-  <edge from="utterance/n960" to="clause_unit/n958" xml:id="e958"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n958" xml:id="958">
-    <fs>
-      <f name="annotation_value">man	āzāt	kurt-un=u</f>
-    </fs>
-  </a>
-  <node xml:id="clause_unit/n978"/>
-  <edge from="utterance/n980" to="clause_unit/n978" xml:id="e978"/>
-  <a as="clause_unit" label="clause_unit" ref="clause_unit/n978" xml:id="978">
-    <fs>
-      <f name="annotation_value">guṛā	mnā	inka	ǰawāir	dāt=u</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="clause_unit" occurs="111"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="utterance"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="clause_unit"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="clause_unit..na1001"/>
+	<edge from="utterance..na1003" to="clause_unit..na1001" xml:id="ea1001"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1001" xml:id="a1001">
+		<fs>
+			<f name="annotation_value">am-ē	tōm-ā=um	am-ēš-ā=um	mnā	ē	dā</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1021"/>
+	<edge from="utterance..na1023" to="clause_unit..na1021" xml:id="ea1021"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1021" xml:id="a1021">
+		<fs>
+			<f name="annotation_value">ša	wat-ī	dap-ay	tā=ē	prēnt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1029"/>
+	<edge from="utterance..na1031" to="clause_unit..na1029" xml:id="ea1029"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1029" xml:id="a1029">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na104"/>
+	<edge from="utterance..na106" to="clause_unit..na104" xml:id="ea104"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na104" xml:id="a104">
+		<fs>
+			<f name="annotation_value">harka	ki	arz-ē	b-dāšt-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1043"/>
+	<edge from="utterance..na1045" to="clause_unit..na1043" xml:id="ea1043"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1043" xml:id="a1043">
+		<fs>
+			<f name="annotation_value">ī	dgar=u	ǰawāir=ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1057"/>
+	<edge from="utterance..na1059" to="clause_unit..na1057" xml:id="ea1057"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1057" xml:id="a1057">
+		<fs>
+			<f name="annotation_value">am-ēš-ā	mašmā	na-zān-an</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1071"/>
+	<edge from="utterance..na1073" to="clause_unit..na1071" xml:id="ea1071"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1071" xml:id="a1071">
+		<fs>
+			<f name="annotation_value">ē	maššōra	kurt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1079"/>
+	<edge from="utterance..na1081" to="clause_unit..na1079" xml:id="ea1079"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1079" xml:id="a1079">
+		<fs>
+			<f name="annotation_value">gušt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1096"/>
+	<edge from="utterance..na1098" to="clause_unit..na1096" xml:id="ea1096"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1096" xml:id="a1096">
+		<fs>
+			<f name="annotation_value">b-(y)ā	ēš-ā	p-kiš-an	mašmā</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1131"/>
+	<edge from="utterance..na1133" to="clause_unit..na1131" xml:id="ea1131"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1131" xml:id="a1131">
+		<fs>
+			<f name="annotation_value">ēš-ā	ǰwān-ēn	ǰā-(y)ē	bāg-ē	ḍigār-ay	tā	kišt-ant=u		ǰwān-ēn	narm-ēn	ḍigār-ē=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1145"/>
+	<edge from="utterance..na1147" to="clause_unit..na1145" xml:id="ea1145"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1145" xml:id="a1145">
+		<fs>
+			<f name="annotation_value">wall-ē	sabz	kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1162"/>
+	<edge from="utterance..na1164" to="clause_unit..na1162" xml:id="ea1162"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1162" xml:id="a1162">
+		<fs>
+			<f name="annotation_value">ēš	činkas	galaw	ku</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1185"/>
+	<edge from="utterance..na1187" to="clause_unit..na1185" xml:id="ea1185"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1185" xml:id="a1185">
+		<fs>
+			<f name="annotation_value">ša	truss-ā	kass-ē	ē	galaw-ān-ā	na-wārt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1205"/>
+	<edge from="utterance..na1207" to="clause_unit..na1205" xml:id="ea1205"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1205" xml:id="a1205">
+		<fs>
+			<f name="annotation_value">ki	ša	aždiyā-(y)ay	dap-ay	tā=ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na121"/>
+	<edge from="utterance..na123" to="clause_unit..na121" xml:id="ea121"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na121" xml:id="a121">
+		<fs>
+			<f name="annotation_value">am-ēširā	ki	takān	dāt-ēn</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1216"/>
+	<edge from="utterance..na1218" to="clause_unit..na1216" xml:id="ea1216"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1216" xml:id="a1216">
+		<fs>
+			<f name="annotation_value">mār-ay	zār=ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1233"/>
+	<edge from="utterance..na1235" to="clause_unit..na1233" xml:id="ea1233"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1233" xml:id="a1233">
+		<fs>
+			<f name="annotation_value">ē	činka	tōm	kurt-ant=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1241"/>
+	<edge from="utterance..na1243" to="clause_unit..na1241" xml:id="ea1241"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1241" xml:id="a1241">
+		<fs>
+			<f name="annotation_value">šut-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1258"/>
+	<edge from="utterance..na1260" to="clause_unit..na1258" xml:id="ea1258"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1258" xml:id="a1258">
+		<fs>
+			<f name="annotation_value">ṭū-(y)ēn	pālēz-ē	bādšā	kišt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1275"/>
+	<edge from="utterance..na1277" to="clause_unit..na1275" xml:id="ea1275"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1275" xml:id="a1275">
+		<fs>
+			<f name="annotation_value">yakk	pīramard-ē-rā	sawzwān	ku</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1298"/>
+	<edge from="utterance..na1300" to="clause_unit..na1298" xml:id="ea1298"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1298" xml:id="a1298">
+		<fs>
+			<f name="annotation_value">ē	laggit	ē	pālēz	bi	galaw-ā=ō</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1312"/>
+	<edge from="utterance..na1314" to="clause_unit..na1312" xml:id="ea1312"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1312" xml:id="a1312">
+		<fs>
+			<f name="annotation_value">bēxī	galaw	ku</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1329"/>
+	<edge from="utterance..na1331" to="clause_unit..na1329" xml:id="ea1329"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1329" xml:id="a1329">
+		<fs>
+			<f name="annotation_value">pīramard=am	awal	čē=(w)a	na-ku</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1340"/>
+	<edge from="utterance..na1342" to="clause_unit..na1340" xml:id="ea1340"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1340" xml:id="a1340">
+		<fs>
+			<f name="annotation_value">tawkal=a	na-kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1351"/>
+	<edge from="utterance..na1353" to="clause_unit..na1351" xml:id="ea1351"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1351" xml:id="a1351">
+		<fs>
+			<f name="annotation_value">ar-uk-(k)ē	dāšt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1377"/>
+	<edge from="utterance..na1379" to="clause_unit..na1377" xml:id="ea1377"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1377" xml:id="a1377">
+		<fs>
+			<f name="annotation_value">am-ē	galaw-ān-ā	dēmā 	bi=m-ē	ar-uk-(k)ay	dēmā	kōṭit=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na138"/>
+	<edge from="utterance..na140" to="clause_unit..na138" xml:id="ea138"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na138" xml:id="a138">
+		<fs>
+			<f name="annotation_value">bādišā	ōdā	sī=(y)a		būt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1385"/>
+	<edge from="utterance..na1387" to="clause_unit..na1385" xml:id="ea1385"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1385" xml:id="a1385">
+		<fs>
+			<f name="annotation_value">dāt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1402"/>
+	<edge from="utterance..na1404" to="clause_unit..na1402" xml:id="ea1402"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1402" xml:id="a1402">
+		<fs>
+			<f name="annotation_value">ē	ar=am	pazzōr 	ūt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1419"/>
+	<edge from="utterance..na1421" to="clause_unit..na1419" xml:id="ea1419"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1419" xml:id="a1419">
+		<fs>
+			<f name="annotation_value">pīramard	šurū	ku	wārtin-ā</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1436"/>
+	<edge from="utterance..na1438" to="clause_unit..na1436" xml:id="ea1436"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1436" xml:id="a1436">
+		<fs>
+			<f name="annotation_value">ta	ē	či	čīz=ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1450"/>
+	<edge from="utterance..na1452" to="clause_unit..na1450" xml:id="ea1450"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1450" xml:id="a1450">
+		<fs>
+			<f name="annotation_value">pīramard=am	pazzōr	ūt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1470"/>
+	<edge from="utterance..na1472" to="clause_unit..na1470" xml:id="ea1470"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1470" xml:id="a1470">
+		<fs>
+			<f name="annotation_value">bādšā	yag	rōč-ē	ki	āt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1478"/>
+	<edge from="utterance..na1480" to="clause_unit..na1478" xml:id="ea1478"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1478" xml:id="a1478">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1498"/>
+	<edge from="utterance..na1500" to="clause_unit..na1498" xml:id="ea1498"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1498" xml:id="a1498">
+		<fs>
+			<f name="annotation_value">ki	pīramard	bābā	ē	čē=(w)ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1506"/>
+	<edge from="utterance..na1508" to="clause_unit..na1506" xml:id="ea1506"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1506" xml:id="a1506">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na152"/>
+	<edge from="utterance..na154" to="clause_unit..na152" xml:id="ea152"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na152" xml:id="a152">
+		<fs>
+			<f name="annotation_value">yag	rōč-ē	dīst</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1523"/>
+	<edge from="utterance..na1525" to="clause_unit..na1523" xml:id="ea1523"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1523" xml:id="a1523">
+		<fs>
+			<f name="annotation_value">ē	bēxī	ǰwān-ēn	čīz=ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1534"/>
+	<edge from="utterance..na1536" to="clause_unit..na1534" xml:id="ea1534"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1534" xml:id="a1534">
+		<fs>
+			<f name="annotation_value">man=um	wārt-a,</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1548"/>
+	<edge from="utterance..na1550" to="clause_unit..na1548" xml:id="ea1548"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1548" xml:id="a1548">
+		<fs>
+			<f name="annotation_value">ē	ar-ā=um	dāt-a=un=ō</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1559"/>
+	<edge from="utterance..na1561" to="clause_unit..na1559" xml:id="ea1559"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1559" xml:id="a1559">
+		<fs>
+			<f name="annotation_value">šumā=um	bōr-it.</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1570"/>
+	<edge from="utterance..na1572" to="clause_unit..na1570" xml:id="ea1570"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1570" xml:id="a1570">
+		<fs>
+			<f name="annotation_value">wazīr	gu</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1587"/>
+	<edge from="utterance..na1589" to="clause_unit..na1587" xml:id="ea1587"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1587" xml:id="a1587">
+		<fs>
+			<f name="annotation_value">na	dēmā	man=a	war-īn</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1604"/>
+	<edge from="utterance..na1606" to="clause_unit..na1604" xml:id="ea1604"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1604" xml:id="a1604">
+		<fs>
+			<f name="annotation_value">ta	ay	bādšā	ma-war</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1615"/>
+	<edge from="utterance..na1617" to="clause_unit..na1615" xml:id="ea1615"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1615" xml:id="a1615">
+		<fs>
+			<f name="annotation_value">wazīr	wārt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1635"/>
+	<edge from="utterance..na1637" to="clause_unit..na1635" xml:id="ea1635"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1635" xml:id="a1635">
+		<fs>
+			<f name="annotation_value">ta	ē	aǰab-ēn	xušmizzag-ēn	čīz=ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1643"/>
+	<edge from="utterance..na1645" to="clause_unit..na1643" xml:id="ea1643"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1643" xml:id="a1643">
+		<fs>
+			<f name="annotation_value">wārt-ant=ō</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1654"/>
+	<edge from="utterance..na1656" to="clause_unit..na1654" xml:id="ea1654"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1654" xml:id="a1654">
+		<fs>
+			<f name="annotation_value">ki	wārt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1665"/>
+	<edge from="utterance..na1667" to="clause_unit..na1665" xml:id="ea1665"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1665" xml:id="a1665">
+		<fs>
+			<f name="annotation_value">nūn	gušt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1685"/>
+	<edge from="utterance..na1687" to="clause_unit..na1685" xml:id="ea1685"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1685" xml:id="a1685">
+		<fs>
+			<f name="annotation_value">b-(y)ā	mašmā	p=ēšī	nām=ē	b-ill-an</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na169"/>
+	<edge from="utterance..na171" to="clause_unit..na169" xml:id="ea169"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na169" xml:id="a169">
+		<fs>
+			<f name="annotation_value">ta	am-ē	aždiyā-(y)ē	āt-a=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1705"/>
+	<edge from="utterance..na1707" to="clause_unit..na1705" xml:id="ea1705"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1705" xml:id="a1705">
+		<fs>
+			<f name="annotation_value">nām=ay	guṛā	galaw-ā	išt-ant	xarmizza</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1725"/>
+	<edge from="utterance..na1727" to="clause_unit..na1725" xml:id="ea1725"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1725" xml:id="a1725">
+		<fs>
+			<f name="annotation_value">ki	mizzag-ay	awal	xar	burt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na1739"/>
+	<edge from="utterance..na1741" to="clause_unit..na1739" xml:id="ea1739"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1739" xml:id="a1739">
+		<fs>
+			<f name="annotation_value">xarmizza	š=ōdā	mant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na18"/>
+	<edge from="utterance..na20" to="clause_unit..na18" xml:id="ea18"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na18" xml:id="a18">
+		<fs>
+			<f name="annotation_value">ki	yag	bādišā=(y)ē=at</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na183"/>
+	<edge from="utterance..na185" to="clause_unit..na183" xml:id="ea183"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na183" xml:id="a183">
+		<fs>
+			<f name="annotation_value">am-ēš-ā	takān=a	dant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na200"/>
+	<edge from="utterance..na202" to="clause_unit..na200" xml:id="ea200"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na200" xml:id="a200">
+		<fs>
+			<f name="annotation_value">bādšā	dēm	dāt	yakk-ē-rā</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na214"/>
+	<edge from="utterance..na216" to="clause_unit..na214" xml:id="ea214"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na214" xml:id="a214">
+		<fs>
+			<f name="annotation_value">ki	ē	čī-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na222"/>
+	<edge from="utterance..na224" to="clause_unit..na222" xml:id="ea222"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na222" xml:id="a222">
+		<fs>
+			<f name="annotation_value">āt-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na230"/>
+	<edge from="utterance..na232" to="clause_unit..na230" xml:id="ea230"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na230" xml:id="a230">
+		<fs>
+			<f name="annotation_value">gušt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na244"/>
+	<edge from="utterance..na246" to="clause_unit..na244" xml:id="ea244"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na244" xml:id="a244">
+		<fs>
+			<f name="annotation_value">bādšā	sāib	aždiyā-(y)ē</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na252"/>
+	<edge from="utterance..na254" to="clause_unit..na252" xml:id="ea252"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na252" xml:id="a252">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na272"/>
+	<edge from="utterance..na274" to="clause_unit..na272" xml:id="ea272"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na272" xml:id="a272">
+		<fs>
+			<f name="annotation_value">hā…	ē	aždiyā	amr-ē	dār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na283"/>
+	<edge from="utterance..na285" to="clause_unit..na283" xml:id="ea283"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na283" xml:id="a283">
+		<fs>
+			<f name="annotation_value">arz-ē	dār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na303"/>
+	<edge from="utterance..na305" to="clause_unit..na303" xml:id="ea303"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na303" xml:id="a303">
+		<fs>
+			<f name="annotation_value">ēš-ī	arz-ā	kay	pa=(m)man	b-(y)ār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na317"/>
+	<edge from="utterance..na319" to="clause_unit..na317" xml:id="ea317"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na317" xml:id="a317">
+		<fs>
+			<f name="annotation_value">man	ki	na-zān-īn</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na328"/>
+	<edge from="utterance..na330" to="clause_unit..na328" xml:id="ea328"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na328" xml:id="a328">
+		<fs>
+			<f name="annotation_value">ē	bē-zuwān-ē</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na342"/>
+	<edge from="utterance..na344" to="clause_unit..na342" xml:id="ea342"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na342" xml:id="a342">
+		<fs>
+			<f name="annotation_value">yakk	naǰǰār-ē	gu</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na353"/>
+	<edge from="utterance..na355" to="clause_unit..na353" xml:id="ea353"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na353" xml:id="a353">
+		<fs>
+			<f name="annotation_value">man=a	zān-īn</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na361"/>
+	<edge from="utterance..na363" to="clause_unit..na361" xml:id="ea361"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na361" xml:id="a361">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na372"/>
+	<edge from="utterance..na374" to="clause_unit..na372" xml:id="ea372"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na372" xml:id="a372">
+		<fs>
+			<f name="annotation_value">ki	zān-ay</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na386"/>
+	<edge from="utterance..na388" to="clause_unit..na386" xml:id="ea386"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na386" xml:id="a386">
+		<fs>
+			<f name="annotation_value">ēš-ī	arz-ā	āwurt-ay</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na4"/>
+	<edge from="utterance..na6" to="clause_unit..na4" xml:id="ea4"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na4" xml:id="a4">
+		<fs>
+			<f name="annotation_value">guš-īt:</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na406"/>
+	<edge from="utterance..na408" to="clause_unit..na406" xml:id="ea406"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na406" xml:id="a406">
+		<fs>
+			<f name="annotation_value">man	trā	inka	xalāit=(t)a	day-īn</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na414"/>
+	<edge from="utterance..na416" to="clause_unit..na414" xml:id="ea414"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na414" xml:id="a414">
+		<fs>
+			<f name="annotation_value">gu</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na425"/>
+	<edge from="utterance..na427" to="clause_unit..na425" xml:id="ea425"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na425" xml:id="a425">
+		<fs>
+			<f name="annotation_value">xayli	xub</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na451"/>
+	<edge from="utterance..na453" to="clause_unit..na451" xml:id="ea451"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na451" xml:id="a451">
+		<fs>
+			<f name="annotation_value">ē	naǰǰār	ki	āt	gō	tēγ=u		arrag-ān</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na468"/>
+	<edge from="utterance..na470" to="clause_unit..na468" xml:id="ea468"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na468" xml:id="a468">
+		<fs>
+			<f name="annotation_value">ē	aždiyā	wayl	kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na479"/>
+	<edge from="utterance..na481" to="clause_unit..na479" xml:id="ea479"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na479" xml:id="a479">
+		<fs>
+			<f name="annotation_value">rāda	būt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na499"/>
+	<edge from="utterance..na501" to="clause_unit..na499" xml:id="ea499"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na499" xml:id="a499">
+		<fs>
+			<f name="annotation_value">aždīyā	naǰǰār-ā	išāra	dāt=u		išāra=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na516"/>
+	<edge from="utterance..na518" to="clause_unit..na516" xml:id="ea516"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na516" xml:id="a516">
+		<fs>
+			<f name="annotation_value">bi	kō-ay	tā	šut</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na53"/>
+	<edge from="utterance..na55" to="clause_unit..na53" xml:id="ea53"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na53" xml:id="a53">
+		<fs>
+			<f name="annotation_value">ē	bādišā	bi=m-ē	wat-ī	šār-ay	wasat-(t)ā	yakk	tīr=i	barγ-ē		dāšt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na530"/>
+	<edge from="utterance..na532" to="clause_unit..na530" xml:id="ea530"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na530" xml:id="a530">
+		<fs>
+			<f name="annotation_value">ōdā	ki	šut</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na556"/>
+	<edge from="utterance..na558" to="clause_unit..na556" xml:id="ea556"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na556" xml:id="a556">
+		<fs>
+			<f name="annotation_value">ta	uhō…	ē	aždiyā	diga	mās-ē	dār-īt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na585"/>
+	<edge from="utterance..na587" to="clause_unit..na585" xml:id="ea585"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na585" xml:id="a585">
+		<fs>
+			<f name="annotation_value">ē	mās=ay	ša=m-ē	kōh-ay	pāčin	na-(w)ant	mazan	šāx</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na599"/>
+	<edge from="utterance..na601" to="clause_unit..na599" xml:id="ea599"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na599" xml:id="a599">
+		<fs>
+			<f name="annotation_value">ša=m-ēš-ān	šikār	kurt-a=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na622"/>
+	<edge from="utterance..na624" to="clause_unit..na622" xml:id="ea622"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na622" xml:id="a622">
+		<fs>
+			<f name="annotation_value">am-ē	šāx=ay	ēš-ī	guṭṭ-ā	gīr	kurt-ag=ant=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na633"/>
+	<edge from="utterance..na635" to="clause_unit..na633" xml:id="ea633"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na633" xml:id="a633">
+		<fs>
+			<f name="annotation_value">napas	tank=int</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na644"/>
+	<edge from="utterance..na646" to="clause_unit..na644" xml:id="ea644"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na644" xml:id="a644">
+		<fs>
+			<f name="annotation_value">āt-a		idā</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na661"/>
+	<edge from="utterance..na663" to="clause_unit..na661" xml:id="ea661"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na661" xml:id="a661">
+		<fs>
+			<f name="annotation_value">bi	bādšā	arz	kurt-a</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na672"/>
+	<edge from="utterance..na674" to="clause_unit..na672" xml:id="ea672"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na672" xml:id="a672">
+		<fs>
+			<f name="annotation_value">išāra	kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na692"/>
+	<edge from="utterance..na694" to="clause_unit..na692" xml:id="ea692"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na692" xml:id="a692">
+		<fs>
+			<f name="annotation_value">ē	šāx-ān-ā	pāčin-ē-ān-ā	arra	kurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na706"/>
+	<edge from="utterance..na708" to="clause_unit..na706" xml:id="ea706"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na706" xml:id="a706">
+		<fs>
+			<f name="annotation_value">ā	alās	ūt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na717"/>
+	<edge from="utterance..na719" to="clause_unit..na717" xml:id="ea717"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na717" xml:id="a717">
+		<fs>
+			<f name="annotation_value">āzāt	būt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na73"/>
+	<edge from="utterance..na75" to="clause_unit..na73" xml:id="ea73"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na73" xml:id="a73">
+		<fs>
+			<f name="annotation_value">ki	harčī	am-ē	tilīpun-ān-ī 	sīm=at-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na737"/>
+	<edge from="utterance..na739" to="clause_unit..na737" xml:id="ea737"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na737" xml:id="a737">
+		<fs>
+			<f name="annotation_value">ē	aždiyā	diga	ǰā-(y)ē	šut=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na757"/>
+	<edge from="utterance..na759" to="clause_unit..na757" xml:id="ea757"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na757" xml:id="a757">
+		<fs>
+			<f name="annotation_value">ēš-ā	mazan-ēn	xalāit-(t)ē	dāt	ǰawāir</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na777"/>
+	<edge from="utterance..na779" to="clause_unit..na777" xml:id="ea777"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na777" xml:id="a777">
+		<fs>
+			<f name="annotation_value">guṛā	ē	ṭukkur-ē	ki	šut</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na794"/>
+	<edge from="utterance..na796" to="clause_unit..na794" xml:id="ea794"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na794" xml:id="a794">
+		<fs>
+			<f name="annotation_value">padā	ēš-ā	išāra-(y)ē	ku</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na802"/>
+	<edge from="utterance..na804" to="clause_unit..na802" xml:id="ea802"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na802" xml:id="a802">
+		<fs>
+			<f name="annotation_value">ōštāt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na816"/>
+	<edge from="utterance..na818" to="clause_unit..na816" xml:id="ea816"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na816" xml:id="a816">
+		<fs>
+			<f name="annotation_value">am-inkas-ēn	tōm-ē	zurt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na857"/>
+	<edge from="utterance..na859" to="clause_unit..na857" xml:id="ea857"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na857" xml:id="a857">
+		<fs>
+			<f name="annotation_value">ša	wat-ī	dap-ay	tā	prēnt	bi	am-ē	ǰawāir-ān-ī	tā	ēš-ī	tūrag-ay	tā</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na868"/>
+	<edge from="utterance..na870" to="clause_unit..na868" xml:id="ea868"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na868" xml:id="a868">
+		<fs>
+			<f name="annotation_value">ki	āt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na87"/>
+	<edge from="utterance..na89" to="clause_unit..na87" xml:id="ea87"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na87" xml:id="a87">
+		<fs>
+			<f name="annotation_value">bi	am-ēš-ī	wasl=at-ant</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na879"/>
+	<edge from="utterance..na881" to="clause_unit..na879" xml:id="ea879"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na879" xml:id="a879">
+		<fs>
+			<f name="annotation_value">bādšā	gu</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na896"/>
+	<edge from="utterance..na898" to="clause_unit..na896" xml:id="ea896"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na896" xml:id="a896">
+		<fs>
+			<f name="annotation_value">ē	čē	arz-ē	dāšt</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na904"/>
+	<edge from="utterance..na906" to="clause_unit..na904" xml:id="ea904"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na904" xml:id="a904">
+		<fs>
+			<f name="annotation_value">gušt=ī</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na936"/>
+	<edge from="utterance..na938" to="clause_unit..na936" xml:id="ea936"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na936" xml:id="a936">
+		<fs>
+			<f name="annotation_value">b-(y)ā	ki	ē	rang	ēš-ī	mās	ē	rang	guṭṭō=at=ō</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na944"/>
+	<edge from="utterance..na946" to="clause_unit..na944" xml:id="ea944"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na944" xml:id="a944">
+		<fs>
+			<f name="annotation_value">āt=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na958"/>
+	<edge from="utterance..na960" to="clause_unit..na958" xml:id="ea958"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na958" xml:id="a958">
+		<fs>
+			<f name="annotation_value">man	āzāt	kurt-un=u</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na978"/>
+	<edge from="utterance..na980" to="clause_unit..na978" xml:id="ea978"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na978" xml:id="a978">
+		<fs>
+			<f name="annotation_value">guṛā	mnā	inka	ǰawāir	dāt=u</f>
+		</fs>
+	</a>
 </graph>
