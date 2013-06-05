@@ -47,7 +47,6 @@ class AnnotationGraph():
         self.tier_hierarchies = None
         self.meta_information = None
 
-
     def root_nodes(self):
         """Retrieve the root nodes from the annotation graph. Root nodes are
         the nodes that have a label that is the root node of the data structure
@@ -60,8 +59,9 @@ class AnnotationGraph():
             Return root nodes of the graph.
 
         """
+
         res = list()
-        base_tier_name =  self.structure_type_handler.flat_data_hierarchy[0]
+        base_tier_name = self.structure_type_handler.flat_data_hierarchy[0]
         for (node_id, node) in self.graf.nodes.items():
             if node_id.startswith(base_tier_name):
                 res.append(node)
