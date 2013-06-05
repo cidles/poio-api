@@ -13,7 +13,7 @@ The parser use the ContentHandler from
 SAX Xml module.
 """
 
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 
 import abc
 import os
@@ -64,9 +64,9 @@ class NodeId:
 
     def __init__(self, prefix, index):
         self.prefix = prefix
-        self.index = index
+        self.index = str(index)
 
-    def __str__(self):
+    def to_str(self):
         return "{0}/n{1}".format(self.prefix, self.index)
 
     def str_edge(self):
@@ -74,7 +74,6 @@ class NodeId:
 
     def str_region(self):
         return "{0}/r{1}".format(self.prefix, self.index)
-
 
 class BaseParser(object):
     """This class is a base class to the
@@ -317,7 +316,7 @@ class GrAFConverter:
         if annotation_value is not None:
             annotation.features['annotation_value'] = annotation_value
 
-        self.graf.nodes[str(annotation_ref)].annotations.add(annotation)
+        self.graf.nodes[annotation_ref.to_str()].annotations.add(annotation)
 
         if annotation_name in self.graf.annotation_spaces:
             if annotation not in self.graf.annotation_spaces[annotation_name]:
@@ -330,11 +329,12 @@ class GrAFConverter:
 
     def _add_node_to_graph(self, node_id, regions=None,
                            from_node_id=None):
-        node = graf.Node(str(node_id))
+
+        node = graf.Node(node_id.to_str())
 
         if from_node_id is not None:
             edge_id = node_id.str_edge()
-            edge = graf.Edge(edge_id, self.graf.nodes[str(from_node_id)], node)
+            edge = graf.Edge(edge_id, self.graf.nodes[from_node_id.to_str()], node)
 
             self.graf.edges.add(edge)
 

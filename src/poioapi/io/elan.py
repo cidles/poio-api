@@ -61,6 +61,9 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
+        # With the python 2.x the element tree the strings
+        # are somehow mixed with "str" and "unicode" types.
+        # http://stackoverflow.com/questions/3418262/python-unicode-and-elementtree-parse
         self.root = ET.parse(self.filepath)
         self.tree = self.root.getroot()
         self.regions_map = self._map_time_slots()
