@@ -147,7 +147,7 @@ class TestGrAFConverter:
         assert len(nodes) == 26
 
     def test_get_annotation_from_node(self):
-        node = self.graph.nodes['word/n2']
+        node = self.graph.nodes['word..n2']
         annotation = node.annotations._elements[0]
 
         assert annotation.id == 2
@@ -160,8 +160,8 @@ class TestGrAFConverter:
     def test_get_edge_nodes(self):
         edge = self.graph.edges['e2']
 
-        assert edge.from_node == self.graph.nodes['utterance/n0']
-        assert edge.to_node == self.graph.nodes['word/n2']
+        assert edge.from_node == self.graph.nodes['utterance..n0']
+        assert edge.to_node == self.graph.nodes['word..n2']
 
     def test_get_annotations_spaces_from_graf(self):
         annotation_spaces = self.graph.annotation_spaces
@@ -180,9 +180,9 @@ class TestGrAFConverter:
         converter = poioapi.io.graf.GrAFConverter(elan)
         converter.parse()
 
-        expected_tier_hierarchies = ['utterance/W-Spch',
-            ['words/W-Words',
-                ['part_of_speech/W-POS']],
-            ['phonetic_transcription/W-IPA']]
+        expected_tier_hierarchies = ['utterance..W-Spch',
+            ['words..W-Words',
+                ['part_of_speech..W-POS']],
+            ['phonetic_transcription..W-IPA']]
 
         assert expected_tier_hierarchies in converter.tier_hierarchies

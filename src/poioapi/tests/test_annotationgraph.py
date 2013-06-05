@@ -56,12 +56,12 @@ class TestAnnotationGraph:
         assert(len(nodes) == 0)
 
     def test_annotations_for_tier(self):
-        node = self.annotation_graph.graf.nodes["Glosse/P-Gloss/na262"]
+        node = self.annotation_graph.graf.nodes["Glosse..P-Gloss..na262"]
         annotations = self.annotation_graph.annotations_for_tier("Glosse", node)
         assert(len(annotations) == 1)
 
     def test_annotation_value_for_annotation(self):
-        node = self.annotation_graph.graf.nodes["Glosse/P-Gloss/na262"]
+        node = self.annotation_graph.graf.nodes["Glosse..P-Gloss..na262"]
         annotations = self.annotation_graph.annotations_for_tier("Glosse", node)
         value = self.annotation_graph.annotation_value_for_annotation(annotations[0])
         assert(value=="REPPAST")
@@ -77,14 +77,14 @@ class TestAnnotationGraph:
 
         print(self.annotation_graph.filtered_node_ids)
 
-        assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung/P-Spch/na2', 'Äußerung/P-Spch/na9']
+        assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung..P-Spch..na2', 'Äußerung..P-Spch..na9']
 
     def test_reset_filters(self):
         self.anngraphfilter.set_filter_for_type("Glosse", "ANOM")
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
-        assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung/P-Spch/na2', 'Äußerung/P-Spch/na9']
+        assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung..P-Spch..na2', 'Äußerung..P-Spch..na9']
 
     def test_create_filter_for_dict(self):
         search_terms = { "Glosse": "yesterday" }
@@ -92,7 +92,7 @@ class TestAnnotationGraph:
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
-        assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung/P-Spch/na1']
+        assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung..P-Spch..na1']
 
 class TestAnnotationGraphFilter:
 
@@ -110,19 +110,19 @@ class TestAnnotationGraphFilter:
     def test_element_passes_filter(self):
         self.anngraphfilter.set_filter_for_type("graid2", "nc")
 
-        element = self.annotation_graph.graf.nodes['utterance/n898']
+        element = self.annotation_graph.graf.nodes['utterance..na898']
         expected_result = False
 
         assert(self.anngraphfilter.element_passes_filter(element)
                == expected_result)
 
-        element = self.annotation_graph.graf.nodes['utterance/n6']
+        element = self.annotation_graph.graf.nodes['utterance..na6']
         expected_result = True
 
         assert(self.anngraphfilter.element_passes_filter(element)
                == expected_result)
 
-        #element = self.annotation_graph.graf.nodes['utterance/n89']
+        #element = self.annotation_graph.graf.nodes['utterance..na89']
         self.anngraphfilter.set_filter_for_type("graid2", "")
         self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
         expected_result = False
