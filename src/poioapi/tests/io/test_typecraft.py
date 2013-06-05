@@ -61,7 +61,7 @@ class TestTypecraft:
             if key[1] != "word" and key[1] != "globaltags":
                 expected_features_number+=1
 
-        node = self.graph.nodes["phrase/n9764"]
+        node = self.graph.nodes["phrase..n9764"]
 
         node_annotations = node.annotations._elements
 
