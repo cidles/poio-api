@@ -23,6 +23,10 @@ from xml.dom import minidom
 
 import graf
 
+# GrAF ID's separator
+GRAFSEPARATOR = ".."
+
+
 class Tier:
     """A list of tiers.
     The name is the tier unique identification.
@@ -67,13 +71,14 @@ class NodeId:
         self.index = str(index)
 
     def to_str(self):
-        return "{0}/n{1}".format(self.prefix, self.index)
+        return "{0}{1}n{2}".format(self.prefix, GRAFSEPARATOR, self.index)
 
     def str_edge(self):
         return "e{0}".format(self.index)
 
     def str_region(self):
-        return "{0}/r{1}".format(self.prefix, self.index)
+        return "{0}{1}r{2}".format(self.prefix, GRAFSEPARATOR, self.index)
+
 
 class BaseParser(object):
     """This class is a base class to the
@@ -263,7 +268,7 @@ class GrAFConverter:
         else:
             annotation_name = tier.annotation_space.replace(' ', '_')
 
-            prefix = annotation_name + "/" + tier.name
+            prefix = "{0}{1}{2}".format(annotation_name, GRAFSEPARATOR, tier.name)
 
         has_regions = False
 
@@ -398,7 +403,7 @@ class Writer():
 
         for tier_name in self._flatten_hierarchy_elements(
                 tier_hierarchies):
-            annotation_space = tier_name.split('/')[0]
+            annotation_space = tier_name.split(GRAFSEPARATOR)[0]
             out_graf = graf.Graph()
             renderer = graf.GrafRenderer("{0}-{1}.xml".format(
                 base_dir_name, annotation_space
@@ -428,7 +433,6 @@ class Writer():
         for h in tier_hierarchies:
             self._get_hierarchy_parents(h, None)
 
-
     def _get_hierarchy_parents(self, hierarchy, parent):
         for i, h in enumerate(hierarchy):
             if isinstance(h, list):
@@ -437,7 +441,7 @@ class Writer():
                 self._parent[h] = parent
 
                 if i is 0:
-                    parent = h.split('/')[0]
+                    parent = h.split(GRAFSEPARATOR)[0]
 
     def _generate_metafile(self, basedirname, meta_information = None):
         """Generate a metafile with all the extra information
