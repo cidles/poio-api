@@ -1,59 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="phrase"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="description"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="description/n101"/>
-  <edge from="phrase/n9764" to="description/n101" xml:id="e101"/>
-  <a as="description" label="description" ref="description/n101" xml:id="101">
-    <fs/>
-  </a>
-  <node xml:id="description/n130"/>
-  <edge from="phrase/n10429" to="description/n130" xml:id="e130"/>
-  <a as="description" label="description" ref="description/n130" xml:id="130">
-    <fs/>
-  </a>
-  <node xml:id="description/n162"/>
-  <edge from="phrase/n10432" to="description/n162" xml:id="e162"/>
-  <a as="description" label="description" ref="description/n162" xml:id="162">
-    <fs>
-      <f name="annotation_value">firi: can firi inflect like a verb?</f>
-    </fs>
-  </a>
-  <node xml:id="description/n205"/>
-  <edge from="phrase/n10437" to="description/n205" xml:id="e205"/>
-  <a as="description" label="description" ref="description/n205" xml:id="205">
-    <fs/>
-  </a>
-  <node xml:id="description/n232"/>
-  <edge from="phrase/n10491" to="description/n232" xml:id="e232"/>
-  <a as="description" label="description" ref="description/n232" xml:id="232">
-    <fs/>
-  </a>
-  <node xml:id="description/n26"/>
-  <edge from="phrase/n9064" to="description/n26" xml:id="e26"/>
-  <a as="description" label="description" ref="description/n26" xml:id="26">
-    <fs/>
-  </a>
-  <node xml:id="description/n268"/>
-  <edge from="phrase/n34986" to="description/n268" xml:id="e268"/>
-  <a as="description" label="description" ref="description/n268" xml:id="268">
-    <fs/>
-  </a>
-  <node xml:id="description/n295"/>
-  <edge from="phrase/n35334" to="description/n295" xml:id="e295"/>
-  <a as="description" label="description" ref="description/n295" xml:id="295">
-    <fs/>
-  </a>
-  <node xml:id="description/n63"/>
-  <edge from="phrase/n9121" to="description/n63" xml:id="e63"/>
-  <a as="description" label="description" ref="description/n63" xml:id="63">
-    <fs/>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="description" occurs="9"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="phrase"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="description"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="description..n101"/>
+	<edge from="phrase..n9764" to="description..n101" xml:id="e101"/>
+	<a as="description" label="description" ref="description..n101" xml:id="101"/>
+	<node xml:id="description..n130"/>
+	<edge from="phrase..n10429" to="description..n130" xml:id="e130"/>
+	<a as="description" label="description" ref="description..n130" xml:id="130"/>
+	<node xml:id="description..n162"/>
+	<edge from="phrase..n10432" to="description..n162" xml:id="e162"/>
+	<a as="description" label="description" ref="description..n162" xml:id="162">
+		<fs>
+			<f name="annotation_value">firi: can firi inflect like a verb?</f>
+		</fs>
+	</a>
+	<node xml:id="description..n205"/>
+	<edge from="phrase..n10437" to="description..n205" xml:id="e205"/>
+	<a as="description" label="description" ref="description..n205" xml:id="205"/>
+	<node xml:id="description..n232"/>
+	<edge from="phrase..n10491" to="description..n232" xml:id="e232"/>
+	<a as="description" label="description" ref="description..n232" xml:id="232"/>
+	<node xml:id="description..n26"/>
+	<edge from="phrase..n9064" to="description..n26" xml:id="e26"/>
+	<a as="description" label="description" ref="description..n26" xml:id="26"/>
+	<node xml:id="description..n268"/>
+	<edge from="phrase..n34986" to="description..n268" xml:id="e268"/>
+	<a as="description" label="description" ref="description..n268" xml:id="268"/>
+	<node xml:id="description..n295"/>
+	<edge from="phrase..n35334" to="description..n295" xml:id="e295"/>
+	<a as="description" label="description" ref="description..n295" xml:id="295"/>
+	<node xml:id="description..n63"/>
+	<edge from="phrase..n9121" to="description..n63" xml:id="e63"/>
+	<a as="description" label="description" ref="description..n63" xml:id="63"/>
 </graph>

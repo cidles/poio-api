@@ -1,73 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies/>
-    <annotationSpaces>
-      <annotationSpace as.id="phrase"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="phrase/n10429"/>
-  <a as="phrase" label="phrase" ref="phrase/n10429" xml:id="10429">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">Akosua hwiee nsuo no faa tokuro no mu</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n10432"/>
-  <a as="phrase" label="phrase" ref="phrase/n10432" xml:id="10432">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">Mɪ twii kaa no firii fie fa sukuu no mu kɔ asɔrɪ</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n10437"/>
-  <a as="phrase" label="phrase" ref="phrase/n10437" xml:id="10437">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">ɔ fa sukuu no mu kɔ dwaso</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n10491"/>
-  <a as="phrase" label="phrase" ref="phrase/n10491" xml:id="10491">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">Abain ɛyɛ nyuɔma a ɛbe bua nsrahwɛ ewɔ ɔmain mu.</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n34986"/>
-  <a as="phrase" label="phrase" ref="phrase/n34986" xml:id="34986">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">Me fa afuo no mu kɔ sukuu</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n35334"/>
-  <a as="phrase" label="phrase" ref="phrase/n35334" xml:id="35334">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">Na sukku mu na mepɛ sɛ me de kɔ</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n9064"/>
-  <a as="phrase" label="phrase" ref="phrase/n9064" xml:id="9064">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n9121"/>
-  <a as="phrase" label="phrase" ref="phrase/n9121" xml:id="9121">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
-    </fs>
-  </a>
-  <node xml:id="phrase/n9764"/>
-  <a as="phrase" label="phrase" ref="phrase/n9764" xml:id="9764">
-    <fs>
-      <f name="valid">VALID</f>
-      <f name="annotation_value">Kwantwakɔsansuo a yɛ hu wo ekorasi mu</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="phrase" occurs="9"/>
+		</labelsDecl>
+		<dependencies/>
+		<annotationSpaces>
+			<annotationSpace as.id="phrase"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="phrase..n10429"/>
+	<a as="phrase" label="phrase" ref="phrase..n10429" xml:id="10429">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">Akosua hwiee nsuo no faa tokuro no mu</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n10432"/>
+	<a as="phrase" label="phrase" ref="phrase..n10432" xml:id="10432">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">Mɪ twii kaa no firii fie fa sukuu no mu kɔ asɔrɪ</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n10437"/>
+	<a as="phrase" label="phrase" ref="phrase..n10437" xml:id="10437">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">ɔ fa sukuu no mu kɔ dwaso</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n10491"/>
+	<a as="phrase" label="phrase" ref="phrase..n10491" xml:id="10491">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">Abain ɛyɛ nyuɔma a ɛbe bua nsrahwɛ ewɔ ɔmain mu.</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n34986"/>
+	<a as="phrase" label="phrase" ref="phrase..n34986" xml:id="34986">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">Me fa afuo no mu kɔ sukuu</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n35334"/>
+	<a as="phrase" label="phrase" ref="phrase..n35334" xml:id="35334">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">Na sukku mu na mepɛ sɛ me de kɔ</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n9064"/>
+	<a as="phrase" label="phrase" ref="phrase..n9064" xml:id="9064">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n9121"/>
+	<a as="phrase" label="phrase" ref="phrase..n9121" xml:id="9121">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">bere ahorow dumbienu a εka bɔ mu yε afe baako;</f>
+		</fs>
+	</a>
+	<node xml:id="phrase..n9764"/>
+	<a as="phrase" label="phrase" ref="phrase..n9764" xml:id="9764">
+		<fs>
+			<f name="valid">VALID</f>
+			<f name="annotation_value">Kwantwakɔsansuo a yɛ hu wo ekorasi mu</f>
+		</fs>
+	</a>
 </graph>

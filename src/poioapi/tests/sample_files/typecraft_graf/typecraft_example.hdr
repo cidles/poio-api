@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader date.created="2013-05-08" docID="PoioAPI-223540" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <fileDesc>
-    <fileName>typecraft_example</fileName>
-    <extent count="0" unit="words"/>
-    <sourceDesc>
-      <author age="" sex="">buildbot</author>
-      <source type="Contributor">Cont</source>
-      <publisher>self</publisher>
-      <pubDate iso8601="2013-05-08"/>
-      <idno type="ISBN">9164784</idno>
-    </sourceDesc>
-  </fileDesc>
-  <profileDesc>
-    <textClass catRef="PT">
-      <subject>Revitatilization</subject>
-    </textClass>
-  </profileDesc>
-  <dataDesc>
-    <primaryData f.id="text" loc="typecraft_example.xml">
-      <annotations>
-        <annotation f.id="morpheme" loc="typecraft_example-morpheme.xml"/>
-        <annotation f.id="word" loc="typecraft_example-word.xml"/>
-        <annotation f.id="description" loc="typecraft_example-description.xml"/>
-        <annotation f.id="gloss" loc="typecraft_example-gloss.xml"/>
-        <annotation f.id="pos" loc="typecraft_example-pos.xml"/>
-        <annotation f.id="phrase" loc="typecraft_example-phrase.xml"/>
-        <annotation f.id="translation" loc="typecraft_example-translation.xml"/>
-      </annotations>
-    </primaryData>
-  </dataDesc>
+<documentHeader creator="alopes" date.created="2013-06-05" docId="PoioAPI-990801" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<fileDesc>
+		<titleStmt>
+			<title>Typecraft Example</title>
+		</titleStmt>
+		<sourceDesc/>
+	</fileDesc>
+	<profileDesc>
+		<textClass catRef="EN"/>
+		<primaryData f.id="xml" loc="typecraft_example.xml"/>
+		<annotations>
+			<annotation f.id="phrase" loc="typecraft_example-phrase.xml" loctype="relative"/>
+			<annotation f.id="word" loc="typecraft_example-word.xml" loctype="relative"/>
+			<annotation f.id="pos" loc="typecraft_example-pos.xml" loctype="relative"/>
+			<annotation f.id="morpheme" loc="typecraft_example-morpheme.xml" loctype="relative"/>
+			<annotation f.id="gloss" loc="typecraft_example-gloss.xml" loctype="relative"/>
+			<annotation f.id="translation" loc="typecraft_example-translation.xml" loctype="relative"/>
+			<annotation f.id="description" loc="typecraft_example-description.xml" loctype="relative"/>
+		</annotations>
+	</profileDesc>
 </documentHeader>

@@ -1,278 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="morpheme"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="gloss"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="gloss/n105"/>
-  <edge from="morpheme/n104" to="gloss/n105" xml:id="e105"/>
-  <a as="gloss" label="gloss" ref="gloss/n105" xml:id="105">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n125"/>
-  <edge from="morpheme/n124" to="gloss/n125" xml:id="e125"/>
-  <a as="gloss" label="gloss" ref="gloss/n125" xml:id="125">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n134"/>
-  <edge from="morpheme/n133" to="gloss/n134" xml:id="e134"/>
-  <a as="gloss" label="gloss" ref="gloss/n134" xml:id="134">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n141"/>
-  <edge from="morpheme/n140" to="gloss/n141" xml:id="e141"/>
-  <a as="gloss" label="gloss" ref="gloss/n141" xml:id="141">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n145"/>
-  <edge from="morpheme/n144" to="gloss/n145" xml:id="e145"/>
-  <a as="gloss" label="gloss" ref="gloss/n145" xml:id="145">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n152"/>
-  <edge from="morpheme/n151" to="gloss/n152" xml:id="e152"/>
-  <a as="gloss" label="gloss" ref="gloss/n152" xml:id="152">
-    <fs>
-      <f name="annotation_value">OBJ2</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n156"/>
-  <edge from="morpheme/n155" to="gloss/n156" xml:id="e156"/>
-  <a as="gloss" label="gloss" ref="gloss/n156" xml:id="156">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n160"/>
-  <edge from="morpheme/n159" to="gloss/n160" xml:id="e160"/>
-  <a as="gloss" label="gloss" ref="gloss/n160" xml:id="160">
-    <fs>
-      <f name="annotation_value">LOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n166"/>
-  <edge from="morpheme/n165" to="gloss/n166" xml:id="e166"/>
-  <a as="gloss" label="gloss" ref="gloss/n166" xml:id="166">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n167"/>
-  <edge from="morpheme/n165" to="gloss/n167" xml:id="e167"/>
-  <a as="gloss" label="gloss" ref="gloss/n167" xml:id="167">
-    <fs>
-      <f name="annotation_value">1SG</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n174"/>
-  <edge from="morpheme/n173" to="gloss/n174" xml:id="e174"/>
-  <a as="gloss" label="gloss" ref="gloss/n174" xml:id="174">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n178"/>
-  <edge from="morpheme/n177" to="gloss/n178" xml:id="e178"/>
-  <a as="gloss" label="gloss" ref="gloss/n178" xml:id="178">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n194"/>
-  <edge from="morpheme/n193" to="gloss/n194" xml:id="e194"/>
-  <a as="gloss" label="gloss" ref="gloss/n194" xml:id="194">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n209"/>
-  <edge from="morpheme/n208" to="gloss/n209" xml:id="e209"/>
-  <a as="gloss" label="gloss" ref="gloss/n209" xml:id="209">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n210"/>
-  <edge from="morpheme/n208" to="gloss/n210" xml:id="e210"/>
-  <a as="gloss" label="gloss" ref="gloss/n210" xml:id="210">
-    <fs>
-      <f name="annotation_value">3SG</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n214"/>
-  <edge from="morpheme/n213" to="gloss/n214" xml:id="e214"/>
-  <a as="gloss" label="gloss" ref="gloss/n214" xml:id="214">
-    <fs>
-      <f name="annotation_value">PATH</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n221"/>
-  <edge from="morpheme/n220" to="gloss/n221" xml:id="e221"/>
-  <a as="gloss" label="gloss" ref="gloss/n221" xml:id="221">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n236"/>
-  <edge from="morpheme/n235" to="gloss/n236" xml:id="e236"/>
-  <a as="gloss" label="gloss" ref="gloss/n236" xml:id="236">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n246"/>
-  <edge from="morpheme/n245" to="gloss/n246" xml:id="e246"/>
-  <a as="gloss" label="gloss" ref="gloss/n246" xml:id="246">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n263"/>
-  <edge from="morpheme/n262" to="gloss/n263" xml:id="e263"/>
-  <a as="gloss" label="gloss" ref="gloss/n263" xml:id="263">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n272"/>
-  <edge from="morpheme/n271" to="gloss/n272" xml:id="e272"/>
-  <a as="gloss" label="gloss" ref="gloss/n272" xml:id="272">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n279"/>
-  <edge from="morpheme/n278" to="gloss/n279" xml:id="e279"/>
-  <a as="gloss" label="gloss" ref="gloss/n279" xml:id="279">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n283"/>
-  <edge from="morpheme/n282" to="gloss/n283" xml:id="e283"/>
-  <a as="gloss" label="gloss" ref="gloss/n283" xml:id="283">
-    <fs>
-      <f name="annotation_value">DEF</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n293"/>
-  <edge from="morpheme/n292" to="gloss/n293" xml:id="e293"/>
-  <a as="gloss" label="gloss" ref="gloss/n293" xml:id="293">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n299"/>
-  <edge from="morpheme/n298" to="gloss/n299" xml:id="e299"/>
-  <a as="gloss" label="gloss" ref="gloss/n299" xml:id="299">
-    <fs>
-      <f name="annotation_value">FOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n303"/>
-  <edge from="morpheme/n302" to="gloss/n303" xml:id="e303"/>
-  <a as="gloss" label="gloss" ref="gloss/n303" xml:id="303">
-    <fs>
-      <f name="annotation_value">OBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n307"/>
-  <edge from="morpheme/n306" to="gloss/n307" xml:id="e307"/>
-  <a as="gloss" label="gloss" ref="gloss/n307" xml:id="307">
-    <fs>
-      <f name="annotation_value">LOC</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n314"/>
-  <edge from="morpheme/n313" to="gloss/n314" xml:id="e314"/>
-  <a as="gloss" label="gloss" ref="gloss/n314" xml:id="314">
-    <fs>
-      <f name="annotation_value">1SG</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n319"/>
-  <edge from="morpheme/n318" to="gloss/n319" xml:id="e319"/>
-  <a as="gloss" label="gloss" ref="gloss/n319" xml:id="319">
-    <fs>
-      <f name="annotation_value">COND</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n323"/>
-  <edge from="morpheme/n322" to="gloss/n323" xml:id="e323"/>
-  <a as="gloss" label="gloss" ref="gloss/n323" xml:id="323">
-    <fs>
-      <f name="annotation_value">1SG</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n324"/>
-  <edge from="morpheme/n322" to="gloss/n324" xml:id="e324"/>
-  <a as="gloss" label="gloss" ref="gloss/n324" xml:id="324">
-    <fs>
-      <f name="annotation_value">SBJ</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n40"/>
-  <edge from="morpheme/n39" to="gloss/n40" xml:id="e40"/>
-  <a as="gloss" label="gloss" ref="gloss/n40" xml:id="40">
-    <fs>
-      <f name="annotation_value">REL</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n44"/>
-  <edge from="morpheme/n43" to="gloss/n44" xml:id="e44"/>
-  <a as="gloss" label="gloss" ref="gloss/n44" xml:id="44">
-    <fs>
-      <f name="annotation_value">3SG</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n45"/>
-  <edge from="morpheme/n43" to="gloss/n45" xml:id="e45"/>
-  <a as="gloss" label="gloss" ref="gloss/n45" xml:id="45">
-    <fs>
-      <f name="annotation_value">INANIM</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n70"/>
-  <edge from="morpheme/n69" to="gloss/n70" xml:id="e70"/>
-  <a as="gloss" label="gloss" ref="gloss/n70" xml:id="70">
-    <fs>
-      <f name="annotation_value">x</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n78"/>
-  <edge from="morpheme/n77" to="gloss/n78" xml:id="e78"/>
-  <a as="gloss" label="gloss" ref="gloss/n78" xml:id="78">
-    <fs>
-      <f name="annotation_value">REL</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n82"/>
-  <edge from="morpheme/n81" to="gloss/n82" xml:id="e82"/>
-  <a as="gloss" label="gloss" ref="gloss/n82" xml:id="82">
-    <fs>
-      <f name="annotation_value">3SG</f>
-    </fs>
-  </a>
-  <node xml:id="gloss/n83"/>
-  <edge from="morpheme/n81" to="gloss/n83" xml:id="e83"/>
-  <a as="gloss" label="gloss" ref="gloss/n83" xml:id="83">
-    <fs>
-      <f name="annotation_value">INANIM</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="gloss" occurs="38"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="morpheme"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="gloss"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="gloss..n105"/>
+	<edge from="morpheme..n104" to="gloss..n105" xml:id="e105"/>
+	<a as="gloss" label="gloss" ref="gloss..n105" xml:id="105">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n125"/>
+	<edge from="morpheme..n124" to="gloss..n125" xml:id="e125"/>
+	<a as="gloss" label="gloss" ref="gloss..n125" xml:id="125">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n134"/>
+	<edge from="morpheme..n133" to="gloss..n134" xml:id="e134"/>
+	<a as="gloss" label="gloss" ref="gloss..n134" xml:id="134">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n141"/>
+	<edge from="morpheme..n140" to="gloss..n141" xml:id="e141"/>
+	<a as="gloss" label="gloss" ref="gloss..n141" xml:id="141">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n145"/>
+	<edge from="morpheme..n144" to="gloss..n145" xml:id="e145"/>
+	<a as="gloss" label="gloss" ref="gloss..n145" xml:id="145">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n152"/>
+	<edge from="morpheme..n151" to="gloss..n152" xml:id="e152"/>
+	<a as="gloss" label="gloss" ref="gloss..n152" xml:id="152">
+		<fs>
+			<f name="annotation_value">OBJ2</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n156"/>
+	<edge from="morpheme..n155" to="gloss..n156" xml:id="e156"/>
+	<a as="gloss" label="gloss" ref="gloss..n156" xml:id="156">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n160"/>
+	<edge from="morpheme..n159" to="gloss..n160" xml:id="e160"/>
+	<a as="gloss" label="gloss" ref="gloss..n160" xml:id="160">
+		<fs>
+			<f name="annotation_value">LOC</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n166"/>
+	<edge from="morpheme..n165" to="gloss..n166" xml:id="e166"/>
+	<a as="gloss" label="gloss" ref="gloss..n166" xml:id="166">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n167"/>
+	<edge from="morpheme..n165" to="gloss..n167" xml:id="e167"/>
+	<a as="gloss" label="gloss" ref="gloss..n167" xml:id="167">
+		<fs>
+			<f name="annotation_value">1SG</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n174"/>
+	<edge from="morpheme..n173" to="gloss..n174" xml:id="e174"/>
+	<a as="gloss" label="gloss" ref="gloss..n174" xml:id="174">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n178"/>
+	<edge from="morpheme..n177" to="gloss..n178" xml:id="e178"/>
+	<a as="gloss" label="gloss" ref="gloss..n178" xml:id="178">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n194"/>
+	<edge from="morpheme..n193" to="gloss..n194" xml:id="e194"/>
+	<a as="gloss" label="gloss" ref="gloss..n194" xml:id="194">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n209"/>
+	<edge from="morpheme..n208" to="gloss..n209" xml:id="e209"/>
+	<a as="gloss" label="gloss" ref="gloss..n209" xml:id="209">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n210"/>
+	<edge from="morpheme..n208" to="gloss..n210" xml:id="e210"/>
+	<a as="gloss" label="gloss" ref="gloss..n210" xml:id="210">
+		<fs>
+			<f name="annotation_value">3SG</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n214"/>
+	<edge from="morpheme..n213" to="gloss..n214" xml:id="e214"/>
+	<a as="gloss" label="gloss" ref="gloss..n214" xml:id="214">
+		<fs>
+			<f name="annotation_value">PATH</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n221"/>
+	<edge from="morpheme..n220" to="gloss..n221" xml:id="e221"/>
+	<a as="gloss" label="gloss" ref="gloss..n221" xml:id="221">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n236"/>
+	<edge from="morpheme..n235" to="gloss..n236" xml:id="e236"/>
+	<a as="gloss" label="gloss" ref="gloss..n236" xml:id="236">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n246"/>
+	<edge from="morpheme..n245" to="gloss..n246" xml:id="e246"/>
+	<a as="gloss" label="gloss" ref="gloss..n246" xml:id="246">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n263"/>
+	<edge from="morpheme..n262" to="gloss..n263" xml:id="e263"/>
+	<a as="gloss" label="gloss" ref="gloss..n263" xml:id="263">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n272"/>
+	<edge from="morpheme..n271" to="gloss..n272" xml:id="e272"/>
+	<a as="gloss" label="gloss" ref="gloss..n272" xml:id="272">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n279"/>
+	<edge from="morpheme..n278" to="gloss..n279" xml:id="e279"/>
+	<a as="gloss" label="gloss" ref="gloss..n279" xml:id="279">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n283"/>
+	<edge from="morpheme..n282" to="gloss..n283" xml:id="e283"/>
+	<a as="gloss" label="gloss" ref="gloss..n283" xml:id="283">
+		<fs>
+			<f name="annotation_value">DEF</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n293"/>
+	<edge from="morpheme..n292" to="gloss..n293" xml:id="e293"/>
+	<a as="gloss" label="gloss" ref="gloss..n293" xml:id="293">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n299"/>
+	<edge from="morpheme..n298" to="gloss..n299" xml:id="e299"/>
+	<a as="gloss" label="gloss" ref="gloss..n299" xml:id="299">
+		<fs>
+			<f name="annotation_value">FOC</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n303"/>
+	<edge from="morpheme..n302" to="gloss..n303" xml:id="e303"/>
+	<a as="gloss" label="gloss" ref="gloss..n303" xml:id="303">
+		<fs>
+			<f name="annotation_value">OBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n307"/>
+	<edge from="morpheme..n306" to="gloss..n307" xml:id="e307"/>
+	<a as="gloss" label="gloss" ref="gloss..n307" xml:id="307">
+		<fs>
+			<f name="annotation_value">LOC</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n314"/>
+	<edge from="morpheme..n313" to="gloss..n314" xml:id="e314"/>
+	<a as="gloss" label="gloss" ref="gloss..n314" xml:id="314">
+		<fs>
+			<f name="annotation_value">1SG</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n319"/>
+	<edge from="morpheme..n318" to="gloss..n319" xml:id="e319"/>
+	<a as="gloss" label="gloss" ref="gloss..n319" xml:id="319">
+		<fs>
+			<f name="annotation_value">COND</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n323"/>
+	<edge from="morpheme..n322" to="gloss..n323" xml:id="e323"/>
+	<a as="gloss" label="gloss" ref="gloss..n323" xml:id="323">
+		<fs>
+			<f name="annotation_value">1SG</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n324"/>
+	<edge from="morpheme..n322" to="gloss..n324" xml:id="e324"/>
+	<a as="gloss" label="gloss" ref="gloss..n324" xml:id="324">
+		<fs>
+			<f name="annotation_value">SBJ</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n40"/>
+	<edge from="morpheme..n39" to="gloss..n40" xml:id="e40"/>
+	<a as="gloss" label="gloss" ref="gloss..n40" xml:id="40">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n44"/>
+	<edge from="morpheme..n43" to="gloss..n44" xml:id="e44"/>
+	<a as="gloss" label="gloss" ref="gloss..n44" xml:id="44">
+		<fs>
+			<f name="annotation_value">3SG</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n45"/>
+	<edge from="morpheme..n43" to="gloss..n45" xml:id="e45"/>
+	<a as="gloss" label="gloss" ref="gloss..n45" xml:id="45">
+		<fs>
+			<f name="annotation_value">INANIM</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n70"/>
+	<edge from="morpheme..n69" to="gloss..n70" xml:id="e70"/>
+	<a as="gloss" label="gloss" ref="gloss..n70" xml:id="70">
+		<fs>
+			<f name="annotation_value">x</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n78"/>
+	<edge from="morpheme..n77" to="gloss..n78" xml:id="e78"/>
+	<a as="gloss" label="gloss" ref="gloss..n78" xml:id="78">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n82"/>
+	<edge from="morpheme..n81" to="gloss..n82" xml:id="e82"/>
+	<a as="gloss" label="gloss" ref="gloss..n82" xml:id="82">
+		<fs>
+			<f name="annotation_value">3SG</f>
+		</fs>
+	</a>
+	<node xml:id="gloss..n83"/>
+	<edge from="morpheme..n81" to="gloss..n83" xml:id="e83"/>
+	<a as="gloss" label="gloss" ref="gloss..n83" xml:id="83">
+		<fs>
+			<f name="annotation_value">INANIM</f>
+		</fs>
+	</a>
 </graph>

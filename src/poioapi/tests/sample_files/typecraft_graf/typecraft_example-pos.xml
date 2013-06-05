@@ -1,566 +1,562 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="word"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="pos"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="pos/n103"/>
-  <edge from="word/n102" to="pos/n103" xml:id="e103"/>
-  <a as="pos" label="pos" ref="pos/n103" xml:id="103">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n111"/>
-  <edge from="word/n110" to="pos/n111" xml:id="e111"/>
-  <a as="pos" label="pos" ref="pos/n111" xml:id="111">
-    <fs/>
-  </a>
-  <node xml:id="pos/n114"/>
-  <edge from="word/n113" to="pos/n114" xml:id="e114"/>
-  <a as="pos" label="pos" ref="pos/n114" xml:id="114">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n117"/>
-  <edge from="word/n116" to="pos/n117" xml:id="e117"/>
-  <a as="pos" label="pos" ref="pos/n117" xml:id="117">
-    <fs>
-      <f name="annotation_value">ADJ</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n120"/>
-  <edge from="word/n119" to="pos/n120" xml:id="e120"/>
-  <a as="pos" label="pos" ref="pos/n120" xml:id="120">
-    <fs>
-      <f name="annotation_value">P</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n123"/>
-  <edge from="word/n122" to="pos/n123" xml:id="e123"/>
-  <a as="pos" label="pos" ref="pos/n123" xml:id="123">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n127"/>
-  <edge from="word/n126" to="pos/n127" xml:id="e127"/>
-  <a as="pos" label="pos" ref="pos/n127" xml:id="127">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n132"/>
-  <edge from="word/n131" to="pos/n132" xml:id="e132"/>
-  <a as="pos" label="pos" ref="pos/n132" xml:id="132">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n136"/>
-  <edge from="word/n135" to="pos/n136" xml:id="e136"/>
-  <a as="pos" label="pos" ref="pos/n136" xml:id="136">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n139"/>
-  <edge from="word/n138" to="pos/n139" xml:id="e139"/>
-  <a as="pos" label="pos" ref="pos/n139" xml:id="139">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n143"/>
-  <edge from="word/n142" to="pos/n143" xml:id="e143"/>
-  <a as="pos" label="pos" ref="pos/n143" xml:id="143">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n147"/>
-  <edge from="word/n146" to="pos/n147" xml:id="e147"/>
-  <a as="pos" label="pos" ref="pos/n147" xml:id="147">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n150"/>
-  <edge from="word/n149" to="pos/n150" xml:id="e150"/>
-  <a as="pos" label="pos" ref="pos/n150" xml:id="150">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n154"/>
-  <edge from="word/n153" to="pos/n154" xml:id="e154"/>
-  <a as="pos" label="pos" ref="pos/n154" xml:id="154">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n158"/>
-  <edge from="word/n157" to="pos/n158" xml:id="e158"/>
-  <a as="pos" label="pos" ref="pos/n158" xml:id="158">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n164"/>
-  <edge from="word/n163" to="pos/n164" xml:id="e164"/>
-  <a as="pos" label="pos" ref="pos/n164" xml:id="164">
-    <fs>
-      <f name="annotation_value">PN</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n169"/>
-  <edge from="word/n168" to="pos/n169" xml:id="e169"/>
-  <a as="pos" label="pos" ref="pos/n169" xml:id="169">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n172"/>
-  <edge from="word/n171" to="pos/n172" xml:id="e172"/>
-  <a as="pos" label="pos" ref="pos/n172" xml:id="172">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n176"/>
-  <edge from="word/n175" to="pos/n176" xml:id="e176"/>
-  <a as="pos" label="pos" ref="pos/n176" xml:id="176">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n180"/>
-  <edge from="word/n179" to="pos/n180" xml:id="e180"/>
-  <a as="pos" label="pos" ref="pos/n180" xml:id="180">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n183"/>
-  <edge from="word/n182" to="pos/n183" xml:id="e183"/>
-  <a as="pos" label="pos" ref="pos/n183" xml:id="183">
-    <fs/>
-  </a>
-  <node xml:id="pos/n186"/>
-  <edge from="word/n185" to="pos/n186" xml:id="e186"/>
-  <a as="pos" label="pos" ref="pos/n186" xml:id="186">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n189"/>
-  <edge from="word/n188" to="pos/n189" xml:id="e189"/>
-  <a as="pos" label="pos" ref="pos/n189" xml:id="189">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n192"/>
-  <edge from="word/n191" to="pos/n192" xml:id="e192"/>
-  <a as="pos" label="pos" ref="pos/n192" xml:id="192">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n196"/>
-  <edge from="word/n195" to="pos/n196" xml:id="e196"/>
-  <a as="pos" label="pos" ref="pos/n196" xml:id="196">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n199"/>
-  <edge from="word/n198" to="pos/n199" xml:id="e199"/>
-  <a as="pos" label="pos" ref="pos/n199" xml:id="199">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n202"/>
-  <edge from="word/n201" to="pos/n202" xml:id="e202"/>
-  <a as="pos" label="pos" ref="pos/n202" xml:id="202">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n207"/>
-  <edge from="word/n206" to="pos/n207" xml:id="e207"/>
-  <a as="pos" label="pos" ref="pos/n207" xml:id="207">
-    <fs>
-      <f name="annotation_value">PN</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n212"/>
-  <edge from="word/n211" to="pos/n212" xml:id="e212"/>
-  <a as="pos" label="pos" ref="pos/n212" xml:id="212">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n216"/>
-  <edge from="word/n215" to="pos/n216" xml:id="e216"/>
-  <a as="pos" label="pos" ref="pos/n216" xml:id="216">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n219"/>
-  <edge from="word/n218" to="pos/n219" xml:id="e219"/>
-  <a as="pos" label="pos" ref="pos/n219" xml:id="219">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n223"/>
-  <edge from="word/n222" to="pos/n223" xml:id="e223"/>
-  <a as="pos" label="pos" ref="pos/n223" xml:id="223">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n226"/>
-  <edge from="word/n225" to="pos/n226" xml:id="e226"/>
-  <a as="pos" label="pos" ref="pos/n226" xml:id="226">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n229"/>
-  <edge from="word/n228" to="pos/n229" xml:id="e229"/>
-  <a as="pos" label="pos" ref="pos/n229" xml:id="229">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n234"/>
-  <edge from="word/n233" to="pos/n234" xml:id="e234"/>
-  <a as="pos" label="pos" ref="pos/n234" xml:id="234">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n238"/>
-  <edge from="word/n237" to="pos/n238" xml:id="e238"/>
-  <a as="pos" label="pos" ref="pos/n238" xml:id="238">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n241"/>
-  <edge from="word/n240" to="pos/n241" xml:id="e241"/>
-  <a as="pos" label="pos" ref="pos/n241" xml:id="241">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n244"/>
-  <edge from="word/n243" to="pos/n244" xml:id="e244"/>
-  <a as="pos" label="pos" ref="pos/n244" xml:id="244">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n248"/>
-  <edge from="word/n247" to="pos/n248" xml:id="e248"/>
-  <a as="pos" label="pos" ref="pos/n248" xml:id="248">
-    <fs>
-      <f name="annotation_value">MOD</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n251"/>
-  <edge from="word/n250" to="pos/n251" xml:id="e251"/>
-  <a as="pos" label="pos" ref="pos/n251" xml:id="251">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n254"/>
-  <edge from="word/n253" to="pos/n254" xml:id="e254"/>
-  <a as="pos" label="pos" ref="pos/n254" xml:id="254">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n258"/>
-  <edge from="word/n257" to="pos/n258" xml:id="e258"/>
-  <a as="pos" label="pos" ref="pos/n258" xml:id="258">
-    <fs>
-      <f name="annotation_value">PREP</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n261"/>
-  <edge from="word/n260" to="pos/n261" xml:id="e261"/>
-  <a as="pos" label="pos" ref="pos/n261" xml:id="261">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n265"/>
-  <edge from="word/n264" to="pos/n265" xml:id="e265"/>
-  <a as="pos" label="pos" ref="pos/n265" xml:id="265">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n270"/>
-  <edge from="word/n269" to="pos/n270" xml:id="e270"/>
-  <a as="pos" label="pos" ref="pos/n270" xml:id="270">
-    <fs>
-      <f name="annotation_value">PN</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n274"/>
-  <edge from="word/n273" to="pos/n274" xml:id="e274"/>
-  <a as="pos" label="pos" ref="pos/n274" xml:id="274">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n277"/>
-  <edge from="word/n276" to="pos/n277" xml:id="e277"/>
-  <a as="pos" label="pos" ref="pos/n277" xml:id="277">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n28"/>
-  <edge from="word/n27" to="pos/n28" xml:id="e28"/>
-  <a as="pos" label="pos" ref="pos/n28" xml:id="28">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n281"/>
-  <edge from="word/n280" to="pos/n281" xml:id="e281"/>
-  <a as="pos" label="pos" ref="pos/n281" xml:id="281">
-    <fs>
-      <f name="annotation_value">DET</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n285"/>
-  <edge from="word/n284" to="pos/n285" xml:id="e285"/>
-  <a as="pos" label="pos" ref="pos/n285" xml:id="285">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n288"/>
-  <edge from="word/n287" to="pos/n288" xml:id="e288"/>
-  <a as="pos" label="pos" ref="pos/n288" xml:id="288">
-    <fs>
-      <f name="annotation_value">Vtr</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n291"/>
-  <edge from="word/n290" to="pos/n291" xml:id="e291"/>
-  <a as="pos" label="pos" ref="pos/n291" xml:id="291">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n297"/>
-  <edge from="word/n296" to="pos/n297" xml:id="e297"/>
-  <a as="pos" label="pos" ref="pos/n297" xml:id="297">
-    <fs>
-      <f name="annotation_value">CONJ</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n301"/>
-  <edge from="word/n300" to="pos/n301" xml:id="e301"/>
-  <a as="pos" label="pos" ref="pos/n301" xml:id="301">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n305"/>
-  <edge from="word/n304" to="pos/n305" xml:id="e305"/>
-  <a as="pos" label="pos" ref="pos/n305" xml:id="305">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n309"/>
-  <edge from="word/n308" to="pos/n309" xml:id="e309"/>
-  <a as="pos" label="pos" ref="pos/n309" xml:id="309">
-    <fs>
-      <f name="annotation_value">CONJ</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n31"/>
-  <edge from="word/n30" to="pos/n31" xml:id="e31"/>
-  <a as="pos" label="pos" ref="pos/n31" xml:id="31">
-    <fs>
-      <f name="annotation_value">ADJ</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n312"/>
-  <edge from="word/n311" to="pos/n312" xml:id="e312"/>
-  <a as="pos" label="pos" ref="pos/n312" xml:id="312">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n317"/>
-  <edge from="word/n316" to="pos/n317" xml:id="e317"/>
-  <a as="pos" label="pos" ref="pos/n317" xml:id="317">
-    <fs>
-      <f name="annotation_value">CONJS</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n321"/>
-  <edge from="word/n320" to="pos/n321" xml:id="e321"/>
-  <a as="pos" label="pos" ref="pos/n321" xml:id="321">
-    <fs>
-      <f name="annotation_value">PN</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n326"/>
-  <edge from="word/n325" to="pos/n326" xml:id="e326"/>
-  <a as="pos" label="pos" ref="pos/n326" xml:id="326">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n329"/>
-  <edge from="word/n328" to="pos/n329" xml:id="e329"/>
-  <a as="pos" label="pos" ref="pos/n329" xml:id="329">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n34"/>
-  <edge from="word/n33" to="pos/n34" xml:id="e34"/>
-  <a as="pos" label="pos" ref="pos/n34" xml:id="34">
-    <fs>
-      <f name="annotation_value">NUM</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n38"/>
-  <edge from="word/n37" to="pos/n38" xml:id="e38"/>
-  <a as="pos" label="pos" ref="pos/n38" xml:id="38">
-    <fs>
-      <f name="annotation_value">PRT</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n42"/>
-  <edge from="word/n41" to="pos/n42" xml:id="e42"/>
-  <a as="pos" label="pos" ref="pos/n42" xml:id="42">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n48"/>
-  <edge from="word/n47" to="pos/n48" xml:id="e48"/>
-  <a as="pos" label="pos" ref="pos/n48" xml:id="48">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n51"/>
-  <edge from="word/n50" to="pos/n51" xml:id="e51"/>
-  <a as="pos" label="pos" ref="pos/n51" xml:id="51">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n54"/>
-  <edge from="word/n53" to="pos/n54" xml:id="e54"/>
-  <a as="pos" label="pos" ref="pos/n54" xml:id="54">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n57"/>
-  <edge from="word/n56" to="pos/n57" xml:id="e57"/>
-  <a as="pos" label="pos" ref="pos/n57" xml:id="57">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n60"/>
-  <edge from="word/n59" to="pos/n60" xml:id="e60"/>
-  <a as="pos" label="pos" ref="pos/n60" xml:id="60">
-    <fs>
-      <f name="annotation_value">NUM</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n65"/>
-  <edge from="word/n64" to="pos/n65" xml:id="e65"/>
-  <a as="pos" label="pos" ref="pos/n65" xml:id="65">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n68"/>
-  <edge from="word/n67" to="pos/n68" xml:id="e68"/>
-  <a as="pos" label="pos" ref="pos/n68" xml:id="68">
-    <fs/>
-  </a>
-  <node xml:id="pos/n72"/>
-  <edge from="word/n71" to="pos/n72" xml:id="e72"/>
-  <a as="pos" label="pos" ref="pos/n72" xml:id="72">
-    <fs>
-      <f name="annotation_value">NUM</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n76"/>
-  <edge from="word/n75" to="pos/n76" xml:id="e76"/>
-  <a as="pos" label="pos" ref="pos/n76" xml:id="76">
-    <fs>
-      <f name="annotation_value">PRT</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n80"/>
-  <edge from="word/n79" to="pos/n80" xml:id="e80"/>
-  <a as="pos" label="pos" ref="pos/n80" xml:id="80">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n86"/>
-  <edge from="word/n85" to="pos/n86" xml:id="e86"/>
-  <a as="pos" label="pos" ref="pos/n86" xml:id="86">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n89"/>
-  <edge from="word/n88" to="pos/n89" xml:id="e89"/>
-  <a as="pos" label="pos" ref="pos/n89" xml:id="89">
-    <fs>
-      <f name="annotation_value">Nrel</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n92"/>
-  <edge from="word/n91" to="pos/n92" xml:id="e92"/>
-  <a as="pos" label="pos" ref="pos/n92" xml:id="92">
-    <fs>
-      <f name="annotation_value">V</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n95"/>
-  <edge from="word/n94" to="pos/n95" xml:id="e95"/>
-  <a as="pos" label="pos" ref="pos/n95" xml:id="95">
-    <fs>
-      <f name="annotation_value">N</f>
-    </fs>
-  </a>
-  <node xml:id="pos/n98"/>
-  <edge from="word/n97" to="pos/n98" xml:id="e98"/>
-  <a as="pos" label="pos" ref="pos/n98" xml:id="98">
-    <fs>
-      <f name="annotation_value">NUM</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="pos" occurs="80"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="word"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="pos"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="pos..n103"/>
+	<edge from="word..n102" to="pos..n103" xml:id="e103"/>
+	<a as="pos" label="pos" ref="pos..n103" xml:id="103">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n111"/>
+	<edge from="word..n110" to="pos..n111" xml:id="e111"/>
+	<a as="pos" label="pos" ref="pos..n111" xml:id="111"/>
+	<node xml:id="pos..n114"/>
+	<edge from="word..n113" to="pos..n114" xml:id="e114"/>
+	<a as="pos" label="pos" ref="pos..n114" xml:id="114">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n117"/>
+	<edge from="word..n116" to="pos..n117" xml:id="e117"/>
+	<a as="pos" label="pos" ref="pos..n117" xml:id="117">
+		<fs>
+			<f name="annotation_value">ADJ</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n120"/>
+	<edge from="word..n119" to="pos..n120" xml:id="e120"/>
+	<a as="pos" label="pos" ref="pos..n120" xml:id="120">
+		<fs>
+			<f name="annotation_value">P</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n123"/>
+	<edge from="word..n122" to="pos..n123" xml:id="e123"/>
+	<a as="pos" label="pos" ref="pos..n123" xml:id="123">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n127"/>
+	<edge from="word..n126" to="pos..n127" xml:id="e127"/>
+	<a as="pos" label="pos" ref="pos..n127" xml:id="127">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n132"/>
+	<edge from="word..n131" to="pos..n132" xml:id="e132"/>
+	<a as="pos" label="pos" ref="pos..n132" xml:id="132">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n136"/>
+	<edge from="word..n135" to="pos..n136" xml:id="e136"/>
+	<a as="pos" label="pos" ref="pos..n136" xml:id="136">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n139"/>
+	<edge from="word..n138" to="pos..n139" xml:id="e139"/>
+	<a as="pos" label="pos" ref="pos..n139" xml:id="139">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n143"/>
+	<edge from="word..n142" to="pos..n143" xml:id="e143"/>
+	<a as="pos" label="pos" ref="pos..n143" xml:id="143">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n147"/>
+	<edge from="word..n146" to="pos..n147" xml:id="e147"/>
+	<a as="pos" label="pos" ref="pos..n147" xml:id="147">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n150"/>
+	<edge from="word..n149" to="pos..n150" xml:id="e150"/>
+	<a as="pos" label="pos" ref="pos..n150" xml:id="150">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n154"/>
+	<edge from="word..n153" to="pos..n154" xml:id="e154"/>
+	<a as="pos" label="pos" ref="pos..n154" xml:id="154">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n158"/>
+	<edge from="word..n157" to="pos..n158" xml:id="e158"/>
+	<a as="pos" label="pos" ref="pos..n158" xml:id="158">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n164"/>
+	<edge from="word..n163" to="pos..n164" xml:id="e164"/>
+	<a as="pos" label="pos" ref="pos..n164" xml:id="164">
+		<fs>
+			<f name="annotation_value">PN</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n169"/>
+	<edge from="word..n168" to="pos..n169" xml:id="e169"/>
+	<a as="pos" label="pos" ref="pos..n169" xml:id="169">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n172"/>
+	<edge from="word..n171" to="pos..n172" xml:id="e172"/>
+	<a as="pos" label="pos" ref="pos..n172" xml:id="172">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n176"/>
+	<edge from="word..n175" to="pos..n176" xml:id="e176"/>
+	<a as="pos" label="pos" ref="pos..n176" xml:id="176">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n180"/>
+	<edge from="word..n179" to="pos..n180" xml:id="e180"/>
+	<a as="pos" label="pos" ref="pos..n180" xml:id="180">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n183"/>
+	<edge from="word..n182" to="pos..n183" xml:id="e183"/>
+	<a as="pos" label="pos" ref="pos..n183" xml:id="183"/>
+	<node xml:id="pos..n186"/>
+	<edge from="word..n185" to="pos..n186" xml:id="e186"/>
+	<a as="pos" label="pos" ref="pos..n186" xml:id="186">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n189"/>
+	<edge from="word..n188" to="pos..n189" xml:id="e189"/>
+	<a as="pos" label="pos" ref="pos..n189" xml:id="189">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n192"/>
+	<edge from="word..n191" to="pos..n192" xml:id="e192"/>
+	<a as="pos" label="pos" ref="pos..n192" xml:id="192">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n196"/>
+	<edge from="word..n195" to="pos..n196" xml:id="e196"/>
+	<a as="pos" label="pos" ref="pos..n196" xml:id="196">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n199"/>
+	<edge from="word..n198" to="pos..n199" xml:id="e199"/>
+	<a as="pos" label="pos" ref="pos..n199" xml:id="199">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n202"/>
+	<edge from="word..n201" to="pos..n202" xml:id="e202"/>
+	<a as="pos" label="pos" ref="pos..n202" xml:id="202">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n207"/>
+	<edge from="word..n206" to="pos..n207" xml:id="e207"/>
+	<a as="pos" label="pos" ref="pos..n207" xml:id="207">
+		<fs>
+			<f name="annotation_value">PN</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n212"/>
+	<edge from="word..n211" to="pos..n212" xml:id="e212"/>
+	<a as="pos" label="pos" ref="pos..n212" xml:id="212">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n216"/>
+	<edge from="word..n215" to="pos..n216" xml:id="e216"/>
+	<a as="pos" label="pos" ref="pos..n216" xml:id="216">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n219"/>
+	<edge from="word..n218" to="pos..n219" xml:id="e219"/>
+	<a as="pos" label="pos" ref="pos..n219" xml:id="219">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n223"/>
+	<edge from="word..n222" to="pos..n223" xml:id="e223"/>
+	<a as="pos" label="pos" ref="pos..n223" xml:id="223">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n226"/>
+	<edge from="word..n225" to="pos..n226" xml:id="e226"/>
+	<a as="pos" label="pos" ref="pos..n226" xml:id="226">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n229"/>
+	<edge from="word..n228" to="pos..n229" xml:id="e229"/>
+	<a as="pos" label="pos" ref="pos..n229" xml:id="229">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n234"/>
+	<edge from="word..n233" to="pos..n234" xml:id="e234"/>
+	<a as="pos" label="pos" ref="pos..n234" xml:id="234">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n238"/>
+	<edge from="word..n237" to="pos..n238" xml:id="e238"/>
+	<a as="pos" label="pos" ref="pos..n238" xml:id="238">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n241"/>
+	<edge from="word..n240" to="pos..n241" xml:id="e241"/>
+	<a as="pos" label="pos" ref="pos..n241" xml:id="241">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n244"/>
+	<edge from="word..n243" to="pos..n244" xml:id="e244"/>
+	<a as="pos" label="pos" ref="pos..n244" xml:id="244">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n248"/>
+	<edge from="word..n247" to="pos..n248" xml:id="e248"/>
+	<a as="pos" label="pos" ref="pos..n248" xml:id="248">
+		<fs>
+			<f name="annotation_value">MOD</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n251"/>
+	<edge from="word..n250" to="pos..n251" xml:id="e251"/>
+	<a as="pos" label="pos" ref="pos..n251" xml:id="251">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n254"/>
+	<edge from="word..n253" to="pos..n254" xml:id="e254"/>
+	<a as="pos" label="pos" ref="pos..n254" xml:id="254">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n258"/>
+	<edge from="word..n257" to="pos..n258" xml:id="e258"/>
+	<a as="pos" label="pos" ref="pos..n258" xml:id="258">
+		<fs>
+			<f name="annotation_value">PREP</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n261"/>
+	<edge from="word..n260" to="pos..n261" xml:id="e261"/>
+	<a as="pos" label="pos" ref="pos..n261" xml:id="261">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n265"/>
+	<edge from="word..n264" to="pos..n265" xml:id="e265"/>
+	<a as="pos" label="pos" ref="pos..n265" xml:id="265">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n270"/>
+	<edge from="word..n269" to="pos..n270" xml:id="e270"/>
+	<a as="pos" label="pos" ref="pos..n270" xml:id="270">
+		<fs>
+			<f name="annotation_value">PN</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n274"/>
+	<edge from="word..n273" to="pos..n274" xml:id="e274"/>
+	<a as="pos" label="pos" ref="pos..n274" xml:id="274">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n277"/>
+	<edge from="word..n276" to="pos..n277" xml:id="e277"/>
+	<a as="pos" label="pos" ref="pos..n277" xml:id="277">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n28"/>
+	<edge from="word..n27" to="pos..n28" xml:id="e28"/>
+	<a as="pos" label="pos" ref="pos..n28" xml:id="28">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n281"/>
+	<edge from="word..n280" to="pos..n281" xml:id="e281"/>
+	<a as="pos" label="pos" ref="pos..n281" xml:id="281">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n285"/>
+	<edge from="word..n284" to="pos..n285" xml:id="e285"/>
+	<a as="pos" label="pos" ref="pos..n285" xml:id="285">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n288"/>
+	<edge from="word..n287" to="pos..n288" xml:id="e288"/>
+	<a as="pos" label="pos" ref="pos..n288" xml:id="288">
+		<fs>
+			<f name="annotation_value">Vtr</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n291"/>
+	<edge from="word..n290" to="pos..n291" xml:id="e291"/>
+	<a as="pos" label="pos" ref="pos..n291" xml:id="291">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n297"/>
+	<edge from="word..n296" to="pos..n297" xml:id="e297"/>
+	<a as="pos" label="pos" ref="pos..n297" xml:id="297">
+		<fs>
+			<f name="annotation_value">CONJ</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n301"/>
+	<edge from="word..n300" to="pos..n301" xml:id="e301"/>
+	<a as="pos" label="pos" ref="pos..n301" xml:id="301">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n305"/>
+	<edge from="word..n304" to="pos..n305" xml:id="e305"/>
+	<a as="pos" label="pos" ref="pos..n305" xml:id="305">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n309"/>
+	<edge from="word..n308" to="pos..n309" xml:id="e309"/>
+	<a as="pos" label="pos" ref="pos..n309" xml:id="309">
+		<fs>
+			<f name="annotation_value">CONJ</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n31"/>
+	<edge from="word..n30" to="pos..n31" xml:id="e31"/>
+	<a as="pos" label="pos" ref="pos..n31" xml:id="31">
+		<fs>
+			<f name="annotation_value">ADJ</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n312"/>
+	<edge from="word..n311" to="pos..n312" xml:id="e312"/>
+	<a as="pos" label="pos" ref="pos..n312" xml:id="312">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n317"/>
+	<edge from="word..n316" to="pos..n317" xml:id="e317"/>
+	<a as="pos" label="pos" ref="pos..n317" xml:id="317">
+		<fs>
+			<f name="annotation_value">CONJS</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n321"/>
+	<edge from="word..n320" to="pos..n321" xml:id="e321"/>
+	<a as="pos" label="pos" ref="pos..n321" xml:id="321">
+		<fs>
+			<f name="annotation_value">PN</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n326"/>
+	<edge from="word..n325" to="pos..n326" xml:id="e326"/>
+	<a as="pos" label="pos" ref="pos..n326" xml:id="326">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n329"/>
+	<edge from="word..n328" to="pos..n329" xml:id="e329"/>
+	<a as="pos" label="pos" ref="pos..n329" xml:id="329">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n34"/>
+	<edge from="word..n33" to="pos..n34" xml:id="e34"/>
+	<a as="pos" label="pos" ref="pos..n34" xml:id="34">
+		<fs>
+			<f name="annotation_value">NUM</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n38"/>
+	<edge from="word..n37" to="pos..n38" xml:id="e38"/>
+	<a as="pos" label="pos" ref="pos..n38" xml:id="38">
+		<fs>
+			<f name="annotation_value">PRT</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n42"/>
+	<edge from="word..n41" to="pos..n42" xml:id="e42"/>
+	<a as="pos" label="pos" ref="pos..n42" xml:id="42">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n48"/>
+	<edge from="word..n47" to="pos..n48" xml:id="e48"/>
+	<a as="pos" label="pos" ref="pos..n48" xml:id="48">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n51"/>
+	<edge from="word..n50" to="pos..n51" xml:id="e51"/>
+	<a as="pos" label="pos" ref="pos..n51" xml:id="51">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n54"/>
+	<edge from="word..n53" to="pos..n54" xml:id="e54"/>
+	<a as="pos" label="pos" ref="pos..n54" xml:id="54">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n57"/>
+	<edge from="word..n56" to="pos..n57" xml:id="e57"/>
+	<a as="pos" label="pos" ref="pos..n57" xml:id="57">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n60"/>
+	<edge from="word..n59" to="pos..n60" xml:id="e60"/>
+	<a as="pos" label="pos" ref="pos..n60" xml:id="60">
+		<fs>
+			<f name="annotation_value">NUM</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n65"/>
+	<edge from="word..n64" to="pos..n65" xml:id="e65"/>
+	<a as="pos" label="pos" ref="pos..n65" xml:id="65">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n68"/>
+	<edge from="word..n67" to="pos..n68" xml:id="e68"/>
+	<a as="pos" label="pos" ref="pos..n68" xml:id="68"/>
+	<node xml:id="pos..n72"/>
+	<edge from="word..n71" to="pos..n72" xml:id="e72"/>
+	<a as="pos" label="pos" ref="pos..n72" xml:id="72">
+		<fs>
+			<f name="annotation_value">NUM</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n76"/>
+	<edge from="word..n75" to="pos..n76" xml:id="e76"/>
+	<a as="pos" label="pos" ref="pos..n76" xml:id="76">
+		<fs>
+			<f name="annotation_value">PRT</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n80"/>
+	<edge from="word..n79" to="pos..n80" xml:id="e80"/>
+	<a as="pos" label="pos" ref="pos..n80" xml:id="80">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n86"/>
+	<edge from="word..n85" to="pos..n86" xml:id="e86"/>
+	<a as="pos" label="pos" ref="pos..n86" xml:id="86">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n89"/>
+	<edge from="word..n88" to="pos..n89" xml:id="e89"/>
+	<a as="pos" label="pos" ref="pos..n89" xml:id="89">
+		<fs>
+			<f name="annotation_value">Nrel</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n92"/>
+	<edge from="word..n91" to="pos..n92" xml:id="e92"/>
+	<a as="pos" label="pos" ref="pos..n92" xml:id="92">
+		<fs>
+			<f name="annotation_value">V</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n95"/>
+	<edge from="word..n94" to="pos..n95" xml:id="e95"/>
+	<a as="pos" label="pos" ref="pos..n95" xml:id="95">
+		<fs>
+			<f name="annotation_value">N</f>
+		</fs>
+	</a>
+	<node xml:id="pos..n98"/>
+	<edge from="word..n97" to="pos..n98" xml:id="e98"/>
+	<a as="pos" label="pos" ref="pos..n98" xml:id="98">
+		<fs>
+			<f name="annotation_value">NUM</f>
+		</fs>
+	</a>
 </graph>
