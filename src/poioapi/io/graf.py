@@ -244,6 +244,8 @@ class GrAFConverter:
 
         for tier in self.parser.get_root_tiers():
             self._convert_tier(tier, None, None)
+            if tier.annotation_space not in self.graf.header.roots:
+                self.graf.header.roots.append(tier.annotation_space)
 
         i = 0
         for t in self._tiers_parent_list:
