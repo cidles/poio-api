@@ -413,9 +413,9 @@ class Writer:
         for tier in self._flatten_hierarchy_elements(tier_hierarchies):
 
             for et in meta_information.findall("TIER"):
-                if et.attrib["TIER_ID"] == tier.split('/')[-1]:
+                if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
                     for node in graf_graph.nodes:
-                        if tier == str(node.id).split('/na')[0]:
+                        if tier == str(node.id).split(poioapi.io.graf.GRAFSEPARATOR+"na")[0]:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
