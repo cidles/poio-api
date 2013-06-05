@@ -6,7 +6,9 @@
 # URL: <http://www.cidles.eu/ltll/poio>
 # For license information, see LICENSE.TXT
 
-import sys, getopt
+import os
+import sys
+import getopt
 
 import poioapi.annotationgraph
 import poioapi.data
@@ -41,8 +43,17 @@ def main(argv):
     # Create a graph from an pickle file
     annotation_graph.from_pickle(inputfile)
 
-    # Generate the GrAF files
-    annotation_graph.generate_graf_files(inputfile, outputfile)
+    graf_graph = annotation_graph.graf
+    tier_hierarchies = annotation_graph.tier_hierarchies
+
+    writer = poioapi.io.graf.Writer()
+
+    # Set values for the document header
+    writer.standoffheader.filedesc.titlestmt = "Pickle Example"
+    writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
+                                                  'f.id': "text"}
+
+    writer.write(outputfile, graf_graph, tier_hierarchies)
 
     print('Finished')
 
