@@ -1,147 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="utterance"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="phonetic_transcription"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="phonetic_transcription/W-IPA/n217"/>
-  <edge from="utterance/W-Spch/n8" to="phonetic_transcription/W-IPA/n217" xml:id="e217"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n217" xml:id="a217">
-    <fs>
-      <f name="ref_annotation">a8</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">səʋ  juː ɡɔ aut əf ðə ɪnstɪtjuːt tʊ zə sant ana straːt</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n218"/>
-  <edge from="utterance/W-Spch/n9" to="phonetic_transcription/W-IPA/n218" xml:id="e218"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n218" xml:id="a218">
-    <fs>
-      <f name="ref_annotation">a9</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ənd ðen juː ɡəʊ ðɪ ɔθɛ sant ana straːt tʊ ðɪs to ðə sɛntə əf ðə taun tu ðɪs bɪɡ rɔtundə</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n219"/>
-  <edge from="utterance/W-Spch/n10" to="phonetic_transcription/W-IPA/n219" xml:id="e219"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n219" xml:id="a219">
-    <fs>
-      <f name="ref_annotation">a10</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ænd juː fɔləʊ ðən ðə saɪn kleːf</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n220"/>
-  <edge from="utterance/W-Spch/n11" to="phonetic_transcription/W-IPA/n220" xml:id="e220"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n220" xml:id="a220">
-    <fs>
-      <f name="ref_annotation">a11</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ðæts ðə ɔranjə sɪŋl</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n221"/>
-  <edge from="utterance/W-Spch/n12" to="phonetic_transcription/W-IPA/n221" xml:id="e221"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n221" xml:id="a221">
-    <fs>
-      <f name="ref_annotation">a12</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ðen juː fɔləʊ ðə saɪn kleːf</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n222"/>
-  <edge from="utterance/W-Spch/n13" to="phonetic_transcription/W-IPA/n222" xml:id="e222"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n222" xml:id="a222">
-    <fs>
-      <f name="ref_annotation">a13</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">juː kʌm daʊn</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n223"/>
-  <edge from="utterance/W-Spch/n14" to="phonetic_transcription/W-IPA/n223" xml:id="e223"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n223" xml:id="a223">
-    <fs>
-      <f name="ref_annotation">a14</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">juː nɔː ə aftə ðɪs trajanus pleːɪn</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n224"/>
-  <edge from="utterance/W-Spch/n15" to="phonetic_transcription/W-IPA/n224" xml:id="e224"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n224" xml:id="a224">
-    <fs>
-      <f name="ref_annotation">a15</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">juː kʌm daʊn tʊ ðə</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n225"/>
-  <edge from="utterance/W-Spch/n16" to="phonetic_transcription/W-IPA/n225" xml:id="e225"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n225" xml:id="a225">
-    <fs>
-      <f name="ref_annotation">a16</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">raɪn ə vælɪ</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n226"/>
-  <edge from="utterance/W-Spch/n17" to="phonetic_transcription/W-IPA/n226" xml:id="e226"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n226" xml:id="a226">
-    <fs>
-      <f name="ref_annotation">a17</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">jɛː ðæts ənaðə ə</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n227"/>
-  <edge from="utterance/W-Spch/n18" to="phonetic_transcription/W-IPA/n227" xml:id="e227"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n227" xml:id="a227">
-    <fs>
-      <f name="ref_annotation">a18</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">kaɪnd əv rotʊndə</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n228"/>
-  <edge from="utterance/W-Spch/n19" to="phonetic_transcription/W-IPA/n228" xml:id="e228"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n228" xml:id="a228">
-    <fs>
-      <f name="ref_annotation">a19</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ənd ðen juː fɔləʊ ðə saɪns kleːf</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n229"/>
-  <edge from="utterance/W-Spch/n20" to="phonetic_transcription/W-IPA/n229" xml:id="e229"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n229" xml:id="a229">
-    <fs>
-      <f name="ref_annotation">a20</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">jə ɡɔ daʊn</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n230"/>
-  <edge from="utterance/W-Spch/n21" to="phonetic_transcription/W-IPA/n230" xml:id="e230"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n230" xml:id="a230">
-    <fs>
-      <f name="ref_annotation">a21</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ənd ðen juː ɡɔ ðə ðɪs weɪ</f>
-    </fs>
-  </a>
-  <node xml:id="phonetic_transcription/W-IPA/n231"/>
-  <edge from="utterance/W-Spch/n22" to="phonetic_transcription/W-IPA/n231" xml:id="e231"/>
-  <a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription/W-IPA/n231" xml:id="a231">
-    <fs>
-      <f name="ref_annotation">a22</f>
-      <f name="tier_id">W-IPA</f>
-      <f name="annotation_value">ə jaː tʊ kleːf</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="phonetic_transcription" occurs="15"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="utterance"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="phonetic_transcription"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="phonetic_transcription..W-IPA..na217"/>
+	<edge from="utterance..W-Spch..na8" to="phonetic_transcription..W-IPA..na217" xml:id="ea217"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na217" xml:id="a217">
+		<fs>
+			<f name="ref_annotation">a8</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">səʋ  juː ɡɔ aut əf ðə ɪnstɪtjuːt tʊ zə sant ana straːt</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na218"/>
+	<edge from="utterance..W-Spch..na9" to="phonetic_transcription..W-IPA..na218" xml:id="ea218"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na218" xml:id="a218">
+		<fs>
+			<f name="ref_annotation">a9</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ənd ðen juː ɡəʊ ðɪ ɔθɛ sant ana straːt tʊ ðɪs to ðə sɛntə əf ðə taun tu ðɪs bɪɡ rɔtundə</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na219"/>
+	<edge from="utterance..W-Spch..na10" to="phonetic_transcription..W-IPA..na219" xml:id="ea219"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na219" xml:id="a219">
+		<fs>
+			<f name="ref_annotation">a10</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ænd juː fɔləʊ ðən ðə saɪn kleːf</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na220"/>
+	<edge from="utterance..W-Spch..na11" to="phonetic_transcription..W-IPA..na220" xml:id="ea220"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na220" xml:id="a220">
+		<fs>
+			<f name="ref_annotation">a11</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ðæts ðə ɔranjə sɪŋl</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na221"/>
+	<edge from="utterance..W-Spch..na12" to="phonetic_transcription..W-IPA..na221" xml:id="ea221"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na221" xml:id="a221">
+		<fs>
+			<f name="ref_annotation">a12</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ðen juː fɔləʊ ðə saɪn kleːf</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na222"/>
+	<edge from="utterance..W-Spch..na13" to="phonetic_transcription..W-IPA..na222" xml:id="ea222"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na222" xml:id="a222">
+		<fs>
+			<f name="ref_annotation">a13</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">juː kʌm daʊn</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na223"/>
+	<edge from="utterance..W-Spch..na14" to="phonetic_transcription..W-IPA..na223" xml:id="ea223"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na223" xml:id="a223">
+		<fs>
+			<f name="ref_annotation">a14</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">juː nɔː ə aftə ðɪs trajanus pleːɪn</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na224"/>
+	<edge from="utterance..W-Spch..na15" to="phonetic_transcription..W-IPA..na224" xml:id="ea224"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na224" xml:id="a224">
+		<fs>
+			<f name="ref_annotation">a15</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">juː kʌm daʊn tʊ ðə</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na225"/>
+	<edge from="utterance..W-Spch..na16" to="phonetic_transcription..W-IPA..na225" xml:id="ea225"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na225" xml:id="a225">
+		<fs>
+			<f name="ref_annotation">a16</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">raɪn ə vælɪ</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na226"/>
+	<edge from="utterance..W-Spch..na17" to="phonetic_transcription..W-IPA..na226" xml:id="ea226"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na226" xml:id="a226">
+		<fs>
+			<f name="ref_annotation">a17</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">jɛː ðæts ənaðə ə</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na227"/>
+	<edge from="utterance..W-Spch..na18" to="phonetic_transcription..W-IPA..na227" xml:id="ea227"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na227" xml:id="a227">
+		<fs>
+			<f name="ref_annotation">a18</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">kaɪnd əv rotʊndə</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na228"/>
+	<edge from="utterance..W-Spch..na19" to="phonetic_transcription..W-IPA..na228" xml:id="ea228"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na228" xml:id="a228">
+		<fs>
+			<f name="ref_annotation">a19</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ənd ðen juː fɔləʊ ðə saɪns kleːf</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na229"/>
+	<edge from="utterance..W-Spch..na20" to="phonetic_transcription..W-IPA..na229" xml:id="ea229"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na229" xml:id="a229">
+		<fs>
+			<f name="ref_annotation">a20</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">jə ɡɔ daʊn</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na230"/>
+	<edge from="utterance..W-Spch..na21" to="phonetic_transcription..W-IPA..na230" xml:id="ea230"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na230" xml:id="a230">
+		<fs>
+			<f name="ref_annotation">a21</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ənd ðen juː ɡɔ ðə ðɪs weɪ</f>
+		</fs>
+	</a>
+	<node xml:id="phonetic_transcription..W-IPA..na231"/>
+	<edge from="utterance..W-Spch..na22" to="phonetic_transcription..W-IPA..na231" xml:id="ea231"/>
+	<a as="phonetic_transcription" label="phonetic_transcription" ref="phonetic_transcription..W-IPA..na231" xml:id="a231">
+		<fs>
+			<f name="ref_annotation">a22</f>
+			<f name="tier_id">W-IPA</f>
+			<f name="annotation_value">ə jaː tʊ kleːf</f>
+		</fs>
+	</a>
 </graph>

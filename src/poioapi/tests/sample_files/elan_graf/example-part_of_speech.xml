@@ -1,885 +1,886 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="words"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="part_of_speech"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="part_of_speech/W-POS/n120"/>
-  <edge from="words/W-Words/n23" to="part_of_speech/W-POS/n120" xml:id="e120"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n120" xml:id="a120">
-    <fs>
-      <f name="ref_annotation">a23</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value"/>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n121"/>
-  <edge from="words/W-Words/n24" to="part_of_speech/W-POS/n121" xml:id="e121"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n121" xml:id="a121">
-    <fs>
-      <f name="ref_annotation">a24</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n122"/>
-  <edge from="words/W-Words/n25" to="part_of_speech/W-POS/n122" xml:id="e122"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n122" xml:id="a122">
-    <fs>
-      <f name="ref_annotation">a25</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n123"/>
-  <edge from="words/W-Words/n26" to="part_of_speech/W-POS/n123" xml:id="e123"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n123" xml:id="a123">
-    <fs>
-      <f name="ref_annotation">a26</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n124"/>
-  <edge from="words/W-Words/n27" to="part_of_speech/W-POS/n124" xml:id="e124"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n124" xml:id="a124">
-    <fs>
-      <f name="ref_annotation">a27</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n125"/>
-  <edge from="words/W-Words/n28" to="part_of_speech/W-POS/n125" xml:id="e125"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n125" xml:id="a125">
-    <fs>
-      <f name="ref_annotation">a28</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n126"/>
-  <edge from="words/W-Words/n29" to="part_of_speech/W-POS/n126" xml:id="e126"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n126" xml:id="a126">
-    <fs>
-      <f name="ref_annotation">a29</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n127"/>
-  <edge from="words/W-Words/n30" to="part_of_speech/W-POS/n127" xml:id="e127"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n127" xml:id="a127">
-    <fs>
-      <f name="ref_annotation">a30</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n128"/>
-  <edge from="words/W-Words/n31" to="part_of_speech/W-POS/n128" xml:id="e128"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n128" xml:id="a128">
-    <fs>
-      <f name="ref_annotation">a31</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n129"/>
-  <edge from="words/W-Words/n32" to="part_of_speech/W-POS/n129" xml:id="e129"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n129" xml:id="a129">
-    <fs>
-      <f name="ref_annotation">a32</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n130"/>
-  <edge from="words/W-Words/n33" to="part_of_speech/W-POS/n130" xml:id="e130"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n130" xml:id="a130">
-    <fs>
-      <f name="ref_annotation">a33</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n131"/>
-  <edge from="words/W-Words/n34" to="part_of_speech/W-POS/n131" xml:id="e131"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n131" xml:id="a131">
-    <fs>
-      <f name="ref_annotation">a34</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n132"/>
-  <edge from="words/W-Words/n35" to="part_of_speech/W-POS/n132" xml:id="e132"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n132" xml:id="a132">
-    <fs>
-      <f name="ref_annotation">a35</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">con</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n133"/>
-  <edge from="words/W-Words/n36" to="part_of_speech/W-POS/n133" xml:id="e133"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n133" xml:id="a133">
-    <fs>
-      <f name="ref_annotation">a36</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n134"/>
-  <edge from="words/W-Words/n37" to="part_of_speech/W-POS/n134" xml:id="e134"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n134" xml:id="a134">
-    <fs>
-      <f name="ref_annotation">a37</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n135"/>
-  <edge from="words/W-Words/n38" to="part_of_speech/W-POS/n135" xml:id="e135"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n135" xml:id="a135">
-    <fs>
-      <f name="ref_annotation">a38</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n136"/>
-  <edge from="words/W-Words/n39" to="part_of_speech/W-POS/n136" xml:id="e136"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n136" xml:id="a136">
-    <fs>
-      <f name="ref_annotation">a39</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n137"/>
-  <edge from="words/W-Words/n40" to="part_of_speech/W-POS/n137" xml:id="e137"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n137" xml:id="a137">
-    <fs>
-      <f name="ref_annotation">a40</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adj</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n138"/>
-  <edge from="words/W-Words/n41" to="part_of_speech/W-POS/n138" xml:id="e138"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n138" xml:id="a138">
-    <fs>
-      <f name="ref_annotation">a41</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n139"/>
-  <edge from="words/W-Words/n42" to="part_of_speech/W-POS/n139" xml:id="e139"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n139" xml:id="a139">
-    <fs>
-      <f name="ref_annotation">a42</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n140"/>
-  <edge from="words/W-Words/n43" to="part_of_speech/W-POS/n140" xml:id="e140"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n140" xml:id="a140">
-    <fs>
-      <f name="ref_annotation">a43</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n141"/>
-  <edge from="words/W-Words/n44" to="part_of_speech/W-POS/n141" xml:id="e141"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n141" xml:id="a141">
-    <fs>
-      <f name="ref_annotation">a44</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n142"/>
-  <edge from="words/W-Words/n45" to="part_of_speech/W-POS/n142" xml:id="e142"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n142" xml:id="a142">
-    <fs>
-      <f name="ref_annotation">a45</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">dem</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n143"/>
-  <edge from="words/W-Words/n46" to="part_of_speech/W-POS/n143" xml:id="e143"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n143" xml:id="a143">
-    <fs>
-      <f name="ref_annotation">a46</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n144"/>
-  <edge from="words/W-Words/n47" to="part_of_speech/W-POS/n144" xml:id="e144"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n144" xml:id="a144">
-    <fs>
-      <f name="ref_annotation">a47</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n145"/>
-  <edge from="words/W-Words/n48" to="part_of_speech/W-POS/n145" xml:id="e145"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n145" xml:id="a145">
-    <fs>
-      <f name="ref_annotation">a48</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n146"/>
-  <edge from="words/W-Words/n49" to="part_of_speech/W-POS/n146" xml:id="e146"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n146" xml:id="a146">
-    <fs>
-      <f name="ref_annotation">a49</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n147"/>
-  <edge from="words/W-Words/n50" to="part_of_speech/W-POS/n147" xml:id="e147"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n147" xml:id="a147">
-    <fs>
-      <f name="ref_annotation">a50</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n148"/>
-  <edge from="words/W-Words/n51" to="part_of_speech/W-POS/n148" xml:id="e148"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n148" xml:id="a148">
-    <fs>
-      <f name="ref_annotation">a51</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n149"/>
-  <edge from="words/W-Words/n52" to="part_of_speech/W-POS/n149" xml:id="e149"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n149" xml:id="a149">
-    <fs>
-      <f name="ref_annotation">a52</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n150"/>
-  <edge from="words/W-Words/n53" to="part_of_speech/W-POS/n150" xml:id="e150"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n150" xml:id="a150">
-    <fs>
-      <f name="ref_annotation">a53</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">dem</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n151"/>
-  <edge from="words/W-Words/n54" to="part_of_speech/W-POS/n151" xml:id="e151"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n151" xml:id="a151">
-    <fs>
-      <f name="ref_annotation">a54</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adj</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n152"/>
-  <edge from="words/W-Words/n55" to="part_of_speech/W-POS/n152" xml:id="e152"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n152" xml:id="a152">
-    <fs>
-      <f name="ref_annotation">a55</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n153"/>
-  <edge from="words/W-Words/n56" to="part_of_speech/W-POS/n153" xml:id="e153"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n153" xml:id="a153">
-    <fs>
-      <f name="ref_annotation">a56</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">con</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n154"/>
-  <edge from="words/W-Words/n57" to="part_of_speech/W-POS/n154" xml:id="e154"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n154" xml:id="a154">
-    <fs>
-      <f name="ref_annotation">a57</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n155"/>
-  <edge from="words/W-Words/n58" to="part_of_speech/W-POS/n155" xml:id="e155"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n155" xml:id="a155">
-    <fs>
-      <f name="ref_annotation">a58</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n156"/>
-  <edge from="words/W-Words/n59" to="part_of_speech/W-POS/n156" xml:id="e156"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n156" xml:id="a156">
-    <fs>
-      <f name="ref_annotation">a59</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n157"/>
-  <edge from="words/W-Words/n60" to="part_of_speech/W-POS/n157" xml:id="e157"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n157" xml:id="a157">
-    <fs>
-      <f name="ref_annotation">a60</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n158"/>
-  <edge from="words/W-Words/n61" to="part_of_speech/W-POS/n158" xml:id="e158"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n158" xml:id="a158">
-    <fs>
-      <f name="ref_annotation">a61</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n159"/>
-  <edge from="words/W-Words/n62" to="part_of_speech/W-POS/n159" xml:id="e159"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n159" xml:id="a159">
-    <fs>
-      <f name="ref_annotation">a62</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n160"/>
-  <edge from="words/W-Words/n63" to="part_of_speech/W-POS/n160" xml:id="e160"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n160" xml:id="a160">
-    <fs>
-      <f name="ref_annotation">a63</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">dem</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n161"/>
-  <edge from="words/W-Words/n64" to="part_of_speech/W-POS/n161" xml:id="e161"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n161" xml:id="a161">
-    <fs>
-      <f name="ref_annotation">a64</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n162"/>
-  <edge from="words/W-Words/n65" to="part_of_speech/W-POS/n162" xml:id="e162"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n162" xml:id="a162">
-    <fs>
-      <f name="ref_annotation">a65</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n163"/>
-  <edge from="words/W-Words/n66" to="part_of_speech/W-POS/n163" xml:id="e163"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n163" xml:id="a163">
-    <fs>
-      <f name="ref_annotation">a66</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n164"/>
-  <edge from="words/W-Words/n67" to="part_of_speech/W-POS/n164" xml:id="e164"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n164" xml:id="a164">
-    <fs>
-      <f name="ref_annotation">a67</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n165"/>
-  <edge from="words/W-Words/n68" to="part_of_speech/W-POS/n165" xml:id="e165"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n165" xml:id="a165">
-    <fs>
-      <f name="ref_annotation">a68</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n166"/>
-  <edge from="words/W-Words/n69" to="part_of_speech/W-POS/n166" xml:id="e166"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n166" xml:id="a166">
-    <fs>
-      <f name="ref_annotation">a69</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n167"/>
-  <edge from="words/W-Words/n70" to="part_of_speech/W-POS/n167" xml:id="e167"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n167" xml:id="a167">
-    <fs>
-      <f name="ref_annotation">a70</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n168"/>
-  <edge from="words/W-Words/n71" to="part_of_speech/W-POS/n168" xml:id="e168"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n168" xml:id="a168">
-    <fs>
-      <f name="ref_annotation">a71</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n169"/>
-  <edge from="words/W-Words/n72" to="part_of_speech/W-POS/n169" xml:id="e169"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n169" xml:id="a169">
-    <fs>
-      <f name="ref_annotation">a72</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n170"/>
-  <edge from="words/W-Words/n73" to="part_of_speech/W-POS/n170" xml:id="e170"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n170" xml:id="a170">
-    <fs>
-      <f name="ref_annotation">a73</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n171"/>
-  <edge from="words/W-Words/n74" to="part_of_speech/W-POS/n171" xml:id="e171"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n171" xml:id="a171">
-    <fs>
-      <f name="ref_annotation">a74</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n172"/>
-  <edge from="words/W-Words/n75" to="part_of_speech/W-POS/n172" xml:id="e172"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n172" xml:id="a172">
-    <fs>
-      <f name="ref_annotation">a75</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n173"/>
-  <edge from="words/W-Words/n76" to="part_of_speech/W-POS/n173" xml:id="e173"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n173" xml:id="a173">
-    <fs>
-      <f name="ref_annotation">a76</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n174"/>
-  <edge from="words/W-Words/n77" to="part_of_speech/W-POS/n174" xml:id="e174"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n174" xml:id="a174">
-    <fs>
-      <f name="ref_annotation">a77</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n175"/>
-  <edge from="words/W-Words/n78" to="part_of_speech/W-POS/n175" xml:id="e175"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n175" xml:id="a175">
-    <fs>
-      <f name="ref_annotation">a78</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n176"/>
-  <edge from="words/W-Words/n79" to="part_of_speech/W-POS/n176" xml:id="e176"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n176" xml:id="a176">
-    <fs>
-      <f name="ref_annotation">a79</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">post</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n177"/>
-  <edge from="words/W-Words/n80" to="part_of_speech/W-POS/n177" xml:id="e177"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n177" xml:id="a177">
-    <fs>
-      <f name="ref_annotation">a80</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n178"/>
-  <edge from="words/W-Words/n81" to="part_of_speech/W-POS/n178" xml:id="e178"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n178" xml:id="a178">
-    <fs>
-      <f name="ref_annotation">a81</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">dem</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n179"/>
-  <edge from="words/W-Words/n82" to="part_of_speech/W-POS/n179" xml:id="e179"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n179" xml:id="a179">
-    <fs>
-      <f name="ref_annotation">a82</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n180"/>
-  <edge from="words/W-Words/n83" to="part_of_speech/W-POS/n180" xml:id="e180"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n180" xml:id="a180">
-    <fs>
-      <f name="ref_annotation">a83</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n181"/>
-  <edge from="words/W-Words/n84" to="part_of_speech/W-POS/n181" xml:id="e181"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n181" xml:id="a181">
-    <fs>
-      <f name="ref_annotation">a84</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n182"/>
-  <edge from="words/W-Words/n85" to="part_of_speech/W-POS/n182" xml:id="e182"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n182" xml:id="a182">
-    <fs>
-      <f name="ref_annotation">a85</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n183"/>
-  <edge from="words/W-Words/n86" to="part_of_speech/W-POS/n183" xml:id="e183"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n183" xml:id="a183">
-    <fs>
-      <f name="ref_annotation">a86</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n184"/>
-  <edge from="words/W-Words/n87" to="part_of_speech/W-POS/n184" xml:id="e184"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n184" xml:id="a184">
-    <fs>
-      <f name="ref_annotation">a87</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n185"/>
-  <edge from="words/W-Words/n88" to="part_of_speech/W-POS/n185" xml:id="e185"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n185" xml:id="a185">
-    <fs>
-      <f name="ref_annotation">a88</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n186"/>
-  <edge from="words/W-Words/n89" to="part_of_speech/W-POS/n186" xml:id="e186"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n186" xml:id="a186">
-    <fs>
-      <f name="ref_annotation">a89</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n187"/>
-  <edge from="words/W-Words/n90" to="part_of_speech/W-POS/n187" xml:id="e187"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n187" xml:id="a187">
-    <fs>
-      <f name="ref_annotation">a90</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">post</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n188"/>
-  <edge from="words/W-Words/n91" to="part_of_speech/W-POS/n188" xml:id="e188"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n188" xml:id="a188">
-    <fs>
-      <f name="ref_annotation">a91</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n189"/>
-  <edge from="words/W-Words/n92" to="part_of_speech/W-POS/n189" xml:id="e189"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n189" xml:id="a189">
-    <fs>
-      <f name="ref_annotation">a92</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">int</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n190"/>
-  <edge from="words/W-Words/n93" to="part_of_speech/W-POS/n190" xml:id="e190"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n190" xml:id="a190">
-    <fs>
-      <f name="ref_annotation">a93</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">dem</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n191"/>
-  <edge from="words/W-Words/n94" to="part_of_speech/W-POS/n191" xml:id="e191"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n191" xml:id="a191">
-    <fs>
-      <f name="ref_annotation">a94</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n192"/>
-  <edge from="words/W-Words/n95" to="part_of_speech/W-POS/n192" xml:id="e192"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n192" xml:id="a192">
-    <fs>
-      <f name="ref_annotation">a95</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adj</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n193"/>
-  <edge from="words/W-Words/n96" to="part_of_speech/W-POS/n193" xml:id="e193"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n193" xml:id="a193">
-    <fs>
-      <f name="ref_annotation">a96</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">part</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n194"/>
-  <edge from="words/W-Words/n97" to="part_of_speech/W-POS/n194" xml:id="e194"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n194" xml:id="a194">
-    <fs>
-      <f name="ref_annotation">a97</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n195"/>
-  <edge from="words/W-Words/n98" to="part_of_speech/W-POS/n195" xml:id="e195"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n195" xml:id="a195">
-    <fs>
-      <f name="ref_annotation">a98</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n196"/>
-  <edge from="words/W-Words/n99" to="part_of_speech/W-POS/n196" xml:id="e196"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n196" xml:id="a196">
-    <fs>
-      <f name="ref_annotation">a99</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n197"/>
-  <edge from="words/W-Words/n100" to="part_of_speech/W-POS/n197" xml:id="e197"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n197" xml:id="a197">
-    <fs>
-      <f name="ref_annotation">a100</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">con</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n198"/>
-  <edge from="words/W-Words/n101" to="part_of_speech/W-POS/n198" xml:id="e198"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n198" xml:id="a198">
-    <fs>
-      <f name="ref_annotation">a101</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n199"/>
-  <edge from="words/W-Words/n102" to="part_of_speech/W-POS/n199" xml:id="e199"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n199" xml:id="a199">
-    <fs>
-      <f name="ref_annotation">a102</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n200"/>
-  <edge from="words/W-Words/n103" to="part_of_speech/W-POS/n200" xml:id="e200"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n200" xml:id="a200">
-    <fs>
-      <f name="ref_annotation">a103</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n201"/>
-  <edge from="words/W-Words/n104" to="part_of_speech/W-POS/n201" xml:id="e201"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n201" xml:id="a201">
-    <fs>
-      <f name="ref_annotation">a104</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n202"/>
-  <edge from="words/W-Words/n105" to="part_of_speech/W-POS/n202" xml:id="e202"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n202" xml:id="a202">
-    <fs>
-      <f name="ref_annotation">a105</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n203"/>
-  <edge from="words/W-Words/n106" to="part_of_speech/W-POS/n203" xml:id="e203"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n203" xml:id="a203">
-    <fs>
-      <f name="ref_annotation">a106</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n204"/>
-  <edge from="words/W-Words/n107" to="part_of_speech/W-POS/n204" xml:id="e204"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n204" xml:id="a204">
-    <fs>
-      <f name="ref_annotation">a107</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n205"/>
-  <edge from="words/W-Words/n108" to="part_of_speech/W-POS/n205" xml:id="e205"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n205" xml:id="a205">
-    <fs>
-      <f name="ref_annotation">a108</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n206"/>
-  <edge from="words/W-Words/n109" to="part_of_speech/W-POS/n206" xml:id="e206"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n206" xml:id="a206">
-    <fs>
-      <f name="ref_annotation">a109</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">con</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n207"/>
-  <edge from="words/W-Words/n110" to="part_of_speech/W-POS/n207" xml:id="e207"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n207" xml:id="a207">
-    <fs>
-      <f name="ref_annotation">a110</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">adv</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n208"/>
-  <edge from="words/W-Words/n111" to="part_of_speech/W-POS/n208" xml:id="e208"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n208" xml:id="a208">
-    <fs>
-      <f name="ref_annotation">a111</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">pro</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n209"/>
-  <edge from="words/W-Words/n112" to="part_of_speech/W-POS/n209" xml:id="e209"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n209" xml:id="a209">
-    <fs>
-      <f name="ref_annotation">a112</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">v</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n210"/>
-  <edge from="words/W-Words/n113" to="part_of_speech/W-POS/n210" xml:id="e210"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n210" xml:id="a210">
-    <fs>
-      <f name="ref_annotation">a113</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">art</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n211"/>
-  <edge from="words/W-Words/n114" to="part_of_speech/W-POS/n211" xml:id="e211"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n211" xml:id="a211">
-    <fs>
-      <f name="ref_annotation">a114</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">dem</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n212"/>
-  <edge from="words/W-Words/n115" to="part_of_speech/W-POS/n212" xml:id="e212"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n212" xml:id="a212">
-    <fs>
-      <f name="ref_annotation">a115</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n213"/>
-  <edge from="words/W-Words/n116" to="part_of_speech/W-POS/n213" xml:id="e213"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n213" xml:id="a213">
-    <fs>
-      <f name="ref_annotation">a116</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">part</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n214"/>
-  <edge from="words/W-Words/n117" to="part_of_speech/W-POS/n214" xml:id="e214"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n214" xml:id="a214">
-    <fs>
-      <f name="ref_annotation">a117</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">int</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n215"/>
-  <edge from="words/W-Words/n118" to="part_of_speech/W-POS/n215" xml:id="e215"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n215" xml:id="a215">
-    <fs>
-      <f name="ref_annotation">a118</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">prep</f>
-    </fs>
-  </a>
-  <node xml:id="part_of_speech/W-POS/n216"/>
-  <edge from="words/W-Words/n119" to="part_of_speech/W-POS/n216" xml:id="e216"/>
-  <a as="part_of_speech" label="part_of_speech" ref="part_of_speech/W-POS/n216" xml:id="a216">
-    <fs>
-      <f name="ref_annotation">a119</f>
-      <f name="tier_id">W-POS</f>
-      <f name="annotation_value">n</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="part_of_speech" occurs="97"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="words"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="part_of_speech"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="part_of_speech..W-POS..na120"/>
+	<edge from="words..W-Words..na23" to="part_of_speech..W-POS..na120" xml:id="ea120"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na120" xml:id="a120">
+		<fs>
+			<f name="ref_annotation">a23</f>
+			<f name="tier_id">W-POS</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na121"/>
+	<edge from="words..W-Words..na24" to="part_of_speech..W-POS..na121" xml:id="ea121"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na121" xml:id="a121">
+		<fs>
+			<f name="ref_annotation">a24</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na122"/>
+	<edge from="words..W-Words..na25" to="part_of_speech..W-POS..na122" xml:id="ea122"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na122" xml:id="a122">
+		<fs>
+			<f name="ref_annotation">a25</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na123"/>
+	<edge from="words..W-Words..na26" to="part_of_speech..W-POS..na123" xml:id="ea123"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na123" xml:id="a123">
+		<fs>
+			<f name="ref_annotation">a26</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na124"/>
+	<edge from="words..W-Words..na27" to="part_of_speech..W-POS..na124" xml:id="ea124"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na124" xml:id="a124">
+		<fs>
+			<f name="ref_annotation">a27</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na125"/>
+	<edge from="words..W-Words..na28" to="part_of_speech..W-POS..na125" xml:id="ea125"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na125" xml:id="a125">
+		<fs>
+			<f name="ref_annotation">a28</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na126"/>
+	<edge from="words..W-Words..na29" to="part_of_speech..W-POS..na126" xml:id="ea126"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na126" xml:id="a126">
+		<fs>
+			<f name="ref_annotation">a29</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na127"/>
+	<edge from="words..W-Words..na30" to="part_of_speech..W-POS..na127" xml:id="ea127"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na127" xml:id="a127">
+		<fs>
+			<f name="ref_annotation">a30</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na128"/>
+	<edge from="words..W-Words..na31" to="part_of_speech..W-POS..na128" xml:id="ea128"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na128" xml:id="a128">
+		<fs>
+			<f name="ref_annotation">a31</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na129"/>
+	<edge from="words..W-Words..na32" to="part_of_speech..W-POS..na129" xml:id="ea129"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na129" xml:id="a129">
+		<fs>
+			<f name="ref_annotation">a32</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na130"/>
+	<edge from="words..W-Words..na33" to="part_of_speech..W-POS..na130" xml:id="ea130"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na130" xml:id="a130">
+		<fs>
+			<f name="ref_annotation">a33</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na131"/>
+	<edge from="words..W-Words..na34" to="part_of_speech..W-POS..na131" xml:id="ea131"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na131" xml:id="a131">
+		<fs>
+			<f name="ref_annotation">a34</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na132"/>
+	<edge from="words..W-Words..na35" to="part_of_speech..W-POS..na132" xml:id="ea132"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na132" xml:id="a132">
+		<fs>
+			<f name="ref_annotation">a35</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">con</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na133"/>
+	<edge from="words..W-Words..na36" to="part_of_speech..W-POS..na133" xml:id="ea133"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na133" xml:id="a133">
+		<fs>
+			<f name="ref_annotation">a36</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na134"/>
+	<edge from="words..W-Words..na37" to="part_of_speech..W-POS..na134" xml:id="ea134"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na134" xml:id="a134">
+		<fs>
+			<f name="ref_annotation">a37</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na135"/>
+	<edge from="words..W-Words..na38" to="part_of_speech..W-POS..na135" xml:id="ea135"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na135" xml:id="a135">
+		<fs>
+			<f name="ref_annotation">a38</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na136"/>
+	<edge from="words..W-Words..na39" to="part_of_speech..W-POS..na136" xml:id="ea136"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na136" xml:id="a136">
+		<fs>
+			<f name="ref_annotation">a39</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na137"/>
+	<edge from="words..W-Words..na40" to="part_of_speech..W-POS..na137" xml:id="ea137"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na137" xml:id="a137">
+		<fs>
+			<f name="ref_annotation">a40</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adj</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na138"/>
+	<edge from="words..W-Words..na41" to="part_of_speech..W-POS..na138" xml:id="ea138"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na138" xml:id="a138">
+		<fs>
+			<f name="ref_annotation">a41</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na139"/>
+	<edge from="words..W-Words..na42" to="part_of_speech..W-POS..na139" xml:id="ea139"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na139" xml:id="a139">
+		<fs>
+			<f name="ref_annotation">a42</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na140"/>
+	<edge from="words..W-Words..na43" to="part_of_speech..W-POS..na140" xml:id="ea140"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na140" xml:id="a140">
+		<fs>
+			<f name="ref_annotation">a43</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na141"/>
+	<edge from="words..W-Words..na44" to="part_of_speech..W-POS..na141" xml:id="ea141"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na141" xml:id="a141">
+		<fs>
+			<f name="ref_annotation">a44</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na142"/>
+	<edge from="words..W-Words..na45" to="part_of_speech..W-POS..na142" xml:id="ea142"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na142" xml:id="a142">
+		<fs>
+			<f name="ref_annotation">a45</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">dem</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na143"/>
+	<edge from="words..W-Words..na46" to="part_of_speech..W-POS..na143" xml:id="ea143"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na143" xml:id="a143">
+		<fs>
+			<f name="ref_annotation">a46</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na144"/>
+	<edge from="words..W-Words..na47" to="part_of_speech..W-POS..na144" xml:id="ea144"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na144" xml:id="a144">
+		<fs>
+			<f name="ref_annotation">a47</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na145"/>
+	<edge from="words..W-Words..na48" to="part_of_speech..W-POS..na145" xml:id="ea145"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na145" xml:id="a145">
+		<fs>
+			<f name="ref_annotation">a48</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na146"/>
+	<edge from="words..W-Words..na49" to="part_of_speech..W-POS..na146" xml:id="ea146"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na146" xml:id="a146">
+		<fs>
+			<f name="ref_annotation">a49</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na147"/>
+	<edge from="words..W-Words..na50" to="part_of_speech..W-POS..na147" xml:id="ea147"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na147" xml:id="a147">
+		<fs>
+			<f name="ref_annotation">a50</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na148"/>
+	<edge from="words..W-Words..na51" to="part_of_speech..W-POS..na148" xml:id="ea148"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na148" xml:id="a148">
+		<fs>
+			<f name="ref_annotation">a51</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na149"/>
+	<edge from="words..W-Words..na52" to="part_of_speech..W-POS..na149" xml:id="ea149"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na149" xml:id="a149">
+		<fs>
+			<f name="ref_annotation">a52</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na150"/>
+	<edge from="words..W-Words..na53" to="part_of_speech..W-POS..na150" xml:id="ea150"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na150" xml:id="a150">
+		<fs>
+			<f name="ref_annotation">a53</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">dem</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na151"/>
+	<edge from="words..W-Words..na54" to="part_of_speech..W-POS..na151" xml:id="ea151"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na151" xml:id="a151">
+		<fs>
+			<f name="ref_annotation">a54</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adj</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na152"/>
+	<edge from="words..W-Words..na55" to="part_of_speech..W-POS..na152" xml:id="ea152"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na152" xml:id="a152">
+		<fs>
+			<f name="ref_annotation">a55</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na153"/>
+	<edge from="words..W-Words..na56" to="part_of_speech..W-POS..na153" xml:id="ea153"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na153" xml:id="a153">
+		<fs>
+			<f name="ref_annotation">a56</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">con</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na154"/>
+	<edge from="words..W-Words..na57" to="part_of_speech..W-POS..na154" xml:id="ea154"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na154" xml:id="a154">
+		<fs>
+			<f name="ref_annotation">a57</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na155"/>
+	<edge from="words..W-Words..na58" to="part_of_speech..W-POS..na155" xml:id="ea155"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na155" xml:id="a155">
+		<fs>
+			<f name="ref_annotation">a58</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na156"/>
+	<edge from="words..W-Words..na59" to="part_of_speech..W-POS..na156" xml:id="ea156"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na156" xml:id="a156">
+		<fs>
+			<f name="ref_annotation">a59</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na157"/>
+	<edge from="words..W-Words..na60" to="part_of_speech..W-POS..na157" xml:id="ea157"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na157" xml:id="a157">
+		<fs>
+			<f name="ref_annotation">a60</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na158"/>
+	<edge from="words..W-Words..na61" to="part_of_speech..W-POS..na158" xml:id="ea158"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na158" xml:id="a158">
+		<fs>
+			<f name="ref_annotation">a61</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na159"/>
+	<edge from="words..W-Words..na62" to="part_of_speech..W-POS..na159" xml:id="ea159"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na159" xml:id="a159">
+		<fs>
+			<f name="ref_annotation">a62</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na160"/>
+	<edge from="words..W-Words..na63" to="part_of_speech..W-POS..na160" xml:id="ea160"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na160" xml:id="a160">
+		<fs>
+			<f name="ref_annotation">a63</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">dem</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na161"/>
+	<edge from="words..W-Words..na64" to="part_of_speech..W-POS..na161" xml:id="ea161"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na161" xml:id="a161">
+		<fs>
+			<f name="ref_annotation">a64</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na162"/>
+	<edge from="words..W-Words..na65" to="part_of_speech..W-POS..na162" xml:id="ea162"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na162" xml:id="a162">
+		<fs>
+			<f name="ref_annotation">a65</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na163"/>
+	<edge from="words..W-Words..na66" to="part_of_speech..W-POS..na163" xml:id="ea163"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na163" xml:id="a163">
+		<fs>
+			<f name="ref_annotation">a66</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na164"/>
+	<edge from="words..W-Words..na67" to="part_of_speech..W-POS..na164" xml:id="ea164"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na164" xml:id="a164">
+		<fs>
+			<f name="ref_annotation">a67</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na165"/>
+	<edge from="words..W-Words..na68" to="part_of_speech..W-POS..na165" xml:id="ea165"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na165" xml:id="a165">
+		<fs>
+			<f name="ref_annotation">a68</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na166"/>
+	<edge from="words..W-Words..na69" to="part_of_speech..W-POS..na166" xml:id="ea166"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na166" xml:id="a166">
+		<fs>
+			<f name="ref_annotation">a69</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na167"/>
+	<edge from="words..W-Words..na70" to="part_of_speech..W-POS..na167" xml:id="ea167"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na167" xml:id="a167">
+		<fs>
+			<f name="ref_annotation">a70</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na168"/>
+	<edge from="words..W-Words..na71" to="part_of_speech..W-POS..na168" xml:id="ea168"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na168" xml:id="a168">
+		<fs>
+			<f name="ref_annotation">a71</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na169"/>
+	<edge from="words..W-Words..na72" to="part_of_speech..W-POS..na169" xml:id="ea169"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na169" xml:id="a169">
+		<fs>
+			<f name="ref_annotation">a72</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na170"/>
+	<edge from="words..W-Words..na73" to="part_of_speech..W-POS..na170" xml:id="ea170"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na170" xml:id="a170">
+		<fs>
+			<f name="ref_annotation">a73</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na171"/>
+	<edge from="words..W-Words..na74" to="part_of_speech..W-POS..na171" xml:id="ea171"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na171" xml:id="a171">
+		<fs>
+			<f name="ref_annotation">a74</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na172"/>
+	<edge from="words..W-Words..na75" to="part_of_speech..W-POS..na172" xml:id="ea172"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na172" xml:id="a172">
+		<fs>
+			<f name="ref_annotation">a75</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na173"/>
+	<edge from="words..W-Words..na76" to="part_of_speech..W-POS..na173" xml:id="ea173"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na173" xml:id="a173">
+		<fs>
+			<f name="ref_annotation">a76</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na174"/>
+	<edge from="words..W-Words..na77" to="part_of_speech..W-POS..na174" xml:id="ea174"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na174" xml:id="a174">
+		<fs>
+			<f name="ref_annotation">a77</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na175"/>
+	<edge from="words..W-Words..na78" to="part_of_speech..W-POS..na175" xml:id="ea175"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na175" xml:id="a175">
+		<fs>
+			<f name="ref_annotation">a78</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na176"/>
+	<edge from="words..W-Words..na79" to="part_of_speech..W-POS..na176" xml:id="ea176"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na176" xml:id="a176">
+		<fs>
+			<f name="ref_annotation">a79</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">post</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na177"/>
+	<edge from="words..W-Words..na80" to="part_of_speech..W-POS..na177" xml:id="ea177"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na177" xml:id="a177">
+		<fs>
+			<f name="ref_annotation">a80</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na178"/>
+	<edge from="words..W-Words..na81" to="part_of_speech..W-POS..na178" xml:id="ea178"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na178" xml:id="a178">
+		<fs>
+			<f name="ref_annotation">a81</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">dem</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na179"/>
+	<edge from="words..W-Words..na82" to="part_of_speech..W-POS..na179" xml:id="ea179"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na179" xml:id="a179">
+		<fs>
+			<f name="ref_annotation">a82</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na180"/>
+	<edge from="words..W-Words..na83" to="part_of_speech..W-POS..na180" xml:id="ea180"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na180" xml:id="a180">
+		<fs>
+			<f name="ref_annotation">a83</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na181"/>
+	<edge from="words..W-Words..na84" to="part_of_speech..W-POS..na181" xml:id="ea181"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na181" xml:id="a181">
+		<fs>
+			<f name="ref_annotation">a84</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na182"/>
+	<edge from="words..W-Words..na85" to="part_of_speech..W-POS..na182" xml:id="ea182"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na182" xml:id="a182">
+		<fs>
+			<f name="ref_annotation">a85</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na183"/>
+	<edge from="words..W-Words..na86" to="part_of_speech..W-POS..na183" xml:id="ea183"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na183" xml:id="a183">
+		<fs>
+			<f name="ref_annotation">a86</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na184"/>
+	<edge from="words..W-Words..na87" to="part_of_speech..W-POS..na184" xml:id="ea184"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na184" xml:id="a184">
+		<fs>
+			<f name="ref_annotation">a87</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na185"/>
+	<edge from="words..W-Words..na88" to="part_of_speech..W-POS..na185" xml:id="ea185"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na185" xml:id="a185">
+		<fs>
+			<f name="ref_annotation">a88</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na186"/>
+	<edge from="words..W-Words..na89" to="part_of_speech..W-POS..na186" xml:id="ea186"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na186" xml:id="a186">
+		<fs>
+			<f name="ref_annotation">a89</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na187"/>
+	<edge from="words..W-Words..na90" to="part_of_speech..W-POS..na187" xml:id="ea187"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na187" xml:id="a187">
+		<fs>
+			<f name="ref_annotation">a90</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">post</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na188"/>
+	<edge from="words..W-Words..na91" to="part_of_speech..W-POS..na188" xml:id="ea188"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na188" xml:id="a188">
+		<fs>
+			<f name="ref_annotation">a91</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na189"/>
+	<edge from="words..W-Words..na92" to="part_of_speech..W-POS..na189" xml:id="ea189"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na189" xml:id="a189">
+		<fs>
+			<f name="ref_annotation">a92</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">int</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na190"/>
+	<edge from="words..W-Words..na93" to="part_of_speech..W-POS..na190" xml:id="ea190"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na190" xml:id="a190">
+		<fs>
+			<f name="ref_annotation">a93</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">dem</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na191"/>
+	<edge from="words..W-Words..na94" to="part_of_speech..W-POS..na191" xml:id="ea191"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na191" xml:id="a191">
+		<fs>
+			<f name="ref_annotation">a94</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na192"/>
+	<edge from="words..W-Words..na95" to="part_of_speech..W-POS..na192" xml:id="ea192"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na192" xml:id="a192">
+		<fs>
+			<f name="ref_annotation">a95</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adj</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na193"/>
+	<edge from="words..W-Words..na96" to="part_of_speech..W-POS..na193" xml:id="ea193"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na193" xml:id="a193">
+		<fs>
+			<f name="ref_annotation">a96</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">part</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na194"/>
+	<edge from="words..W-Words..na97" to="part_of_speech..W-POS..na194" xml:id="ea194"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na194" xml:id="a194">
+		<fs>
+			<f name="ref_annotation">a97</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na195"/>
+	<edge from="words..W-Words..na98" to="part_of_speech..W-POS..na195" xml:id="ea195"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na195" xml:id="a195">
+		<fs>
+			<f name="ref_annotation">a98</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na196"/>
+	<edge from="words..W-Words..na99" to="part_of_speech..W-POS..na196" xml:id="ea196"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na196" xml:id="a196">
+		<fs>
+			<f name="ref_annotation">a99</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na197"/>
+	<edge from="words..W-Words..na100" to="part_of_speech..W-POS..na197" xml:id="ea197"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na197" xml:id="a197">
+		<fs>
+			<f name="ref_annotation">a100</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">con</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na198"/>
+	<edge from="words..W-Words..na101" to="part_of_speech..W-POS..na198" xml:id="ea198"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na198" xml:id="a198">
+		<fs>
+			<f name="ref_annotation">a101</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na199"/>
+	<edge from="words..W-Words..na102" to="part_of_speech..W-POS..na199" xml:id="ea199"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na199" xml:id="a199">
+		<fs>
+			<f name="ref_annotation">a102</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na200"/>
+	<edge from="words..W-Words..na103" to="part_of_speech..W-POS..na200" xml:id="ea200"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na200" xml:id="a200">
+		<fs>
+			<f name="ref_annotation">a103</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na201"/>
+	<edge from="words..W-Words..na104" to="part_of_speech..W-POS..na201" xml:id="ea201"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na201" xml:id="a201">
+		<fs>
+			<f name="ref_annotation">a104</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na202"/>
+	<edge from="words..W-Words..na105" to="part_of_speech..W-POS..na202" xml:id="ea202"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na202" xml:id="a202">
+		<fs>
+			<f name="ref_annotation">a105</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na203"/>
+	<edge from="words..W-Words..na106" to="part_of_speech..W-POS..na203" xml:id="ea203"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na203" xml:id="a203">
+		<fs>
+			<f name="ref_annotation">a106</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na204"/>
+	<edge from="words..W-Words..na107" to="part_of_speech..W-POS..na204" xml:id="ea204"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na204" xml:id="a204">
+		<fs>
+			<f name="ref_annotation">a107</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na205"/>
+	<edge from="words..W-Words..na108" to="part_of_speech..W-POS..na205" xml:id="ea205"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na205" xml:id="a205">
+		<fs>
+			<f name="ref_annotation">a108</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na206"/>
+	<edge from="words..W-Words..na109" to="part_of_speech..W-POS..na206" xml:id="ea206"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na206" xml:id="a206">
+		<fs>
+			<f name="ref_annotation">a109</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">con</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na207"/>
+	<edge from="words..W-Words..na110" to="part_of_speech..W-POS..na207" xml:id="ea207"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na207" xml:id="a207">
+		<fs>
+			<f name="ref_annotation">a110</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">adv</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na208"/>
+	<edge from="words..W-Words..na111" to="part_of_speech..W-POS..na208" xml:id="ea208"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na208" xml:id="a208">
+		<fs>
+			<f name="ref_annotation">a111</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">pro</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na209"/>
+	<edge from="words..W-Words..na112" to="part_of_speech..W-POS..na209" xml:id="ea209"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na209" xml:id="a209">
+		<fs>
+			<f name="ref_annotation">a112</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">v</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na210"/>
+	<edge from="words..W-Words..na113" to="part_of_speech..W-POS..na210" xml:id="ea210"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na210" xml:id="a210">
+		<fs>
+			<f name="ref_annotation">a113</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">art</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na211"/>
+	<edge from="words..W-Words..na114" to="part_of_speech..W-POS..na211" xml:id="ea211"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na211" xml:id="a211">
+		<fs>
+			<f name="ref_annotation">a114</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">dem</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na212"/>
+	<edge from="words..W-Words..na115" to="part_of_speech..W-POS..na212" xml:id="ea212"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na212" xml:id="a212">
+		<fs>
+			<f name="ref_annotation">a115</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na213"/>
+	<edge from="words..W-Words..na116" to="part_of_speech..W-POS..na213" xml:id="ea213"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na213" xml:id="a213">
+		<fs>
+			<f name="ref_annotation">a116</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">part</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na214"/>
+	<edge from="words..W-Words..na117" to="part_of_speech..W-POS..na214" xml:id="ea214"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na214" xml:id="a214">
+		<fs>
+			<f name="ref_annotation">a117</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">int</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na215"/>
+	<edge from="words..W-Words..na118" to="part_of_speech..W-POS..na215" xml:id="ea215"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na215" xml:id="a215">
+		<fs>
+			<f name="ref_annotation">a118</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">prep</f>
+		</fs>
+	</a>
+	<node xml:id="part_of_speech..W-POS..na216"/>
+	<edge from="words..W-Words..na119" to="part_of_speech..W-POS..na216" xml:id="ea216"/>
+	<a as="part_of_speech" label="part_of_speech" ref="part_of_speech..W-POS..na216" xml:id="a216">
+		<fs>
+			<f name="ref_annotation">a119</f>
+			<f name="tier_id">W-POS</f>
+			<f name="annotation_value">n</f>
+		</fs>
+	</a>
 </graph>

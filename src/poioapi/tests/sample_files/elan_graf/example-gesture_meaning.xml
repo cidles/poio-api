@@ -1,192 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies>
-      <dependsOn f.id="gesture_phases"/>
-    </dependencies>
-    <annotationSpaces>
-      <annotationSpace as.id="gesture_meaning"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="gesture_meaning/W-RGMe/n292"/>
-  <edge from="gesture_phases/W-RGph/n235" to="gesture_meaning/W-RGMe/n292" xml:id="e292"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n292" xml:id="a292">
-    <fs>
-      <f name="ref_annotation">a235</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going out of the Insitute</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n293"/>
-  <edge from="gesture_phases/W-RGph/n238" to="gesture_meaning/W-RGMe/n293" xml:id="e293"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n293" xml:id="a293">
-    <fs>
-      <f name="ref_annotation">a238</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going out of MPI to Saint Anna Street</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n294"/>
-  <edge from="gesture_phases/W-RGph/n241" to="gesture_meaning/W-RGMe/n294" xml:id="e294"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n294" xml:id="a294">
-    <fs>
-      <f name="ref_annotation">a241</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going along St. Anna Street</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n295"/>
-  <edge from="gesture_phases/W-RGph/n246" to="gesture_meaning/W-RGMe/n295" xml:id="e295"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n295" xml:id="a295">
-    <fs>
-      <f name="ref_annotation">a246</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going along St. Anna Street</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n296"/>
-  <edge from="gesture_phases/W-RGph/n248" to="gesture_meaning/W-RGMe/n296" xml:id="e296"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n296" xml:id="a296">
-    <fs>
-      <f name="ref_annotation">a248</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">A roundabout</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n297"/>
-  <edge from="gesture_phases/W-RGph/n252" to="gesture_meaning/W-RGMe/n297" xml:id="e297"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n297" xml:id="a297">
-    <fs>
-      <f name="ref_annotation">a252</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going to the direction of Kleve</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n298"/>
-  <edge from="gesture_phases/W-RGph/n255" to="gesture_meaning/W-RGMe/n298" xml:id="e298"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n298" xml:id="a298">
-    <fs>
-      <f name="ref_annotation">a255</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going along Oranje Singel (Street)</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n299"/>
-  <edge from="gesture_phases/W-RGph/n259" to="gesture_meaning/W-RGMe/n299" xml:id="e299"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n299" xml:id="a299">
-    <fs>
-      <f name="ref_annotation">a259</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going to the direction of Kleve</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n300"/>
-  <edge from="gesture_phases/W-RGph/n262" to="gesture_meaning/W-RGMe/n300" xml:id="e300"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n300" xml:id="a300">
-    <fs>
-      <f name="ref_annotation">a262</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going down</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n301"/>
-  <edge from="gesture_phases/W-RGph/n265" to="gesture_meaning/W-RGMe/n301" xml:id="e301"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n301" xml:id="a301">
-    <fs>
-      <f name="ref_annotation">a265</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">a roundabout</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n302"/>
-  <edge from="gesture_phases/W-RGph/n267" to="gesture_meaning/W-RGMe/n302" xml:id="e302"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n302" xml:id="a302">
-    <fs>
-      <f name="ref_annotation">a267</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">a roundabout</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n303"/>
-  <edge from="gesture_phases/W-RGph/n269" to="gesture_meaning/W-RGMe/n303" xml:id="e303"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n303" xml:id="a303">
-    <fs>
-      <f name="ref_annotation">a269</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going down</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n304"/>
-  <edge from="gesture_phases/W-RGph/n273" to="gesture_meaning/W-RGMe/n304" xml:id="e304"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n304" xml:id="a304">
-    <fs>
-      <f name="ref_annotation">a273</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going down</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n305"/>
-  <edge from="gesture_phases/W-RGph/n276" to="gesture_meaning/W-RGMe/n305" xml:id="e305"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n305" xml:id="a305">
-    <fs>
-      <f name="ref_annotation">a276</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">a roundabout</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n306"/>
-  <edge from="gesture_phases/W-RGph/n279" to="gesture_meaning/W-RGMe/n306" xml:id="e306"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n306" xml:id="a306">
-    <fs>
-      <f name="ref_annotation">a279</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">a roundabout</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n307"/>
-  <edge from="gesture_phases/W-RGph/n281" to="gesture_meaning/W-RGMe/n307" xml:id="e307"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n307" xml:id="a307">
-    <fs>
-      <f name="ref_annotation">a281</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">a roundabout</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n308"/>
-  <edge from="gesture_phases/W-RGph/n285" to="gesture_meaning/W-RGMe/n308" xml:id="e308"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n308" xml:id="a308">
-    <fs>
-      <f name="ref_annotation">a285</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going down</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n309"/>
-  <edge from="gesture_phases/W-RGph/n288" to="gesture_meaning/W-RGMe/n309" xml:id="e309"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n309" xml:id="a309">
-    <fs>
-      <f name="ref_annotation">a288</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going down</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/W-RGMe/n310"/>
-  <edge from="gesture_phases/W-RGph/n290" to="gesture_meaning/W-RGMe/n310" xml:id="e310"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/W-RGMe/n310" xml:id="a310">
-    <fs>
-      <f name="ref_annotation">a290</f>
-      <f name="tier_id">W-RGMe</f>
-      <f name="annotation_value">Going to Kleve</f>
-    </fs>
-  </a>
-  <node xml:id="gesture_meaning/K-RGMe/n315"/>
-  <edge from="gesture_phases/K-RGph/n313" to="gesture_meaning/K-RGMe/n315" xml:id="e315"/>
-  <a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning/K-RGMe/n315" xml:id="a315">
-    <fs>
-      <f name="ref_annotation">a313</f>
-      <f name="tier_id">K-RGMe</f>
-      <f name="annotation_value">a roundabout</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="gesture_meaning" occurs="1"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="gesture_phases"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="gesture_meaning"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="gesture_meaning..K-RGMe..na315"/>
+	<edge from="gesture_phases..K-RGph..na313" to="gesture_meaning..K-RGMe..na315" xml:id="ea315"/>
+	<a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning..K-RGMe..na315" xml:id="a315">
+		<fs>
+			<f name="ref_annotation">a313</f>
+			<f name="tier_id">K-RGMe</f>
+			<f name="annotation_value">a roundabout</f>
+		</fs>
+	</a>
 </graph>

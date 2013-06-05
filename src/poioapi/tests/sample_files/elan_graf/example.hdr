@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader date.created="2013-03-11" docID="PoioAPI-884438" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <fileDesc>
-    <fileName>/home/alopes/tests/elan/example</fileName>
-    <extent count="0" unit="words"/>
-    <sourceDesc>
-      <author age="" sex="">alopes</author>
-      <source type="Contributor">Cont</source>
-      <publisher>self</publisher>
-      <pubDate iso8601="2013-03-11"/>
-      <idno type="ISBN">9164784</idno>
-    </sourceDesc>
-  </fileDesc>
-  <profileDesc>
-    <textClass catRef="PT">
-      <subject>Revitatilization</subject>
-    </textClass>
-  </profileDesc>
-  <dataDesc>
-    <primaryData f.id="text" loc="example.eaf">
-      <annotations>
-        <annotation f.id="gesture_meaning" loc="example-gesture_meaning.xml"/>
-        <annotation f.id="part_of_speech" loc="example-part_of_speech.xml"/>
-        <annotation f.id="gesture_phases" loc="example-gesture_phases.xml"/>
-        <annotation f.id="gestures" loc="example-gestures.xml"/>
-        <annotation f.id="words" loc="example-words.xml"/>
-        <annotation f.id="phonetic_transcription" loc="example-phonetic_transcription.xml"/>
-        <annotation f.id="utterance" loc="example-utterance.xml"/>
-      </annotations>
-    </primaryData>
-  </dataDesc>
+<documentHeader creator="alopes" date.created="2013-06-05" docId="PoioAPI-44102" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<fileDesc>
+		<titleStmt>
+			<title>Elan Example</title>
+		</titleStmt>
+		<sourceDesc>
+			<documentation>Documentation Place</documentation>
+		</sourceDesc>
+	</fileDesc>
+	<profileDesc>
+		<textClass catRef="EN"/>
+		<primaryData f.id="audio" loc="example.eaf"/>
+		<annotations>
+			<annotation f.id="utterance" loc="example-utterance.xml" loctype="relative"/>
+			<annotation f.id="gestures" loc="example-gestures.xml" loctype="relative"/>
+			<annotation f.id="gesture_phases" loc="example-gesture_phases.xml" loctype="relative"/>
+			<annotation f.id="gesture_meaning" loc="example-gesture_meaning.xml" loctype="relative"/>
+			<annotation f.id="words" loc="example-words.xml" loctype="relative"/>
+			<annotation f.id="part_of_speech" loc="example-part_of_speech.xml" loctype="relative"/>
+			<annotation f.id="phonetic_transcription" loc="example-phonetic_transcription.xml" loctype="relative"/>
+		</annotations>
+	</profileDesc>
 </documentHeader>

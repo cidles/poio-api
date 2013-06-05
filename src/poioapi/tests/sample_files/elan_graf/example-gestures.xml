@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
-  <graphHeader>
-    <labelsDecl/>
-    <dependencies/>
-    <annotationSpaces>
-      <annotationSpace as.id="gestures"/>
-    </annotationSpaces>
-  </graphHeader>
-  <node xml:id="gestures/W-RGU/n232">
-    <link targets="gestures/W-RGU/r232"/>
-  </node>
-  <region anchors="0 33840" xml:id="gestures/W-RGU/r232"/>
-  <a as="gestures" label="gestures" ref="gestures/W-RGU/n232" xml:id="a232">
-    <fs>
-      <f name="annotation_value">R Gesture Unit 1</f>
-      <f name="time_slot2">ts183</f>
-      <f name="time_slot1">ts1</f>
-    </fs>
-  </a>
-  <node xml:id="gestures/K-RGU/n311">
-    <link targets="gestures/K-RGU/r311"/>
-  </node>
-  <region anchors="23120 24040" xml:id="gestures/K-RGU/r311"/>
-  <a as="gestures" label="gestures" ref="gestures/K-RGU/n311" xml:id="a311">
-    <fs>
-      <f name="annotation_value">R Gesture Unit 1</f>
-      <f name="time_slot2">ts129</f>
-      <f name="time_slot1">ts122</f>
-    </fs>
-  </a>
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="gestures" occurs="1"/>
+		</labelsDecl>
+		<dependencies/>
+		<annotationSpaces>
+			<annotationSpace as.id="gestures"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="gestures..K-RGU..na311">
+		<link targets="gestures..K-RGU..ra311"/>
+	</node>
+	<region anchors="23120 24040" xml:id="gestures..K-RGU..ra311"/>
+	<a as="gestures" label="gestures" ref="gestures..K-RGU..na311" xml:id="a311">
+		<fs>
+			<f name="time_slot1">ts122</f>
+			<f name="time_slot2">ts129</f>
+			<f name="annotation_value">R Gesture Unit 1</f>
+		</fs>
+	</a>
 </graph>
