@@ -20,6 +20,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import poioapi.io.elan
 import poioapi.io.graf
 import poioapi.io.pickle
+import poioapi.io.toolbox
 import poioapi.io.typecraft
 
 from poioapi import data
@@ -264,6 +265,8 @@ class AnnotationGraph():
             parser = poioapi.io.typecraft.Parser(stream)
         elif stream_type == poioapi.data.TREEPICKLE:
             parser = poioapi.io.pickle.Parser(stream)
+        elif stream_type == poioapi.data.TOOLBOX:
+            parser = poioapi.io.toolbox.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.parse()
@@ -295,6 +298,13 @@ class AnnotationGraph():
 
         """
         self._from_file(stream, poioapi.data.TREEPICKLE)
+
+    def from_toolbox(self, stream):
+        """This method generates a GrAF object
+        from a xml toolbox file.
+
+        """
+        self._from_file(stream, poioapi.data.TOOLBOX)
 
     def from_graf(self, stream):
         """Load the project annotation graph from a GrAF/XML file or stream.
