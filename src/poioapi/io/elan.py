@@ -109,15 +109,6 @@ class Parser(poioapi.io.graf.BaseParser):
                 if "PARENT_REF" in t.attrib and
                    t.attrib["PARENT_REF"] == tier.name]
 
-        # child_tiers = []
-        #
-        # for t in self.tree.findall("TIER"):
-        #     if "PARENT_REF" in t.attrib and t.attrib["PARENT_REF"] == tier.name:
-        #         child_tiers.append(ElanTier(t.attrib['TIER_ID'],
-        #                                     t.attrib['LINGUISTIC_TYPE_REF']))
-        #
-        # return child_tiers
-
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         """This method retrieves all the annotations
         of a specific tier. In elan type files there
@@ -147,17 +138,6 @@ class Parser(poioapi.io.graf.BaseParser):
         annotations = []
         tier_annotations = []
 
-        # for t in self.tree.findall("TIER"):
-        #     if t.attrib["TIER_ID"] == tier.name:
-        #         if annotation_parent is not None and not self.tier_has_regions(tier):
-        #             for a in t.findall("ANNOTATION/*"):
-        #                 if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
-        #                     tier_annotations.append(a)
-        #             break
-        #         else:
-        #             tier_annotations = t.findall("ANNOTATION/*")
-        #             break
-
         for t in self.tree.findall("TIER"):
             if t.attrib["TIER_ID"] == tier.name:
                 if annotation_parent:
@@ -184,11 +164,6 @@ class Parser(poioapi.io.graf.BaseParser):
                 else:
                     continue
             else:
-                # annotation_ref = annotation.attrib['ANNOTATION_REF']
-
-                # features = {'ref_annotation': annotation_ref,
-                #             'tier_id': tier.name}
-
                 for attribute in annotation.attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
                        attribute != 'ANNOTATION_VALUE':
@@ -231,18 +206,9 @@ class Parser(poioapi.io.graf.BaseParser):
         time_slot1 = self.regions_map[annotation.id]["time_slot1"]
         time_slot2 = self.regions_map[annotation.id]["time_slot2"]
 
-        region = (time_slot1, time_slot2)
+        region = (self.time_order[time_slot1], self.time_order[time_slot2])
 
         return region
-        # if 'time_slot1' in annotation.features:
-        #     part_1 = int(self.time_order[annotation.features['time_slot1']])
-        #     part_2 = int(self.time_order[annotation.features['time_slot2']])
-        #
-        #     region = (part_1, part_2)
-        #
-        #     return region
-        #
-        # return None
 
     def tier_has_regions(self, tier):
         """This method check if a tier has regions.
@@ -447,20 +413,10 @@ class Writer:
                                 if node.links:
                                     ann_type = "ALIGNABLE_ANNOTATION"
 
-                                    # features['TIME_SLOT_REF1'] = ann.features['time_slot1']
-                                    # features['TIME_SLOT_REF2'] = ann.features['time_slot2']
-
                                     anchors = node.links[0][0].anchors
 
                                     features['TIME_SLOT_REF1'] = anchors[0]
                                     features['TIME_SLOT_REF2'] = anchors[1]
-
-                                # if "ref_annotation" in ann.features:
-                                #     ann_type = "REF_ANNOTATION"
-                                    # features["ANNOTATION_REF"] = ann.features["ref_annotation"]
-
-                                    # if "previous_annotation" in ann.features:
-                                    #     features["PREVIOUS_ANNOTATION"] = ann.features["previous_annotation"]
 
                                 else:
                                     ann_type = "REF_ANNOTATION"
@@ -474,12 +430,6 @@ class Writer:
                                     annotation_value = ann.features['annotation_value']
 
                                 for key, feature in ann.features.items():
-                                    # if key != 'ref_annotation' and\
-                                    #    key != 'annotation_value' and\
-                                    #    key != 'tier_id' and\
-                                    #    key != 'previous_annotation' and not 'time_slot' in key:
-                                    #     features[key] = feature
-
                                     if key != "annotation_value" and key != "previous_annotation":
                                         features[key] = feature
 
