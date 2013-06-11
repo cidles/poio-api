@@ -66,7 +66,8 @@ class Parser(poioapi.io.graf.BaseParser):
         # http://stackoverflow.com/questions/3418262/python-unicode-and-elementtree-parse
         self.root = ET.parse(self.filepath)
         self.tree = self.root.getroot()
-        self.regions_map = self._map_time_slots()
+        self.time_order = self._map_time_slots()
+        self.regions_map = {}
         self.meta_information = self._retrieve_aditional_information()
 
     def get_root_tiers(self):
@@ -103,14 +104,19 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        child_tiers = []
+        return [ElanTier(t.attrib['TIER_ID'], t.attrib['LINGUISTIC_TYPE_REF'])
+                for t in self.tree.findall("TIER")
+                if "PARENT_REF" in t.attrib and
+                   t.attrib["PARENT_REF"] == tier.name]
 
-        for t in self.tree.findall("TIER"):
-            if "PARENT_REF" in t.attrib and t.attrib["PARENT_REF"] == tier.name:
-                child_tiers.append(ElanTier(t.attrib['TIER_ID'],
-                    t.attrib['LINGUISTIC_TYPE_REF']))
-
-        return child_tiers
+        # child_tiers = []
+        #
+        # for t in self.tree.findall("TIER"):
+        #     if "PARENT_REF" in t.attrib and t.attrib["PARENT_REF"] == tier.name:
+        #         child_tiers.append(ElanTier(t.attrib['TIER_ID'],
+        #                                     t.attrib['LINGUISTIC_TYPE_REF']))
+        #
+        # return child_tiers
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         """This method retrieves all the annotations
@@ -141,35 +147,47 @@ class Parser(poioapi.io.graf.BaseParser):
         annotations = []
         tier_annotations = []
 
+        # for t in self.tree.findall("TIER"):
+        #     if t.attrib["TIER_ID"] == tier.name:
+        #         if annotation_parent is not None and not self.tier_has_regions(tier):
+        #             for a in t.findall("ANNOTATION/*"):
+        #                 if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
+        #                     tier_annotations.append(a)
+        #             break
+        #         else:
+        #             tier_annotations = t.findall("ANNOTATION/*")
+        #             break
+
         for t in self.tree.findall("TIER"):
             if t.attrib["TIER_ID"] == tier.name:
-                if annotation_parent is not None and not self.tier_has_regions(tier):
+                if annotation_parent:
                     for a in t.findall("ANNOTATION/*"):
                         if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
                             tier_annotations.append(a)
-                    break
-                else:
+                elif self.tier_has_regions(tier):
                     tier_annotations = t.findall("ANNOTATION/*")
-                    break
+
+                break
 
         for annotation in tier_annotations:
             annotation_id = annotation.attrib['ANNOTATION_ID']
             annotation_value = annotation.find('ANNOTATION_VALUE').text
+            features = {}
 
             if annotation.tag == "ALIGNABLE_ANNOTATION":
                 if annotation_parent is None:
-                    features = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
-                                'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
+                    self.regions_map[annotation_id] = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
+                                                       'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
                 elif self._find_ranges_in_annotation_parent(annotation_parent, annotation):
-                    features = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
-                                'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
+                    self.regions_map[annotation_id] = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
+                                                       'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
                 else:
                     continue
             else:
-                annotation_ref = annotation.attrib['ANNOTATION_REF']
+                # annotation_ref = annotation.attrib['ANNOTATION_REF']
 
-                features = {'ref_annotation': annotation_ref,
-                            'tier_id': tier.name}
+                # features = {'ref_annotation': annotation_ref,
+                #             'tier_id': tier.name}
 
                 for attribute in annotation.attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
@@ -184,8 +202,8 @@ class Parser(poioapi.io.graf.BaseParser):
         if annotation_parent is not None:
             annotation_parent_regions = self.region_for_annotation(annotation_parent)
 
-            annotation_regions = [int(self.regions_map[annotation.attrib['TIME_SLOT_REF1']]),
-                                  int(self.regions_map[annotation.attrib['TIME_SLOT_REF2']])]
+            annotation_regions = [int(self.time_order[annotation.attrib['TIME_SLOT_REF1']]),
+                                  int(self.time_order[annotation.attrib['TIME_SLOT_REF2']])]
 
             if annotation_parent_regions[0] <= annotation_regions[0]\
             and annotation_regions[1] <= annotation_parent_regions[1]:
@@ -210,15 +228,21 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        if 'time_slot1' in annotation.features:
-            part_1 = int(self.regions_map[annotation.features['time_slot1']])
-            part_2 = int(self.regions_map[annotation.features['time_slot2']])
+        time_slot1 = self.regions_map[annotation.id]["time_slot1"]
+        time_slot2 = self.regions_map[annotation.id]["time_slot2"]
 
-            region = (part_1, part_2)
+        region = (time_slot1, time_slot2)
 
-            return region
-
-        return None
+        return region
+        # if 'time_slot1' in annotation.features:
+        #     part_1 = int(self.time_order[annotation.features['time_slot1']])
+        #     part_2 = int(self.time_order[annotation.features['time_slot2']])
+        #
+        #     region = (part_1, part_2)
+        #
+        #     return region
+        #
+        # return None
 
     def tier_has_regions(self, tier):
         """This method check if a tier has regions.
@@ -259,6 +283,8 @@ class Parser(poioapi.io.graf.BaseParser):
         _fix_time_slots
 
         """
+
+        # TODO: For the last time_slot if it's empty should be take from the audio/video file.
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
@@ -302,7 +328,7 @@ class Parser(poioapi.io.graf.BaseParser):
         for time_slot, value in time_order_dict.items():
             if value is None:
                 time_order_dict[time_slot] = self._find_time_slot_value(time_slot,
-                    time_order_dict)
+                                                                        time_order_dict)
 
         return time_order_dict
 
@@ -364,23 +390,21 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        meta_information = Element(self.root._root.tag,
-            self.root._root.attrib)
+        meta_information = Element(self.root._root.tag, self.root._root.attrib)
 
         for element in self.tree:
             if element.tag != 'ANNOTATION_DOCUMENT':
                 if element.tag == 'TIER':
-                    meta_information.append(Element(element.tag,
-                        element.attrib))
+                    meta_information.append(Element(element.tag, element.attrib))
                 else:
-                    parent_element = SubElement(meta_information,
-                        element.tag, element.attrib)
+                    parent_element = SubElement(meta_information, element.tag,
+                                                element.attrib)
                     for child in element:
-                        other_chid = SubElement(parent_element,
-                            child.tag, child.attrib)
+                        other_child = SubElement(parent_element, child.tag,
+                                                 child.attrib)
                         if not str(child.text).isspace() or\
                            child.text is not None:
-                            other_chid.text = child.text
+                            other_child.text = child.text
 
         return meta_information
 
@@ -420,24 +444,43 @@ class Writer:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
 
-                                if "ref_annotation" in ann.features:
+                                if node.links:
+                                    ann_type = "ALIGNABLE_ANNOTATION"
+
+                                    # features['TIME_SLOT_REF1'] = ann.features['time_slot1']
+                                    # features['TIME_SLOT_REF2'] = ann.features['time_slot2']
+
+                                    anchors = node.links[0][0].anchors
+
+                                    features['TIME_SLOT_REF1'] = anchors[0]
+                                    features['TIME_SLOT_REF2'] = anchors[1]
+
+                                # if "ref_annotation" in ann.features:
+                                #     ann_type = "REF_ANNOTATION"
+                                    # features["ANNOTATION_REF"] = ann.features["ref_annotation"]
+
+                                    # if "previous_annotation" in ann.features:
+                                    #     features["PREVIOUS_ANNOTATION"] = ann.features["previous_annotation"]
+
+                                else:
                                     ann_type = "REF_ANNOTATION"
-                                    features["ANNOTATION_REF"] = ann.features["ref_annotation"]
+
+                                    features["ANNOTATION_REF"] = node.parent.annotations._elements[0].id
+
                                     if "previous_annotation" in ann.features:
                                         features["PREVIOUS_ANNOTATION"] = ann.features["previous_annotation"]
-                                else:
-                                    ann_type = "ALIGNABLE_ANNOTATION"
-                                    features['TIME_SLOT_REF1'] = ann.features['time_slot1']
-                                    features['TIME_SLOT_REF2'] = ann.features['time_slot2']
 
                                 if "annotation_value" in ann.features:
                                     annotation_value = ann.features['annotation_value']
 
                                 for key, feature in ann.features.items():
-                                    if key != 'ref_annotation' and\
-                                       key != 'annotation_value' and\
-                                       key != 'tier_id' and\
-                                       key != 'previous_annotation' and not 'time_slot' in key:
+                                    # if key != 'ref_annotation' and\
+                                    #    key != 'annotation_value' and\
+                                    #    key != 'tier_id' and\
+                                    #    key != 'previous_annotation' and not 'time_slot' in key:
+                                    #     features[key] = feature
+
+                                    if key != "annotation_value" and key != "previous_annotation":
                                         features[key] = feature
 
                                 annotation_element = SubElement(et, 'ANNOTATION')
