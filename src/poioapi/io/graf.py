@@ -35,9 +35,9 @@ class Tier:
 
     __slots__ = ['name', 'annotation_space']
 
-    def __init__(self, name, annotaion_space=None):
+    def __init__(self, name, annotation_space=None):
         self.name = name
-        self.annotation_space = annotaion_space
+        self.annotation_space = annotation_space
 
 
 class Annotation:
