@@ -8,10 +8,12 @@
 # For license information, see LICENSE.TXT
 
 import os
-import sys, getopt
+import sys
+import getopt
 
 import poioapi.annotationgraph
 import poioapi.io.elan
+
 
 def main(argv):
 
