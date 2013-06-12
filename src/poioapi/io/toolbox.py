@@ -33,7 +33,6 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
-
         self.parse()
 
     def parse(self):
@@ -66,7 +65,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 self._elements_map["idGroup"].append(
                     {"id": self._current_idGroup, "value": value,
                      "parent": self._current_itmGroup, "region": region,
-                     "features": None})
+                     "features": {"fg": t.find("fg").text}})
 
             elif t.tag == "txGroup":
                 self._current_txGroup = self._next_id()
