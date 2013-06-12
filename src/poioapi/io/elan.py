@@ -140,13 +140,12 @@ class Parser(poioapi.io.graf.BaseParser):
 
         for t in self.tree.findall("TIER"):
             if t.attrib["TIER_ID"] == tier.name:
-                if annotation_parent:
+                if self.tier_has_regions(tier):
+                    tier_annotations = t.findall("ANNOTATION/*")
+                elif annotation_parent:
                     for a in t.findall("ANNOTATION/*"):
                         if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
                             tier_annotations.append(a)
-                elif self.tier_has_regions(tier):
-                    tier_annotations = t.findall("ANNOTATION/*")
-
                 break
 
         for annotation in tier_annotations:
@@ -174,14 +173,13 @@ class Parser(poioapi.io.graf.BaseParser):
         return annotations
 
     def _find_ranges_in_annotation_parent(self, annotation_parent, annotation):
-        if annotation_parent is not None:
-            annotation_parent_regions = self.region_for_annotation(annotation_parent)
+        annotation_parent_regions = self.region_for_annotation(annotation_parent)
 
-            annotation_regions = [int(self.time_order[annotation.attrib['TIME_SLOT_REF1']]),
-                                  int(self.time_order[annotation.attrib['TIME_SLOT_REF2']])]
+        annotation_regions = [self.time_order[annotation.attrib['TIME_SLOT_REF1']],
+                              self.time_order[annotation.attrib['TIME_SLOT_REF2']]]
 
-            if annotation_parent_regions[0] <= annotation_regions[0]\
-            and annotation_regions[1] <= annotation_parent_regions[1]:
+        if int(annotation_parent_regions[0]) <= int(annotation_regions[0]):
+            if int(annotation_regions[1]) <= int(annotation_parent_regions[1]):
                 return True
 
         return False
@@ -340,7 +338,7 @@ class Parser(poioapi.io.graf.BaseParser):
         if len(range_time_slots) is not 0:
             time_slot_value = (time_slot_value / len(range_time_slots))
 
-        return time_slot_value
+        return str(time_slot_value)
 
     def _retrieve_aditional_information(self):
         """This method retrieve all the elan
@@ -368,6 +366,12 @@ class Parser(poioapi.io.graf.BaseParser):
                     for child in element:
                         other_child = SubElement(parent_element, child.tag,
                                                  child.attrib)
+
+                        # Update time_slots
+                        if other_child.tag == "TIME_SLOT" and "TIME_VALUE" not in other_child:
+                            other_child.attrib["TIME_VALUE"] = \
+                                self.time_order[other_child.attrib["TIME_SLOT_ID"]]
+
                         if not str(child.text).isspace() or\
                            child.text is not None:
                             other_child.text = child.text
@@ -400,12 +404,14 @@ class Writer:
 
         """
 
+        self.time_order = self._map_time_slots(meta_information)
+
         for tier in self._flatten_hierarchy_elements(tier_hierarchies):
 
             for et in meta_information.findall("TIER"):
                 if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
                     for node in graf_graph.nodes:
-                        if tier == str(node.id).split(poioapi.io.graf.GRAFSEPARATOR+"na")[0]:
+                        if tier == node.id.split(poioapi.io.graf.GRAFSEPARATOR+"na")[0]:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
@@ -414,10 +420,8 @@ class Writer:
                                     ann_type = "ALIGNABLE_ANNOTATION"
 
                                     anchors = node.links[0][0].anchors
-
-                                    features['TIME_SLOT_REF1'] = anchors[0]
-                                    features['TIME_SLOT_REF2'] = anchors[1]
-
+                                    features['TIME_SLOT_REF1'] = self.time_order[anchors[0]]
+                                    features['TIME_SLOT_REF2'] = self.time_order[anchors[1]]
                                 else:
                                     ann_type = "REF_ANNOTATION"
 
@@ -480,3 +484,28 @@ class Writer:
             else:
                 flat_elements.append(e)
         return flat_elements
+
+    def _map_time_slots(self, meta_information):
+        """This method map "TIME_SLOT_ID"s with
+        their respective values.
+
+        Parameters
+        ----------
+        meta_information : ElementTree
+            Element tree contains the information about the
+            TIME_ORDER.
+
+        Returns
+        -------
+        time_order : dict
+            A dictonary with the time slot's and their values.
+
+        """
+
+        time_order = {}
+
+        for time in meta_information.find('TIME_ORDER'):
+            time_order[time.attrib['TIME_VALUE']] = time.attrib['TIME_SLOT_ID']
+
+        return time_order
+
