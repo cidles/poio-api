@@ -25,6 +25,7 @@ from xml.dom import minidom
 
 import poioapi.io.graf
 
+
 class ElanTier(poioapi.io.graf.Tier):
     __slots__ = ["linguistic_type"]
 
@@ -51,7 +52,6 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
-
         self.parse()
 
     def parse(self):
