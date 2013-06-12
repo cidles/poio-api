@@ -15,8 +15,6 @@
 	<region anchors="11150 13240" xml:id="utterance..W-Spch..ra10"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na10" xml:id="a10">
 		<fs>
-			<f name="time_slot1">ts60</f>
-			<f name="time_slot2">ts70</f>
 			<f name="annotation_value">and you follow then the sign Kleef</f>
 		</fs>
 	</a>
@@ -26,8 +24,6 @@
 	<region anchors="13310 14540" xml:id="utterance..W-Spch..ra11"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na11" xml:id="a11">
 		<fs>
-			<f name="time_slot1">ts72</f>
-			<f name="time_slot2">ts78</f>
 			<f name="annotation_value">that's the oranje single</f>
 		</fs>
 	</a>
@@ -37,8 +33,6 @@
 	<region anchors="15330 17190" xml:id="utterance..W-Spch..ra12"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na12" xml:id="a12">
 		<fs>
-			<f name="time_slot1">ts83</f>
-			<f name="time_slot2">ts91</f>
 			<f name="annotation_value">then you follow the sign kleef</f>
 		</fs>
 	</a>
@@ -48,8 +42,6 @@
 	<region anchors="17570 18750" xml:id="utterance..W-Spch..ra13"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na13" xml:id="a13">
 		<fs>
-			<f name="time_slot1">ts93</f>
-			<f name="time_slot2">ts99</f>
 			<f name="annotation_value">you come down</f>
 		</fs>
 	</a>
@@ -59,8 +51,6 @@
 	<region anchors="18990 21810" xml:id="utterance..W-Spch..ra14"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na14" xml:id="a14">
 		<fs>
-			<f name="time_slot1">ts100</f>
-			<f name="time_slot2">ts112</f>
 			<f name="annotation_value">you know eh after this trajanus plein</f>
 		</fs>
 	</a>
@@ -70,8 +60,6 @@
 	<region anchors="21860 22930" xml:id="utterance..W-Spch..ra15"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na15" xml:id="a15">
 		<fs>
-			<f name="time_slot1">ts113</f>
-			<f name="time_slot2">ts121</f>
 			<f name="annotation_value">you come down to the</f>
 		</fs>
 	</a>
@@ -81,8 +69,6 @@
 	<region anchors="23470 25050" xml:id="utterance..W-Spch..ra16"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na16" xml:id="a16">
 		<fs>
-			<f name="time_slot1">ts123</f>
-			<f name="time_slot2">ts134</f>
 			<f name="annotation_value">rhine eh valley</f>
 		</fs>
 	</a>
@@ -92,8 +78,6 @@
 	<region anchors="25080 27010" xml:id="utterance..W-Spch..ra17"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na17" xml:id="a17">
 		<fs>
-			<f name="time_slot1">ts135</f>
-			<f name="time_slot2">ts143</f>
 			<f name="annotation_value">yeah that's another eh</f>
 		</fs>
 	</a>
@@ -103,8 +87,6 @@
 	<region anchors="28160 29110" xml:id="utterance..W-Spch..ra18"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na18" xml:id="a18">
 		<fs>
-			<f name="time_slot1">ts150</f>
-			<f name="time_slot2">ts155</f>
 			<f name="annotation_value">kind of rotunde</f>
 		</fs>
 	</a>
@@ -114,8 +96,6 @@
 	<region anchors="29370 31230" xml:id="utterance..W-Spch..ra19"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na19" xml:id="a19">
 		<fs>
-			<f name="time_slot1">ts157</f>
-			<f name="time_slot2">ts169</f>
 			<f name="annotation_value">and then you follow the signs kleef</f>
 		</fs>
 	</a>
@@ -125,8 +105,6 @@
 	<region anchors="31320 31999" xml:id="utterance..W-Spch..ra20"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na20" xml:id="a20">
 		<fs>
-			<f name="time_slot1">ts170</f>
-			<f name="time_slot2">ts174</f>
 			<f name="annotation_value">go down</f>
 		</fs>
 	</a>
@@ -136,8 +114,6 @@
 	<region anchors="32379 34290" xml:id="utterance..W-Spch..ra21"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na21" xml:id="a21">
 		<fs>
-			<f name="time_slot1">ts175</f>
-			<f name="time_slot2">ts185</f>
 			<f name="annotation_value">and then you go the this way</f>
 		</fs>
 	</a>
@@ -147,8 +123,6 @@
 	<region anchors="34380 36180" xml:id="utterance..W-Spch..ra22"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na22" xml:id="a22">
 		<fs>
-			<f name="time_slot1">ts186</f>
-			<f name="time_slot2">ts190</f>
 			<f name="annotation_value">eh ja to kleef</f>
 		</fs>
 	</a>
@@ -158,8 +132,6 @@
 	<region anchors="780 4090" xml:id="utterance..W-Spch..ra8"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na8" xml:id="a8">
 		<fs>
-			<f name="time_slot1">ts4</f>
-			<f name="time_slot2">ts23</f>
 			<f name="annotation_value">so you go out of the Institute to the Saint Anna Straat.</f>
 		</fs>
 	</a>
@@ -169,8 +141,6 @@
 	<region anchors="4600 10070" xml:id="utterance..W-Spch..ra9"/>
 	<a as="utterance" label="utterance" ref="utterance..W-Spch..na9" xml:id="a9">
 		<fs>
-			<f name="time_slot1">ts25</f>
-			<f name="time_slot2">ts56</f>
 			<f name="annotation_value">and then you go the other, Saint Anna Straat to this to the center of the town, to this big rotunde.</f>
 		</fs>
 	</a>

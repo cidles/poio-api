@@ -15,8 +15,6 @@
 	<region anchors="23120 24040" xml:id="gestures..K-RGU..ra311"/>
 	<a as="gestures" label="gestures" ref="gestures..K-RGU..na311" xml:id="a311">
 		<fs>
-			<f name="time_slot1">ts122</f>
-			<f name="time_slot2">ts129</f>
 			<f name="annotation_value">R Gesture Unit 1</f>
 		</fs>
 	</a>

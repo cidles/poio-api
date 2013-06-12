@@ -18,8 +18,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na100" xml:id="ea100"/>
 	<a as="words" label="words" ref="words..W-Words..na100" xml:id="a100">
 		<fs>
-			<f name="time_slot1">ts157</f>
-			<f name="time_slot2">ts159</f>
 			<f name="annotation_value">and</f>
 		</fs>
 	</a>
@@ -30,8 +28,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na101" xml:id="ea101"/>
 	<a as="words" label="words" ref="words..W-Words..na101" xml:id="a101">
 		<fs>
-			<f name="time_slot1">ts159</f>
-			<f name="time_slot2">ts160</f>
 			<f name="annotation_value">then</f>
 		</fs>
 	</a>
@@ -42,8 +38,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na102" xml:id="ea102"/>
 	<a as="words" label="words" ref="words..W-Words..na102" xml:id="a102">
 		<fs>
-			<f name="time_slot1">ts160</f>
-			<f name="time_slot2">ts163</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -54,8 +48,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na103" xml:id="ea103"/>
 	<a as="words" label="words" ref="words..W-Words..na103" xml:id="a103">
 		<fs>
-			<f name="time_slot1">ts163</f>
-			<f name="time_slot2">ts164</f>
 			<f name="annotation_value">follow</f>
 		</fs>
 	</a>
@@ -66,8 +58,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na104" xml:id="ea104"/>
 	<a as="words" label="words" ref="words..W-Words..na104" xml:id="a104">
 		<fs>
-			<f name="time_slot1">ts164</f>
-			<f name="time_slot2">ts165</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -78,8 +68,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na105" xml:id="ea105"/>
 	<a as="words" label="words" ref="words..W-Words..na105" xml:id="a105">
 		<fs>
-			<f name="time_slot1">ts165</f>
-			<f name="time_slot2">ts167</f>
 			<f name="annotation_value">signs</f>
 		</fs>
 	</a>
@@ -90,8 +78,6 @@
 	<edge from="utterance..W-Spch..na19" to="words..W-Words..na106" xml:id="ea106"/>
 	<a as="words" label="words" ref="words..W-Words..na106" xml:id="a106">
 		<fs>
-			<f name="time_slot1">ts167</f>
-			<f name="time_slot2">ts169</f>
 			<f name="annotation_value">kleef</f>
 		</fs>
 	</a>
@@ -102,8 +88,6 @@
 	<edge from="utterance..W-Spch..na20" to="words..W-Words..na107" xml:id="ea107"/>
 	<a as="words" label="words" ref="words..W-Words..na107" xml:id="a107">
 		<fs>
-			<f name="time_slot1">ts170</f>
-			<f name="time_slot2">ts172</f>
 			<f name="annotation_value">go</f>
 		</fs>
 	</a>
@@ -114,8 +98,6 @@
 	<edge from="utterance..W-Spch..na20" to="words..W-Words..na108" xml:id="ea108"/>
 	<a as="words" label="words" ref="words..W-Words..na108" xml:id="a108">
 		<fs>
-			<f name="time_slot1">ts172</f>
-			<f name="time_slot2">ts174</f>
 			<f name="annotation_value">down</f>
 		</fs>
 	</a>
@@ -126,8 +108,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na109" xml:id="ea109"/>
 	<a as="words" label="words" ref="words..W-Words..na109" xml:id="a109">
 		<fs>
-			<f name="time_slot1">ts175</f>
-			<f name="time_slot2">ts176</f>
 			<f name="annotation_value">and</f>
 		</fs>
 	</a>
@@ -138,8 +118,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na110" xml:id="ea110"/>
 	<a as="words" label="words" ref="words..W-Words..na110" xml:id="a110">
 		<fs>
-			<f name="time_slot1">ts176</f>
-			<f name="time_slot2">ts177</f>
 			<f name="annotation_value">then</f>
 		</fs>
 	</a>
@@ -150,8 +128,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na111" xml:id="ea111"/>
 	<a as="words" label="words" ref="words..W-Words..na111" xml:id="a111">
 		<fs>
-			<f name="time_slot1">ts177</f>
-			<f name="time_slot2">ts178</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -162,8 +138,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na112" xml:id="ea112"/>
 	<a as="words" label="words" ref="words..W-Words..na112" xml:id="a112">
 		<fs>
-			<f name="time_slot1">ts178</f>
-			<f name="time_slot2">ts180</f>
 			<f name="annotation_value">go</f>
 		</fs>
 	</a>
@@ -174,8 +148,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na113" xml:id="ea113"/>
 	<a as="words" label="words" ref="words..W-Words..na113" xml:id="a113">
 		<fs>
-			<f name="time_slot1">ts180</f>
-			<f name="time_slot2">ts182</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -186,8 +158,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na114" xml:id="ea114"/>
 	<a as="words" label="words" ref="words..W-Words..na114" xml:id="a114">
 		<fs>
-			<f name="time_slot1">ts182</f>
-			<f name="time_slot2">ts184</f>
 			<f name="annotation_value">this</f>
 		</fs>
 	</a>
@@ -198,8 +168,6 @@
 	<edge from="utterance..W-Spch..na21" to="words..W-Words..na115" xml:id="ea115"/>
 	<a as="words" label="words" ref="words..W-Words..na115" xml:id="a115">
 		<fs>
-			<f name="time_slot1">ts184</f>
-			<f name="time_slot2">ts185</f>
 			<f name="annotation_value">way</f>
 		</fs>
 	</a>
@@ -210,8 +178,6 @@
 	<edge from="utterance..W-Spch..na22" to="words..W-Words..na116" xml:id="ea116"/>
 	<a as="words" label="words" ref="words..W-Words..na116" xml:id="a116">
 		<fs>
-			<f name="time_slot1">ts186</f>
-			<f name="time_slot2">ts187</f>
 			<f name="annotation_value">eh</f>
 		</fs>
 	</a>
@@ -222,8 +188,6 @@
 	<edge from="utterance..W-Spch..na22" to="words..W-Words..na117" xml:id="ea117"/>
 	<a as="words" label="words" ref="words..W-Words..na117" xml:id="a117">
 		<fs>
-			<f name="time_slot1">ts187</f>
-			<f name="time_slot2">ts188</f>
 			<f name="annotation_value">ja</f>
 		</fs>
 	</a>
@@ -234,8 +198,6 @@
 	<edge from="utterance..W-Spch..na22" to="words..W-Words..na118" xml:id="ea118"/>
 	<a as="words" label="words" ref="words..W-Words..na118" xml:id="a118">
 		<fs>
-			<f name="time_slot1">ts188</f>
-			<f name="time_slot2">ts189</f>
 			<f name="annotation_value">to</f>
 		</fs>
 	</a>
@@ -246,8 +208,6 @@
 	<edge from="utterance..W-Spch..na22" to="words..W-Words..na119" xml:id="ea119"/>
 	<a as="words" label="words" ref="words..W-Words..na119" xml:id="a119">
 		<fs>
-			<f name="time_slot1">ts189</f>
-			<f name="time_slot2">ts190</f>
 			<f name="annotation_value">Kleef</f>
 		</fs>
 	</a>
@@ -258,8 +218,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na23" xml:id="ea23"/>
 	<a as="words" label="words" ref="words..W-Words..na23" xml:id="a23">
 		<fs>
-			<f name="time_slot1">ts4</f>
-			<f name="time_slot2">ts6</f>
 			<f name="annotation_value">so</f>
 		</fs>
 	</a>
@@ -270,8 +228,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na24" xml:id="ea24"/>
 	<a as="words" label="words" ref="words..W-Words..na24" xml:id="a24">
 		<fs>
-			<f name="time_slot1">ts6</f>
-			<f name="time_slot2">ts7</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -282,8 +238,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na25" xml:id="ea25"/>
 	<a as="words" label="words" ref="words..W-Words..na25" xml:id="a25">
 		<fs>
-			<f name="time_slot1">ts7</f>
-			<f name="time_slot2">ts9</f>
 			<f name="annotation_value">go</f>
 		</fs>
 	</a>
@@ -294,8 +248,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na26" xml:id="ea26"/>
 	<a as="words" label="words" ref="words..W-Words..na26" xml:id="a26">
 		<fs>
-			<f name="time_slot1">ts9</f>
-			<f name="time_slot2">ts10</f>
 			<f name="annotation_value">out</f>
 		</fs>
 	</a>
@@ -306,8 +258,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na27" xml:id="ea27"/>
 	<a as="words" label="words" ref="words..W-Words..na27" xml:id="a27">
 		<fs>
-			<f name="time_slot1">ts10</f>
-			<f name="time_slot2">ts11</f>
 			<f name="annotation_value">of</f>
 		</fs>
 	</a>
@@ -318,8 +268,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na28" xml:id="ea28"/>
 	<a as="words" label="words" ref="words..W-Words..na28" xml:id="a28">
 		<fs>
-			<f name="time_slot1">ts11</f>
-			<f name="time_slot2">ts13</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -330,8 +278,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na29" xml:id="ea29"/>
 	<a as="words" label="words" ref="words..W-Words..na29" xml:id="a29">
 		<fs>
-			<f name="time_slot1">ts13</f>
-			<f name="time_slot2">ts15</f>
 			<f name="annotation_value">Institute</f>
 		</fs>
 	</a>
@@ -342,8 +288,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na30" xml:id="ea30"/>
 	<a as="words" label="words" ref="words..W-Words..na30" xml:id="a30">
 		<fs>
-			<f name="time_slot1">ts15</f>
-			<f name="time_slot2">ts16</f>
 			<f name="annotation_value">to</f>
 		</fs>
 	</a>
@@ -354,8 +298,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na31" xml:id="ea31"/>
 	<a as="words" label="words" ref="words..W-Words..na31" xml:id="a31">
 		<fs>
-			<f name="time_slot1">ts16</f>
-			<f name="time_slot2">ts18</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -366,8 +308,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na32" xml:id="ea32"/>
 	<a as="words" label="words" ref="words..W-Words..na32" xml:id="a32">
 		<fs>
-			<f name="time_slot1">ts18</f>
-			<f name="time_slot2">ts19</f>
 			<f name="annotation_value">Saint</f>
 		</fs>
 	</a>
@@ -378,8 +318,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na33" xml:id="ea33"/>
 	<a as="words" label="words" ref="words..W-Words..na33" xml:id="a33">
 		<fs>
-			<f name="time_slot1">ts19</f>
-			<f name="time_slot2">ts20</f>
 			<f name="annotation_value">Anna</f>
 		</fs>
 	</a>
@@ -390,8 +328,6 @@
 	<edge from="utterance..W-Spch..na8" to="words..W-Words..na34" xml:id="ea34"/>
 	<a as="words" label="words" ref="words..W-Words..na34" xml:id="a34">
 		<fs>
-			<f name="time_slot1">ts20</f>
-			<f name="time_slot2">ts23</f>
 			<f name="annotation_value">Straat</f>
 		</fs>
 	</a>
@@ -402,8 +338,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na35" xml:id="ea35"/>
 	<a as="words" label="words" ref="words..W-Words..na35" xml:id="a35">
 		<fs>
-			<f name="time_slot1">ts25</f>
-			<f name="time_slot2">ts27</f>
 			<f name="annotation_value">and</f>
 		</fs>
 	</a>
@@ -414,8 +348,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na36" xml:id="ea36"/>
 	<a as="words" label="words" ref="words..W-Words..na36" xml:id="a36">
 		<fs>
-			<f name="time_slot1">ts27</f>
-			<f name="time_slot2">ts28</f>
 			<f name="annotation_value">then</f>
 		</fs>
 	</a>
@@ -426,8 +358,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na37" xml:id="ea37"/>
 	<a as="words" label="words" ref="words..W-Words..na37" xml:id="a37">
 		<fs>
-			<f name="time_slot1">ts28</f>
-			<f name="time_slot2">ts29</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -438,8 +368,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na38" xml:id="ea38"/>
 	<a as="words" label="words" ref="words..W-Words..na38" xml:id="a38">
 		<fs>
-			<f name="time_slot1">ts29</f>
-			<f name="time_slot2">ts30</f>
 			<f name="annotation_value">go</f>
 		</fs>
 	</a>
@@ -450,8 +378,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na39" xml:id="ea39"/>
 	<a as="words" label="words" ref="words..W-Words..na39" xml:id="a39">
 		<fs>
-			<f name="time_slot1">ts30</f>
-			<f name="time_slot2">ts31</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -462,8 +388,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na40" xml:id="ea40"/>
 	<a as="words" label="words" ref="words..W-Words..na40" xml:id="a40">
 		<fs>
-			<f name="time_slot1">ts31</f>
-			<f name="time_slot2">ts33</f>
 			<f name="annotation_value">other</f>
 		</fs>
 	</a>
@@ -474,8 +398,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na41" xml:id="ea41"/>
 	<a as="words" label="words" ref="words..W-Words..na41" xml:id="a41">
 		<fs>
-			<f name="time_slot1">ts33</f>
-			<f name="time_slot2">ts34</f>
 			<f name="annotation_value">Saint</f>
 		</fs>
 	</a>
@@ -486,8 +408,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na42" xml:id="ea42"/>
 	<a as="words" label="words" ref="words..W-Words..na42" xml:id="a42">
 		<fs>
-			<f name="time_slot1">ts34</f>
-			<f name="time_slot2">ts35</f>
 			<f name="annotation_value">Anna</f>
 		</fs>
 	</a>
@@ -498,8 +418,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na43" xml:id="ea43"/>
 	<a as="words" label="words" ref="words..W-Words..na43" xml:id="a43">
 		<fs>
-			<f name="time_slot1">ts35</f>
-			<f name="time_slot2">ts37</f>
 			<f name="annotation_value">Straat</f>
 		</fs>
 	</a>
@@ -510,8 +428,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na44" xml:id="ea44"/>
 	<a as="words" label="words" ref="words..W-Words..na44" xml:id="a44">
 		<fs>
-			<f name="time_slot1">ts37</f>
-			<f name="time_slot2">ts39</f>
 			<f name="annotation_value">to</f>
 		</fs>
 	</a>
@@ -522,8 +438,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na45" xml:id="ea45"/>
 	<a as="words" label="words" ref="words..W-Words..na45" xml:id="a45">
 		<fs>
-			<f name="time_slot1">ts39</f>
-			<f name="time_slot2">ts40</f>
 			<f name="annotation_value">this</f>
 		</fs>
 	</a>
@@ -534,8 +448,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na46" xml:id="ea46"/>
 	<a as="words" label="words" ref="words..W-Words..na46" xml:id="a46">
 		<fs>
-			<f name="time_slot1">ts40</f>
-			<f name="time_slot2">ts42</f>
 			<f name="annotation_value">to</f>
 		</fs>
 	</a>
@@ -546,8 +458,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na47" xml:id="ea47"/>
 	<a as="words" label="words" ref="words..W-Words..na47" xml:id="a47">
 		<fs>
-			<f name="time_slot1">ts42</f>
-			<f name="time_slot2">ts44</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -558,8 +468,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na48" xml:id="ea48"/>
 	<a as="words" label="words" ref="words..W-Words..na48" xml:id="a48">
 		<fs>
-			<f name="time_slot1">ts44</f>
-			<f name="time_slot2">ts46</f>
 			<f name="annotation_value">center</f>
 		</fs>
 	</a>
@@ -570,8 +478,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na49" xml:id="ea49"/>
 	<a as="words" label="words" ref="words..W-Words..na49" xml:id="a49">
 		<fs>
-			<f name="time_slot1">ts46</f>
-			<f name="time_slot2">ts48</f>
 			<f name="annotation_value">of</f>
 		</fs>
 	</a>
@@ -582,8 +488,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na50" xml:id="ea50"/>
 	<a as="words" label="words" ref="words..W-Words..na50" xml:id="a50">
 		<fs>
-			<f name="time_slot1">ts48</f>
-			<f name="time_slot2">ts49</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -594,8 +498,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na51" xml:id="ea51"/>
 	<a as="words" label="words" ref="words..W-Words..na51" xml:id="a51">
 		<fs>
-			<f name="time_slot1">ts49</f>
-			<f name="time_slot2">ts50</f>
 			<f name="annotation_value">town</f>
 		</fs>
 	</a>
@@ -606,8 +508,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na52" xml:id="ea52"/>
 	<a as="words" label="words" ref="words..W-Words..na52" xml:id="a52">
 		<fs>
-			<f name="time_slot1">ts50</f>
-			<f name="time_slot2">ts51</f>
 			<f name="annotation_value">to</f>
 		</fs>
 	</a>
@@ -618,8 +518,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na53" xml:id="ea53"/>
 	<a as="words" label="words" ref="words..W-Words..na53" xml:id="a53">
 		<fs>
-			<f name="time_slot1">ts51</f>
-			<f name="time_slot2">ts53</f>
 			<f name="annotation_value">this</f>
 		</fs>
 	</a>
@@ -630,8 +528,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na54" xml:id="ea54"/>
 	<a as="words" label="words" ref="words..W-Words..na54" xml:id="a54">
 		<fs>
-			<f name="time_slot1">ts53</f>
-			<f name="time_slot2">ts54</f>
 			<f name="annotation_value">big</f>
 		</fs>
 	</a>
@@ -642,8 +538,6 @@
 	<edge from="utterance..W-Spch..na9" to="words..W-Words..na55" xml:id="ea55"/>
 	<a as="words" label="words" ref="words..W-Words..na55" xml:id="a55">
 		<fs>
-			<f name="time_slot1">ts54</f>
-			<f name="time_slot2">ts56</f>
 			<f name="annotation_value">rotunde</f>
 		</fs>
 	</a>
@@ -654,8 +548,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na56" xml:id="ea56"/>
 	<a as="words" label="words" ref="words..W-Words..na56" xml:id="a56">
 		<fs>
-			<f name="time_slot1">ts60</f>
-			<f name="time_slot2">ts61</f>
 			<f name="annotation_value">and</f>
 		</fs>
 	</a>
@@ -666,8 +558,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na57" xml:id="ea57"/>
 	<a as="words" label="words" ref="words..W-Words..na57" xml:id="a57">
 		<fs>
-			<f name="time_slot1">ts61</f>
-			<f name="time_slot2">ts62</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -678,8 +568,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na58" xml:id="ea58"/>
 	<a as="words" label="words" ref="words..W-Words..na58" xml:id="a58">
 		<fs>
-			<f name="time_slot1">ts62</f>
-			<f name="time_slot2">ts64</f>
 			<f name="annotation_value">follow</f>
 		</fs>
 	</a>
@@ -690,8 +578,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na59" xml:id="ea59"/>
 	<a as="words" label="words" ref="words..W-Words..na59" xml:id="a59">
 		<fs>
-			<f name="time_slot1">ts64</f>
-			<f name="time_slot2">ts66</f>
 			<f name="annotation_value">then</f>
 		</fs>
 	</a>
@@ -702,8 +588,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na60" xml:id="ea60"/>
 	<a as="words" label="words" ref="words..W-Words..na60" xml:id="a60">
 		<fs>
-			<f name="time_slot1">ts66</f>
-			<f name="time_slot2">ts67</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -714,8 +598,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na61" xml:id="ea61"/>
 	<a as="words" label="words" ref="words..W-Words..na61" xml:id="a61">
 		<fs>
-			<f name="time_slot1">ts67</f>
-			<f name="time_slot2">ts68</f>
 			<f name="annotation_value">sign</f>
 		</fs>
 	</a>
@@ -726,8 +608,6 @@
 	<edge from="utterance..W-Spch..na10" to="words..W-Words..na62" xml:id="ea62"/>
 	<a as="words" label="words" ref="words..W-Words..na62" xml:id="a62">
 		<fs>
-			<f name="time_slot1">ts68</f>
-			<f name="time_slot2">ts70</f>
 			<f name="annotation_value">Kleef</f>
 		</fs>
 	</a>
@@ -738,8 +618,6 @@
 	<edge from="utterance..W-Spch..na11" to="words..W-Words..na63" xml:id="ea63"/>
 	<a as="words" label="words" ref="words..W-Words..na63" xml:id="a63">
 		<fs>
-			<f name="time_slot1">ts72</f>
-			<f name="time_slot2">ts73</f>
 			<f name="annotation_value">that</f>
 		</fs>
 	</a>
@@ -750,8 +628,6 @@
 	<edge from="utterance..W-Spch..na11" to="words..W-Words..na64" xml:id="ea64"/>
 	<a as="words" label="words" ref="words..W-Words..na64" xml:id="a64">
 		<fs>
-			<f name="time_slot1">ts73</f>
-			<f name="time_slot2">ts74</f>
 			<f name="annotation_value">'s</f>
 		</fs>
 	</a>
@@ -762,8 +638,6 @@
 	<edge from="utterance..W-Spch..na11" to="words..W-Words..na65" xml:id="ea65"/>
 	<a as="words" label="words" ref="words..W-Words..na65" xml:id="a65">
 		<fs>
-			<f name="time_slot1">ts74</f>
-			<f name="time_slot2">ts75</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -774,8 +648,6 @@
 	<edge from="utterance..W-Spch..na11" to="words..W-Words..na66" xml:id="ea66"/>
 	<a as="words" label="words" ref="words..W-Words..na66" xml:id="a66">
 		<fs>
-			<f name="time_slot1">ts75</f>
-			<f name="time_slot2">ts77</f>
 			<f name="annotation_value">Oranje</f>
 		</fs>
 	</a>
@@ -786,8 +658,6 @@
 	<edge from="utterance..W-Spch..na11" to="words..W-Words..na67" xml:id="ea67"/>
 	<a as="words" label="words" ref="words..W-Words..na67" xml:id="a67">
 		<fs>
-			<f name="time_slot1">ts77</f>
-			<f name="time_slot2">ts78</f>
 			<f name="annotation_value">Single</f>
 		</fs>
 	</a>
@@ -798,8 +668,6 @@
 	<edge from="utterance..W-Spch..na12" to="words..W-Words..na68" xml:id="ea68"/>
 	<a as="words" label="words" ref="words..W-Words..na68" xml:id="a68">
 		<fs>
-			<f name="time_slot1">ts83</f>
-			<f name="time_slot2">ts84</f>
 			<f name="annotation_value">then</f>
 		</fs>
 	</a>
@@ -810,8 +678,6 @@
 	<edge from="utterance..W-Spch..na12" to="words..W-Words..na69" xml:id="ea69"/>
 	<a as="words" label="words" ref="words..W-Words..na69" xml:id="a69">
 		<fs>
-			<f name="time_slot1">ts84</f>
-			<f name="time_slot2">ts86</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -822,8 +688,6 @@
 	<edge from="utterance..W-Spch..na12" to="words..W-Words..na70" xml:id="ea70"/>
 	<a as="words" label="words" ref="words..W-Words..na70" xml:id="a70">
 		<fs>
-			<f name="time_slot1">ts86</f>
-			<f name="time_slot2">ts87</f>
 			<f name="annotation_value">follow</f>
 		</fs>
 	</a>
@@ -834,8 +698,6 @@
 	<edge from="utterance..W-Spch..na12" to="words..W-Words..na71" xml:id="ea71"/>
 	<a as="words" label="words" ref="words..W-Words..na71" xml:id="a71">
 		<fs>
-			<f name="time_slot1">ts87</f>
-			<f name="time_slot2">ts88</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -846,8 +708,6 @@
 	<edge from="utterance..W-Spch..na12" to="words..W-Words..na72" xml:id="ea72"/>
 	<a as="words" label="words" ref="words..W-Words..na72" xml:id="a72">
 		<fs>
-			<f name="time_slot1">ts88</f>
-			<f name="time_slot2">ts89</f>
 			<f name="annotation_value">sign</f>
 		</fs>
 	</a>
@@ -858,8 +718,6 @@
 	<edge from="utterance..W-Spch..na12" to="words..W-Words..na73" xml:id="ea73"/>
 	<a as="words" label="words" ref="words..W-Words..na73" xml:id="a73">
 		<fs>
-			<f name="time_slot1">ts89</f>
-			<f name="time_slot2">ts91</f>
 			<f name="annotation_value">Kleef</f>
 		</fs>
 	</a>
@@ -870,8 +728,6 @@
 	<edge from="utterance..W-Spch..na13" to="words..W-Words..na74" xml:id="ea74"/>
 	<a as="words" label="words" ref="words..W-Words..na74" xml:id="a74">
 		<fs>
-			<f name="time_slot1">ts93</f>
-			<f name="time_slot2">ts95</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -882,8 +738,6 @@
 	<edge from="utterance..W-Spch..na13" to="words..W-Words..na75" xml:id="ea75"/>
 	<a as="words" label="words" ref="words..W-Words..na75" xml:id="a75">
 		<fs>
-			<f name="time_slot1">ts95</f>
-			<f name="time_slot2">ts96</f>
 			<f name="annotation_value">come</f>
 		</fs>
 	</a>
@@ -894,8 +748,6 @@
 	<edge from="utterance..W-Spch..na13" to="words..W-Words..na76" xml:id="ea76"/>
 	<a as="words" label="words" ref="words..W-Words..na76" xml:id="a76">
 		<fs>
-			<f name="time_slot1">ts96</f>
-			<f name="time_slot2">ts99</f>
 			<f name="annotation_value">down</f>
 		</fs>
 	</a>
@@ -906,8 +758,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na77" xml:id="ea77"/>
 	<a as="words" label="words" ref="words..W-Words..na77" xml:id="a77">
 		<fs>
-			<f name="time_slot1">ts100</f>
-			<f name="time_slot2">ts101</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -918,8 +768,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na78" xml:id="ea78"/>
 	<a as="words" label="words" ref="words..W-Words..na78" xml:id="a78">
 		<fs>
-			<f name="time_slot1">ts101</f>
-			<f name="time_slot2">ts103</f>
 			<f name="annotation_value">know</f>
 		</fs>
 	</a>
@@ -930,8 +778,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na79" xml:id="ea79"/>
 	<a as="words" label="words" ref="words..W-Words..na79" xml:id="a79">
 		<fs>
-			<f name="time_slot1">ts103</f>
-			<f name="time_slot2">ts104</f>
 			<f name="annotation_value">eh</f>
 		</fs>
 	</a>
@@ -942,8 +788,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na80" xml:id="ea80"/>
 	<a as="words" label="words" ref="words..W-Words..na80" xml:id="a80">
 		<fs>
-			<f name="time_slot1">ts104</f>
-			<f name="time_slot2">ts106</f>
 			<f name="annotation_value">after</f>
 		</fs>
 	</a>
@@ -954,8 +798,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na81" xml:id="ea81"/>
 	<a as="words" label="words" ref="words..W-Words..na81" xml:id="a81">
 		<fs>
-			<f name="time_slot1">ts106</f>
-			<f name="time_slot2">ts108</f>
 			<f name="annotation_value">this</f>
 		</fs>
 	</a>
@@ -966,8 +808,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na82" xml:id="ea82"/>
 	<a as="words" label="words" ref="words..W-Words..na82" xml:id="a82">
 		<fs>
-			<f name="time_slot1">ts108</f>
-			<f name="time_slot2">ts110</f>
 			<f name="annotation_value">Trajanus</f>
 		</fs>
 	</a>
@@ -978,8 +818,6 @@
 	<edge from="utterance..W-Spch..na14" to="words..W-Words..na83" xml:id="ea83"/>
 	<a as="words" label="words" ref="words..W-Words..na83" xml:id="a83">
 		<fs>
-			<f name="time_slot1">ts110</f>
-			<f name="time_slot2">ts112</f>
 			<f name="annotation_value">Plein</f>
 		</fs>
 	</a>
@@ -990,8 +828,6 @@
 	<edge from="utterance..W-Spch..na15" to="words..W-Words..na84" xml:id="ea84"/>
 	<a as="words" label="words" ref="words..W-Words..na84" xml:id="a84">
 		<fs>
-			<f name="time_slot1">ts113</f>
-			<f name="time_slot2">ts114</f>
 			<f name="annotation_value">you</f>
 		</fs>
 	</a>
@@ -1002,8 +838,6 @@
 	<edge from="utterance..W-Spch..na15" to="words..W-Words..na85" xml:id="ea85"/>
 	<a as="words" label="words" ref="words..W-Words..na85" xml:id="a85">
 		<fs>
-			<f name="time_slot1">ts114</f>
-			<f name="time_slot2">ts115</f>
 			<f name="annotation_value">come</f>
 		</fs>
 	</a>
@@ -1014,8 +848,6 @@
 	<edge from="utterance..W-Spch..na15" to="words..W-Words..na86" xml:id="ea86"/>
 	<a as="words" label="words" ref="words..W-Words..na86" xml:id="a86">
 		<fs>
-			<f name="time_slot1">ts115</f>
-			<f name="time_slot2">ts117</f>
 			<f name="annotation_value">down</f>
 		</fs>
 	</a>
@@ -1026,8 +858,6 @@
 	<edge from="utterance..W-Spch..na15" to="words..W-Words..na87" xml:id="ea87"/>
 	<a as="words" label="words" ref="words..W-Words..na87" xml:id="a87">
 		<fs>
-			<f name="time_slot1">ts117</f>
-			<f name="time_slot2">ts118</f>
 			<f name="annotation_value">to</f>
 		</fs>
 	</a>
@@ -1038,8 +868,6 @@
 	<edge from="utterance..W-Spch..na15" to="words..W-Words..na88" xml:id="ea88"/>
 	<a as="words" label="words" ref="words..W-Words..na88" xml:id="a88">
 		<fs>
-			<f name="time_slot1">ts118</f>
-			<f name="time_slot2">ts121</f>
 			<f name="annotation_value">the</f>
 		</fs>
 	</a>
@@ -1050,8 +878,6 @@
 	<edge from="utterance..W-Spch..na16" to="words..W-Words..na89" xml:id="ea89"/>
 	<a as="words" label="words" ref="words..W-Words..na89" xml:id="a89">
 		<fs>
-			<f name="time_slot1">ts123</f>
-			<f name="time_slot2">ts130</f>
 			<f name="annotation_value">Rhine</f>
 		</fs>
 	</a>
@@ -1062,8 +888,6 @@
 	<edge from="utterance..W-Spch..na16" to="words..W-Words..na90" xml:id="ea90"/>
 	<a as="words" label="words" ref="words..W-Words..na90" xml:id="a90">
 		<fs>
-			<f name="time_slot1">ts130</f>
-			<f name="time_slot2">ts131</f>
 			<f name="annotation_value">eh</f>
 		</fs>
 	</a>
@@ -1074,8 +898,6 @@
 	<edge from="utterance..W-Spch..na16" to="words..W-Words..na91" xml:id="ea91"/>
 	<a as="words" label="words" ref="words..W-Words..na91" xml:id="a91">
 		<fs>
-			<f name="time_slot1">ts131</f>
-			<f name="time_slot2">ts134</f>
 			<f name="annotation_value">valley</f>
 		</fs>
 	</a>
@@ -1086,8 +908,6 @@
 	<edge from="utterance..W-Spch..na17" to="words..W-Words..na92" xml:id="ea92"/>
 	<a as="words" label="words" ref="words..W-Words..na92" xml:id="a92">
 		<fs>
-			<f name="time_slot1">ts135</f>
-			<f name="time_slot2">ts136</f>
 			<f name="annotation_value">yeah</f>
 		</fs>
 	</a>
@@ -1098,8 +918,6 @@
 	<edge from="utterance..W-Spch..na17" to="words..W-Words..na93" xml:id="ea93"/>
 	<a as="words" label="words" ref="words..W-Words..na93" xml:id="a93">
 		<fs>
-			<f name="time_slot1">ts136</f>
-			<f name="time_slot2">ts138</f>
 			<f name="annotation_value">that</f>
 		</fs>
 	</a>
@@ -1110,8 +928,6 @@
 	<edge from="utterance..W-Spch..na17" to="words..W-Words..na94" xml:id="ea94"/>
 	<a as="words" label="words" ref="words..W-Words..na94" xml:id="a94">
 		<fs>
-			<f name="time_slot1">ts138</f>
-			<f name="time_slot2">ts140</f>
 			<f name="annotation_value">'s</f>
 		</fs>
 	</a>
@@ -1122,8 +938,6 @@
 	<edge from="utterance..W-Spch..na17" to="words..W-Words..na95" xml:id="ea95"/>
 	<a as="words" label="words" ref="words..W-Words..na95" xml:id="a95">
 		<fs>
-			<f name="time_slot1">ts140</f>
-			<f name="time_slot2">ts142</f>
 			<f name="annotation_value">another</f>
 		</fs>
 	</a>
@@ -1134,8 +948,6 @@
 	<edge from="utterance..W-Spch..na17" to="words..W-Words..na96" xml:id="ea96"/>
 	<a as="words" label="words" ref="words..W-Words..na96" xml:id="a96">
 		<fs>
-			<f name="time_slot1">ts142</f>
-			<f name="time_slot2">ts143</f>
 			<f name="annotation_value">eh</f>
 		</fs>
 	</a>
@@ -1146,8 +958,6 @@
 	<edge from="utterance..W-Spch..na18" to="words..W-Words..na97" xml:id="ea97"/>
 	<a as="words" label="words" ref="words..W-Words..na97" xml:id="a97">
 		<fs>
-			<f name="time_slot1">ts150</f>
-			<f name="time_slot2">ts151</f>
 			<f name="annotation_value">kind</f>
 		</fs>
 	</a>
@@ -1158,8 +968,6 @@
 	<edge from="utterance..W-Spch..na18" to="words..W-Words..na98" xml:id="ea98"/>
 	<a as="words" label="words" ref="words..W-Words..na98" xml:id="a98">
 		<fs>
-			<f name="time_slot1">ts151</f>
-			<f name="time_slot2">ts152</f>
 			<f name="annotation_value">of</f>
 		</fs>
 	</a>
@@ -1170,8 +978,6 @@
 	<edge from="utterance..W-Spch..na18" to="words..W-Words..na99" xml:id="ea99"/>
 	<a as="words" label="words" ref="words..W-Words..na99" xml:id="a99">
 		<fs>
-			<f name="time_slot1">ts152</f>
-			<f name="time_slot2">ts155</f>
 			<f name="annotation_value">rotunde</f>
 		</fs>
 	</a>

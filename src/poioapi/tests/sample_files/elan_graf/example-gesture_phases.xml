@@ -18,8 +18,6 @@
 	<edge from="gestures..K-RGU..na311" to="gesture_phases..K-RGph..na312" xml:id="ea312"/>
 	<a as="gesture_phases" label="gesture_phases" ref="gesture_phases..K-RGph..na312" xml:id="a312">
 		<fs>
-			<f name="time_slot1">ts122</f>
-			<f name="time_slot2">ts124</f>
 			<f name="annotation_value">preparation</f>
 		</fs>
 	</a>
@@ -30,8 +28,6 @@
 	<edge from="gestures..K-RGU..na311" to="gesture_phases..K-RGph..na313" xml:id="ea313"/>
 	<a as="gesture_phases" label="gesture_phases" ref="gesture_phases..K-RGph..na313" xml:id="a313">
 		<fs>
-			<f name="time_slot1">ts124</f>
-			<f name="time_slot2">ts126</f>
 			<f name="annotation_value">stroke</f>
 		</fs>
 	</a>
@@ -42,8 +38,6 @@
 	<edge from="gestures..K-RGU..na311" to="gesture_phases..K-RGph..na314" xml:id="ea314"/>
 	<a as="gesture_phases" label="gesture_phases" ref="gesture_phases..K-RGph..na314" xml:id="a314">
 		<fs>
-			<f name="time_slot1">ts126</f>
-			<f name="time_slot2">ts129</f>
 			<f name="annotation_value">retraction</f>
 		</fs>
 	</a>

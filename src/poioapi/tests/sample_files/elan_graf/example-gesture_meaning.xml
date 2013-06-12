@@ -15,8 +15,6 @@
 	<edge from="gesture_phases..K-RGph..na313" to="gesture_meaning..K-RGMe..na315" xml:id="ea315"/>
 	<a as="gesture_meaning" label="gesture_meaning" ref="gesture_meaning..K-RGMe..na315" xml:id="a315">
 		<fs>
-			<f name="ref_annotation">a313</f>
-			<f name="tier_id">K-RGMe</f>
 			<f name="annotation_value">a roundabout</f>
 		</fs>
 	</a>
