@@ -338,7 +338,7 @@ class Parser(poioapi.io.graf.BaseParser):
         if len(range_time_slots) is not 0:
             time_slot_value = (time_slot_value / len(range_time_slots))
 
-        return str(time_slot_value)
+        return str(int(time_slot_value))
 
     def _retrieve_aditional_information(self):
         """This method retrieve all the elan
