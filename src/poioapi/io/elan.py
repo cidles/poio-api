@@ -165,7 +165,7 @@ class Parser(poioapi.io.graf.BaseParser):
             else:
                 for attribute in annotation.attrib:
                     if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
-                       attribute != 'ANNOTATION_VALUE':
+                       attribute != 'ANNOTATION_VALUE' and attribute != 'PREVIOUS_ANNOTATION':
                         features[attribute] = annotation.attrib[attribute]
 
             annotations.append(poioapi.io.graf.Annotation(annotation_id, annotation_value, features))
@@ -424,17 +424,18 @@ class Writer:
                                     features['TIME_SLOT_REF2'] = self.time_order[anchors[1]]
                                 else:
                                     ann_type = "REF_ANNOTATION"
+                                    previous_annotation = self._find_previous_annotation(node)
 
                                     features["ANNOTATION_REF"] = node.parent.annotations._elements[0].id
 
-                                    if "previous_annotation" in ann.features:
-                                        features["PREVIOUS_ANNOTATION"] = ann.features["previous_annotation"]
+                                    if previous_annotation:
+                                        features["PREVIOUS_ANNOTATION"] = previous_annotation
 
                                 if "annotation_value" in ann.features:
                                     annotation_value = ann.features['annotation_value']
 
                                 for key, feature in ann.features.items():
-                                    if key != "annotation_value" and key != "previous_annotation":
+                                    if key != "annotation_value":
                                         features[key] = feature
 
                                 annotation_element = SubElement(et, 'ANNOTATION')
@@ -442,6 +443,21 @@ class Writer:
                                 SubElement(new_ann, 'ANNOTATION_VALUE').text = annotation_value
 
         self._write_file(outputfile, meta_information)
+
+    def _find_previous_annotation(self, node):
+        parent = node.parent
+
+        prev_node = None
+        neighbours = [child for child in parent.iter_children()
+                      if child.id.startswith(node.id.rpartition("/")[0])]
+        for neighbour in neighbours:
+            if neighbour.id == node.id:
+                break
+            prev_node = neighbour
+        if prev_node:
+            return prev_node.annotations.get_first().id
+
+        return None
 
     def _write_file(self, outputfile, element_tree):
         """Write and indent the element tree into a
