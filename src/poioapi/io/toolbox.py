@@ -42,8 +42,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        self.root = ET.parse(self.filepath)
-        tree = self.root.getroot()
+        root = ET.parse(self.filepath)
+        tree = root.getroot()
         self._current_id = 0
         self._elements_map = {"itmGroup": [], "idGroup": [], "txGroup": [],
                               "tx": [], "mr": [], "mg": []}
@@ -106,11 +106,16 @@ class Parser(poioapi.io.graf.BaseParser):
                     poioapi.io.graf.Tier("mg")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
-        return [poioapi.io.graf.Annotation(e["id"], e["value"],
-                                           e["features"])
-                for e in self._elements_map[tier.name]
-                if ("parent" in e.keys() and
-                    e["parent"] == annotation_parent.id) or tier.name == "itmGroup"]
+        if tier.name == "itmGroup":
+            return [poioapi.io.graf.Annotation(e["id"], e["value"],
+                                               e["features"])
+                    for e in self._elements_map[tier.name]]
+
+        else:
+            return [poioapi.io.graf.Annotation(e["id"], e["value"],
+                                               e["features"])
+                    for e in self._elements_map[tier.name]
+                    if e["parent"] == annotation_parent.id]
 
     def tier_has_regions(self, tier):
         if tier.name == "idGroup":

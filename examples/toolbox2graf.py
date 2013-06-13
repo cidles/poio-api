@@ -8,12 +8,12 @@
 # For license information, see LICENSE.TXT
 
 import os
-
 import sys
 import getopt
 
 import poioapi.annotationgraph
 import poioapi.io.graf
+
 
 def main(argv):
     inputfile = ''
