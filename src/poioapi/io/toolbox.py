@@ -61,11 +61,15 @@ class Parser(poioapi.io.graf.BaseParser):
             elif t.tag == "idGroup":
                 self._current_idGroup = t.find("id").text
                 value, region = self._split_region(t)
+                fg = None
+
+                if t.find("fg"):
+                    fg = t.find("fg").text
 
                 self._elements_map["idGroup"].append(
                     {"id": self._current_idGroup, "value": value,
                      "parent": self._current_itmGroup, "region": region,
-                     "features": {"fg": t.find("fg").text}})
+                     "features": {"fg": fg}})
 
             elif t.tag == "txGroup":
                 self._current_txGroup = self._next_id()
@@ -116,7 +120,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def region_for_annotation(self, annotation):
         for e in self._elements_map["idGroup"]:
-            if e["id"] == annotation.id and e["region"] is not None:
+            if e["id"] == annotation.id:
                 return e["region"]
 
         return None
