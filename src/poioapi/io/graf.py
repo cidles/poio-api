@@ -240,12 +240,12 @@ class GrAFConverter:
         """
 
         self._tiers_parent_list = []
+        self.root_tiers = []
         tiers_hierarchy_map = {}
 
         for tier in self.parser.get_root_tiers():
+            self.root_tiers.append(tier)
             self._convert_tier(tier, None, None)
-            if tier.annotation_space not in self.graf.header.roots:
-                self.graf.header.roots.append(tier.annotation_space)
 
         i = 0
         for t in self._tiers_parent_list:
@@ -289,6 +289,7 @@ class GrAFConverter:
 
             node_id = NodeId(prefix, annotation.id)
             self._add_node(node_id, annotation, annotation_name, regions, parent_node)
+            self._add_root_nodes(prefix, node_id)
 
             if child_tiers:
                 for t in child_tiers:
@@ -314,6 +315,11 @@ class GrAFConverter:
         self._add_node_to_graph(node_id, regions, from_node_id)
         self._add_graf_annotation(annotation_name, annotation.id, node_id,
                                   annotation.value, annotation.features)
+
+    def _add_root_nodes(self, prefix, node_id):
+        for root_tier in self.root_tiers:
+            if root_tier.name in prefix:
+                self.graf.header.roots.append(node_id.to_str())
 
     def _add_graf_annotation(self, annotation_name, annotation_id,
                              annotation_ref, annotation_value, annotation_features=None):
