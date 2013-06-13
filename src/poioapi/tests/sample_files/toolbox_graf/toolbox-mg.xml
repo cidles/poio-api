@@ -1,0 +1,5159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="mg" occurs="735"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="tx"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="mg"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="mg..n10"/>
+	<edge from="tx..n2" to="mg..n10" xml:id="e10"/>
+	<a as="mg" label="mg" ref="mg..n10" xml:id="10">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1000"/>
+	<edge from="tx..n998" to="mg..n1000" xml:id="e1000"/>
+	<a as="mg" label="mg" ref="mg..n1000" xml:id="1000">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1004"/>
+	<edge from="tx..n1002" to="mg..n1004" xml:id="e1004"/>
+	<a as="mg" label="mg" ref="mg..n1004" xml:id="1004">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1008"/>
+	<edge from="tx..n1006" to="mg..n1008" xml:id="e1008"/>
+	<a as="mg" label="mg" ref="mg..n1008" xml:id="1008">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1012"/>
+	<edge from="tx..n1010" to="mg..n1012" xml:id="e1012"/>
+	<a as="mg" label="mg" ref="mg..n1012" xml:id="1012">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1014"/>
+	<edge from="tx..n1010" to="mg..n1014" xml:id="e1014"/>
+	<a as="mg" label="mg" ref="mg..n1014" xml:id="1014">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1018"/>
+	<edge from="tx..n1016" to="mg..n1018" xml:id="e1018"/>
+	<a as="mg" label="mg" ref="mg..n1018" xml:id="1018">
+		<fs>
+			<f name="annotation_value">dig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n102"/>
+	<edge from="tx..n100" to="mg..n102" xml:id="e102"/>
+	<a as="mg" label="mg" ref="mg..n102" xml:id="102">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1022"/>
+	<edge from="tx..n1020" to="mg..n1022" xml:id="e1022"/>
+	<a as="mg" label="mg" ref="mg..n1022" xml:id="1022">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1026"/>
+	<edge from="tx..n1024" to="mg..n1026" xml:id="e1026"/>
+	<a as="mg" label="mg" ref="mg..n1026" xml:id="1026">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1028"/>
+	<edge from="tx..n1024" to="mg..n1028" xml:id="e1028"/>
+	<a as="mg" label="mg" ref="mg..n1028" xml:id="1028">
+		<fs>
+			<f name="annotation_value">make</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1032"/>
+	<edge from="tx..n1030" to="mg..n1032" xml:id="e1032"/>
+	<a as="mg" label="mg" ref="mg..n1032" xml:id="1032">
+		<fs>
+			<f name="annotation_value">bad</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1034"/>
+	<edge from="tx..n1030" to="mg..n1034" xml:id="e1034"/>
+	<a as="mg" label="mg" ref="mg..n1034" xml:id="1034">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1038"/>
+	<edge from="tx..n1036" to="mg..n1038" xml:id="e1038"/>
+	<a as="mg" label="mg" ref="mg..n1038" xml:id="1038">
+		<fs>
+			<f name="annotation_value">everything</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1042"/>
+	<edge from="tx..n1040" to="mg..n1042" xml:id="e1042"/>
+	<a as="mg" label="mg" ref="mg..n1042" xml:id="1042">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1046"/>
+	<edge from="tx..n1044" to="mg..n1046" xml:id="e1046"/>
+	<a as="mg" label="mg" ref="mg..n1046" xml:id="1046">
+		<fs>
+			<f name="annotation_value">inside</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1050"/>
+	<edge from="tx..n1048" to="mg..n1050" xml:id="e1050"/>
+	<a as="mg" label="mg" ref="mg..n1050" xml:id="1050">
+		<fs>
+			<f name="annotation_value">mister</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1054"/>
+	<edge from="tx..n1052" to="mg..n1054" xml:id="e1054"/>
+	<a as="mg" label="mg" ref="mg..n1054" xml:id="1054">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1058"/>
+	<edge from="tx..n1056" to="mg..n1058" xml:id="e1058"/>
+	<a as="mg" label="mg" ref="mg..n1058" xml:id="1058">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n106"/>
+	<edge from="tx..n104" to="mg..n106" xml:id="e106"/>
+	<a as="mg" label="mg" ref="mg..n106" xml:id="106">
+		<fs>
+			<f name="annotation_value">while</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1060"/>
+	<edge from="tx..n1056" to="mg..n1060" xml:id="e1060"/>
+	<a as="mg" label="mg" ref="mg..n1060" xml:id="1060">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1064"/>
+	<edge from="tx..n1062" to="mg..n1064" xml:id="e1064"/>
+	<a as="mg" label="mg" ref="mg..n1064" xml:id="1064">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1066"/>
+	<edge from="tx..n1062" to="mg..n1066" xml:id="e1066"/>
+	<a as="mg" label="mg" ref="mg..n1066" xml:id="1066">
+		<fs>
+			<f name="annotation_value">PROG</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1070"/>
+	<edge from="tx..n1068" to="mg..n1070" xml:id="e1070"/>
+	<a as="mg" label="mg" ref="mg..n1070" xml:id="1070">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1072"/>
+	<edge from="tx..n1068" to="mg..n1072" xml:id="e1072"/>
+	<a as="mg" label="mg" ref="mg..n1072" xml:id="1072">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1074"/>
+	<edge from="tx..n1068" to="mg..n1074" xml:id="e1074"/>
+	<a as="mg" label="mg" ref="mg..n1074" xml:id="1074">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1078"/>
+	<edge from="tx..n1076" to="mg..n1078" xml:id="e1078"/>
+	<a as="mg" label="mg" ref="mg..n1078" xml:id="1078">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1082"/>
+	<edge from="tx..n1080" to="mg..n1082" xml:id="e1082"/>
+	<a as="mg" label="mg" ref="mg..n1082" xml:id="1082">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1086"/>
+	<edge from="tx..n1084" to="mg..n1086" xml:id="e1086"/>
+	<a as="mg" label="mg" ref="mg..n1086" xml:id="1086">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1088"/>
+	<edge from="tx..n1084" to="mg..n1088" xml:id="e1088"/>
+	<a as="mg" label="mg" ref="mg..n1088" xml:id="1088">
+		<fs>
+			<f name="annotation_value">move</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1092"/>
+	<edge from="tx..n1090" to="mg..n1092" xml:id="e1092"/>
+	<a as="mg" label="mg" ref="mg..n1092" xml:id="1092">
+		<fs>
+			<f name="annotation_value">feel.bad</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1094"/>
+	<edge from="tx..n1090" to="mg..n1094" xml:id="e1094"/>
+	<a as="mg" label="mg" ref="mg..n1094" xml:id="1094">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1096"/>
+	<edge from="tx..n1090" to="mg..n1096" xml:id="e1096"/>
+	<a as="mg" label="mg" ref="mg..n1096" xml:id="1096">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n110"/>
+	<edge from="tx..n108" to="mg..n110" xml:id="e110"/>
+	<a as="mg" label="mg" ref="mg..n110" xml:id="110">
+		<fs>
+			<f name="annotation_value">1D.exRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1100"/>
+	<edge from="tx..n1098" to="mg..n1100" xml:id="e1100"/>
+	<a as="mg" label="mg" ref="mg..n1100" xml:id="1100">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1104"/>
+	<edge from="tx..n1102" to="mg..n1104" xml:id="e1104"/>
+	<a as="mg" label="mg" ref="mg..n1104" xml:id="1104">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1106"/>
+	<edge from="tx..n1102" to="mg..n1106" xml:id="e1106"/>
+	<a as="mg" label="mg" ref="mg..n1106" xml:id="1106">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1110"/>
+	<edge from="tx..n1108" to="mg..n1110" xml:id="e1110"/>
+	<a as="mg" label="mg" ref="mg..n1110" xml:id="1110">
+		<fs>
+			<f name="annotation_value">hey</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1114"/>
+	<edge from="tx..n1112" to="mg..n1114" xml:id="e1114"/>
+	<a as="mg" label="mg" ref="mg..n1114" xml:id="1114">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1116"/>
+	<edge from="tx..n1112" to="mg..n1116" xml:id="e1116"/>
+	<a as="mg" label="mg" ref="mg..n1116" xml:id="1116">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n112"/>
+	<edge from="tx..n108" to="mg..n112" xml:id="e112"/>
+	<a as="mg" label="mg" ref="mg..n112" xml:id="112">
+		<fs>
+			<f name="annotation_value">marry</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1120"/>
+	<edge from="tx..n1118" to="mg..n1120" xml:id="e1120"/>
+	<a as="mg" label="mg" ref="mg..n1120" xml:id="1120">
+		<fs>
+			<f name="annotation_value">food</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1124"/>
+	<edge from="tx..n1122" to="mg..n1124" xml:id="e1124"/>
+	<a as="mg" label="mg" ref="mg..n1124" xml:id="1124">
+		<fs>
+			<f name="annotation_value">1D.incIRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1126"/>
+	<edge from="tx..n1122" to="mg..n1126" xml:id="e1126"/>
+	<a as="mg" label="mg" ref="mg..n1126" xml:id="1126">
+		<fs>
+			<f name="annotation_value">eat:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1130"/>
+	<edge from="tx..n1128" to="mg..n1130" xml:id="e1130"/>
+	<a as="mg" label="mg" ref="mg..n1130" xml:id="1130">
+		<fs>
+			<f name="annotation_value">2S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1134"/>
+	<edge from="tx..n1132" to="mg..n1134" xml:id="e1134"/>
+	<a as="mg" label="mg" ref="mg..n1134" xml:id="1134">
+		<fs>
+			<f name="annotation_value">2S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1136"/>
+	<edge from="tx..n1132" to="mg..n1136" xml:id="e1136"/>
+	<a as="mg" label="mg" ref="mg..n1136" xml:id="1136">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1140"/>
+	<edge from="tx..n1138" to="mg..n1140" xml:id="e1140"/>
+	<a as="mg" label="mg" ref="mg..n1140" xml:id="1140">
+		<fs>
+			<f name="annotation_value">hear</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1144"/>
+	<edge from="tx..n1142" to="mg..n1144" xml:id="e1144"/>
+	<a as="mg" label="mg" ref="mg..n1144" xml:id="1144">
+		<fs>
+			<f name="annotation_value">voice</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1146"/>
+	<edge from="tx..n1142" to="mg..n1146" xml:id="e1146"/>
+	<a as="mg" label="mg" ref="mg..n1146" xml:id="1146">
+		<fs>
+			<f name="annotation_value">-1S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1150"/>
+	<edge from="tx..n1148" to="mg..n1150" xml:id="e1150"/>
+	<a as="mg" label="mg" ref="mg..n1150" xml:id="1150">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1152"/>
+	<edge from="tx..n1148" to="mg..n1152" xml:id="e1152"/>
+	<a as="mg" label="mg" ref="mg..n1152" xml:id="1152">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1156"/>
+	<edge from="tx..n1154" to="mg..n1156" xml:id="e1156"/>
+	<a as="mg" label="mg" ref="mg..n1156" xml:id="1156">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n116"/>
+	<edge from="tx..n114" to="mg..n116" xml:id="e116"/>
+	<a as="mg" label="mg" ref="mg..n116" xml:id="116">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1160"/>
+	<edge from="tx..n1158" to="mg..n1160" xml:id="e1160"/>
+	<a as="mg" label="mg" ref="mg..n1160" xml:id="1160">
+		<fs>
+			<f name="annotation_value">food</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1164"/>
+	<edge from="tx..n1162" to="mg..n1164" xml:id="e1164"/>
+	<a as="mg" label="mg" ref="mg..n1164" xml:id="1164">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1168"/>
+	<edge from="tx..n1166" to="mg..n1168" xml:id="e1168"/>
+	<a as="mg" label="mg" ref="mg..n1168" xml:id="1168">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1170"/>
+	<edge from="tx..n1166" to="mg..n1170" xml:id="e1170"/>
+	<a as="mg" label="mg" ref="mg..n1170" xml:id="1170">
+		<fs>
+			<f name="annotation_value">look_out</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1172"/>
+	<edge from="tx..n1166" to="mg..n1172" xml:id="e1172"/>
+	<a as="mg" label="mg" ref="mg..n1172" xml:id="1172">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1174"/>
+	<edge from="tx..n1166" to="mg..n1174" xml:id="e1174"/>
+	<a as="mg" label="mg" ref="mg..n1174" xml:id="1174">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1178"/>
+	<edge from="tx..n1176" to="mg..n1178" xml:id="e1178"/>
+	<a as="mg" label="mg" ref="mg..n1178" xml:id="1178">
+		<fs>
+			<f name="annotation_value">1S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n118"/>
+	<edge from="tx..n114" to="mg..n118" xml:id="e118"/>
+	<a as="mg" label="mg" ref="mg..n118" xml:id="118">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1180"/>
+	<edge from="tx..n1176" to="mg..n1180" xml:id="e1180"/>
+	<a as="mg" label="mg" ref="mg..n1180" xml:id="1180">
+		<fs>
+			<f name="annotation_value">PSP:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1184"/>
+	<edge from="tx..n1182" to="mg..n1184" xml:id="e1184"/>
+	<a as="mg" label="mg" ref="mg..n1184" xml:id="1184">
+		<fs>
+			<f name="annotation_value">hit</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1186"/>
+	<edge from="tx..n1182" to="mg..n1186" xml:id="e1186"/>
+	<a as="mg" label="mg" ref="mg..n1186" xml:id="1186">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1188"/>
+	<edge from="tx..n1182" to="mg..n1188" xml:id="e1188"/>
+	<a as="mg" label="mg" ref="mg..n1188" xml:id="1188">
+		<fs>
+			<f name="annotation_value">-2S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1192"/>
+	<edge from="tx..n1190" to="mg..n1192" xml:id="e1192"/>
+	<a as="mg" label="mg" ref="mg..n1192" xml:id="1192">
+		<fs>
+			<f name="annotation_value">2S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1194"/>
+	<edge from="tx..n1190" to="mg..n1194" xml:id="e1194"/>
+	<a as="mg" label="mg" ref="mg..n1194" xml:id="1194">
+		<fs>
+			<f name="annotation_value">know</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1198"/>
+	<edge from="tx..n1196" to="mg..n1198" xml:id="e1198"/>
+	<a as="mg" label="mg" ref="mg..n1198" xml:id="1198">
+		<fs>
+			<f name="annotation_value">fashion</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1202"/>
+	<edge from="tx..n1200" to="mg..n1202" xml:id="e1202"/>
+	<a as="mg" label="mg" ref="mg..n1202" xml:id="1202">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1206"/>
+	<edge from="tx..n1204" to="mg..n1206" xml:id="e1206"/>
+	<a as="mg" label="mg" ref="mg..n1206" xml:id="1206">
+		<fs>
+			<f name="annotation_value">animal</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1210"/>
+	<edge from="tx..n1208" to="mg..n1210" xml:id="e1210"/>
+	<a as="mg" label="mg" ref="mg..n1210" xml:id="1210">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1212"/>
+	<edge from="tx..n1208" to="mg..n1212" xml:id="e1212"/>
+	<a as="mg" label="mg" ref="mg..n1212" xml:id="1212">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1216"/>
+	<edge from="tx..n1214" to="mg..n1216" xml:id="e1216"/>
+	<a as="mg" label="mg" ref="mg..n1216" xml:id="1216">
+		<fs>
+			<f name="annotation_value">know</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n122"/>
+	<edge from="tx..n120" to="mg..n122" xml:id="e122"/>
+	<a as="mg" label="mg" ref="mg..n122" xml:id="122">
+		<fs>
+			<f name="annotation_value">again</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1220"/>
+	<edge from="tx..n1218" to="mg..n1220" xml:id="e1220"/>
+	<a as="mg" label="mg" ref="mg..n1220" xml:id="1220">
+		<fs>
+			<f name="annotation_value">what</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1224"/>
+	<edge from="tx..n1222" to="mg..n1224" xml:id="e1224"/>
+	<a as="mg" label="mg" ref="mg..n1224" xml:id="1224">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1228"/>
+	<edge from="tx..n1226" to="mg..n1228" xml:id="e1228"/>
+	<a as="mg" label="mg" ref="mg..n1228" xml:id="1228">
+		<fs>
+			<f name="annotation_value">husband</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1232"/>
+	<edge from="tx..n1230" to="mg..n1232" xml:id="e1232"/>
+	<a as="mg" label="mg" ref="mg..n1232" xml:id="1232">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1236"/>
+	<edge from="tx..n1234" to="mg..n1236" xml:id="e1236"/>
+	<a as="mg" label="mg" ref="mg..n1236" xml:id="1236">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1238"/>
+	<edge from="tx..n1234" to="mg..n1238" xml:id="e1238"/>
+	<a as="mg" label="mg" ref="mg..n1238" xml:id="1238">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1240"/>
+	<edge from="tx..n1234" to="mg..n1240" xml:id="e1240"/>
+	<a as="mg" label="mg" ref="mg..n1240" xml:id="1240">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1242"/>
+	<edge from="tx..n1234" to="mg..n1242" xml:id="e1242"/>
+	<a as="mg" label="mg" ref="mg..n1242" xml:id="1242">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1246"/>
+	<edge from="tx..n1244" to="mg..n1246" xml:id="e1246"/>
+	<a as="mg" label="mg" ref="mg..n1246" xml:id="1246">
+		<fs>
+			<f name="annotation_value">PREP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1248"/>
+	<edge from="tx..n1244" to="mg..n1248" xml:id="e1248"/>
+	<a as="mg" label="mg" ref="mg..n1248" xml:id="1248">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1252"/>
+	<edge from="tx..n1250" to="mg..n1252" xml:id="e1252"/>
+	<a as="mg" label="mg" ref="mg..n1252" xml:id="1252">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1256"/>
+	<edge from="tx..n1254" to="mg..n1256" xml:id="e1256"/>
+	<a as="mg" label="mg" ref="mg..n1256" xml:id="1256">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1258"/>
+	<edge from="tx..n1254" to="mg..n1258" xml:id="e1258"/>
+	<a as="mg" label="mg" ref="mg..n1258" xml:id="1258">
+		<fs>
+			<f name="annotation_value">make</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n126"/>
+	<edge from="tx..n124" to="mg..n126" xml:id="e126"/>
+	<a as="mg" label="mg" ref="mg..n126" xml:id="126">
+		<fs>
+			<f name="annotation_value">leave</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1262"/>
+	<edge from="tx..n1260" to="mg..n1262" xml:id="e1262"/>
+	<a as="mg" label="mg" ref="mg..n1262" xml:id="1262">
+		<fs>
+			<f name="annotation_value">desire</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1266"/>
+	<edge from="tx..n1264" to="mg..n1266" xml:id="e1266"/>
+	<a as="mg" label="mg" ref="mg..n1266" xml:id="1266">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1270"/>
+	<edge from="tx..n1268" to="mg..n1270" xml:id="e1270"/>
+	<a as="mg" label="mg" ref="mg..n1270" xml:id="1270">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1272"/>
+	<edge from="tx..n1268" to="mg..n1272" xml:id="e1272"/>
+	<a as="mg" label="mg" ref="mg..n1272" xml:id="1272">
+		<fs>
+			<f name="annotation_value">spoil</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1274"/>
+	<edge from="tx..n1268" to="mg..n1274" xml:id="e1274"/>
+	<a as="mg" label="mg" ref="mg..n1274" xml:id="1274">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1278"/>
+	<edge from="tx..n1276" to="mg..n1278" xml:id="e1278"/>
+	<a as="mg" label="mg" ref="mg..n1278" xml:id="1278">
+		<fs>
+			<f name="annotation_value">everything</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1282"/>
+	<edge from="tx..n1280" to="mg..n1282" xml:id="e1282"/>
+	<a as="mg" label="mg" ref="mg..n1282" xml:id="1282">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1286"/>
+	<edge from="tx..n1284" to="mg..n1286" xml:id="e1286"/>
+	<a as="mg" label="mg" ref="mg..n1286" xml:id="1286">
+		<fs>
+			<f name="annotation_value">inside</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1290"/>
+	<edge from="tx..n1288" to="mg..n1290" xml:id="e1290"/>
+	<a as="mg" label="mg" ref="mg..n1290" xml:id="1290">
+		<fs>
+			<f name="annotation_value">and husband</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1294"/>
+	<edge from="tx..n1292" to="mg..n1294" xml:id="e1294"/>
+	<a as="mg" label="mg" ref="mg..n1294" xml:id="1294">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1298"/>
+	<edge from="tx..n1296" to="mg..n1298" xml:id="e1298"/>
+	<a as="mg" label="mg" ref="mg..n1298" xml:id="1298">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n130"/>
+	<edge from="tx..n128" to="mg..n130" xml:id="e130"/>
+	<a as="mg" label="mg" ref="mg..n130" xml:id="130">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1300"/>
+	<edge from="tx..n1296" to="mg..n1300" xml:id="e1300"/>
+	<a as="mg" label="mg" ref="mg..n1300" xml:id="1300">
+		<fs>
+			<f name="annotation_value">feel.bad</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1302"/>
+	<edge from="tx..n1296" to="mg..n1302" xml:id="e1302"/>
+	<a as="mg" label="mg" ref="mg..n1302" xml:id="1302">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1304"/>
+	<edge from="tx..n1296" to="mg..n1304" xml:id="e1304"/>
+	<a as="mg" label="mg" ref="mg..n1304" xml:id="1304">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1308"/>
+	<edge from="tx..n1306" to="mg..n1308" xml:id="e1308"/>
+	<a as="mg" label="mg" ref="mg..n1308" xml:id="1308">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1310"/>
+	<edge from="tx..n1306" to="mg..n1310" xml:id="e1310"/>
+	<a as="mg" label="mg" ref="mg..n1310" xml:id="1310">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1312"/>
+	<edge from="tx..n1306" to="mg..n1312" xml:id="e1312"/>
+	<a as="mg" label="mg" ref="mg..n1312" xml:id="1312">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1314"/>
+	<edge from="tx..n1306" to="mg..n1314" xml:id="e1314"/>
+	<a as="mg" label="mg" ref="mg..n1314" xml:id="1314">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1318"/>
+	<edge from="tx..n1316" to="mg..n1318" xml:id="e1318"/>
+	<a as="mg" label="mg" ref="mg..n1318" xml:id="1318">
+		<fs>
+			<f name="annotation_value">PREP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1320"/>
+	<edge from="tx..n1316" to="mg..n1320" xml:id="e1320"/>
+	<a as="mg" label="mg" ref="mg..n1320" xml:id="1320">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1324"/>
+	<edge from="tx..n1322" to="mg..n1324" xml:id="e1324"/>
+	<a as="mg" label="mg" ref="mg..n1324" xml:id="1324">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1326"/>
+	<edge from="tx..n1322" to="mg..n1326" xml:id="e1326"/>
+	<a as="mg" label="mg" ref="mg..n1326" xml:id="1326">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1330"/>
+	<edge from="tx..n1328" to="mg..n1330" xml:id="e1330"/>
+	<a as="mg" label="mg" ref="mg..n1330" xml:id="1330">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1332"/>
+	<edge from="tx..n1328" to="mg..n1332" xml:id="e1332"/>
+	<a as="mg" label="mg" ref="mg..n1332" xml:id="1332">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1334"/>
+	<edge from="tx..n1328" to="mg..n1334" xml:id="e1334"/>
+	<a as="mg" label="mg" ref="mg..n1334" xml:id="1334">
+		<fs>
+			<f name="annotation_value">like</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1338"/>
+	<edge from="tx..n1336" to="mg..n1338" xml:id="e1338"/>
+	<a as="mg" label="mg" ref="mg..n1338" xml:id="1338">
+		<fs>
+			<f name="annotation_value">2S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n134"/>
+	<edge from="tx..n132" to="mg..n134" xml:id="e134"/>
+	<a as="mg" label="mg" ref="mg..n134" xml:id="134">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1340"/>
+	<edge from="tx..n1336" to="mg..n1340" xml:id="e1340"/>
+	<a as="mg" label="mg" ref="mg..n1340" xml:id="1340">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1342"/>
+	<edge from="tx..n1336" to="mg..n1342" xml:id="e1342"/>
+	<a as="mg" label="mg" ref="mg..n1342" xml:id="1342">
+		<fs>
+			<f name="annotation_value">PROG</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1346"/>
+	<edge from="tx..n1344" to="mg..n1346" xml:id="e1346"/>
+	<a as="mg" label="mg" ref="mg..n1346" xml:id="1346">
+		<fs>
+			<f name="annotation_value">make</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1350"/>
+	<edge from="tx..n1348" to="mg..n1350" xml:id="e1350"/>
+	<a as="mg" label="mg" ref="mg..n1350" xml:id="1350">
+		<fs>
+			<f name="annotation_value">similar</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1352"/>
+	<edge from="tx..n1348" to="mg..n1352" xml:id="e1352"/>
+	<a as="mg" label="mg" ref="mg..n1352" xml:id="1352">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1356"/>
+	<edge from="tx..n1354" to="mg..n1356" xml:id="e1356"/>
+	<a as="mg" label="mg" ref="mg..n1356" xml:id="1356">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n136"/>
+	<edge from="tx..n132" to="mg..n136" xml:id="e136"/>
+	<a as="mg" label="mg" ref="mg..n136" xml:id="136">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1360"/>
+	<edge from="tx..n1358" to="mg..n1360" xml:id="e1360"/>
+	<a as="mg" label="mg" ref="mg..n1360" xml:id="1360">
+		<fs>
+			<f name="annotation_value">1S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1362"/>
+	<edge from="tx..n1358" to="mg..n1362" xml:id="e1362"/>
+	<a as="mg" label="mg" ref="mg..n1362" xml:id="1362">
+		<fs>
+			<f name="annotation_value">PSP:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1366"/>
+	<edge from="tx..n1364" to="mg..n1366" xml:id="e1366"/>
+	<a as="mg" label="mg" ref="mg..n1366" xml:id="1366">
+		<fs>
+			<f name="annotation_value">hit</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1368"/>
+	<edge from="tx..n1364" to="mg..n1368" xml:id="e1368"/>
+	<a as="mg" label="mg" ref="mg..n1368" xml:id="1368">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1370"/>
+	<edge from="tx..n1364" to="mg..n1370" xml:id="e1370"/>
+	<a as="mg" label="mg" ref="mg..n1370" xml:id="1370">
+		<fs>
+			<f name="annotation_value">-2S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1374"/>
+	<edge from="tx..n1372" to="mg..n1374" xml:id="e1374"/>
+	<a as="mg" label="mg" ref="mg..n1374" xml:id="1374">
+		<fs>
+			<f name="annotation_value">some</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1378"/>
+	<edge from="tx..n1376" to="mg..n1378" xml:id="e1378"/>
+	<a as="mg" label="mg" ref="mg..n1378" xml:id="1378">
+		<fs>
+			<f name="annotation_value">time</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1382"/>
+	<edge from="tx..n1380" to="mg..n1382" xml:id="e1382"/>
+	<a as="mg" label="mg" ref="mg..n1382" xml:id="1382">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1386"/>
+	<edge from="tx..n1384" to="mg..n1386" xml:id="e1386"/>
+	<a as="mg" label="mg" ref="mg..n1386" xml:id="1386">
+		<fs>
+			<f name="annotation_value">day</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1390"/>
+	<edge from="tx..n1388" to="mg..n1390" xml:id="e1390"/>
+	<a as="mg" label="mg" ref="mg..n1390" xml:id="1390">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1392"/>
+	<edge from="tx..n1388" to="mg..n1392" xml:id="e1392"/>
+	<a as="mg" label="mg" ref="mg..n1392" xml:id="1392">
+		<fs>
+			<f name="annotation_value">one</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1396"/>
+	<edge from="tx..n1394" to="mg..n1396" xml:id="e1396"/>
+	<a as="mg" label="mg" ref="mg..n1396" xml:id="1396">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1398"/>
+	<edge from="tx..n1394" to="mg..n1398" xml:id="e1398"/>
+	<a as="mg" label="mg" ref="mg..n1398" xml:id="1398">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n14"/>
+	<edge from="tx..n12" to="mg..n14" xml:id="e14"/>
+	<a as="mg" label="mg" ref="mg..n14" xml:id="14">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n140"/>
+	<edge from="tx..n138" to="mg..n140" xml:id="e140"/>
+	<a as="mg" label="mg" ref="mg..n140" xml:id="140">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1402"/>
+	<edge from="tx..n1400" to="mg..n1402" xml:id="e1402"/>
+	<a as="mg" label="mg" ref="mg..n1402" xml:id="1402">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1406"/>
+	<edge from="tx..n1404" to="mg..n1406" xml:id="e1406"/>
+	<a as="mg" label="mg" ref="mg..n1406" xml:id="1406">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1410"/>
+	<edge from="tx..n1408" to="mg..n1410" xml:id="e1410"/>
+	<a as="mg" label="mg" ref="mg..n1410" xml:id="1410">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1412"/>
+	<edge from="tx..n1408" to="mg..n1412" xml:id="e1412"/>
+	<a as="mg" label="mg" ref="mg..n1412" xml:id="1412">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1414"/>
+	<edge from="tx..n1408" to="mg..n1414" xml:id="e1414"/>
+	<a as="mg" label="mg" ref="mg..n1414" xml:id="1414">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1416"/>
+	<edge from="tx..n1408" to="mg..n1416" xml:id="e1416"/>
+	<a as="mg" label="mg" ref="mg..n1416" xml:id="1416">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1420"/>
+	<edge from="tx..n1418" to="mg..n1420" xml:id="e1420"/>
+	<a as="mg" label="mg" ref="mg..n1420" xml:id="1420">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1424"/>
+	<edge from="tx..n1422" to="mg..n1424" xml:id="e1424"/>
+	<a as="mg" label="mg" ref="mg..n1424" xml:id="1424">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1428"/>
+	<edge from="tx..n1426" to="mg..n1428" xml:id="e1428"/>
+	<a as="mg" label="mg" ref="mg..n1428" xml:id="1428">
+		<fs>
+			<f name="annotation_value">3S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1430"/>
+	<edge from="tx..n1426" to="mg..n1430" xml:id="e1430"/>
+	<a as="mg" label="mg" ref="mg..n1430" xml:id="1430">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1434"/>
+	<edge from="tx..n1432" to="mg..n1434" xml:id="e1434"/>
+	<a as="mg" label="mg" ref="mg..n1434" xml:id="1434">
+		<fs>
+			<f name="annotation_value">DET-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1436"/>
+	<edge from="tx..n1432" to="mg..n1436" xml:id="e1436"/>
+	<a as="mg" label="mg" ref="mg..n1436" xml:id="1436">
+		<fs>
+			<f name="annotation_value">thing</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n144"/>
+	<edge from="tx..n142" to="mg..n144" xml:id="e144"/>
+	<a as="mg" label="mg" ref="mg..n144" xml:id="144">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1440"/>
+	<edge from="tx..n1438" to="mg..n1440" xml:id="e1440"/>
+	<a as="mg" label="mg" ref="mg..n1440" xml:id="1440">
+		<fs>
+			<f name="annotation_value">3S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1442"/>
+	<edge from="tx..n1438" to="mg..n1442" xml:id="e1442"/>
+	<a as="mg" label="mg" ref="mg..n1442" xml:id="1442">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1446"/>
+	<edge from="tx..n1444" to="mg..n1446" xml:id="e1446"/>
+	<a as="mg" label="mg" ref="mg..n1446" xml:id="1446">
+		<fs>
+			<f name="annotation_value">make.good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1448"/>
+	<edge from="tx..n1444" to="mg..n1448" xml:id="e1448"/>
+	<a as="mg" label="mg" ref="mg..n1448" xml:id="1448">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1452"/>
+	<edge from="tx..n1450" to="mg..n1452" xml:id="e1452"/>
+	<a as="mg" label="mg" ref="mg..n1452" xml:id="1452">
+		<fs>
+			<f name="annotation_value">inside</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1456"/>
+	<edge from="tx..n1454" to="mg..n1456" xml:id="e1456"/>
+	<a as="mg" label="mg" ref="mg..n1456" xml:id="1456">
+		<fs>
+			<f name="annotation_value">here</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1460"/>
+	<edge from="tx..n1458" to="mg..n1460" xml:id="e1460"/>
+	<a as="mg" label="mg" ref="mg..n1460" xml:id="1460">
+		<fs>
+			<f name="annotation_value">LOC-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1462"/>
+	<edge from="tx..n1458" to="mg..n1462" xml:id="e1462"/>
+	<a as="mg" label="mg" ref="mg..n1462" xml:id="1462">
+		<fs>
+			<f name="annotation_value">kitchen</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1466"/>
+	<edge from="tx..n1464" to="mg..n1466" xml:id="e1466"/>
+	<a as="mg" label="mg" ref="mg..n1466" xml:id="1466">
+		<fs>
+			<f name="annotation_value">3S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1468"/>
+	<edge from="tx..n1464" to="mg..n1468" xml:id="e1468"/>
+	<a as="mg" label="mg" ref="mg..n1468" xml:id="1468">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1472"/>
+	<edge from="tx..n1470" to="mg..n1472" xml:id="e1472"/>
+	<a as="mg" label="mg" ref="mg..n1472" xml:id="1472">
+		<fs>
+			<f name="annotation_value">make.good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1474"/>
+	<edge from="tx..n1470" to="mg..n1474" xml:id="e1474"/>
+	<a as="mg" label="mg" ref="mg..n1474" xml:id="1474">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1478"/>
+	<edge from="tx..n1476" to="mg..n1478" xml:id="e1478"/>
+	<a as="mg" label="mg" ref="mg..n1478" xml:id="1478">
+		<fs>
+			<f name="annotation_value">inside</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n148"/>
+	<edge from="tx..n146" to="mg..n148" xml:id="e148"/>
+	<a as="mg" label="mg" ref="mg..n148" xml:id="148">
+		<fs>
+			<f name="annotation_value">day</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1482"/>
+	<edge from="tx..n1480" to="mg..n1482" xml:id="e1482"/>
+	<a as="mg" label="mg" ref="mg..n1482" xml:id="1482">
+		<fs>
+			<f name="annotation_value">3S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1484"/>
+	<edge from="tx..n1480" to="mg..n1484" xml:id="e1484"/>
+	<a as="mg" label="mg" ref="mg..n1484" xml:id="1484">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1488"/>
+	<edge from="tx..n1486" to="mg..n1488" xml:id="e1488"/>
+	<a as="mg" label="mg" ref="mg..n1488" xml:id="1488">
+		<fs>
+			<f name="annotation_value">some food</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1492"/>
+	<edge from="tx..n1490" to="mg..n1492" xml:id="e1492"/>
+	<a as="mg" label="mg" ref="mg..n1492" xml:id="1492">
+		<fs>
+			<f name="annotation_value">3D.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1494"/>
+	<edge from="tx..n1490" to="mg..n1494" xml:id="e1494"/>
+	<a as="mg" label="mg" ref="mg..n1494" xml:id="1494">
+		<fs>
+			<f name="annotation_value">eat:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1496"/>
+	<edge from="tx..n1490" to="mg..n1496" xml:id="e1496"/>
+	<a as="mg" label="mg" ref="mg..n1496" xml:id="1496">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1498"/>
+	<edge from="tx..n1490" to="mg..n1498" xml:id="e1498"/>
+	<a as="mg" label="mg" ref="mg..n1498" xml:id="1498">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1502"/>
+	<edge from="tx..n1500" to="mg..n1502" xml:id="e1502"/>
+	<a as="mg" label="mg" ref="mg..n1502" xml:id="1502">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1504"/>
+	<edge from="tx..n1500" to="mg..n1504" xml:id="e1504"/>
+	<a as="mg" label="mg" ref="mg..n1504" xml:id="1504">
+		<fs>
+			<f name="annotation_value">not_want</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1508"/>
+	<edge from="tx..n1506" to="mg..n1508" xml:id="e1508"/>
+	<a as="mg" label="mg" ref="mg..n1508" xml:id="1508">
+		<fs>
+			<f name="annotation_value">because</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1512"/>
+	<edge from="tx..n1510" to="mg..n1512" xml:id="e1512"/>
+	<a as="mg" label="mg" ref="mg..n1512" xml:id="1512">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1516"/>
+	<edge from="tx..n1514" to="mg..n1516" xml:id="e1516"/>
+	<a as="mg" label="mg" ref="mg..n1516" xml:id="1516">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1518"/>
+	<edge from="tx..n1514" to="mg..n1518" xml:id="e1518"/>
+	<a as="mg" label="mg" ref="mg..n1518" xml:id="1518">
+		<fs>
+			<f name="annotation_value">unable</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n152"/>
+	<edge from="tx..n150" to="mg..n152" xml:id="e152"/>
+	<a as="mg" label="mg" ref="mg..n152" xml:id="152">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1522"/>
+	<edge from="tx..n1520" to="mg..n1522" xml:id="e1522"/>
+	<a as="mg" label="mg" ref="mg..n1522" xml:id="1522">
+		<fs>
+			<f name="annotation_value">know</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1526"/>
+	<edge from="tx..n1524" to="mg..n1526" xml:id="e1526"/>
+	<a as="mg" label="mg" ref="mg..n1526" xml:id="1526">
+		<fs>
+			<f name="annotation_value">language</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1530"/>
+	<edge from="tx..n1528" to="mg..n1530" xml:id="e1530"/>
+	<a as="mg" label="mg" ref="mg..n1530" xml:id="1530">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1534"/>
+	<edge from="tx..n1532" to="mg..n1534" xml:id="e1534"/>
+	<a as="mg" label="mg" ref="mg..n1534" xml:id="1534">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1538"/>
+	<edge from="tx..n1536" to="mg..n1538" xml:id="e1538"/>
+	<a as="mg" label="mg" ref="mg..n1538" xml:id="1538">
+		<fs>
+			<f name="annotation_value">1P.incS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n154"/>
+	<edge from="tx..n150" to="mg..n154" xml:id="e154"/>
+	<a as="mg" label="mg" ref="mg..n154" xml:id="154">
+		<fs>
+			<f name="annotation_value">one</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1542"/>
+	<edge from="tx..n1540" to="mg..n1542" xml:id="e1542"/>
+	<a as="mg" label="mg" ref="mg..n1542" xml:id="1542">
+		<fs>
+			<f name="annotation_value">person</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1546"/>
+	<edge from="tx..n1544" to="mg..n1546" xml:id="e1546"/>
+	<a as="mg" label="mg" ref="mg..n1546" xml:id="1546">
+		<fs>
+			<f name="annotation_value">1P.inRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1548"/>
+	<edge from="tx..n1544" to="mg..n1548" xml:id="e1548"/>
+	<a as="mg" label="mg" ref="mg..n1548" xml:id="1548">
+		<fs>
+			<f name="annotation_value">HABIT</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1552"/>
+	<edge from="tx..n1550" to="mg..n1552" xml:id="e1552"/>
+	<a as="mg" label="mg" ref="mg..n1552" xml:id="1552">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1554"/>
+	<edge from="tx..n1550" to="mg..n1554" xml:id="e1554"/>
+	<a as="mg" label="mg" ref="mg..n1554" xml:id="1554">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1556"/>
+	<edge from="tx..n1550" to="mg..n1556" xml:id="e1556"/>
+	<a as="mg" label="mg" ref="mg..n1556" xml:id="1556">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1560"/>
+	<edge from="tx..n1558" to="mg..n1560" xml:id="e1560"/>
+	<a as="mg" label="mg" ref="mg..n1560" xml:id="1560">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1562"/>
+	<edge from="tx..n1558" to="mg..n1562" xml:id="e1562"/>
+	<a as="mg" label="mg" ref="mg..n1562" xml:id="1562">
+		<fs>
+			<f name="annotation_value">feel.bad</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1564"/>
+	<edge from="tx..n1558" to="mg..n1564" xml:id="e1564"/>
+	<a as="mg" label="mg" ref="mg..n1564" xml:id="1564">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1568"/>
+	<edge from="tx..n1566" to="mg..n1568" xml:id="e1568"/>
+	<a as="mg" label="mg" ref="mg..n1568" xml:id="1568">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1572"/>
+	<edge from="tx..n1570" to="mg..n1572" xml:id="e1572"/>
+	<a as="mg" label="mg" ref="mg..n1572" xml:id="1572">
+		<fs>
+			<f name="annotation_value">woman</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1576"/>
+	<edge from="tx..n1574" to="mg..n1576" xml:id="e1576"/>
+	<a as="mg" label="mg" ref="mg..n1576" xml:id="1576">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n158"/>
+	<edge from="tx..n156" to="mg..n158" xml:id="e158"/>
+	<a as="mg" label="mg" ref="mg..n158" xml:id="158">
+		<fs>
+			<f name="annotation_value">DET-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1580"/>
+	<edge from="tx..n1578" to="mg..n1580" xml:id="e1580"/>
+	<a as="mg" label="mg" ref="mg..n1580" xml:id="1580">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1584"/>
+	<edge from="tx..n1582" to="mg..n1584" xml:id="e1584"/>
+	<a as="mg" label="mg" ref="mg..n1584" xml:id="1584">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1586"/>
+	<edge from="tx..n1582" to="mg..n1586" xml:id="e1586"/>
+	<a as="mg" label="mg" ref="mg..n1586" xml:id="1586">
+		<fs>
+			<f name="annotation_value">hit</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1588"/>
+	<edge from="tx..n1582" to="mg..n1588" xml:id="e1588"/>
+	<a as="mg" label="mg" ref="mg..n1588" xml:id="1588">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1590"/>
+	<edge from="tx..n1582" to="mg..n1590" xml:id="e1590"/>
+	<a as="mg" label="mg" ref="mg..n1590" xml:id="1590">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1594"/>
+	<edge from="tx..n1592" to="mg..n1594" xml:id="e1594"/>
+	<a as="mg" label="mg" ref="mg..n1594" xml:id="1594">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1596"/>
+	<edge from="tx..n1592" to="mg..n1596" xml:id="e1596"/>
+	<a as="mg" label="mg" ref="mg..n1596" xml:id="1596">
+		<fs>
+			<f name="annotation_value">kill</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1598"/>
+	<edge from="tx..n1592" to="mg..n1598" xml:id="e1598"/>
+	<a as="mg" label="mg" ref="mg..n1598" xml:id="1598">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n160"/>
+	<edge from="tx..n156" to="mg..n160" xml:id="e160"/>
+	<a as="mg" label="mg" ref="mg..n160" xml:id="160">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1600"/>
+	<edge from="tx..n1592" to="mg..n1600" xml:id="e1600"/>
+	<a as="mg" label="mg" ref="mg..n1600" xml:id="1600">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1604"/>
+	<edge from="tx..n1602" to="mg..n1604" xml:id="e1604"/>
+	<a as="mg" label="mg" ref="mg..n1604" xml:id="1604">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1608"/>
+	<edge from="tx..n1606" to="mg..n1608" xml:id="e1608"/>
+	<a as="mg" label="mg" ref="mg..n1608" xml:id="1608">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1610"/>
+	<edge from="tx..n1606" to="mg..n1610" xml:id="e1610"/>
+	<a as="mg" label="mg" ref="mg..n1610" xml:id="1610">
+		<fs>
+			<f name="annotation_value">be</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1614"/>
+	<edge from="tx..n1612" to="mg..n1614" xml:id="e1614"/>
+	<a as="mg" label="mg" ref="mg..n1614" xml:id="1614">
+		<fs>
+			<f name="annotation_value">end</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1618"/>
+	<edge from="tx..n1616" to="mg..n1618" xml:id="e1618"/>
+	<a as="mg" label="mg" ref="mg..n1618" xml:id="1618">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1622"/>
+	<edge from="tx..n1620" to="mg..n1622" xml:id="e1622"/>
+	<a as="mg" label="mg" ref="mg..n1622" xml:id="1622">
+		<fs>
+			<f name="annotation_value">story</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1626"/>
+	<edge from="tx..n1624" to="mg..n1626" xml:id="e1626"/>
+	<a as="mg" label="mg" ref="mg..n1626" xml:id="1626">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1630"/>
+	<edge from="tx..n1628" to="mg..n1630" xml:id="e1630"/>
+	<a as="mg" label="mg" ref="mg..n1630" xml:id="1630">
+		<fs>
+			<f name="annotation_value">1S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1632"/>
+	<edge from="tx..n1628" to="mg..n1632" xml:id="e1632"/>
+	<a as="mg" label="mg" ref="mg..n1632" xml:id="1632">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1634"/>
+	<edge from="tx..n1628" to="mg..n1634" xml:id="e1634"/>
+	<a as="mg" label="mg" ref="mg..n1634" xml:id="1634">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1636"/>
+	<edge from="tx..n1628" to="mg..n1636" xml:id="e1636"/>
+	<a as="mg" label="mg" ref="mg..n1636" xml:id="1636">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n164"/>
+	<edge from="tx..n162" to="mg..n164" xml:id="e164"/>
+	<a as="mg" label="mg" ref="mg..n164" xml:id="164">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1640"/>
+	<edge from="tx..n1638" to="mg..n1640" xml:id="e1640"/>
+	<a as="mg" label="mg" ref="mg..n1640" xml:id="1640">
+		<fs>
+			<f name="annotation_value">3sgRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1642"/>
+	<edge from="tx..n1638" to="mg..n1642" xml:id="e1642"/>
+	<a as="mg" label="mg" ref="mg..n1642" xml:id="1642">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1644"/>
+	<edge from="tx..n1638" to="mg..n1644" xml:id="e1644"/>
+	<a as="mg" label="mg" ref="mg..n1644" xml:id="1644">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1646"/>
+	<edge from="tx..n1638" to="mg..n1646" xml:id="e1646"/>
+	<a as="mg" label="mg" ref="mg..n1646" xml:id="1646">
+		<fs>
+			<f name="annotation_value">-3sgO</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1650"/>
+	<edge from="tx..n1648" to="mg..n1650" xml:id="e1650"/>
+	<a as="mg" label="mg" ref="mg..n1650" xml:id="1650">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1654"/>
+	<edge from="tx..n1652" to="mg..n1654" xml:id="e1654"/>
+	<a as="mg" label="mg" ref="mg..n1654" xml:id="1654">
+		<fs>
+			<f name="annotation_value">ancestors</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1658"/>
+	<edge from="tx..n1656" to="mg..n1658" xml:id="e1658"/>
+	<a as="mg" label="mg" ref="mg..n1658" xml:id="1658">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n166"/>
+	<edge from="tx..n162" to="mg..n166" xml:id="e166"/>
+	<a as="mg" label="mg" ref="mg..n166" xml:id="166">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1660"/>
+	<edge from="tx..n1656" to="mg..n1660" xml:id="e1660"/>
+	<a as="mg" label="mg" ref="mg..n1660" xml:id="1660">
+		<fs>
+			<f name="annotation_value">one</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1664"/>
+	<edge from="tx..n1662" to="mg..n1664" xml:id="e1664"/>
+	<a as="mg" label="mg" ref="mg..n1664" xml:id="1664">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1666"/>
+	<edge from="tx..n1662" to="mg..n1666" xml:id="e1666"/>
+	<a as="mg" label="mg" ref="mg..n1666" xml:id="1666">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1670"/>
+	<edge from="tx..n1668" to="mg..n1670" xml:id="e1670"/>
+	<a as="mg" label="mg" ref="mg..n1670" xml:id="1670">
+		<fs>
+			<f name="annotation_value">ES=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1672"/>
+	<edge from="tx..n1668" to="mg..n1672" xml:id="e1672"/>
+	<a as="mg" label="mg" ref="mg..n1672" xml:id="1672">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1676"/>
+	<edge from="tx..n1674" to="mg..n1676" xml:id="e1676"/>
+	<a as="mg" label="mg" ref="mg..n1676" xml:id="1676">
+		<fs>
+			<f name="annotation_value">child</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1680"/>
+	<edge from="tx..n1678" to="mg..n1680" xml:id="e1680"/>
+	<a as="mg" label="mg" ref="mg..n1680" xml:id="1680">
+		<fs>
+			<f name="annotation_value">man</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1684"/>
+	<edge from="tx..n1682" to="mg..n1684" xml:id="e1684"/>
+	<a as="mg" label="mg" ref="mg..n1684" xml:id="1684">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1686"/>
+	<edge from="tx..n1682" to="mg..n1686" xml:id="e1686"/>
+	<a as="mg" label="mg" ref="mg..n1686" xml:id="1686">
+		<fs>
+			<f name="annotation_value">one</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1690"/>
+	<edge from="tx..n1688" to="mg..n1690" xml:id="e1690"/>
+	<a as="mg" label="mg" ref="mg..n1690" xml:id="1690">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1694"/>
+	<edge from="tx..n1692" to="mg..n1694" xml:id="e1694"/>
+	<a as="mg" label="mg" ref="mg..n1694" xml:id="1694">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1698"/>
+	<edge from="tx..n1696" to="mg..n1698" xml:id="e1698"/>
+	<a as="mg" label="mg" ref="mg..n1698" xml:id="1698">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n170"/>
+	<edge from="tx..n168" to="mg..n170" xml:id="e170"/>
+	<a as="mg" label="mg" ref="mg..n170" xml:id="170">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1702"/>
+	<edge from="tx..n1700" to="mg..n1702" xml:id="e1702"/>
+	<a as="mg" label="mg" ref="mg..n1702" xml:id="1702">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1706"/>
+	<edge from="tx..n1704" to="mg..n1706" xml:id="e1706"/>
+	<a as="mg" label="mg" ref="mg..n1706" xml:id="1706">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1710"/>
+	<edge from="tx..n1708" to="mg..n1710" xml:id="e1710"/>
+	<a as="mg" label="mg" ref="mg..n1710" xml:id="1710">
+		<fs>
+			<f name="annotation_value">female</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1714"/>
+	<edge from="tx..n1712" to="mg..n1714" xml:id="e1714"/>
+	<a as="mg" label="mg" ref="mg..n1714" xml:id="1714">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1718"/>
+	<edge from="tx..n1716" to="mg..n1718" xml:id="e1718"/>
+	<a as="mg" label="mg" ref="mg..n1718" xml:id="1718">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1720"/>
+	<edge from="tx..n1716" to="mg..n1720" xml:id="e1720"/>
+	<a as="mg" label="mg" ref="mg..n1720" xml:id="1720">
+		<fs>
+			<f name="annotation_value">die</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1724"/>
+	<edge from="tx..n1722" to="mg..n1724" xml:id="e1724"/>
+	<a as="mg" label="mg" ref="mg..n1724" xml:id="1724">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1728"/>
+	<edge from="tx..n1726" to="mg..n1728" xml:id="e1728"/>
+	<a as="mg" label="mg" ref="mg..n1728" xml:id="1728">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1730"/>
+	<edge from="tx..n1726" to="mg..n1730" xml:id="e1730"/>
+	<a as="mg" label="mg" ref="mg..n1730" xml:id="1730">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1732"/>
+	<edge from="tx..n1726" to="mg..n1732" xml:id="e1732"/>
+	<a as="mg" label="mg" ref="mg..n1732" xml:id="1732">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1736"/>
+	<edge from="tx..n1734" to="mg..n1736" xml:id="e1736"/>
+	<a as="mg" label="mg" ref="mg..n1736" xml:id="1736">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n174"/>
+	<edge from="tx..n172" to="mg..n174" xml:id="e174"/>
+	<a as="mg" label="mg" ref="mg..n174" xml:id="174">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1740"/>
+	<edge from="tx..n1738" to="mg..n1740" xml:id="e1740"/>
+	<a as="mg" label="mg" ref="mg..n1740" xml:id="1740">
+		<fs>
+			<f name="annotation_value">child</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1744"/>
+	<edge from="tx..n1742" to="mg..n1744" xml:id="e1744"/>
+	<a as="mg" label="mg" ref="mg..n1744" xml:id="1744">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1748"/>
+	<edge from="tx..n1746" to="mg..n1748" xml:id="e1748"/>
+	<a as="mg" label="mg" ref="mg..n1748" xml:id="1748">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1750"/>
+	<edge from="tx..n1746" to="mg..n1750" xml:id="e1750"/>
+	<a as="mg" label="mg" ref="mg..n1750" xml:id="1750">
+		<fs>
+			<f name="annotation_value">two</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1754"/>
+	<edge from="tx..n1752" to="mg..n1754" xml:id="e1754"/>
+	<a as="mg" label="mg" ref="mg..n1754" xml:id="1754">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1758"/>
+	<edge from="tx..n1756" to="mg..n1758" xml:id="e1758"/>
+	<a as="mg" label="mg" ref="mg..n1758" xml:id="1758">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n176"/>
+	<edge from="tx..n172" to="mg..n176" xml:id="e176"/>
+	<a as="mg" label="mg" ref="mg..n176" xml:id="176">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1762"/>
+	<edge from="tx..n1760" to="mg..n1762" xml:id="e1762"/>
+	<a as="mg" label="mg" ref="mg..n1762" xml:id="1762">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1766"/>
+	<edge from="tx..n1764" to="mg..n1766" xml:id="e1766"/>
+	<a as="mg" label="mg" ref="mg..n1766" xml:id="1766">
+		<fs>
+			<f name="annotation_value">ancestors</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1770"/>
+	<edge from="tx..n1768" to="mg..n1770" xml:id="e1770"/>
+	<a as="mg" label="mg" ref="mg..n1770" xml:id="1770">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1774"/>
+	<edge from="tx..n1772" to="mg..n1774" xml:id="e1774"/>
+	<a as="mg" label="mg" ref="mg..n1774" xml:id="1774">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1776"/>
+	<edge from="tx..n1772" to="mg..n1776" xml:id="e1776"/>
+	<a as="mg" label="mg" ref="mg..n1776" xml:id="1776">
+		<fs>
+			<f name="annotation_value">PROG</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1780"/>
+	<edge from="tx..n1778" to="mg..n1780" xml:id="e1780"/>
+	<a as="mg" label="mg" ref="mg..n1780" xml:id="1780">
+		<fs>
+			<f name="annotation_value">be</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1784"/>
+	<edge from="tx..n1782" to="mg..n1784" xml:id="e1784"/>
+	<a as="mg" label="mg" ref="mg..n1784" xml:id="1784">
+		<fs>
+			<f name="annotation_value">ancestors</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1788"/>
+	<edge from="tx..n1786" to="mg..n1788" xml:id="e1788"/>
+	<a as="mg" label="mg" ref="mg..n1788" xml:id="1788">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1792"/>
+	<edge from="tx..n1790" to="mg..n1792" xml:id="e1792"/>
+	<a as="mg" label="mg" ref="mg..n1792" xml:id="1792">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1794"/>
+	<edge from="tx..n1790" to="mg..n1794" xml:id="e1794"/>
+	<a as="mg" label="mg" ref="mg..n1794" xml:id="1794">
+		<fs>
+			<f name="annotation_value">call</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1798"/>
+	<edge from="tx..n1796" to="mg..n1798" xml:id="e1798"/>
+	<a as="mg" label="mg" ref="mg..n1798" xml:id="1798">
+		<fs>
+			<f name="annotation_value">child</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n18"/>
+	<edge from="tx..n16" to="mg..n18" xml:id="e18"/>
+	<a as="mg" label="mg" ref="mg..n18" xml:id="18">
+		<fs>
+			<f name="annotation_value">1S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n180"/>
+	<edge from="tx..n178" to="mg..n180" xml:id="e180"/>
+	<a as="mg" label="mg" ref="mg..n180" xml:id="180">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1802"/>
+	<edge from="tx..n1800" to="mg..n1802" xml:id="e1802"/>
+	<a as="mg" label="mg" ref="mg..n1802" xml:id="1802">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1806"/>
+	<edge from="tx..n1804" to="mg..n1806" xml:id="e1806"/>
+	<a as="mg" label="mg" ref="mg..n1806" xml:id="1806">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1808"/>
+	<edge from="tx..n1804" to="mg..n1808" xml:id="e1808"/>
+	<a as="mg" label="mg" ref="mg..n1808" xml:id="1808">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1810"/>
+	<edge from="tx..n1804" to="mg..n1810" xml:id="e1810"/>
+	<a as="mg" label="mg" ref="mg..n1810" xml:id="1810">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1814"/>
+	<edge from="tx..n1812" to="mg..n1814" xml:id="e1814"/>
+	<a as="mg" label="mg" ref="mg..n1814" xml:id="1814">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1816"/>
+	<edge from="tx..n1812" to="mg..n1816" xml:id="e1816"/>
+	<a as="mg" label="mg" ref="mg..n1816" xml:id="1816">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1820"/>
+	<edge from="tx..n1818" to="mg..n1820" xml:id="e1820"/>
+	<a as="mg" label="mg" ref="mg..n1820" xml:id="1820">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1822"/>
+	<edge from="tx..n1818" to="mg..n1822" xml:id="e1822"/>
+	<a as="mg" label="mg" ref="mg..n1822" xml:id="1822">
+		<fs>
+			<f name="annotation_value">come</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1826"/>
+	<edge from="tx..n1824" to="mg..n1826" xml:id="e1826"/>
+	<a as="mg" label="mg" ref="mg..n1826" xml:id="1826">
+		<fs>
+			<f name="annotation_value">PURP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1830"/>
+	<edge from="tx..n1828" to="mg..n1830" xml:id="e1830"/>
+	<a as="mg" label="mg" ref="mg..n1830" xml:id="1830">
+		<fs>
+			<f name="annotation_value">1S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1832"/>
+	<edge from="tx..n1828" to="mg..n1832" xml:id="e1832"/>
+	<a as="mg" label="mg" ref="mg..n1832" xml:id="1832">
+		<fs>
+			<f name="annotation_value">PSP:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1836"/>
+	<edge from="tx..n1834" to="mg..n1836" xml:id="e1836"/>
+	<a as="mg" label="mg" ref="mg..n1836" xml:id="1836">
+		<fs>
+			<f name="annotation_value">talk_to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1838"/>
+	<edge from="tx..n1834" to="mg..n1838" xml:id="e1838"/>
+	<a as="mg" label="mg" ref="mg..n1838" xml:id="1838">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n184"/>
+	<edge from="tx..n182" to="mg..n184" xml:id="e184"/>
+	<a as="mg" label="mg" ref="mg..n184" xml:id="184">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1840"/>
+	<edge from="tx..n1834" to="mg..n1840" xml:id="e1840"/>
+	<a as="mg" label="mg" ref="mg..n1840" xml:id="1840">
+		<fs>
+			<f name="annotation_value">-2S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1844"/>
+	<edge from="tx..n1842" to="mg..n1844" xml:id="e1844"/>
+	<a as="mg" label="mg" ref="mg..n1844" xml:id="1844">
+		<fs>
+			<f name="annotation_value">child</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1848"/>
+	<edge from="tx..n1846" to="mg..n1848" xml:id="e1848"/>
+	<a as="mg" label="mg" ref="mg..n1848" xml:id="1848">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1852"/>
+	<edge from="tx..n1850" to="mg..n1852" xml:id="e1852"/>
+	<a as="mg" label="mg" ref="mg..n1852" xml:id="1852">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1854"/>
+	<edge from="tx..n1850" to="mg..n1854" xml:id="e1854"/>
+	<a as="mg" label="mg" ref="mg..n1854" xml:id="1854">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1858"/>
+	<edge from="tx..n1856" to="mg..n1858" xml:id="e1858"/>
+	<a as="mg" label="mg" ref="mg..n1858" xml:id="1858">
+		<fs>
+			<f name="annotation_value">ES=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1860"/>
+	<edge from="tx..n1856" to="mg..n1860" xml:id="e1860"/>
+	<a as="mg" label="mg" ref="mg..n1860" xml:id="1860">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1864"/>
+	<edge from="tx..n1862" to="mg..n1864" xml:id="e1864"/>
+	<a as="mg" label="mg" ref="mg..n1864" xml:id="1864">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1868"/>
+	<edge from="tx..n1866" to="mg..n1868" xml:id="e1868"/>
+	<a as="mg" label="mg" ref="mg..n1868" xml:id="1868">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1870"/>
+	<edge from="tx..n1866" to="mg..n1870" xml:id="e1870"/>
+	<a as="mg" label="mg" ref="mg..n1870" xml:id="1870">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1872"/>
+	<edge from="tx..n1866" to="mg..n1872" xml:id="e1872"/>
+	<a as="mg" label="mg" ref="mg..n1872" xml:id="1872">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1876"/>
+	<edge from="tx..n1874" to="mg..n1876" xml:id="e1876"/>
+	<a as="mg" label="mg" ref="mg..n1876" xml:id="1876">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n188"/>
+	<edge from="tx..n186" to="mg..n188" xml:id="e188"/>
+	<a as="mg" label="mg" ref="mg..n188" xml:id="188">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1880"/>
+	<edge from="tx..n1878" to="mg..n1880" xml:id="e1880"/>
+	<a as="mg" label="mg" ref="mg..n1880" xml:id="1880">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1882"/>
+	<edge from="tx..n1878" to="mg..n1882" xml:id="e1882"/>
+	<a as="mg" label="mg" ref="mg..n1882" xml:id="1882">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1884"/>
+	<edge from="tx..n1878" to="mg..n1884" xml:id="e1884"/>
+	<a as="mg" label="mg" ref="mg..n1884" xml:id="1884">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1888"/>
+	<edge from="tx..n1886" to="mg..n1888" xml:id="e1888"/>
+	<a as="mg" label="mg" ref="mg..n1888" xml:id="1888">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1890"/>
+	<edge from="tx..n1886" to="mg..n1890" xml:id="e1890"/>
+	<a as="mg" label="mg" ref="mg..n1890" xml:id="1890">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1892"/>
+	<edge from="tx..n1886" to="mg..n1892" xml:id="e1892"/>
+	<a as="mg" label="mg" ref="mg..n1892" xml:id="1892">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1894"/>
+	<edge from="tx..n1886" to="mg..n1894" xml:id="e1894"/>
+	<a as="mg" label="mg" ref="mg..n1894" xml:id="1894">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1898"/>
+	<edge from="tx..n1896" to="mg..n1898" xml:id="e1898"/>
+	<a as="mg" label="mg" ref="mg..n1898" xml:id="1898">
+		<fs>
+			<f name="annotation_value">PREP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n190"/>
+	<edge from="tx..n186" to="mg..n190" xml:id="e190"/>
+	<a as="mg" label="mg" ref="mg..n190" xml:id="190">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1902"/>
+	<edge from="tx..n1900" to="mg..n1902" xml:id="e1902"/>
+	<a as="mg" label="mg" ref="mg..n1902" xml:id="1902">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1906"/>
+	<edge from="tx..n1904" to="mg..n1906" xml:id="e1906"/>
+	<a as="mg" label="mg" ref="mg..n1906" xml:id="1906">
+		<fs>
+			<f name="annotation_value">1P.incS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1910"/>
+	<edge from="tx..n1908" to="mg..n1910" xml:id="e1910"/>
+	<a as="mg" label="mg" ref="mg..n1910" xml:id="1910">
+		<fs>
+			<f name="annotation_value">1P.exRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1912"/>
+	<edge from="tx..n1908" to="mg..n1912" xml:id="e1912"/>
+	<a as="mg" label="mg" ref="mg..n1912" xml:id="1912">
+		<fs>
+			<f name="annotation_value">two</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1916"/>
+	<edge from="tx..n1914" to="mg..n1916" xml:id="e1916"/>
+	<a as="mg" label="mg" ref="mg..n1916" xml:id="1916">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1920"/>
+	<edge from="tx..n1918" to="mg..n1920" xml:id="e1920"/>
+	<a as="mg" label="mg" ref="mg..n1920" xml:id="1920">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1924"/>
+	<edge from="tx..n1922" to="mg..n1924" xml:id="e1924"/>
+	<a as="mg" label="mg" ref="mg..n1924" xml:id="1924">
+		<fs>
+			<f name="annotation_value">while</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1928"/>
+	<edge from="tx..n1926" to="mg..n1928" xml:id="e1928"/>
+	<a as="mg" label="mg" ref="mg..n1928" xml:id="1928">
+		<fs>
+			<f name="annotation_value">1S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1932"/>
+	<edge from="tx..n1930" to="mg..n1932" xml:id="e1932"/>
+	<a as="mg" label="mg" ref="mg..n1932" xml:id="1932">
+		<fs>
+			<f name="annotation_value">1S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1934"/>
+	<edge from="tx..n1930" to="mg..n1934" xml:id="e1934"/>
+	<a as="mg" label="mg" ref="mg..n1934" xml:id="1934">
+		<fs>
+			<f name="annotation_value">COND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1938"/>
+	<edge from="tx..n1936" to="mg..n1938" xml:id="e1938"/>
+	<a as="mg" label="mg" ref="mg..n1938" xml:id="1938">
+		<fs>
+			<f name="annotation_value">die</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n194"/>
+	<edge from="tx..n192" to="mg..n194" xml:id="e194"/>
+	<a as="mg" label="mg" ref="mg..n194" xml:id="194">
+		<fs>
+			<f name="annotation_value">wander</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1942"/>
+	<edge from="tx..n1940" to="mg..n1942" xml:id="e1942"/>
+	<a as="mg" label="mg" ref="mg..n1942" xml:id="1942">
+		<fs>
+			<f name="annotation_value">some</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1946"/>
+	<edge from="tx..n1944" to="mg..n1946" xml:id="e1946"/>
+	<a as="mg" label="mg" ref="mg..n1946" xml:id="1946">
+		<fs>
+			<f name="annotation_value">day</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1950"/>
+	<edge from="tx..n1948" to="mg..n1950" xml:id="e1950"/>
+	<a as="mg" label="mg" ref="mg..n1950" xml:id="1950">
+		<fs>
+			<f name="annotation_value">2S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1954"/>
+	<edge from="tx..n1952" to="mg..n1954" xml:id="e1954"/>
+	<a as="mg" label="mg" ref="mg..n1954" xml:id="1954">
+		<fs>
+			<f name="annotation_value">COMP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1958"/>
+	<edge from="tx..n1956" to="mg..n1958" xml:id="e1958"/>
+	<a as="mg" label="mg" ref="mg..n1958" xml:id="1958">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1960"/>
+	<edge from="tx..n1956" to="mg..n1960" xml:id="e1960"/>
+	<a as="mg" label="mg" ref="mg..n1960" xml:id="1960">
+		<fs>
+			<f name="annotation_value">PSP:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1964"/>
+	<edge from="tx..n1962" to="mg..n1964" xml:id="e1964"/>
+	<a as="mg" label="mg" ref="mg..n1964" xml:id="1964">
+		<fs>
+			<f name="annotation_value">bury</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1966"/>
+	<edge from="tx..n1962" to="mg..n1966" xml:id="e1966"/>
+	<a as="mg" label="mg" ref="mg..n1966" xml:id="1966">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1970"/>
+	<edge from="tx..n1968" to="mg..n1970" xml:id="e1970"/>
+	<a as="mg" label="mg" ref="mg..n1970" xml:id="1970">
+		<fs>
+			<f name="annotation_value">1S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1974"/>
+	<edge from="tx..n1972" to="mg..n1974" xml:id="e1974"/>
+	<a as="mg" label="mg" ref="mg..n1974" xml:id="1974">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1978"/>
+	<edge from="tx..n1976" to="mg..n1978" xml:id="e1978"/>
+	<a as="mg" label="mg" ref="mg..n1978" xml:id="1978">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n198"/>
+	<edge from="tx..n196" to="mg..n198" xml:id="e198"/>
+	<a as="mg" label="mg" ref="mg..n198" xml:id="198">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1980"/>
+	<edge from="tx..n1976" to="mg..n1980" xml:id="e1980"/>
+	<a as="mg" label="mg" ref="mg..n1980" xml:id="1980">
+		<fs>
+			<f name="annotation_value">PSP:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1984"/>
+	<edge from="tx..n1982" to="mg..n1984" xml:id="e1984"/>
+	<a as="mg" label="mg" ref="mg..n1984" xml:id="1984">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1988"/>
+	<edge from="tx..n1986" to="mg..n1988" xml:id="e1988"/>
+	<a as="mg" label="mg" ref="mg..n1988" xml:id="1988">
+		<fs>
+			<f name="annotation_value">come</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1992"/>
+	<edge from="tx..n1990" to="mg..n1992" xml:id="e1992"/>
+	<a as="mg" label="mg" ref="mg..n1992" xml:id="1992">
+		<fs>
+			<f name="annotation_value">watch_over</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n1996"/>
+	<edge from="tx..n1994" to="mg..n1996" xml:id="e1996"/>
+	<a as="mg" label="mg" ref="mg..n1996" xml:id="1996">
+		<fs>
+			<f name="annotation_value">grave</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n20"/>
+	<edge from="tx..n16" to="mg..n20" xml:id="e20"/>
+	<a as="mg" label="mg" ref="mg..n20" xml:id="20">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n200"/>
+	<edge from="tx..n196" to="mg..n200" xml:id="e200"/>
+	<a as="mg" label="mg" ref="mg..n200" xml:id="200">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2000"/>
+	<edge from="tx..n1998" to="mg..n2000" xml:id="e2000"/>
+	<a as="mg" label="mg" ref="mg..n2000" xml:id="2000">
+		<fs>
+			<f name="annotation_value">1S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2004"/>
+	<edge from="tx..n2002" to="mg..n2004" xml:id="e2004"/>
+	<a as="mg" label="mg" ref="mg..n2004" xml:id="2004">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2006"/>
+	<edge from="tx..n2002" to="mg..n2006" xml:id="e2006"/>
+	<a as="mg" label="mg" ref="mg..n2006" xml:id="2006">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2008"/>
+	<edge from="tx..n2002" to="mg..n2008" xml:id="e2008"/>
+	<a as="mg" label="mg" ref="mg..n2008" xml:id="2008">
+		<fs>
+			<f name="annotation_value">like</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2012"/>
+	<edge from="tx..n2010" to="mg..n2012" xml:id="e2012"/>
+	<a as="mg" label="mg" ref="mg..n2012" xml:id="2012">
+		<fs>
+			<f name="annotation_value">2S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2014"/>
+	<edge from="tx..n2010" to="mg..n2014" xml:id="e2014"/>
+	<a as="mg" label="mg" ref="mg..n2014" xml:id="2014">
+		<fs>
+			<f name="annotation_value">CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2018"/>
+	<edge from="tx..n2016" to="mg..n2018" xml:id="e2018"/>
+	<a as="mg" label="mg" ref="mg..n2018" xml:id="2018">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2022"/>
+	<edge from="tx..n2020" to="mg..n2022" xml:id="e2022"/>
+	<a as="mg" label="mg" ref="mg..n2022" xml:id="2022">
+		<fs>
+			<f name="annotation_value">some</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2026"/>
+	<edge from="tx..n2024" to="mg..n2026" xml:id="e2026"/>
+	<a as="mg" label="mg" ref="mg..n2026" xml:id="2026">
+		<fs>
+			<f name="annotation_value">tree</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2030"/>
+	<edge from="tx..n2028" to="mg..n2030" xml:id="e2030"/>
+	<a as="mg" label="mg" ref="mg..n2030" xml:id="2030">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2032"/>
+	<edge from="tx..n2028" to="mg..n2032" xml:id="e2032"/>
+	<a as="mg" label="mg" ref="mg..n2032" xml:id="2032">
+		<fs>
+			<f name="annotation_value">ftom</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2036"/>
+	<edge from="tx..n2034" to="mg..n2036" xml:id="e2036"/>
+	<a as="mg" label="mg" ref="mg..n2036" xml:id="2036">
+		<fs>
+			<f name="annotation_value">grave</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n204"/>
+	<edge from="tx..n202" to="mg..n204" xml:id="e204"/>
+	<a as="mg" label="mg" ref="mg..n204" xml:id="204">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2040"/>
+	<edge from="tx..n2038" to="mg..n2040" xml:id="e2040"/>
+	<a as="mg" label="mg" ref="mg..n2040" xml:id="2040">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2042"/>
+	<edge from="tx..n2038" to="mg..n2042" xml:id="e2042"/>
+	<a as="mg" label="mg" ref="mg..n2042" xml:id="2042">
+		<fs>
+			<f name="annotation_value">1S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2046"/>
+	<edge from="tx..n2044" to="mg..n2046" xml:id="e2046"/>
+	<a as="mg" label="mg" ref="mg..n2046" xml:id="2046">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2048"/>
+	<edge from="tx..n2044" to="mg..n2048" xml:id="e2048"/>
+	<a as="mg" label="mg" ref="mg..n2048" xml:id="2048">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2052"/>
+	<edge from="tx..n2050" to="mg..n2052" xml:id="e2052"/>
+	<a as="mg" label="mg" ref="mg..n2052" xml:id="2052">
+		<fs>
+			<f name="annotation_value">pull_out</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2054"/>
+	<edge from="tx..n2050" to="mg..n2054" xml:id="e2054"/>
+	<a as="mg" label="mg" ref="mg..n2054" xml:id="2054">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2058"/>
+	<edge from="tx..n2056" to="mg..n2058" xml:id="e2058"/>
+	<a as="mg" label="mg" ref="mg..n2058" xml:id="2058">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n206"/>
+	<edge from="tx..n202" to="mg..n206" xml:id="e206"/>
+	<a as="mg" label="mg" ref="mg..n206" xml:id="206">
+		<fs>
+			<f name="annotation_value">jump</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2062"/>
+	<edge from="tx..n2060" to="mg..n2062" xml:id="e2062"/>
+	<a as="mg" label="mg" ref="mg..n2062" xml:id="2062">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2066"/>
+	<edge from="tx..n2064" to="mg..n2066" xml:id="e2066"/>
+	<a as="mg" label="mg" ref="mg..n2066" xml:id="2066">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2068"/>
+	<edge from="tx..n2064" to="mg..n2068" xml:id="e2068"/>
+	<a as="mg" label="mg" ref="mg..n2068" xml:id="2068">
+		<fs>
+			<f name="annotation_value">watch_over</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2070"/>
+	<edge from="tx..n2064" to="mg..n2070" xml:id="e2070"/>
+	<a as="mg" label="mg" ref="mg..n2070" xml:id="2070">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2072"/>
+	<edge from="tx..n2064" to="mg..n2072" xml:id="e2072"/>
+	<a as="mg" label="mg" ref="mg..n2072" xml:id="2072">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2076"/>
+	<edge from="tx..n2074" to="mg..n2076" xml:id="e2076"/>
+	<a as="mg" label="mg" ref="mg..n2076" xml:id="2076">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n208"/>
+	<edge from="tx..n202" to="mg..n208" xml:id="e208"/>
+	<a as="mg" label="mg" ref="mg..n208" xml:id="208">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2080"/>
+	<edge from="tx..n2078" to="mg..n2080" xml:id="e2080"/>
+	<a as="mg" label="mg" ref="mg..n2080" xml:id="2080">
+		<fs>
+			<f name="annotation_value">3S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2082"/>
+	<edge from="tx..n2078" to="mg..n2082" xml:id="e2082"/>
+	<a as="mg" label="mg" ref="mg..n2082" xml:id="2082">
+		<fs>
+			<f name="annotation_value">bear</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2086"/>
+	<edge from="tx..n2084" to="mg..n2086" xml:id="e2086"/>
+	<a as="mg" label="mg" ref="mg..n2086" xml:id="2086">
+		<fs>
+			<f name="annotation_value">while</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2090"/>
+	<edge from="tx..n2088" to="mg..n2090" xml:id="e2090"/>
+	<a as="mg" label="mg" ref="mg..n2090" xml:id="2090">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2092"/>
+	<edge from="tx..n2088" to="mg..n2092" xml:id="e2092"/>
+	<a as="mg" label="mg" ref="mg..n2092" xml:id="2092">
+		<fs>
+			<f name="annotation_value">wait</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2096"/>
+	<edge from="tx..n2094" to="mg..n2096" xml:id="e2096"/>
+	<a as="mg" label="mg" ref="mg..n2096" xml:id="2096">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2100"/>
+	<edge from="tx..n2098" to="mg..n2100" xml:id="e2100"/>
+	<a as="mg" label="mg" ref="mg..n2100" xml:id="2100">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2102"/>
+	<edge from="tx..n2098" to="mg..n2102" xml:id="e2102"/>
+	<a as="mg" label="mg" ref="mg..n2102" xml:id="2102">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2104"/>
+	<edge from="tx..n2098" to="mg..n2104" xml:id="e2104"/>
+	<a as="mg" label="mg" ref="mg..n2104" xml:id="2104">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2108"/>
+	<edge from="tx..n2106" to="mg..n2108" xml:id="e2108"/>
+	<a as="mg" label="mg" ref="mg..n2108" xml:id="2108">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2110"/>
+	<edge from="tx..n2106" to="mg..n2110" xml:id="e2110"/>
+	<a as="mg" label="mg" ref="mg..n2110" xml:id="2110">
+		<fs>
+			<f name="annotation_value">die</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2114"/>
+	<edge from="tx..n2112" to="mg..n2114" xml:id="e2114"/>
+	<a as="mg" label="mg" ref="mg..n2114" xml:id="2114">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2118"/>
+	<edge from="tx..n2116" to="mg..n2118" xml:id="e2118"/>
+	<a as="mg" label="mg" ref="mg..n2118" xml:id="2118">
+		<fs>
+			<f name="annotation_value">child</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n212"/>
+	<edge from="tx..n210" to="mg..n212" xml:id="e212"/>
+	<a as="mg" label="mg" ref="mg..n212" xml:id="212">
+		<fs>
+			<f name="annotation_value">friend</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2122"/>
+	<edge from="tx..n2120" to="mg..n2122" xml:id="e2122"/>
+	<a as="mg" label="mg" ref="mg..n2122" xml:id="2122">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2126"/>
+	<edge from="tx..n2124" to="mg..n2126" xml:id="e2126"/>
+	<a as="mg" label="mg" ref="mg..n2126" xml:id="2126">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2128"/>
+	<edge from="tx..n2124" to="mg..n2128" xml:id="e2128"/>
+	<a as="mg" label="mg" ref="mg..n2128" xml:id="2128">
+		<fs>
+			<f name="annotation_value">PSP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2132"/>
+	<edge from="tx..n2130" to="mg..n2132" xml:id="e2132"/>
+	<a as="mg" label="mg" ref="mg..n2132" xml:id="2132">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2136"/>
+	<edge from="tx..n2134" to="mg..n2136" xml:id="e2136"/>
+	<a as="mg" label="mg" ref="mg..n2136" xml:id="2136">
+		<fs>
+			<f name="annotation_value">bury</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2138"/>
+	<edge from="tx..n2134" to="mg..n2138" xml:id="e2138"/>
+	<a as="mg" label="mg" ref="mg..n2138" xml:id="2138">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n214"/>
+	<edge from="tx..n210" to="mg..n214" xml:id="e214"/>
+	<a as="mg" label="mg" ref="mg..n214" xml:id="214">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2140"/>
+	<edge from="tx..n2134" to="mg..n2140" xml:id="e2140"/>
+	<a as="mg" label="mg" ref="mg..n2140" xml:id="2140">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2144"/>
+	<edge from="tx..n2142" to="mg..n2144" xml:id="e2144"/>
+	<a as="mg" label="mg" ref="mg..n2144" xml:id="2144">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2146"/>
+	<edge from="tx..n2142" to="mg..n2146" xml:id="e2146"/>
+	<a as="mg" label="mg" ref="mg..n2146" xml:id="2146">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2148"/>
+	<edge from="tx..n2142" to="mg..n2148" xml:id="e2148"/>
+	<a as="mg" label="mg" ref="mg..n2148" xml:id="2148">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2152"/>
+	<edge from="tx..n2150" to="mg..n2152" xml:id="e2152"/>
+	<a as="mg" label="mg" ref="mg..n2152" xml:id="2152">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2156"/>
+	<edge from="tx..n2154" to="mg..n2156" xml:id="e2156"/>
+	<a as="mg" label="mg" ref="mg..n2156" xml:id="2156">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2158"/>
+	<edge from="tx..n2154" to="mg..n2158" xml:id="e2158"/>
+	<a as="mg" label="mg" ref="mg..n2158" xml:id="2158">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n216"/>
+	<edge from="tx..n210" to="mg..n216" xml:id="e216"/>
+	<a as="mg" label="mg" ref="mg..n216" xml:id="216">
+		<fs>
+			<f name="annotation_value">-3P.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2162"/>
+	<edge from="tx..n2160" to="mg..n2162" xml:id="e2162"/>
+	<a as="mg" label="mg" ref="mg..n2162" xml:id="2162">
+		<fs>
+			<f name="annotation_value">forget</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2166"/>
+	<edge from="tx..n2164" to="mg..n2166" xml:id="e2166"/>
+	<a as="mg" label="mg" ref="mg..n2166" xml:id="2166">
+		<fs>
+			<f name="annotation_value">story</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2170"/>
+	<edge from="tx..n2168" to="mg..n2170" xml:id="e2170"/>
+	<a as="mg" label="mg" ref="mg..n2170" xml:id="2170">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2174"/>
+	<edge from="tx..n2172" to="mg..n2174" xml:id="e2174"/>
+	<a as="mg" label="mg" ref="mg..n2174" xml:id="2174">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2178"/>
+	<edge from="tx..n2176" to="mg..n2178" xml:id="e2178"/>
+	<a as="mg" label="mg" ref="mg..n2178" xml:id="2178">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2182"/>
+	<edge from="tx..n2180" to="mg..n2182" xml:id="e2182"/>
+	<a as="mg" label="mg" ref="mg..n2182" xml:id="2182">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2186"/>
+	<edge from="tx..n2184" to="mg..n2186" xml:id="e2186"/>
+	<a as="mg" label="mg" ref="mg..n2186" xml:id="2186">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2188"/>
+	<edge from="tx..n2184" to="mg..n2188" xml:id="e2188"/>
+	<a as="mg" label="mg" ref="mg..n2188" xml:id="2188">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2192"/>
+	<edge from="tx..n2190" to="mg..n2192" xml:id="e2192"/>
+	<a as="mg" label="mg" ref="mg..n2192" xml:id="2192">
+		<fs>
+			<f name="annotation_value">small</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2196"/>
+	<edge from="tx..n2194" to="mg..n2196" xml:id="e2196"/>
+	<a as="mg" label="mg" ref="mg..n2196" xml:id="2196">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n22"/>
+	<edge from="tx..n16" to="mg..n22" xml:id="e22"/>
+	<a as="mg" label="mg" ref="mg..n22" xml:id="22">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n220"/>
+	<edge from="tx..n218" to="mg..n220" xml:id="e220"/>
+	<a as="mg" label="mg" ref="mg..n220" xml:id="220">
+		<fs>
+			<f name="annotation_value">3D.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2200"/>
+	<edge from="tx..n2198" to="mg..n2200" xml:id="e2200"/>
+	<a as="mg" label="mg" ref="mg..n2200" xml:id="2200">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2202"/>
+	<edge from="tx..n2198" to="mg..n2202" xml:id="e2202"/>
+	<a as="mg" label="mg" ref="mg..n2202" xml:id="2202">
+		<fs>
+			<f name="annotation_value">go_to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2206"/>
+	<edge from="tx..n2204" to="mg..n2206" xml:id="e2206"/>
+	<a as="mg" label="mg" ref="mg..n2206" xml:id="2206">
+		<fs>
+			<f name="annotation_value">grave</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2210"/>
+	<edge from="tx..n2208" to="mg..n2210" xml:id="e2210"/>
+	<a as="mg" label="mg" ref="mg..n2210" xml:id="2210">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2212"/>
+	<edge from="tx..n2208" to="mg..n2212" xml:id="e2212"/>
+	<a as="mg" label="mg" ref="mg..n2212" xml:id="2212">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2214"/>
+	<edge from="tx..n2208" to="mg..n2214" xml:id="e2214"/>
+	<a as="mg" label="mg" ref="mg..n2214" xml:id="2214">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2218"/>
+	<edge from="tx..n2216" to="mg..n2218" xml:id="e2218"/>
+	<a as="mg" label="mg" ref="mg..n2218" xml:id="2218">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n222"/>
+	<edge from="tx..n218" to="mg..n222" xml:id="e222"/>
+	<a as="mg" label="mg" ref="mg..n222" xml:id="222">
+		<fs>
+			<f name="annotation_value">PROG</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2222"/>
+	<edge from="tx..n2220" to="mg..n2222" xml:id="e2222"/>
+	<a as="mg" label="mg" ref="mg..n2222" xml:id="2222">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2226"/>
+	<edge from="tx..n2224" to="mg..n2226" xml:id="e2226"/>
+	<a as="mg" label="mg" ref="mg..n2226" xml:id="2226">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2228"/>
+	<edge from="tx..n2224" to="mg..n2228" xml:id="e2228"/>
+	<a as="mg" label="mg" ref="mg..n2228" xml:id="2228">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2232"/>
+	<edge from="tx..n2230" to="mg..n2232" xml:id="e2232"/>
+	<a as="mg" label="mg" ref="mg..n2232" xml:id="2232">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2236"/>
+	<edge from="tx..n2234" to="mg..n2236" xml:id="e2236"/>
+	<a as="mg" label="mg" ref="mg..n2236" xml:id="2236">
+		<fs>
+			<f name="annotation_value">some</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2240"/>
+	<edge from="tx..n2238" to="mg..n2240" xml:id="e2240"/>
+	<a as="mg" label="mg" ref="mg..n2240" xml:id="2240">
+		<fs>
+			<f name="annotation_value">tree</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2244"/>
+	<edge from="tx..n2242" to="mg..n2244" xml:id="e2244"/>
+	<a as="mg" label="mg" ref="mg..n2244" xml:id="2244">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2246"/>
+	<edge from="tx..n2242" to="mg..n2246" xml:id="e2246"/>
+	<a as="mg" label="mg" ref="mg..n2246" xml:id="2246">
+		<fs>
+			<f name="annotation_value">grow:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2250"/>
+	<edge from="tx..n2248" to="mg..n2250" xml:id="e2250"/>
+	<a as="mg" label="mg" ref="mg..n2250" xml:id="2250">
+		<fs>
+			<f name="annotation_value">grave</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2254"/>
+	<edge from="tx..n2252" to="mg..n2254" xml:id="e2254"/>
+	<a as="mg" label="mg" ref="mg..n2254" xml:id="2254">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2256"/>
+	<edge from="tx..n2252" to="mg..n2256" xml:id="e2256"/>
+	<a as="mg" label="mg" ref="mg..n2256" xml:id="2256">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2258"/>
+	<edge from="tx..n2252" to="mg..n2258" xml:id="e2258"/>
+	<a as="mg" label="mg" ref="mg..n2258" xml:id="2258">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n226"/>
+	<edge from="tx..n224" to="mg..n226" xml:id="e226"/>
+	<a as="mg" label="mg" ref="mg..n226" xml:id="226">
+		<fs>
+			<f name="annotation_value">talk</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2262"/>
+	<edge from="tx..n2260" to="mg..n2262" xml:id="e2262"/>
+	<a as="mg" label="mg" ref="mg..n2262" xml:id="2262">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2266"/>
+	<edge from="tx..n2264" to="mg..n2266" xml:id="e2266"/>
+	<a as="mg" label="mg" ref="mg..n2266" xml:id="2266">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2268"/>
+	<edge from="tx..n2264" to="mg..n2268" xml:id="e2268"/>
+	<a as="mg" label="mg" ref="mg..n2268" xml:id="2268">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2272"/>
+	<edge from="tx..n2270" to="mg..n2272" xml:id="e2272"/>
+	<a as="mg" label="mg" ref="mg..n2272" xml:id="2272">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2276"/>
+	<edge from="tx..n2274" to="mg..n2276" xml:id="e2276"/>
+	<a as="mg" label="mg" ref="mg..n2276" xml:id="2276">
+		<fs>
+			<f name="annotation_value">again</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2280"/>
+	<edge from="tx..n2278" to="mg..n2280" xml:id="e2280"/>
+	<a as="mg" label="mg" ref="mg..n2280" xml:id="2280">
+		<fs>
+			<f name="annotation_value">go_to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2284"/>
+	<edge from="tx..n2282" to="mg..n2284" xml:id="e2284"/>
+	<a as="mg" label="mg" ref="mg..n2284" xml:id="2284">
+		<fs>
+			<f name="annotation_value">grave</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2288"/>
+	<edge from="tx..n2286" to="mg..n2288" xml:id="e2288"/>
+	<a as="mg" label="mg" ref="mg..n2288" xml:id="2288">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2292"/>
+	<edge from="tx..n2290" to="mg..n2292" xml:id="e2292"/>
+	<a as="mg" label="mg" ref="mg..n2292" xml:id="2292">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2294"/>
+	<edge from="tx..n2290" to="mg..n2294" xml:id="e2294"/>
+	<a as="mg" label="mg" ref="mg..n2294" xml:id="2294">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2296"/>
+	<edge from="tx..n2290" to="mg..n2296" xml:id="e2296"/>
+	<a as="mg" label="mg" ref="mg..n2296" xml:id="2296">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n230"/>
+	<edge from="tx..n228" to="mg..n230" xml:id="e230"/>
+	<a as="mg" label="mg" ref="mg..n230" xml:id="230">
+		<fs>
+			<f name="annotation_value">friend</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2300"/>
+	<edge from="tx..n2298" to="mg..n2300" xml:id="e2300"/>
+	<a as="mg" label="mg" ref="mg..n2300" xml:id="2300">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2304"/>
+	<edge from="tx..n2302" to="mg..n2304" xml:id="e2304"/>
+	<a as="mg" label="mg" ref="mg..n2304" xml:id="2304">
+		<fs>
+			<f name="annotation_value">ES=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2306"/>
+	<edge from="tx..n2302" to="mg..n2306" xml:id="e2306"/>
+	<a as="mg" label="mg" ref="mg..n2306" xml:id="2306">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2310"/>
+	<edge from="tx..n2308" to="mg..n2310" xml:id="e2310"/>
+	<a as="mg" label="mg" ref="mg..n2310" xml:id="2310">
+		<fs>
+			<f name="annotation_value">tree</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2314"/>
+	<edge from="tx..n2312" to="mg..n2314" xml:id="e2314"/>
+	<a as="mg" label="mg" ref="mg..n2314" xml:id="2314">
+		<fs>
+			<f name="annotation_value">small</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2318"/>
+	<edge from="tx..n2316" to="mg..n2318" xml:id="e2318"/>
+	<a as="mg" label="mg" ref="mg..n2318" xml:id="2318">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n232"/>
+	<edge from="tx..n228" to="mg..n232" xml:id="e232"/>
+	<a as="mg" label="mg" ref="mg..n232" xml:id="232">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2322"/>
+	<edge from="tx..n2320" to="mg..n2322" xml:id="e2322"/>
+	<a as="mg" label="mg" ref="mg..n2322" xml:id="2322">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2324"/>
+	<edge from="tx..n2320" to="mg..n2324" xml:id="e2324"/>
+	<a as="mg" label="mg" ref="mg..n2324" xml:id="2324">
+		<fs>
+			<f name="annotation_value">ftom</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2328"/>
+	<edge from="tx..n2326" to="mg..n2328" xml:id="e2328"/>
+	<a as="mg" label="mg" ref="mg..n2328" xml:id="2328">
+		<fs>
+			<f name="annotation_value">stay</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2332"/>
+	<edge from="tx..n2330" to="mg..n2332" xml:id="e2332"/>
+	<a as="mg" label="mg" ref="mg..n2332" xml:id="2332">
+		<fs>
+			<f name="annotation_value">LOC</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2334"/>
+	<edge from="tx..n2330" to="mg..n2334" xml:id="e2334"/>
+	<a as="mg" label="mg" ref="mg..n2334" xml:id="2334">
+		<fs>
+			<f name="annotation_value">head</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2338"/>
+	<edge from="tx..n2336" to="mg..n2338" xml:id="e2338"/>
+	<a as="mg" label="mg" ref="mg..n2338" xml:id="2338">
+		<fs>
+			<f name="annotation_value">father</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n234"/>
+	<edge from="tx..n228" to="mg..n234" xml:id="e234"/>
+	<a as="mg" label="mg" ref="mg..n234" xml:id="234">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2340"/>
+	<edge from="tx..n2336" to="mg..n2340" xml:id="e2340"/>
+	<a as="mg" label="mg" ref="mg..n2340" xml:id="2340">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2342"/>
+	<edge from="tx..n2336" to="mg..n2342" xml:id="e2342"/>
+	<a as="mg" label="mg" ref="mg..n2342" xml:id="2342">
+		<fs>
+			<f name="annotation_value">3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2346"/>
+	<edge from="tx..n2344" to="mg..n2346" xml:id="e2346"/>
+	<a as="mg" label="mg" ref="mg..n2346" xml:id="2346">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2350"/>
+	<edge from="tx..n2348" to="mg..n2350" xml:id="e2350"/>
+	<a as="mg" label="mg" ref="mg..n2350" xml:id="2350">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2352"/>
+	<edge from="tx..n2348" to="mg..n2352" xml:id="e2352"/>
+	<a as="mg" label="mg" ref="mg..n2352" xml:id="2352">
+		<fs>
+			<f name="annotation_value">HABIT</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2356"/>
+	<edge from="tx..n2354" to="mg..n2356" xml:id="e2356"/>
+	<a as="mg" label="mg" ref="mg..n2356" xml:id="2356">
+		<fs>
+			<f name="annotation_value">watch_over</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2358"/>
+	<edge from="tx..n2354" to="mg..n2358" xml:id="e2358"/>
+	<a as="mg" label="mg" ref="mg..n2358" xml:id="2358">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2360"/>
+	<edge from="tx..n2354" to="mg..n2360" xml:id="e2360"/>
+	<a as="mg" label="mg" ref="mg..n2360" xml:id="2360">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2364"/>
+	<edge from="tx..n2362" to="mg..n2364" xml:id="e2364"/>
+	<a as="mg" label="mg" ref="mg..n2364" xml:id="2364">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2366"/>
+	<edge from="tx..n2362" to="mg..n2366" xml:id="e2366"/>
+	<a as="mg" label="mg" ref="mg..n2366" xml:id="2366">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2368"/>
+	<edge from="tx..n2362" to="mg..n2368" xml:id="e2368"/>
+	<a as="mg" label="mg" ref="mg..n2368" xml:id="2368">
+		<fs>
+			<f name="annotation_value">tree</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2372"/>
+	<edge from="tx..n2370" to="mg..n2372" xml:id="e2372"/>
+	<a as="mg" label="mg" ref="mg..n2372" xml:id="2372">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2376"/>
+	<edge from="tx..n2374" to="mg..n2376" xml:id="e2376"/>
+	<a as="mg" label="mg" ref="mg..n2376" xml:id="2376">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2378"/>
+	<edge from="tx..n2374" to="mg..n2378" xml:id="e2378"/>
+	<a as="mg" label="mg" ref="mg..n2378" xml:id="2378">
+		<fs>
+			<f name="annotation_value">bear</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n238"/>
+	<edge from="tx..n236" to="mg..n238" xml:id="e238"/>
+	<a as="mg" label="mg" ref="mg..n238" xml:id="238">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2382"/>
+	<edge from="tx..n2380" to="mg..n2382" xml:id="e2382"/>
+	<a as="mg" label="mg" ref="mg..n2382" xml:id="2382">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2384"/>
+	<edge from="tx..n2380" to="mg..n2384" xml:id="e2384"/>
+	<a as="mg" label="mg" ref="mg..n2384" xml:id="2384">
+		<fs>
+			<f name="annotation_value">be</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2388"/>
+	<edge from="tx..n2386" to="mg..n2388" xml:id="e2388"/>
+	<a as="mg" label="mg" ref="mg..n2388" xml:id="2388">
+		<fs>
+			<f name="annotation_value">fruit</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2390"/>
+	<edge from="tx..n2386" to="mg..n2390" xml:id="e2390"/>
+	<a as="mg" label="mg" ref="mg..n2390" xml:id="2390">
+		<fs>
+			<f name="annotation_value">-3S.DP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2394"/>
+	<edge from="tx..n2392" to="mg..n2394" xml:id="e2394"/>
+	<a as="mg" label="mg" ref="mg..n2394" xml:id="2394">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2398"/>
+	<edge from="tx..n2396" to="mg..n2398" xml:id="e2398"/>
+	<a as="mg" label="mg" ref="mg..n2398" xml:id="2398">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n24"/>
+	<edge from="tx..n16" to="mg..n24" xml:id="e24"/>
+	<a as="mg" label="mg" ref="mg..n24" xml:id="24">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n240"/>
+	<edge from="tx..n236" to="mg..n240" xml:id="e240"/>
+	<a as="mg" label="mg" ref="mg..n240" xml:id="240">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2400"/>
+	<edge from="tx..n2396" to="mg..n2400" xml:id="e2400"/>
+	<a as="mg" label="mg" ref="mg..n2400" xml:id="2400">
+		<fs>
+			<f name="annotation_value">be</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n2404"/>
+	<edge from="tx..n2402" to="mg..n2404" xml:id="e2404"/>
+	<a as="mg" label="mg" ref="mg..n2404" xml:id="2404">
+		<fs>
+			<f name="annotation_value">coconut</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n244"/>
+	<edge from="tx..n242" to="mg..n244" xml:id="e244"/>
+	<a as="mg" label="mg" ref="mg..n244" xml:id="244">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n248"/>
+	<edge from="tx..n246" to="mg..n248" xml:id="e248"/>
+	<a as="mg" label="mg" ref="mg..n248" xml:id="248">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n250"/>
+	<edge from="tx..n246" to="mg..n250" xml:id="e250"/>
+	<a as="mg" label="mg" ref="mg..n250" xml:id="250">
+		<fs>
+			<f name="annotation_value">one</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n254"/>
+	<edge from="tx..n252" to="mg..n254" xml:id="e254"/>
+	<a as="mg" label="mg" ref="mg..n254" xml:id="254">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n258"/>
+	<edge from="tx..n256" to="mg..n258" xml:id="e258"/>
+	<a as="mg" label="mg" ref="mg..n258" xml:id="258">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n262"/>
+	<edge from="tx..n260" to="mg..n262" xml:id="e262"/>
+	<a as="mg" label="mg" ref="mg..n262" xml:id="262">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n264"/>
+	<edge from="tx..n260" to="mg..n264" xml:id="e264"/>
+	<a as="mg" label="mg" ref="mg..n264" xml:id="264">
+		<fs>
+			<f name="annotation_value">be</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n268"/>
+	<edge from="tx..n266" to="mg..n268" xml:id="e268"/>
+	<a as="mg" label="mg" ref="mg..n268" xml:id="268">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n272"/>
+	<edge from="tx..n270" to="mg..n272" xml:id="e272"/>
+	<a as="mg" label="mg" ref="mg..n272" xml:id="272">
+		<fs>
+			<f name="annotation_value">woman</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n276"/>
+	<edge from="tx..n274" to="mg..n276" xml:id="e276"/>
+	<a as="mg" label="mg" ref="mg..n276" xml:id="276">
+		<fs>
+			<f name="annotation_value">DET-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n278"/>
+	<edge from="tx..n274" to="mg..n278" xml:id="e278"/>
+	<a as="mg" label="mg" ref="mg..n278" xml:id="278">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n28"/>
+	<edge from="tx..n26" to="mg..n28" xml:id="e28"/>
+	<a as="mg" label="mg" ref="mg..n28" xml:id="28">
+		<fs>
+			<f name="annotation_value">the</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n282"/>
+	<edge from="tx..n280" to="mg..n282" xml:id="e282"/>
+	<a as="mg" label="mg" ref="mg..n282" xml:id="282">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n284"/>
+	<edge from="tx..n280" to="mg..n284" xml:id="e284"/>
+	<a as="mg" label="mg" ref="mg..n284" xml:id="284">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n288"/>
+	<edge from="tx..n286" to="mg..n288" xml:id="e288"/>
+	<a as="mg" label="mg" ref="mg..n288" xml:id="288">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n292"/>
+	<edge from="tx..n290" to="mg..n292" xml:id="e292"/>
+	<a as="mg" label="mg" ref="mg..n292" xml:id="292">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n294"/>
+	<edge from="tx..n290" to="mg..n294" xml:id="e294"/>
+	<a as="mg" label="mg" ref="mg..n294" xml:id="294">
+		<fs>
+			<f name="annotation_value">PROG</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n298"/>
+	<edge from="tx..n296" to="mg..n298" xml:id="e298"/>
+	<a as="mg" label="mg" ref="mg..n298" xml:id="298">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n302"/>
+	<edge from="tx..n300" to="mg..n302" xml:id="e302"/>
+	<a as="mg" label="mg" ref="mg..n302" xml:id="302">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n306"/>
+	<edge from="tx..n304" to="mg..n306" xml:id="e306"/>
+	<a as="mg" label="mg" ref="mg..n306" xml:id="306">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n310"/>
+	<edge from="tx..n308" to="mg..n310" xml:id="e310"/>
+	<a as="mg" label="mg" ref="mg..n310" xml:id="310">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n312"/>
+	<edge from="tx..n308" to="mg..n312" xml:id="e312"/>
+	<a as="mg" label="mg" ref="mg..n312" xml:id="312">
+		<fs>
+			<f name="annotation_value">PROG</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n316"/>
+	<edge from="tx..n314" to="mg..n316" xml:id="e316"/>
+	<a as="mg" label="mg" ref="mg..n316" xml:id="316">
+		<fs>
+			<f name="annotation_value">dig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n32"/>
+	<edge from="tx..n30" to="mg..n32" xml:id="e32"/>
+	<a as="mg" label="mg" ref="mg..n32" xml:id="32">
+		<fs>
+			<f name="annotation_value">story</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n320"/>
+	<edge from="tx..n318" to="mg..n320" xml:id="e320"/>
+	<a as="mg" label="mg" ref="mg..n320" xml:id="320">
+		<fs>
+			<f name="annotation_value">LOC-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n322"/>
+	<edge from="tx..n318" to="mg..n322" xml:id="e322"/>
+	<a as="mg" label="mg" ref="mg..n322" xml:id="322">
+		<fs>
+			<f name="annotation_value">ground</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n326"/>
+	<edge from="tx..n324" to="mg..n326" xml:id="e326"/>
+	<a as="mg" label="mg" ref="mg..n326" xml:id="326">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n330"/>
+	<edge from="tx..n328" to="mg..n330" xml:id="e330"/>
+	<a as="mg" label="mg" ref="mg..n330" xml:id="330">
+		<fs>
+			<f name="annotation_value">3S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n332"/>
+	<edge from="tx..n328" to="mg..n332" xml:id="e332"/>
+	<a as="mg" label="mg" ref="mg..n332" xml:id="332">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n336"/>
+	<edge from="tx..n334" to="mg..n336" xml:id="e336"/>
+	<a as="mg" label="mg" ref="mg..n336" xml:id="336">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n340"/>
+	<edge from="tx..n338" to="mg..n340" xml:id="e340"/>
+	<a as="mg" label="mg" ref="mg..n340" xml:id="340">
+		<fs>
+			<f name="annotation_value">PREP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n342"/>
+	<edge from="tx..n338" to="mg..n342" xml:id="e342"/>
+	<a as="mg" label="mg" ref="mg..n342" xml:id="342">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n346"/>
+	<edge from="tx..n344" to="mg..n346" xml:id="e346"/>
+	<a as="mg" label="mg" ref="mg..n346" xml:id="346">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n350"/>
+	<edge from="tx..n348" to="mg..n350" xml:id="e350"/>
+	<a as="mg" label="mg" ref="mg..n350" xml:id="350">
+		<fs>
+			<f name="annotation_value">1S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n352"/>
+	<edge from="tx..n348" to="mg..n352" xml:id="e352"/>
+	<a as="mg" label="mg" ref="mg..n352" xml:id="352">
+		<fs>
+			<f name="annotation_value">look</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n356"/>
+	<edge from="tx..n354" to="mg..n356" xml:id="e356"/>
+	<a as="mg" label="mg" ref="mg..n356" xml:id="356">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n36"/>
+	<edge from="tx..n34" to="mg..n36" xml:id="e36"/>
+	<a as="mg" label="mg" ref="mg..n36" xml:id="36">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n360"/>
+	<edge from="tx..n358" to="mg..n360" xml:id="e360"/>
+	<a as="mg" label="mg" ref="mg..n360" xml:id="360">
+		<fs>
+			<f name="annotation_value">2S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n364"/>
+	<edge from="tx..n362" to="mg..n364" xml:id="e364"/>
+	<a as="mg" label="mg" ref="mg..n364" xml:id="364">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n366"/>
+	<edge from="tx..n362" to="mg..n366" xml:id="e366"/>
+	<a as="mg" label="mg" ref="mg..n366" xml:id="366">
+		<fs>
+			<f name="annotation_value">know</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n370"/>
+	<edge from="tx..n368" to="mg..n370" xml:id="e370"/>
+	<a as="mg" label="mg" ref="mg..n370" xml:id="370">
+		<fs>
+			<f name="annotation_value">work</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n374"/>
+	<edge from="tx..n372" to="mg..n374" xml:id="e374"/>
+	<a as="mg" label="mg" ref="mg..n374" xml:id="374">
+		<fs>
+			<f name="annotation_value">good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n378"/>
+	<edge from="tx..n376" to="mg..n378" xml:id="e378"/>
+	<a as="mg" label="mg" ref="mg..n378" xml:id="378">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n382"/>
+	<edge from="tx..n380" to="mg..n382" xml:id="e382"/>
+	<a as="mg" label="mg" ref="mg..n382" xml:id="382">
+		<fs>
+			<f name="annotation_value">1S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n386"/>
+	<edge from="tx..n384" to="mg..n386" xml:id="e386"/>
+	<a as="mg" label="mg" ref="mg..n386" xml:id="386">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n390"/>
+	<edge from="tx..n388" to="mg..n390" xml:id="e390"/>
+	<a as="mg" label="mg" ref="mg..n390" xml:id="390">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n392"/>
+	<edge from="tx..n388" to="mg..n392" xml:id="e392"/>
+	<a as="mg" label="mg" ref="mg..n392" xml:id="392">
+		<fs>
+			<f name="annotation_value">1S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n396"/>
+	<edge from="tx..n394" to="mg..n396" xml:id="e396"/>
+	<a as="mg" label="mg" ref="mg..n396" xml:id="396">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n398"/>
+	<edge from="tx..n394" to="mg..n398" xml:id="e398"/>
+	<a as="mg" label="mg" ref="mg..n398" xml:id="398">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n4"/>
+	<edge from="tx..n2" to="mg..n4" xml:id="e4"/>
+	<a as="mg" label="mg" ref="mg..n4" xml:id="4">
+		<fs>
+			<f name="annotation_value">1S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n40"/>
+	<edge from="tx..n38" to="mg..n40" xml:id="e40"/>
+	<a as="mg" label="mg" ref="mg..n40" xml:id="40">
+		<fs>
+			<f name="annotation_value">mister</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n402"/>
+	<edge from="tx..n400" to="mg..n402" xml:id="e402"/>
+	<a as="mg" label="mg" ref="mg..n402" xml:id="402">
+		<fs>
+			<f name="annotation_value">work</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n406"/>
+	<edge from="tx..n404" to="mg..n406" xml:id="e406"/>
+	<a as="mg" label="mg" ref="mg..n406" xml:id="406">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n410"/>
+	<edge from="tx..n408" to="mg..n410" xml:id="e410"/>
+	<a as="mg" label="mg" ref="mg..n410" xml:id="410">
+		<fs>
+			<f name="annotation_value">some</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n414"/>
+	<edge from="tx..n412" to="mg..n414" xml:id="e414"/>
+	<a as="mg" label="mg" ref="mg..n414" xml:id="414">
+		<fs>
+			<f name="annotation_value">time</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n418"/>
+	<edge from="tx..n416" to="mg..n418" xml:id="e418"/>
+	<a as="mg" label="mg" ref="mg..n418" xml:id="418">
+		<fs>
+			<f name="annotation_value">1S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n420"/>
+	<edge from="tx..n416" to="mg..n420" xml:id="e420"/>
+	<a as="mg" label="mg" ref="mg..n420" xml:id="420">
+		<fs>
+			<f name="annotation_value">talk_to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n422"/>
+	<edge from="tx..n416" to="mg..n422" xml:id="e422"/>
+	<a as="mg" label="mg" ref="mg..n422" xml:id="422">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n424"/>
+	<edge from="tx..n416" to="mg..n424" xml:id="e424"/>
+	<a as="mg" label="mg" ref="mg..n424" xml:id="424">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n428"/>
+	<edge from="tx..n426" to="mg..n428" xml:id="e428"/>
+	<a as="mg" label="mg" ref="mg..n428" xml:id="428">
+		<fs>
+			<f name="annotation_value">3sgRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n430"/>
+	<edge from="tx..n426" to="mg..n430" xml:id="e430"/>
+	<a as="mg" label="mg" ref="mg..n430" xml:id="430">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n434"/>
+	<edge from="tx..n432" to="mg..n434" xml:id="e434"/>
+	<a as="mg" label="mg" ref="mg..n434" xml:id="434">
+		<fs>
+			<f name="annotation_value">hear</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n438"/>
+	<edge from="tx..n436" to="mg..n438" xml:id="e438"/>
+	<a as="mg" label="mg" ref="mg..n438" xml:id="438">
+		<fs>
+			<f name="annotation_value">1sgONEG21sgRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n44"/>
+	<edge from="tx..n42" to="mg..n44" xml:id="e44"/>
+	<a as="mg" label="mg" ref="mg..n44" xml:id="44">
+		<fs>
+			<f name="annotation_value">p.name</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n440"/>
+	<edge from="tx..n436" to="mg..n440" xml:id="e440"/>
+	<a as="mg" label="mg" ref="mg..n440" xml:id="440">
+		<fs>
+			<f name="annotation_value">want</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n442"/>
+	<edge from="tx..n436" to="mg..n442" xml:id="e442"/>
+	<a as="mg" label="mg" ref="mg..n442" xml:id="442">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n444"/>
+	<edge from="tx..n436" to="mg..n444" xml:id="e444"/>
+	<a as="mg" label="mg" ref="mg..n444" xml:id="444">
+		<fs>
+			<f name="annotation_value">DST</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n448"/>
+	<edge from="tx..n446" to="mg..n448" xml:id="e448"/>
+	<a as="mg" label="mg" ref="mg..n448" xml:id="448">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n452"/>
+	<edge from="tx..n450" to="mg..n452" xml:id="e452"/>
+	<a as="mg" label="mg" ref="mg..n452" xml:id="452">
+		<fs>
+			<f name="annotation_value">3S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n454"/>
+	<edge from="tx..n450" to="mg..n454" xml:id="e454"/>
+	<a as="mg" label="mg" ref="mg..n454" xml:id="454">
+		<fs>
+			<f name="annotation_value">make:IR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n458"/>
+	<edge from="tx..n456" to="mg..n458" xml:id="e458"/>
+	<a as="mg" label="mg" ref="mg..n458" xml:id="458">
+		<fs>
+			<f name="annotation_value">DET</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n460"/>
+	<edge from="tx..n456" to="mg..n460" xml:id="e460"/>
+	<a as="mg" label="mg" ref="mg..n460" xml:id="460">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n464"/>
+	<edge from="tx..n462" to="mg..n464" xml:id="e464"/>
+	<a as="mg" label="mg" ref="mg..n464" xml:id="464">
+		<fs>
+			<f name="annotation_value">1S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n466"/>
+	<edge from="tx..n462" to="mg..n466" xml:id="e466"/>
+	<a as="mg" label="mg" ref="mg..n466" xml:id="466">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n468"/>
+	<edge from="tx..n462" to="mg..n468" xml:id="e468"/>
+	<a as="mg" label="mg" ref="mg..n468" xml:id="468">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n470"/>
+	<edge from="tx..n462" to="mg..n470" xml:id="e470"/>
+	<a as="mg" label="mg" ref="mg..n470" xml:id="470">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n474"/>
+	<edge from="tx..n472" to="mg..n474" xml:id="e474"/>
+	<a as="mg" label="mg" ref="mg..n474" xml:id="474">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n478"/>
+	<edge from="tx..n476" to="mg..n478" xml:id="e478"/>
+	<a as="mg" label="mg" ref="mg..n478" xml:id="478">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n48"/>
+	<edge from="tx..n46" to="mg..n48" xml:id="e48"/>
+	<a as="mg" label="mg" ref="mg..n48" xml:id="48">
+		<fs>
+			<f name="annotation_value">p.name</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n482"/>
+	<edge from="tx..n480" to="mg..n482" xml:id="e482"/>
+	<a as="mg" label="mg" ref="mg..n482" xml:id="482">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n484"/>
+	<edge from="tx..n480" to="mg..n484" xml:id="e484"/>
+	<a as="mg" label="mg" ref="mg..n484" xml:id="484">
+		<fs>
+			<f name="annotation_value">not</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n488"/>
+	<edge from="tx..n486" to="mg..n488" xml:id="e488"/>
+	<a as="mg" label="mg" ref="mg..n488" xml:id="488">
+		<fs>
+			<f name="annotation_value">make</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n490"/>
+	<edge from="tx..n486" to="mg..n490" xml:id="e490"/>
+	<a as="mg" label="mg" ref="mg..n490" xml:id="490">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n492"/>
+	<edge from="tx..n486" to="mg..n492" xml:id="e492"/>
+	<a as="mg" label="mg" ref="mg..n492" xml:id="492">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n496"/>
+	<edge from="tx..n494" to="mg..n496" xml:id="e496"/>
+	<a as="mg" label="mg" ref="mg..n496" xml:id="496">
+		<fs>
+			<f name="annotation_value">NEG2</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n500"/>
+	<edge from="tx..n498" to="mg..n500" xml:id="e500"/>
+	<a as="mg" label="mg" ref="mg..n500" xml:id="500">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n504"/>
+	<edge from="tx..n502" to="mg..n504" xml:id="e504"/>
+	<a as="mg" label="mg" ref="mg..n504" xml:id="504">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n508"/>
+	<edge from="tx..n506" to="mg..n508" xml:id="e508"/>
+	<a as="mg" label="mg" ref="mg..n508" xml:id="508">
+		<fs>
+			<f name="annotation_value">2S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n512"/>
+	<edge from="tx..n510" to="mg..n512" xml:id="e512"/>
+	<a as="mg" label="mg" ref="mg..n512" xml:id="512">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n516"/>
+	<edge from="tx..n514" to="mg..n516" xml:id="e516"/>
+	<a as="mg" label="mg" ref="mg..n516" xml:id="516">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n518"/>
+	<edge from="tx..n514" to="mg..n518" xml:id="e518"/>
+	<a as="mg" label="mg" ref="mg..n518" xml:id="518">
+		<fs>
+			<f name="annotation_value">know</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n52"/>
+	<edge from="tx..n50" to="mg..n52" xml:id="e52"/>
+	<a as="mg" label="mg" ref="mg..n52" xml:id="52">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n522"/>
+	<edge from="tx..n520" to="mg..n522" xml:id="e522"/>
+	<a as="mg" label="mg" ref="mg..n522" xml:id="522">
+		<fs>
+			<f name="annotation_value">work</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n526"/>
+	<edge from="tx..n524" to="mg..n526" xml:id="e526"/>
+	<a as="mg" label="mg" ref="mg..n526" xml:id="526">
+		<fs>
+			<f name="annotation_value">good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n530"/>
+	<edge from="tx..n528" to="mg..n530" xml:id="e530"/>
+	<a as="mg" label="mg" ref="mg..n530" xml:id="530">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n532"/>
+	<edge from="tx..n528" to="mg..n532" xml:id="e532"/>
+	<a as="mg" label="mg" ref="mg..n532" xml:id="532">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n534"/>
+	<edge from="tx..n528" to="mg..n534" xml:id="e534"/>
+	<a as="mg" label="mg" ref="mg..n534" xml:id="534">
+		<fs>
+			<f name="annotation_value">like</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n538"/>
+	<edge from="tx..n536" to="mg..n538" xml:id="e538"/>
+	<a as="mg" label="mg" ref="mg..n538" xml:id="538">
+		<fs>
+			<f name="annotation_value">2S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n54"/>
+	<edge from="tx..n50" to="mg..n54" xml:id="e54"/>
+	<a as="mg" label="mg" ref="mg..n54" xml:id="54">
+		<fs>
+			<f name="annotation_value">1S.BEN</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n542"/>
+	<edge from="tx..n540" to="mg..n542" xml:id="e542"/>
+	<a as="mg" label="mg" ref="mg..n542" xml:id="542">
+		<fs>
+			<f name="annotation_value">2S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n544"/>
+	<edge from="tx..n540" to="mg..n544" xml:id="e544"/>
+	<a as="mg" label="mg" ref="mg..n544" xml:id="544">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n548"/>
+	<edge from="tx..n546" to="mg..n548" xml:id="e548"/>
+	<a as="mg" label="mg" ref="mg..n548" xml:id="548">
+		<fs>
+			<f name="annotation_value">want</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n550"/>
+	<edge from="tx..n546" to="mg..n550" xml:id="e550"/>
+	<a as="mg" label="mg" ref="mg..n550" xml:id="550">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n552"/>
+	<edge from="tx..n546" to="mg..n552" xml:id="e552"/>
+	<a as="mg" label="mg" ref="mg..n552" xml:id="552">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n556"/>
+	<edge from="tx..n554" to="mg..n556" xml:id="e556"/>
+	<a as="mg" label="mg" ref="mg..n556" xml:id="556">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n560"/>
+	<edge from="tx..n558" to="mg..n560" xml:id="e560"/>
+	<a as="mg" label="mg" ref="mg..n560" xml:id="560">
+		<fs>
+			<f name="annotation_value">1S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n562"/>
+	<edge from="tx..n558" to="mg..n562" xml:id="e562"/>
+	<a as="mg" label="mg" ref="mg..n562" xml:id="562">
+		<fs>
+			<f name="annotation_value">give</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n564"/>
+	<edge from="tx..n558" to="mg..n564" xml:id="e564"/>
+	<a as="mg" label="mg" ref="mg..n564" xml:id="564">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n566"/>
+	<edge from="tx..n558" to="mg..n566" xml:id="e566"/>
+	<a as="mg" label="mg" ref="mg..n566" xml:id="566">
+		<fs>
+			<f name="annotation_value">-2S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n570"/>
+	<edge from="tx..n568" to="mg..n570" xml:id="e570"/>
+	<a as="mg" label="mg" ref="mg..n570" xml:id="570">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n574"/>
+	<edge from="tx..n572" to="mg..n574" xml:id="e574"/>
+	<a as="mg" label="mg" ref="mg..n574" xml:id="574">
+		<fs>
+			<f name="annotation_value">1S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n578"/>
+	<edge from="tx..n576" to="mg..n578" xml:id="e578"/>
+	<a as="mg" label="mg" ref="mg..n578" xml:id="578">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n58"/>
+	<edge from="tx..n56" to="mg..n58" xml:id="e58"/>
+	<a as="mg" label="mg" ref="mg..n58" xml:id="58">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n582"/>
+	<edge from="tx..n580" to="mg..n582" xml:id="e582"/>
+	<a as="mg" label="mg" ref="mg..n582" xml:id="582">
+		<fs>
+			<f name="annotation_value">2S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n586"/>
+	<edge from="tx..n584" to="mg..n586" xml:id="e586"/>
+	<a as="mg" label="mg" ref="mg..n586" xml:id="586">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n588"/>
+	<edge from="tx..n584" to="mg..n588" xml:id="e588"/>
+	<a as="mg" label="mg" ref="mg..n588" xml:id="588">
+		<fs>
+			<f name="annotation_value">give.me</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n592"/>
+	<edge from="tx..n590" to="mg..n592" xml:id="e592"/>
+	<a as="mg" label="mg" ref="mg..n592" xml:id="592">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n596"/>
+	<edge from="tx..n594" to="mg..n596" xml:id="e596"/>
+	<a as="mg" label="mg" ref="mg..n596" xml:id="596">
+		<fs>
+			<f name="annotation_value">2S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n6"/>
+	<edge from="tx..n2" to="mg..n6" xml:id="e6"/>
+	<a as="mg" label="mg" ref="mg..n6" xml:id="6">
+		<fs>
+			<f name="annotation_value">want</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n60"/>
+	<edge from="tx..n56" to="mg..n60" xml:id="e60"/>
+	<a as="mg" label="mg" ref="mg..n60" xml:id="60">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n600"/>
+	<edge from="tx..n598" to="mg..n600" xml:id="e600"/>
+	<a as="mg" label="mg" ref="mg..n600" xml:id="600">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n604"/>
+	<edge from="tx..n602" to="mg..n604" xml:id="e604"/>
+	<a as="mg" label="mg" ref="mg..n604" xml:id="604">
+		<fs>
+			<f name="annotation_value">DET-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n606"/>
+	<edge from="tx..n602" to="mg..n606" xml:id="e606"/>
+	<a as="mg" label="mg" ref="mg..n606" xml:id="606">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n610"/>
+	<edge from="tx..n608" to="mg..n610" xml:id="e610"/>
+	<a as="mg" label="mg" ref="mg..n610" xml:id="610">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n614"/>
+	<edge from="tx..n612" to="mg..n614" xml:id="e614"/>
+	<a as="mg" label="mg" ref="mg..n614" xml:id="614">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n616"/>
+	<edge from="tx..n612" to="mg..n616" xml:id="e616"/>
+	<a as="mg" label="mg" ref="mg..n616" xml:id="616">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n62"/>
+	<edge from="tx..n56" to="mg..n62" xml:id="e62"/>
+	<a as="mg" label="mg" ref="mg..n62" xml:id="62">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n620"/>
+	<edge from="tx..n618" to="mg..n620" xml:id="e620"/>
+	<a as="mg" label="mg" ref="mg..n620" xml:id="620">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n624"/>
+	<edge from="tx..n622" to="mg..n624" xml:id="e624"/>
+	<a as="mg" label="mg" ref="mg..n624" xml:id="624">
+		<fs>
+			<f name="annotation_value">woman</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n628"/>
+	<edge from="tx..n626" to="mg..n628" xml:id="e628"/>
+	<a as="mg" label="mg" ref="mg..n628" xml:id="628">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n632"/>
+	<edge from="tx..n630" to="mg..n632" xml:id="e632"/>
+	<a as="mg" label="mg" ref="mg..n632" xml:id="632">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n634"/>
+	<edge from="tx..n630" to="mg..n634" xml:id="e634"/>
+	<a as="mg" label="mg" ref="mg..n634" xml:id="634">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n638"/>
+	<edge from="tx..n636" to="mg..n638" xml:id="e638"/>
+	<a as="mg" label="mg" ref="mg..n638" xml:id="638">
+		<fs>
+			<f name="annotation_value">Oh</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n642"/>
+	<edge from="tx..n640" to="mg..n642" xml:id="e642"/>
+	<a as="mg" label="mg" ref="mg..n642" xml:id="642">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n644"/>
+	<edge from="tx..n640" to="mg..n644" xml:id="e644"/>
+	<a as="mg" label="mg" ref="mg..n644" xml:id="644">
+		<fs>
+			<f name="annotation_value">good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n648"/>
+	<edge from="tx..n646" to="mg..n648" xml:id="e648"/>
+	<a as="mg" label="mg" ref="mg..n648" xml:id="648">
+		<fs>
+			<f name="annotation_value">big</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n652"/>
+	<edge from="tx..n650" to="mg..n652" xml:id="e652"/>
+	<a as="mg" label="mg" ref="mg..n652" xml:id="652">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n654"/>
+	<edge from="tx..n650" to="mg..n654" xml:id="e654"/>
+	<a as="mg" label="mg" ref="mg..n654" xml:id="654">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n656"/>
+	<edge from="tx..n650" to="mg..n656" xml:id="e656"/>
+	<a as="mg" label="mg" ref="mg..n656" xml:id="656">
+		<fs>
+			<f name="annotation_value">like</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n66"/>
+	<edge from="tx..n64" to="mg..n66" xml:id="e66"/>
+	<a as="mg" label="mg" ref="mg..n66" xml:id="66">
+		<fs>
+			<f name="annotation_value">before</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n660"/>
+	<edge from="tx..n658" to="mg..n660" xml:id="e660"/>
+	<a as="mg" label="mg" ref="mg..n660" xml:id="660">
+		<fs>
+			<f name="annotation_value">REL</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n664"/>
+	<edge from="tx..n662" to="mg..n664" xml:id="e664"/>
+	<a as="mg" label="mg" ref="mg..n664" xml:id="664">
+		<fs>
+			<f name="annotation_value">1d.incRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n666"/>
+	<edge from="tx..n662" to="mg..n666" xml:id="e666"/>
+	<a as="mg" label="mg" ref="mg..n666" xml:id="666">
+		<fs>
+			<f name="annotation_value">-CND</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n668"/>
+	<edge from="tx..n662" to="mg..n668" xml:id="e668"/>
+	<a as="mg" label="mg" ref="mg..n668" xml:id="668">
+		<fs>
+			<f name="annotation_value">exchange</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n670"/>
+	<edge from="tx..n662" to="mg..n670" xml:id="e670"/>
+	<a as="mg" label="mg" ref="mg..n670" xml:id="670">
+		<fs>
+			<f name="annotation_value">-TR</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n672"/>
+	<edge from="tx..n662" to="mg..n672" xml:id="e672"/>
+	<a as="mg" label="mg" ref="mg..n672" xml:id="672">
+		<fs>
+			<f name="annotation_value">=DST</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n676"/>
+	<edge from="tx..n674" to="mg..n676" xml:id="e676"/>
+	<a as="mg" label="mg" ref="mg..n676" xml:id="676">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n678"/>
+	<edge from="tx..n674" to="mg..n678" xml:id="e678"/>
+	<a as="mg" label="mg" ref="mg..n678" xml:id="678">
+		<fs>
+			<f name="annotation_value">maybe</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n682"/>
+	<edge from="tx..n680" to="mg..n682" xml:id="e682"/>
+	<a as="mg" label="mg" ref="mg..n682" xml:id="682">
+		<fs>
+			<f name="annotation_value">good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n686"/>
+	<edge from="tx..n684" to="mg..n686" xml:id="e686"/>
+	<a as="mg" label="mg" ref="mg..n686" xml:id="686">
+		<fs>
+			<f name="annotation_value">1S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n690"/>
+	<edge from="tx..n688" to="mg..n690" xml:id="e690"/>
+	<a as="mg" label="mg" ref="mg..n690" xml:id="690">
+		<fs>
+			<f name="annotation_value">1S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n692"/>
+	<edge from="tx..n688" to="mg..n692" xml:id="e692"/>
+	<a as="mg" label="mg" ref="mg..n692" xml:id="692">
+		<fs>
+			<f name="annotation_value">give</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n694"/>
+	<edge from="tx..n688" to="mg..n694" xml:id="e694"/>
+	<a as="mg" label="mg" ref="mg..n694" xml:id="694">
+		<fs>
+			<f name="annotation_value">-V</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n696"/>
+	<edge from="tx..n688" to="mg..n696" xml:id="e696"/>
+	<a as="mg" label="mg" ref="mg..n696" xml:id="696">
+		<fs>
+			<f name="annotation_value">-2S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n70"/>
+	<edge from="tx..n68" to="mg..n70" xml:id="e70"/>
+	<a as="mg" label="mg" ref="mg..n70" xml:id="70">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n700"/>
+	<edge from="tx..n698" to="mg..n700" xml:id="e700"/>
+	<a as="mg" label="mg" ref="mg..n700" xml:id="700">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n704"/>
+	<edge from="tx..n702" to="mg..n704" xml:id="e704"/>
+	<a as="mg" label="mg" ref="mg..n704" xml:id="704">
+		<fs>
+			<f name="annotation_value">1S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n708"/>
+	<edge from="tx..n706" to="mg..n708" xml:id="e708"/>
+	<a as="mg" label="mg" ref="mg..n708" xml:id="708">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n712"/>
+	<edge from="tx..n710" to="mg..n712" xml:id="e712"/>
+	<a as="mg" label="mg" ref="mg..n712" xml:id="712">
+		<fs>
+			<f name="annotation_value">2S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n716"/>
+	<edge from="tx..n714" to="mg..n716" xml:id="e716"/>
+	<a as="mg" label="mg" ref="mg..n716" xml:id="716">
+		<fs>
+			<f name="annotation_value">2S.IRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n718"/>
+	<edge from="tx..n714" to="mg..n718" xml:id="e718"/>
+	<a as="mg" label="mg" ref="mg..n718" xml:id="718">
+		<fs>
+			<f name="annotation_value">give.me</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n72"/>
+	<edge from="tx..n68" to="mg..n72" xml:id="e72"/>
+	<a as="mg" label="mg" ref="mg..n72" xml:id="72">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n722"/>
+	<edge from="tx..n720" to="mg..n722" xml:id="e722"/>
+	<a as="mg" label="mg" ref="mg..n722" xml:id="722">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n726"/>
+	<edge from="tx..n724" to="mg..n726" xml:id="e726"/>
+	<a as="mg" label="mg" ref="mg..n726" xml:id="726">
+		<fs>
+			<f name="annotation_value">2S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n730"/>
+	<edge from="tx..n728" to="mg..n730" xml:id="e730"/>
+	<a as="mg" label="mg" ref="mg..n730" xml:id="730">
+		<fs>
+			<f name="annotation_value">person</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n734"/>
+	<edge from="tx..n732" to="mg..n734" xml:id="e734"/>
+	<a as="mg" label="mg" ref="mg..n734" xml:id="734">
+		<fs>
+			<f name="annotation_value">this</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n738"/>
+	<edge from="tx..n736" to="mg..n738" xml:id="e738"/>
+	<a as="mg" label="mg" ref="mg..n738" xml:id="738">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n740"/>
+	<edge from="tx..n736" to="mg..n740" xml:id="e740"/>
+	<a as="mg" label="mg" ref="mg..n740" xml:id="740">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n744"/>
+	<edge from="tx..n742" to="mg..n744" xml:id="e744"/>
+	<a as="mg" label="mg" ref="mg..n744" xml:id="744">
+		<fs>
+			<f name="annotation_value">O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n748"/>
+	<edge from="tx..n746" to="mg..n748" xml:id="e748"/>
+	<a as="mg" label="mg" ref="mg..n748" xml:id="748">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n750"/>
+	<edge from="tx..n746" to="mg..n750" xml:id="e750"/>
+	<a as="mg" label="mg" ref="mg..n750" xml:id="750">
+		<fs>
+			<f name="annotation_value">good</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n754"/>
+	<edge from="tx..n752" to="mg..n754" xml:id="e754"/>
+	<a as="mg" label="mg" ref="mg..n754" xml:id="754">
+		<fs>
+			<f name="annotation_value">while</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n758"/>
+	<edge from="tx..n756" to="mg..n758" xml:id="e758"/>
+	<a as="mg" label="mg" ref="mg..n758" xml:id="758">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n76"/>
+	<edge from="tx..n74" to="mg..n76" xml:id="e76"/>
+	<a as="mg" label="mg" ref="mg..n76" xml:id="76">
+		<fs>
+			<f name="annotation_value">person</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n760"/>
+	<edge from="tx..n756" to="mg..n760" xml:id="e760"/>
+	<a as="mg" label="mg" ref="mg..n760" xml:id="760">
+		<fs>
+			<f name="annotation_value">with</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n764"/>
+	<edge from="tx..n762" to="mg..n764" xml:id="e764"/>
+	<a as="mg" label="mg" ref="mg..n764" xml:id="764">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n768"/>
+	<edge from="tx..n766" to="mg..n768" xml:id="e768"/>
+	<a as="mg" label="mg" ref="mg..n768" xml:id="768">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n772"/>
+	<edge from="tx..n770" to="mg..n772" xml:id="e772"/>
+	<a as="mg" label="mg" ref="mg..n772" xml:id="772">
+		<fs>
+			<f name="annotation_value">DET-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n774"/>
+	<edge from="tx..n770" to="mg..n774" xml:id="e774"/>
+	<a as="mg" label="mg" ref="mg..n774" xml:id="774">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n778"/>
+	<edge from="tx..n776" to="mg..n778" xml:id="e778"/>
+	<a as="mg" label="mg" ref="mg..n778" xml:id="778">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n780"/>
+	<edge from="tx..n776" to="mg..n780" xml:id="e780"/>
+	<a as="mg" label="mg" ref="mg..n780" xml:id="780">
+		<fs>
+			<f name="annotation_value">hurry</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n784"/>
+	<edge from="tx..n782" to="mg..n784" xml:id="e784"/>
+	<a as="mg" label="mg" ref="mg..n784" xml:id="784">
+		<fs>
+			<f name="annotation_value">with</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n786"/>
+	<edge from="tx..n782" to="mg..n786" xml:id="e786"/>
+	<a as="mg" label="mg" ref="mg..n786" xml:id="786">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n788"/>
+	<edge from="tx..n782" to="mg..n788" xml:id="e788"/>
+	<a as="mg" label="mg" ref="mg..n788" xml:id="788">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n792"/>
+	<edge from="tx..n790" to="mg..n792" xml:id="e792"/>
+	<a as="mg" label="mg" ref="mg..n792" xml:id="792">
+		<fs>
+			<f name="annotation_value">to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n796"/>
+	<edge from="tx..n794" to="mg..n796" xml:id="e796"/>
+	<a as="mg" label="mg" ref="mg..n796" xml:id="796">
+		<fs>
+			<f name="annotation_value">far</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n8"/>
+	<edge from="tx..n2" to="mg..n8" xml:id="e8"/>
+	<a as="mg" label="mg" ref="mg..n8" xml:id="8">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n80"/>
+	<edge from="tx..n78" to="mg..n80" xml:id="e80"/>
+	<a as="mg" label="mg" ref="mg..n80" xml:id="80">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n800"/>
+	<edge from="tx..n798" to="mg..n800" xml:id="e800"/>
+	<a as="mg" label="mg" ref="mg..n800" xml:id="800">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n802"/>
+	<edge from="tx..n798" to="mg..n802" xml:id="e802"/>
+	<a as="mg" label="mg" ref="mg..n802" xml:id="802">
+		<fs>
+			<f name="annotation_value">go_to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n806"/>
+	<edge from="tx..n804" to="mg..n806" xml:id="e806"/>
+	<a as="mg" label="mg" ref="mg..n806" xml:id="806">
+		<fs>
+			<f name="annotation_value">LOC-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n808"/>
+	<edge from="tx..n804" to="mg..n808" xml:id="e808"/>
+	<a as="mg" label="mg" ref="mg..n808" xml:id="808">
+		<fs>
+			<f name="annotation_value">house</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n812"/>
+	<edge from="tx..n810" to="mg..n812" xml:id="e812"/>
+	<a as="mg" label="mg" ref="mg..n812" xml:id="812">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n816"/>
+	<edge from="tx..n814" to="mg..n816" xml:id="e816"/>
+	<a as="mg" label="mg" ref="mg..n816" xml:id="816">
+		<fs>
+			<f name="annotation_value">but</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n820"/>
+	<edge from="tx..n818" to="mg..n820" xml:id="e820"/>
+	<a as="mg" label="mg" ref="mg..n820" xml:id="820">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n824"/>
+	<edge from="tx..n822" to="mg..n824" xml:id="e824"/>
+	<a as="mg" label="mg" ref="mg..n824" xml:id="824">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n826"/>
+	<edge from="tx..n822" to="mg..n826" xml:id="e826"/>
+	<a as="mg" label="mg" ref="mg..n826" xml:id="826">
+		<fs>
+			<f name="annotation_value">with</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n830"/>
+	<edge from="tx..n828" to="mg..n830" xml:id="e830"/>
+	<a as="mg" label="mg" ref="mg..n830" xml:id="830">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n834"/>
+	<edge from="tx..n832" to="mg..n834" xml:id="e834"/>
+	<a as="mg" label="mg" ref="mg..n834" xml:id="834">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n838"/>
+	<edge from="tx..n836" to="mg..n838" xml:id="e838"/>
+	<a as="mg" label="mg" ref="mg..n838" xml:id="838">
+		<fs>
+			<f name="annotation_value">wife</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n84"/>
+	<edge from="tx..n82" to="mg..n84" xml:id="e84"/>
+	<a as="mg" label="mg" ref="mg..n84" xml:id="84">
+		<fs>
+			<f name="annotation_value">p.name</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n842"/>
+	<edge from="tx..n840" to="mg..n842" xml:id="e842"/>
+	<a as="mg" label="mg" ref="mg..n842" xml:id="842">
+		<fs>
+			<f name="annotation_value">of</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n846"/>
+	<edge from="tx..n844" to="mg..n846" xml:id="e846"/>
+	<a as="mg" label="mg" ref="mg..n846" xml:id="846">
+		<fs>
+			<f name="annotation_value">pig</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n850"/>
+	<edge from="tx..n848" to="mg..n850" xml:id="e850"/>
+	<a as="mg" label="mg" ref="mg..n850" xml:id="850">
+		<fs>
+			<f name="annotation_value">this</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n854"/>
+	<edge from="tx..n852" to="mg..n854" xml:id="e854"/>
+	<a as="mg" label="mg" ref="mg..n854" xml:id="854">
+		<fs>
+			<f name="annotation_value">ES=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n856"/>
+	<edge from="tx..n852" to="mg..n856" xml:id="e856"/>
+	<a as="mg" label="mg" ref="mg..n856" xml:id="856">
+		<fs>
+			<f name="annotation_value">go_to</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n86"/>
+	<edge from="tx..n82" to="mg..n86" xml:id="e86"/>
+	<a as="mg" label="mg" ref="mg..n86" xml:id="86">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n860"/>
+	<edge from="tx..n858" to="mg..n860" xml:id="e860"/>
+	<a as="mg" label="mg" ref="mg..n860" xml:id="860">
+		<fs>
+			<f name="annotation_value">LOC-</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n862"/>
+	<edge from="tx..n858" to="mg..n862" xml:id="e862"/>
+	<a as="mg" label="mg" ref="mg..n862" xml:id="862">
+		<fs>
+			<f name="annotation_value">house</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n866"/>
+	<edge from="tx..n864" to="mg..n866" xml:id="e866"/>
+	<a as="mg" label="mg" ref="mg..n866" xml:id="866">
+		<fs>
+			<f name="annotation_value">3S.</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n870"/>
+	<edge from="tx..n868" to="mg..n870" xml:id="e870"/>
+	<a as="mg" label="mg" ref="mg..n870" xml:id="870">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n874"/>
+	<edge from="tx..n872" to="mg..n874" xml:id="e874"/>
+	<a as="mg" label="mg" ref="mg..n874" xml:id="874">
+		<fs>
+			<f name="annotation_value">then</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n878"/>
+	<edge from="tx..n876" to="mg..n878" xml:id="e878"/>
+	<a as="mg" label="mg" ref="mg..n878" xml:id="878">
+		<fs>
+			<f name="annotation_value">3D.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n88"/>
+	<edge from="tx..n82" to="mg..n88" xml:id="e88"/>
+	<a as="mg" label="mg" ref="mg..n88" xml:id="88">
+		<fs>
+			<f name="annotation_value">two</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n880"/>
+	<edge from="tx..n876" to="mg..n880" xml:id="e880"/>
+	<a as="mg" label="mg" ref="mg..n880" xml:id="880">
+		<fs>
+			<f name="annotation_value">exchange</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n884"/>
+	<edge from="tx..n882" to="mg..n884" xml:id="e884"/>
+	<a as="mg" label="mg" ref="mg..n884" xml:id="884">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n886"/>
+	<edge from="tx..n882" to="mg..n886" xml:id="e886"/>
+	<a as="mg" label="mg" ref="mg..n886" xml:id="886">
+		<fs>
+			<f name="annotation_value">finish</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n890"/>
+	<edge from="tx..n888" to="mg..n890" xml:id="e890"/>
+	<a as="mg" label="mg" ref="mg..n890" xml:id="890">
+		<fs>
+			<f name="annotation_value">while</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n894"/>
+	<edge from="tx..n892" to="mg..n894" xml:id="e894"/>
+	<a as="mg" label="mg" ref="mg..n894" xml:id="894">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n896"/>
+	<edge from="tx..n892" to="mg..n896" xml:id="e896"/>
+	<a as="mg" label="mg" ref="mg..n896" xml:id="896">
+		<fs>
+			<f name="annotation_value">with</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n900"/>
+	<edge from="tx..n898" to="mg..n900" xml:id="e900"/>
+	<a as="mg" label="mg" ref="mg..n900" xml:id="900">
+		<fs>
+			<f name="annotation_value">woman</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n904"/>
+	<edge from="tx..n902" to="mg..n904" xml:id="e904"/>
+	<a as="mg" label="mg" ref="mg..n904" xml:id="904">
+		<fs>
+			<f name="annotation_value">that</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n908"/>
+	<edge from="tx..n906" to="mg..n908" xml:id="e908"/>
+	<a as="mg" label="mg" ref="mg..n908" xml:id="908">
+		<fs>
+			<f name="annotation_value">until</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n912"/>
+	<edge from="tx..n910" to="mg..n912" xml:id="e912"/>
+	<a as="mg" label="mg" ref="mg..n912" xml:id="912">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n914"/>
+	<edge from="tx..n910" to="mg..n914" xml:id="e914"/>
+	<a as="mg" label="mg" ref="mg..n914" xml:id="914">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n918"/>
+	<edge from="tx..n916" to="mg..n918" xml:id="e918"/>
+	<a as="mg" label="mg" ref="mg..n918" xml:id="918">
+		<fs>
+			<f name="annotation_value">go</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n92"/>
+	<edge from="tx..n90" to="mg..n92" xml:id="e92"/>
+	<a as="mg" label="mg" ref="mg..n92" xml:id="92">
+		<fs>
+			<f name="annotation_value">other</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n922"/>
+	<edge from="tx..n920" to="mg..n922" xml:id="e922"/>
+	<a as="mg" label="mg" ref="mg..n922" xml:id="922">
+		<fs>
+			<f name="annotation_value">child</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n926"/>
+	<edge from="tx..n924" to="mg..n926" xml:id="e926"/>
+	<a as="mg" label="mg" ref="mg..n926" xml:id="926">
+		<fs>
+			<f name="annotation_value">3S.POS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n930"/>
+	<edge from="tx..n928" to="mg..n930" xml:id="e930"/>
+	<a as="mg" label="mg" ref="mg..n930" xml:id="930">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n934"/>
+	<edge from="tx..n932" to="mg..n934" xml:id="e934"/>
+	<a as="mg" label="mg" ref="mg..n934" xml:id="934">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n936"/>
+	<edge from="tx..n932" to="mg..n936" xml:id="e936"/>
+	<a as="mg" label="mg" ref="mg..n936" xml:id="936">
+		<fs>
+			<f name="annotation_value">tell</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n938"/>
+	<edge from="tx..n932" to="mg..n938" xml:id="e938"/>
+	<a as="mg" label="mg" ref="mg..n938" xml:id="938">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n940"/>
+	<edge from="tx..n932" to="mg..n940" xml:id="e940"/>
+	<a as="mg" label="mg" ref="mg..n940" xml:id="940">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n944"/>
+	<edge from="tx..n942" to="mg..n944" xml:id="e944"/>
+	<a as="mg" label="mg" ref="mg..n944" xml:id="944">
+		<fs>
+			<f name="annotation_value">PREP</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n946"/>
+	<edge from="tx..n942" to="mg..n946" xml:id="e946"/>
+	<a as="mg" label="mg" ref="mg..n946" xml:id="946">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n950"/>
+	<edge from="tx..n948" to="mg..n950" xml:id="e950"/>
+	<a as="mg" label="mg" ref="mg..n950" xml:id="950">
+		<fs>
+			<f name="annotation_value">say</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n954"/>
+	<edge from="tx..n952" to="mg..n954" xml:id="e954"/>
+	<a as="mg" label="mg" ref="mg..n954" xml:id="954">
+		<fs>
+			<f name="annotation_value">oh</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n958"/>
+	<edge from="tx..n956" to="mg..n958" xml:id="e958"/>
+	<a as="mg" label="mg" ref="mg..n958" xml:id="958">
+		<fs>
+			<f name="annotation_value">2S.PS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n96"/>
+	<edge from="tx..n94" to="mg..n96" xml:id="e96"/>
+	<a as="mg" label="mg" ref="mg..n96" xml:id="96">
+		<fs>
+			<f name="annotation_value">3S.RS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n960"/>
+	<edge from="tx..n956" to="mg..n960" xml:id="e960"/>
+	<a as="mg" label="mg" ref="mg..n960" xml:id="960">
+		<fs>
+			<f name="annotation_value">PF</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n964"/>
+	<edge from="tx..n962" to="mg..n964" xml:id="e964"/>
+	<a as="mg" label="mg" ref="mg..n964" xml:id="964">
+		<fs>
+			<f name="annotation_value">make</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n968"/>
+	<edge from="tx..n966" to="mg..n968" xml:id="e968"/>
+	<a as="mg" label="mg" ref="mg..n968" xml:id="968">
+		<fs>
+			<f name="annotation_value">some</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n972"/>
+	<edge from="tx..n970" to="mg..n972" xml:id="e972"/>
+	<a as="mg" label="mg" ref="mg..n972" xml:id="972">
+		<fs>
+			<f name="annotation_value">food</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n976"/>
+	<edge from="tx..n974" to="mg..n976" xml:id="e976"/>
+	<a as="mg" label="mg" ref="mg..n976" xml:id="976">
+		<fs>
+			<f name="annotation_value">small</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n98"/>
+	<edge from="tx..n94" to="mg..n98" xml:id="e98"/>
+	<a as="mg" label="mg" ref="mg..n98" xml:id="98">
+		<fs>
+			<f name="annotation_value">have</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n980"/>
+	<edge from="tx..n978" to="mg..n980" xml:id="e980"/>
+	<a as="mg" label="mg" ref="mg..n980" xml:id="980">
+		<fs>
+			<f name="annotation_value">1D.incIRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n982"/>
+	<edge from="tx..n978" to="mg..n982" xml:id="e982"/>
+	<a as="mg" label="mg" ref="mg..n982" xml:id="982">
+		<fs>
+			<f name="annotation_value">eat</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n984"/>
+	<edge from="tx..n978" to="mg..n984" xml:id="e984"/>
+	<a as="mg" label="mg" ref="mg..n984" xml:id="984">
+		<fs>
+			<f name="annotation_value">-TS</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n986"/>
+	<edge from="tx..n978" to="mg..n986" xml:id="e986"/>
+	<a as="mg" label="mg" ref="mg..n986" xml:id="986">
+		<fs>
+			<f name="annotation_value">-3S.O</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n990"/>
+	<edge from="tx..n988" to="mg..n990" xml:id="e990"/>
+	<a as="mg" label="mg" ref="mg..n990" xml:id="990">
+		<fs>
+			<f name="annotation_value">and</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n994"/>
+	<edge from="tx..n992" to="mg..n994" xml:id="e994"/>
+	<a as="mg" label="mg" ref="mg..n994" xml:id="994">
+		<fs>
+			<f name="annotation_value">1D.incIRS=</f>
+		</fs>
+	</a>
+	<node xml:id="mg..n996"/>
+	<edge from="tx..n992" to="mg..n996" xml:id="e996"/>
+	<a as="mg" label="mg" ref="mg..n996" xml:id="996">
+		<fs>
+			<f name="annotation_value">PSP:IR</f>
+		</fs>
+	</a>
+</graph>

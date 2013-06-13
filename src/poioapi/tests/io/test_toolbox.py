@@ -51,7 +51,7 @@ class TestToolbox:
         root_tiers = self.parser.get_root_tiers()
         root_annotations = self.parser.get_annotations_for_tier(root_tiers[0])
 
-        assert len(root_annotations) == 70
+        assert len(root_annotations) == 2
 
         tier = poioapi.io.graf.Tier("idGroup")
         annoation_parent = root_annotations[0]

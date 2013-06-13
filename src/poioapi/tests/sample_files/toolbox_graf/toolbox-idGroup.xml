@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="idGroup" occurs="45"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="itmGroup"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="idGroup"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="idGroup..n013:001">
+		<link targets="idGroup..r013:001"/>
+	</node>
+	<region anchors="905.88 917.4" xml:id="idGroup..r013:001"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:001" xml:id="e013:001"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:001" xml:id="013:001">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:002">
+		<link targets="idGroup..r013:002"/>
+	</node>
+	<region anchors="917.74 923.38" xml:id="idGroup..r013:002"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:002" xml:id="e013:002"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:002" xml:id="013:002">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:003">
+		<link targets="idGroup..r013:003"/>
+	</node>
+	<region anchors="923.76 929.44" xml:id="idGroup..r013:003"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:003" xml:id="e013:003"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:003" xml:id="013:003">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:004">
+		<link targets="idGroup..r013:004"/>
+	</node>
+	<region anchors="929.86 940.62" xml:id="idGroup..r013:004"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:004" xml:id="e013:004"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:004" xml:id="013:004">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:005">
+		<link targets="idGroup..r013:005"/>
+	</node>
+	<region anchors="943.247 945.72" xml:id="idGroup..r013:005"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:005" xml:id="e013:005"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:005" xml:id="013:005">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:006">
+		<link targets="idGroup..r013:006"/>
+	</node>
+	<region anchors="945.72 951.923" xml:id="idGroup..r013:006"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:006" xml:id="e013:006"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:006" xml:id="013:006">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:007">
+		<link targets="idGroup..r013:007"/>
+	</node>
+	<region anchors="951.923 953.46" xml:id="idGroup..r013:007"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:007" xml:id="e013:007"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:007" xml:id="013:007">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:008">
+		<link targets="idGroup..r013:008"/>
+	</node>
+	<region anchors="954.42 964.44" xml:id="idGroup..r013:008"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:008" xml:id="e013:008"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:008" xml:id="013:008">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:009">
+		<link targets="idGroup..r013:009"/>
+	</node>
+	<region anchors="965.8199 972.62" xml:id="idGroup..r013:009"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:009" xml:id="e013:009"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:009" xml:id="013:009">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:010">
+		<link targets="idGroup..r013:010"/>
+	</node>
+	<region anchors="972.82 977.2201" xml:id="idGroup..r013:010"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:010" xml:id="e013:010"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:010" xml:id="013:010">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:011">
+		<link targets="idGroup..r013:011"/>
+	</node>
+	<region anchors="977.1799 986.42" xml:id="idGroup..r013:011"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:011" xml:id="e013:011"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:011" xml:id="013:011">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:012">
+		<link targets="idGroup..r013:012"/>
+	</node>
+	<region anchors="987.8 995.66" xml:id="idGroup..r013:012"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:012" xml:id="e013:012"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:012" xml:id="013:012">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:013">
+		<link targets="idGroup..r013:013"/>
+	</node>
+	<region anchors="995.66 1009.4801" xml:id="idGroup..r013:013"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:013" xml:id="e013:013"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:013" xml:id="013:013">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:014">
+		<link targets="idGroup..r013:014"/>
+	</node>
+	<region anchors="1009.6 1013.54" xml:id="idGroup..r013:014"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:014" xml:id="e013:014"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:014" xml:id="013:014">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:015">
+		<link targets="idGroup..r013:015"/>
+	</node>
+	<region anchors="1013.6599 1016.98" xml:id="idGroup..r013:015"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:015" xml:id="e013:015"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:015" xml:id="013:015">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:016">
+		<link targets="idGroup..r013:016"/>
+	</node>
+	<region anchors="1017.4599 1028.78" xml:id="idGroup..r013:016"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:016" xml:id="e013:016"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:016" xml:id="013:016">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:017">
+		<link targets="idGroup..r013:017"/>
+	</node>
+	<region anchors="1028.7799 1034.347" xml:id="idGroup..r013:017"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:017" xml:id="e013:017"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:017" xml:id="013:017">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:018">
+		<link targets="idGroup..r013:018"/>
+	</node>
+	<region anchors="1041.060 1034.347" xml:id="idGroup..r013:018"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:018" xml:id="e013:018"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:018" xml:id="013:018">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:019">
+		<link targets="idGroup..r013:019"/>
+	</node>
+	<region anchors="1054.68 1059.42" xml:id="idGroup..r013:019"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:019" xml:id="e013:019"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:019" xml:id="013:019">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:020">
+		<link targets="idGroup..r013:020"/>
+	</node>
+	<region anchors="1060.5799 1069.9" xml:id="idGroup..r013:020"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:020" xml:id="e013:020"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:020" xml:id="013:020">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:021">
+		<link targets="idGroup..r013:021"/>
+	</node>
+	<region anchors="1091.88 1095.493" xml:id="idGroup..r013:021"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:021" xml:id="e013:021"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:021" xml:id="013:021">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:022">
+		<link targets="idGroup..r013:022"/>
+	</node>
+	<region anchors="1099.84 1102.75" xml:id="idGroup..r013:022"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:022" xml:id="e013:022"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:022" xml:id="013:022">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:023">
+		<link targets="idGroup..r013:023"/>
+	</node>
+	<region anchors="1102.75 1109.752" xml:id="idGroup..r013:023"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:023" xml:id="e013:023"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:023" xml:id="013:023">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:024">
+		<link targets="idGroup..r013:024"/>
+	</node>
+	<region anchors="1109.752 1114.12" xml:id="idGroup..r013:024"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:024" xml:id="e013:024"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:024" xml:id="013:024">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:025">
+		<link targets="idGroup..r013:025"/>
+	</node>
+	<region anchors="1116.02 1125.26" xml:id="idGroup..r013:025"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:025" xml:id="e013:025"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:025" xml:id="013:025">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:026">
+		<link targets="idGroup..r013:026"/>
+	</node>
+	<region anchors="1116.02 1125.26" xml:id="idGroup..r013:026"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:026" xml:id="e013:026"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:026" xml:id="013:026">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:027">
+		<link targets="idGroup..r013:027"/>
+	</node>
+	<region anchors="1133.9799 1141.28" xml:id="idGroup..r013:027"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:027" xml:id="e013:027"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:027" xml:id="013:027">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:028">
+		<link targets="idGroup..r013:028"/>
+	</node>
+	<region anchors="1141.46 1146.5" xml:id="idGroup..r013:028"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:028" xml:id="e013:028"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:028" xml:id="013:028">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n013:029">
+		<link targets="idGroup..r013:029"/>
+	</node>
+	<region anchors="1147 1155.68" xml:id="idGroup..r013:029"/>
+	<edge from="itmGroup..n013" to="idGroup..n013:029" xml:id="e013:029"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n013:029" xml:id="013:029">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:001">
+		<link targets="idGroup..r014:001"/>
+	</node>
+	<region anchors="728.68 737.6201" xml:id="idGroup..r014:001"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:001" xml:id="e014:001"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:001" xml:id="014:001">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:002">
+		<link targets="idGroup..r014:002"/>
+	</node>
+	<region anchors="738.02 747.34" xml:id="idGroup..r014:002"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:002" xml:id="e014:002"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:002" xml:id="014:002">
+		<fs>
+			<f name="annotation_value">NT1-004-B 003 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:003">
+		<link targets="idGroup..r014:003"/>
+	</node>
+	<region anchors="747.9 758.38" xml:id="idGroup..r014:003"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:003" xml:id="e014:003"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:003" xml:id="014:003">
+		<fs>
+			<f name="annotation_value">NT1-004-B 004 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:004">
+		<link targets="idGroup..r014:004"/>
+	</node>
+	<region anchors="758.86 767.8" xml:id="idGroup..r014:004"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:004" xml:id="e014:004"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:004" xml:id="014:004">
+		<fs>
+			<f name="annotation_value">NT1-004-B 005 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:005">
+		<link targets="idGroup..r014:005"/>
+	</node>
+	<region anchors="768.2 771.4" xml:id="idGroup..r014:005"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:005" xml:id="e014:005"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:005" xml:id="014:005">
+		<fs>
+			<f name="annotation_value">NT1-004-B 006 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:006">
+		<link targets="idGroup..r014:006"/>
+	</node>
+	<region anchors="778.48 785.04" xml:id="idGroup..r014:006"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:006" xml:id="e014:006"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:006" xml:id="014:006">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:007">
+		<link targets="idGroup..r014:007"/>
+	</node>
+	<region anchors="785.7601 795.4" xml:id="idGroup..r014:007"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:007" xml:id="e014:007"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:007" xml:id="014:007">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:008">
+		<link targets="idGroup..r014:008"/>
+	</node>
+	<region anchors="795.64 803.7" xml:id="idGroup..r014:008"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:008" xml:id="e014:008"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:008" xml:id="014:008">
+		<fs>
+			<f name="annotation_value">NT1-004-B 009 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:009">
+		<link targets="idGroup..r014:009"/>
+	</node>
+	<region anchors="803.8401 812.0201" xml:id="idGroup..r014:009"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:009" xml:id="e014:009"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:009" xml:id="014:009">
+		<fs>
+			<f name="annotation_value">NT1-004-B  </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:010">
+		<link targets="idGroup..r014:010"/>
+	</node>
+	<region anchors="812.5401 819.6601" xml:id="idGroup..r014:010"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:010" xml:id="e014:010"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:010" xml:id="014:010">
+		<fs>
+			<f name="annotation_value">NT1-004-B 01 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:011">
+		<link targets="idGroup..r014:011"/>
+	</node>
+	<region anchors="820.72 831.06" xml:id="idGroup..r014:011"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:011" xml:id="e014:011"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:011" xml:id="014:011">
+		<fs>
+			<f name="annotation_value">NT1-004-B 012 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:012">
+		<link targets="idGroup..r014:012"/>
+	</node>
+	<region anchors="831.1001 838.54" xml:id="idGroup..r014:012"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:012" xml:id="e014:012"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:012" xml:id="014:012">
+		<fs>
+			<f name="annotation_value">NT1-004-B 013 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:013">
+		<link targets="idGroup..r014:013"/>
+	</node>
+	<region anchors="838.7 849.68" xml:id="idGroup..r014:013"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:013" xml:id="e014:013"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:013" xml:id="014:013">
+		<fs>
+			<f name="annotation_value">NT1-004-B 014 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:014">
+		<link targets="idGroup..r014:014"/>
+	</node>
+	<region anchors="849.64 857.4801" xml:id="idGroup..r014:014"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:014" xml:id="e014:014"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:014" xml:id="014:014">
+		<fs>
+			<f name="annotation_value">NT1-004-B 015 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:015">
+		<link targets="idGroup..r014:015"/>
+	</node>
+	<region anchors="857.62 865.26" xml:id="idGroup..r014:015"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:015" xml:id="e014:015"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:015" xml:id="014:015">
+		<fs>
+			<f name="annotation_value">NT1-004-B </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+	<node xml:id="idGroup..n014:016">
+		<link targets="idGroup..r014:016"/>
+	</node>
+	<region anchors="866.4201 879.86" xml:id="idGroup..r014:016"/>
+	<edge from="itmGroup..n014" to="idGroup..n014:016" xml:id="e014:016"/>
+	<a as="idGroup" label="idGroup" ref="idGroup..n014:016" xml:id="014:016">
+		<fs>
+			<f name="annotation_value">NT1-004-B 017 </f>
+			<f name="fg"/>
+		</fs>
+	</a>
+</graph>
