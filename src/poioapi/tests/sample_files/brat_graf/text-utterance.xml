@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="utterance" occurs="2"/>
+		</labelsDecl>
+		<dependencies/>
+		<annotationSpaces>
+			<annotationSpace as.id="utterance"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="utterance..na1">
+	    <link targets="utterance..ra1"/>
+	</node>
+	<region anchors="0 20" xml:id="utterance..ra1"/>
+	<a as="utterance" label="utterance" ref="utterance..na1" xml:id="a1">
+		<fs>
+			<f name="annotation_value">The first utterance.</f>
+		</fs>
+	</a>
+    <node xml:id="utterance..na2">
+	    <link targets="utterance..ra2"/>
+	</node>
+	<region anchors="21 33" xml:id="utterance..ra2"/>
+	<a as="utterance" label="utterance" ref="utterance..na2" xml:id="a2">
+		<fs>
+			<f name="annotation_value">Second line.</f>
+		</fs>
+	</a>
+</graph>

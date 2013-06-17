@@ -10,17 +10,21 @@
 """
 
 """
-import re
+
+import os
 
 
 class Writer():
-
-    def __init__(self, graf):
+    def __init__(self, graf, outputfile):
+        self.outputfile = outputfile
         self.graf = graf
 
-    def write(self, outputfile):
-        lines = []
-        fila = open(outputfile, "w", encoding="utf-8")
+    def write(self):
+        ann_file = open(self.outputfile+".ann", "w")
+        t = 1
+        r = 1
+        n = 1
+        relation_map = {}
 
         for node in self.graf.nodes:
             annotation = node.annotations._elements[0]
@@ -33,27 +37,41 @@ class Writer():
             else:
                 continue
 
-            # annotation_id = "T{0}".format(re.findall(r'\d+', node.id)[-1])
-            annotation_id = "T{0}".format(node.id)
-
             if node.links:
                 anchors = node.links[0][0].anchors
+                line = "T{0}	{1} {2} {3}	{4}\n".\
+                    format(t, annotation_type, anchors[0], anchors[1], annotation_value)
+                note = "#{0}	AnnotatorNotes T{1}	{2}\n".format(n, t, node)
+                relation_map[node.id] = "T{0}".format(t)
 
-                line = "{0}	{1} {2} {3}	{4}\n".format(annotation_id, annotation_type,
-                                                    anchors[0], anchors[1], annotation_value)
+                ann_file.write(line)
+                ann_file.write(note)
+                t += 1
+                n += 1
 
-                fila.write(line)
+        for node_id, text_bound in relation_map.items():
+            for edge in self.graf.edges:
+                if node_id == edge.from_node.id:
+                    line = "R{0}	To Arg1:{2} Arg2:{1}\n".\
+                        format(r, relation_map[edge.from_node.id],
+                               relation_map[edge.to_node.id])
+                    r += 1
+                    ann_file.write(line)
 
-        # for edge in self.graf.edges:
-        #     relation_type = edge.annotations._elements[0].label
-        #     relation_id = "R{0}".format(edge.id)
-        #     # relation_id = "R{0}".format(re.findall(r'\d+', annotation.id)[-1])
-        #     # arg1 = "T{0}".format(re.findall(r'\d+', edge.from_node.id)[-1])
-        #     # arg2 = "T{0}".format(re.findall(r'\d+', edge.to_node.id)[-1])
-        #     arg1 = "T{0}".format(edge.from_node.id)
-        #     arg2 = "T{0}".format(edge.to_node.id)
-        #     line = "{0}	{1} Arg1:{2} Arg2:{3}\n".format(relation_id, relation_type, arg1, arg2)
-        #
-        #     fila.write(line)
+        ann_file.close()
+        self.create_conf_file()
 
-        fila.close()
+    def create_conf_file(self):
+        basedirname = os.path.dirname(self.outputfile)
+
+        annotation_conf = open(basedirname+"/annotation.conf", "w")
+
+        annotation_conf.write("[entites]\n")
+
+        for entity in self.graf.header.annotation_spaces:
+            annotation_conf.write(entity+"\n")
+
+        annotation_conf.write("\n[relations]\nTo Arg1:<ENTITY>, Arg2:<ENTITY>"
+                              "\n\n[events]\n# none\n\n[attributes]\n# none")
+
+        annotation_conf.close()

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="clause_unit" occurs="111"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="utterance"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="clause_unit"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="clause_unit..na1">
+		<link targets="clause_unit..ra1"/>
+	</node>
+	<region anchors="0 9" xml:id="clause_unit..ra1"/>
+	<edge from="utterance..na1" to="clause_unit..na1" xml:id="ea8"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na1" xml:id="a8">
+		<fs>
+			<f name="annotation_value">The first</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na2">
+		<link targets="clause_unit..ra2"/>
+	</node>
+	<region anchors="10 20" xml:id="clause_unit..ra2"/>
+	<edge from="utterance..na1" to="clause_unit..na2" xml:id="ea9"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na2" xml:id="a9">
+		<fs>
+			<f name="annotation_value">utterance.</f>
+		</fs>
+	</a>
+	<node xml:id="clause_unit..na3">
+		<link targets="clause_unit..ra3"/>
+	</node>
+	<region anchors="21 33" xml:id="clause_unit..ra3"/>
+	<edge from="utterance..na2" to="clause_unit..na3" xml:id="ea10"/>
+	<a as="clause_unit" label="clause_unit" ref="clause_unit..na3" xml:id="a10">
+		<fs>
+			<f name="annotation_value">Second line.</f>
+		</fs>
+	</a>
+</graph>

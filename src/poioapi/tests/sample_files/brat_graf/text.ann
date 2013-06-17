@@ -1,0 +1,28 @@
+T1	word 21 27	Second
+#1	AnnotatorNotes T1	NodeID = word..na4
+T2	word 28 33	line.
+#2	AnnotatorNotes T2	NodeID = word..na5
+T3	clause_unit 0 9	The first
+#3	AnnotatorNotes T3	NodeID = clause_unit..na1
+T4	word 0 3	The
+#4	AnnotatorNotes T4	NodeID = word..na1
+T5	clause_unit 21 33	Second line.
+#5	AnnotatorNotes T5	NodeID = clause_unit..na3
+T6	clause_unit 10 20	utterance.
+#6	AnnotatorNotes T6	NodeID = clause_unit..na2
+T7	word 4 9	first
+#7	AnnotatorNotes T7	NodeID = word..na2
+T8	utterance 0 20	The first utterance.
+#8	AnnotatorNotes T8	NodeID = utterance..na1
+T9	utterance 21 33	Second line.
+#9	AnnotatorNotes T9	NodeID = utterance..na2
+T10	word 10 20	utterance.
+#10	AnnotatorNotes T10	NodeID = word..na3
+R1	To Arg1:T7 Arg2:T3
+R2	To Arg1:T4 Arg2:T3
+R3	To Arg1:T2 Arg2:T5
+R4	To Arg1:T1 Arg2:T5
+R5	To Arg1:T10 Arg2:T6
+R6	To Arg1:T6 Arg2:T8
+R7	To Arg1:T3 Arg2:T8
+R8	To Arg1:T5 Arg2:T9

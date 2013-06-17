@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentHeader creator="alopes" date.created="2013-06-17" docId="PoioAPI-599789" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<fileDesc>
+		<titleStmt>
+			<title>Pickle Example</title>
+		</titleStmt>
+		<sourceDesc/>
+	</fileDesc>
+	<profileDesc>
+		<primaryData f.id="text" loc="text.txt"/>
+		<annotations>
+			<annotation f.id="utterance" loc="text-utterance.xml" loctype="relative"/>
+			<annotation f.id="clause_unit" loc="text-clause_unit.xml" loctype="relative"/>
+			<annotation f.id="word" loc="text-word.xml" loctype="relative"/>
+		</annotations>
+	</profileDesc>
+</documentHeader>

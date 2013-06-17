@@ -7,10 +7,14 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+from __future__ import absolute_import
+
 import sys
 import getopt
 
 import poioapi.io.brat
+
+import graf
 
 
 def main(argv):
@@ -37,11 +41,12 @@ def main(argv):
         print('graf2brat.py -i <inputfile> -o <outputfile>')
         sys.exit()
 
-    graf = inputfile
+    parser = graf.io.GraphParser()
+    graph = parser.parse(inputfile)
 
-    brat = poioapi.io.brat.Writer(graf)
+    brat = poioapi.io.brat.Writer(graph, outputfile)
 
-    brat.write(outputfile)
+    brat.write()
 
     print('Finished')
 

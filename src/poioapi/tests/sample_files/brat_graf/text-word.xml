@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="word" occurs="5"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="clause_unit"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="word"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="word..na1">
+		<link targets="word..ra1"/>
+	</node>
+	<region anchors="0 3" xml:id="word..ra1"/>
+	<edge from="clause_unit..na1" to="word..na1" xml:id="ea3"/>
+	<a as="word" label="word" ref="word..na1" xml:id="a3">
+		<fs>
+			<f name="annotation_value">The</f>
+		</fs>
+	</a>
+	<node xml:id="word..na2">
+		<link targets="word..ra2"/>
+	</node>
+	<region anchors="4 9" xml:id="word..ra2"/>
+	<edge from="clause_unit..na1" to="word..na2" xml:id="ea4"/>
+	<a as="word" label="word" ref="word..na2" xml:id="a4">
+		<fs>
+			<f name="annotation_value">first</f>
+		</fs>
+	</a>
+		<node xml:id="word..na3">
+		<link targets="word..ra3"/>
+	</node>
+	<region anchors="10 20" xml:id="word..ra3"/>
+	<edge from="clause_unit..na2" to="word..na3" xml:id="ea5"/>
+	<a as="word" label="word" ref="word..na3" xml:id="a5">
+		<fs>
+			<f name="annotation_value">utterance.</f>
+		</fs>
+	</a>
+		<node xml:id="word..na4">
+		<link targets="word..ra4"/>
+	</node>
+	<region anchors="21 27" xml:id="word..ra4"/>
+	<edge from="clause_unit..na3" to="word..na4" xml:id="ea6"/>
+	<a as="word" label="word" ref="word..na4" xml:id="a6">
+		<fs>
+			<f name="annotation_value">Second</f>
+		</fs>
+	</a>
+		<node xml:id="word..na5">
+		<link targets="word..ra5"/>
+	</node>
+	<region anchors="28 33" xml:id="word..ra5"/>
+	<edge from="clause_unit..na3" to="word..na5" xml:id="ea7"/>
+	<a as="word" label="word" ref="word..na5" xml:id="a7">
+		<fs>
+			<f name="annotation_value">line.</f>
+		</fs>
+	</a>
+</graph>
