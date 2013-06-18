@@ -66,7 +66,7 @@ class Writer():
 
         annotation_conf = open(basedirname+"/annotation.conf", "w")
 
-        annotation_conf.write("[entites]\n")
+        annotation_conf.write("[entities]\n")
 
         for entity in self.graf.header.annotation_spaces:
             annotation_conf.write(entity+"\n")
