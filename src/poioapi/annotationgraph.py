@@ -28,6 +28,10 @@ from poioapi import data
 import graf
 
 class AnnotationGraph():
+    """This class stores annotation data as annotation graphs and makes it
+    accessible in tier hierarchies. It reads data from various file formats.
+
+    """
 
     def __init__(self, data_structure_type = None):
         if data_structure_type is None:
