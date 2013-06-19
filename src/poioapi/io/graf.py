@@ -17,6 +17,7 @@ from __future__ import absolute_import, unicode_literals
 
 import abc
 import os
+from sre_compile import _optimize_charset
 
 from xml.etree.ElementTree import tostring
 from xml.dom import minidom
@@ -426,6 +427,8 @@ class Writer():
                 annotation_space))
             out_graf.header.add_dependency(self._parent[tier_name])
 
+            out_graf = self._add_root_nodes(graf_graph, annotation_space, out_graf)
+
             renderer.render(out_graf)
 
             basename = os.path.basename(base_dir_name)
@@ -434,6 +437,13 @@ class Writer():
 
         standoffrenderer.render(self.standoffheader)
         self._generate_metafile(base_dir_name, meta_information)
+
+    def _add_root_nodes(self, graph, annotation_space, out_graf):
+        for root in graph.header.roots:
+            if annotation_space in root:
+                out_graf.header.roots.append(root)
+
+        return out_graf
 
     def _get_parents(self, tier_hierarchies):
         self._parent = {}
