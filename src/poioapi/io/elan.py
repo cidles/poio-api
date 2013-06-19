@@ -164,8 +164,8 @@ class Parser(poioapi.io.graf.BaseParser):
                     continue
             else:
                 for attribute in annotation.attrib:
-                    if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and\
-                       attribute != 'ANNOTATION_VALUE' and attribute != 'PREVIOUS_ANNOTATION':
+                    if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and \
+                                    attribute != 'ANNOTATION_VALUE' and attribute != 'PREVIOUS_ANNOTATION':
                         features[attribute] = annotation.attrib[attribute]
 
             annotations.append(poioapi.io.graf.Annotation(annotation_id, annotation_value, features))
@@ -249,7 +249,7 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         # TODO: For the last time_slot if it's empty should be take from the audio/video file.
-        # TODO: If there's no audio/video file the value should be -1.
+        # If there's no audio/video file the value should be -1.
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
@@ -375,8 +375,8 @@ class Parser(poioapi.io.graf.BaseParser):
                             other_child.attrib["TIME_VALUE"] = \
                                 self.time_order[other_child.attrib["TIME_SLOT_ID"]]
 
-                        if not str(child.text).isspace() or\
-                           child.text is not None:
+                        if not str(child.text).isspace() or \
+                                        child.text is not None:
                             other_child.text = child.text
 
         return meta_information
@@ -414,7 +414,7 @@ class Writer:
             for et in meta_information.findall("TIER"):
                 if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
                     for node in graf_graph.nodes:
-                        if tier == node.id.split(poioapi.io.graf.GRAFSEPARATOR+"na")[0]:
+                        if tier == node.id.split(poioapi.io.graf.GRAFSEPARATOR + "na")[0]:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
