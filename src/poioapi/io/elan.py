@@ -179,7 +179,7 @@ class Parser(poioapi.io.graf.BaseParser):
                               self.time_order[annotation.attrib['TIME_SLOT_REF2']]]
 
         if int(annotation_parent_regions[0]) <= int(annotation_regions[0]):
-            if int(annotation_regions[1]) <= int(annotation_parent_regions[1]):
+            if annotation_parent_regions[1] == "-1" or int(annotation_regions[1]) <= int(annotation_parent_regions[1]):
                 return True
 
         return False
@@ -249,15 +249,18 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         # TODO: For the last time_slot if it's empty should be take from the audio/video file.
+        # TODO: If there's no audio/video file the value should be -1.
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
 
-        for time in time_order:
+        for idx, time in enumerate(time_order):
             key = time.attrib['TIME_SLOT_ID']
 
             if 'TIME_VALUE' in time.attrib:
                 value = time.attrib['TIME_VALUE']
+            elif idx == len(time_order) - 1:
+                value = "-1"
             else:
                 value = None
 
@@ -474,6 +477,11 @@ class Writer:
         """
 
         file = open(outputfile, 'wb')
+        time = element_tree.find("TIME_ORDER")
+        for t in time:
+            if t.attrib["TIME_VALUE"] == "-1":
+                del t.attrib["TIME_VALUE"]
+
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
         file.close()
