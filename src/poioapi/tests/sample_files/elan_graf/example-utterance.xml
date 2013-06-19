@@ -8,6 +8,30 @@
 		<annotationSpaces>
 			<annotationSpace as.id="utterance"/>
 		</annotationSpaces>
+        <roots>
+			<root>utterance..K-Spch..na1</root>
+			<root>utterance..K-Spch..na2</root>
+			<root>utterance..K-Spch..na3</root>
+			<root>utterance..K-Spch..na4</root>
+			<root>utterance..K-Spch..na5</root>
+			<root>utterance..K-Spch..na6</root>
+			<root>utterance..K-Spch..na7</root>
+			<root>utterance..W-Spch..na8</root>
+			<root>utterance..W-Spch..na9</root>
+			<root>utterance..W-Spch..na10</root>
+			<root>utterance..W-Spch..na11</root>
+			<root>utterance..W-Spch..na12</root>
+			<root>utterance..W-Spch..na13</root>
+			<root>utterance..W-Spch..na14</root>
+			<root>utterance..W-Spch..na15</root>
+			<root>utterance..W-Spch..na16</root>
+			<root>utterance..W-Spch..na17</root>
+			<root>utterance..W-Spch..na18</root>
+			<root>utterance..W-Spch..na19</root>
+			<root>utterance..W-Spch..na20</root>
+			<root>utterance..W-Spch..na21</root>
+			<root>utterance..W-Spch..na22</root>
+		</roots>
 	</graphHeader>
 	<node xml:id="utterance..W-Spch..na10">
 		<link targets="utterance..W-Spch..ra10"/>
