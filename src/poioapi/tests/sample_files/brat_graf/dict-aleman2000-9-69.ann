@@ -1,0 +1,2224 @@
+T1	head 0 6	áriri
+#1	AnnotatorNotes T1	NodeID = aleman2000/9/7/annotation/2
+T2	Desano 0 6	áriri
+#2	AnnotatorNotes T2	NodeID = aleman2000/9/7/annotation/2
+T3	des 0 6	áriri
+#3	AnnotatorNotes T3	NodeID = aleman2000/9/7/annotation/2
+T4	translation 12 17	venir
+#4	AnnotatorNotes T4	NodeID = aleman2000/9/7/annotation/4
+T5	Español 12 17	venir
+#5	AnnotatorNotes T5	NodeID = aleman2000/9/7/annotation/4
+T6	spa 12 17	venir
+#6	AnnotatorNotes T6	NodeID = aleman2000/9/7/annotation/4
+T7	pos 7 11	v.i.
+#7	AnnotatorNotes T7	NodeID = aleman2000/9/7/annotation/8
+T8	translation 137 142	decir
+#8	AnnotatorNotes T8	NodeID = aleman2000/11/2/annotation/2
+T9	Español 137 142	decir
+#9	AnnotatorNotes T9	NodeID = aleman2000/11/2/annotation/2
+T10	spa 137 142	decir
+#10	AnnotatorNotes T10	NodeID = aleman2000/11/2/annotation/2
+T11	head 119 126	ãrĩri
+#11	AnnotatorNotes T11	NodeID = aleman2000/11/2/annotation/4
+T12	Desano 119 126	ãrĩri
+#12	AnnotatorNotes T12	NodeID = aleman2000/11/2/annotation/4
+T13	des 119 126	ãrĩri
+#13	AnnotatorNotes T13	NodeID = aleman2000/11/2/annotation/4
+T14	pos 127 136	v.i./v.t.
+#14	AnnotatorNotes T14	NodeID = aleman2000/11/2/annotation/7
+T15	translation 261 266	nadar
+#15	AnnotatorNotes T15	NodeID = aleman2000/11/7/annotation/2
+T16	Español 261 266	nadar
+#16	AnnotatorNotes T16	NodeID = aleman2000/11/7/annotation/2
+T17	spa 261 266	nadar
+#17	AnnotatorNotes T17	NodeID = aleman2000/11/7/annotation/2
+T18	pos 256 260	v.i.
+#18	AnnotatorNotes T18	NodeID = aleman2000/11/7/annotation/3
+T19	head 250 255	baari
+#19	AnnotatorNotes T19	NodeID = aleman2000/11/7/annotation/7
+T20	Desano 250 255	baari
+#20	AnnotatorNotes T20	NodeID = aleman2000/11/7/annotation/7
+T21	des 250 255	baari
+#21	AnnotatorNotes T21	NodeID = aleman2000/11/7/annotation/7
+T22	pos 343 349	an.pl.
+#22	AnnotatorNotes T22	NodeID = aleman2000/11/10/annotation/1
+T23	translation 358 386	hartos (personas o animales)
+#23	AnnotatorNotes T23	NodeID = aleman2000/11/10/annotation/2
+T24	Español 358 386	hartos (personas o animales)
+#24	AnnotatorNotes T24	NodeID = aleman2000/11/10/annotation/2
+T25	spa 358 386	hartos (personas o animales)
+#25	AnnotatorNotes T25	NodeID = aleman2000/11/10/annotation/2
+T26	translation 350 356	muchos
+#26	AnnotatorNotes T26	NodeID = aleman2000/11/10/annotation/7
+T27	Español 350 356	muchos
+#27	AnnotatorNotes T27	NodeID = aleman2000/11/10/annotation/7
+T28	spa 350 356	muchos
+#28	AnnotatorNotes T28	NodeID = aleman2000/11/10/annotation/7
+T29	head 335 342	bajarã
+#29	AnnotatorNotes T29	NodeID = aleman2000/11/10/annotation/9
+T30	Desano 335 342	bajarã
+#30	AnnotatorNotes T30	NodeID = aleman2000/11/10/annotation/9
+T31	des 335 342	bajarã
+#31	AnnotatorNotes T31	NodeID = aleman2000/11/10/annotation/9
+T32	translation 480 489	hincharse
+#32	AnnotatorNotes T32	NodeID = aleman2000/12/13/annotation/0
+T33	Español 480 489	hincharse
+#33	AnnotatorNotes T33	NodeID = aleman2000/12/13/annotation/0
+T34	spa 480 489	hincharse
+#34	AnnotatorNotes T34	NodeID = aleman2000/12/13/annotation/0
+T35	pos 475 479	v.i.
+#35	AnnotatorNotes T35	NodeID = aleman2000/12/13/annotation/4
+T36	head 467 474	bijirí
+#36	AnnotatorNotes T36	NodeID = aleman2000/12/13/annotation/8
+T37	Desano 467 474	bijirí
+#37	AnnotatorNotes T37	NodeID = aleman2000/12/13/annotation/8
+T38	des 467 474	bijirí
+#38	AnnotatorNotes T38	NodeID = aleman2000/12/13/annotation/8
+T39	head 584 590	birari
+#39	AnnotatorNotes T39	NodeID = aleman2000/12/16/annotation/3
+T40	Desano 584 590	birari
+#40	AnnotatorNotes T40	NodeID = aleman2000/12/16/annotation/3
+T41	des 584 590	birari
+#41	AnnotatorNotes T41	NodeID = aleman2000/12/16/annotation/3
+T42	translation 596 601	jugar
+#42	AnnotatorNotes T42	NodeID = aleman2000/12/16/annotation/5
+T43	Español 596 601	jugar
+#43	AnnotatorNotes T43	NodeID = aleman2000/12/16/annotation/5
+T44	spa 596 601	jugar
+#44	AnnotatorNotes T44	NodeID = aleman2000/12/16/annotation/5
+T45	pos 591 595	v.i.
+#45	AnnotatorNotes T45	NodeID = aleman2000/12/16/annotation/8
+T46	pos 689 693	v.i.
+#46	AnnotatorNotes T46	NodeID = aleman2000/12/18/annotation/0
+T47	head 683 688	boari
+#47	AnnotatorNotes T47	NodeID = aleman2000/12/18/annotation/3
+T48	Desano 683 688	boari
+#48	AnnotatorNotes T48	NodeID = aleman2000/12/18/annotation/3
+T49	des 683 688	boari
+#49	AnnotatorNotes T49	NodeID = aleman2000/12/18/annotation/3
+T50	translation 694 702	podrirse
+#50	AnnotatorNotes T50	NodeID = aleman2000/12/18/annotation/7
+T51	Español 694 702	podrirse
+#51	AnnotatorNotes T51	NodeID = aleman2000/12/18/annotation/7
+T52	spa 694 702	podrirse
+#52	AnnotatorNotes T52	NodeID = aleman2000/12/18/annotation/7
+T53	translation 824 829	viejo
+#53	AnnotatorNotes T53	NodeID = aleman2000/16/2/annotation/2
+T54	Español 824 829	viejo
+#54	AnnotatorNotes T54	NodeID = aleman2000/16/2/annotation/2
+T55	spa 824 829	viejo
+#55	AnnotatorNotes T55	NodeID = aleman2000/16/2/annotation/2
+T56	pos 817 823	m., f.
+#56	AnnotatorNotes T56	NodeID = aleman2000/16/2/annotation/4
+T57	head 812 816	bʉro
+#57	AnnotatorNotes T57	NodeID = aleman2000/16/2/annotation/7
+T58	Desano 812 816	bʉro
+#58	AnnotatorNotes T58	NodeID = aleman2000/16/2/annotation/7
+T59	des 812 816	bʉro
+#59	AnnotatorNotes T59	NodeID = aleman2000/16/2/annotation/7
+T60	head 806 810	bʉgʉ
+#60	AnnotatorNotes T60	NodeID = aleman2000/16/2/annotation/8
+T61	Desano 806 810	bʉgʉ
+#61	AnnotatorNotes T61	NodeID = aleman2000/16/2/annotation/8
+T62	des 806 810	bʉgʉ
+#62	AnnotatorNotes T62	NodeID = aleman2000/16/2/annotation/8
+T63	translation 831 855	vieja (persona o animal)
+#63	AnnotatorNotes T63	NodeID = aleman2000/16/2/annotation/11
+T64	Español 831 855	vieja (persona o animal)
+#64	AnnotatorNotes T64	NodeID = aleman2000/16/2/annotation/11
+T65	spa 831 855	vieja (persona o animal)
+#65	AnnotatorNotes T65	NodeID = aleman2000/16/2/annotation/11
+T66	pos 924 928	v.i.
+#66	AnnotatorNotes T66	NodeID = aleman2000/17/9/annotation/1
+T67	translation 929 935	dormir
+#67	AnnotatorNotes T67	NodeID = aleman2000/17/9/annotation/3
+T68	Español 929 935	dormir
+#68	AnnotatorNotes T68	NodeID = aleman2000/17/9/annotation/3
+T69	spa 929 935	dormir
+#69	AnnotatorNotes T69	NodeID = aleman2000/17/9/annotation/3
+T70	head 915 923	cãrĩri
+#70	AnnotatorNotes T70	NodeID = aleman2000/17/9/annotation/7
+T71	Desano 915 923	cãrĩri
+#71	AnnotatorNotes T71	NodeID = aleman2000/17/9/annotation/7
+T72	des 915 923	cãrĩri
+#72	AnnotatorNotes T72	NodeID = aleman2000/17/9/annotation/7
+T73	translation 1013 1072	manija (agarrador de alambre que tienen las ollas y baldes)
+#73	AnnotatorNotes T73	NodeID = aleman2000/17/10/annotation/0
+T74	Español 1013 1072	manija (agarrador de alambre que tienen las ollas y baldes)
+#74	AnnotatorNotes T74	NodeID = aleman2000/17/10/annotation/0
+T75	spa 1013 1072	manija (agarrador de alambre que tienen las ollas y baldes)
+#75	AnnotatorNotes T75	NodeID = aleman2000/17/10/annotation/0
+T76	translation 1138 1204	carguero (correa para llevar canastas u otras cosas en la espalda)
+#76	AnnotatorNotes T76	NodeID = aleman2000/17/10/annotation/4
+T77	Español 1138 1204	carguero (correa para llevar canastas u otras cosas en la espalda)
+#77	AnnotatorNotes T77	NodeID = aleman2000/17/10/annotation/4
+T78	spa 1138 1204	carguero (correa para llevar canastas u otras cosas en la espalda)
+#78	AnnotatorNotes T78	NodeID = aleman2000/17/10/annotation/4
+T79	pos 1004 1009	inan.
+#79	AnnotatorNotes T79	NodeID = aleman2000/17/10/annotation/7
+T80	head 995 1003	cãrõda
+#80	AnnotatorNotes T80	NodeID = aleman2000/17/10/annotation/9
+T81	Desano 995 1003	cãrõda
+#81	AnnotatorNotes T81	NodeID = aleman2000/17/10/annotation/9
+T82	des 995 1003	cãrõda
+#82	AnnotatorNotes T82	NodeID = aleman2000/17/10/annotation/9
+T83	translation 1129 1136	cuerda
+#83	AnnotatorNotes T83	NodeID = aleman2000/17/10/annotation/14
+T84	Español 1129 1136	cuerda
+#84	AnnotatorNotes T84	NodeID = aleman2000/17/10/annotation/14
+T85	spa 1129 1136	cuerda
+#85	AnnotatorNotes T85	NodeID = aleman2000/17/10/annotation/14
+T86	translation 1292 1297	lavar
+#86	AnnotatorNotes T86	NodeID = aleman2000/17/13/annotation/2
+T87	Español 1292 1297	lavar
+#87	AnnotatorNotes T87	NodeID = aleman2000/17/13/annotation/2
+T88	spa 1292 1297	lavar
+#88	AnnotatorNotes T88	NodeID = aleman2000/17/13/annotation/2
+T89	pos 1278 1282	v.t.
+#89	AnnotatorNotes T89	NodeID = aleman2000/17/13/annotation/4
+T90	head 1272 1277	coeri
+#90	AnnotatorNotes T90	NodeID = aleman2000/17/13/annotation/8
+T91	Desano 1272 1277	coeri
+#91	AnnotatorNotes T91	NodeID = aleman2000/17/13/annotation/8
+T92	des 1272 1277	coeri
+#92	AnnotatorNotes T92	NodeID = aleman2000/17/13/annotation/8
+T93	translation 1283 1290	limpiar
+#93	AnnotatorNotes T93	NodeID = aleman2000/17/13/annotation/9
+T94	Español 1283 1290	limpiar
+#94	AnnotatorNotes T94	NodeID = aleman2000/17/13/annotation/9
+T95	spa 1283 1290	limpiar
+#95	AnnotatorNotes T95	NodeID = aleman2000/17/13/annotation/9
+T96	pos 1368 1372	adv.
+#96	AnnotatorNotes T96	NodeID = aleman2000/17/16/annotation/1
+T97	head 1356 1360	cupʉ
+#97	AnnotatorNotes T97	NodeID = aleman2000/17/16/annotation/4
+T98	Desano 1356 1360	cupʉ
+#98	AnnotatorNotes T98	NodeID = aleman2000/17/16/annotation/4
+T99	des 1356 1360	cupʉ
+#99	AnnotatorNotes T99	NodeID = aleman2000/17/16/annotation/4
+T100	translation 1373 1382	izquierda
+#100	AnnotatorNotes T100	NodeID = aleman2000/17/16/annotation/7
+T101	Español 1373 1382	izquierda
+#101	AnnotatorNotes T101	NodeID = aleman2000/17/16/annotation/7
+T102	spa 1373 1382	izquierda
+#102	AnnotatorNotes T102	NodeID = aleman2000/17/16/annotation/7
+T103	head 1350 1354	copʉ
+#103	AnnotatorNotes T103	NodeID = aleman2000/17/16/annotation/11
+T104	Desano 1350 1354	copʉ
+#104	AnnotatorNotes T104	NodeID = aleman2000/17/16/annotation/11
+T105	des 1350 1354	copʉ
+#105	AnnotatorNotes T105	NodeID = aleman2000/17/16/annotation/11
+T106	translation 1501 1506	pecho
+#106	AnnotatorNotes T106	NodeID = aleman2000/18/3/annotation/2
+T107	Español 1501 1506	pecho
+#107	AnnotatorNotes T107	NodeID = aleman2000/18/3/annotation/2
+T108	spa 1501 1506	pecho
+#108	AnnotatorNotes T108	NodeID = aleman2000/18/3/annotation/2
+T109	pos 1495 1500	inan.
+#109	AnnotatorNotes T109	NodeID = aleman2000/18/3/annotation/4
+T110	head 1485 1494	coretihbi
+#110	AnnotatorNotes T110	NodeID = aleman2000/18/3/annotation/5
+T111	Desano 1485 1494	coretihbi
+#111	AnnotatorNotes T111	NodeID = aleman2000/18/3/annotation/5
+T112	des 1485 1494	coretihbi
+#112	AnnotatorNotes T112	NodeID = aleman2000/18/3/annotation/5
+T113	head 1474 1483	coretíbi
+#113	AnnotatorNotes T113	NodeID = aleman2000/18/3/annotation/9
+T114	Desano 1474 1483	coretíbi
+#114	AnnotatorNotes T114	NodeID = aleman2000/18/3/annotation/9
+T115	des 1474 1483	coretíbi
+#115	AnnotatorNotes T115	NodeID = aleman2000/18/3/annotation/9
+T116	translation 1613 1624	descortezar
+#116	AnnotatorNotes T116	NodeID = aleman2000/18/4/annotation/1
+T117	Español 1613 1624	descortezar
+#117	AnnotatorNotes T117	NodeID = aleman2000/18/4/annotation/1
+T118	spa 1613 1624	descortezar
+#118	AnnotatorNotes T118	NodeID = aleman2000/18/4/annotation/1
+T119	pos 1608 1612	v.t.
+#119	AnnotatorNotes T119	NodeID = aleman2000/18/4/annotation/4
+T120	head 1600 1607	córori
+#120	AnnotatorNotes T120	NodeID = aleman2000/18/4/annotation/7
+T121	Desano 1600 1607	córori
+#121	AnnotatorNotes T121	NodeID = aleman2000/18/4/annotation/7
+T122	des 1600 1607	córori
+#122	AnnotatorNotes T122	NodeID = aleman2000/18/4/annotation/7
+T123	translation 1626 1631	pelar
+#123	AnnotatorNotes T123	NodeID = aleman2000/18/4/annotation/11
+T124	Español 1626 1631	pelar
+#124	AnnotatorNotes T124	NodeID = aleman2000/18/4/annotation/11
+T125	spa 1626 1631	pelar
+#125	AnnotatorNotes T125	NodeID = aleman2000/18/4/annotation/11
+T126	pos 1708 1713	inan.
+#126	AnnotatorNotes T126	NodeID = aleman2000/18/5/annotation/0
+T127	translation 1720 1727	semilla
+#127	AnnotatorNotes T127	NodeID = aleman2000/18/5/annotation/3
+T128	Español 1720 1727	semilla
+#128	AnnotatorNotes T128	NodeID = aleman2000/18/5/annotation/3
+T129	spa 1720 1727	semilla
+#129	AnnotatorNotes T129	NodeID = aleman2000/18/5/annotation/3
+T130	head 1703 1707	coye
+#130	AnnotatorNotes T130	NodeID = aleman2000/18/5/annotation/6
+T131	Desano 1703 1707	coye
+#131	AnnotatorNotes T131	NodeID = aleman2000/18/5/annotation/6
+T132	des 1703 1707	coye
+#132	AnnotatorNotes T132	NodeID = aleman2000/18/5/annotation/6
+T133	translation 1714 1718	pepa
+#133	AnnotatorNotes T133	NodeID = aleman2000/18/5/annotation/11
+T134	Español 1714 1718	pepa
+#134	AnnotatorNotes T134	NodeID = aleman2000/18/5/annotation/11
+T135	spa 1714 1718	pepa
+#135	AnnotatorNotes T135	NodeID = aleman2000/18/5/annotation/11
+T136	translation 1826 1832	pasear
+#136	AnnotatorNotes T136	NodeID = aleman2000/18/13/annotation/0
+T137	Español 1826 1832	pasear
+#137	AnnotatorNotes T137	NodeID = aleman2000/18/13/annotation/0
+T138	spa 1826 1832	pasear
+#138	AnnotatorNotes T138	NodeID = aleman2000/18/13/annotation/0
+T139	head 1805 1811	curiri
+#139	AnnotatorNotes T139	NodeID = aleman2000/18/13/annotation/4
+T140	Desano 1805 1811	curiri
+#140	AnnotatorNotes T140	NodeID = aleman2000/18/13/annotation/4
+T141	des 1805 1811	curiri
+#141	AnnotatorNotes T141	NodeID = aleman2000/18/13/annotation/4
+T142	translation 1817 1824	caminar
+#142	AnnotatorNotes T142	NodeID = aleman2000/18/13/annotation/9
+T143	Español 1817 1824	caminar
+#143	AnnotatorNotes T143	NodeID = aleman2000/18/13/annotation/9
+T144	spa 1817 1824	caminar
+#144	AnnotatorNotes T144	NodeID = aleman2000/18/13/annotation/9
+T145	pos 1812 1816	v.i.
+#145	AnnotatorNotes T145	NodeID = aleman2000/18/13/annotation/11
+T146	translation 1954 1959	cacho
+#146	AnnotatorNotes T146	NodeID = aleman2000/18/14/annotation/0
+T147	Español 1954 1959	cacho
+#147	AnnotatorNotes T147	NodeID = aleman2000/18/14/annotation/0
+T148	spa 1954 1959	cacho
+#148	AnnotatorNotes T148	NodeID = aleman2000/18/14/annotation/0
+T149	pos 1940 1945	inan.
+#149	AnnotatorNotes T149	NodeID = aleman2000/18/14/annotation/4
+T150	head 1933 1939	cusaro
+#150	AnnotatorNotes T150	NodeID = aleman2000/18/14/annotation/7
+T151	Desano 1933 1939	cusaro
+#151	AnnotatorNotes T151	NodeID = aleman2000/18/14/annotation/7
+T152	des 1933 1939	cusaro
+#152	AnnotatorNotes T152	NodeID = aleman2000/18/14/annotation/7
+T153	translation 1946 1952	cuerno
+#153	AnnotatorNotes T153	NodeID = aleman2000/18/14/annotation/10
+T154	Español 1946 1952	cuerno
+#154	AnnotatorNotes T154	NodeID = aleman2000/18/14/annotation/10
+T155	spa 1946 1952	cuerno
+#155	AnnotatorNotes T155	NodeID = aleman2000/18/14/annotation/10
+T156	pos 2079 2083	v.t.
+#156	AnnotatorNotes T156	NodeID = aleman2000/19/2/annotation/0
+T157	translation 2084 2090	morder
+#157	AnnotatorNotes T157	NodeID = aleman2000/19/2/annotation/2
+T158	Español 2084 2090	morder
+#158	AnnotatorNotes T158	NodeID = aleman2000/19/2/annotation/2
+T159	spa 2084 2090	morder
+#159	AnnotatorNotes T159	NodeID = aleman2000/19/2/annotation/2
+T160	head 2070 2078	cũrĩri
+#160	AnnotatorNotes T160	NodeID = aleman2000/19/2/annotation/6
+T161	Desano 2070 2078	cũrĩri
+#161	AnnotatorNotes T161	NodeID = aleman2000/19/2/annotation/6
+T162	des 2070 2078	cũrĩri
+#162	AnnotatorNotes T162	NodeID = aleman2000/19/2/annotation/6
+T163	translation 2171 2176	tirar
+#163	AnnotatorNotes T163	NodeID = aleman2000/19/8/annotation/2
+T164	Español 2171 2176	tirar
+#164	AnnotatorNotes T164	NodeID = aleman2000/19/8/annotation/2
+T165	spa 2171 2176	tirar
+#165	AnnotatorNotes T165	NodeID = aleman2000/19/8/annotation/2
+T166	pos 2163 2167	v.t.
+#166	AnnotatorNotes T166	NodeID = aleman2000/19/8/annotation/4
+T167	translation 2304 2309	pilar
+#167	AnnotatorNotes T167	NodeID = aleman2000/19/8/annotation/6
+T168	Español 2304 2309	pilar
+#168	AnnotatorNotes T168	NodeID = aleman2000/19/8/annotation/6
+T169	spa 2304 2309	pilar
+#169	AnnotatorNotes T169	NodeID = aleman2000/19/8/annotation/6
+T170	head 2157 2162	deari
+#170	AnnotatorNotes T170	NodeID = aleman2000/19/8/annotation/9
+T171	Desano 2157 2162	deari
+#171	AnnotatorNotes T171	NodeID = aleman2000/19/8/annotation/9
+T172	des 2157 2162	deari
+#172	AnnotatorNotes T172	NodeID = aleman2000/19/8/annotation/9
+T173	pos 2316 2325	s. de. m.
+#173	AnnotatorNotes T173	NodeID = aleman2000/19/10/annotation/0
+T174	head 2311 2315	deco
+#174	AnnotatorNotes T174	NodeID = aleman2000/19/10/annotation/4
+T175	Desano 2311 2315	deco
+#175	AnnotatorNotes T175	NodeID = aleman2000/19/10/annotation/4
+T176	des 2311 2315	deco
+#176	AnnotatorNotes T176	NodeID = aleman2000/19/10/annotation/4
+T177	translation 2326 2330	agua
+#177	AnnotatorNotes T177	NodeID = aleman2000/19/10/annotation/8
+T178	Español 2326 2330	agua
+#178	AnnotatorNotes T178	NodeID = aleman2000/19/10/annotation/8
+T179	spa 2326 2330	agua
+#179	AnnotatorNotes T179	NodeID = aleman2000/19/10/annotation/8
+T180	pos 2446 2451	inan.
+#180	AnnotatorNotes T180	NodeID = aleman2000/19/12/annotation/0
+T181	head 2433 2441	decocuru
+#181	AnnotatorNotes T181	NodeID = aleman2000/19/12/annotation/2
+T182	Desano 2433 2441	decocuru
+#182	AnnotatorNotes T182	NodeID = aleman2000/19/12/annotation/2
+T183	des 2433 2441	decocuru
+#183	AnnotatorNotes T183	NodeID = aleman2000/19/12/annotation/2
+T184	translation 2452 2457	nubes
+#184	AnnotatorNotes T184	NodeID = aleman2000/19/12/annotation/8
+T185	Español 2452 2457	nubes
+#185	AnnotatorNotes T185	NodeID = aleman2000/19/12/annotation/8
+T186	spa 2452 2457	nubes
+#186	AnnotatorNotes T186	NodeID = aleman2000/19/12/annotation/8
+T187	head 2423 2431	decoturi
+#187	AnnotatorNotes T187	NodeID = aleman2000/19/12/annotation/9
+T188	Desano 2423 2431	decoturi
+#188	AnnotatorNotes T188	NodeID = aleman2000/19/12/annotation/9
+T189	des 2423 2431	decoturi
+#189	AnnotatorNotes T189	NodeID = aleman2000/19/12/annotation/9
+T190	pos 2580 2589	s. de. m.
+#190	AnnotatorNotes T190	NodeID = aleman2000/19/16/annotation/1
+T191	translation 2590 2596	sangre
+#191	AnnotatorNotes T191	NodeID = aleman2000/19/16/annotation/2
+T192	Español 2590 2596	sangre
+#192	AnnotatorNotes T192	NodeID = aleman2000/19/16/annotation/2
+T193	spa 2590 2596	sangre
+#193	AnnotatorNotes T193	NodeID = aleman2000/19/16/annotation/2
+T194	head 2577 2579	di
+#194	AnnotatorNotes T194	NodeID = aleman2000/19/16/annotation/6
+T195	Desano 2577 2579	di
+#195	AnnotatorNotes T195	NodeID = aleman2000/19/16/annotation/6
+T196	des 2577 2579	di
+#196	AnnotatorNotes T196	NodeID = aleman2000/19/16/annotation/6
+T197	translation 2697 2704	derecho
+#197	AnnotatorNotes T197	NodeID = aleman2000/21/5/annotation/0
+T198	Español 2697 2704	derecho
+#198	AnnotatorNotes T198	NodeID = aleman2000/21/5/annotation/0
+T199	spa 2697 2704	derecho
+#199	AnnotatorNotes T199	NodeID = aleman2000/21/5/annotation/0
+T200	pos 2682 2686	adv.
+#200	AnnotatorNotes T200	NodeID = aleman2000/21/5/annotation/4
+T201	head 2676 2681	diaye
+#201	AnnotatorNotes T201	NodeID = aleman2000/21/5/annotation/7
+T202	Desano 2676 2681	diaye
+#202	AnnotatorNotes T202	NodeID = aleman2000/21/5/annotation/7
+T203	des 2676 2681	diaye
+#203	AnnotatorNotes T203	NodeID = aleman2000/21/5/annotation/7
+T204	translation 2706 2712	verdad
+#204	AnnotatorNotes T204	NodeID = aleman2000/21/5/annotation/11
+T205	Español 2706 2712	verdad
+#205	AnnotatorNotes T205	NodeID = aleman2000/21/5/annotation/11
+T206	spa 2706 2712	verdad
+#206	AnnotatorNotes T206	NodeID = aleman2000/21/5/annotation/11
+T207	translation 2687 2695	correcto
+#207	AnnotatorNotes T207	NodeID = aleman2000/21/5/annotation/14
+T208	Español 2687 2695	correcto
+#208	AnnotatorNotes T208	NodeID = aleman2000/21/5/annotation/14
+T209	spa 2687 2695	correcto
+#209	AnnotatorNotes T209	NodeID = aleman2000/21/5/annotation/14
+T210	translation 2771 2776	perro
+#210	AnnotatorNotes T210	NodeID = aleman2000/21/6/annotation/2
+T211	Español 2771 2776	perro
+#211	AnnotatorNotes T211	NodeID = aleman2000/21/6/annotation/2
+T212	spa 2771 2776	perro
+#212	AnnotatorNotes T212	NodeID = aleman2000/21/6/annotation/2
+T213	pos 2768 2770	m.
+#213	AnnotatorNotes T213	NodeID = aleman2000/21/6/annotation/4
+T214	head 2762 2767	diaye
+#214	AnnotatorNotes T214	NodeID = aleman2000/21/6/annotation/8
+T215	Desano 2762 2767	diaye
+#215	AnnotatorNotes T215	NodeID = aleman2000/21/6/annotation/8
+T216	des 2762 2767	diaye
+#216	AnnotatorNotes T216	NodeID = aleman2000/21/6/annotation/8
+T217	pos 2862 2864	m.
+#217	AnnotatorNotes T217	NodeID = aleman2000/22/1/annotation/1
+T218	translation 2865 2871	piojos
+#218	AnnotatorNotes T218	NodeID = aleman2000/22/1/annotation/2
+T219	Español 2865 2871	piojos
+#219	AnnotatorNotes T219	NodeID = aleman2000/22/1/annotation/2
+T220	spa 2865 2871	piojos
+#220	AnnotatorNotes T220	NodeID = aleman2000/22/1/annotation/2
+T221	head 2852 2861	dipumʉrã
+#221	AnnotatorNotes T221	NodeID = aleman2000/22/1/annotation/6
+T222	Desano 2852 2861	dipumʉrã
+#222	AnnotatorNotes T222	NodeID = aleman2000/22/1/annotation/6
+T223	des 2852 2861	dipumʉrã
+#223	AnnotatorNotes T223	NodeID = aleman2000/22/1/annotation/6
+T224	pos 2977 2982	inan.
+#224	AnnotatorNotes T224	NodeID = aleman2000/22/2/annotation/1
+T225	head 2970 2976	dipuru
+#225	AnnotatorNotes T225	NodeID = aleman2000/22/2/annotation/2
+T226	Desano 2970 2976	dipuru
+#226	AnnotatorNotes T226	NodeID = aleman2000/22/2/annotation/2
+T227	des 2970 2976	dipuru
+#227	AnnotatorNotes T227	NodeID = aleman2000/22/2/annotation/2
+T228	translation 2983 2989	cabeza
+#228	AnnotatorNotes T228	NodeID = aleman2000/22/2/annotation/8
+T229	Español 2983 2989	cabeza
+#229	AnnotatorNotes T229	NodeID = aleman2000/22/2/annotation/8
+T230	spa 2983 2989	cabeza
+#230	AnnotatorNotes T230	NodeID = aleman2000/22/2/annotation/8
+T231	pos 2999 3003	v.t.
+#231	AnnotatorNotes T231	NodeID = aleman2000/22/6/annotation/0
+T232	translation 3010 3017	amarrar
+#232	AnnotatorNotes T232	NodeID = aleman2000/22/6/annotation/3
+T233	Español 3010 3017	amarrar
+#233	AnnotatorNotes T233	NodeID = aleman2000/22/6/annotation/3
+T234	spa 3010 3017	amarrar
+#234	AnnotatorNotes T234	NodeID = aleman2000/22/6/annotation/3
+T235	head 2991 2998	díriri
+#235	AnnotatorNotes T235	NodeID = aleman2000/22/6/annotation/6
+T236	Desano 2991 2998	díriri
+#236	AnnotatorNotes T236	NodeID = aleman2000/22/6/annotation/6
+T237	des 2991 2998	díriri
+#237	AnnotatorNotes T237	NodeID = aleman2000/22/6/annotation/6
+T238	translation 3004 3008	atar
+#238	AnnotatorNotes T238	NodeID = aleman2000/22/6/annotation/11
+T239	Español 3004 3008	atar
+#239	AnnotatorNotes T239	NodeID = aleman2000/22/6/annotation/11
+T240	spa 3004 3008	atar
+#240	AnnotatorNotes T240	NodeID = aleman2000/22/6/annotation/11
+T241	head 3134 3137	dí
+#241	AnnotatorNotes T241	NodeID = aleman2000/22/7/annotation/2
+T242	Desano 3134 3137	dí
+#242	AnnotatorNotes T242	NodeID = aleman2000/22/7/annotation/2
+T243	des 3134 3137	dí
+#243	AnnotatorNotes T243	NodeID = aleman2000/22/7/annotation/2
+T244	translation 3148 3153	carne
+#244	AnnotatorNotes T244	NodeID = aleman2000/22/7/annotation/5
+T245	Español 3148 3153	carne
+#245	AnnotatorNotes T245	NodeID = aleman2000/22/7/annotation/5
+T246	spa 3148 3153	carne
+#246	AnnotatorNotes T246	NodeID = aleman2000/22/7/annotation/5
+T247	pos 3142 3147	inan.
+#247	AnnotatorNotes T247	NodeID = aleman2000/22/7/annotation/7
+T248	head 3128 3132	diro
+#248	AnnotatorNotes T248	NodeID = aleman2000/22/7/annotation/9
+T249	Desano 3128 3132	diro
+#249	AnnotatorNotes T249	NodeID = aleman2000/22/7/annotation/9
+T250	des 3128 3132	diro
+#250	AnnotatorNotes T250	NodeID = aleman2000/22/7/annotation/9
+T251	translation 3261 3265	boca
+#251	AnnotatorNotes T251	NodeID = aleman2000/22/11/annotation/0
+T252	Español 3261 3265	boca
+#252	AnnotatorNotes T252	NodeID = aleman2000/22/11/annotation/0
+T253	spa 3261 3265	boca
+#253	AnnotatorNotes T253	NodeID = aleman2000/22/11/annotation/0
+T254	pos 3255 3260	inan.
+#254	AnnotatorNotes T254	NodeID = aleman2000/22/11/annotation/3
+T255	head 3248 3254	disiro
+#255	AnnotatorNotes T255	NodeID = aleman2000/22/11/annotation/7
+T256	Desano 3248 3254	disiro
+#256	AnnotatorNotes T256	NodeID = aleman2000/22/11/annotation/7
+T257	des 3248 3254	disiro
+#257	AnnotatorNotes T257	NodeID = aleman2000/22/11/annotation/7
+T258	pos 3326 3331	inan.
+#258	AnnotatorNotes T258	NodeID = aleman2000/22/12/annotation/1
+T259	translation 3332 3337	huevo
+#259	AnnotatorNotes T259	NodeID = aleman2000/22/12/annotation/3
+T260	Español 3332 3337	huevo
+#260	AnnotatorNotes T260	NodeID = aleman2000/22/12/annotation/3
+T261	spa 3332 3337	huevo
+#261	AnnotatorNotes T261	NodeID = aleman2000/22/12/annotation/3
+T262	head 3322 3325	diu
+#262	AnnotatorNotes T262	NodeID = aleman2000/22/12/annotation/8
+T263	Desano 3322 3325	diu
+#263	AnnotatorNotes T263	NodeID = aleman2000/22/12/annotation/8
+T264	des 3322 3325	diu
+#264	AnnotatorNotes T264	NodeID = aleman2000/22/12/annotation/8
+T265	pos 3423 3427	v.i.
+#265	AnnotatorNotes T265	NodeID = aleman2000/22/14/annotation/0
+T266	head 3417 3422	doari
+#266	AnnotatorNotes T266	NodeID = aleman2000/22/14/annotation/5
+T267	Desano 3417 3422	doari
+#267	AnnotatorNotes T267	NodeID = aleman2000/22/14/annotation/5
+T268	des 3417 3422	doari
+#268	AnnotatorNotes T268	NodeID = aleman2000/22/14/annotation/5
+T269	translation 3428 3436	sentarse
+#269	AnnotatorNotes T269	NodeID = aleman2000/22/14/annotation/7
+T270	Español 3428 3436	sentarse
+#270	AnnotatorNotes T270	NodeID = aleman2000/22/14/annotation/7
+T271	spa 3428 3436	sentarse
+#271	AnnotatorNotes T271	NodeID = aleman2000/22/14/annotation/7
+T272	pos 3495 3500	inan.
+#272	AnnotatorNotes T272	NodeID = aleman2000/23/19/annotation/1
+T273	translation 3504 3509	fruta
+#273	AnnotatorNotes T273	NodeID = aleman2000/23/19/annotation/3
+T274	Español 3504 3509	fruta
+#274	AnnotatorNotes T274	NodeID = aleman2000/23/19/annotation/3
+T275	spa 3504 3509	fruta
+#275	AnnotatorNotes T275	NodeID = aleman2000/23/19/annotation/3
+T276	translation 3573 3579	brazo
+#276	AnnotatorNotes T276	NodeID = aleman2000/23/19/annotation/7
+T277	Español 3573 3579	brazo
+#277	AnnotatorNotes T277	NodeID = aleman2000/23/19/annotation/7
+T278	spa 3573 3579	brazo
+#278	AnnotatorNotes T278	NodeID = aleman2000/23/19/annotation/7
+T279	translation 3581 3590	antebrazo
+#279	AnnotatorNotes T279	NodeID = aleman2000/23/19/annotation/10
+T280	Español 3581 3590	antebrazo
+#280	AnnotatorNotes T280	NodeID = aleman2000/23/19/annotation/10
+T281	spa 3581 3590	antebrazo
+#281	AnnotatorNotes T281	NodeID = aleman2000/23/19/annotation/10
+T282	head 3490 3494	dʉca
+#282	AnnotatorNotes T282	NodeID = aleman2000/23/19/annotation/13
+T283	Desano 3490 3494	dʉca
+#283	AnnotatorNotes T283	NodeID = aleman2000/23/19/annotation/13
+T284	des 3490 3494	dʉca
+#284	AnnotatorNotes T284	NodeID = aleman2000/23/19/annotation/13
+T285	pos 3597 3601	v.t.
+#285	AnnotatorNotes T285	NodeID = aleman2000/24/5/annotation/1
+T286	translation 3602 3607	coser
+#286	AnnotatorNotes T286	NodeID = aleman2000/24/5/annotation/4
+T287	Español 3602 3607	coser
+#287	AnnotatorNotes T287	NodeID = aleman2000/24/5/annotation/4
+T288	spa 3602 3607	coser
+#288	AnnotatorNotes T288	NodeID = aleman2000/24/5/annotation/4
+T289	head 3592 3596	eari
+#289	AnnotatorNotes T289	NodeID = aleman2000/24/5/annotation/8
+T290	Desano 3592 3596	eari
+#290	AnnotatorNotes T290	NodeID = aleman2000/24/5/annotation/8
+T291	des 3592 3596	eari
+#291	AnnotatorNotes T291	NodeID = aleman2000/24/5/annotation/8
+T292	pos 3688 3692	v.i.
+#292	AnnotatorNotes T292	NodeID = aleman2000/24/7/annotation/0
+T293	head 3680 3687	ehopiri
+#293	AnnotatorNotes T293	NodeID = aleman2000/24/7/annotation/5
+T294	Desano 3680 3687	ehopiri
+#294	AnnotatorNotes T294	NodeID = aleman2000/24/7/annotation/5
+T295	des 3680 3687	ehopiri
+#295	AnnotatorNotes T295	NodeID = aleman2000/24/7/annotation/5
+T296	translation 3693 3700	escupir
+#296	AnnotatorNotes T296	NodeID = aleman2000/24/7/annotation/6
+T297	Español 3693 3700	escupir
+#297	AnnotatorNotes T297	NodeID = aleman2000/24/7/annotation/6
+T298	spa 3693 3700	escupir
+#298	AnnotatorNotes T298	NodeID = aleman2000/24/7/annotation/6
+T299	pos 3815 3819	v.i.
+#299	AnnotatorNotes T299	NodeID = aleman2000/24/14/annotation/1
+T300	head 3807 3814	etocari
+#300	AnnotatorNotes T300	NodeID = aleman2000/24/14/annotation/2
+T301	Desano 3807 3814	etocari
+#301	AnnotatorNotes T301	NodeID = aleman2000/24/14/annotation/2
+T302	des 3807 3814	etocari
+#302	AnnotatorNotes T302	NodeID = aleman2000/24/14/annotation/2
+T303	translation 3820 3827	vomitar
+#303	AnnotatorNotes T303	NodeID = aleman2000/24/14/annotation/7
+T304	Español 3820 3827	vomitar
+#304	AnnotatorNotes T304	NodeID = aleman2000/24/14/annotation/7
+T305	spa 3820 3827	vomitar
+#305	AnnotatorNotes T305	NodeID = aleman2000/24/14/annotation/7
+T306	head 3939 3944	ĩrã
+#306	AnnotatorNotes T306	NodeID = aleman2000/25/5/annotation/2
+T307	Desano 3939 3944	ĩrã
+#307	AnnotatorNotes T307	NodeID = aleman2000/25/5/annotation/2
+T308	des 3939 3944	ĩrã
+#308	AnnotatorNotes T308	NodeID = aleman2000/25/5/annotation/2
+T309	translation 3954 3959	ellos
+#309	AnnotatorNotes T309	NodeID = aleman2000/25/5/annotation/4
+T310	Español 3954 3959	ellos
+#310	AnnotatorNotes T310	NodeID = aleman2000/25/5/annotation/4
+T311	spa 3954 3959	ellos
+#311	AnnotatorNotes T311	NodeID = aleman2000/25/5/annotation/4
+T312	pos 3949 3953	pro.
+#312	AnnotatorNotes T312	NodeID = aleman2000/25/5/annotation/7
+T313	head 3932 3937	ẽrã
+#313	AnnotatorNotes T313	NodeID = aleman2000/25/5/annotation/10
+T314	Desano 3932 3937	ẽrã
+#314	AnnotatorNotes T314	NodeID = aleman2000/25/5/annotation/10
+T315	des 3932 3937	ẽrã
+#315	AnnotatorNotes T315	NodeID = aleman2000/25/5/annotation/10
+T316	translation 4062 4067	cosas
+#316	AnnotatorNotes T316	NodeID = aleman2000/25/10/annotation/2
+T317	Español 4062 4067	cosas
+#317	AnnotatorNotes T317	NodeID = aleman2000/25/10/annotation/2
+T318	spa 4062 4067	cosas
+#318	AnnotatorNotes T318	NodeID = aleman2000/25/10/annotation/2
+T319	head 4049 4055	gajino
+#319	AnnotatorNotes T319	NodeID = aleman2000/25/10/annotation/3
+T320	Desano 4049 4055	gajino
+#320	AnnotatorNotes T320	NodeID = aleman2000/25/10/annotation/3
+T321	des 4049 4055	gajino
+#321	AnnotatorNotes T321	NodeID = aleman2000/25/10/annotation/3
+T322	pos 4056 4061	inan.
+#322	AnnotatorNotes T322	NodeID = aleman2000/25/10/annotation/6
+T323	head 4039 4047	gajinojo
+#323	AnnotatorNotes T323	NodeID = aleman2000/25/10/annotation/9
+T324	Desano 4039 4047	gajinojo
+#324	AnnotatorNotes T324	NodeID = aleman2000/25/10/annotation/9
+T325	des 4039 4047	gajinojo
+#325	AnnotatorNotes T325	NodeID = aleman2000/25/10/annotation/9
+T326	pos 4139 4144	inan.
+#326	AnnotatorNotes T326	NodeID = aleman2000/26/5/annotation/1
+T327	translation 4155 4162	corteza
+#327	AnnotatorNotes T327	NodeID = aleman2000/26/5/annotation/2
+T328	Español 4155 4162	corteza
+#328	AnnotatorNotes T328	NodeID = aleman2000/26/5/annotation/2
+T329	spa 4155 4162	corteza
+#329	AnnotatorNotes T329	NodeID = aleman2000/26/5/annotation/2
+T330	head 4132 4138	gasiro
+#330	AnnotatorNotes T330	NodeID = aleman2000/26/5/annotation/8
+T331	Desano 4132 4138	gasiro
+#331	AnnotatorNotes T331	NodeID = aleman2000/26/5/annotation/8
+T332	des 4132 4138	gasiro
+#332	AnnotatorNotes T332	NodeID = aleman2000/26/5/annotation/8
+T333	translation 4164 4168	piel
+#333	AnnotatorNotes T333	NodeID = aleman2000/26/5/annotation/11
+T334	Español 4164 4168	piel
+#334	AnnotatorNotes T334	NodeID = aleman2000/26/5/annotation/11
+T335	spa 4164 4168	piel
+#335	AnnotatorNotes T335	NodeID = aleman2000/26/5/annotation/11
+T336	translation 4145 4153	cáscara
+#336	AnnotatorNotes T336	NodeID = aleman2000/26/5/annotation/12
+T337	Español 4145 4153	cáscara
+#337	AnnotatorNotes T337	NodeID = aleman2000/26/5/annotation/12
+T338	spa 4145 4153	cáscara
+#338	AnnotatorNotes T338	NodeID = aleman2000/26/5/annotation/12
+T339	head 4268 4283	gãmequẽariñe
+#339	AnnotatorNotes T339	NodeID = aleman2000/26/12/annotation/2
+T340	Desano 4268 4283	gãmequẽariñe
+#340	AnnotatorNotes T340	NodeID = aleman2000/26/12/annotation/2
+T341	des 4268 4283	gãmequẽariñe
+#341	AnnotatorNotes T341	NodeID = aleman2000/26/12/annotation/2
+T342	translation 4289 4295	pelear
+#342	AnnotatorNotes T342	NodeID = aleman2000/26/12/annotation/4
+T343	Español 4289 4295	pelear
+#343	AnnotatorNotes T343	NodeID = aleman2000/26/12/annotation/4
+T344	spa 4289 4295	pelear
+#344	AnnotatorNotes T344	NodeID = aleman2000/26/12/annotation/4
+T345	pos 4284 4288	v.i.
+#345	AnnotatorNotes T345	NodeID = aleman2000/26/12/annotation/7
+T346	translation 4412 4416	oido
+#346	AnnotatorNotes T346	NodeID = aleman2000/27/2/annotation/0
+T347	Español 4412 4416	oido
+#347	AnnotatorNotes T347	NodeID = aleman2000/27/2/annotation/0
+T348	spa 4412 4416	oido
+#348	AnnotatorNotes T348	NodeID = aleman2000/27/2/annotation/0
+T349	pos 4399 4404	inan.
+#349	AnnotatorNotes T349	NodeID = aleman2000/27/2/annotation/4
+T350	translation 4405 4410	oreja
+#350	AnnotatorNotes T350	NodeID = aleman2000/27/2/annotation/5
+T351	Español 4405 4410	oreja
+#351	AnnotatorNotes T351	NodeID = aleman2000/27/2/annotation/5
+T352	spa 4405 4410	oreja
+#352	AnnotatorNotes T352	NodeID = aleman2000/27/2/annotation/5
+T353	head 4391 4398	gãmiro
+#353	AnnotatorNotes T353	NodeID = aleman2000/27/2/annotation/11
+T354	Desano 4391 4398	gãmiro
+#354	AnnotatorNotes T354	NodeID = aleman2000/27/2/annotation/11
+T355	des 4391 4398	gãmiro
+#355	AnnotatorNotes T355	NodeID = aleman2000/27/2/annotation/11
+T356	pos 4506 4511	inan.
+#356	AnnotatorNotes T356	NodeID = aleman2000/28/2/annotation/1
+T357	head 4501 4505	gori
+#357	AnnotatorNotes T357	NodeID = aleman2000/28/2/annotation/5
+T358	Desano 4501 4505	gori
+#358	AnnotatorNotes T358	NodeID = aleman2000/28/2/annotation/5
+T359	des 4501 4505	gori
+#359	AnnotatorNotes T359	NodeID = aleman2000/28/2/annotation/5
+T360	translation 4512 4516	flor
+#360	AnnotatorNotes T360	NodeID = aleman2000/28/2/annotation/8
+T361	Español 4512 4516	flor
+#361	AnnotatorNotes T361	NodeID = aleman2000/28/2/annotation/8
+T362	spa 4512 4516	flor
+#362	AnnotatorNotes T362	NodeID = aleman2000/28/2/annotation/8
+T363	head 4601 4607	gõhã
+#363	AnnotatorNotes T363	NodeID = aleman2000/28/10/annotation/1
+T364	Desano 4601 4607	gõhã
+#364	AnnotatorNotes T364	NodeID = aleman2000/28/10/annotation/1
+T365	des 4601 4607	gõhã
+#365	AnnotatorNotes T365	NodeID = aleman2000/28/10/annotation/1
+T366	translation 4618 4623	hueso
+#366	AnnotatorNotes T366	NodeID = aleman2000/28/10/annotation/6
+T367	Español 4618 4623	hueso
+#367	AnnotatorNotes T367	NodeID = aleman2000/28/10/annotation/6
+T368	spa 4618 4623	hueso
+#368	AnnotatorNotes T368	NodeID = aleman2000/28/10/annotation/6
+T369	pos 4612 4617	inan.
+#369	AnnotatorNotes T369	NodeID = aleman2000/28/10/annotation/8
+T370	head 4593 4599	gṍã
+#370	AnnotatorNotes T370	NodeID = aleman2000/28/10/annotation/11
+T371	Desano 4593 4599	gṍã
+#371	AnnotatorNotes T371	NodeID = aleman2000/28/10/annotation/11
+T372	des 4593 4599	gṍã
+#372	AnnotatorNotes T372	NodeID = aleman2000/28/10/annotation/11
+T373	translation 4708 4715	dientes
+#373	AnnotatorNotes T373	NodeID = aleman2000/29/11/annotation/1
+T374	Español 4708 4715	dientes
+#374	AnnotatorNotes T374	NodeID = aleman2000/29/11/annotation/1
+T375	spa 4708 4715	dientes
+#375	AnnotatorNotes T375	NodeID = aleman2000/29/11/annotation/1
+T376	head 4686 4692	gʉcʉri
+#376	AnnotatorNotes T376	NodeID = aleman2000/29/11/annotation/4
+T377	Desano 4686 4692	gʉcʉri
+#377	AnnotatorNotes T377	NodeID = aleman2000/29/11/annotation/4
+T378	des 4686 4692	gʉcʉri
+#378	AnnotatorNotes T378	NodeID = aleman2000/29/11/annotation/4
+T379	pos 4702 4707	inan.
+#379	AnnotatorNotes T379	NodeID = aleman2000/29/11/annotation/7
+T380	head 4694 4701	gʉicari
+#380	AnnotatorNotes T380	NodeID = aleman2000/29/11/annotation/9
+T381	Desano 4694 4701	gʉicari
+#381	AnnotatorNotes T381	NodeID = aleman2000/29/11/annotation/9
+T382	des 4694 4701	gʉicari
+#382	AnnotatorNotes T382	NodeID = aleman2000/29/11/annotation/9
+T383	translation 4840 4845	tripa
+#383	AnnotatorNotes T383	NodeID = aleman2000/29/18/annotation/2
+T384	Español 4840 4845	tripa
+#384	AnnotatorNotes T384	NodeID = aleman2000/29/18/annotation/2
+T385	spa 4840 4845	tripa
+#385	AnnotatorNotes T385	NodeID = aleman2000/29/18/annotation/2
+T386	pos 4823 4828	inan.
+#386	AnnotatorNotes T386	NodeID = aleman2000/29/18/annotation/4
+T387	translation 4829 4838	intestino
+#387	AnnotatorNotes T387	NodeID = aleman2000/29/18/annotation/5
+T388	Español 4829 4838	intestino
+#388	AnnotatorNotes T388	NodeID = aleman2000/29/18/annotation/5
+T389	spa 4829 4838	intestino
+#389	AnnotatorNotes T389	NodeID = aleman2000/29/18/annotation/5
+T390	head 4813 4822	gʉrasuhri
+#390	AnnotatorNotes T390	NodeID = aleman2000/29/18/annotation/8
+T391	Desano 4813 4822	gʉrasuhri
+#391	AnnotatorNotes T391	NodeID = aleman2000/29/18/annotation/8
+T392	des 4813 4822	gʉrasuhri
+#392	AnnotatorNotes T392	NodeID = aleman2000/29/18/annotation/8
+T393	translation 4952 4957	tomar
+#393	AnnotatorNotes T393	NodeID = aleman2000/30/6/annotation/2
+T394	Español 4952 4957	tomar
+#394	AnnotatorNotes T394	NodeID = aleman2000/30/6/annotation/2
+T395	spa 4952 4957	tomar
+#395	AnnotatorNotes T395	NodeID = aleman2000/30/6/annotation/2
+T396	head 4933 4939	ihriri
+#396	AnnotatorNotes T396	NodeID = aleman2000/30/6/annotation/5
+T397	Desano 4933 4939	ihriri
+#397	AnnotatorNotes T397	NodeID = aleman2000/30/6/annotation/5
+T398	des 4933 4939	ihriri
+#398	AnnotatorNotes T398	NodeID = aleman2000/30/6/annotation/5
+T399	translation 4945 4950	beber
+#399	AnnotatorNotes T399	NodeID = aleman2000/30/6/annotation/7
+T400	Español 4945 4950	beber
+#400	AnnotatorNotes T400	NodeID = aleman2000/30/6/annotation/7
+T401	spa 4945 4950	beber
+#401	AnnotatorNotes T401	NodeID = aleman2000/30/6/annotation/7
+T402	pos 4940 4944	v.t.
+#402	AnnotatorNotes T402	NodeID = aleman2000/30/6/annotation/11
+T403	head 5055 5061	ímica
+#403	AnnotatorNotes T403	NodeID = aleman2000/30/9/annotation/1
+T404	Desano 5055 5061	ímica
+#404	AnnotatorNotes T404	NodeID = aleman2000/30/9/annotation/1
+T405	des 5055 5061	ímica
+#405	AnnotatorNotes T405	NodeID = aleman2000/30/9/annotation/1
+T406	translation 5071 5075	humo
+#406	AnnotatorNotes T406	NodeID = aleman2000/30/9/annotation/6
+T407	Español 5071 5075	humo
+#407	AnnotatorNotes T407	NodeID = aleman2000/30/9/annotation/6
+T408	spa 5071 5075	humo
+#408	AnnotatorNotes T408	NodeID = aleman2000/30/9/annotation/6
+T409	pos 5062 5070	s. de m.
+#409	AnnotatorNotes T409	NodeID = aleman2000/30/9/annotation/8
+T410	pos 5222 5227	inan.
+#410	AnnotatorNotes T410	NodeID = aleman2000/30/11/annotation/1
+T411	translation 5228 5233	nubes
+#411	AnnotatorNotes T411	NodeID = aleman2000/30/11/annotation/3
+T412	Español 5228 5233	nubes
+#412	AnnotatorNotes T412	NodeID = aleman2000/30/11/annotation/3
+T413	spa 5228 5233	nubes
+#413	AnnotatorNotes T413	NodeID = aleman2000/30/11/annotation/3
+T414	head 5195 5205	ímicaturi
+#414	AnnotatorNotes T414	NodeID = aleman2000/30/11/annotation/6
+T415	Desano 5195 5205	ímicaturi
+#415	AnnotatorNotes T415	NodeID = aleman2000/30/11/annotation/6
+T416	des 5195 5205	ímicaturi
+#416	AnnotatorNotes T416	NodeID = aleman2000/30/11/annotation/6
+T417	head 5207 5217	ímicacuru
+#417	AnnotatorNotes T417	NodeID = aleman2000/30/11/annotation/10
+T418	Desano 5207 5217	ímicacuru
+#418	AnnotatorNotes T418	NodeID = aleman2000/30/11/annotation/10
+T419	des 5207 5217	ímicacuru
+#419	AnnotatorNotes T419	NodeID = aleman2000/30/11/annotation/10
+T420	pos 5256 5261	inan.
+#420	AnnotatorNotes T420	NodeID = aleman2000/30/12/annotation/1
+T421	translation 5262 5267	arena
+#421	AnnotatorNotes T421	NodeID = aleman2000/30/12/annotation/2
+T422	Español 5262 5267	arena
+#422	AnnotatorNotes T422	NodeID = aleman2000/30/12/annotation/2
+T423	spa 5262 5267	arena
+#423	AnnotatorNotes T423	NodeID = aleman2000/30/12/annotation/2
+T424	head 5250 5255	imipa
+#424	AnnotatorNotes T424	NodeID = aleman2000/30/12/annotation/7
+T425	Desano 5250 5255	imipa
+#425	AnnotatorNotes T425	NodeID = aleman2000/30/12/annotation/7
+T426	des 5250 5255	imipa
+#426	AnnotatorNotes T426	NodeID = aleman2000/30/12/annotation/7
+T427	pos 5385 5389	v.t.
+#427	AnnotatorNotes T427	NodeID = aleman2000/30/16/annotation/1
+T428	head 5364 5371	і̃́ãri
+#428	AnnotatorNotes T428	NodeID = aleman2000/30/16/annotation/4
+T429	Desano 5364 5371	і̃́ãri
+#429	AnnotatorNotes T429	NodeID = aleman2000/30/16/annotation/4
+T430	des 5364 5371	і̃́ãri
+#430	AnnotatorNotes T430	NodeID = aleman2000/30/16/annotation/4
+T431	translation 5390 5395	mirar
+#431	AnnotatorNotes T431	NodeID = aleman2000/30/16/annotation/5
+T432	Español 5390 5395	mirar
+#432	AnnotatorNotes T432	NodeID = aleman2000/30/16/annotation/5
+T433	spa 5390 5395	mirar
+#433	AnnotatorNotes T433	NodeID = aleman2000/30/16/annotation/5
+T434	head 5373 5380	ĩhãri
+#434	AnnotatorNotes T434	NodeID = aleman2000/30/16/annotation/10
+T435	Desano 5373 5380	ĩhãri
+#435	AnnotatorNotes T435	NodeID = aleman2000/30/16/annotation/10
+T436	des 5373 5380	ĩhãri
+#436	AnnotatorNotes T436	NodeID = aleman2000/30/16/annotation/10
+T437	translation 5397 5400	ver
+#437	AnnotatorNotes T437	NodeID = aleman2000/30/16/annotation/12
+T438	Español 5397 5400	ver
+#438	AnnotatorNotes T438	NodeID = aleman2000/30/16/annotation/12
+T439	spa 5397 5400	ver
+#439	AnnotatorNotes T439	NodeID = aleman2000/30/16/annotation/12
+T440	pos 5487 5492	inan.
+#440	AnnotatorNotes T440	NodeID = aleman2000/30/17/annotation/1
+T441	translation 5493 5498	nariz
+#441	AnnotatorNotes T441	NodeID = aleman2000/30/17/annotation/3
+T442	Español 5493 5498	nariz
+#442	AnnotatorNotes T442	NodeID = aleman2000/30/17/annotation/3
+T443	spa 5493 5498	nariz
+#443	AnnotatorNotes T443	NodeID = aleman2000/30/17/annotation/3
+T444	head 5478 5486	ĩguĩru
+#444	AnnotatorNotes T444	NodeID = aleman2000/30/17/annotation/7
+T445	Desano 5478 5486	ĩguĩru
+#445	AnnotatorNotes T445	NodeID = aleman2000/30/17/annotation/7
+T446	des 5478 5486	ĩguĩru
+#446	AnnotatorNotes T446	NodeID = aleman2000/30/17/annotation/7
+T447	head 5571 5574	má
+#447	AnnotatorNotes T447	NodeID = aleman2000/32/1/annotation/0
+T448	Desano 5571 5574	má
+#448	AnnotatorNotes T448	NodeID = aleman2000/32/1/annotation/0
+T449	des 5571 5574	má
+#449	AnnotatorNotes T449	NodeID = aleman2000/32/1/annotation/0
+T450	head 5565 5569	maha
+#450	AnnotatorNotes T450	NodeID = aleman2000/32/1/annotation/4
+T451	Desano 5565 5569	maha
+#451	AnnotatorNotes T451	NodeID = aleman2000/32/1/annotation/4
+T452	des 5565 5569	maha
+#452	AnnotatorNotes T452	NodeID = aleman2000/32/1/annotation/4
+T453	pos 5575 5580	inan.
+#453	AnnotatorNotes T453	NodeID = aleman2000/32/1/annotation/7
+T454	translation 5581 5587	camino
+#454	AnnotatorNotes T454	NodeID = aleman2000/32/1/annotation/8
+T455	Español 5581 5587	camino
+#455	AnnotatorNotes T455	NodeID = aleman2000/32/1/annotation/8
+T456	spa 5581 5587	camino
+#456	AnnotatorNotes T456	NodeID = aleman2000/32/1/annotation/8
+T457	translation 5589 5596	sendero
+#457	AnnotatorNotes T457	NodeID = aleman2000/32/1/annotation/11
+T458	Español 5589 5596	sendero
+#458	AnnotatorNotes T458	NodeID = aleman2000/32/1/annotation/11
+T459	spa 5589 5596	sendero
+#459	AnnotatorNotes T459	NodeID = aleman2000/32/1/annotation/11
+T460	translation 5598 5604	trocha
+#460	AnnotatorNotes T460	NodeID = aleman2000/32/1/annotation/15
+T461	Español 5598 5604	trocha
+#461	AnnotatorNotes T461	NodeID = aleman2000/32/1/annotation/15
+T462	spa 5598 5604	trocha
+#462	AnnotatorNotes T462	NodeID = aleman2000/32/1/annotation/15
+T463	head 5704 5710	marapo
+#463	AnnotatorNotes T463	NodeID = aleman2000/32/8/annotation/1
+T464	Desano 5704 5710	marapo
+#464	AnnotatorNotes T464	NodeID = aleman2000/32/8/annotation/1
+T465	des 5704 5710	marapo
+#465	AnnotatorNotes T465	NodeID = aleman2000/32/8/annotation/1
+T466	translation 5738 5744	esposo
+#466	AnnotatorNotes T466	NodeID = aleman2000/32/8/annotation/3
+T467	Español 5738 5744	esposo
+#467	AnnotatorNotes T467	NodeID = aleman2000/32/8/annotation/3
+T468	spa 5738 5744	esposo
+#468	AnnotatorNotes T468	NodeID = aleman2000/32/8/annotation/3
+T469	translation 5754 5761	esposos
+#469	AnnotatorNotes T469	NodeID = aleman2000/32/8/annotation/6
+T470	Español 5754 5761	esposos
+#470	AnnotatorNotes T470	NodeID = aleman2000/32/8/annotation/6
+T471	spa 5754 5761	esposos
+#471	AnnotatorNotes T471	NodeID = aleman2000/32/8/annotation/6
+T472	translation 5746 5752	esposa
+#472	AnnotatorNotes T472	NodeID = aleman2000/32/8/annotation/10
+T473	Español 5746 5752	esposa
+#473	AnnotatorNotes T473	NodeID = aleman2000/32/8/annotation/10
+T474	spa 5746 5752	esposa
+#474	AnnotatorNotes T474	NodeID = aleman2000/32/8/annotation/10
+T475	pos 5726 5737	m., f., pl.
+#475	AnnotatorNotes T475	NodeID = aleman2000/32/8/annotation/13
+T476	head 5712 5725	marapʉsʉmarã
+#476	AnnotatorNotes T476	NodeID = aleman2000/32/8/annotation/16
+T477	Desano 5712 5725	marapʉsʉmarã
+#477	AnnotatorNotes T477	NodeID = aleman2000/32/8/annotation/16
+T478	des 5712 5725	marapʉsʉmarã
+#478	AnnotatorNotes T478	NodeID = aleman2000/32/8/annotation/16
+T479	head 5696 5702	marapʉ
+#479	AnnotatorNotes T479	NodeID = aleman2000/32/8/annotation/19
+T480	Desano 5696 5702	marapʉ
+#480	AnnotatorNotes T480	NodeID = aleman2000/32/8/annotation/19
+T481	des 5696 5702	marapʉ
+#481	AnnotatorNotes T481	NodeID = aleman2000/32/8/annotation/19
+T482	head 5839 5845	masiri
+#482	AnnotatorNotes T482	NodeID = aleman2000/32/13/annotation/1
+T483	Desano 5839 5845	masiri
+#483	AnnotatorNotes T483	NodeID = aleman2000/32/13/annotation/1
+T484	des 5839 5845	masiri
+#484	AnnotatorNotes T484	NodeID = aleman2000/32/13/annotation/1
+T485	translation 5856 5861	saber
+#485	AnnotatorNotes T485	NodeID = aleman2000/32/13/annotation/5
+T486	Español 5856 5861	saber
+#486	AnnotatorNotes T486	NodeID = aleman2000/32/13/annotation/5
+T487	spa 5856 5861	saber
+#487	AnnotatorNotes T487	NodeID = aleman2000/32/13/annotation/5
+T488	pos 5846 5855	v.t./v.i.
+#488	AnnotatorNotes T488	NodeID = aleman2000/32/13/annotation/8
+T489	translation 5863 5870	conocer
+#489	AnnotatorNotes T489	NodeID = aleman2000/32/13/annotation/11
+T490	Español 5863 5870	conocer
+#490	AnnotatorNotes T490	NodeID = aleman2000/32/13/annotation/11
+T491	spa 5863 5870	conocer
+#491	AnnotatorNotes T491	NodeID = aleman2000/32/13/annotation/11
+T492	pos 5985 5989	v.t.
+#492	AnnotatorNotes T492	NodeID = aleman2000/34/3/annotation/1
+T493	head 5977 5984	mímiri
+#493	AnnotatorNotes T493	NodeID = aleman2000/34/3/annotation/5
+T494	Desano 5977 5984	mímiri
+#494	AnnotatorNotes T494	NodeID = aleman2000/34/3/annotation/5
+T495	des 5977 5984	mímiri
+#495	AnnotatorNotes T495	NodeID = aleman2000/34/3/annotation/5
+T496	translation 5990 5996	chupar
+#496	AnnotatorNotes T496	NodeID = aleman2000/34/3/annotation/8
+T497	Español 5990 5996	chupar
+#497	AnnotatorNotes T497	NodeID = aleman2000/34/3/annotation/8
+T498	spa 5990 5996	chupar
+#498	AnnotatorNotes T498	NodeID = aleman2000/34/3/annotation/8
+T499	pos 6061 6066	inan.
+#499	AnnotatorNotes T499	NodeID = aleman2000/34/8/annotation/1
+T500	head 6053 6060	miruñe
+#500	AnnotatorNotes T500	NodeID = aleman2000/34/8/annotation/3
+T501	Desano 6053 6060	miruñe
+#501	AnnotatorNotes T501	NodeID = aleman2000/34/8/annotation/3
+T502	des 6053 6060	miruñe
+#502	AnnotatorNotes T502	NodeID = aleman2000/34/8/annotation/3
+T503	translation 6067 6073	viento
+#503	AnnotatorNotes T503	NodeID = aleman2000/34/8/annotation/7
+T504	Español 6067 6073	viento
+#504	AnnotatorNotes T504	NodeID = aleman2000/34/8/annotation/7
+T505	spa 6067 6073	viento
+#505	AnnotatorNotes T505	NodeID = aleman2000/34/8/annotation/7
+T506	translation 6211 6214	sal
+#506	AnnotatorNotes T506	NodeID = aleman2000/34/11/annotation/0
+T507	Español 6211 6214	sal
+#507	AnnotatorNotes T507	NodeID = aleman2000/34/11/annotation/0
+T508	spa 6211 6214	sal
+#508	AnnotatorNotes T508	NodeID = aleman2000/34/11/annotation/0
+T509	pos 6202 6210	s. de m.
+#509	AnnotatorNotes T509	NodeID = aleman2000/34/11/annotation/3
+T510	head 6198 6201	moa
+#510	AnnotatorNotes T510	NodeID = aleman2000/34/11/annotation/7
+T511	Desano 6198 6201	moa
+#511	AnnotatorNotes T511	NodeID = aleman2000/34/11/annotation/7
+T512	des 6198 6201	moa
+#512	AnnotatorNotes T512	NodeID = aleman2000/34/11/annotation/7
+T513	translation 6298 6302	mano
+#513	AnnotatorNotes T513	NodeID = aleman2000/35/4/annotation/0
+T514	Español 6298 6302	mano
+#514	AnnotatorNotes T514	NodeID = aleman2000/35/4/annotation/0
+T515	spa 6298 6302	mano
+#515	AnnotatorNotes T515	NodeID = aleman2000/35/4/annotation/0
+T516	pos 6292 6297	inan.
+#516	AnnotatorNotes T516	NodeID = aleman2000/35/4/annotation/4
+T517	head 6284 6291	mojotõ
+#517	AnnotatorNotes T517	NodeID = aleman2000/35/4/annotation/8
+T518	Desano 6284 6291	mojotõ
+#518	AnnotatorNotes T518	NodeID = aleman2000/35/4/annotation/8
+T519	des 6284 6291	mojotõ
+#519	AnnotatorNotes T519	NodeID = aleman2000/35/4/annotation/8
+T520	pos 6404 6411	v.caus.
+#520	AnnotatorNotes T520	NodeID = aleman2000/36/4/annotation/1
+T521	translation 6412 6417	alzar
+#521	AnnotatorNotes T521	NodeID = aleman2000/36/4/annotation/4
+T522	Español 6412 6417	alzar
+#522	AnnotatorNotes T522	NodeID = aleman2000/36/4/annotation/4
+T523	spa 6412 6417	alzar
+#523	AnnotatorNotes T523	NodeID = aleman2000/36/4/annotation/4
+T524	head 6397 6403	mujuri
+#524	AnnotatorNotes T524	NodeID = aleman2000/36/4/annotation/8
+T525	Desano 6397 6403	mujuri
+#525	AnnotatorNotes T525	NodeID = aleman2000/36/4/annotation/8
+T526	des 6397 6403	mujuri
+#526	AnnotatorNotes T526	NodeID = aleman2000/36/4/annotation/8
+T527	translation 6419 6427	levantar
+#527	AnnotatorNotes T527	NodeID = aleman2000/36/4/annotation/9
+T528	Español 6419 6427	levantar
+#528	AnnotatorNotes T528	NodeID = aleman2000/36/4/annotation/9
+T529	spa 6419 6427	levantar
+#529	AnnotatorNotes T529	NodeID = aleman2000/36/4/annotation/9
+T530	pos 6551 6553	m.
+#530	AnnotatorNotes T530	NodeID = aleman2000/37/6/annotation/2
+T531	translation 6554 6563	estrellas
+#531	AnnotatorNotes T531	NodeID = aleman2000/37/6/annotation/5
+T532	Español 6554 6563	estrellas
+#532	AnnotatorNotes T532	NodeID = aleman2000/37/6/annotation/5
+T533	spa 6554 6563	estrellas
+#533	AnnotatorNotes T533	NodeID = aleman2000/37/6/annotation/5
+T534	head 6531 6536	necã
+#534	AnnotatorNotes T534	NodeID = aleman2000/37/6/annotation/9
+T535	Desano 6531 6536	necã
+#535	AnnotatorNotes T535	NodeID = aleman2000/37/6/annotation/9
+T536	des 6531 6536	necã
+#536	AnnotatorNotes T536	NodeID = aleman2000/37/6/annotation/9
+T537	head 6538 6546	neñocã
+#537	AnnotatorNotes T537	NodeID = aleman2000/37/6/annotation/10
+T538	Desano 6538 6546	neñocã
+#538	AnnotatorNotes T538	NodeID = aleman2000/37/6/annotation/10
+T539	des 6538 6546	neñocã
+#539	AnnotatorNotes T539	NodeID = aleman2000/37/6/annotation/10
+T540	pos 6676 6681	inan.
+#540	AnnotatorNotes T540	NodeID = aleman2000/37/8/annotation/1
+T541	translation 6682 6688	lengua
+#541	AnnotatorNotes T541	NodeID = aleman2000/37/8/annotation/2
+T542	Español 6682 6688	lengua
+#542	AnnotatorNotes T542	NodeID = aleman2000/37/8/annotation/2
+T543	spa 6682 6688	lengua
+#543	AnnotatorNotes T543	NodeID = aleman2000/37/8/annotation/2
+T544	head 6656 6660	nero
+#544	AnnotatorNotes T544	NodeID = aleman2000/37/8/annotation/10
+T545	Desano 6656 6660	nero
+#545	AnnotatorNotes T545	NodeID = aleman2000/37/8/annotation/10
+T546	des 6656 6660	nero
+#546	AnnotatorNotes T546	NodeID = aleman2000/37/8/annotation/10
+T547	head 6662 6668	nediru
+#547	AnnotatorNotes T547	NodeID = aleman2000/37/8/annotation/12
+T548	Desano 6662 6668	nediru
+#548	AnnotatorNotes T548	NodeID = aleman2000/37/8/annotation/12
+T549	des 6662 6668	nediru
+#549	AnnotatorNotes T549	NodeID = aleman2000/37/8/annotation/12
+T550	pos 6759 6761	f.
+#550	AnnotatorNotes T550	NodeID = aleman2000/38/5/annotation/1
+T551	translation 6772 6779	mujeres
+#551	AnnotatorNotes T551	NodeID = aleman2000/38/5/annotation/3
+T552	Español 6772 6779	mujeres
+#552	AnnotatorNotes T552	NodeID = aleman2000/38/5/annotation/3
+T553	spa 6772 6779	mujeres
+#553	AnnotatorNotes T553	NodeID = aleman2000/38/5/annotation/3
+T554	translation 6764 6770	mujer
+#554	AnnotatorNotes T554	NodeID = aleman2000/38/5/annotation/7
+T555	Español 6764 6770	mujer
+#555	AnnotatorNotes T555	NodeID = aleman2000/38/5/annotation/7
+T556	spa 6764 6770	mujer
+#556	AnnotatorNotes T556	NodeID = aleman2000/38/5/annotation/7
+T557	translation 6794 6800	hembra
+#557	AnnotatorNotes T557	NodeID = aleman2000/38/5/annotation/10
+T558	Español 6794 6800	hembra
+#558	AnnotatorNotes T558	NodeID = aleman2000/38/5/annotation/10
+T559	spa 6794 6800	hembra
+#559	AnnotatorNotes T559	NodeID = aleman2000/38/5/annotation/10
+T560	head 6752 6758	noméo
+#560	AnnotatorNotes T560	NodeID = aleman2000/38/5/annotation/12
+T561	Desano 6752 6758	noméo
+#561	AnnotatorNotes T561	NodeID = aleman2000/38/5/annotation/12
+T562	des 6752 6758	noméo
+#562	AnnotatorNotes T562	NodeID = aleman2000/38/5/annotation/12
+T563	translation 6909 6915	partir
+#563	AnnotatorNotes T563	NodeID = aleman2000/38/7/annotation/0
+T564	Español 6909 6915	partir
+#564	AnnotatorNotes T564	NodeID = aleman2000/38/7/annotation/0
+T565	spa 6909 6915	partir
+#565	AnnotatorNotes T565	NodeID = aleman2000/38/7/annotation/0
+T566	translation 6917 6938	quebrar (cosas duras)
+#566	AnnotatorNotes T566	NodeID = aleman2000/38/7/annotation/4
+T567	Español 6917 6938	quebrar (cosas duras)
+#567	AnnotatorNotes T567	NodeID = aleman2000/38/7/annotation/4
+T568	spa 6917 6938	quebrar (cosas duras)
+#568	AnnotatorNotes T568	NodeID = aleman2000/38/7/annotation/4
+T569	pos 6904 6908	v.t.
+#569	AnnotatorNotes T569	NodeID = aleman2000/38/7/annotation/7
+T570	head 6894 6903	núariñe
+#570	AnnotatorNotes T570	NodeID = aleman2000/38/7/annotation/11
+T571	Desano 6894 6903	núariñe
+#571	AnnotatorNotes T571	NodeID = aleman2000/38/7/annotation/11
+T572	des 6894 6903	núariñe
+#572	AnnotatorNotes T572	NodeID = aleman2000/38/7/annotation/11
+T573	pos 7004 7008	v.i.
+#573	AnnotatorNotes T573	NodeID = aleman2000/38/10/annotation/1
+T574	head 6996 7003	nuhriri
+#574	AnnotatorNotes T574	NodeID = aleman2000/38/10/annotation/3
+T575	Desano 6996 7003	nuhriri
+#575	AnnotatorNotes T575	NodeID = aleman2000/38/10/annotation/3
+T576	des 6996 7003	nuhriri
+#576	AnnotatorNotes T576	NodeID = aleman2000/38/10/annotation/3
+T577	translation 7019 7042	quebrarse (cosas duras)
+#577	AnnotatorNotes T577	NodeID = aleman2000/38/10/annotation/6
+T578	Español 7019 7042	quebrarse (cosas duras)
+#578	AnnotatorNotes T578	NodeID = aleman2000/38/10/annotation/6
+T579	spa 7019 7042	quebrarse (cosas duras)
+#579	AnnotatorNotes T579	NodeID = aleman2000/38/10/annotation/6
+T580	translation 7009 7017	partirse
+#580	AnnotatorNotes T580	NodeID = aleman2000/38/10/annotation/9
+T581	Español 7009 7017	partirse
+#581	AnnotatorNotes T581	NodeID = aleman2000/38/10/annotation/9
+T582	spa 7009 7017	partirse
+#582	AnnotatorNotes T582	NodeID = aleman2000/38/10/annotation/9
+T583	pos 7125 7133	s. de m.
+#583	AnnotatorNotes T583	NodeID = aleman2000/38/11/annotation/0
+T584	head 7120 7124	nuja
+#584	AnnotatorNotes T584	NodeID = aleman2000/38/11/annotation/5
+T585	Desano 7120 7124	nuja
+#585	AnnotatorNotes T585	NodeID = aleman2000/38/11/annotation/5
+T586	des 7120 7124	nuja
+#586	AnnotatorNotes T586	NodeID = aleman2000/38/11/annotation/5
+T587	translation 7134 7140	ceniza
+#587	AnnotatorNotes T587	NodeID = aleman2000/38/11/annotation/6
+T588	Español 7134 7140	ceniza
+#588	AnnotatorNotes T588	NodeID = aleman2000/38/11/annotation/6
+T589	spa 7134 7140	ceniza
+#589	AnnotatorNotes T589	NodeID = aleman2000/38/11/annotation/6
+T590	translation 7242 7247	selva
+#590	AnnotatorNotes T590	NodeID = aleman2000/38/18/annotation/1
+T591	Español 7242 7247	selva
+#591	AnnotatorNotes T591	NodeID = aleman2000/38/18/annotation/1
+T592	spa 7242 7247	selva
+#592	AnnotatorNotes T592	NodeID = aleman2000/38/18/annotation/1
+T593	translation 7227 7233	bosque
+#593	AnnotatorNotes T593	NodeID = aleman2000/38/18/annotation/4
+T594	Español 7227 7233	bosque
+#594	AnnotatorNotes T594	NodeID = aleman2000/38/18/annotation/4
+T595	spa 7227 7233	bosque
+#595	AnnotatorNotes T595	NodeID = aleman2000/38/18/annotation/4
+T596	pos 7221 7226	inan.
+#596	AnnotatorNotes T596	NodeID = aleman2000/38/18/annotation/7
+T597	translation 7235 7240	monte
+#597	AnnotatorNotes T597	NodeID = aleman2000/38/18/annotation/8
+T598	Español 7235 7240	monte
+#598	AnnotatorNotes T598	NodeID = aleman2000/38/18/annotation/8
+T599	spa 7235 7240	monte
+#599	AnnotatorNotes T599	NodeID = aleman2000/38/18/annotation/8
+T600	head 7216 7220	nʉgʉ
+#600	AnnotatorNotes T600	NodeID = aleman2000/38/18/annotation/14
+T601	Desano 7216 7220	nʉgʉ
+#601	AnnotatorNotes T601	NodeID = aleman2000/38/18/annotation/14
+T602	des 7216 7220	nʉgʉ
+#602	AnnotatorNotes T602	NodeID = aleman2000/38/18/annotation/14
+T603	pos 7328 7330	m.
+#603	AnnotatorNotes T603	NodeID = aleman2000/39/16/annotation/1
+T604	translation 7331 7337	venado
+#604	AnnotatorNotes T604	NodeID = aleman2000/39/16/annotation/4
+T605	Español 7331 7337	venado
+#605	AnnotatorNotes T605	NodeID = aleman2000/39/16/annotation/4
+T606	spa 7331 7337	venado
+#606	AnnotatorNotes T606	NodeID = aleman2000/39/16/annotation/4
+T607	head 7322 7327	ñama
+#607	AnnotatorNotes T607	NodeID = aleman2000/39/16/annotation/7
+T608	Desano 7322 7327	ñama
+#608	AnnotatorNotes T608	NodeID = aleman2000/39/16/annotation/7
+T609	des 7322 7327	ñama
+#609	AnnotatorNotes T609	NodeID = aleman2000/39/16/annotation/7
+T610	translation 7428 7435	apretar
+#610	AnnotatorNotes T610	NodeID = aleman2000/41/1/annotation/0
+T611	Español 7428 7435	apretar
+#611	AnnotatorNotes T611	NodeID = aleman2000/41/1/annotation/0
+T612	spa 7428 7435	apretar
+#612	AnnotatorNotes T612	NodeID = aleman2000/41/1/annotation/0
+T613	head 7394 7407	ñehadiuriñe
+#613	AnnotatorNotes T613	NodeID = aleman2000/41/1/annotation/3
+T614	Desano 7394 7407	ñehadiuriñe
+#614	AnnotatorNotes T614	NodeID = aleman2000/41/1/annotation/3
+T615	des 7394 7407	ñehadiuriñe
+#615	AnnotatorNotes T615	NodeID = aleman2000/41/1/annotation/3
+T616	head 7409 7422	ñéadiuriñe
+#616	AnnotatorNotes T616	NodeID = aleman2000/41/1/annotation/6
+T617	Desano 7409 7422	ñéadiuriñe
+#617	AnnotatorNotes T617	NodeID = aleman2000/41/1/annotation/6
+T618	des 7409 7422	ñéadiuriñe
+#618	AnnotatorNotes T618	NodeID = aleman2000/41/1/annotation/6
+T619	pos 7423 7427	v.t.
+#619	AnnotatorNotes T619	NodeID = aleman2000/41/1/annotation/10
+T620	pos 7537 7541	adv.
+#620	AnnotatorNotes T620	NodeID = aleman2000/41/4/annotation/0
+T621	head 7531 7536	ñero
+#621	AnnotatorNotes T621	NodeID = aleman2000/41/4/annotation/5
+T622	Desano 7531 7536	ñero
+#622	AnnotatorNotes T622	NodeID = aleman2000/41/4/annotation/5
+T623	des 7531 7536	ñero
+#623	AnnotatorNotes T623	NodeID = aleman2000/41/4/annotation/5
+T624	translation 7542 7545	mal
+#624	AnnotatorNotes T624	NodeID = aleman2000/41/4/annotation/8
+T625	Español 7542 7545	mal
+#625	AnnotatorNotes T625	NodeID = aleman2000/41/4/annotation/8
+T626	spa 7542 7545	mal
+#626	AnnotatorNotes T626	NodeID = aleman2000/41/4/annotation/8
+T627	pos 7619 7624	inan.
+#627	AnnotatorNotes T627	NodeID = aleman2000/41/6/annotation/0
+T628	translation 7625 7631	pierna
+#628	AnnotatorNotes T628	NodeID = aleman2000/41/6/annotation/3
+T629	Español 7625 7631	pierna
+#629	AnnotatorNotes T629	NodeID = aleman2000/41/6/annotation/3
+T630	spa 7625 7631	pierna
+#630	AnnotatorNotes T630	NodeID = aleman2000/41/6/annotation/3
+T631	head 7610 7618	ñigãgʉ
+#631	AnnotatorNotes T631	NodeID = aleman2000/41/6/annotation/6
+T632	Desano 7610 7618	ñigãgʉ
+#632	AnnotatorNotes T632	NodeID = aleman2000/41/6/annotation/6
+T633	des 7610 7618	ñigãgʉ
+#633	AnnotatorNotes T633	NodeID = aleman2000/41/6/annotation/6
+T634	translation 7794 7801	rodilla
+#634	AnnotatorNotes T634	NodeID = aleman2000/41/7/annotation/2
+T635	Español 7794 7801	rodilla
+#635	AnnotatorNotes T635	NodeID = aleman2000/41/7/annotation/2
+T636	spa 7794 7801	rodilla
+#636	AnnotatorNotes T636	NodeID = aleman2000/41/7/annotation/2
+T637	head 7769 7783	ñigá cúriru
+#637	AnnotatorNotes T637	NodeID = aleman2000/41/7/annotation/6
+T638	Desano 7769 7783	ñigá cúriru
+#638	AnnotatorNotes T638	NodeID = aleman2000/41/7/annotation/6
+T639	des 7769 7783	ñigá cúriru
+#639	AnnotatorNotes T639	NodeID = aleman2000/41/7/annotation/6
+T640	head 7754 7763	ñigacuru
+#640	AnnotatorNotes T640	NodeID = aleman2000/41/7/annotation/12
+T641	Desano 7754 7763	ñigacuru
+#641	AnnotatorNotes T641	NodeID = aleman2000/41/7/annotation/12
+T642	des 7754 7763	ñigacuru
+#642	AnnotatorNotes T642	NodeID = aleman2000/41/7/annotation/12
+T643	pos 7788 7793	inan.
+#643	AnnotatorNotes T643	NodeID = aleman2000/41/7/annotation/14
+T644	head 7743 7752	ñigʉcuru
+#644	AnnotatorNotes T644	NodeID = aleman2000/41/7/annotation/15
+T645	Desano 7743 7752	ñigʉcuru
+#645	AnnotatorNotes T645	NodeID = aleman2000/41/7/annotation/15
+T646	des 7743 7752	ñigʉcuru
+#646	AnnotatorNotes T646	NodeID = aleman2000/41/7/annotation/15
+T647	translation 8040 8045	vivir
+#647	AnnotatorNotes T647	NodeID = aleman2000/42/11/annotation/0
+T648	Español 8040 8045	vivir
+#648	AnnotatorNotes T648	NodeID = aleman2000/42/11/annotation/0
+T649	spa 8040 8045	vivir
+#649	AnnotatorNotes T649	NodeID = aleman2000/42/11/annotation/0
+T650	pos 8035 8039	v.i.
+#650	AnnotatorNotes T650	NodeID = aleman2000/42/11/annotation/4
+T651	head 8025 8034	ojocariri
+#651	AnnotatorNotes T651	NodeID = aleman2000/42/11/annotation/8
+T652	Desano 8025 8034	ojocariri
+#652	AnnotatorNotes T652	NodeID = aleman2000/42/11/annotation/8
+T653	des 8025 8034	ojocariri
+#653	AnnotatorNotes T653	NodeID = aleman2000/42/11/annotation/8
+T654	translation 8128 8134	poseer
+#654	AnnotatorNotes T654	NodeID = aleman2000/43/6/annotation/1
+T655	Español 8128 8134	poseer
+#655	AnnotatorNotes T655	NodeID = aleman2000/43/6/annotation/1
+T656	spa 8128 8134	poseer
+#656	AnnotatorNotes T656	NodeID = aleman2000/43/6/annotation/1
+T657	pos 8123 8127	v.t.
+#657	AnnotatorNotes T657	NodeID = aleman2000/43/6/annotation/3
+T658	translation 8136 8141	tener
+#658	AnnotatorNotes T658	NodeID = aleman2000/43/6/annotation/7
+T659	Español 8136 8141	tener
+#659	AnnotatorNotes T659	NodeID = aleman2000/43/6/annotation/7
+T660	spa 8136 8141	tener
+#660	AnnotatorNotes T660	NodeID = aleman2000/43/6/annotation/7
+T661	head 8117 8122	opari
+#661	AnnotatorNotes T661	NodeID = aleman2000/43/6/annotation/9
+T662	Desano 8117 8122	opari
+#662	AnnotatorNotes T662	NodeID = aleman2000/43/6/annotation/9
+T663	des 8117 8122	opari
+#663	AnnotatorNotes T663	NodeID = aleman2000/43/6/annotation/9
+T664	pos 8224 8228	v.t.
+#664	AnnotatorNotes T664	NodeID = aleman2000/43/9/annotation/1
+T665	translation 8229 8232	dar
+#665	AnnotatorNotes T665	NodeID = aleman2000/43/9/annotation/2
+T666	Español 8229 8232	dar
+#666	AnnotatorNotes T666	NodeID = aleman2000/43/9/annotation/2
+T667	spa 8229 8232	dar
+#667	AnnotatorNotes T667	NodeID = aleman2000/43/9/annotation/2
+T668	head 8219 8223	óri
+#668	AnnotatorNotes T668	NodeID = aleman2000/43/9/annotation/7
+T669	Desano 8219 8223	óri
+#669	AnnotatorNotes T669	NodeID = aleman2000/43/9/annotation/7
+T670	des 8219 8223	óri
+#670	AnnotatorNotes T670	NodeID = aleman2000/43/9/annotation/7
+T671	translation 8316 8321	pegar
+#671	AnnotatorNotes T671	NodeID = aleman2000/44/6/annotation/1
+T672	Español 8316 8321	pegar
+#672	AnnotatorNotes T672	NodeID = aleman2000/44/6/annotation/1
+T673	spa 8316 8321	pegar
+#673	AnnotatorNotes T673	NodeID = aleman2000/44/6/annotation/1
+T674	pos 8302 8306	v.t.
+#674	AnnotatorNotes T674	NodeID = aleman2000/44/6/annotation/4
+T675	head 8296 8301	paari
+#675	AnnotatorNotes T675	NodeID = aleman2000/44/6/annotation/6
+T676	Desano 8296 8301	paari
+#676	AnnotatorNotes T676	NodeID = aleman2000/44/6/annotation/6
+T677	des 8296 8301	paari
+#677	AnnotatorNotes T677	NodeID = aleman2000/44/6/annotation/6
+T678	translation 8307 8314	golpear
+#678	AnnotatorNotes T678	NodeID = aleman2000/44/6/annotation/9
+T679	Español 8307 8314	golpear
+#679	AnnotatorNotes T679	NodeID = aleman2000/44/6/annotation/9
+T680	spa 8307 8314	golpear
+#680	AnnotatorNotes T680	NodeID = aleman2000/44/6/annotation/9
+T681	translation 8427 8432	madre
+#681	AnnotatorNotes T681	NodeID = aleman2000/44/9/annotation/1
+T682	Español 8427 8432	madre
+#682	AnnotatorNotes T682	NodeID = aleman2000/44/9/annotation/1
+T683	spa 8427 8432	madre
+#683	AnnotatorNotes T683	NodeID = aleman2000/44/9/annotation/1
+T684	head 8390 8394	pago
+#684	AnnotatorNotes T684	NodeID = aleman2000/44/9/annotation/5
+T685	Desano 8390 8394	pago
+#685	AnnotatorNotes T685	NodeID = aleman2000/44/9/annotation/5
+T686	des 8390 8394	pago
+#686	AnnotatorNotes T686	NodeID = aleman2000/44/9/annotation/5
+T687	translation 8420 8425	padre
+#687	AnnotatorNotes T687	NodeID = aleman2000/44/9/annotation/7
+T688	Español 8420 8425	padre
+#688	AnnotatorNotes T688	NodeID = aleman2000/44/9/annotation/7
+T689	spa 8420 8425	padre
+#689	AnnotatorNotes T689	NodeID = aleman2000/44/9/annotation/7
+T690	translation 8434 8440	padres
+#690	AnnotatorNotes T690	NodeID = aleman2000/44/9/annotation/10
+T691	Español 8434 8440	padres
+#691	AnnotatorNotes T691	NodeID = aleman2000/44/9/annotation/10
+T692	spa 8434 8440	padres
+#692	AnnotatorNotes T692	NodeID = aleman2000/44/9/annotation/10
+T693	pos 8408 8419	m., f., pl.
+#693	AnnotatorNotes T693	NodeID = aleman2000/44/9/annotation/13
+T694	head 8384 8388	pagʉ
+#694	AnnotatorNotes T694	NodeID = aleman2000/44/9/annotation/16
+T695	Desano 8384 8388	pagʉ
+#695	AnnotatorNotes T695	NodeID = aleman2000/44/9/annotation/16
+T696	des 8384 8388	pagʉ
+#696	AnnotatorNotes T696	NodeID = aleman2000/44/9/annotation/16
+T697	head 8396 8407	pagʉsʉmarã
+#697	AnnotatorNotes T697	NodeID = aleman2000/44/9/annotation/17
+T698	Desano 8396 8407	pagʉsʉmarã
+#698	AnnotatorNotes T698	NodeID = aleman2000/44/9/annotation/17
+T699	des 8396 8407	pagʉsʉmarã
+#699	AnnotatorNotes T699	NodeID = aleman2000/44/9/annotation/17
+T700	pos 8518 8523	inan.
+#700	AnnotatorNotes T700	NodeID = aleman2000/45/1/annotation/1
+T701	head 8513 8517	paru
+#701	AnnotatorNotes T701	NodeID = aleman2000/45/1/annotation/4
+T702	Desano 8513 8517	paru
+#702	AnnotatorNotes T702	NodeID = aleman2000/45/1/annotation/4
+T703	des 8513 8517	paru
+#703	AnnotatorNotes T703	NodeID = aleman2000/45/1/annotation/4
+T704	translation 8533 8542	estómago
+#704	AnnotatorNotes T704	NodeID = aleman2000/45/1/annotation/7
+T705	Español 8533 8542	estómago
+#705	AnnotatorNotes T705	NodeID = aleman2000/45/1/annotation/7
+T706	spa 8533 8542	estómago
+#706	AnnotatorNotes T706	NodeID = aleman2000/45/1/annotation/7
+T707	translation 8524 8531	barriga
+#707	AnnotatorNotes T707	NodeID = aleman2000/45/1/annotation/9
+T708	Español 8524 8531	barriga
+#708	AnnotatorNotes T708	NodeID = aleman2000/45/1/annotation/9
+T709	spa 8524 8531	barriga
+#709	AnnotatorNotes T709	NodeID = aleman2000/45/1/annotation/9
+T710	pos 8619 8623	v.i.
+#710	AnnotatorNotes T710	NodeID = aleman2000/45/8/annotation/1
+T711	head 8611 8618	páyari
+#711	AnnotatorNotes T711	NodeID = aleman2000/45/8/annotation/3
+T712	Desano 8611 8618	páyari
+#712	AnnotatorNotes T712	NodeID = aleman2000/45/8/annotation/3
+T713	des 8611 8618	páyari
+#713	AnnotatorNotes T713	NodeID = aleman2000/45/8/annotation/3
+T714	translation 8624 8630	flotar
+#714	AnnotatorNotes T714	NodeID = aleman2000/45/8/annotation/6
+T715	Español 8624 8630	flotar
+#715	AnnotatorNotes T715	NodeID = aleman2000/45/8/annotation/6
+T716	spa 8624 8630	flotar
+#716	AnnotatorNotes T716	NodeID = aleman2000/45/8/annotation/6
+T717	translation 8753 8759	fogón
+#717	AnnotatorNotes T717	NodeID = aleman2000/46/1/annotation/0
+T718	Español 8753 8759	fogón
+#718	AnnotatorNotes T718	NodeID = aleman2000/46/1/annotation/0
+T719	spa 8753 8759	fogón
+#719	AnnotatorNotes T719	NodeID = aleman2000/46/1/annotation/0
+T720	pos 8744 8749	inan.
+#720	AnnotatorNotes T720	NodeID = aleman2000/46/1/annotation/3
+T721	translation 8841 8846	fuego
+#721	AnnotatorNotes T721	NodeID = aleman2000/46/1/annotation/5
+T722	Español 8841 8846	fuego
+#722	AnnotatorNotes T722	NodeID = aleman2000/46/1/annotation/5
+T723	spa 8841 8846	fuego
+#723	AnnotatorNotes T723	NodeID = aleman2000/46/1/annotation/5
+T724	head 8738 8743	peame
+#724	AnnotatorNotes T724	NodeID = aleman2000/46/1/annotation/8
+T725	Desano 8738 8743	peame
+#725	AnnotatorNotes T725	NodeID = aleman2000/46/1/annotation/8
+T726	des 8738 8743	peame
+#726	AnnotatorNotes T726	NodeID = aleman2000/46/1/annotation/8
+T727	pos 8965 8974	s.v.inan.
+#727	AnnotatorNotes T727	NodeID = aleman2000/46/2/annotation/0
+T728	head 8946 8964	peame ímica buiri
+#728	AnnotatorNotes T728	NodeID = aleman2000/46/2/annotation/4
+T729	Desano 8946 8964	peame ímica buiri
+#729	AnnotatorNotes T729	NodeID = aleman2000/46/2/annotation/4
+T730	des 8946 8964	peame ímica buiri
+#730	AnnotatorNotes T730	NodeID = aleman2000/46/2/annotation/4
+T731	translation 8975 8979	humo
+#731	AnnotatorNotes T731	NodeID = aleman2000/46/2/annotation/8
+T732	Español 8975 8979	humo
+#732	AnnotatorNotes T732	NodeID = aleman2000/46/2/annotation/8
+T733	spa 8975 8979	humo
+#733	AnnotatorNotes T733	NodeID = aleman2000/46/2/annotation/8
+T734	pos 9003 9008	inan.
+#734	AnnotatorNotes T734	NodeID = aleman2000/48/4/annotation/1
+T735	translation 9009 9013	cola
+#735	AnnotatorNotes T735	NodeID = aleman2000/48/4/annotation/2
+T736	Español 9009 9013	cola
+#736	AnnotatorNotes T736	NodeID = aleman2000/48/4/annotation/2
+T737	spa 9009 9013	cola
+#737	AnnotatorNotes T737	NodeID = aleman2000/48/4/annotation/2
+T738	head 8994 9002	pĩgũru
+#738	AnnotatorNotes T738	NodeID = aleman2000/48/4/annotation/5
+T739	Desano 8994 9002	pĩgũru
+#739	AnnotatorNotes T739	NodeID = aleman2000/48/4/annotation/5
+T740	des 8994 9002	pĩgũru
+#740	AnnotatorNotes T740	NodeID = aleman2000/48/4/annotation/5
+T741	translation 9112 9117	pluma
+#741	AnnotatorNotes T741	NodeID = aleman2000/48/8/annotation/2
+T742	Español 9112 9117	pluma
+#742	AnnotatorNotes T742	NodeID = aleman2000/48/8/annotation/2
+T743	spa 9112 9117	pluma
+#743	AnnotatorNotes T743	NodeID = aleman2000/48/8/annotation/2
+T744	pos 9097 9102	inan.
+#744	AnnotatorNotes T744	NodeID = aleman2000/48/8/annotation/3
+T745	translation 9103 9110	cabello
+#745	AnnotatorNotes T745	NodeID = aleman2000/48/8/annotation/5
+T746	Español 9103 9110	cabello
+#746	AnnotatorNotes T746	NodeID = aleman2000/48/8/annotation/5
+T747	spa 9103 9110	cabello
+#747	AnnotatorNotes T747	NodeID = aleman2000/48/8/annotation/5
+T748	head 9091 9096	poari
+#748	AnnotatorNotes T748	NodeID = aleman2000/48/8/annotation/10
+T749	Desano 9091 9096	poari
+#749	AnnotatorNotes T749	NodeID = aleman2000/48/8/annotation/10
+T750	des 9091 9096	poari
+#750	AnnotatorNotes T750	NodeID = aleman2000/48/8/annotation/10
+T751	pos 9214 9219	inan.
+#751	AnnotatorNotes T751	NodeID = aleman2000/49/1/annotation/1
+T752	translation 9220 9224	cola
+#752	AnnotatorNotes T752	NodeID = aleman2000/49/1/annotation/3
+T753	Español 9220 9224	cola
+#753	AnnotatorNotes T753	NodeID = aleman2000/49/1/annotation/3
+T754	spa 9220 9224	cola
+#754	AnnotatorNotes T754	NodeID = aleman2000/49/1/annotation/3
+T755	head 9207 9213	poreru
+#755	AnnotatorNotes T755	NodeID = aleman2000/49/1/annotation/5
+T756	Desano 9207 9213	poreru
+#756	AnnotatorNotes T756	NodeID = aleman2000/49/1/annotation/5
+T757	des 9207 9213	poreru
+#757	AnnotatorNotes T757	NodeID = aleman2000/49/1/annotation/5
+T758	translation 9253 9259	soplar
+#758	AnnotatorNotes T758	NodeID = aleman2000/49/12/annotation/1
+T759	Español 9253 9259	soplar
+#759	AnnotatorNotes T759	NodeID = aleman2000/49/12/annotation/1
+T760	spa 9253 9259	soplar
+#760	AnnotatorNotes T760	NodeID = aleman2000/49/12/annotation/1
+T761	head 9241 9247	puriri
+#761	AnnotatorNotes T761	NodeID = aleman2000/49/12/annotation/4
+T762	Desano 9241 9247	puriri
+#762	AnnotatorNotes T762	NodeID = aleman2000/49/12/annotation/4
+T763	des 9241 9247	puriri
+#763	AnnotatorNotes T763	NodeID = aleman2000/49/12/annotation/4
+T764	pos 9248 9252	v.i.
+#764	AnnotatorNotes T764	NodeID = aleman2000/49/12/annotation/7
+T765	pos 9359 9364	inan.
+#765	AnnotatorNotes T765	NodeID = aleman2000/49/15/annotation/0
+T766	translation 9365 9369	hoja
+#766	AnnotatorNotes T766	NodeID = aleman2000/49/15/annotation/3
+T767	Español 9365 9369	hoja
+#767	AnnotatorNotes T767	NodeID = aleman2000/49/15/annotation/3
+T768	spa 9365 9369	hoja
+#768	AnnotatorNotes T768	NodeID = aleman2000/49/15/annotation/3
+T769	head 9355 9358	pũ
+#769	AnnotatorNotes T769	NodeID = aleman2000/49/15/annotation/7
+T770	Desano 9355 9358	pũ
+#770	AnnotatorNotes T770	NodeID = aleman2000/49/15/annotation/7
+T771	des 9355 9358	pũ
+#771	AnnotatorNotes T771	NodeID = aleman2000/49/15/annotation/7
+T772	head 9441 9447	pʉripʉ
+#772	AnnotatorNotes T772	NodeID = aleman2000/50/8/annotation/1
+T773	Desano 9441 9447	pʉripʉ
+#773	AnnotatorNotes T773	NodeID = aleman2000/50/8/annotation/1
+T774	des 9441 9447	pʉripʉ
+#774	AnnotatorNotes T774	NodeID = aleman2000/50/8/annotation/1
+T775	pos 9452 9457	inan.
+#775	AnnotatorNotes T775	NodeID = aleman2000/50/8/annotation/5
+T776	head 9433 9439	pʉrʉpʉ
+#776	AnnotatorNotes T776	NodeID = aleman2000/50/8/annotation/7
+T777	Desano 9433 9439	pʉrʉpʉ
+#777	AnnotatorNotes T777	NodeID = aleman2000/50/8/annotation/7
+T778	des 9433 9439	pʉrʉpʉ
+#778	AnnotatorNotes T778	NodeID = aleman2000/50/8/annotation/7
+T779	translation 9458 9465	espalda
+#779	AnnotatorNotes T779	NodeID = aleman2000/50/8/annotation/10
+T780	Español 9458 9465	espalda
+#780	AnnotatorNotes T780	NodeID = aleman2000/50/8/annotation/10
+T781	spa 9458 9465	espalda
+#781	AnnotatorNotes T781	NodeID = aleman2000/50/8/annotation/10
+T782	translation 9561 9574	correctamente
+#782	AnnotatorNotes T782	NodeID = aleman2000/50/10/annotation/1
+T783	Español 9561 9574	correctamente
+#783	AnnotatorNotes T783	NodeID = aleman2000/50/10/annotation/1
+T784	spa 9561 9574	correctamente
+#784	AnnotatorNotes T784	NodeID = aleman2000/50/10/annotation/1
+T785	head 9549 9555	queoro
+#785	AnnotatorNotes T785	NodeID = aleman2000/50/10/annotation/6
+T786	Desano 9549 9555	queoro
+#786	AnnotatorNotes T786	NodeID = aleman2000/50/10/annotation/6
+T787	des 9549 9555	queoro
+#787	AnnotatorNotes T787	NodeID = aleman2000/50/10/annotation/6
+T788	pos 9556 9560	adv.
+#788	AnnotatorNotes T788	NodeID = aleman2000/50/10/annotation/8
+T789	pos 9634 9639	inan.
+#789	AnnotatorNotes T789	NodeID = aleman2000/51/1/annotation/1
+T790	translation 9640 9643	ala
+#790	AnnotatorNotes T790	NodeID = aleman2000/51/1/annotation/4
+T791	Español 9640 9643	ala
+#791	AnnotatorNotes T791	NodeID = aleman2000/51/1/annotation/4
+T792	spa 9640 9643	ala
+#792	AnnotatorNotes T792	NodeID = aleman2000/51/1/annotation/4
+T793	head 9625 9633	quẽdʉpʉ
+#793	AnnotatorNotes T793	NodeID = aleman2000/51/1/annotation/8
+T794	Desano 9625 9633	quẽdʉpʉ
+#794	AnnotatorNotes T794	NodeID = aleman2000/51/1/annotation/8
+T795	des 9625 9633	quẽdʉpʉ
+#795	AnnotatorNotes T795	NodeID = aleman2000/51/1/annotation/8
+T796	pos 9752 9757	inan.
+#796	AnnotatorNotes T796	NodeID = aleman2000/51/12/annotation/0
+T797	translation 9758 9763	cerca
+#797	AnnotatorNotes T797	NodeID = aleman2000/51/12/annotation/2
+T798	Español 9758 9763	cerca
+#798	AnnotatorNotes T798	NodeID = aleman2000/51/12/annotation/2
+T799	spa 9758 9763	cerca
+#799	AnnotatorNotes T799	NodeID = aleman2000/51/12/annotation/2
+T800	head 9742 9751	sãhrĩro
+#800	AnnotatorNotes T800	NodeID = aleman2000/51/12/annotation/6
+T801	Desano 9742 9751	sãhrĩro
+#801	AnnotatorNotes T801	NodeID = aleman2000/51/12/annotation/6
+T802	des 9742 9751	sãhrĩro
+#802	AnnotatorNotes T802	NodeID = aleman2000/51/12/annotation/6
+T803	translation 9914 9921	excavar
+#803	AnnotatorNotes T803	NodeID = aleman2000/52/4/annotation/2
+T804	Español 9914 9921	excavar
+#804	AnnotatorNotes T804	NodeID = aleman2000/52/4/annotation/2
+T805	spa 9914 9921	excavar
+#805	AnnotatorNotes T805	NodeID = aleman2000/52/4/annotation/2
+T806	head 9895 9901	séari
+#806	AnnotatorNotes T806	NodeID = aleman2000/52/4/annotation/4
+T807	Desano 9895 9901	séari
+#807	AnnotatorNotes T807	NodeID = aleman2000/52/4/annotation/4
+T808	des 9895 9901	séari
+#808	AnnotatorNotes T808	NodeID = aleman2000/52/4/annotation/4
+T809	translation 9907 9912	cavar
+#809	AnnotatorNotes T809	NodeID = aleman2000/52/4/annotation/8
+T810	Español 9907 9912	cavar
+#810	AnnotatorNotes T810	NodeID = aleman2000/52/4/annotation/8
+T811	spa 9907 9912	cavar
+#811	AnnotatorNotes T811	NodeID = aleman2000/52/4/annotation/8
+T812	pos 9902 9906	v.t.
+#812	AnnotatorNotes T812	NodeID = aleman2000/52/4/annotation/10
+T813	pos 10013 10017	v.i.
+#813	AnnotatorNotes T813	NodeID = aleman2000/53/8/annotation/0
+T814	head 10004 10012	sĩaĩri
+#814	AnnotatorNotes T814	NodeID = aleman2000/53/8/annotation/3
+T815	Desano 10004 10012	sĩaĩri
+#815	AnnotatorNotes T815	NodeID = aleman2000/53/8/annotation/3
+T816	des 10004 10012	sĩaĩri
+#816	AnnotatorNotes T816	NodeID = aleman2000/53/8/annotation/3
+T817	translation 10018 10026	respirar
+#817	AnnotatorNotes T817	NodeID = aleman2000/53/8/annotation/8
+T818	Español 10018 10026	respirar
+#818	AnnotatorNotes T818	NodeID = aleman2000/53/8/annotation/8
+T819	spa 10018 10026	respirar
+#819	AnnotatorNotes T819	NodeID = aleman2000/53/8/annotation/8
+T820	pos 10103 10107	v.i.
+#820	AnnotatorNotes T820	NodeID = aleman2000/53/15/annotation/0
+T821	translation 10108 10113	morir
+#821	AnnotatorNotes T821	NodeID = aleman2000/53/15/annotation/4
+T822	Español 10108 10113	morir
+#822	AnnotatorNotes T822	NodeID = aleman2000/53/15/annotation/4
+T823	spa 10108 10113	morir
+#823	AnnotatorNotes T823	NodeID = aleman2000/53/15/annotation/4
+T824	head 10094 10102	sĩrĩri
+#824	AnnotatorNotes T824	NodeID = aleman2000/53/15/annotation/5
+T825	Desano 10094 10102	sĩrĩri
+#825	AnnotatorNotes T825	NodeID = aleman2000/53/15/annotation/5
+T826	des 10094 10102	sĩrĩri
+#826	AnnotatorNotes T826	NodeID = aleman2000/53/15/annotation/5
+T827	head 10212 10217	soeri
+#827	AnnotatorNotes T827	NodeID = aleman2000/53/17/annotation/1
+T828	Desano 10212 10217	soeri
+#828	AnnotatorNotes T828	NodeID = aleman2000/53/17/annotation/1
+T829	des 10212 10217	soeri
+#829	AnnotatorNotes T829	NodeID = aleman2000/53/17/annotation/1
+T830	pos 10218 10222	v.t.
+#830	AnnotatorNotes T830	NodeID = aleman2000/53/17/annotation/4
+T831	translation 10223 10232	chamuscar
+#831	AnnotatorNotes T831	NodeID = aleman2000/53/17/annotation/6
+T832	Español 10223 10232	chamuscar
+#832	AnnotatorNotes T832	NodeID = aleman2000/53/17/annotation/6
+T833	spa 10223 10232	chamuscar
+#833	AnnotatorNotes T833	NodeID = aleman2000/53/17/annotation/6
+T834	translation 10234 10240	quemar
+#834	AnnotatorNotes T834	NodeID = aleman2000/53/17/annotation/10
+T835	Español 10234 10240	quemar
+#835	AnnotatorNotes T835	NodeID = aleman2000/53/17/annotation/10
+T836	spa 10234 10240	quemar
+#836	AnnotatorNotes T836	NodeID = aleman2000/53/17/annotation/10
+T837	translation 10339 10347	marearse
+#837	AnnotatorNotes T837	NodeID = aleman2000/54/8/annotation/2
+T838	Español 10339 10347	marearse
+#838	AnnotatorNotes T838	NodeID = aleman2000/54/8/annotation/2
+T839	spa 10339 10347	marearse
+#839	AnnotatorNotes T839	NodeID = aleman2000/54/8/annotation/2
+T840	head 10327 10333	soyari
+#840	AnnotatorNotes T840	NodeID = aleman2000/54/8/annotation/3
+T841	Desano 10327 10333	soyari
+#841	AnnotatorNotes T841	NodeID = aleman2000/54/8/annotation/3
+T842	des 10327 10333	soyari
+#842	AnnotatorNotes T842	NodeID = aleman2000/54/8/annotation/3
+T843	pos 10334 10338	v.i.
+#843	AnnotatorNotes T843	NodeID = aleman2000/54/8/annotation/7
+T844	translation 10440 10445	pasto
+#844	AnnotatorNotes T844	NodeID = aleman2000/55/10/annotation/1
+T845	Español 10440 10445	pasto
+#845	AnnotatorNotes T845	NodeID = aleman2000/55/10/annotation/1
+T846	spa 10440 10445	pasto
+#846	AnnotatorNotes T846	NodeID = aleman2000/55/10/annotation/1
+T847	pos 10426 10431	inan.
+#847	AnnotatorNotes T847	NodeID = aleman2000/55/10/annotation/3
+T848	translation 10432 10438	hierba
+#848	AnnotatorNotes T848	NodeID = aleman2000/55/10/annotation/6
+T849	Español 10432 10438	hierba
+#849	AnnotatorNotes T849	NodeID = aleman2000/55/10/annotation/6
+T850	spa 10432 10438	hierba
+#850	AnnotatorNotes T850	NodeID = aleman2000/55/10/annotation/6
+T851	head 10422 10425	taa
+#851	AnnotatorNotes T851	NodeID = aleman2000/55/10/annotation/11
+T852	Desano 10422 10425	taa
+#852	AnnotatorNotes T852	NodeID = aleman2000/55/10/annotation/11
+T853	des 10422 10425	taa
+#853	AnnotatorNotes T853	NodeID = aleman2000/55/10/annotation/11
+T854	pos 10511 10515	v.t.
+#854	AnnotatorNotes T854	NodeID = aleman2000/57/12/annotation/0
+T855	head 10503 10510	tubeori
+#855	AnnotatorNotes T855	NodeID = aleman2000/57/12/annotation/4
+T856	Desano 10503 10510	tubeori
+#856	AnnotatorNotes T856	NodeID = aleman2000/57/12/annotation/4
+T857	des 10503 10510	tubeori
+#857	AnnotatorNotes T857	NodeID = aleman2000/57/12/annotation/4
+T858	translation 10516 10523	empujar
+#858	AnnotatorNotes T858	NodeID = aleman2000/57/12/annotation/7
+T859	Español 10516 10523	empujar
+#859	AnnotatorNotes T859	NodeID = aleman2000/57/12/annotation/7
+T860	spa 10516 10523	empujar
+#860	AnnotatorNotes T860	NodeID = aleman2000/57/12/annotation/7
+T861	translation 10610 10618	partirse
+#861	AnnotatorNotes T861	NodeID = aleman2000/58/4/annotation/2
+T862	Español 10610 10618	partirse
+#862	AnnotatorNotes T862	NodeID = aleman2000/58/4/annotation/2
+T863	spa 10610 10618	partirse
+#863	AnnotatorNotes T863	NodeID = aleman2000/58/4/annotation/2
+T864	translation 10620 10643	quebrarse (cosas duras)
+#864	AnnotatorNotes T864	NodeID = aleman2000/58/4/annotation/4
+T865	Español 10620 10643	quebrarse (cosas duras)
+#865	AnnotatorNotes T865	NodeID = aleman2000/58/4/annotation/4
+T866	spa 10620 10643	quebrarse (cosas duras)
+#866	AnnotatorNotes T866	NodeID = aleman2000/58/4/annotation/4
+T867	head 10598 10604	tʉriri
+#867	AnnotatorNotes T867	NodeID = aleman2000/58/4/annotation/7
+T868	Desano 10598 10604	tʉriri
+#868	AnnotatorNotes T868	NodeID = aleman2000/58/4/annotation/7
+T869	des 10598 10604	tʉriri
+#869	AnnotatorNotes T869	NodeID = aleman2000/58/4/annotation/7
+T870	pos 10605 10609	v.i.
+#870	AnnotatorNotes T870	NodeID = aleman2000/58/4/annotation/10
+T871	translation 10746 10779	[estar] lleno/na (cosa inanimada)
+#871	AnnotatorNotes T871	NodeID = aleman2000/59/7/annotation/2
+T872	Español 10746 10779	[estar] lleno/na (cosa inanimada)
+#872	AnnotatorNotes T872	NodeID = aleman2000/59/7/annotation/2
+T873	spa 10746 10779	[estar] lleno/na (cosa inanimada)
+#873	AnnotatorNotes T873	NodeID = aleman2000/59/7/annotation/2
+T874	pos 10731 10735	v.i.
+#874	AnnotatorNotes T874	NodeID = aleman2000/59/7/annotation/3
+T875	head 10721 10730	ʉjʉtʉriri
+#875	AnnotatorNotes T875	NodeID = aleman2000/59/7/annotation/8
+T876	Desano 10721 10730	ʉjʉtʉriri
+#876	AnnotatorNotes T876	NodeID = aleman2000/59/7/annotation/8
+T877	des 10721 10730	ʉjʉtʉriri
+#877	AnnotatorNotes T877	NodeID = aleman2000/59/7/annotation/8
+T878	translation 10736 10744	llenarse
+#878	AnnotatorNotes T878	NodeID = aleman2000/59/7/annotation/10
+T879	Español 10736 10744	llenarse
+#879	AnnotatorNotes T879	NodeID = aleman2000/59/7/annotation/10
+T880	spa 10736 10744	llenarse
+#880	AnnotatorNotes T880	NodeID = aleman2000/59/7/annotation/10
+T881	translation 10891 10896	grasa
+#881	AnnotatorNotes T881	NodeID = aleman2000/59/8/annotation/1
+T882	Español 10891 10896	grasa
+#882	AnnotatorNotes T882	NodeID = aleman2000/59/8/annotation/1
+T883	spa 10891 10896	grasa
+#883	AnnotatorNotes T883	NodeID = aleman2000/59/8/annotation/1
+T884	head 10863 10866	ʉye
+#884	AnnotatorNotes T884	NodeID = aleman2000/59/8/annotation/4
+T885	Desano 10863 10866	ʉye
+#885	AnnotatorNotes T885	NodeID = aleman2000/59/8/annotation/4
+T886	des 10863 10866	ʉye
+#886	AnnotatorNotes T886	NodeID = aleman2000/59/8/annotation/4
+T887	pos 10874 10882	s. de m.
+#887	AnnotatorNotes T887	NodeID = aleman2000/59/8/annotation/6
+T888	translation 10883 10889	aceite
+#888	AnnotatorNotes T888	NodeID = aleman2000/59/8/annotation/13
+T889	Español 10883 10889	aceite
+#889	AnnotatorNotes T889	NodeID = aleman2000/59/8/annotation/13
+T890	spa 10883 10889	aceite
+#890	AnnotatorNotes T890	NodeID = aleman2000/59/8/annotation/13
+T891	head 10853 10856	ʉyi
+#891	AnnotatorNotes T891	NodeID = aleman2000/59/8/annotation/16
+T892	Desano 10853 10856	ʉyi
+#892	AnnotatorNotes T892	NodeID = aleman2000/59/8/annotation/16
+T893	des 10853 10856	ʉyi
+#893	AnnotatorNotes T893	NodeID = aleman2000/59/8/annotation/16
+T894	translation 10898 10905	manteca
+#894	AnnotatorNotes T894	NodeID = aleman2000/59/8/annotation/19
+T895	Español 10898 10905	manteca
+#895	AnnotatorNotes T895	NodeID = aleman2000/59/8/annotation/19
+T896	spa 10898 10905	manteca
+#896	AnnotatorNotes T896	NodeID = aleman2000/59/8/annotation/19
+T897	head 10858 10861	ʉyʉ
+#897	AnnotatorNotes T897	NodeID = aleman2000/59/8/annotation/20
+T898	Desano 10858 10861	ʉyʉ
+#898	AnnotatorNotes T898	NodeID = aleman2000/59/8/annotation/20
+T899	des 10858 10861	ʉyʉ
+#899	AnnotatorNotes T899	NodeID = aleman2000/59/8/annotation/20
+T900	pos 10965 10969	v.i.
+#900	AnnotatorNotes T900	NodeID = aleman2000/60/4/annotation/1
+T901	head 10957 10964	ʉ̃jʉ̃ri
+#901	AnnotatorNotes T901	NodeID = aleman2000/60/4/annotation/4
+T902	Desano 10957 10964	ʉ̃jʉ̃ri
+#902	AnnotatorNotes T902	NodeID = aleman2000/60/4/annotation/4
+T903	des 10957 10964	ʉ̃jʉ̃ri
+#903	AnnotatorNotes T903	NodeID = aleman2000/60/4/annotation/4
+T904	translation 10977 10987	encenderse
+#904	AnnotatorNotes T904	NodeID = aleman2000/60/4/annotation/8
+T905	Español 10977 10987	encenderse
+#905	AnnotatorNotes T905	NodeID = aleman2000/60/4/annotation/8
+T906	spa 10977 10987	encenderse
+#906	AnnotatorNotes T906	NodeID = aleman2000/60/4/annotation/8
+T907	translation 10970 10975	arder
+#907	AnnotatorNotes T907	NodeID = aleman2000/60/4/annotation/10
+T908	Español 10970 10975	arder
+#908	AnnotatorNotes T908	NodeID = aleman2000/60/4/annotation/10
+T909	spa 10970 10975	arder
+#909	AnnotatorNotes T909	NodeID = aleman2000/60/4/annotation/10
+T910	translation 10989 10997	quemarse
+#910	AnnotatorNotes T910	NodeID = aleman2000/60/4/annotation/13
+T911	Español 10989 10997	quemarse
+#911	AnnotatorNotes T911	NodeID = aleman2000/60/4/annotation/13
+T912	spa 10989 10997	quemarse
+#912	AnnotatorNotes T912	NodeID = aleman2000/60/4/annotation/13
+T913	pos 11095 11100	inan.
+#913	AnnotatorNotes T913	NodeID = aleman2000/60/8/annotation/1
+T914	head 11073 11080	ʉ̃mʉsĩ
+#914	AnnotatorNotes T914	NodeID = aleman2000/60/8/annotation/4
+T915	Desano 11073 11080	ʉ̃mʉsĩ
+#915	AnnotatorNotes T915	NodeID = aleman2000/60/8/annotation/4
+T916	des 11073 11080	ʉ̃mʉsĩ
+#916	AnnotatorNotes T916	NodeID = aleman2000/60/8/annotation/4
+T917	translation 11101 11106	cielo
+#917	AnnotatorNotes T917	NodeID = aleman2000/60/8/annotation/7
+T918	Español 11101 11106	cielo
+#918	AnnotatorNotes T918	NodeID = aleman2000/60/8/annotation/7
+T919	spa 11101 11106	cielo
+#919	AnnotatorNotes T919	NodeID = aleman2000/60/8/annotation/7
+T920	head 11082 11090	ʉ̃hmʉsẽ
+#920	AnnotatorNotes T920	NodeID = aleman2000/60/8/annotation/10
+T921	Desano 11082 11090	ʉ̃hmʉsẽ
+#921	AnnotatorNotes T921	NodeID = aleman2000/60/8/annotation/10
+T922	des 11082 11090	ʉ̃hmʉsẽ
+#922	AnnotatorNotes T922	NodeID = aleman2000/60/8/annotation/10
+T923	pos 11192 11197	inan.
+#923	AnnotatorNotes T923	NodeID = aleman2000/61/2/annotation/1
+T924	head 11184 11191	ʉ̃tãye
+#924	AnnotatorNotes T924	NodeID = aleman2000/61/2/annotation/3
+T925	Desano 11184 11191	ʉ̃tãye
+#925	AnnotatorNotes T925	NodeID = aleman2000/61/2/annotation/3
+T926	des 11184 11191	ʉ̃tãye
+#926	AnnotatorNotes T926	NodeID = aleman2000/61/2/annotation/3
+T927	translation 11198 11204	piedra
+#927	AnnotatorNotes T927	NodeID = aleman2000/61/2/annotation/8
+T928	Español 11198 11204	piedra
+#928	AnnotatorNotes T928	NodeID = aleman2000/61/2/annotation/8
+T929	spa 11198 11204	piedra
+#929	AnnotatorNotes T929	NodeID = aleman2000/61/2/annotation/8
+T930	head 11288 11292	wái
+#930	AnnotatorNotes T930	NodeID = aleman2000/61/4/annotation/2
+T931	Desano 11288 11292	wái
+#931	AnnotatorNotes T931	NodeID = aleman2000/61/4/annotation/2
+T932	des 11288 11292	wái
+#932	AnnotatorNotes T932	NodeID = aleman2000/61/4/annotation/2
+T933	translation 11296 11303	pescado
+#933	AnnotatorNotes T933	NodeID = aleman2000/61/4/annotation/5
+T934	Español 11296 11303	pescado
+#934	AnnotatorNotes T934	NodeID = aleman2000/61/4/annotation/5
+T935	spa 11296 11303	pescado
+#935	AnnotatorNotes T935	NodeID = aleman2000/61/4/annotation/5
+T936	head 11282 11286	wahi
+#936	AnnotatorNotes T936	NodeID = aleman2000/61/4/annotation/8
+T937	Desano 11282 11286	wahi
+#937	AnnotatorNotes T937	NodeID = aleman2000/61/4/annotation/8
+T938	des 11282 11286	wahi
+#938	AnnotatorNotes T938	NodeID = aleman2000/61/4/annotation/8
+T939	translation 11305 11308	pez
+#939	AnnotatorNotes T939	NodeID = aleman2000/61/4/annotation/10
+T940	Español 11305 11308	pez
+#940	AnnotatorNotes T940	NodeID = aleman2000/61/4/annotation/10
+T941	spa 11305 11308	pez
+#941	AnnotatorNotes T941	NodeID = aleman2000/61/4/annotation/10
+T942	pos 11293 11295	m.
+#942	AnnotatorNotes T942	NodeID = aleman2000/61/4/annotation/13
+T943	translation 11389 11395	animal
+#943	AnnotatorNotes T943	NodeID = aleman2000/61/8/annotation/2
+T944	Español 11389 11395	animal
+#944	AnnotatorNotes T944	NodeID = aleman2000/61/8/annotation/2
+T945	spa 11389 11395	animal
+#945	AnnotatorNotes T945	NodeID = aleman2000/61/8/annotation/2
+T946	pos 11386 11388	m.
+#946	AnnotatorNotes T946	NodeID = aleman2000/61/8/annotation/4
+T947	head 11378 11385	waibʉgʉ
+#947	AnnotatorNotes T947	NodeID = aleman2000/61/8/annotation/7
+T948	Desano 11378 11385	waibʉgʉ
+#948	AnnotatorNotes T948	NodeID = aleman2000/61/8/annotation/7
+T949	des 11378 11385	waibʉgʉ
+#949	AnnotatorNotes T949	NodeID = aleman2000/61/8/annotation/7
+T950	pos 11481 11485	v.t.
+#950	AnnotatorNotes T950	NodeID = aleman2000/61/10/annotation/1
+T951	head 11460 11480	waimʉrã wẽjẽriñe
+#951	AnnotatorNotes T951	NodeID = aleman2000/61/10/annotation/4
+T952	Desano 11460 11480	waimʉrã wẽjẽriñe
+#952	AnnotatorNotes T952	NodeID = aleman2000/61/10/annotation/4
+T953	des 11460 11480	waimʉrã wẽjẽriñe
+#953	AnnotatorNotes T953	NodeID = aleman2000/61/10/annotation/4
+T954	translation 11486 11491	cazar
+#954	AnnotatorNotes T954	NodeID = aleman2000/61/10/annotation/8
+T955	Español 11486 11491	cazar
+#955	AnnotatorNotes T955	NodeID = aleman2000/61/10/annotation/8
+T956	spa 11486 11491	cazar
+#956	AnnotatorNotes T956	NodeID = aleman2000/61/10/annotation/8
+T957	pos 11578 11582	v.i.
+#957	AnnotatorNotes T957	NodeID = aleman2000/62/17/annotation/1
+T958	head 11568 11577	wãhgãri
+#958	AnnotatorNotes T958	NodeID = aleman2000/62/17/annotation/2
+T959	Desano 11568 11577	wãhgãri
+#959	AnnotatorNotes T959	NodeID = aleman2000/62/17/annotation/2
+T960	des 11568 11577	wãhgãri
+#960	AnnotatorNotes T960	NodeID = aleman2000/62/17/annotation/2
+T961	translation 11596 11606	levantarse
+#961	AnnotatorNotes T961	NodeID = aleman2000/62/17/annotation/6
+T962	Español 11596 11606	levantarse
+#962	AnnotatorNotes T962	NodeID = aleman2000/62/17/annotation/6
+T963	spa 11596 11606	levantarse
+#963	AnnotatorNotes T963	NodeID = aleman2000/62/17/annotation/6
+T964	translation 11583 11594	despertarse
+#964	AnnotatorNotes T964	NodeID = aleman2000/62/17/annotation/9
+T965	Español 11583 11594	despertarse
+#965	AnnotatorNotes T965	NodeID = aleman2000/62/17/annotation/9
+T966	spa 11583 11594	despertarse
+#966	AnnotatorNotes T966	NodeID = aleman2000/62/17/annotation/9
+T967	pos 11704 11709	inan.
+#967	AnnotatorNotes T967	NodeID = aleman2000/62/19/annotation/1
+T968	head 11697 11703	wãĩ́
+#968	AnnotatorNotes T968	NodeID = aleman2000/62/19/annotation/2
+T969	Desano 11697 11703	wãĩ́
+#969	AnnotatorNotes T969	NodeID = aleman2000/62/19/annotation/2
+T970	des 11697 11703	wãĩ́
+#970	AnnotatorNotes T970	NodeID = aleman2000/62/19/annotation/2
+T971	translation 11710 11716	nombre
+#971	AnnotatorNotes T971	NodeID = aleman2000/62/19/annotation/6
+T972	Español 11710 11716	nombre
+#972	AnnotatorNotes T972	NodeID = aleman2000/62/19/annotation/6
+T973	spa 11710 11716	nombre
+#973	AnnotatorNotes T973	NodeID = aleman2000/62/19/annotation/6
+T974	translation 11808 11814	contar
+#974	AnnotatorNotes T974	NodeID = aleman2000/64/11/annotation/2
+T975	Español 11808 11814	contar
+#975	AnnotatorNotes T975	NodeID = aleman2000/64/11/annotation/2
+T976	spa 11808 11814	contar
+#976	AnnotatorNotes T976	NodeID = aleman2000/64/11/annotation/2
+T977	translation 11800 11806	avisar
+#977	AnnotatorNotes T977	NodeID = aleman2000/64/11/annotation/4
+T978	Español 11800 11806	avisar
+#978	AnnotatorNotes T978	NodeID = aleman2000/64/11/annotation/4
+T979	spa 11800 11806	avisar
+#979	AnnotatorNotes T979	NodeID = aleman2000/64/11/annotation/4
+T980	head 11788 11794	wereri
+#980	AnnotatorNotes T980	NodeID = aleman2000/64/11/annotation/7
+T981	Desano 11788 11794	wereri
+#981	AnnotatorNotes T981	NodeID = aleman2000/64/11/annotation/7
+T982	des 11788 11794	wereri
+#982	AnnotatorNotes T982	NodeID = aleman2000/64/11/annotation/7
+T983	pos 11795 11799	v.t.
+#983	AnnotatorNotes T983	NodeID = aleman2000/64/11/annotation/10
+T984	pos 11909 11913	v.i.
+#984	AnnotatorNotes T984	NodeID = aleman2000/64/14/annotation/0
+T985	head 11903 11908	wéri
+#985	AnnotatorNotes T985	NodeID = aleman2000/64/14/annotation/2
+T986	Desano 11903 11908	wéri
+#986	AnnotatorNotes T986	NodeID = aleman2000/64/14/annotation/2
+T987	des 11903 11908	wéri
+#987	AnnotatorNotes T987	NodeID = aleman2000/64/14/annotation/2
+T988	translation 11914 11921	mojarse
+#988	AnnotatorNotes T988	NodeID = aleman2000/64/14/annotation/6
+T989	Español 11914 11921	mojarse
+#989	AnnotatorNotes T989	NodeID = aleman2000/64/14/annotation/6
+T990	spa 11914 11921	mojarse
+#990	AnnotatorNotes T990	NodeID = aleman2000/64/14/annotation/6
+T991	pos 12031 12035	v.t.
+#991	AnnotatorNotes T991	NodeID = aleman2000/65/4/annotation/1
+T992	translation 12036 12041	matar
+#992	AnnotatorNotes T992	NodeID = aleman2000/65/4/annotation/2
+T993	Español 12036 12041	matar
+#993	AnnotatorNotes T993	NodeID = aleman2000/65/4/annotation/2
+T994	spa 12036 12041	matar
+#994	AnnotatorNotes T994	NodeID = aleman2000/65/4/annotation/2
+T995	head 12022 12030	wẽjẽri
+#995	AnnotatorNotes T995	NodeID = aleman2000/65/4/annotation/5
+T996	Desano 12022 12030	wẽjẽri
+#996	AnnotatorNotes T996	NodeID = aleman2000/65/4/annotation/5
+T997	des 12022 12030	wẽjẽri
+#997	AnnotatorNotes T997	NodeID = aleman2000/65/4/annotation/5
+T998	head 12106 12112	wiriri
+#998	AnnotatorNotes T998	NodeID = aleman2000/65/11/annotation/2
+T999	Desano 12106 12112	wiriri
+#999	AnnotatorNotes T999	NodeID = aleman2000/65/11/annotation/2
+T1000	des 12106 12112	wiriri
+#1000	AnnotatorNotes T1000	NodeID = aleman2000/65/11/annotation/2
+T1001	translation 12118 12123	salir
+#1001	AnnotatorNotes T1001	NodeID = aleman2000/65/11/annotation/6
+T1002	Español 12118 12123	salir
+#1002	AnnotatorNotes T1002	NodeID = aleman2000/65/11/annotation/6
+T1003	spa 12118 12123	salir
+#1003	AnnotatorNotes T1003	NodeID = aleman2000/65/11/annotation/6
+T1004	pos 12113 12117	v.i.
+#1004	AnnotatorNotes T1004	NodeID = aleman2000/65/11/annotation/8
+T1005	pos 12175 12179	v.t.
+#1005	AnnotatorNotes T1005	NodeID = aleman2000/65/12/annotation/1
+T1006	translation 12188 12207	serrar (con machete
+#1006	AnnotatorNotes T1006	NodeID = aleman2000/65/12/annotation/4
+T1007	Español 12188 12207	serrar (con machete
+#1007	AnnotatorNotes T1007	NodeID = aleman2000/65/12/annotation/4
+T1008	spa 12188 12207	serrar (con machete
+#1008	AnnotatorNotes T1008	NodeID = aleman2000/65/12/annotation/4
+T1009	translation 12209 12219	cuchillo/a
+#1009	AnnotatorNotes T1009	NodeID = aleman2000/65/12/annotation/5
+T1010	Español 12209 12219	cuchillo/a
+#1010	AnnotatorNotes T1010	NodeID = aleman2000/65/12/annotation/5
+T1011	spa 12209 12219	cuchillo/a
+#1011	AnnotatorNotes T1011	NodeID = aleman2000/65/12/annotation/5
+T1012	translation 12180 12186	cortar
+#1012	AnnotatorNotes T1012	NodeID = aleman2000/65/12/annotation/10
+T1013	Español 12180 12186	cortar
+#1013	AnnotatorNotes T1013	NodeID = aleman2000/65/12/annotation/10
+T1014	spa 12180 12186	cortar
+#1014	AnnotatorNotes T1014	NodeID = aleman2000/65/12/annotation/10
+T1015	head 12167 12174	wíriri
+#1015	AnnotatorNotes T1015	NodeID = aleman2000/65/12/annotation/14
+T1016	Desano 12167 12174	wíriri
+#1016	AnnotatorNotes T1016	NodeID = aleman2000/65/12/annotation/14
+T1017	des 12167 12174	wíriri
+#1017	AnnotatorNotes T1017	NodeID = aleman2000/65/12/annotation/14
+T1018	translation 12232 12246	hacer cirugía
+#1018	AnnotatorNotes T1018	NodeID = aleman2000/65/12/annotation/17
+T1019	Español 12232 12246	hacer cirugía
+#1019	AnnotatorNotes T1019	NodeID = aleman2000/65/12/annotation/17
+T1020	spa 12232 12246	hacer cirugía
+#1020	AnnotatorNotes T1020	NodeID = aleman2000/65/12/annotation/17
+T1021	translation 12221 12230	cerrucho)
+#1021	AnnotatorNotes T1021	NodeID = aleman2000/65/12/annotation/18
+T1022	Español 12221 12230	cerrucho)
+#1022	AnnotatorNotes T1022	NodeID = aleman2000/65/12/annotation/18
+T1023	spa 12221 12230	cerrucho)
+#1023	AnnotatorNotes T1023	NodeID = aleman2000/65/12/annotation/18
+T1024	head 12335 12346	wĩjĩriñe
+#1024	AnnotatorNotes T1024	NodeID = aleman2000/66/5/annotation/2
+T1025	Desano 12335 12346	wĩjĩriñe
+#1025	AnnotatorNotes T1025	NodeID = aleman2000/66/5/annotation/2
+T1026	des 12335 12346	wĩjĩriñe
+#1026	AnnotatorNotes T1026	NodeID = aleman2000/66/5/annotation/2
+T1027	translation 12371 12375	oler
+#1027	AnnotatorNotes T1027	NodeID = aleman2000/66/5/annotation/5
+T1028	Español 12371 12375	oler
+#1028	AnnotatorNotes T1028	NodeID = aleman2000/66/5/annotation/5
+T1029	spa 12371 12375	oler
+#1029	AnnotatorNotes T1029	NodeID = aleman2000/66/5/annotation/5
+T1030	translation 12361 12369	olfatear
+#1030	AnnotatorNotes T1030	NodeID = aleman2000/66/5/annotation/7
+T1031	Español 12361 12369	olfatear
+#1031	AnnotatorNotes T1031	NodeID = aleman2000/66/5/annotation/7
+T1032	spa 12361 12369	olfatear
+#1032	AnnotatorNotes T1032	NodeID = aleman2000/66/5/annotation/7
+T1033	translation 12352 12359	inhalar
+#1033	AnnotatorNotes T1033	NodeID = aleman2000/66/5/annotation/12
+T1034	Español 12352 12359	inhalar
+#1034	AnnotatorNotes T1034	NodeID = aleman2000/66/5/annotation/12
+T1035	spa 12352 12359	inhalar
+#1035	AnnotatorNotes T1035	NodeID = aleman2000/66/5/annotation/12
+T1036	pos 12347 12351	v.t.
+#1036	AnnotatorNotes T1036	NodeID = aleman2000/66/5/annotation/14
+T1037	head 12461 12467	wʉnugu
+#1037	AnnotatorNotes T1037	NodeID = aleman2000/67/1/annotation/0
+T1038	Desano 12461 12467	wʉnugu
+#1038	AnnotatorNotes T1038	NodeID = aleman2000/67/1/annotation/0
+T1039	des 12461 12467	wʉnugu
+#1039	AnnotatorNotes T1039	NodeID = aleman2000/67/1/annotation/0
+T1040	translation 12474 12480	cuello
+#1040	AnnotatorNotes T1040	NodeID = aleman2000/67/1/annotation/4
+T1041	Español 12474 12480	cuello
+#1041	AnnotatorNotes T1041	NodeID = aleman2000/67/1/annotation/4
+T1042	spa 12474 12480	cuello
+#1042	AnnotatorNotes T1042	NodeID = aleman2000/67/1/annotation/4
+T1043	pos 12468 12473	inan.
+#1043	AnnotatorNotes T1043	NodeID = aleman2000/67/1/annotation/7
+T1044	head 12453 12459	wʉnʉgʉ
+#1044	AnnotatorNotes T1044	NodeID = aleman2000/67/1/annotation/9
+T1045	Desano 12453 12459	wʉnʉgʉ
+#1045	AnnotatorNotes T1045	NodeID = aleman2000/67/1/annotation/9
+T1046	des 12453 12459	wʉnʉgʉ
+#1046	AnnotatorNotes T1046	NodeID = aleman2000/67/1/annotation/9
+T1047	translation 12482 12489	gollete
+#1047	AnnotatorNotes T1047	NodeID = aleman2000/67/1/annotation/13
+T1048	Español 12482 12489	gollete
+#1048	AnnotatorNotes T1048	NodeID = aleman2000/67/1/annotation/13
+T1049	spa 12482 12489	gollete
+#1049	AnnotatorNotes T1049	NodeID = aleman2000/67/1/annotation/13
+T1050	translation 12491 12499	pescuezo
+#1050	AnnotatorNotes T1050	NodeID = aleman2000/67/1/annotation/14
+T1051	Español 12491 12499	pescuezo
+#1051	AnnotatorNotes T1051	NodeID = aleman2000/67/1/annotation/14
+T1052	spa 12491 12499	pescuezo
+#1052	AnnotatorNotes T1052	NodeID = aleman2000/67/1/annotation/14
+T1053	head 12565 12571	wʉrari
+#1053	AnnotatorNotes T1053	NodeID = aleman2000/67/2/annotation/1
+T1054	Desano 12565 12571	wʉrari
+#1054	AnnotatorNotes T1054	NodeID = aleman2000/67/2/annotation/1
+T1055	des 12565 12571	wʉrari
+#1055	AnnotatorNotes T1055	NodeID = aleman2000/67/2/annotation/1
+T1056	translation 12577 12582	pelar
+#1056	AnnotatorNotes T1056	NodeID = aleman2000/67/2/annotation/4
+T1057	Español 12577 12582	pelar
+#1057	AnnotatorNotes T1057	NodeID = aleman2000/67/2/annotation/4
+T1058	spa 12577 12582	pelar
+#1058	AnnotatorNotes T1058	NodeID = aleman2000/67/2/annotation/4
+T1059	pos 12572 12576	v.t.
+#1059	AnnotatorNotes T1059	NodeID = aleman2000/67/2/annotation/8
+T1060	pos 12639 12643	v.i.
+#1060	AnnotatorNotes T1060	NodeID = aleman2000/67/3/annotation/1
+T1061	translation 12644 12649	volar
+#1061	AnnotatorNotes T1061	NodeID = aleman2000/67/3/annotation/2
+T1062	Español 12644 12649	volar
+#1062	AnnotatorNotes T1062	NodeID = aleman2000/67/3/annotation/2
+T1063	spa 12644 12649	volar
+#1063	AnnotatorNotes T1063	NodeID = aleman2000/67/3/annotation/2
+T1064	head 12634 12638	wʉri
+#1064	AnnotatorNotes T1064	NodeID = aleman2000/67/3/annotation/5
+T1065	Desano 12634 12638	wʉri
+#1065	AnnotatorNotes T1065	NodeID = aleman2000/67/3/annotation/5
+T1066	des 12634 12638	wʉri
+#1066	AnnotatorNotes T1066	NodeID = aleman2000/67/3/annotation/5
+T1067	translation 12735 12741	tierra
+#1067	AnnotatorNotes T1067	NodeID = aleman2000/67/14/annotation/1
+T1068	Español 12735 12741	tierra
+#1068	AnnotatorNotes T1068	NodeID = aleman2000/67/14/annotation/1
+T1069	spa 12735 12741	tierra
+#1069	AnnotatorNotes T1069	NodeID = aleman2000/67/14/annotation/1
+T1070	translation 12743 12748	país
+#1070	AnnotatorNotes T1070	NodeID = aleman2000/67/14/annotation/3
+T1071	Español 12743 12748	país
+#1071	AnnotatorNotes T1071	NodeID = aleman2000/67/14/annotation/3
+T1072	spa 12743 12748	país
+#1072	AnnotatorNotes T1072	NodeID = aleman2000/67/14/annotation/3
+T1073	head 12719 12724	yehba
+#1073	AnnotatorNotes T1073	NodeID = aleman2000/67/14/annotation/10
+T1074	Desano 12719 12724	yehba
+#1074	AnnotatorNotes T1074	NodeID = aleman2000/67/14/annotation/10
+T1075	des 12719 12724	yehba
+#1075	AnnotatorNotes T1075	NodeID = aleman2000/67/14/annotation/10
+T1076	head 12712 12717	yéba
+#1076	AnnotatorNotes T1076	NodeID = aleman2000/67/14/annotation/12
+T1077	Desano 12712 12717	yéba
+#1077	AnnotatorNotes T1077	NodeID = aleman2000/67/14/annotation/12
+T1078	des 12712 12717	yéba
+#1078	AnnotatorNotes T1078	NodeID = aleman2000/67/14/annotation/12
+T1079	pos 12729 12734	inan.
+#1079	AnnotatorNotes T1079	NodeID = aleman2000/67/14/annotation/15
+T1080	translation 12869 12873	palo
+#1080	AnnotatorNotes T1080	NodeID = aleman2000/68/12/annotation/1
+T1081	Español 12869 12873	palo
+#1081	AnnotatorNotes T1081	NodeID = aleman2000/68/12/annotation/1
+T1082	spa 12869 12873	palo
+#1082	AnnotatorNotes T1082	NodeID = aleman2000/68/12/annotation/1
+T1083	pos 12847 12852	inan.
+#1083	AnnotatorNotes T1083	NodeID = aleman2000/68/12/annotation/4
+T1084	translation 12853 12859	árbol
+#1084	AnnotatorNotes T1084	NodeID = aleman2000/68/12/annotation/5
+T1085	Español 12853 12859	árbol
+#1085	AnnotatorNotes T1085	NodeID = aleman2000/68/12/annotation/5
+T1086	spa 12853 12859	árbol
+#1086	AnnotatorNotes T1086	NodeID = aleman2000/68/12/annotation/5
+T1087	head 12840 12846	yucʉgʉ
+#1087	AnnotatorNotes T1087	NodeID = aleman2000/68/12/annotation/9
+T1088	Desano 12840 12846	yucʉgʉ
+#1088	AnnotatorNotes T1088	NodeID = aleman2000/68/12/annotation/9
+T1089	des 12840 12846	yucʉgʉ
+#1089	AnnotatorNotes T1089	NodeID = aleman2000/68/12/annotation/9
+T1090	translation 12861 12867	madera
+#1090	AnnotatorNotes T1090	NodeID = aleman2000/68/12/annotation/12
+T1091	Español 12861 12867	madera
+#1091	AnnotatorNotes T1091	NodeID = aleman2000/68/12/annotation/12
+T1092	spa 12861 12867	madera
+#1092	AnnotatorNotes T1092	NodeID = aleman2000/68/12/annotation/12
+T1093	translation 13021 13025	solo
+#1093	AnnotatorNotes T1093	NodeID = aleman2000/69/3/annotation/2
+T1094	Español 13021 13025	solo
+#1094	AnnotatorNotes T1094	NodeID = aleman2000/69/3/annotation/2
+T1095	spa 13021 13025	solo
+#1095	AnnotatorNotes T1095	NodeID = aleman2000/69/3/annotation/2
+T1096	head 13005 13013	yujugota
+#1096	AnnotatorNotes T1096	NodeID = aleman2000/69/3/annotation/3
+T1097	Desano 13005 13013	yujugota
+#1097	AnnotatorNotes T1097	NodeID = aleman2000/69/3/annotation/3
+T1098	des 13005 13013	yujugota
+#1098	AnnotatorNotes T1098	NodeID = aleman2000/69/3/annotation/3
+T1099	pos 13014 13020	m., f.
+#1099	AnnotatorNotes T1099	NodeID = aleman2000/69/3/annotation/7
+T1100	translation 13027 13031	sola
+#1100	AnnotatorNotes T1100	NodeID = aleman2000/69/3/annotation/8
+T1101	Español 13027 13031	sola
+#1101	AnnotatorNotes T1101	NodeID = aleman2000/69/3/annotation/8
+T1102	spa 13027 13031	sola
+#1102	AnnotatorNotes T1102	NodeID = aleman2000/69/3/annotation/8
+T1103	head 12995 13003	yujugʉta
+#1103	AnnotatorNotes T1103	NodeID = aleman2000/69/3/annotation/11
+T1104	Desano 12995 13003	yujugʉta
+#1104	AnnotatorNotes T1104	NodeID = aleman2000/69/3/annotation/11
+T1105	des 12995 13003	yujugʉta
+#1105	AnnotatorNotes T1105	NodeID = aleman2000/69/3/annotation/11
+T1106	pos 13113 13117	pro.
+#1106	AnnotatorNotes T1106	NodeID = aleman2000/69/11/annotation/1
+T1107	head 13108 13112	yʉhʉ
+#1107	AnnotatorNotes T1107	NodeID = aleman2000/69/11/annotation/3
+T1108	Desano 13108 13112	yʉhʉ
+#1108	AnnotatorNotes T1108	NodeID = aleman2000/69/11/annotation/3
+T1109	des 13108 13112	yʉhʉ
+#1109	AnnotatorNotes T1109	NodeID = aleman2000/69/11/annotation/3
+T1110	translation 13118 13120	yo
+#1110	AnnotatorNotes T1110	NodeID = aleman2000/69/11/annotation/8
+T1111	Español 13118 13120	yo
+#1111	AnnotatorNotes T1111	NodeID = aleman2000/69/11/annotation/8
+T1112	spa 13118 13120	yo
+#1112	AnnotatorNotes T1112	NodeID = aleman2000/69/11/annotation/8

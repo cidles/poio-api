@@ -11,6 +11,8 @@
 
 """
 
+from __future__ import unicode_literals
+
 import os
 
 
@@ -19,35 +21,45 @@ class Writer():
         self.outputfile = outputfile
         self.graf = graf
 
-    def write(self):
+    def write(self, annotation_space, feature_name="annotation_value"):
         ann_file = open(self.outputfile+".ann", "w")
         t = 1
-        r = 1
         n = 1
         relation_map = {}
 
-        for node in self.graf.nodes:
-            annotation = node.annotations._elements[0]
-            annotation_type = annotation.label
+        label_list = ["head", "translation", "pos", "italic", "bold"]
 
-            if "annotation_value" in annotation.features:
-                annotation_value = annotation.features["annotation_value"]
-                if annotation_value is None:
-                    continue
-            else:
-                continue
+        for annotation in self.graf.annotation_spaces[annotation_space]:
+            if annotation.label in label_list:
+                if feature_name in annotation.features:
+                    annotation_value = annotation.features[feature_name]
 
-            if node.links:
-                anchors = node.links[0][0].anchors
-                line = "T{0}	{1} {2} {3}	{4}\n".\
-                    format(t, annotation_type, anchors[0], anchors[1], annotation_value)
-                note = "#{0}	AnnotatorNotes T{1}	{2}\n".format(n, t, node)
-                relation_map[node.id] = "T{0}".format(t)
+                    if annotation_value:
+                        node = annotation.element
 
-                ann_file.write(line)
-                ann_file.write(note)
-                t += 1
-                n += 1
+                        for feature, value in annotation.features.items():
+                            if value:
+                                if feature != feature_name:
+                                    annotation_type = value
+                                else:
+                                    annotation_type = annotation.label
+
+                                if node.links:
+                                    anchors = node.links[0][0].anchors
+                                    line = "T{0}\t{1} {2} {3}\t{4}\n".\
+                                        format(t, annotation_type, anchors[0], anchors[1], annotation_value)
+                                    note = "#{0}\tAnnotatorNotes T{1}\t{2}\n".format(n, t, node)
+                                    relation_map[node.id] = "T{0}".format(t)
+
+                                    ann_file.write(line)
+                                    ann_file.write(note)
+                                    t += 1
+                                    n += 1
+
+        ann_file.close()
+
+    def create_relations(self, relation_map, ann_file):
+        r = 1
 
         for node_id, text_bound in relation_map.items():
             for edge in self.graf.edges:
@@ -58,8 +70,7 @@ class Writer():
                     r += 1
                     ann_file.write(line)
 
-        ann_file.close()
-        self.create_conf_file()
+        return ann_file
 
     def create_conf_file(self):
         basedirname = os.path.dirname(self.outputfile)
@@ -71,7 +82,8 @@ class Writer():
         for entity in self.graf.header.annotation_spaces:
             annotation_conf.write(entity+"\n")
 
-        annotation_conf.write("\n[relations]\nTo Arg1:<ENTITY>, Arg2:<ENTITY>"
+        annotation_conf.write("\n[relations]\n# To Arg1:<ENTITY>, Arg2:<ENTITY>"
+                              "\n<OVERLAP>	Arg1:<ENTITY>, Arg2:<ENTITY>, <OVL-TYPE>:<ANY>"
                               "\n\n[events]\n# none\n\n[attributes]\n# none")
 
         annotation_conf.close()

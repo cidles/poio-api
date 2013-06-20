@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><documentHeader xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/" docId="dict-aleman2000-9-69" creator="pbouda" date.created="2012-10-26" date.updated="2012-11-23" version="1" type="dictionary">
+   <fileDesc>
+      <titleStmt>
+         <title>QuantHistLing digitization of: Tulio Alemán M., Reinaldo López H., Marion Miller. 2000. Wirã ya, Peamasa ya wererituri</title>
+      </titleStmt>
+      <extent count="119" unit="entries"/>
+      <extent count="1079" unit="heads"/>
+      <extent count="1361" unit="translations"/>
+      <extent count="903" unit="pos"/>
+      <extent count="0" unit="example-src"/>
+      <extent count="0" unit="example-tgt"/>
+      <extent count="0" unit="manually_corrected"/>
+      <sourceDesc>
+         <title>Wirã ya, Peamasa ya wererituri</title>
+         <author>Tulio Alemán M., Reinaldo López H., Marion Miller</author>
+         <pubDate>2000</pubDate>
+         <idno type="ISBN">None</idno>
+      </sourceDesc>
+   </fileDesc>
+   <profileDesc>
+      <primaryData f.id="text" loc="dict-aleman2000-9-69.txt"/>
+      <annotations>
+         <annotation loc="dict-aleman2000-9-69-entries.xml" f.id="f.entries"/>
+         <annotation loc="dict-aleman2000-9-69-dictinterpretation.xml" f.id="f.dictinterpretation"/>
+         <annotation loc="dict-aleman2000-9-69-formatting.xml" f.id="f.formatting"/>         
+      </annotations>
+   </profileDesc>
+</documentHeader>

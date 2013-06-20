@@ -25,9 +25,9 @@ class TestBrat:
 
     def setup(self):
         filename = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-                                "brat", "text.hdr")
+                                "brat_graf", "dict-aleman2000-9-69.hdr")
         outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-                                "brat", "result_text")
+                                  "brat_graf", "result")
 
         parser = graf.io.GraphParser()
         graph = parser.parse(filename)
@@ -36,12 +36,18 @@ class TestBrat:
 
     def test_write(self):
 
-        self.brat.write()
+        self.brat.write("dictinterpretation", feature_name="substring")
 
-        annotation_conf = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-                                       "brat", "annotation.conf")
+        annotations = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+                                   "brat_graf", "dict-aleman2000-9-69.ann")
 
-        annotation_conf_res = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-                                           "brat", "annotation.conf")
+        annotations_res = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+                                       "brat_graf", "result.ann")
 
-        assert annotation_conf == annotation_conf_res
+        file_ann = open(annotations, "r")
+        file_ann_res = open(annotations_res, "r")
+
+        expect_lines = file_ann.readlines()
+        result_lines = file_ann_res.readlines()
+
+        assert file_ann.readlines() == file_ann_res.readlines()

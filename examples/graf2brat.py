@@ -46,7 +46,7 @@ def main(argv):
 
     brat = poioapi.io.brat.Writer(graph, outputfile)
 
-    brat.write()
+    brat.write("dictinterpretation", feature_name="substring")
 
     print('Finished')
 
