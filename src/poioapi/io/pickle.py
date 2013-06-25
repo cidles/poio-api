@@ -57,7 +57,7 @@ class Parser(poioapi.io.graf.BaseParser):
         for element in self.annotation_tree.tree:
             self._get_elements_for_tier(element)
 
-        self._create_raw_file()
+        #self._create_raw_file()
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier(self.data_hierarchy[0])]
