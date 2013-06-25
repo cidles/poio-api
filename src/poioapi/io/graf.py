@@ -231,7 +231,8 @@ class GrAFConverter:
 
     def write(self, outputfile):
         if self.writer:
-            self.writer.write(outputfile, self.graf, self.tier_hierarchies)
+            self.writer.write(outputfile, self.graf, self.tier_hierarchies,
+                self.meta_information)
 
     def parse(self):
         """This method will be the responsible to transform

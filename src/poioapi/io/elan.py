@@ -414,6 +414,7 @@ class Writer:
             for et in meta_information.findall("TIER"):
                 if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
                     for node in graf_graph.nodes:
+                        # TODO: this won't work if the tier name starts with a "na" somewhere
                         if tier == node.id.split(poioapi.io.graf.GRAFSEPARATOR + "na")[0]:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
@@ -452,7 +453,7 @@ class Writer:
 
         prev_node = None
         neighbours = [child for child in parent.iter_children()
-                      if child.id.startswith(node.id.rpartition("/")[0])]
+                      if child.id.startswith(node.id.rpartition(poioapi.io.graf.GRAFSEPARATOR)[0])]
         for neighbour in neighbours:
             if neighbour.id == node.id:
                 break
