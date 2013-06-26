@@ -61,24 +61,23 @@ To convert a GrAF file to brat first is need to have a GrAF object:
 .. code-block:: python
 
     parser = graf.io.GraphParser()
-    graph = parser.parse("dict-aleman2000-9-69.hdr")
+    graf_graph = parser.parse("dict-aleman2000-9-69.hdr")
 
-Once we get the graph object is need to set the brat writer:
-
-.. code-block:: python
-
-    brat = poioapi.io.brat.Writer(graph, outputfilename="dict-aleman2000-9-69")
-
-Now that the brat writer is defined there's a need to define two paremeters: annotation_space and feature_name.
+Once we get the graph object is need to set the brat writer.
+The brat writer is defined with two paremeters: annotation_space and feature_name.
 
 * The annotation_space serves to filter what annotations are wanted from the graph object to write in brat annotation file.
 * The feature_name é a feature key that contains the real value of each annotation.
+
+.. code-block:: python
+
+    brat = poioapi.io.brat.Writer("dictinterpretation", feature_name="substring")
 
 In our case we want go get only the annotations from "dictinterpretation" and that contain the feature "substring":
 
 .. code-block:: python
 
-    brat.write("dictinterpretation", feature_name="substring")
+    brat.write(outputfilename="dict-aleman2000-9-69.ann", graf_graph)
 
 The result should be a file named "dict-aleman2000-9-69.ann".
 

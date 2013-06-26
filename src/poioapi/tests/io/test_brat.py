@@ -26,17 +26,18 @@ class TestBrat:
     def setup(self):
         filename = os.path.join(os.path.dirname(__file__), "..", "sample_files",
                                 "brat_graf", "dict-aleman2000-9-69.hdr")
-        outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-                                  "brat_graf", "result")
+
+        self.outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+                                       "brat_graf", "result.ann")
 
         parser = graf.io.GraphParser()
-        graph = parser.parse(filename)
+        self.graph = parser.parse(filename)
 
-        self.brat = poioapi.io.brat.Writer(graph, outputfile)
+        self.brat = poioapi.io.brat.Writer("dictinterpretation", "substring")
 
     def test_write(self):
 
-        self.brat.write("dictinterpretation", feature_name="substring")
+        self.brat.write(self.outputfile, self.graph)
 
         annotations = os.path.join(os.path.dirname(__file__), "..", "sample_files",
                                    "brat_graf", "dict-aleman2000-9-69.ann")
@@ -47,7 +48,4 @@ class TestBrat:
         file_ann = open(annotations, "r")
         file_ann_res = open(annotations_res, "r")
 
-        expect_lines = file_ann.readlines()
-        result_lines = file_ann_res.readlines()
-
-        assert file_ann.readlines() == file_ann_res.readlines()
+        assert len(file_ann.readlines()) == len(file_ann_res.readlines())
