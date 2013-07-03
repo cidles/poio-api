@@ -13,12 +13,20 @@ from a pickle file using Annotation Tree.
 """
 
 from __future__ import absolute_import
-import codecs
 import os
+import sys
+import codecs
+import collections
 
 import poioapi.annotationtree
 import poioapi.data
 import poioapi.io.graf
+
+# Set the type of string
+if sys.version_info[:2] >= (3, 0):
+    string_type = str
+else:
+    string_type = basestring
 
 class Parser(poioapi.io.graf.BaseParser):
     """
@@ -49,124 +57,154 @@ class Parser(poioapi.io.graf.BaseParser):
     def parse(self):
         self.annotation_tree = poioapi.annotationtree.AnnotationTree()
         self.annotation_tree.load_tree_from_pickle(self.filepath)
-        self.data_hierarchy = self.annotation_tree.structure_type_handler.data_hierarchy
+        self.data_hierarchy = self.annotation_tree.structure_type_handler.\
+            data_hierarchy
 
-        self._tier_map = {}
-        self._find_structure_levels(self.data_hierarchy)
+        #self._tier_map = {}
+        #self._find_structure_levels(self.data_hierarchy)
 
+        self._annotations_for_parent = collections.defaultdict(list)
+        self.last_used_id = 0
         for element in self.annotation_tree.tree:
-            self._get_elements_for_tier(element)
-
-        #self._create_raw_file()
+            #self._get_elements_for_tier(element)
+            self._build_indices(element, self.data_hierarchy)
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier(self.data_hierarchy[0])]
 
     def get_child_tiers_for_tier(self, tier):
-        return [poioapi.io.graf.Tier(tier) for tier in
-                self._find_tier_in_structure(tier, self.data_hierarchy)]
+        return [poioapi.io.graf.Tier(t)
+            for t in self.annotation_tree.structure_type_handler.\
+                get_children_of_type(tier.name)]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
-        if annotation_parent is not None:
-            annotation_parent_id = annotation_parent.id
-        else:
-            annotation_parent_id = None
+        parent_id = None
+        if annotation_parent:
+            parent_id = annotation_parent.id
+        return [poioapi.io.graf.Annotation(
+            "a{0}".format(i['id']), i['annotation'])
+                for i in self._annotations_for_parent[
+                    (parent_id, tier.name)]]
 
-        return [poioapi.io.graf.Annotation("a{0}".format(i['id']), i['annotation'])
-                for i in self._tier_map[tier.name]['values']
-                if i['annotation'] and i['parent'] == annotation_parent_id]
-
+    # TODO: fix stuff with regions, does not work right now
     def tier_has_regions(self, tier):
-        if 'region' in self._tier_map[tier.name]['values'][0]:
-            return True
+#        if 'region' in self._tier_map[tier.name]['values'][0]:
+#            return True
 
         return False
 
     def region_for_annotation(self, annotation):
-        for key, values in self._tier_map.items():
-            for value in values['values']:
-                if annotation.id == "a{0}".format(value['id']):
-                    return value['region']
+ #       for key, values in self._tier_map.items():
+ #           for value in values['values']:
+ #               if annotation.id == "a{0}".format(value['id']):
+ #                   return value['region']
 
         return None
 
-    def _get_elements_for_tier(self, elements, parent_element = None, level = 0):
-        for position, element in enumerate(elements):
-            if isinstance(element, list):
-                if not isinstance(element[0], list):
-                    level += 1
-
-                self._get_elements_for_tier(element, parent_element, level)
-
-                if position + 1 <= len(elements) - 1:
-                    if isinstance(elements[position + 1], list):
-                        level -= 1
+    def _build_indices(self, elements, hierarchy, parent = None):
+        new_parent = None
+        local_parent = None
+        for i, t in enumerate(hierarchy):
+            if isinstance(t, list):
+                elements_list = elements[i]
+                for e in elements_list:
+                    if new_parent:
+                        self._build_indices(e, t, new_parent)
+                    else:
+                        self._build_indices(e, t, parent)
             else:
-                key = self._find_key_in_map(level, position)
-                element['parent'] = parent_element
-                self._tier_map[key]['values'].append(element)
+                # workarounf for ids that were written wrong to pickle file
+                if elements[i]['id'] == '[':
+                    elements[i]['id'] = self.last_used_id
+                    self.last_used_id += 1
 
-                if position is 0:
-                    parent_element = "a{0}".format(element['id'])
-
-    def _find_key_in_map(self, level, position):
-        for key, values in self._tier_map.items():
-            if values['position'] == position \
-            and values['level'] == level:
-                return key
-
-        return None
-
-    def _find_structure_levels(self, data_hierarchy, level = 0):
-        for position, element in enumerate(data_hierarchy):
-            if isinstance(element, list):
-                self._find_structure_levels(element, (level + 1))
-            else:
-                self._tier_map[element] = {'level':level, 'position':position,
-                                           'values':[]}
-
-    def _find_tier_in_structure(self, tier, structure):
-        for i, element in enumerate(structure):
-            if isinstance(element, list):
-                aux = self._find_tier_in_structure(tier, element)
-                if aux is not None:
-                    return aux
+                if local_parent:
+                    self._annotations_for_parent[(local_parent, t)].\
+                        append(elements[i])
                 else:
-                    return []
-            else:
-                if element == tier.name and i == 0:
-                    return self._find_childs_from_structure(structure)
+                    self._annotations_for_parent[(parent, t)].\
+                        append(elements[i])
+                new_parent = "a{0}".format(elements[i]['id'])
+                if t == self.data_hierarchy[0]:
+                    local_parent = new_parent
 
-    def _find_childs_from_structure(self, structure):
-        auxliar_strucutre = []
+    # def _get_elements_for_tier(self, elements, parent_element = None, level = 0):
+    #     for position, element in enumerate(elements):
+    #         if isinstance(element, list):
+    #             if not isinstance(element[0], list):
+    #                 level += 1
 
-        for element in structure:
-            if element == structure[0]:
-                continue
-            if isinstance(element, list):
-                auxliar_strucutre.append(element[0])
-            else:
-                auxliar_strucutre.append(element)
+    #             self._get_elements_for_tier(element, parent_element, level)
 
-        return auxliar_strucutre
+    #             if position + 1 <= len(elements) - 1:
+    #                 if isinstance(elements[position + 1], list):
+    #                     level -= 1
+    #         else:
+    #             key = self._find_key_in_map(level, position)
+    #             element['parent'] = parent_element
+    #             self._tier_map[key]['values'].append(element)
 
-    def _create_raw_file(self):
-        """Creates an txt file with the data in the
-        Annotation Tree file. Passing only the sentences.
+    #             if position is 0:
+    #                 parent_element = "a{0}".format(element['id'])
 
-        """
+    # def _find_key_in_map(self, level, position):
+    #     for key, values in self._tier_map.items():
+    #         if values['position'] == position \
+    #         and values['level'] == level:
+    #             return key
 
-        file = os.path.abspath(self.basedirname + '.txt')
-        f = codecs.open(file,'w', 'utf-8') # Need the encode
+    #     return None
 
-        # Verify the elements
-        for element in self.annotation_tree.elements():
+    # def _find_structure_levels(self, data_hierarchy, level = 0):
+    #     for position, element in enumerate(data_hierarchy):
+    #         if isinstance(element, list):
+    #             self._find_structure_levels(element, (level + 1))
+    #         else:
+    #             self._tier_map[element] = {'level':level, 'position':position,
+    #                                        'values':[]}
 
-            # Get the utterance
-            utterance = element[0]
+    # def _find_tier_in_structure(self, tier, structure):
+    #     for i, element in enumerate(structure):
+    #         if isinstance(element, list):
+    #             aux = self._find_tier_in_structure(tier, element)
+    #             if aux is not None:
+    #                 return aux
+    #             else:
+    #                 return []
+    #         else:
+    #             if element == tier.name and i == 0:
+    #                 return self._find_childs_from_structure(structure)
 
-            # Write the content to the txt file
-            f.write(utterance.get('annotation') + '\n')
+    # def _find_childs_from_structure(self, structure):
+    #     auxliar_strucutre = []
 
-        # Close txt file
-        f.close()
+    #     for element in structure:
+    #         if element == structure[0]:
+    #             continue
+    #         if isinstance(element, list):
+    #             auxliar_strucutre.append(element[0])
+    #         else:
+    #             auxliar_strucutre.append(element)
+
+    #     return auxliar_strucutre
+
+    # def _create_raw_file(self):
+    #     """Creates an txt file with the data in the
+    #     Annotation Tree file. Passing only the sentences.
+
+    #     """
+
+    #     file = os.path.abspath(self.basedirname + '.txt')
+    #     f = codecs.open(file,'w', 'utf-8') # Need the encode
+
+    #     # Verify the elements
+    #     for element in self.annotation_tree.elements():
+
+    #         # Get the utterance
+    #         utterance = element[0]
+
+    #         # Write the content to the txt file
+    #         f.write(utterance.get('annotation') + '\n')
+
+    #     # Close txt file
+    #     f.close()

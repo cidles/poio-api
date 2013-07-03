@@ -51,6 +51,7 @@ class AnnotationGraph():
         self.filtered_node_ids = [[]]
         self.tier_hierarchies = None
         self.meta_information = None
+        self.root_tiers = []
 
     def root_nodes(self):
         """Retrieve the root nodes from the annotation graph. Root nodes are
@@ -103,9 +104,15 @@ class AnnotationGraph():
                 if target_node.id.startswith(tier_name):
                     res.append(target_node)
         else:
-            for target_node in self.graf.nodes.iter_ordered():
-                if target_node.id.startswith(tier_name):
-                    res.append(target_node)
+            if tier_name in self.root_tiers:
+                for target_node_id in self.graf.header.roots:
+                    n = self.graf.nodes[target_node_id]
+                    if n.id.startswith(tier_name):
+                        res.append(self.graf.nodes[target_node_id])
+            if len(res) == 0:
+                for target_node in self.graf.nodes:
+                    if target_node.id.startswith(tier_name):
+                        res.append(target_node)
         return res
 
     def annotations_for_tier(self, tier_name, node):
@@ -277,8 +284,8 @@ class AnnotationGraph():
 
         self.tier_hierarchies = converter.tier_hierarchies
         self.meta_information = converter.meta_information
-
-        self.graf = converter.graf
+        self.root_tiers       = converter.root_tiers
+        self.graf             = converter.graf
 
 
     def from_elan(self, stream):

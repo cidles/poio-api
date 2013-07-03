@@ -20,10 +20,9 @@ Wto read and write files.
 
 from __future__ import unicode_literals
 
-
 import regex as re
+#import re
 import pickle
-import regex
 import operator
 
 from poioapi import data
@@ -40,7 +39,12 @@ class AnnotationTree():
     """
 
     def __init__(self, data_structure_type = None):
-        """Class's constructor.....
+        """Class constructor.
+
+        Parameters
+        ----------
+        data_structure_type : poioapi.data.DataStructureType
+            The data structure type (default = None).
 
         """
 
@@ -60,12 +64,8 @@ class AnnotationTree():
 
         Parameters
         ----------
-        data_structure_type : object
-            The data structure type base class DataStructureTpe in poioapi.data.
-
-        Returns
-        -------
-        Nothing.
+        data_structure_type : poioapi.data.DataStructureType
+            The data structure type.
 
         Raises
         ------
@@ -775,11 +775,11 @@ class AnnotationTreeFilter():
             else:
                 passes = False
                 if self.filter[t] != "":
-                    match = regex.search(
+                    match = re.search(
                         self.filter[t], elements[i]["annotation"])
                     if match:
                         self.matchobject[t][elements[i]["id"]] =\
-                        [ [m.start(), m.end()] for m in regex.finditer(
+                        [ [m.start(), m.end()] for m in re.finditer(
                             self.filter[t], elements[i]["annotation"]) ]
                         passes = True
                 elif self.boolean_operation == self.AND:

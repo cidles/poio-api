@@ -67,7 +67,7 @@ class DataStructureType(object):
     name = "WORDS"
 
     data_hierarchy = [ 'utterance', ['word'], 'translation']
-    types_with_regions = [ 'utterance', 'clause_unit', 'word' ]
+    types_with_regions = [ 'utterance', 'word' ]
 
     def __init__(self, custom_data_hierarchy = None):
         """Class's constructor.....
@@ -79,6 +79,10 @@ class DataStructureType(object):
         self.flat_data_hierarchy = self._flatten_hierarchy_elements(
             self.data_hierarchy)
         self.nr_of_types = len(self.flat_data_hierarchy)
+
+        #for i, e in enumerate(self.data_hierarchy[1:]):
+        #    if isinstance(e, string_type):
+        #        self.data_hierarchy[i+1] = [e]
 
     def type_has_region(self, ann_type):
         """ Checks whether the given type has regions that connect it
@@ -96,38 +100,41 @@ class DataStructureType(object):
         """
         return (ann_type in self.types_with_regions)
 
-    def get_siblings_of_type(self, ann_type):
-        """Return all the siblings of a given type in the hierarchy
-        including the given type itself.
+    # def get_siblings_of_type(self, ann_type):
+    #     """Return all the siblings of a given type in the hierarchy
+    #     including the given type itself.
 
-        Parameters
-        ----------
-        ann_type : str
-            Value of the field in the data structure hierarchy.
+    #     Parameters
+    #     ----------
+    #     ann_type : str
+    #         Value of the field in the data structure hierarchy.
 
-        Returns
-        -------
-        ann_type : str
-            Value of the field in the data structure hierarchy if
-            exist.
+    #     Returns
+    #     -------
+    #     ann_type : str
+    #         Value of the field in the data structure hierarchy if
+    #         exist.
 
-        Raises
-        ------
-        UnknownAnnotationTypeError
-            If the ann_type doesn't exist.
+    #     Raises
+    #     ------
+    #     UnknownAnnotationTypeError
+    #         If the ann_type doesn't exist.
 
-        """
+    #     """
 
-        if ann_type not in self.flat_data_hierarchy:
-            raise UnknownAnnotationTypeError
+    #     if ann_type not in self.flat_data_hierarchy:
+    #         raise UnknownAnnotationTypeError
 
-        if ann_type in self.data_hierarchy:
-            return [s for s in self.data_hierarchy if isinstance(s, string_type)]
+    #     if ann_type in self.data_hierarchy:
+    #         return [s for s in self.data_hierarchy
+    #             if isinstance(s, string_type)]
 
-        for e in self.data_hierarchy:
-            if type(e) is list:
-                if ann_type in e:
-                    return [s for s in e if isinstance(s, string_type)]
+    #     for e in self.data_hierarchy:
+    #         if type(e) is list:
+    #             if ann_type in e:
+    #                 return [s for s in e if isinstance(s, string_type)]
+
+    #     return []
 
     def get_parents_of_type(self, ann_type):
         """Returns all the elements that are above a given type in the type
@@ -152,7 +159,12 @@ class DataStructureType(object):
         if ann_type not in self.flat_data_hierarchy:
             raise UnknownAnnotationTypeError
 
-        return self._get_parents_of_type_helper(ann_type, self.data_hierarchy)[1]
+        # is ann_type a root type?
+        if ann_type in self.data_hierarchy:
+            return []
+
+        return self._get_parents_of_type_helper(
+            ann_type, self.data_hierarchy)[1]
 
     def _get_parents_of_type_helper(self, ann_type, hierarchy):
         """Helper function for get_parents_of_type.
@@ -187,6 +199,64 @@ class DataStructureType(object):
             else:
                 parents.append(e)
         return found, parents
+
+    def get_children_of_type(self, ann_type):
+        """Returns all the elements that are above a given type in the type
+        hierarchy.
+
+        Parameters
+        ----------
+        ann_type : str
+            Value of the field in the data structure hierarchy.
+
+        Returns
+        -------
+        _get_parents_of_type_helper : array_like
+            The return result depends on the return of the called method.
+
+        See Also
+        --------
+        _get_parents_of_type_helper
+
+        """
+
+        if ann_type not in self.flat_data_hierarchy:
+            raise UnknownAnnotationTypeError
+
+        return self._get_children_of_type_helper(ann_type, self.data_hierarchy)
+
+    def _get_children_of_type_helper(self, ann_type, hierarchy):
+        """Helper function for get_children_of_type.
+
+        Parameters
+        ----------
+        ann_type : str
+            Value of the field in the data structure hierarchy.
+        hierarchy: array_like
+            An array that contains the data structure hierarchy.
+
+        Returns
+        -------
+        children : array_like
+            A list with the children.
+
+        """
+        for i, e in enumerate(hierarchy):
+            if type(e) is list:
+                return self._get_children_of_type_helper(ann_type, e)
+            else:
+                if e == ann_type:
+                    children = []
+                    if i + 1 < len(hierarchy):
+                        lists = [l for l in hierarchy if type(l) is list]
+                        children = [e for l in lists for e in l
+                            if isinstance(e, string_type)]
+                    if ann_type == self.data_hierarchy[0]:
+                        children += [e for e in self.data_hierarchy[1:]
+                            if isinstance(e, string_type)]
+                    return children
+
+        return []
 
     def empty_element(self):
         """Return the appended list of a certain data hierarchy.

@@ -26,27 +26,28 @@ class TestDataStructureType:
     def setup(self):
         self.data_structure_type = data.DataStructureType()
 
-    def test_get_siblings_of_type(self):
-        """Raise an assertion if there's no siblings to return.
+    # def test_get_siblings_of_type(self):
+    #     """Raise an assertion if there's no siblings to return.
 
-        Return all the siblings of a given type in the hierarchy
-        including the given type itself.
+    #     Return all the siblings of a given type in the hierarchy
+    #     including the given type itself.
 
-        Raises
-        ------
-        AssertionError
-            If the results there aren't the expected.
+    #     Raises
+    #     ------
+    #     AssertionError
+    #         If the results there aren't the expected.
 
-        """
+    #     """
 
-        # If the ann_type value equal like this
-        ann_type = 'utterance'
+    #     # If the ann_type value equal like this
+    #     ann_type = 'utterance'
 
-        # The result expected should be
-        expected_result = ['utterance','translation']
-        print(self.data_structure_type.get_siblings_of_type(ann_type))
+    #     # The result expected should be
+    #     expected_result = ['utterance']
+    #     print(self.data_structure_type.get_siblings_of_type(ann_type))
 
-        assert(self.data_structure_type.get_siblings_of_type(ann_type) == expected_result)
+    #     assert(self.data_structure_type.get_siblings_of_type(
+    #         ann_type) == expected_result)
 
     def test_get_parents_of_type(self):
         """Raise an assertion if there's no parents to return.
@@ -61,13 +62,15 @@ class TestDataStructureType:
 
         """
 
-        # If the ann_type value equal like this
         ann_type = 'utterance'
+        expected_result = []
+        assert(self.data_structure_type.get_parents_of_type(
+            ann_type) == expected_result)
 
-        # The result expected should be
+        ann_type = 'word'
         expected_result = ['utterance', 'translation']
-
-        assert(self.data_structure_type.get_parents_of_type(ann_type) == expected_result)
+        assert(self.data_structure_type.get_parents_of_type(
+            ann_type) == expected_result)
 
     def test__get_parents_of_type_helper(self):
         """Raise an assertion if there's no elements to return.
@@ -93,7 +96,34 @@ class TestDataStructureType:
         # The result expected should be a {tuple}
         expected_result = (True, ['utterance', 'translation', 'comment'])
 
-        assert(self.data_structure_type._get_parents_of_type_helper(ann_type, hierarchy) == expected_result)
+        assert(self.data_structure_type._get_parents_of_type_helper(
+            ann_type, hierarchy) == expected_result)
+
+    def test_get_children_of_type(self):
+        """Assert that `get_children_of_type()` works fine.
+
+        `get_children_of_type()` returns all the elements that are beneath a
+        given type in the type hierarchy.
+
+        Raises
+        ------
+        AssertionError
+            If the results there aren't the expected.
+
+        """
+
+        ann_type = 'utterance'
+        expected_result = ['word', 'translation']
+        print(self.data_structure_type.get_children_of_type(ann_type))
+        assert(self.data_structure_type.get_children_of_type(
+            ann_type) == expected_result)
+
+        data_structure_type = data.DataStructureTypeGraid()
+        ann_type = 'utterance'
+        expected_result = ['clause_unit', 'graid2', 'translation', 'comment']
+        assert(data_structure_type.get_children_of_type(
+            ann_type) == expected_result)
+
 
     def test_empty_element(self):
         """Raise an assertion if there's no elements to return.
@@ -134,7 +164,8 @@ class TestDataStructureType:
                 {'id': None, 'annotation': ''},
                 {'id': None, 'annotation': ''}]
 
-        assert(self.data_structure_type._append_list(element) == expected_result)
+        assert(self.data_structure_type._append_list(
+            element) == expected_result)
 
     def test_test_flatten_hierarchy_elements(self):
         """Raise an assertion if the elements aren't correct.
@@ -164,4 +195,5 @@ class TestDataStructureType:
                            'translation',
                            'comment']
 
-        assert(self.data_structure_type._flatten_hierarchy_elements(elements) == expected_result)
+        assert(self.data_structure_type._flatten_hierarchy_elements(
+            elements) == expected_result)
