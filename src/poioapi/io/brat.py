@@ -17,29 +17,29 @@ import os
 
 
 class Writer():
-    def __init__(self, graf, outputfile):
-        self.outputfile = outputfile
-        self.graf = graf
+    def __init__(self, annotation_space, feature_name="annotation_value"):
+        self.annotation_space = annotation_space
+        self.feature_name = feature_name
 
-    def write(self, annotation_space, feature_name="annotation_value"):
-        ann_file = open(self.outputfile+".ann", "w")
+    def write(self, outputfile, graf_graph, tier_hierarchies=None, meta_information=None):
+        ann_file = open(outputfile, "w")
         t = 1
         n = 1
         relation_map = {}
 
         label_list = ["head", "translation", "pos", "italic", "bold"]
 
-        for annotation in self.graf.annotation_spaces[annotation_space]:
+        for annotation in graf_graph.annotation_spaces[self.annotation_space]:
             if annotation.label in label_list:
-                if feature_name in annotation.features:
-                    annotation_value = annotation.features[feature_name]
+                if self.feature_name in annotation.features:
+                    annotation_value = annotation.features[self.feature_name]
 
                     if annotation_value:
                         node = annotation.element
 
                         for feature, value in annotation.features.items():
                             if value:
-                                if feature != feature_name:
+                                if feature != self.feature_name:
                                     annotation_type = value
                                 else:
                                     annotation_type = annotation.label
@@ -58,11 +58,11 @@ class Writer():
 
         ann_file.close()
 
-    def create_relations(self, relation_map, ann_file):
+    def create_relations(self, graf_graph, relation_map, ann_file):
         r = 1
 
         for node_id, text_bound in relation_map.items():
-            for edge in self.graf.edges:
+            for edge in graf_graph.edges:
                 if node_id == edge.from_node.id:
                     line = "R{0}	To Arg1:{2} Arg2:{1}\n".\
                         format(r, relation_map[edge.from_node.id],
@@ -72,14 +72,14 @@ class Writer():
 
         return ann_file
 
-    def create_conf_file(self):
-        basedirname = os.path.dirname(self.outputfile)
+    def create_conf_file(self, graf_graph, outputfile):
+        basedirname = os.path.dirname(outputfile)
 
         annotation_conf = open(basedirname+"/annotation.conf", "w")
 
         annotation_conf.write("[entities]\n")
 
-        for entity in self.graf.header.annotation_spaces:
+        for entity in graf_graph.header.annotation_spaces:
             annotation_conf.write(entity+"\n")
 
         annotation_conf.write("\n[relations]\n# To Arg1:<ENTITY>, Arg2:<ENTITY>"
