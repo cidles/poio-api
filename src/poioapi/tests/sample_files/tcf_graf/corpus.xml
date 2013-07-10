@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="d-spin-local_0_4.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="d-spin-local_0_4.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="d-spin-local_0_4.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="d-spin-local_0_4.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="d-spin-local_0_4.rnc" type="application/relax-ng-compact-syntax"?>
+<D-Spin xmlns="http://www.dspin.de/data" version="0.4">
+
+ <MetaData xmlns="http://www.dspin.de/data/metadata">
+  <source>IMS, Uni Stuttgart</source>
+ </MetaData>
+ 
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+   
+  <text>Peter aß eine Käsepizza. Sie schmeckte ihm.</text>
+   
+  <tokens charOffsets="true">
+   <token ID="t1">Peter</token>
+   <token ID="t2">ass</token>
+   <token ID="t3">eine</token>
+   <token ID="t4">Käsepizza</token>
+   <token ID="t5">.</token>
+   <token ID="t6">Sie</token>
+   <token ID="t7">schmeckte</token>
+   <token ID="t8">ihm</token>
+   <token ID="t9">.</token>
+  </tokens>
+    
+    <textstructure>
+      
+      <textspan type="page">
+        <textspan type="number">1</textspan>
+          <textspan type="image">
+          <textspan type="source">pizza.jpg</textspan>
+        </textspan>
+        <textspan type="header">
+          <textspan type="content">Katrin Stories</textspan>
+        </textspan>
+        <textspan type="footer">
+          <textspan type="content">disclaimer...</textspan>
+        </textspan>
+      </textspan>
+      
+      <textspan start="t1" end="t5" type="page">
+        <textspan type="number">2</textspan>
+        <textspan type="header">
+          <textspan type="content">Katrin Stories</textspan>
+        </textspan>
+        <textspan type="footer">
+          <textspan type="content">disclaimer...</textspan>
+        </textspan>
+      </textspan>
+      
+      <textspan type="line"/>
+      <textspan start="t1" end="t9" type="paragraph"/>
+      <textspan start="t1" end="t3" type="line"/>
+      <textspan start="t4" end="t5" type="line"/>
+      
+      <textspan start="t6" end="t9" type="page">
+        <textspan type="number">3</textspan>
+        <textspan type="header">
+          <textspan type="content">Katrin Stories</textspan>
+        </textspan>
+        <textspan type="footer">
+          <textspan type="content">disclaimer...</textspan>
+        </textspan>
+      </textspan>
+      
+      <textspan start="t6" end="t7" type="line"/>
+      <textspan start="t8" end="t9" type="line"/>
+      <textspan type="line"/>
+      
+    </textstructure>
+   
+  <orthography>
+    <correction operation="replace" tokenIDs="t2">aß</correction>
+  </orthography>
+   
+  <sentences charOffsets="true">
+   <sentence ID="s1" start="1" end="20" tokenIDs="t1 t2 t3 t4 t5"/>
+   <sentence ID="s2" start="22" end="39" tokenIDs="t6 t7 t8 t9"/>
+  </sentences>
+   
+  <POStags tagset="STTS">
+   <tag tokenIDs="t1">NE</tag>
+   <tag tokenIDs="t2">VVFIN</tag>
+   <tag tokenIDs="t3">ART</tag>
+   <tag tokenIDs="t4">NE</tag>
+   <tag tokenIDs="t5">$.</tag>
+   <tag tokenIDs="t6">PPER</tag>
+   <tag tokenIDs="t7">VVFIN</tag>
+   <tag tokenIDs="t8">PPER</tag>
+   <tag tokenIDs="t9">$.</tag>
+  </POStags>
+   
+  <lemmas>
+   <lemma ID="l1" tokenIDs="t1">Peter</lemma>
+   <lemma ID="l2" tokenIDs="t2">essen</lemma>
+   <lemma ID="l3" tokenIDs="t3">ein</lemma>
+   <lemma ID="l4" tokenIDs="t4">Käsepizza</lemma>
+   <lemma ID="l5" tokenIDs="t5">.</lemma>
+   <lemma ID="l6" tokenIDs="t6">sie</lemma>
+   <lemma ID="l7" tokenIDs="t7">schmecken</lemma>
+   <lemma ID="l8" tokenIDs="t8">er</lemma>
+   <lemma ID="l9" tokenIDs="t9">.</lemma>
+  </lemmas>
+   
+  <morphology segmentation="true">
+    <analysis tokenIDs="t4">
+      <tag>
+        <fs>
+          <f name="cat">noun</f>
+          <f name="case">acc</f>
+          <f name="gender">fem</f>
+          <f name="number">singular</f>
+        </fs>
+      </tag>
+      <segmentation>
+        <segment cat="noun" start="0" end="9">
+          <segment type="stem" cat="noun" func="comp" start="0" end="4">
+            Käse
+          </segment>
+          <segment type="stem" cat="noun" func="base" start="4" end="9">
+            Pizza
+          </segment>
+          
+        </segment>
+      </segmentation>
+    </analysis>
+  </morphology>
+   
+  <namedEntities type="MUC1990">
+    <entity class="PERSON" tokenIDs="t1"/>
+  </namedEntities>
+   
+  <WordSplittings type="hyphenation">
+    <split tokID="t4">4</split>
+  </WordSplittings> 
+   
+  <Phonetics transcription="IPA">
+    <pron tokID="t7">ʃmekən</pron>
+  </Phonetics> 
+   
+  <matches>
+    <query type="cqp">tb_lemma=&quot;Peter&quot; | tb_lemma=&quot;schmecken&quot;</query>
+   <corpus name="wcorp-1" pid="some-pid">
+    <item tokenIDs="t1" srcIDs="5-1023">
+     <target name="tname" value="t1"></target>
+     <category name="cname" value="cval"></category>
+    </item>
+    <item tokenIDs="t7" srcIDs="16-117">
+     <target name="tname" value="t7"></target>
+     <category name="cname" value="cval"></category>
+    </item>
+   </corpus>
+  </matches>
+   
+  <parsing tagset="Tiger">
+    <parse>
+      <constituent cat="TOP" ID="c1">
+        <constituent cat="S" ID="c2">
+          <constituent edge="SB" cat="NP" ID="c3">
+            <constituent edge="HD" cat="PN-Nom.Sg" ID="c4">
+              <constituent tokenIDs="t1" edge="HD" cat="NE-Nom.Sg" ID="c5"/>
+            </constituent>
+          </constituent>
+          <constituent tokenIDs="t2" edge="HD" cat="VVFIN" ID="c6"/>
+          <constituent edge="OA" cat="NP" ID="c7">
+            <cref constID="c3" edge="some-secondary-edge-label"/>
+            <constituent tokenIDs="t3" edge="NK" cat="ART-Acc.Sg" ID="c8"/>
+            <constituent tokenIDs="t4" edge="NK" cat="NN-Acc.Sg" ID="c9"/>
+          </constituent>
+        </constituent>
+        <constituent tokenIDs="t5" cat="\$." ID="c10"/>
+      </constituent>
+    </parse>
+    <parse>
+      <constituent cat="TOP" ID="c11">
+        <constituent cat="S" ID="c12">
+          <constituent edge="SB" cat="NP" ID="c13">
+            <constituent tokenIDs="t6" edge="HD" cat="PPER-Nom" ID="c14"/>
+          </constituent>
+          <constituent tokenIDs="t7" edge="HD" cat="VVFIN" ID="c15"/>
+          <constituent edge="DA" cat="NP" ID="c16">
+            <constituent tokenIDs="t8" edge="HD" cat="PPER-Dat" ID="c17"/>
+          </constituent>
+        </constituent>
+        <constituent tokenIDs="t9" cat="\$." ID="c18"/>
+      </constituent>
+    </parse>
+  </parsing>
+   
+  <depparsing tagset="Tiger" multigovs="false" emptytoks="false">
+   <parse>
+   	<dependency func="ROOT" depIDs="t2"/>
+    <dependency func="SUBJ" depIDs="t1" govIDs="t2"/>
+    <dependency func="SPEC" depIDs="t3" govIDs="t4"/>
+    <dependency func="OBJ" depIDs="t4" govIDs="t2"/>
+   </parse>
+   <parse>
+   <dependency func="ROOT" depIDs="t7"/>
+    <dependency func="SUBJ" depIDs="t6" govIDs="t7"/>
+    <dependency func="OBJ" depIDs="t8" govIDs="t7"/>
+   </parse>
+  </depparsing>
+   <references reltagset="TuebaDZ">
+     <entity>
+       <reference ID="rc_0" tokenIDs="t1" mintokIDs="t1"/>
+       <reference ID="rc_1" tokenIDs="t8" mintokIDs="t8" rel="coreferencial" target="rc_0"/>
+     </entity>
+     <entity>
+       <reference ID="rc_2" tokenIDs="t4" mintokIDs="t4"/>
+       <reference ID="rc_3" tokenIDs="t6" mintokIDs="t6" rel="coreferencial" target="rc_2"/>
+     </entity>
+   </references>
+   
+  <synonymy src="GermaNet">
+    <orthform lemmaRefs="l2">futtern, nehmen</orthform>
+  </synonymy>
+  <antonymy src="GermaNet">
+   <orthform lemmaRefs="l2">verhungern</orthform>
+  </antonymy>
+  <hyponymy src="GermaNet">
+   <orthform lemmaRefs="l2">Art essen, EssensOrt spezifiziert, EssensZeit spezifiziert, acheln, aufessen, aufnehmen, einverleiben, essen mit Instrument, hermachen, stärken, vertilgen, wegessen</orthform>
+   <orthform lemmaRefs="l7">abschmecken, gustieren, kosten, munden, probieren, versuchen, würzen</orthform>
+  </hyponymy>
+  <hyperonymy src="GermaNet">
+   <orthform lemmaRefs="l2">verzehren</orthform>
+   <orthform lemmaRefs="l7">Genuss essen, gut tun, guttun, perzipieren, wahrnehmen</orthform>
+  </hyperonymy>
+   
+   <!-- e.g. we know at which location Peter was eating his Pizza and got this location coordinates from geonames database -->
+    <geo coordFormat="DegDec" continentFormat="name" countryFormat="ISO3166_A2" capitalFormat="name">
+      <src>http://www.geonames.org/</src>
+      <gpoint tokenIDs="t1 t2 t3 t4" alt="233.0" lat="39.11417" lon="-94.62746" continent="Europe" country="DE" capital="Berlin"/>
+    </geo>
+    
+    <!-- semantically this example doesn't make sense, but is given just for the sake of xml example -->
+    <discourseconnectives tagset="TuebaDZ">
+      <connective tokenIDs="t_3" type="expansion"/>
+      <connective tokenIDs="t_5" type="temporal"/>
+    </discourseconnectives>
+  
+ </TextCorpus>
+</D-Spin>

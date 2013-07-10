@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="tag" occurs="9"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="token"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="tag"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="tag..n10"/>
+	<edge from="token..nt9" to="tag..n10" xml:id="e10"/>
+	<a as="tag" label="tag" ref="tag..n10" xml:id="10">
+		<fs>
+			<f name="annotation_value">$.</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n2"/>
+	<edge from="token..nt1" to="tag..n2" xml:id="e2"/>
+	<a as="tag" label="tag" ref="tag..n2" xml:id="2">
+		<fs>
+			<f name="annotation_value">NE</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n3"/>
+	<edge from="token..nt2" to="tag..n3" xml:id="e3"/>
+	<a as="tag" label="tag" ref="tag..n3" xml:id="3">
+		<fs>
+			<f name="annotation_value">VVFIN</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n4"/>
+	<edge from="token..nt3" to="tag..n4" xml:id="e4"/>
+	<a as="tag" label="tag" ref="tag..n4" xml:id="4">
+		<fs>
+			<f name="annotation_value">ART</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n5"/>
+	<edge from="token..nt4" to="tag..n5" xml:id="e5"/>
+	<a as="tag" label="tag" ref="tag..n5" xml:id="5">
+		<fs>
+			<f name="annotation_value">NE</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n6"/>
+	<edge from="token..nt5" to="tag..n6" xml:id="e6"/>
+	<a as="tag" label="tag" ref="tag..n6" xml:id="6">
+		<fs>
+			<f name="annotation_value">$.</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n7"/>
+	<edge from="token..nt6" to="tag..n7" xml:id="e7"/>
+	<a as="tag" label="tag" ref="tag..n7" xml:id="7">
+		<fs>
+			<f name="annotation_value">PPER</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n8"/>
+	<edge from="token..nt7" to="tag..n8" xml:id="e8"/>
+	<a as="tag" label="tag" ref="tag..n8" xml:id="8">
+		<fs>
+			<f name="annotation_value">VVFIN</f>
+		</fs>
+	</a>
+	<node xml:id="tag..n9"/>
+	<edge from="token..nt8" to="tag..n9" xml:id="e9"/>
+	<a as="tag" label="tag" ref="tag..n9" xml:id="9">
+		<fs>
+			<f name="annotation_value">PPER</f>
+		</fs>
+	</a>
+</graph>
