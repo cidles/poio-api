@@ -414,8 +414,7 @@ class Writer:
             for et in meta_information.findall("TIER"):
                 if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
                     for node in graf_graph.nodes:
-                        # TODO: this won't work if the tier name starts with a "na" somewhere
-                        if tier == node.id.split(poioapi.io.graf.GRAFSEPARATOR + "na")[0]:
+                        if tier in node.id:
                             for ann in node.annotations:
                                 features = {'ANNOTATION_ID': ann.id}
                                 annotation_value = None
