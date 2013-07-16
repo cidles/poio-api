@@ -410,42 +410,55 @@ class Writer:
         self.time_order = self._map_time_slots(meta_information)
 
         for tier in self._flatten_hierarchy_elements(tier_hierarchies):
+            element = self._tier_in_meta_information(tier, meta_information)
+            if element:
+                for node in graf_graph.nodes:
+                    if node.id.startswith(tier):
+                        for ann in node.annotations:
 
-            for et in meta_information.findall("TIER"):
-                if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
-                    for node in graf_graph.nodes:
-                        if tier in node.id:
-                            for ann in node.annotations:
-                                features = {'ANNOTATION_ID': ann.id}
-                                annotation_value = None
+                            annotation_value, ann_type, features = \
+                                self.get_annotation_values(node, ann)
 
-                                if node.links:
-                                    ann_type = "ALIGNABLE_ANNOTATION"
-
-                                    anchors = node.links[0][0].anchors
-                                    features['TIME_SLOT_REF1'] = self.time_order[anchors[0]]
-                                    features['TIME_SLOT_REF2'] = self.time_order[anchors[1]]
-                                else:
-                                    ann_type = "REF_ANNOTATION"
-                                    previous_annotation = self._find_previous_annotation(node)
-
-                                    features["ANNOTATION_REF"] = node.parent.annotations._elements[0].id
-
-                                    if previous_annotation:
-                                        features["PREVIOUS_ANNOTATION"] = previous_annotation
-
-                                if "annotation_value" in ann.features:
-                                    annotation_value = ann.features['annotation_value']
-
-                                for key, feature in ann.features.items():
-                                    if key != "annotation_value":
-                                        features[key] = feature
-
-                                annotation_element = SubElement(et, 'ANNOTATION')
-                                new_ann = SubElement(annotation_element, ann_type, features)
-                                SubElement(new_ann, 'ANNOTATION_VALUE').text = annotation_value
+                            annotation_element = SubElement(element, 'ANNOTATION')
+                            new_ann = SubElement(annotation_element, ann_type, features)
+                            SubElement(new_ann, 'ANNOTATION_VALUE').text = annotation_value
 
         self._write_file(outputfile, meta_information)
+
+    def _tier_in_meta_information(self, tier, meta_information):
+        for et in meta_information.findall("TIER"):
+            if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
+                return et
+
+        return None
+
+    def get_annotation_values(self, node, ann):
+        features = {'ANNOTATION_ID': ann.id}
+        annotation_value = None
+
+        if node.links:
+            ann_type = "ALIGNABLE_ANNOTATION"
+
+            anchors = node.links[0][0].anchors
+            features['TIME_SLOT_REF1'] = self.time_order[anchors[0]]
+            features['TIME_SLOT_REF2'] = self.time_order[anchors[1]]
+        else:
+            ann_type = "REF_ANNOTATION"
+            previous_annotation = self._find_previous_annotation(node)
+
+            features["ANNOTATION_REF"] = node.parent.annotations._elements[0].id
+
+            if previous_annotation:
+                features["PREVIOUS_ANNOTATION"] = previous_annotation
+
+        if "annotation_value" in ann.features:
+            annotation_value = ann.features['annotation_value']
+
+        for key, feature in ann.features.items():
+            if key != "annotation_value":
+                features[key] = feature
+
+        return annotation_value, ann_type, features
 
     def _find_previous_annotation(self, node):
         parent = node.parent
