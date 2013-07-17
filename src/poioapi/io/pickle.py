@@ -15,7 +15,6 @@ from a pickle file using Annotation Tree.
 from __future__ import absolute_import
 import os
 import sys
-import codecs
 import collections
 
 import poioapi.annotationtree
@@ -27,6 +26,7 @@ if sys.version_info[:2] >= (3, 0):
     string_type = str
 else:
     string_type = basestring
+
 
 class Parser(poioapi.io.graf.BaseParser):
     """
@@ -100,6 +100,23 @@ class Parser(poioapi.io.graf.BaseParser):
  #                   return value['region']
 
         return None
+
+    def get_primary_data(self):
+        """This method gets the information about
+        the source data file.
+
+        Returns
+        -------
+        primary_data : object
+            PrimaryData object.
+
+        """
+
+        primary_data = poioapi.io.graf.PrimaryData()
+        primary_data.type = primary_data.NONE
+        primary_data.filename = "unknown"
+
+        return primary_data
 
     def _build_indices(self, elements, hierarchy, parent = None):
         new_parent = None

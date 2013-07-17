@@ -19,6 +19,7 @@ import xml.etree.ElementTree as ET
 
 import poioapi.io.graf
 
+
 class Parser(poioapi.io.graf.BaseParser):
     """
     Class that will handle the parse of
@@ -127,6 +128,23 @@ class Parser(poioapi.io.graf.BaseParser):
             return [poioapi.io.graf.Annotation(e["id"], e["value"])
                     for e in self._elements_map[tier.name]
                     if e["parent"] == annotation_parent.id]
+
+    def get_primary_data(self):
+        """This method gets the information about
+        the source data file.
+
+        Returns
+        -------
+        primary_data : object
+            PrimaryData object.
+
+        """
+
+        primary_data = poioapi.io.graf.PrimaryData()
+        primary_data.type = primary_data.NONE
+        primary_data.filename = "unknown"
+
+        return primary_data
 
     def _get_features(self, attributes):
         features = {}

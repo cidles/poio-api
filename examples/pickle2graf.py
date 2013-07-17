@@ -47,15 +47,14 @@ def main(argv):
 
     graf_graph = annotation_graph.graf
     tier_hierarchies = annotation_graph.tier_hierarchies
+    primary_data = annotation_graph.primary_data
 
     writer = poioapi.io.graf.Writer()
 
     # Set values for the document header
     writer.standoffheader.filedesc.titlestmt = "Pickle Example"
-    writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
-                                                  'f.id': "text"}
 
-    writer.write(outputfile, graf_graph, tier_hierarchies)
+    writer.write(outputfile, graf_graph, tier_hierarchies, primary_data)
 
     print('Finished')
 
