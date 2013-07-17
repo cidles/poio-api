@@ -8,19 +8,23 @@
 		<annotationSpaces>
 			<annotationSpace as.id="itmGroup"/>
 		</annotationSpaces>
+		<roots>
+			<root>itmGroup..n013</root>
+			<root>itmGroup..n014</root>
+		</roots>
 	</graphHeader>
 	<node xml:id="itmGroup..n013"/>
 	<a as="itmGroup" label="itmGroup" ref="itmGroup..n013" xml:id="013">
 		<fs>
-			<f name="sp">Kalsarap Namaf</f>
 			<f name="annotation_value">Wak nmatu—The pig wife</f>
+			<f name="sp">Kalsarap Namaf</f>
 		</fs>
 	</a>
 	<node xml:id="itmGroup..n014"/>
 	<a as="itmGroup" label="itmGroup" ref="itmGroup..n014" xml:id="014">
 		<fs>
-			<f name="sp">Kalsarap Namaf</f>
 			<f name="annotation_value">Kalsarap on coconuts</f>
+			<f name="sp">Kalsarap Namaf</f>
 		</fs>
 	</a>
 </graph>

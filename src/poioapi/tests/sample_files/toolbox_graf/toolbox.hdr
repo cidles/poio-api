@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader creator="alopes" date.created="2013-06-13" docId="PoioAPI-736376" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+<documentHeader creator="alopes" date.created="2013-07-17" docId="PoioAPI-714173" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<fileDesc>
 		<titleStmt>
 			<title>Toolbox XML Example</title>
@@ -10,7 +10,7 @@
 	</fileDesc>
 	<profileDesc>
 		<textClass catRef="EN"/>
-		<primaryData f.id="text" loc="toolbox.xml"/>
+		<primaryData f.id="none" loc="unknown"/>
 		<annotations>
 			<annotation f.id="itmGroup" loc="toolbox-itmGroup.xml" loctype="relative"/>
 			<annotation f.id="idGroup" loc="toolbox-idGroup.xml" loctype="relative"/>

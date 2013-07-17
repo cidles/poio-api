@@ -49,6 +49,7 @@ def main(argv):
 
     graf_graph = annotation_graph.graf
     tier_hierarchies = annotation_graph.tier_hierarchies
+    primary_data = annotation_graph.primary_data
 
     writer = poioapi.io.graf.Writer()
 
@@ -56,10 +57,10 @@ def main(argv):
     writer.standoffheader.filedesc.titlestmt = "Toolbox XML Example"
     writer.standoffheader.profiledesc.catRef = "EN"
     writer.standoffheader.filedesc.documentation = "Documentation Place"
-    writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
-                                                  'f.id': "text"}
+    # writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
+    #                                               'f.id': "text"}
 
-    writer.write(outputfile, graf_graph, tier_hierarchies)
+    writer.write(outputfile, graf_graph, tier_hierarchies, primary_data)
 
     print('Finished')
 
