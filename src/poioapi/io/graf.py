@@ -16,8 +16,8 @@ SAX Xml module.
 from __future__ import absolute_import, unicode_literals
 
 import abc
+import codecs
 import os
-from sre_compile import _optimize_charset
 
 from xml.etree.ElementTree import tostring
 from xml.dom import minidom
@@ -441,18 +441,18 @@ class Writer():
 
         """
 
-        (base_dir_name, _) = os.path.splitext(outputfile)
+        (basedirname, _) = os.path.splitext(outputfile)
 
         self._get_parents(tier_hierarchies)
 
-        standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(base_dir_name))
+        standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(basedirname))
 
         for tier_name in self._flatten_hierarchy_elements(
                 tier_hierarchies):
             annotation_space = tier_name.split(GRAFSEPARATOR)[0]
             out_graf = graf.Graph()
             renderer = graf.GrafRenderer("{0}-{1}.xml".format(
-                base_dir_name, annotation_space
+                basedirname, annotation_space
             ))
             out_graf.nodes = [n for n in graf_graph.nodes
                               if n.id.startswith(tier_name)]
@@ -468,13 +468,13 @@ class Writer():
 
             renderer.render(out_graf)
 
-            basename = os.path.basename(base_dir_name)
+            basename = os.path.basename(basedirname)
             self.standoffheader.datadesc.add_annotation("{0}-{1}.xml".
                                                         format(basename, annotation_space), annotation_space)
 
-        self._add_primary_data(primary_data)
+        self._add_primary_data(primary_data, basedirname)
         standoffrenderer.render(self.standoffheader)
-        self._generate_metafile(base_dir_name, meta_information)
+        self._generate_metafile(basedirname, meta_information)
 
     def _add_root_nodes(self, graph, annotation_space, out_graf):
         for root in graph.header.roots:
@@ -499,7 +499,7 @@ class Writer():
                 if i is 0:
                     parent = h.split(GRAFSEPARATOR)[0]
 
-    def _add_primary_data(self, primary_data):
+    def _add_primary_data(self, primary_data, basedirname):
         if primary_data.type == 0:
             fid = "text"
         elif primary_data.type == 1:
@@ -512,15 +512,21 @@ class Writer():
         if primary_data.external_link:
             loc = primary_data.external_link
         elif primary_data.content:
-            self.create_raw_txt_file(primary_data.content)
+            loc = self._create_raw_txt_file(primary_data.content, basedirname)
         elif primary_data.filename:
             loc = primary_data.filename
 
         self.standoffheader.datadesc.primaryData = {'loc': loc,
                                                     'f.id': fid}
 
-    def create_raw_txt_file(self, content):
-        pass
+    def _create_raw_txt_file(self, content, basedirname):
+        filename = "{0}.txt".format(basedirname)
+        file = os.path.abspath(filename)
+        f = codecs.open(file, 'w', 'utf-8')
+        f.write(content)
+        f.close()
+
+        return os.path.basename(filename)
 
     def _generate_metafile(self, basedirname, meta_information = None):
         """Generate a metafile with all the extra information

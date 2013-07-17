@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="tokens" occurs="9"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="sentences"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="tokens"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="tokens..nt1"/>
+	<edge from="sentences..ns1" to="tokens..nt1" xml:id="et1"/>
+	<a as="tokens" label="tokens" ref="tokens..nt1" xml:id="t1">
+		<fs>
+			<f name="annotation_value">Peter</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt2"/>
+	<edge from="sentences..ns1" to="tokens..nt2" xml:id="et2"/>
+	<a as="tokens" label="tokens" ref="tokens..nt2" xml:id="t2">
+		<fs>
+			<f name="annotation_value">ass</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt3"/>
+	<edge from="sentences..ns1" to="tokens..nt3" xml:id="et3"/>
+	<a as="tokens" label="tokens" ref="tokens..nt3" xml:id="t3">
+		<fs>
+			<f name="annotation_value">eine</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt4"/>
+	<edge from="sentences..ns1" to="tokens..nt4" xml:id="et4"/>
+	<a as="tokens" label="tokens" ref="tokens..nt4" xml:id="t4">
+		<fs>
+			<f name="annotation_value">Käsepizza</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt5"/>
+	<edge from="sentences..ns1" to="tokens..nt5" xml:id="et5"/>
+	<a as="tokens" label="tokens" ref="tokens..nt5" xml:id="t5">
+		<fs>
+			<f name="annotation_value">.</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt6"/>
+	<edge from="sentences..ns2" to="tokens..nt6" xml:id="et6"/>
+	<a as="tokens" label="tokens" ref="tokens..nt6" xml:id="t6">
+		<fs>
+			<f name="annotation_value">Sie</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt7"/>
+	<edge from="sentences..ns2" to="tokens..nt7" xml:id="et7"/>
+	<a as="tokens" label="tokens" ref="tokens..nt7" xml:id="t7">
+		<fs>
+			<f name="annotation_value">schmeckte</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt8"/>
+	<edge from="sentences..ns2" to="tokens..nt8" xml:id="et8"/>
+	<a as="tokens" label="tokens" ref="tokens..nt8" xml:id="t8">
+		<fs>
+			<f name="annotation_value">ihm</f>
+		</fs>
+	</a>
+	<node xml:id="tokens..nt9"/>
+	<edge from="sentences..ns2" to="tokens..nt9" xml:id="et9"/>
+	<a as="tokens" label="tokens" ref="tokens..nt9" xml:id="t9">
+		<fs>
+			<f name="annotation_value">.</f>
+		</fs>
+	</a>
+</graph>

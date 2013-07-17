@@ -63,7 +63,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        return [poioapi.io.graf.Tier("text")]
+        return [poioapi.io.graf.Tier("sentences")]
 
     def get_child_tiers_for_tier(self, tier):
         """This method retrieves all the child tiers
@@ -81,11 +81,11 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        if tier.name == "text":
-            return [poioapi.io.graf.Tier("token")]
-        elif tier.name == "token":
-            return [poioapi.io.graf.Tier("tag"),
-                    poioapi.io.graf.Tier("lemma")]
+        if tier.name == "sentences":
+            return [poioapi.io.graf.Tier("tokens")]
+        elif tier.name == "tokens":
+            return [poioapi.io.graf.Tier("POStags"),
+                    poioapi.io.graf.Tier("lemmas")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         """This method retrieves all the annotations
@@ -107,19 +107,24 @@ class Parser(poioapi.io.graf.BaseParser):
 
         annotations = []
 
-        if tier.name == "text":
-            return [poioapi.io.graf.Annotation("t{0}".format(self._next_id()), t.text)
-                    for t in self.tree.findall("{0}text".format(self.namespace))]
-        elif tier.name == "token":
+        if tier.name == "sentences":
+            sentences = self.tree.find("{0}sentences".format(self.namespace))
+            for s in sentences.findall("{0}sentence".format(self.namespace)):
+                annotations.append(poioapi.io.graf.Annotation(s.attrib["ID"], s.attrib["tokenIDs"]))
+
+        elif tier.name == "tokens":
             for tokens in self.tree.findall("{0}tokens".format(self.namespace)):
                 for t in tokens:
-                    annotations.append(poioapi.io.graf.Annotation(t.attrib["ID"], t.text))
-        elif tier.name == "tag":
+                    if t.attrib["ID"] in annotation_parent.value:
+                        annotations.append(poioapi.io.graf.Annotation(t.attrib["ID"], t.text))
+
+        elif tier.name == "POStags":
             for tags in self.tree.findall("{0}POStags".format(self.namespace)):
                 for t in tags:
                     if t.attrib["tokenIDs"] == annotation_parent.id:
                         annotations.append(poioapi.io.graf.Annotation(self._next_id(), t.text))
-        elif tier.name == "lemma":
+
+        elif tier.name == "lemmas":
             for lemmas in self.tree.findall("{0}lemmas".format(self.namespace)):
                 for l in lemmas:
                     if l.attrib["tokenIDs"] == annotation_parent.id:
@@ -134,7 +139,32 @@ class Parser(poioapi.io.graf.BaseParser):
         return current_id
 
     def tier_has_regions(self, tier):
-        pass
+        if tier.name == "sentences":
+            return True
+
+        return False
 
     def region_for_annotation(self, annotation):
-        pass
+        sentences = self.tree.find("{0}sentences".format(self.namespace))
+        for s in sentences.findall("{0}sentence".format(self.namespace)):
+            if s.attrib["ID"] == annotation.id:
+                return s.attrib["start"], s.attrib["end"]
+
+    def get_primary_data(self):
+        """This method gets the information about
+        the source data file.
+
+        Returns
+        -------
+        primary_data : object
+            PrimaryData object.
+
+        """
+
+        primary_data = poioapi.io.graf.PrimaryData()
+
+        primary_data.type = primary_data.TEXT
+
+        primary_data.content = self.tree.find("{0}text".format(self.namespace)).text
+
+        return primary_data

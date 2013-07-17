@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader creator="alopes" date.created="2013-06-12" docId="PoioAPI-848787" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+<documentHeader creator="alopes" date.created="2013-07-17" docId="PoioAPI-384232" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<fileDesc>
 		<titleStmt>
 			<title>Elan Example</title>
@@ -10,15 +10,15 @@
 	</fileDesc>
 	<profileDesc>
 		<textClass catRef="EN"/>
-		<primaryData f.id="audio" loc="example.eaf"/>
+		<primaryData f.id="video" loc="file:///D:/Data/elan/elan-example1.mpg"/>
 		<annotations>
 			<annotation f.id="utterance" loc="example-utterance.xml" loctype="relative"/>
-			<annotation f.id="gestures" loc="example-gestures.xml" loctype="relative"/>
-			<annotation f.id="gesture_phases" loc="example-gesture_phases.xml" loctype="relative"/>
-			<annotation f.id="gesture_meaning" loc="example-gesture_meaning.xml" loctype="relative"/>
 			<annotation f.id="words" loc="example-words.xml" loctype="relative"/>
 			<annotation f.id="part_of_speech" loc="example-part_of_speech.xml" loctype="relative"/>
 			<annotation f.id="phonetic_transcription" loc="example-phonetic_transcription.xml" loctype="relative"/>
+			<annotation f.id="gestures" loc="example-gestures.xml" loctype="relative"/>
+			<annotation f.id="gesture_phases" loc="example-gesture_phases.xml" loctype="relative"/>
+			<annotation f.id="gesture_meaning" loc="example-gesture_meaning.xml" loctype="relative"/>
 		</annotations>
 	</profileDesc>
 </documentHeader>

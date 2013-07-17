@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="lemmas" occurs="9"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="tokens"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="lemmas"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="lemmas..nl1"/>
+	<edge from="tokens..nt1" to="lemmas..nl1" xml:id="el1"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl1" xml:id="l1">
+		<fs>
+			<f name="annotation_value">Peter</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl2"/>
+	<edge from="tokens..nt2" to="lemmas..nl2" xml:id="el2"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl2" xml:id="l2">
+		<fs>
+			<f name="annotation_value">essen</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl3"/>
+	<edge from="tokens..nt3" to="lemmas..nl3" xml:id="el3"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl3" xml:id="l3">
+		<fs>
+			<f name="annotation_value">ein</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl4"/>
+	<edge from="tokens..nt4" to="lemmas..nl4" xml:id="el4"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl4" xml:id="l4">
+		<fs>
+			<f name="annotation_value">Käsepizza</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl5"/>
+	<edge from="tokens..nt5" to="lemmas..nl5" xml:id="el5"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl5" xml:id="l5">
+		<fs>
+			<f name="annotation_value">.</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl6"/>
+	<edge from="tokens..nt6" to="lemmas..nl6" xml:id="el6"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl6" xml:id="l6">
+		<fs>
+			<f name="annotation_value">sie</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl7"/>
+	<edge from="tokens..nt7" to="lemmas..nl7" xml:id="el7"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl7" xml:id="l7">
+		<fs>
+			<f name="annotation_value">schmecken</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl8"/>
+	<edge from="tokens..nt8" to="lemmas..nl8" xml:id="el8"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl8" xml:id="l8">
+		<fs>
+			<f name="annotation_value">er</f>
+		</fs>
+	</a>
+	<node xml:id="lemmas..nl9"/>
+	<edge from="tokens..nt9" to="lemmas..nl9" xml:id="el9"/>
+	<a as="lemmas" label="lemmas" ref="lemmas..nl9" xml:id="l9">
+		<fs>
+			<f name="annotation_value">.</f>
+		</fs>
+	</a>
+</graph>

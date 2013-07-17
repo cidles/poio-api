@@ -46,6 +46,7 @@ def main(argv):
     graf_graph = converter.graf
     tier_hierarchies = converter.tier_hierarchies
     meta_information = converter.meta_information
+    primary_data = converter.primary_data
 
     writer = poioapi.io.graf.Writer()
 
@@ -53,10 +54,8 @@ def main(argv):
     writer.standoffheader.filedesc.titlestmt = "TCF Example"
     writer.standoffheader.profiledesc.catRef = "EN"
     writer.standoffheader.filedesc.documentation = "Documentation Place"
-    writer.standoffheader.datadesc.primaryData = {'loc': os.path.basename(inputfile),
-                                                  'f.id': "text"}
 
-    writer.write(outputfile, graf_graph, tier_hierarchies, meta_information)
+    writer.write(outputfile, graf_graph, tier_hierarchies, primary_data, meta_information)
 
     print('Finished')
 

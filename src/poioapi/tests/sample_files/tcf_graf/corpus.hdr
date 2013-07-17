@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<documentHeader creator="alopes" date.created="2013-07-10" docId="PoioAPI-998837" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
+<documentHeader creator="alopes" date.created="2013-07-17" docId="PoioAPI-364700" version="1.0.0" xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<fileDesc>
 		<titleStmt>
 			<title>TCF Example</title>
@@ -10,12 +10,12 @@
 	</fileDesc>
 	<profileDesc>
 		<textClass catRef="EN"/>
-		<primaryData f.id="text" loc="corpus.xml"/>
+		<primaryData f.id="text" loc="corpus.txt"/>
 		<annotations>
-			<annotation f.id="text" loc="corpus-text.xml" loctype="relative"/>
-			<annotation f.id="token" loc="corpus-token.xml" loctype="relative"/>
-			<annotation f.id="tag" loc="corpus-tag.xml" loctype="relative"/>
-			<annotation f.id="lemma" loc="corpus-lemma.xml" loctype="relative"/>
+			<annotation f.id="sentences" loc="corpus-sentences.xml" loctype="relative"/>
+			<annotation f.id="tokens" loc="corpus-tokens.xml" loctype="relative"/>
+			<annotation f.id="POStags" loc="corpus-POStags.xml" loctype="relative"/>
+			<annotation f.id="lemmas" loc="corpus-lemmas.xml" loctype="relative"/>
 		</annotations>
 	</profileDesc>
 </documentHeader>

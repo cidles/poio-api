@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+	<graphHeader>
+		<labelsDecl>
+			<labelUsage label="POStags" occurs="9"/>
+		</labelsDecl>
+		<dependencies>
+			<dependsOn f.id="tokens"/>
+		</dependencies>
+		<annotationSpaces>
+			<annotationSpace as.id="POStags"/>
+		</annotationSpaces>
+	</graphHeader>
+	<node xml:id="POStags..n1"/>
+	<edge from="tokens..nt1" to="POStags..n1" xml:id="e1"/>
+	<a as="POStags" label="POStags" ref="POStags..n1" xml:id="1">
+		<fs>
+			<f name="annotation_value">NE</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n2"/>
+	<edge from="tokens..nt2" to="POStags..n2" xml:id="e2"/>
+	<a as="POStags" label="POStags" ref="POStags..n2" xml:id="2">
+		<fs>
+			<f name="annotation_value">VVFIN</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n3"/>
+	<edge from="tokens..nt3" to="POStags..n3" xml:id="e3"/>
+	<a as="POStags" label="POStags" ref="POStags..n3" xml:id="3">
+		<fs>
+			<f name="annotation_value">ART</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n4"/>
+	<edge from="tokens..nt4" to="POStags..n4" xml:id="e4"/>
+	<a as="POStags" label="POStags" ref="POStags..n4" xml:id="4">
+		<fs>
+			<f name="annotation_value">NE</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n5"/>
+	<edge from="tokens..nt5" to="POStags..n5" xml:id="e5"/>
+	<a as="POStags" label="POStags" ref="POStags..n5" xml:id="5">
+		<fs>
+			<f name="annotation_value">$.</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n6"/>
+	<edge from="tokens..nt6" to="POStags..n6" xml:id="e6"/>
+	<a as="POStags" label="POStags" ref="POStags..n6" xml:id="6">
+		<fs>
+			<f name="annotation_value">PPER</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n7"/>
+	<edge from="tokens..nt7" to="POStags..n7" xml:id="e7"/>
+	<a as="POStags" label="POStags" ref="POStags..n7" xml:id="7">
+		<fs>
+			<f name="annotation_value">VVFIN</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n8"/>
+	<edge from="tokens..nt8" to="POStags..n8" xml:id="e8"/>
+	<a as="POStags" label="POStags" ref="POStags..n8" xml:id="8">
+		<fs>
+			<f name="annotation_value">PPER</f>
+		</fs>
+	</a>
+	<node xml:id="POStags..n9"/>
+	<edge from="tokens..nt9" to="POStags..n9" xml:id="e9"/>
+	<a as="POStags" label="POStags" ref="POStags..n9" xml:id="9">
+		<fs>
+			<f name="annotation_value">$.</f>
+		</fs>
+	</a>
+</graph>
