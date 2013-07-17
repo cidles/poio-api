@@ -12,12 +12,8 @@
 """
 
 from __future__ import unicode_literals
-import re
 
 import xml.etree.ElementTree as ET
-
-from xml.etree.ElementTree import Element, SubElement, tostring
-from xml.dom import minidom
 
 import poioapi.io.graf
 
@@ -162,9 +158,7 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         primary_data = poioapi.io.graf.PrimaryData()
-
         primary_data.type = primary_data.TEXT
-
         primary_data.content = self.tree.find("{0}text".format(self.namespace)).text
 
         return primary_data
