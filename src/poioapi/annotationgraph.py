@@ -284,9 +284,9 @@ class AnnotationGraph():
 
         self.tier_hierarchies = converter.tier_hierarchies
         self.meta_information = converter.meta_information
-        self.root_tiers       = converter.root_tiers
-        self.graf             = converter.graf
-
+        self.root_tiers = converter.root_tiers
+        self.graf = converter.graf
+        self.primary_data = converter.primary_data
 
     def from_elan(self, stream):
         """This method generates a GrAF object
@@ -294,7 +294,6 @@ class AnnotationGraph():
 
         """
         self._from_file(stream, poioapi.data.EAF)
-
 
     def from_typecraft(self, stream):
         """This method generates a GrAF object
