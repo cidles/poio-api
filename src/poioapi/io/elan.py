@@ -432,11 +432,12 @@ class Writer:
 
         """
 
+        self._time_slot_id = 0
         self.time_order = self._map_time_slots(meta_information)
 
         for tier in self._flatten_hierarchy_elements(tier_hierarchies):
             element = self._tier_in_meta_information(tier, meta_information)
-            if element:
+            if element is not None:
                 for node in graf_graph.nodes:
                     if node.id.startswith(tier):
                         for ann in node.annotations:
@@ -452,7 +453,7 @@ class Writer:
 
     def _tier_in_meta_information(self, tier, meta_information):
         for et in meta_information.findall("TIER"):
-            if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[-1]:
+            if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[1]:
                 return et
 
         return None
@@ -465,8 +466,8 @@ class Writer:
             ann_type = "ALIGNABLE_ANNOTATION"
 
             anchors = node.links[0][0].anchors
-            features['TIME_SLOT_REF1'] = self.time_order[anchors[0]]
-            features['TIME_SLOT_REF2'] = self.time_order[anchors[1]]
+            features['TIME_SLOT_REF1'] = self._time_order(anchors[0])
+            features['TIME_SLOT_REF2'] = self._time_order(anchors[1])
         else:
             ann_type = "REF_ANNOTATION"
             previous_annotation = self._find_previous_annotation(node)
@@ -484,6 +485,20 @@ class Writer:
                 features[key] = feature
 
         return annotation_value, ann_type, features
+
+    def _time_order(self, anchor):
+        if anchor in self.time_order:
+            return self.time_order[anchor]
+        else:
+            time_slot_id = self._next_time_slot()
+            self.time_order[anchor] = time_slot_id
+            return time_slot_id
+
+    def _next_time_slot(self):
+        self._time_slot_id += 1
+        time_slot_id = "ts{0}".format(self._time_slot_id)
+
+        return time_slot_id
 
     def _find_previous_annotation(self, node):
         parent = node.parent
