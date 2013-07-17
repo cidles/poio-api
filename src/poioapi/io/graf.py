@@ -226,7 +226,7 @@ class BaseParser(object):
         raise NotImplementedError("Method must be implemented")
 
     @abc.abstractmethod
-    def region_for_annotation(self, annotation):
+    def get_primary_data(self):
         """Method to get the primary data of the GrAF file.
 
         Returns
@@ -241,7 +241,6 @@ class BaseParser(object):
         """
 
         raise NotImplementedError("Method must be implemented")
-
 
 class GrAFConverter:
     """This class handles the conversion of different file formats into GrAF
