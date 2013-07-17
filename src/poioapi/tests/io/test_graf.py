@@ -14,6 +14,7 @@ import poioapi.io.graf
 
 import xml.etree.ElementTree
 
+
 class TestBaseParser:
 
     def setup(self):
@@ -111,6 +112,8 @@ class SimpleParser(poioapi.io.graf.BaseParser):
     def region_for_annotation(self, annotation):
         pass
 
+    def get_primary_data(self):
+        pass
 
 class TestGrAFConverter:
     def setup(self):
