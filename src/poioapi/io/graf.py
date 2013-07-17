@@ -89,11 +89,11 @@ class PrimaryData:
 
     (TEXT, AUDIO, VIDEO, NONE) = range(4)
 
-    def __init__(self, type, external_link=None, filename=None, content=None):
-        self.type = type
-        self.external_link = external_link
-        self.filename = filename
-        self.content = content
+    def __init__(self):
+        self.type = None
+        self.external_link = None
+        self.filename = None
+        self.content = None
 
 
 class BaseParser(object):
@@ -259,6 +259,7 @@ class GrAFConverter:
         self.graf = graf.Graph()
         self.tier_hierarchies = []
         self.meta_information = None
+        self.primary_data = None
 
     def write(self, outputfile):
         if self.writer:
@@ -293,6 +294,8 @@ class GrAFConverter:
 
         if hasattr(self.parser, 'meta_information'):
             self.meta_information = self.parser.meta_information
+
+        self.primary_data = self.parser.get_primary_data()
 
     def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix=None):
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
@@ -423,7 +426,7 @@ class Writer():
                 flat_elements.append(e)
         return flat_elements
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information=None):
+    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data, meta_information=None):
         """Writes the converter object as GrAF files.
 
         Parameters
@@ -433,8 +436,11 @@ class Writer():
             file for GrAF with the extension ".hdr".
         graf_graph : GrAF
         tier_hierarchies : array_like
+        primary_data : object
+            This object will contain the information to the dataDesc primaryData.
 
         """
+
         (base_dir_name, _) = os.path.splitext(outputfile)
 
         self._get_parents(tier_hierarchies)
@@ -466,6 +472,7 @@ class Writer():
             self.standoffheader.datadesc.add_annotation("{0}-{1}.xml".
                                                         format(basename, annotation_space), annotation_space)
 
+        self._add_primary_data(primary_data)
         standoffrenderer.render(self.standoffheader)
         self._generate_metafile(base_dir_name, meta_information)
 
@@ -491,6 +498,29 @@ class Writer():
 
                 if i is 0:
                     parent = h.split(GRAFSEPARATOR)[0]
+
+    def _add_primary_data(self, primary_data):
+        if primary_data.type == 0:
+            fid = "text"
+        elif primary_data.type == 1:
+            fid = "audio"
+        elif primary_data.type == 2:
+            fid = "video"
+        elif primary_data.type == 3:
+            fid = "none"
+
+        if primary_data.external_link:
+            loc = primary_data.external_link
+        elif primary_data.content:
+            self.create_raw_txt_file(primary_data.content)
+        elif primary_data.filename:
+            loc = primary_data.filename
+
+        self.standoffheader.datadesc.primaryData = {'loc': loc,
+                                                    'f.id': fid}
+
+    def create_raw_txt_file(self, content):
+        pass
 
     def _generate_metafile(self, basedirname, meta_information = None):
         """Generate a metafile with all the extra information
