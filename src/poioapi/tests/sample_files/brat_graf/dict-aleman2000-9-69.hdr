@@ -18,6 +18,10 @@
       </sourceDesc>
    </fileDesc>
    <profileDesc>
+      <langUsage>
+               <language iso639="des"/>
+               <language iso639="spa"/>
+      </langUsage>
       <primaryData f.id="text" loc="dict-aleman2000-9-69.txt"/>
       <annotations>
          <annotation loc="dict-aleman2000-9-69-entries.xml" f.id="f.entries"/>

@@ -14,6 +14,7 @@
 from __future__ import unicode_literals
 
 import os
+import codecs
 
 
 class Writer():
@@ -22,7 +23,7 @@ class Writer():
         self.feature_name = feature_name
 
     def write(self, outputfile, graf_graph, tier_hierarchies=None, meta_information=None):
-        ann_file = open(outputfile, "w")
+        ann_file = codecs.open(outputfile, "w", "utf-8")
         t = 1
         n = 1
         relation_map = {}

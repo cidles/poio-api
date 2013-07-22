@@ -44,9 +44,9 @@ def main(argv):
     parser = graf.io.GraphParser()
     graph = parser.parse(inputfile)
 
-    brat = poioapi.io.brat.Writer(graph, outputfile)
+    brat = poioapi.io.brat.Writer("dictinterpretation", feature_name="substring")
 
-    brat.write("dictinterpretation", feature_name="substring")
+    brat.write(outputfile, graph)
 
     print('Finished')
 
