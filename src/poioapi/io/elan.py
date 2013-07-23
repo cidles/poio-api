@@ -414,7 +414,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     """
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data, meta_information):
+    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data=None, meta_information=None):
         """Write the GrAF object into a Elan file.
 
         Parameters
