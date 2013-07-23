@@ -276,7 +276,7 @@ class BaseWriter(object):
             This object will contain the information to the dataDesc primaryData.
         meta_information : ElementTree
             Element tree contains extra information about a specific object.
-            
+
         """
 
         raise NotImplementedError("Method must be implemented")
@@ -435,7 +435,7 @@ class GrAFConverter:
         self.graf.nodes.add(node)
 
 
-class Writer(BaseParser):
+class Writer(BaseWriter):
 
     def __init__(self, **kwargs):
         self.tier_hierarchies = None

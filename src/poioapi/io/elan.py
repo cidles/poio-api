@@ -537,13 +537,14 @@ class Writer(poioapi.io.graf.BaseWriter):
         for t in time:
             if t.attrib["TIME_VALUE"] == "-1":
                 del t.attrib["TIME_VALUE"]
-
-        if not element_tree.find("HEADER"):
-            header = SubElement(element_tree, "HEADER",
-                                {"MEDIA_FILE": " ", "TIME_UNITS": "milliseconds"})
-            SubElement(header, "MEDIA_DESCRIPTOR",
-                       {"MEDIA_URL": primary_data.external_link,
-                        "MIME_TYPE": primary_data.type})
+                
+        if primary_data:
+            if primary_data.type != "none" and not element_tree.find("HEADER"):
+                header = SubElement(element_tree, "HEADER",
+                                    {"MEDIA_FILE": " ", "TIME_UNITS": "milliseconds"})
+                SubElement(header, "MEDIA_DESCRIPTOR",
+                           {"MEDIA_URL": primary_data.external_link,
+                            "MIME_TYPE": primary_data.type})
 
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
