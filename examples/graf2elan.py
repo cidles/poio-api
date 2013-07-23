@@ -48,12 +48,13 @@ def main(argv):
     graf_graph = annotation_graph.graf
     tier_hierarchies = annotation_graph.tier_hierarchies
     meta_information = annotation_graph.meta_information
+    primary_data = annotation_graph.primary_data
 
     # Initialize
     elan = poioapi.io.elan.Writer()
 
     # Write the Elan file
-    elan.write(outputfile, graf_graph, tier_hierarchies, meta_information)
+    elan.write(outputfile, graf_graph, tier_hierarchies, primary_data, meta_information)
 
     print('Finished')
 

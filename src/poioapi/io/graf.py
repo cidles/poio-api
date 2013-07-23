@@ -26,7 +26,7 @@ import graf
 
 # GrAF ID's separator
 GRAFSEPARATOR = ".."
-(TEXT, AUDIO, VIDEO, NONE) = range(4)
+(TEXT, AUDIO, VIDEO, NONE) = ("text", "audio", "video", "none")
 
 
 class Tier:
@@ -241,6 +241,33 @@ class BaseParser(object):
 
         raise NotImplementedError("Method must be implemented")
 
+
+class BaseWriter(object):
+    """This class is a base class to the
+    writer classes in order to create
+    files from GrAF objects.
+    This class contains some methods that must be
+    implemented other wise it will be raise a
+    exception error.
+
+    Raises
+    ------
+    NotImplementedError
+        Method must be implemented.
+
+    """
+
+    __metaclass__ = abc.ABCMeta
+
+    @abc.abstractmethod
+    def write(self, outputfile, graf_graph, tier_hierarchies,
+              primary_data=None, meta_information=None):
+        """Method that will write the GrAF object into
+        a specific format.
+        """
+
+        raise NotImplementedError("Method must be implemented")
+
 class GrAFConverter:
     """This class handles the conversion of different file formats into GrAF
     objects and back again. It uses a sub-class of BaseParser to get the
@@ -263,7 +290,7 @@ class GrAFConverter:
     def write(self, outputfile):
         if self.writer:
             self.writer.write(outputfile, self.graf, self.tier_hierarchies,
-                self.meta_information)
+                              self.primary_data, self.meta_information)
 
     def parse(self):
         """This method will be the responsible to transform
@@ -395,7 +422,7 @@ class GrAFConverter:
         self.graf.nodes.add(node)
 
 
-class Writer():
+class Writer(BaseParser):
 
     def __init__(self, **kwargs):
         self.tier_hierarchies = None
@@ -437,6 +464,8 @@ class Writer():
         tier_hierarchies : array_like
         primary_data : object
             This object will contain the information to the dataDesc primaryData.
+        meta_information : ElementTree
+            Element tree contains extra information about a specific object.
 
         """
 
@@ -499,15 +528,7 @@ class Writer():
                     parent = h.split(GRAFSEPARATOR)[0]
 
     def _add_primary_data(self, primary_data, basedirname):
-        if primary_data.type == 0:
-            fid = "text"
-        elif primary_data.type == 1:
-            fid = "audio"
-        elif primary_data.type == 2:
-            fid = "video"
-        elif primary_data.type == 3:
-            fid = "none"
-
+        
         if primary_data.external_link:
             loc = primary_data.external_link
         elif primary_data.content:
@@ -516,10 +537,10 @@ class Writer():
             loc = primary_data.filename
 
         self.standoffheader.datadesc.primaryData = {'loc': loc,
-                                                    'f.id': fid}
+                                                    'f.id': primary_data.type}
 
     def _create_raw_txt_file(self, content, basedirname):
-        filename = "{0}.txt".format(basedirname)
+        filename = "{0}.txt".format(os.path.splitext(basedirname)[0])
         file = os.path.abspath(filename)
         f = codecs.open(file, 'w', 'utf-8')
         f.write(content)

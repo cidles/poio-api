@@ -407,14 +407,14 @@ class Parser(poioapi.io.graf.BaseParser):
         return meta_information
 
 
-class Writer:
+class Writer(poioapi.io.graf.BaseWriter):
     """
     Class that will handle the writing of
     GrAF files into Elan files again.
 
     """
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, meta_information):
+    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data, meta_information):
         """Write the GrAF object into a Elan file.
 
         Parameters
@@ -426,6 +426,9 @@ class Writer:
             A GrAF object.
         tier_hierarchies : array_like
             Array with all the tier hierarchies from the GrAF.
+        primary_data : object
+            This object will contain the information to the dataDesc
+            primaryData.
         meta_information : ElementTree
             Element tree contains all the information in Elan file
             besides the Tiers annotations.
@@ -449,7 +452,7 @@ class Writer:
                             new_ann = SubElement(annotation_element, ann_type, features)
                             SubElement(new_ann, 'ANNOTATION_VALUE').text = annotation_value
 
-        self._write_file(outputfile, meta_information)
+        self._write_file(outputfile, primary_data, meta_information)
 
     def _tier_in_meta_information(self, tier, meta_information):
         for et in meta_information.findall("TIER"):
@@ -515,7 +518,7 @@ class Writer:
 
         return None
 
-    def _write_file(self, outputfile, element_tree):
+    def _write_file(self, outputfile, primary_data, element_tree):
         """Write and indent the element tree into a
         Elan file.
 
@@ -534,6 +537,19 @@ class Writer:
         for t in time:
             if t.attrib["TIME_VALUE"] == "-1":
                 del t.attrib["TIME_VALUE"]
+
+        roota = element_tree
+
+        for a in roota:
+            if a.tag == "HEADER":
+                roota.remove(a)
+
+        if not element_tree.find("HEADER"):
+            header = SubElement(element_tree, "HEADER",
+                                {"MEDIA_FILE": " ", "TIME_UNITS": "milliseconds"})
+            SubElement(header, "MEDIA_DESCRIPTOR",
+                       {"MEDIA_URL": primary_data.external_link,
+                        "MIME_TYPE": primary_data.type})
 
         doc = minidom.parseString(tostring(element_tree))
         file.write(doc.toprettyxml(indent='    ', encoding='UTF-8'))
