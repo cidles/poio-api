@@ -149,7 +149,7 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         primary_data = poioapi.io.graf.PrimaryData()
-        primary_data.type = primary_data.NONE
+        primary_data.type = poioapi.io.graf.NONE
         primary_data.filename = "unknown"
 
         return primary_data

@@ -158,7 +158,7 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         primary_data = poioapi.io.graf.PrimaryData()
-        primary_data.type = primary_data.TEXT
+        primary_data.type = poioapi.io.graf.TEXT
         primary_data.content = self.tree.find("{0}text".format(self.namespace)).text
 
         return primary_data

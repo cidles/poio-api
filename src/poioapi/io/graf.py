@@ -26,6 +26,7 @@ import graf
 
 # GrAF ID's separator
 GRAFSEPARATOR = ".."
+(TEXT, AUDIO, VIDEO, NONE) = range(4)
 
 
 class Tier:
@@ -86,8 +87,6 @@ class PrimaryData:
     GrAF object.
 
     """
-
-    (TEXT, AUDIO, VIDEO, NONE) = range(4)
 
     def __init__(self):
         self.type = None
@@ -426,7 +425,7 @@ class Writer():
                 flat_elements.append(e)
         return flat_elements
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data, meta_information=None):
+    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data=None, meta_information=None):
         """Writes the converter object as GrAF files.
 
         Parameters
@@ -528,7 +527,7 @@ class Writer():
 
         return os.path.basename(filename)
 
-    def _generate_metafile(self, basedirname, meta_information = None):
+    def _generate_metafile(self, basedirname, meta_information=None):
         """Generate a metafile with all the extra information
         extracted from a file when it is parsed.
 

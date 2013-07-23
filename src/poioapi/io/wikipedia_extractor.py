@@ -9,13 +9,12 @@
 
 from __future__ import absolute_import, unicode_literals
 
-import sys
 import os
-import codecs
 
 import xml.etree.ElementTree as ET
 
 import poioapi.io.graf
+
 
 class Parser(poioapi.io.graf.BaseParser):
 
@@ -71,15 +70,32 @@ class Parser(poioapi.io.graf.BaseParser):
 
         return False
 
-    def write_raw_file(self):
-        file = os.path.abspath(self.basedirname + '.txt')
+    # def write_raw_file(self):
+    #     file = os.path.abspath(self.basedirname + '.txt')
+    #
+    #     if sys.version_info > (2, 7):
+    #         f = codecs.open(file, 'w', 'utf-8')
+    #     else:
+    #         f = open(file, 'w')
+    #
+    #     for text in self.documents:
+    #         f.write(text)
+    #
+    #     f.close()
 
-        if sys.version_info > (2, 7):
-            f = codecs.open(file, 'w', 'utf-8')
-        else:
-            f = open(file, 'w')
+    def get_primary_data(self):
+        """This method gets the information about
+        the source data file.
 
-        for text in self.documents:
-            f.write(text)
+        Returns
+        -------
+        primary_data : object
+            PrimaryData object.
 
-        f.close()
+        """
+
+        primary_data = poioapi.io.graf.PrimaryData()
+        primary_data.type = poioapi.io.graf.TEXT
+        primary_data.content = self.documents
+
+        return primary_data

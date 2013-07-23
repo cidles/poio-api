@@ -250,9 +250,9 @@ class Parser(poioapi.io.graf.BaseParser):
         media_descriptor = self.tree.find("HEADER").findall("MEDIA_DESCRIPTOR")[0]
 
         if media_descriptor.attrib["MIME_TYPE"].startswith("video"):
-            primary_data.type = primary_data.VIDEO
+            primary_data.type = poioapi.io.graf.VIDEO
         elif media_descriptor.attrib["MIME_TYPE"].startswith("audio"):
-            primary_data.type = primary_data.AUDIO
+            primary_data.type = poioapi.io.graf.AUDIO
 
         primary_data.external_link = media_descriptor.attrib["MEDIA_URL"]
 
