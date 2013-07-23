@@ -528,7 +528,6 @@ class Writer(BaseParser):
                     parent = h.split(GRAFSEPARATOR)[0]
 
     def _add_primary_data(self, primary_data, basedirname):
-        
         if primary_data.external_link:
             loc = primary_data.external_link
         elif primary_data.content:
