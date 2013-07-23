@@ -538,12 +538,6 @@ class Writer(poioapi.io.graf.BaseWriter):
             if t.attrib["TIME_VALUE"] == "-1":
                 del t.attrib["TIME_VALUE"]
 
-        roota = element_tree
-
-        for a in roota:
-            if a.tag == "HEADER":
-                roota.remove(a)
-
         if not element_tree.find("HEADER"):
             header = SubElement(element_tree, "HEADER",
                                 {"MEDIA_FILE": " ", "TIME_UNITS": "milliseconds"})
