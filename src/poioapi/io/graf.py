@@ -264,6 +264,19 @@ class BaseWriter(object):
               primary_data=None, meta_information=None):
         """Method that will write the GrAF object into
         a specific format.
+
+        Parameters
+        ----------
+        outputfile : str
+            The filename of the output file. The filename should be the header
+            file for GrAF with the extension ".hdr".
+        graf_graph : GrAF
+        tier_hierarchies : array_like
+        primary_data : object
+            This object will contain the information to the dataDesc primaryData.
+        meta_information : ElementTree
+            Element tree contains extra information about a specific object.
+            
         """
 
         raise NotImplementedError("Method must be implemented")
