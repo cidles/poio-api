@@ -7,7 +7,7 @@
 		<sourceDesc/>
 	</fileDesc>
 	<profileDesc>
-		<primaryData f.id="text" loc="balochi.pickle"/>
+		<primaryData f.id="text" loc="balochi.txt"/>
 		<annotations>
 			<annotation f.id="utterance" loc="balochi-utterance.xml" loctype="relative"/>
 			<annotation f.id="clause_unit" loc="balochi-clause_unit.xml" loctype="relative"/>
