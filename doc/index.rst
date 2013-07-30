@@ -24,6 +24,9 @@ The project's homepage is: http://media.cidles.eu/poio/poio-api/
 Module documentation
 ====================
 
+.. toctree::
+   :maxdepth: 2
+
    modules
 
     
