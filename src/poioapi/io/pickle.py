@@ -60,13 +60,10 @@ class Parser(poioapi.io.graf.BaseParser):
         self.data_hierarchy = self.annotation_tree.structure_type_handler.\
             data_hierarchy
 
-        #self._tier_map = {}
-        #self._find_structure_levels(self.data_hierarchy)
-
         self._annotations_for_parent = collections.defaultdict(list)
         self.last_used_id = 0
+        self.used_ids = []
         for element in self.annotation_tree.tree:
-            #self._get_elements_for_tier(element)
             self._build_indices(element, self.data_hierarchy)
 
     def get_root_tiers(self):
@@ -135,6 +132,12 @@ class Parser(poioapi.io.graf.BaseParser):
                     elements[i]['id'] = self.last_used_id
                     self.last_used_id += 1
 
+                while elements[i]['id'] in self.used_ids:
+                    elements[i]['id'] = self.last_used_id
+                    self.last_used_id += 1
+
+                self.used_ids.append(elements[i]['id'])
+                
                 if local_parent:
                     self._annotations_for_parent[(local_parent, t)].\
                         append(elements[i])

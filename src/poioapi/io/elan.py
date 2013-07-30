@@ -442,7 +442,7 @@ class Writer(poioapi.io.graf.BaseWriter):
             element = self._tier_in_meta_information(tier, meta_information)
             if element is not None:
                 for node in graf_graph.nodes:
-                    if node.id.startswith(tier):
+                    if node.id.startswith("{0}..".format(tier)):
                         for ann in node.annotations:
 
                             annotation_value, ann_type, features = \
