@@ -41,7 +41,7 @@ This block of code loads a Elan EAF file as annotation graph and writes the data
   f.write(ag.as_html_table(False, True))
   f.close()
 
-To try it out you may download the `example file from the Elan homepage<http://tla.mpi.nl/tools/tla-tools/elan/download/>`_.
+To try it out you may download the `example file from the Elan homepage <http://tla.mpi.nl/tools/tla-tools/elan/download/>`_.
 
 ====================
 Data Structure Types
@@ -84,7 +84,7 @@ In Poio API there are several data structure types pre-defined as classes in the
 The user of the API can of course create her own data structure type, by deriving a custom class from the base class
 `poioapi.data.DataStructureType`
 
-If you create an annotation graph from one of the supported file formats, the hierarchies that are present in file are accesible via the `tier_hierarchies` property of the annotation graph object. As an example, we use the `example file from the Elan homepage<http://tla.mpi.nl/tools/tla-tools/elan/download/>`_:
+If you create an annotation graph from one of the supported file formats, the hierarchies that are present in file are accesible via the `tier_hierarchies` property of the annotation graph object. As an example, we use the `example file from the Elan homepage <http://tla.mpi.nl/tools/tla-tools/elan/download/>`_:
 
 .. code-block:: python
 
