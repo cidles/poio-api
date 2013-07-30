@@ -8,19 +8,46 @@ Typecraft XML and others into annotation graphs as defined in ISO 24612. Those g
 an implementation called "Graph Annotation Framework" (GrAF), allow unified access to linguistic data
 from a wide range sources.
 
-Poio API is developed as a part of the `curation project of the F-AG 3 within CLARIN-D <http://de.clarin.eu/de/fachspezifische-arbeitsgruppen/f-ag-3-linguistische-feldforschung/kurationsprojekt-1.html>`_.
+Poio API is developed as a part of the `curation project of the F-AG 3 within CLARIN-D <http://de.clarin.eu/en/discipline-specific-working-groups/wg-3-linguistic-fieldwork-anthropology-language-typology/curation-project-1.html>`_.
 
 **References:**
   * ISO 24612 (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
-  * Graph Annotation Framework (GrAF): http://www.americannationalcorpus.org/graf-wiki
+  * Graph Annotation Framework (GrAF): http://www.xces.org/ns/GrAF/1.0/
 
 .. _data_structure_types:
+
+=============
+Quick Example
+=============
+
+This block of code loads a Elan EAF file as annotation graph and writes the data as html table into a file:
+
+.. code-block:: python
+
+  # imports
+  import poioapi.annotationgraph
+  import poioapi.data
+
+  # Create an empty annotation graph
+  ag = poioapi.annotationgraph.AnnotationGraph(None)
+  # Load the data from EAF file
+  ag.from_elan("elan-example3.eaf")
+  # Set the structure type for hierarchical/interlinear output
+  ag.structure_type_handler = poioapi.data.DataStructureType(ag.tier_hierarchies[0])
+
+  # Output as html
+  import codecs
+  f = codecs.open("example.html", "w", "utf-8")
+  f.write(ag.as_html_table(False, True))
+  f.close()
+
+To try it out you may download the `example file from the Elan homepage<http://tla.mpi.nl/tools/tla-tools/elan/download/>`_.
 
 ====================
 Data Structure Types
 ====================
 
-We use a data type called data structure type to represent annotation schemes in a tree. A simple data structure
+We use a data type called `DataStructureType` to represent annotation schemes in a tree. A simple data structure
 type describing that the researcher wants to tokenize a text into words before adding a word-for-word translation and a
 translation for the whole utterance looks like this:
 
@@ -55,18 +82,37 @@ In Poio API there are several data structure types pre-defined as classes in the
 * :py:class:`poioapi.data.DataStructureTypeMorphsynt`
 
 The user of the API can of course create her own data structure type, by deriving a custom class from the base class
-`poioapi.data.DataStructureType`. This is often done when a GrAF graph was created from an ELAN file that contains
-custom tiers. A custom class would look like this:
+`poioapi.data.DataStructureType`
+
+If you create an annotation graph from one of the supported file formats, the hierarchies that are present in file are accesible via the `tier_hierarchies` property of the annotation graph object. As an example, we use the `example file from the Elan homepage<http://tla.mpi.nl/tools/tla-tools/elan/download/>`_:
 
 .. code-block:: python
 
-  class DataStructureTypeElan(poioapi.data.DataStructureType):
-      name = "ELAN"
+  import poioapi.annotationgraph
 
-      data_hierarchy =\
-      [ 'utterance', 'phonetic_transcription',
-          [ 'words', 'part_of_speech' ]
-      ]
+  ag = poioapi.annotationgraph.AnnotationGraph()
+  ag.from_elan("elan-example3.eaf")
+  print(ag.tier_hierarchies)
+
+
+Which will output:
+
+.. code-block:: python
+
+  [['utterance..K-Spch'],
+   ['utterance..W-Spch',
+    ['words..W-Words', ['part_of_speech..W-POS']],
+    ['phonetic_transcription..W-IPA']],
+   ['gestures..W-RGU', ['gesture_phases..W-RGph', ['gesture_meaning..W-RGMe']]],
+   ['gestures..K-RGU', ['gesture_phases..K-RGph', ['gesture_meaning..K-RGMe']]]]
+
+This is a list of tier hierarchies. In this case, there are two hierarchies in the .eaf file, one which has the root tier `utterance..K-Spch` and another one with root tier `utterance..W-Spch`.
+
+The user can now easily create an instance of the class `DataStructureType` with one of the hierarchies. This will then be the default hierarchy for all subsequent actions on the annotation graph (e.g. queries, HTML output, etc.):
+
+.. code-block:: python
+
+  ag.structure_type_handler = poioapi.data.DataStructureType(ag.tier_hierarchies[0])
 
 
 =================
