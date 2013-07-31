@@ -96,6 +96,6 @@ class Parser(poioapi.io.graf.BaseParser):
 
         primary_data = poioapi.io.graf.PrimaryData()
         primary_data.type = poioapi.io.graf.TEXT
-        primary_data.content = self.documents
+        primary_data.content = "\n".join(self.documents)
 
         return primary_data
