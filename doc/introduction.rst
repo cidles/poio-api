@@ -15,7 +15,7 @@ Poio API is developed as a part of the `curation project of the F-AG 3 within
 CLARIN-D <http://de.clarin.eu/en/discipline-specific-working-groups/wg-3-linguistic-fieldwork-anthropology-language-typology/curation-project-1.html>`_.
 
 **References:**
-  * ISO 24612 (http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326)
+  * ISO 24612: http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326
   * Graph Annotation Framework (GrAF): http://www.xces.org/ns/GrAF/1.0/
 
 .. _data_structure_types:
@@ -103,6 +103,8 @@ from `DataStructureType`:
 
 .. code-block:: python
 
+  import poioapi.data
+  
   my_data_structure = poioapi.data.DataStructureType(
       [ 'utterance', [ 'word', 'wfw' ], 'translation' ])
 

@@ -109,6 +109,6 @@ slots and is of the stereotype `Symbolic Association`. An annotation in GrAF in
 
 
 **References:**
-  * EAF Format (http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf)
-  * Information about Elan (http://tla.mpi.nl/tools/tla-tools/elan/elan-description/)
-  * Elan Tools and Documentation (http://tla.mpi.nl/tools/tla-tools/elan/download/)
+  * EAF Format: http://www.mpi.nl/tools/elan/EAF_Annotation_Format.pdf
+  * Information about Elan: http://tla.mpi.nl/tools/tla-tools/elan/elan-description/
+  * Elan Tools and Documentation: http://tla.mpi.nl/tools/tla-tools/elan/download/
