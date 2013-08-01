@@ -20,8 +20,8 @@ The project's homepage is: http://media.cidles.eu/poio/poio-api/
    introduction
    parserwriter
 
-Module documentation
-====================
+API documentation
+=================
 
 .. toctree::
    :maxdepth: 2

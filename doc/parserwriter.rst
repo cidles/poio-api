@@ -14,12 +14,12 @@ and writer class:
 
 .. code-block:: python
 
-  parser = poioapi.io.wikipedia_extractor.Parser(argv[1])
+  parser = poioapi.io.wikipedia_extractor.Parser("Wikipedia.xml")
   writer = poioapi.io.graf.Writer()
 
   converter = poioapi.io.graf.GrAFConverter(parser, writer)
   converter.parse()
-  converter.write(argv[2])
+  converter.write("Wikipedia.hdr")
 
 This code parses from the XML output of the `Wikipedia Extractor
 <http://medialab.di.unipi.it/wiki/Wikipedia_Extractor>`_ and writes the content
