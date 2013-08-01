@@ -2,9 +2,10 @@ How to write a Parser/Writer for a new file format
 **************************************************
 
 In order to support your own file format in Poio API you need implement your
-own parser as a sub-class of the base class `poioapi.io.graf.BaseParser`.
-The base class contains six abstract methods that will allow the GrAF converter
-to build a GrAF object from the content of your files. The six methods are:
+own parser as a sub-class of the base class
+:py:class:`poioapi.io.graf.BaseParser`. The base class contains six abstract
+methods that will allow the GrAF converter to build a GrAF object from the
+content of your files. The six methods are:
 
 * get_root_tiers() - Get the root tiers.
 * get_child_tiers_for_tier(tier) - Get the child tiers of a give tier.
@@ -22,13 +23,13 @@ The tiers and annotations that are passed to the methods are normally objects
 from the classes :py:class:`poioapi.io.graf.Tier` and
 :py:class:`poioapi.io.graf.Annotation`. If you need to pass additional
 information between the methods, that are not present in our implementation
-of the classes, you might also sub-class `Tier` and/or `Annotation` and add
+of the classes, you might also sub-class ``Tier`` and/or ``Annotation`` and add
 your own properties. **By sub-classing you make sure that the properties from
 our implementation are still there. The converter needs them to build the GrAF
 object.**
 
-Each Tier contains a `name` and an `annotation_space` property (the latter
-is `None` by default). The class `ElanTier` exemplifies the sub-classing of
+Each ``Tier`` contains a `name` and an `annotation_space` property (the latter
+is `None` by default). The class ``ElanTier`` exemplifies the sub-classing of
 `Tier`. In the case of Elan we need to store an additional property
 `linguistic_type` to be able to implement the complete parser:
 
@@ -42,11 +43,11 @@ is `None` by default). The class `ElanTier` exemplifies the sub-classing of
             self.linguistic_type = linguistic_type
             self.annotation_space = linguistic_type
 
-`Tier`s use the `annotation_space` to describe that they share certain
+``Tier`` s use the `annotation_space` to describe that they share certain
 annotation types. If the `annotation_space` is `None` the GrAF converter
 will use the `name` as the label for the annotation space.
 
-Each `Annotation` is defined with a unique `id` property and can contain a
+Each ``Annotation`` is defined with a unique `id` property and can contain a
 `value` and a ' features` property. Features are stored in a dictionary with
 and will be stored in the `feature_structure` of the annotation in the GrAF
 representation.
@@ -68,7 +69,7 @@ methods to retrieve the information from the file.
 Sub-classing from BaseParser
 ----------------------------
 
-First we will sub-class our own parser `SimpleParser` from the class
+First we will sub-class our own parser ``SimpleParser`` from the class
 :py:class:`poioapi.io.graf.BaseParser` with empty methods. We will set some
 static data within the class that represent our tier names
 and the annotations for each tier:
@@ -106,8 +107,8 @@ and the annotations for each tier:
             pass
 
 If your annotations are stored in a file then you need to implement your own
-strategy how to load the file's content into your parser class. The `__init__()`
-of your parser class might be a good place to load your file.
+strategy how to load the file's content into your parser class. The
+``__init__()`` of your parser class might be a good place to load your file.
 
 **References:**
 
@@ -118,7 +119,7 @@ Implementation of the parser methods
 ------------------------------------
 
 We will start with the ``get_root_tiers()`` method. This method will return all
-the root tiers as objects of the class `Tier` (or a sub-class of it). In our
+the root tiers as objects of the class ``Tier`` (or a sub-class of it). In our
 case this is only the utterance tier:
 
 .. code-block:: python
@@ -127,9 +128,9 @@ case this is only the utterance tier:
         return [poioapi.io.graf.Tier("utterance")]    
             
 The method ``get_child_tiers_for_tier()`` returns all child tiers of 
-a given tier, again as `Tier` objects. In our simple example we assume that the
-child of the `utterance` tier is the `word` tier and the `word` tier has the
-children `graid` and `wfw`:
+a given tier, again as ``Tier`` objects. In our simple example we assume that
+the child of the utterance tier is the word tier and the word tier has the
+children graid and wfw:
 
 .. code-block:: python
 
@@ -141,14 +142,15 @@ children `graid` and `wfw`:
 
         return None
         
-**Note:** This two methods must always return a list of `Tier` objects or
+**Note:** This two methods must always return a list of ``Tier`` objects or
 `None`.
 
 The method ``get_annotations_for_tier()`` is used to collect the annotations
 for a given tier. Each annotation must at least cotain a unique `id` and an
-annotation value. Both properties are already present in the class `Annotation`
-that we use here to return the annotations. For the utterance tier we can simply
-convert the list of strings in our `self.utterance_tier` data store:
+annotation `value`. Both properties are already present in the class
+``Annotation`` that we use here to return the annotations. For the utterance
+tier we can simply convert the list of strings in our `self.utterance_tier`
+data store:
 
 .. code-block:: python
 
@@ -161,8 +163,8 @@ convert the list of strings in our `self.utterance_tier` data store:
 
 For all tiers that are children of another tier the annotations within the tiers
 are normally also children of another annotation on the parent tier. In this
-case the `Converter` will pass a value in the parameter `annotation_parent`. In
-our case, the `id` of the parent annotation points to the location of the
+case the ``Converter`` will pass a value in the parameter `annotation_parent`.
+In our case, the `id` of the parent annotation points to the location of the
 child annotations in the lists `self.word_tier`, `self.graid_tier` and
 `self.wfw_tier`:
 
@@ -184,7 +186,7 @@ child annotations in the lists `self.word_tier`, `self.graid_tier` and
 
         return []
 
-**Note:** This method must always return a list with `Annotation` elements 
+**Note:** This method must always return a list with ``Annotation`` elements 
 or an empty list.
 
 The method ``tier_has_regions()`` describes which tiers contain regions. 
