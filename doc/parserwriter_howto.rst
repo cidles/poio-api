@@ -237,7 +237,7 @@ the two strings and return the result as the primary data:
 Using the parser to convert to GrAF
 -----------------------------------
 
-You can now use the `SimpleParser` class to convert the static data into
+You can now use the ``SimpleParser`` class to convert the static data into
 a GrAF object:
 
 .. code-block:: python

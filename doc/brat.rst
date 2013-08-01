@@ -1,8 +1,8 @@
-*********************************
-How to convert GrAF files to brat
-*********************************
+****
+brat
+****
 
-First brat is a web-based tool for text annotation (http://brat.nlplab.org/).
+brat is a web-based tool for text annotation (http://brat.nlplab.org/).
 It works quite simple, through a annotation file with a **same name** of a text file, using the tokens in it, parses the
 text file in order to find the annotations using the token ranges.
 The annotations configuration are specified in a file name "annotation.conf", this file is also required otherwise the

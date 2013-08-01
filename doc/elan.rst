@@ -1,5 +1,5 @@
-Elan's EAF files
-****************
+Elan's EAF
+**********
 
 Elan is a widely used transcription and annotation software developed at the
 Max-Planck-Institute in Nijmegen. Due to its popularity the file format used

@@ -32,4 +32,5 @@ as GrAF files.
 
    parserwriter_howto
    elan
+   excel
    brat
