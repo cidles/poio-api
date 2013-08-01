@@ -162,8 +162,8 @@ Structure of GrAF graphs in Poio API
 TODO
 
 
-Exmample: GrAF from an Elan EAF file
-====================================
+Example: GrAF from an Elan EAF file
+===================================
 
 Elan is a widely used transcription and annotation software developed at the
 Max-Planck-Institute in Nijmegen. Due to its popularity the file format used
