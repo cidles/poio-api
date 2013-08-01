@@ -127,16 +127,35 @@ Which will output:
 
 .. code-block:: python
 
-  [['utterance..K-Spch'],
-   ['utterance..W-Spch',
-    ['words..W-Words', ['part_of_speech..W-POS']],
-    ['phonetic_transcription..W-IPA']],
-   ['gestures..W-RGU', ['gesture_phases..W-RGph', ['gesture_meaning..W-RGMe']]],
-   ['gestures..K-RGU', ['gesture_phases..K-RGph', ['gesture_meaning..K-RGMe']]]]
+  [
 
-This is a list of tier hierarchies. In this case, there are two hierarchies in
-the .eaf file, one which has the root tier `utterance..K-Spch` and another one
-with root tier `utterance..W-Spch`.
+    ['utterance..K-Spch'],
+
+    ['utterance..W-Spch',
+      ['words..W-Words',
+        ['part_of_speech..W-POS']
+      ],
+      ['phonetic_transcription..W-IPA']
+    ],
+
+    ['gestures..W-RGU',
+      ['gesture_phases..W-RGph',
+        ['gesture_meaning..W-RGMe']
+      ]
+    ],
+
+    ['gestures..K-RGU',
+      ['gesture_phases..K-RGph',
+        ['gesture_meaning..K-RGMe']
+      ]
+    ]
+
+  ]
+
+This is a list of tier hierarchies. In this case, there are four hierarchies in
+the .eaf file: two for each speaker, where one has the root tier with
+utterances (`utterance..K-Spch` and `utterance..K-Spch`), the other one with
+the root tier for gestures (`gestures..W-RGU` and `gestures..K-RGU`)
 
 The user can now easily create an instance of the class `DataStructureType`
 with one of the hierarchies. This will then be the default hierarchy for all
