@@ -20,8 +20,8 @@ Wto read and write files.
 
 from __future__ import unicode_literals
 
-import regex as re
-#import re
+#import regex as re
+import re
 import pickle
 import operator
 
