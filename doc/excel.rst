@@ -41,8 +41,8 @@ represent parts of utterances like main clauses and sub clauses. To analyze the
 word order now, the interesting units within the clause units are the
 participants and the verb. Participants of clauses are normally encoded
 regarding the syntactic/semantic role within the clause, Diana used the labels
-`S`, `A` and `P` that are widely used within general linguistics and language
-typology. The verbs have different tags like 'v.tr', 'v.intr' or 'v.aff'. All
+"S", "A" and "P" that are widely used within general linguistics and language
+typology. The verbs have different tags like "v.tr", "v.intr" or "v.aff". All
 the interesting tags appear in row five in Excel. Because we are only interested
 in clause units and the tags that represent participant and verbs within each
 clause unit, our parser will only return informations from row three, four and
@@ -63,7 +63,7 @@ a big problem when it comes to export Unicode CSV files. In the case of the
 Hinuq data, Diana used a lot of different Unicode characters that we need
 to preserve when exporting. We thus used Open Office to export the data to
 a CSV file that uses a UTF-8 encoding. You can open your Excel file in Open
-Office, click on `File` -> `Save As` and then choose `Text CSV` as file format.
+Office, click on `File` → `Save As` and then choose `Text CSV` as file format.
 In the following dialog choose `UTF-8` as encoding and the pipe symbol "|" as
 field seperator. We also chose an empty string as text seperator:
 
