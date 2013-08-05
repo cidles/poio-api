@@ -45,5 +45,5 @@ Information Management applications (Apache UIMA) <http://uima.apache.org/>`_
 fraemwork and the `general architecture for text engineering (GATE)
 <http://gate.ac.uk/>`_ software. You can download the ANC software here:
 
-http://www.anc.org/software/uimautils/
-http://www.anc.org/software/gate-tools/
+* http://www.anc.org/software/uimautils/
+* http://www.anc.org/software/gate-tools/
