@@ -1,6 +1,5 @@
-****
-brat
-****
+GrAF to brat conversion
+=======================
 
 brat is a web-based tool for text annotation (http://brat.nlplab.org/).
 It works quite simple, through a annotation file with a **same name** of a text file, using the tokens in it, parses the

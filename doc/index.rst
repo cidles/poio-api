@@ -19,6 +19,7 @@ Contents
 
    introduction
    parserwriter
+   analysis
 
 
 API documentation

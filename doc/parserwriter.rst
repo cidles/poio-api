@@ -31,6 +31,4 @@ as GrAF files.
    :maxdepth: 2
 
    parserwriter_howto
-   elan
    excel
-   brat

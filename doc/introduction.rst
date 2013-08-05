@@ -167,19 +167,76 @@ subsequent actions on the annotation graph (e.g. queries, HTML output, etc.):
       ag.tier_hierarchies[0])
 
 
-Annotation Graphs
-=================
-
-TODO
-
 .. _graf_structure:
-
 
 Structure of GrAF graphs in Poio API
 ====================================
 
-TODO
+To represent data from tier-based annotations, Poio API internally uses the
+library `graf-python <http://media.cidles.eu/poio/graf-pthon>`_ to store
+data and annotations. Those data structures conform to the so-called GrAF
+standard and consist of **nodes** and **edges* enriched by **feature
+structures** that contain the linguistic annotations. The nodes itself are
+**linked** to the primary data (text, audio, video, ...) via **regions**. The
+following schema pictures the content of one node:
 
+.. image:: _static/graf_schema.png
+
+Edges are then simple connections between individual nodes that can also have
+an `Annotation` with the same feature structures as the nodes.
+
+Poio API only uses a subset of all possible GrAF graphs to represent tier-based
+annotations. That means that Poio API will automatically only create certain
+edges between nodes and their annotations, to represent a parent-children
+relationship between annotations that are on different tiers in the
+original annotation file. Poio API will not create any additional edges between
+annotations on one single tier and between annotations of tiers that are
+not parent or child of each other. In addition to this, Poio API will also
+create some fixed feature structures from the content of annotations when you
+load a file. A standard string annotation (i.e. the part-of-speech tag in a
+Typecraft XML file) is stored as feature `annotation_value` in a node. See
+section :ref:`graf_structure_elan` for an in-depth description of such a GrAF
+structure when you load an Elan EAF file.
+
+You, as a user, are of course free to create any edges or add any feature
+structures and features when you process the graphs in your worklow. You have
+access to the GrAF object in Poio API after you loaded the content of a file
+into an object of the class ``AnnotationGraph``. The GrAF object is stored in
+the property `graf`:
+
+  # imports
+  import poioapi.annotationgraph
+  import poioapi.data
+
+  # Create an empty annotation graph
+  ag = poioapi.annotationgraph.AnnotationGraph(None)
+  # Load the data from EAF file
+  ag.from_elan("elan-example3.eaf")
+
+  my_graf_object = ag.graf
+
+  # ... then do something with the GrAF object...
+
+Keep in mind that probably none of your custom changes might be saved to some
+of the supoprted output file formats like Elan EAF or Typecraft XML. If you
+want to make sure that all your data persists when reading and writing files
+you should store the graphs as GrAF-XML, which will contain all information
+in the GrAF object:
+
+.. code-block:: python
+
+  # ... you did something with ag.graf ...
+
+  # save it
+  ag.to_graf("my_graf_object.hdr")
+
+  # load agian
+  ag.from_graf("my_graf_object.hdr")
+
+Other file formats might only store a subset of the content of `ag.graf`.
+
+
+.. _graf_structure_elan:
 
 Example: GrAF from an Elan EAF file
 ===================================

@@ -1,3 +1,5 @@
+.. _parserwriter_howto:
+
 How to write a Parser/Writer for a new file format
 **************************************************
 
@@ -266,3 +268,6 @@ object and pass it to the `Converter`'s constructor:
     converter = poioapi.io.graf.GrAFConverter(parser, writer)
     converter.parse()
     converter.write("simple.hdr")
+
+The section :ref:`excel_parser` discusses a slightly more complex use case: how to
+write a parser for custom annotations stored in a Microsoft Excel file.
