@@ -54,10 +54,10 @@ class Parser(poioapi.io.graf.BaseParser):
                     text += annotation[0].tail
 
                 self.documents_map[id] = (last_position, last_position +
-                                                         len(text))
+                                                         len(text) + 1)
                 self.documents.append(text)
 
-                last_position += len(text)
+                last_position += len(text) + 1
 
         return annotations
 
