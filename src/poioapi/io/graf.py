@@ -406,8 +406,8 @@ class GrAFConverter:
         self.graf.nodes[annotation_ref.to_str()].annotations.add(annotation)
 
         if annotation_name in self.graf.annotation_spaces:
-            if annotation not in self.graf.annotation_spaces[annotation_name]:
-                self.graf.annotation_spaces[annotation_name].add(annotation)
+            #if annotation not in self.graf.annotation_spaces[annotation_name]:
+            self.graf.annotation_spaces[annotation_name].add(annotation)
         else:
             annotation_space = graf.AnnotationSpace(annotation_name)
             annotation_space.add(annotation)
