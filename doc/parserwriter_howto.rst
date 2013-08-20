@@ -172,7 +172,7 @@ child annotations in the lists `self.word_tier`, `self.graid_tier` and
 
 .. code-block:: python
 
-        [...]
+    [...]
         
         if tier.name == "word":
             return [poioapi.io.graf.Annotation(2 + 4 * annotation_parent.id + i, v) for i, v
