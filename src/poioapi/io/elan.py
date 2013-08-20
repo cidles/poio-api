@@ -18,6 +18,8 @@ read-/writeable.
 
 from __future__ import absolute_import
 
+import collections
+
 import xml.etree.ElementTree as ET
 
 from xml.etree.ElementTree import Element, SubElement, tostring
@@ -55,9 +57,8 @@ class Parser(poioapi.io.graf.BaseParser):
         self._parse()
 
     def _parse(self):
-        """This method will set the variables
-        to make possible to do the parsing
-        correctly.
+        """This helper method does the EAF file parsing and intializes some
+        internal attributes.
 
         """
 
@@ -67,8 +68,10 @@ class Parser(poioapi.io.graf.BaseParser):
         self.root = ET.parse(self.filepath)
         self.tree = self.root.getroot()
         self.time_order = self._map_time_slots()
+        self._annotations_for_parent = collections.defaultdict(list)
         self.regions_map = {}
         self.meta_information = self._retrieve_aditional_information()
+        self._build_annotations()
 
     def get_root_tiers(self):
         """This method retrieves all the root tiers.
@@ -136,65 +139,59 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        annotations = []
-        tier_annotations = []
+        parent_id = None
+        if annotation_parent:
+            parent_id = annotation_parent.id
+        return self._annotations_for_parent[(parent_id, tier.name)]
 
+
+    def _build_annotations(self):
         for t in self.tree.findall("TIER"):
-            if t.attrib["TIER_ID"] == tier.name:
-                if self.tier_has_regions(tier):
-                    tier_annotations = t.findall("ANNOTATION/*")
-                elif annotation_parent:
-                    for a in t.findall("ANNOTATION/*"):
-                        if a.attrib["ANNOTATION_REF"] == annotation_parent.id:
-                            tier_annotations.append(a)
-                break
+            tier = ElanTier(
+                t.attrib['TIER_ID'], t.attrib['LINGUISTIC_TYPE_REF'])
+            for a in t.findall("ANNOTATION/*"):
+                annotation_id = a.attrib['ANNOTATION_ID']
+                annotation_value = a.find('ANNOTATION_VALUE').text
+                features = {}
 
-        for annotation in tier_annotations:
-            annotation_id = annotation.attrib['ANNOTATION_ID']
-            annotation_value = annotation.find('ANNOTATION_VALUE').text
-            features = {}
+                parent_annotation_id = None
 
-            if annotation.tag == "ALIGNABLE_ANNOTATION":
-                if annotation_parent is None:
+                if a.tag == "ALIGNABLE_ANNOTATION":
                     self.regions_map[annotation_id] = \
-                        {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
-                         'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
-                elif self._find_ranges_in_annotation_parent(
-                        annotation_parent, annotation):
-                    self.regions_map[annotation_id] = \
-                        {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
-                         'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
+                        {'time_slot1': a.attrib['TIME_SLOT_REF1'],
+                         'time_slot2': a.attrib['TIME_SLOT_REF2']}
+                    if 'PARENT_REF' in t.attrib:
+                        parent = self._annotation_for_region(
+                            t.attrib['PARENT_REF'],
+                            self.time_order[a.attrib['TIME_SLOT_REF1']],
+                            self.time_order[a.attrib['TIME_SLOT_REF2']])
+
+                        parent_annotation_id = parent.attrib['ANNOTATION_ID']
                 else:
-                    continue
-            else:
-                for attribute in annotation.attrib:
-                    if attribute != 'ANNOTATION_REF' and \
-                            attribute != 'ANNOTATION_ID' and \
-                            attribute != 'ANNOTATION_VALUE' and \
-                            attribute != 'PREVIOUS_ANNOTATION':
-                        features[attribute] = annotation.attrib[attribute]
+                    parent_annotation_id = a.attrib["ANNOTATION_REF"]
+                    for attribute in a.attrib:
+                        if attribute != 'ANNOTATION_REF' and \
+                                attribute != 'ANNOTATION_ID' and \
+                                attribute != 'ANNOTATION_VALUE' and \
+                                attribute != 'PREVIOUS_ANNOTATION':
+                            features[attribute] = annotation.attrib[attribute]
 
-            annotations.append(
-                poioapi.io.graf.Annotation(
-                    annotation_id, annotation_value, features))
+                self._annotations_for_parent[(
+                    parent_annotation_id, t.attrib['TIER_ID'])].\
+                    append(poioapi.io.graf.Annotation(
+                        annotation_id, annotation_value, features))
 
-        return annotations
-
-    def _find_ranges_in_annotation_parent(self, annotation_parent, annotation):
-        annotation_parent_regions = self.region_for_annotation(
-            annotation_parent)
-
-        annotation_regions = \
-            [self.time_order[annotation.attrib['TIME_SLOT_REF1']],
-             self.time_order[annotation.attrib['TIME_SLOT_REF2']]]
-
-        if int(annotation_parent_regions[0]) <= int(annotation_regions[0]):
-            if annotation_parent_regions[1] == "-1" or \
-                    int(annotation_regions[1]) <= int(
-                        annotation_parent_regions[1]):
-                return True
-
-        return False
+    def _annotation_for_region(self, tier_name, start, end):
+        for t in self.tree.findall("TIER"):
+            if t.attrib['TIER_ID'] == tier_name:
+                for a in t.findall("ANNOTATION/*"):
+                    annotation_regions = \
+                        [self.time_order[a.attrib['TIME_SLOT_REF1']],
+                         self.time_order[a.attrib['TIME_SLOT_REF2']]]
+                    if annotation_regions[0] <= start and \
+                            annotation_regions[1] >= end:
+                        return a
+        return None
 
     def region_for_annotation(self, annotation):
         """This method retrieves the region for a
@@ -297,9 +294,9 @@ class Parser(poioapi.io.graf.BaseParser):
             key = time.attrib['TIME_SLOT_ID']
 
             if 'TIME_VALUE' in time.attrib:
-                value = time.attrib['TIME_VALUE']
+                value = int(time.attrib['TIME_VALUE'])
             elif idx == len(time_order) - 1:
-                value = "-1"
+                value = -1
             else:
                 value = None
 
@@ -377,12 +374,12 @@ class Parser(poioapi.io.graf.BaseParser):
         time_slot_value = 0
 
         for time_slot in range_time_slots:
-            time_slot_value += int(time_order_dict[time_slot])
+            time_slot_value += time_order_dict[time_slot]
 
         if len(range_time_slots) is not 0:
             time_slot_value = (time_slot_value / len(range_time_slots))
 
-        return str(int(time_slot_value))
+        return time_slot_value
 
     def _retrieve_aditional_information(self):
         """This method retrieve all the elan
