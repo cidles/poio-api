@@ -10,6 +10,7 @@
 from __future__ import absolute_import
 
 import os
+import codecs
 
 import poioapi.io.brat
 
@@ -45,7 +46,7 @@ class TestBrat:
         annotations_res = os.path.join(os.path.dirname(__file__), "..", "sample_files",
                                        "brat_graf", "result.ann")
 
-        file_ann = open(annotations, "r")
-        file_ann_res = open(annotations_res, "r")
+        file_ann = codecs.open(annotations, "r", "utf-8")
+        file_ann_res = codecs.open(annotations_res, "r", "utf-8")
 
         assert len(file_ann.readlines()) == len(file_ann_res.readlines())

@@ -52,9 +52,9 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
-        self.parse()
+        self._parse()
 
-    def parse(self):
+    def _parse(self):
         """This method will set the variables
         to make possible to do the parsing
         correctly.
@@ -82,7 +82,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        return [ElanTier(tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
+        return [ElanTier(
+                    tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
                 for tier in self.tree.findall('TIER')
                 if not 'PARENT_REF' in tier.attrib]
 
@@ -155,31 +156,42 @@ class Parser(poioapi.io.graf.BaseParser):
 
             if annotation.tag == "ALIGNABLE_ANNOTATION":
                 if annotation_parent is None:
-                    self.regions_map[annotation_id] = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
-                                                       'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
-                elif self._find_ranges_in_annotation_parent(annotation_parent, annotation):
-                    self.regions_map[annotation_id] = {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
-                                                       'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
+                    self.regions_map[annotation_id] = \
+                        {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
+                         'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
+                elif self._find_ranges_in_annotation_parent(
+                        annotation_parent, annotation):
+                    self.regions_map[annotation_id] = \
+                        {'time_slot1': annotation.attrib['TIME_SLOT_REF1'],
+                         'time_slot2': annotation.attrib['TIME_SLOT_REF2']}
                 else:
                     continue
             else:
                 for attribute in annotation.attrib:
-                    if attribute != 'ANNOTATION_REF' and attribute != 'ANNOTATION_ID' and \
-                                    attribute != 'ANNOTATION_VALUE' and attribute != 'PREVIOUS_ANNOTATION':
+                    if attribute != 'ANNOTATION_REF' and \
+                            attribute != 'ANNOTATION_ID' and \
+                            attribute != 'ANNOTATION_VALUE' and \
+                            attribute != 'PREVIOUS_ANNOTATION':
                         features[attribute] = annotation.attrib[attribute]
 
-            annotations.append(poioapi.io.graf.Annotation(annotation_id, annotation_value, features))
+            annotations.append(
+                poioapi.io.graf.Annotation(
+                    annotation_id, annotation_value, features))
 
         return annotations
 
     def _find_ranges_in_annotation_parent(self, annotation_parent, annotation):
-        annotation_parent_regions = self.region_for_annotation(annotation_parent)
+        annotation_parent_regions = self.region_for_annotation(
+            annotation_parent)
 
-        annotation_regions = [self.time_order[annotation.attrib['TIME_SLOT_REF1']],
-                              self.time_order[annotation.attrib['TIME_SLOT_REF2']]]
+        annotation_regions = \
+            [self.time_order[annotation.attrib['TIME_SLOT_REF1']],
+             self.time_order[annotation.attrib['TIME_SLOT_REF2']]]
 
         if int(annotation_parent_regions[0]) <= int(annotation_regions[0]):
-            if annotation_parent_regions[1] == "-1" or int(annotation_regions[1]) <= int(annotation_parent_regions[1]):
+            if annotation_parent_regions[1] == "-1" or \
+                    int(annotation_regions[1]) <= int(
+                        annotation_parent_regions[1]):
                 return True
 
         return False
@@ -247,7 +259,8 @@ class Parser(poioapi.io.graf.BaseParser):
         primary_data = poioapi.io.graf.PrimaryData()
 
         #TODO Can exist more than one media_descriptor so we only get the first
-        media_descriptor = self.tree.find("HEADER").findall("MEDIA_DESCRIPTOR")[0]
+        media_descriptor = self.tree.find("HEADER").findall(
+            "MEDIA_DESCRIPTOR")[0]
 
         if media_descriptor.attrib["MIME_TYPE"].startswith("video"):
             primary_data.type = poioapi.io.graf.VIDEO
@@ -273,8 +286,9 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        # TODO: For the last time_slot if it's empty should be take from the audio/video file.
-        # If there's no audio/video file the value should be -1.
+        # TODO: For the last time_slot if it's empty should be take from the
+        # audio/video file. If there's no audio/video file the value should be
+        # -1.
 
         time_order = self.tree.find('TIME_ORDER')
         time_order_dict = dict()
@@ -319,8 +333,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
         for time_slot, value in time_order_dict.items():
             if value is None:
-                time_order_dict[time_slot] = self._find_time_slot_value(time_slot,
-                                                                        time_order_dict)
+                time_order_dict[time_slot] = self._find_time_slot_value(
+                    time_slot, time_order_dict)
 
         return time_order_dict
 
@@ -354,9 +368,11 @@ class Parser(poioapi.io.graf.BaseParser):
             for annotation in annotations:
                 if annotation[0].tag == 'ALIGNABLE_ANNOTATION':
                     if annotation[0].attrib['TIME_SLOT_REF1'] == time_slot:
-                        range_time_slots.append(annotation[0].attrib['TIME_SLOT_REF2'])
+                        range_time_slots.append(
+                            annotation[0].attrib['TIME_SLOT_REF2'])
                     if annotation[0].attrib['TIME_SLOT_REF2'] == time_slot:
-                        range_time_slots.append(annotation[0].attrib['TIME_SLOT_REF1'])
+                        range_time_slots.append(
+                            annotation[0].attrib['TIME_SLOT_REF1'])
 
         time_slot_value = 0
 
@@ -387,7 +403,8 @@ class Parser(poioapi.io.graf.BaseParser):
         for element in self.tree:
             if element.tag != 'ANNOTATION_DOCUMENT':
                 if element.tag == 'TIER':
-                    meta_information.append(Element(element.tag, element.attrib))
+                    meta_information.append(Element(
+                        element.tag, element.attrib))
                 else:
                     parent_element = SubElement(meta_information, element.tag,
                                                 element.attrib)
@@ -396,12 +413,14 @@ class Parser(poioapi.io.graf.BaseParser):
                                                  child.attrib)
 
                         # Update time_slots
-                        if other_child.tag == "TIME_SLOT" and "TIME_VALUE" not in other_child:
+                        if other_child.tag == "TIME_SLOT" and \
+                                "TIME_VALUE" not in other_child:
                             other_child.attrib["TIME_VALUE"] = \
-                                self.time_order[other_child.attrib["TIME_SLOT_ID"]]
+                                self.time_order[
+                                    other_child.attrib["TIME_SLOT_ID"]]
 
                         if not str(child.text).isspace() or \
-                                        child.text is not None:
+                                child.text is not None:
                             other_child.text = child.text
 
         return meta_information
@@ -414,7 +433,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     """
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data=None, meta_information=None):
+    def write(self, outputfile, graf_graph, tier_hierarchies,
+        primary_data=None, meta_information=None):
         """Write the GrAF object into a Elan file.
 
         Parameters
@@ -448,15 +468,20 @@ class Writer(poioapi.io.graf.BaseWriter):
                             annotation_value, ann_type, features = \
                                 self.get_annotation_values(node, ann)
 
-                            annotation_element = SubElement(element, 'ANNOTATION')
-                            new_ann = SubElement(annotation_element, ann_type, features)
-                            SubElement(new_ann, 'ANNOTATION_VALUE').text = annotation_value
+                            annotation_element = SubElement(
+                                element, 'ANNOTATION')
+                            new_ann = SubElement(
+                                annotation_element, ann_type, features)
+                            SubElement(
+                                new_ann, 'ANNOTATION_VALUE').text = \
+                                annotation_value
 
         self._write_file(outputfile, primary_data, meta_information)
 
     def _tier_in_meta_information(self, tier, meta_information):
         for et in meta_information.findall("TIER"):
-            if et.attrib["TIER_ID"] == tier.split(poioapi.io.graf.GRAFSEPARATOR)[1]:
+            if et.attrib["TIER_ID"] == tier.split(
+                    poioapi.io.graf.GRAFSEPARATOR)[1]:
                 return et
 
         return None
@@ -508,7 +533,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         prev_node = None
         neighbours = [child for child in parent.iter_children()
-                      if child.id.startswith(node.id.rpartition(poioapi.io.graf.GRAFSEPARATOR)[0])]
+                            if child.id.startswith(node.id.rpartition(
+                                poioapi.io.graf.GRAFSEPARATOR)[0])]
         for neighbour in neighbours:
             if neighbour.id == node.id:
                 break
@@ -541,7 +567,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         if primary_data:
             if primary_data.type != "none" and not element_tree.find("HEADER"):
                 header = SubElement(element_tree, "HEADER",
-                                    {"MEDIA_FILE": " ", "TIME_UNITS": "milliseconds"})
+                                    {"MEDIA_FILE": " ",
+                                    "TIME_UNITS": "milliseconds"})
                 SubElement(header, "MEDIA_DESCRIPTOR",
                            {"MEDIA_URL": primary_data.external_link,
                             "MIME_TYPE": primary_data.type})
