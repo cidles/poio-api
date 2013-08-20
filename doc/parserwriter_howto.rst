@@ -223,7 +223,7 @@ the length of the strings in ``self.utterance_tier``:
             return (0, len(self.utterance_tier[0]))
         elif annotation.id == 1:
             return (len(self.utterance_tier[0] + 1,
-                    len(self.utterance_tier[0] + 1 + len(self.utterance_tier[1])
+                    len(self.utterance_tier[0] + 1 + len(self.utterance_tier[1]))))
 
 Last but not least we also have to return the primary data. As the utterance
 tier was the root tier and we already defined the regions for the utterance
