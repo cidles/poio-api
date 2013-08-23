@@ -3,14 +3,14 @@
 How to write a Parser/Writer for a new file format
 **************************************************
 
-In order to support your own file format in Poio API you need implement your
-own parser as a sub-class of the base class
+In order to support your own file format in Poio API, you would need to
+implement your own parser as a sub-class of the base class
 :py:class:`poioapi.io.graf.BaseParser`. The base class contains six abstract
 methods that will allow the GrAF converter to build a GrAF object from the
 content of your files. The six methods are:
 
 * get_root_tiers() - Get the root tiers.
-* get_child_tiers_for_tier(tier) - Get the child tiers of a give tier.
+* get_child_tiers_for_tier(tier) - Get the child tiers of a given tier.
 * get_annotations_for_tier(tier, annotation_parent) - Get the annotations on a
   given tier.
 * tier_has_regions(tier) - Check if the annotations on a given tier specify
@@ -18,21 +18,21 @@ content of your files. The six methods are:
 * region_for_annotation(annotation) - Get the region for a given annotation.
 * get_primary_data() - Get the primary data that the annotations refer to.
 
-*Note: All the methods must be implemented otherwise it will be raised an
-exception.*
+*Note: All the methods must be implemented, otherwise an exception will be
+raised.*
 
 The tiers and annotations that are passed to the methods are normally objects
 from the classes :py:class:`poioapi.io.graf.Tier` and
 :py:class:`poioapi.io.graf.Annotation`. If you need to pass additional
 information between the methods, that are not present in our implementation
 of the classes, you might also sub-class ``Tier`` and/or ``Annotation`` and add
-your own properties. **By sub-classing you make sure that the properties from
+your own properties. **By sub-classing, you make sure that the properties from
 our implementation are still there. The converter needs them to build the GrAF
 object.**
 
 Each ``Tier`` contains a `name` and an `annotation_space` property (the latter
 is `None` by default). The class ``ElanTier`` exemplifies the sub-classing of
-`Tier`. In the case of Elan we need to store an additional property
+`Tier`. In the case of Elan, we need to store an additional property
 `linguistic_type` to be able to implement the complete parser:
 
 .. code-block:: python
@@ -50,9 +50,8 @@ annotation types. If the `annotation_space` is `None` the GrAF converter
 will use the `name` as the label for the annotation space.
 
 Each ``Annotation`` is defined with a unique `id` property and can contain a
-`value` and a ' features` property. Features are stored in a dictionary with
-and will be stored in the `feature_structure` of the annotation in the GrAF
-representation.
+`value` and a ' features` property. Features are stored in a dictionary 
+in the `feature_structure` of the annotation in the GrAF representation.
 
 **References:**
 
@@ -65,13 +64,13 @@ Example: A simple parser based on static data
 =============================================
 
 The transformation of annotation data to GrAF is done by the class
-:py:class:`poioapi.io.graf.GrAFConverter`. This class it will use the parser's
+:py:class:`poioapi.io.graf.GrAFConverter`. This class will use the parser's
 methods to retrieve the information from the file.
 
 Sub-classing from BaseParser
 ----------------------------
 
-First we will sub-class our own parser ``SimpleParser`` from the class
+First, we will sub-class our own parser ``SimpleParser`` from the class
 :py:class:`poioapi.io.graf.BaseParser` with empty methods. We will set some
 static data within the class that represent our tier names
 and the annotations for each tier:
@@ -108,7 +107,7 @@ and the annotations for each tier:
         def get_primary_data(self):
             pass
 
-If your annotations are stored in a file then you need to implement your own
+If your annotations are stored in a file, then you need to implement your own
 strategy how to load the file's content into your parser class. The
 ``__init__()`` of your parser class might be a good place to load your file.
 
@@ -122,7 +121,7 @@ Implementation of the parser methods
 
 We will start with the ``get_root_tiers()`` method. This method will return all
 the root tiers as objects of the class ``Tier`` (or a sub-class of it). In our
-case this is only the utterance tier:
+case, this is only the utterance tier:
 
 .. code-block:: python
         
@@ -130,9 +129,9 @@ case this is only the utterance tier:
         return [poioapi.io.graf.Tier("utterance")]    
             
 The method ``get_child_tiers_for_tier()`` returns all child tiers of 
-a given tier, again as ``Tier`` objects. In our simple example we assume that
-the child of the utterance tier is the word tier and the word tier has the
-children graid and wfw:
+a given tier, again as ``Tier`` objects. In our simple example, we assume that
+the child of the `utterance` tier is the `word` tier, which has the
+children `graid` and `wfw`:
 
 .. code-block:: python
 
@@ -163,7 +162,7 @@ data store:
 
             [...]
 
-For all tiers that are children of another tier the annotations within the tiers
+For all tiers that are children of another tier, the annotations within the tiers
 are normally also children of another annotation on the parent tier. In this
 case the ``Converter`` will pass a value in the parameter `annotation_parent`.
 In our case, the `id` of the parent annotation points to the location of the
@@ -225,7 +224,7 @@ the length of the strings in ``self.utterance_tier``:
             return (len(self.utterance_tier[0]) + 1,
                     len(self.utterance_tier[0]) + 1 + len(self.utterance_tier[1]))
 
-Last but not least we also have to return the primary data. As the utterance
+Last but not least, we also have to return the primary data. As the utterance
 tier was the root tier and we already defined the regions for the utterance
 annotations based on the strings in ``self.utterance_tier`` we can simply join
 the two strings and return the result as the primary data:
@@ -257,7 +256,7 @@ from the parsed data:
 * The tier hierarchies is stored in `converter.tier_hierarchies`.
 * The primary data for the annotations is stored in `converter.primary_data`.
 
-If you want to write the data to GrAF files you have to create a GrAF writer
+If you want to write the data to GrAF files, you have to create a GrAF writer
 object and pass it to the `Converter`'s constructor:
 
 .. code-block:: python
