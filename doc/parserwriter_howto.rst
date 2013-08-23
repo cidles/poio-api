@@ -3,7 +3,7 @@
 How to write a Parser/Writer for a new file format
 **************************************************
 
-In order to support your own file format in Poio API, you would need
+In order to support your own file format in Poio API, you would need to
 implement your own parser as a sub-class of the base class
 :py:class:`poioapi.io.graf.BaseParser`. The base class contains six abstract
 methods that will allow the GrAF converter to build a GrAF object from the
