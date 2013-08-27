@@ -16,13 +16,17 @@ ag = poioapi.annotationgraph.AnnotationGraph()
 ag.from_elan("elan-example3.eaf")
 
 # Set one of the tier hierarchies as our "working" hierarchy
+tier_hierarchy = None
+for t in ag.tier_hierarchies:
+    if t[0] == "utterance..W-Spch":
+        tier_hierarchy = t
 ag.structure_type_handler = poioapi.data.DataStructureType(
-    ag.tier_hierarchies[1])
+    tier_hierarchy)
 
 # Create filter manually
 af = poioapi.annotationgraph.AnnotationGraphFilter(ag)
-af.set_filter_for_type("words..W-Words", "follow")
-af.set_filter_for_type("part_of_speech..W-POS", r"\bpro\b")
+af.set_filter_for_tier("words..W-Words", "follow")
+af.set_filter_for_tier("part_of_speech..W-POS", r"\bpro\b")
 
 ag.append_filter(af)
 

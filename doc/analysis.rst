@@ -12,12 +12,12 @@ pipelines and support to merge data and annotation from a wide range of
 heteregenous data sources for further analysis.
 
 
-Search: Filters and filter chains
----------------------------------
+Search in annotation graphs: Filters and filter chains
+------------------------------------------------------
 
 The **filter** class :py:class:`poioapi.annotationgraph.AnnotationGraphFilter`
 can be used to search in annotation graphs in Poio API. The filter class can
-only be used together with the class
+only be used together with the annotation graph class
 :py:class:`poioapi.annotationgraph.AnnotationGraph`. The idea is that
 each annotation graph can contain a set of filters, that each reduce the
 full annotation graph to a subset. This list of filters is what we call a
@@ -39,7 +39,7 @@ create a new annotation graph and load the file:
     ag.from_elan("elan-example3.eaf")
 
 In the next step we set the default tier hierarchy for the annotation graph.
-As the example file contains four root tiers with sub-tiers we have to choose
+As the example file contains four root tiers with subtiers we have to choose
 one of the hierarchies carefully. In our case we choose the hierarchy with
 the root tier `utterance..W-Spch` that we find at index `1` of the
 property `ag.tier_hierarchies` after we loaded the file. We choose this
@@ -61,17 +61,17 @@ tiers:
         ['phonetic_transcription..W-IPA']]
 
 Now we are ready to create a filter for the data. We will filter the data
-with serch terms on two of the sub-tiers of our tier hierarchy: we will search
-for `follow` on the `words` tier and for the regular expression `\bpro\b` on
-the `POS` tier. We cann look up the full names of the tiers in the above
+with serch terms on two of the subtiers of our tier hierarchy: we will search
+for ``follow`` on the `words` tier and for the regular expression ``\bpro\b``
+on the `POS` tier. We can look up the full names of the tiers in the above
 tier hierarchy. The following code creates a filter object and adds the
 two search terms for the two tiers:
 
 .. code-block:: python
 
     af = poioapi.annotationgraph.AnnotationGraphFilter(ag)
-    af.set_filter_for_type("words..W-Words", "follow")
-    af.set_filter_for_type("part_of_speech..W-POS", r"\bpro\b")
+    af.set_filter_for_tier("words..W-Words", "follow")
+    af.set_filter_for_tier("part_of_speech..W-POS", r"\bpro\b")
 
 The final step is to append the filter to the filter chain of the annotation
 graph:
@@ -128,11 +128,11 @@ our example above:
 You can then append the filter to the filter chain. A complete script that
 demonstrates filters and filter chains is available on Github:
 
+https://github.com/cidles/poio-api/blob/master/examples/filter.py
 
 
-
-Examples
---------
+Real world examples
+-------------------
 
 Counting word orders
 ....................

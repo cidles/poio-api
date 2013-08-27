@@ -544,7 +544,7 @@ class AnnotationGraph():
         filter = AnnotationGraphFilter(self)
         for k in search_dict:
             if k in self.structure_type_handler.flat_data_hierarchy:
-                filter.set_filter_for_type(k, search_dict[k])
+                filter.set_filter_for_tier(k, search_dict[k])
         return filter
 
 
@@ -585,13 +585,13 @@ class AnnotationGraphFilter():
         for e in self.annotation_graph.structure_type_handler.flat_data_hierarchy:
             self.matchobject[e] = dict()
 
-    def set_filter_for_type(self, ann_type, filter_string):
+    def set_filter_for_tier(self, ann_type, filter_string):
         """Set a filter for a given type.
 
         Parameters
         ----------
         ann_type : str
-            Value of the field in the data structure hierarchy.
+            Value of the field in the data structure hierarchy, the tier name.
         filter_string : str
             String of the filter.
 

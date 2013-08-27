@@ -71,7 +71,7 @@ class TestAnnotationGraph:
         assert(len(html) > 0)
 
     def test_append_filter(self):
-        self.anngraphfilter.set_filter_for_type("Glosse", "ANOM")
+        self.anngraphfilter.set_filter_for_tier("Glosse", "ANOM")
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
@@ -80,7 +80,7 @@ class TestAnnotationGraph:
         assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung..P-Spch..na2', 'Äußerung..P-Spch..na9']
 
     def test_reset_filters(self):
-        self.anngraphfilter.set_filter_for_type("Glosse", "ANOM")
+        self.anngraphfilter.set_filter_for_tier("Glosse", "ANOM")
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
@@ -108,7 +108,7 @@ class TestAnnotationGraphFilter:
         self.anngraphfilter = poioapi.annotationgraph.AnnotationGraphFilter(self.annotation_graph)
 
     def test_element_passes_filter(self):
-        self.anngraphfilter.set_filter_for_type("graid2", "nc")
+        self.anngraphfilter.set_filter_for_tier("graid2", "nc")
 
         element = self.annotation_graph.graf.nodes['utterance..na898']
         expected_result = False
@@ -123,8 +123,8 @@ class TestAnnotationGraphFilter:
                == expected_result)
 
         #element = self.annotation_graph.graf.nodes['utterance..na89']
-        self.anngraphfilter.set_filter_for_type("graid2", "")
-        self.anngraphfilter.set_filter_for_type("clause_unit", "nc")
+        self.anngraphfilter.set_filter_for_tier("graid2", "")
+        self.anngraphfilter.set_filter_for_tier("clause_unit", "nc")
         expected_result = False
 
         assert(self.anngraphfilter.element_passes_filter(element)
