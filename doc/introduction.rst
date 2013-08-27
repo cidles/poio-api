@@ -18,8 +18,6 @@ CLARIN-D <http://de.clarin.eu/en/discipline-specific-working-groups/wg-3-linguis
   * ISO 24612: http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326
   * Graph Annotation Framework (GrAF): http://www.xces.org/ns/GrAF/1.0/
 
-.. _data_structure_types:
-
 
 Quick Example
 =============
@@ -50,6 +48,8 @@ as html table into a file:
 To try it out you may download the `example file from the Elan homepage
 <http://tla.mpi.nl/tools/tla-tools/elan/download/>`_.
 
+
+.. _data_structure_types:
 
 Data Structure Types
 ====================

@@ -48,7 +48,7 @@ class AnnotationGraph():
         self.graf_basename = None
 
         self.filters = []
-        self.filtered_node_ids = [[]]
+        self.filtered_node_ids = []
         self.tier_hierarchies = None
         self.meta_information = None
         self.root_tiers = []
@@ -447,9 +447,10 @@ class AnnotationGraph():
 
         new_filtered_elements = \
             [ node.id
-              for node in self.root_nodes()
-              if node.id in self.filtered_node_ids[-1] and \
-                 filter.element_passes_filter(node)]
+            for node in self.root_nodes()
+                if (len(self.filtered_node_ids) == 0 or \
+                    node.id in self.filtered_node_ids[-1]) and \
+                    filter.element_passes_filter(node)]
 
         self.filtered_node_ids.append(new_filtered_elements)
 
@@ -504,19 +505,20 @@ class AnnotationGraph():
         """
 
         self.filters = []
-        self.filtered_node_ids = [ [ n.id for n in self.root_nodes() ] ]
+        self.filtered_node_ids = []
 
     def reset_filters(self):
         """Reset the filters array.
 
         """
 
-        self.filtered_node_ids = [ [ n.id for n in self.root_nodes() ] ]
+        self.filtered_node_ids = []
 
         for filter in self.filters:
             new_filtered_elements = []
             for node in self.root_nodes():
-                if node.id in self.filtered_node_ids[-1] and \
+                if (len(self.filtered_node_ids) == 0 or \
+                        node.id in self.filtered_node_ids[-1]) and \
                         filter.element_passes_filter(node):
                     new_filtered_elements.append(node.id)
 
@@ -678,6 +680,7 @@ class AnnotationGraphFilter():
                     if len(a_list) > 0:
                         a = self.annotation_graph.annotation_value_for_annotation(a_list[0])
                         match = re.search(self.filter[t], a)
+                        print
                         if match:
                             self.matchobject[t][node.id] =\
                             [ [m.start(), m.end()] for m in re.finditer(

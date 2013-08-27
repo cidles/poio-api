@@ -12,7 +12,7 @@
     	        <labelUsage label="pagebreak" />
         </labelsDecl>
         <dependencies>
-            <dependsOn f.id="entries"/>
+            <dependsOn f.id="f.entries"/>
         </dependencies>
         <annotationSpaces>
             <annotationSpace as.id="formatting"/>
