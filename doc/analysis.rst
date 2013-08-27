@@ -99,12 +99,12 @@ of the annotation graph:
 
     import codecs
     html = ag.as_html_table(True)
-    f = codecs.open("test.html", "w", "utf-8")
+    f = codecs.open("filtered.html", "w", "utf-8")
     f.write(html)
     f.close()
 
 You can add more filters to the annotation graph by creating more filter
-object and passing them to `append_filter()`. If you want to remove a filter
+objects and passing them to `append_filter()`. If you want to remove a filter
 you can call `pop_filter()`, which will remove the filter that was last added
 to the annotation graph object:
 
@@ -114,8 +114,8 @@ to the annotation graph object:
 
 A convenient way to create filter objects is by passing a dictionary with
 tier names and search terms to the method `create_filter_for_dict()` of the
-annotation graph object. The following code will create the same filter as
-our example above:
+annotation graph object. The following code will create the same filter as in
+the example above:
 
 .. code-block:: python
 
