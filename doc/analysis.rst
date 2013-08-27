@@ -12,7 +12,7 @@ pipelines and support to merge data and annotation from a wide range of
 heteregenous data sources for further analysis.
 
 
-Search in annotation graphs: Filters and filter chains
+Search in annotation graphs: filters and filter chains
 ------------------------------------------------------
 
 The **filter** class :py:class:`poioapi.annotationgraph.AnnotationGraphFilter`
