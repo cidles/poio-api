@@ -26,7 +26,7 @@ import graf
 
 # GrAF ID's separator
 GRAFSEPARATOR = ".."
-(TEXT, AUDIO, VIDEO, NONE) = ("text", "audio", "video", "none")
+(TEXT, AUDIO, VIDEO, UNKNOWN, NONE) = ("text", "audio", "video", "unknown", "none")
 
 
 class Tier:
@@ -89,7 +89,7 @@ class PrimaryData:
     """
 
     def __init__(self):
-        self.type = None
+        self.type = NONE
         self.external_link = None
         self.filename = None
         self.content = None
