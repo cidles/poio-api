@@ -72,7 +72,7 @@ class CorpusGraphs(list):
     @property
     def tier_names(self):
         result = set()
-        for ag in self:
+        for _, ag in self:
             for tier_name in ag.structure_type_handler.flat_data_hierarchy:
                 result.add(tier_name)
         return result
