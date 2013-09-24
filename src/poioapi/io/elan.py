@@ -268,11 +268,11 @@ class Parser(poioapi.io.graf.BaseParser):
 
         primary_data = poioapi.io.graf.PrimaryData()
 
-        #TODO: Can exist more than one media_descriptor so we only get the first
         media_descriptor = None
         media_descriptors = self.tree.find("HEADER").findall(
             "MEDIA_DESCRIPTOR")
         if len(media_descriptors) > 0:
+            #TODO: Can exist more than one media_descriptor so we only get the first
             media_descriptor = media_descriptors[0]
 
             if media_descriptor.attrib["MIME_TYPE"].startswith("video"):
