@@ -1,4 +1,3 @@
-include LICENSE.txt README.rst MANIFEST.in
+include LICENSE README.rst MANIFEST.in requirements.txt
 include setup.py distribute_setup.py
 include src/poioapi/VERSION
-global-exclude *~
