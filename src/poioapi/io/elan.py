@@ -434,8 +434,8 @@ class Parser(poioapi.io.graf.BaseParser):
                         if other_child.tag == "TIME_SLOT" and \
                                 "TIME_VALUE" not in other_child:
                             other_child.attrib["TIME_VALUE"] = \
-                                self.time_order[
-                                    other_child.attrib["TIME_SLOT_ID"]]
+                                "{0}".format(self.time_order[
+                                    other_child.attrib["TIME_SLOT_ID"]])
 
                         if not str(child.text).isspace() or \
                                 child.text is not None:

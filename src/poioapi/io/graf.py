@@ -26,7 +26,7 @@ import graf
 
 # GrAF ID's separator
 GRAFSEPARATOR = ".."
-(TEXT, AUDIO, VIDEO, UNKNOWN, NONE) = ("text", "audio", "video", "unknown", "none")
+(TEXT, AUDIO, VIDEO, NONE) = ("text", "audio", "video", "none")
 
 
 class Tier:
@@ -89,7 +89,7 @@ class PrimaryData:
     """
 
     def __init__(self):
-        self.type = NONE
+        self.type = None
         self.external_link = None
         self.filename = None
         self.content = None
@@ -573,7 +573,7 @@ class Writer(BaseWriter):
 
         """
 
-        if meta_information:
+        if meta_information is not None:
             out = open("{0}-extinfo.xml".format(basedirname), "wb")
             doc = minidom.parseString(tostring(meta_information, encoding="utf-8"))
             out.write(doc.toprettyxml(encoding='utf-8'))
