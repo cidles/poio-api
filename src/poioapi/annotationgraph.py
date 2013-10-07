@@ -188,7 +188,8 @@ class AnnotationGraph():
             html = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body>\n"
 
         for i, root_node in enumerate(self.root_nodes()):
-            if filtered and root_node.id not in self.filtered_node_ids[-1]:
+            if filtered and (len(self.filtered_node_ids) == 0 or \
+                    root_node.id not in self.filtered_node_ids[-1]):
                 continue
 
             html += "<table style=\"border-collapse:collapse;border:1px solid black;margin-bottom:20px;\">"
