@@ -14,8 +14,8 @@ version_file = os.path.join(os.path.dirname(__file__), 'src', 'poioapi', 'VERSIO
 with open(version_file) as fh:
     poioapi_version = fh.read().strip()
 
-import distribute_setup
-distribute_setup.use_setuptools()
+#import distribute_setup
+#distribute_setup.use_setuptools()
 
 from setuptools import setup, find_packages
 
@@ -24,7 +24,7 @@ setup(
     description = "A Python Library to access and manipulate linguistically annotated corpus files.",
     version = poioapi_version,
     url = "http://media.cidles.eu/poio/poio-api/",
-    download_url = "https://s3.amazonaws.com/cidles/downloads/poio-api/poio-api-{0}.tar.gz".format(poioapi_version),
+#    download_url = "https://s3.amazonaws.com/cidles/downloads/poio-api/poio-api-{0}.tar.gz".format(poioapi_version),
     #long_description = "Python implementation of the Graph Annotation Framework. (http://www.americannationalcorpus.org/graf-wiki)",
     license = "Apache License, Version 2.0",
     keywords = ['NLP', 'CL', 'natural language processing',
