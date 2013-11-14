@@ -114,7 +114,6 @@ class TestDataStructureType:
 
         ann_type = 'utterance'
         expected_result = ['word', 'translation']
-        print(self.data_structure_type.get_children_of_type(ann_type))
         assert(self.data_structure_type.get_children_of_type(
             ann_type) == expected_result)
 

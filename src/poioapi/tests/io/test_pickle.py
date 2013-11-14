@@ -35,7 +35,6 @@ class TestPickle:
     def test_get_child_tiers_for_tier(self):
         tiers = self.pickle_parser.get_child_tiers_for_tier(
             poioapi.io.graf.Tier("utterance"))
-        print([t.name for t in tiers])
         assert tiers[0].name == "clause_unit"
         assert tiers[1].name == "graid2"
         assert tiers[2].name == "translation"

@@ -8,12 +8,15 @@
 # For license information, see LICENSE.TXT
 
 import os
+import tempfile
+import difflib
 
 import poioapi.io.tcf
+import poioapi.io.elan
 import poioapi.io.graf
 
 
-class TestTcf:
+class TestParser:
     """
     This class contain the test methods to the
     class io.tcf.py.
@@ -60,3 +63,33 @@ class TestTcf:
         root_annotations = self.parser.get_annotations_for_tier(root_tiers[0])
         region = self.parser.region_for_annotation(root_annotations[0])
         assert region == ('1', '20')
+
+class TestWriter:
+
+    def setup(self):
+        self.filename = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "elan_graf", "example.eaf")
+
+        self.parser = poioapi.io.elan.Parser(self.filename)
+        self.writer = poioapi.io.tcf.Writer()
+
+    def test_write(self):
+        outputfile = tempfile.TemporaryFile()
+        self.converter = poioapi.io.graf.GrAFConverter(self.parser, self.writer)
+        self.converter.parse()
+        self.converter.write(outputfile)
+
+        testfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "tcf_graf", "test_write.tcf")
+
+        #outputfile2 = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+        #    "tcf_graf", "test_write.tcf")
+        #self.converter.write(outputfile2)
+
+        outputfile.seek(0)
+        fromlines = outputfile.readlines()
+        fromlines = [l.decode("utf-8") for l in fromlines]
+        tolines = open(testfile, 'U').readlines()
+ 
+        diff = difflib.unified_diff(fromlines, tolines)
+        assert ''.join(diff) == ""

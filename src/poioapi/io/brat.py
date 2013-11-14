@@ -22,7 +22,7 @@ class Writer():
         self.annotation_space = annotation_space
         self.feature_name = feature_name
 
-    def write(self, outputfile, graf_graph, tier_hierarchies=None, meta_information=None):
+    def write(self, outputfile, converter): # graf_graph, tier_hierarchies=None, meta_information=None):
         ann_file = codecs.open(outputfile, "w", "utf-8")
         t = 1
         n = 1
@@ -30,7 +30,7 @@ class Writer():
 
         label_list = ["head", "translation", "pos", "italic", "bold"]
 
-        for annotation in graf_graph.annotation_spaces[self.annotation_space]:
+        for annotation in converter.graf.annotation_spaces[self.annotation_space]:
             if annotation.label in label_list:
                 if self.feature_name in annotation.features:
                     annotation_value = annotation.features[self.feature_name]
@@ -59,32 +59,32 @@ class Writer():
 
         ann_file.close()
 
-    def create_relations(self, graf_graph, relation_map, ann_file):
-        r = 1
+    # def create_relations(self, graf_graph, relation_map, ann_file):
+    #     r = 1
 
-        for node_id, text_bound in relation_map.items():
-            for edge in graf_graph.edges:
-                if node_id == edge.from_node.id:
-                    line = "R{0}	To Arg1:{2} Arg2:{1}\n".\
-                        format(r, relation_map[edge.from_node.id],
-                               relation_map[edge.to_node.id])
-                    r += 1
-                    ann_file.write(line)
+    #     for node_id, text_bound in relation_map.items():
+    #         for edge in graf_graph.edges:
+    #             if node_id == edge.from_node.id:
+    #                 line = "R{0}	To Arg1:{2} Arg2:{1}\n".\
+    #                     format(r, relation_map[edge.from_node.id],
+    #                            relation_map[edge.to_node.id])
+    #                 r += 1
+    #                 ann_file.write(line)
 
-        return ann_file
+    #     return ann_file
 
-    def create_conf_file(self, graf_graph, outputfile):
-        basedirname = os.path.dirname(outputfile)
+    # def create_conf_file(self, graf_graph, outputfile):
+    #     basedirname = os.path.dirname(outputfile)
 
-        annotation_conf = open(basedirname+"/annotation.conf", "w")
+    #     annotation_conf = open(basedirname+"/annotation.conf", "w")
 
-        annotation_conf.write("[entities]\n")
+    #     annotation_conf.write("[entities]\n")
 
-        for entity in graf_graph.header.annotation_spaces:
-            annotation_conf.write(entity+"\n")
+    #     for entity in graf_graph.header.annotation_spaces:
+    #         annotation_conf.write(entity+"\n")
 
-        annotation_conf.write("\n[relations]\n# To Arg1:<ENTITY>, Arg2:<ENTITY>"
-                              "\n<OVERLAP>	Arg1:<ENTITY>, Arg2:<ENTITY>, <OVL-TYPE>:<ANY>"
-                              "\n\n[events]\n# none\n\n[attributes]\n# none")
+    #     annotation_conf.write("\n[relations]\n# To Arg1:<ENTITY>, Arg2:<ENTITY>"
+    #                           "\n<OVERLAP>	Arg1:<ENTITY>, Arg2:<ENTITY>, <OVL-TYPE>:<ANY>"
+    #                           "\n\n[events]\n# none\n\n[attributes]\n# none")
 
-        annotation_conf.close()
+    #     annotation_conf.close()

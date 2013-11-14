@@ -75,8 +75,6 @@ class TestAnnotationGraph:
         self.annotation_graph.append_filter(self.anngraphfilter)
         self.anngraphfilter.reset_match_object()
 
-        print(self.annotation_graph.filtered_node_ids)
-
         assert self.annotation_graph.filtered_node_ids[-1] == ['Äußerung..P-Spch..na2', 'Äußerung..P-Spch..na9']
 
     def test_reset_filters(self):

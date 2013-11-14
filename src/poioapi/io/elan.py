@@ -451,8 +451,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     """
 
-    def write(self, outputfile, graf_graph, tier_hierarchies,
-        primary_data=None, meta_information=None):
+    def write(self, outputfile, converter): #graf_graph, tier_hierarchies, primary_data=None, meta_information=None):
         """Write the GrAF object into a Elan file.
 
         Parameters
@@ -474,12 +473,14 @@ class Writer(poioapi.io.graf.BaseWriter):
         """
 
         self._time_slot_id = 0
-        self.time_order = self._map_time_slots(meta_information)
+        self.time_order = self._map_time_slots(converter.meta_information)
 
-        for tier in self._flatten_hierarchy_elements(tier_hierarchies):
-            element = self._tier_in_meta_information(tier, meta_information)
+        for tier in self._flatten_hierarchy_elements(
+                converter.tier_hierarchies):
+            element = self._tier_in_meta_information(tier,
+                converter.meta_information)
             if element is not None:
-                for node in graf_graph.nodes:
+                for node in converter.graf.nodes:
                     if node.id.startswith("{0}..".format(tier)):
                         for ann in node.annotations:
 
@@ -494,7 +495,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                                 new_ann, 'ANNOTATION_VALUE').text = \
                                 annotation_value
 
-        self._write_file(outputfile, primary_data, meta_information)
+        self._write_file(outputfile, converter.primary_data,
+            converter.meta_information)
 
     def _tier_in_meta_information(self, tier, meta_information):
         for et in meta_information.findall("TIER"):

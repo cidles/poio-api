@@ -32,13 +32,13 @@ class TestBrat:
                                        "brat_graf", "result.ann")
 
         parser = graf.io.GraphParser()
-        self.graph = parser.parse(filename)
-
-        self.brat = poioapi.io.brat.Writer("dictinterpretation", "substring")
+        self.graf = parser.parse(filename)
+        self.writer = poioapi.io.brat.Writer("dictinterpretation", "substring")
 
     def test_write(self):
-
-        self.brat.write(self.outputfile, self.graph)
+        converter = poioapi.io.graf.GrAFConverter(None, self.writer)
+        converter.graf = self.graf
+        converter.write(self.outputfile)
 
         annotations = os.path.join(os.path.dirname(__file__), "..", "sample_files",
                                    "brat_graf", "dict-aleman2000-9-69.ann")

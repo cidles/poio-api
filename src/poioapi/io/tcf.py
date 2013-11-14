@@ -14,6 +14,7 @@
 from __future__ import unicode_literals
 
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 import poioapi.io.graf
 
@@ -162,3 +163,66 @@ class Parser(poioapi.io.graf.BaseParser):
         primary_data.content = self.tree.find("{0}text".format(self.namespace)).text
 
         return primary_data
+
+class Writer(poioapi.io.graf.BaseWriter):
+    """
+    Class that will handle the writing of
+    GrAF files into Elan files again.
+
+    """
+
+    def write(self, outputfile, converter):
+        """Write the GrAF object into a Elan file.
+
+        Parameters
+        ----------
+        outputfile : str
+            The filename of the output file. The filename should have
+            the Elan extension ".eaf".
+        graf_graph : obejct
+            A GrAF object.
+        tier_hierarchies : array_like
+            Array with all the tier hierarchies from the GrAF.
+        primary_data : object
+            This object will contain the information to the dataDesc
+            primaryData.
+        meta_information : ElementTree
+            Element tree contains all the information in Elan file
+            besides the Tiers annotations.
+
+        """
+
+        self.root = ET.Element('D-Spin', { 'xmlns': 'http://www.dspin.de/data', 'version': '0.4', 'xmlns:ed': 'http://www.dspin.de/data/extdata' })
+        meta = ET.SubElement(self.root, 'MetaData', { 'xmlns': 'http://www.dspin.de/data/metadata' })
+        source = ET.SubElement(meta, 'source')
+        source.text = "Poio API conversion"
+        
+        external = ET.SubElement(self.root, "ed:ExternalData")
+        ext_type = None
+        if converter.primary_data.type == "audio":
+            ext_type = "audio/wav"
+        elif converter.primary_data.type == "video":
+            ext_type = "video/mpeg"
+        if ext_type:
+            signal = ET.SubElement(external, 'ed:speechsignal', { 'type': ext_type, })
+            if converter.primary_data.external_link:
+                signal.text = converter.primary_data.external_link
+            elif converter.primary_data.filename:
+                signal.text = converter.primary_data.filename
+        if converter.original_file:
+            seg = ET.SubElement(external, 'ed:phoneticsegmentation', { 'type': 'text/eaf+xml' })
+            seg.text = converter.original_file
+
+        self._write_file(outputfile)
+
+    def _write_file(self, outputfile):
+        stream = outputfile
+        was_stream = True
+        if not hasattr(stream, 'read'):
+            stream = open(outputfile, 'wb')
+            was_stream = False
+        doc = minidom.parseString(ET.tostring(self.root))
+        str_content = doc.toprettyxml(indent='    ', encoding='UTF-8')
+        stream.write(str_content)
+        if not was_stream:
+            stream.close()

@@ -299,11 +299,11 @@ class GrAFConverter:
         self.tier_hierarchies = []
         self.meta_information = None
         self.primary_data = None
+        self.original_file = None
 
     def write(self, outputfile):
         if self.writer:
-            self.writer.write(outputfile, self.graf, self.tier_hierarchies,
-                              self.primary_data, self.meta_information)
+            self.writer.write(outputfile, self)
 
     def parse(self):
         """This method will be the responsible to transform
@@ -335,6 +335,9 @@ class GrAFConverter:
             self.meta_information = self.parser.meta_information
 
         self.primary_data = self.parser.get_primary_data()
+        if hasattr(self.parser, 'filepath') and \
+                isinstance(self.parser.filepath, str):
+            self.original_file = os.path.abspath(self.parser.filepath)
 
     def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix=None):
         child_tiers = self.parser.get_child_tiers_for_tier(tier)

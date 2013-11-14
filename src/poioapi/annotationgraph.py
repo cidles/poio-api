@@ -681,7 +681,6 @@ class AnnotationGraphFilter():
                     if len(a_list) > 0:
                         a = self.annotation_graph.annotation_value_for_annotation(a_list[0])
                         match = re.search(self.filter[t], a)
-                        print
                         if match:
                             self.matchobject[t][node.id] =\
                             [ [m.start(), m.end()] for m in re.finditer(
