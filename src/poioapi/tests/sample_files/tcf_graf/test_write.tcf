@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D-Spin version="0.4" xmlns="http://www.dspin.de/data" xmlns:ed="http://www.dspin.de/data/extdata">
+    <MetaData xmlns="http://www.dspin.de/data/metadata">
+        <source>Poio API conversion</source>
+    </MetaData>
+    <ed:ExternalData>
+        <ed:speechsignal type="video/mpeg">file:///D:/Data/elan/elan-example1.mpg</ed:speechsignal>
+        <ed:phoneticsegmentation type="text/eaf+xml">h:\ProjectsWin\git-github\poio-api\src\poioapi\tests\sample_files\elan_graf\example.eaf</ed:phoneticsegmentation>
+    </ed:ExternalData>
+</D-Spin>
