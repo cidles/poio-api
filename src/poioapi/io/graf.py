@@ -468,7 +468,7 @@ class Writer(BaseWriter):
                 flat_elements.append(e)
         return flat_elements
 
-    def write(self, outputfile, graf_graph, tier_hierarchies, primary_data=None, meta_information=None):
+    def write(self, outputfile, converter):
         """Writes the converter object as GrAF files.
 
         Parameters
@@ -487,38 +487,41 @@ class Writer(BaseWriter):
 
         (basedirname, _) = os.path.splitext(outputfile)
 
-        self._get_parents(tier_hierarchies)
+        self._get_parents(converter.tier_hierarchies)
 
-        standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(basedirname))
+        standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(
+            basedirname))
 
         for tier_name in self._flatten_hierarchy_elements(
-                tier_hierarchies):
+                converter.tier_hierarchies):
             annotation_space = tier_name.split(GRAFSEPARATOR)[0]
             out_graf = graf.Graph()
             renderer = graf.GrafRenderer("{0}-{1}.xml".format(
                 basedirname, annotation_space
             ))
-            out_graf.nodes = [n for n in graf_graph.nodes
+            out_graf.nodes = [n for n in converter.graf.nodes
                               if n.id.startswith(tier_name)]
-            out_graf.edges = [e for e in graf_graph.edges
+            out_graf.edges = [e for e in converter.graf.edges
                               if e.to_node.id.startswith(tier_name)]
-            out_graf.regions = [r for r in graf_graph.regions
+            out_graf.regions = [r for r in converter.graf.regions
                                 if r.id.startswith(tier_name)]
             out_graf.annotation_spaces.add(graf.AnnotationSpace(
                 annotation_space))
             out_graf.header.add_dependency(self._parent[tier_name])
 
-            out_graf = self._add_root_nodes(graf_graph, annotation_space, out_graf)
+            out_graf = self._add_root_nodes(converter.graf, annotation_space,
+                out_graf)
 
             renderer.render(out_graf)
 
             basename = os.path.basename(basedirname)
-            self.standoffheader.datadesc.add_annotation("{0}-{1}.xml".
-                                                        format(basename, annotation_space), annotation_space)
+            self.standoffheader.datadesc.add_annotation(
+                "{0}-{1}.xml".format(basename, annotation_space),
+                annotation_space)
 
-        self._add_primary_data(primary_data, basedirname)
+        self._add_primary_data(converter.primary_data, basedirname)
         standoffrenderer.render(self.standoffheader)
-        self._generate_metafile(basedirname, meta_information)
+        self._generate_metafile(basedirname, converter.meta_information)
 
     def _add_root_nodes(self, graph, annotation_space, out_graf):
         for root in graph.header.roots:
