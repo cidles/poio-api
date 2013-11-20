@@ -24,6 +24,14 @@ class TestToolboxLine:
     def test_line_string(self):
      	assert self.toolbox_line.line_original == self.toolbox_line.line_string
 
+    def test_words(self):
+        assert self.toolbox_line.words() == \
+            ['diž', 'y-   ike -s', '.', 'diž', 'b-   ike -s', 'čeq',
+            'čeq  -i', 'rekʼe']
+
+    def test_repr(self):
+    	assert "Original" and "Contents" in repr(self.toolbox_line)
+
 class TestToolbox:
     """
     This class contain the test methods to the
