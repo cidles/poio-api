@@ -81,11 +81,11 @@ class ToolboxLine:
         
         self._line_original = ""
         self._line_string = ""
-        self.tier_marker = ""
-        self.line_contents = ""
-        self.line_break = ""
-        self.line_tokenized = []
-        self.line_whitespace = []
+        self._tier_marker = ""
+        self._line_contents = ""
+        self._line_break = ""
+        self._line_tokenized = []
+        self._line_whitespace = []
 
         # Check which constructor is to be used
         
@@ -101,9 +101,9 @@ class ToolboxLine:
         # tier marker, list of tokens, list of whitespace, line ending
         elif len(args) == 4:
 
-            self.tier_marker = args[0]
-            self.line_tokenized = args[1]
-            self.line_whitespace = args[2]
+            self._tier_marker = args[0]
+            self._line_tokenized = args[1]
+            self._line_whitespace = args[2]
             self.line_ending = args[3]
 
             # If a single whitespace string is provided instead
@@ -118,7 +118,7 @@ class ToolboxLine:
                         """Cannot join tokens of a ToolboxLine with"""
                         """ non-whitespace characters.""")
                 
-                self.line_whitespace = [self.line_whitespace] * len(
+                self._line_whitespace = [self.line_whitespace] * len(
                     self.line_tokenized)
                         
             # Make sure that the supplied arguments
@@ -127,12 +127,12 @@ class ToolboxLine:
 
             # Construct the rest of the values
             # Combine tokens and whitespace into line_contents
-            self.line_contents = ""
+            self._line_contents = ""
             for index in len(self.line_tokenized):
                 token = self.line_tokenized[index]
                 whitespace = self.line_whitespace[index]
                 
-                self.line_contents += whitespace + token
+                self._line_contents += whitespace + token
 
             self.line_string = self.tier_marker + self.line_contents + \
                 self.line_break
@@ -145,11 +145,11 @@ class ToolboxLine:
         elif len(args) == 8:
             self._line_original = args[0]
             self._line_string = args[1]
-            self.tier_marker = args[2]
-            self.line_contents = args[3]
-            self.line_break = args[4]
-            self.line_tokenized = args[5]
-            self.line_whitespace = args[6]
+            self._tier_marker = args[2]
+            self._line_contents = args[3]
+            self._line_break = args[4]
+            self._line_tokenized = args[5]
+            self._line_whitespace = args[6]
             self.dirty = args[7]
         
         # Wrong set of arguments used
@@ -163,37 +163,31 @@ class ToolboxLine:
 
     def line_original():
         doc = "The line_original property."
-        
         def fget(self):
             return self._line_original
-
         def fset(self, value):
             self._line_original = value
             if self.line_original != self.line_string:
                 self.dirty = True
-
         def fdel(self):
             del self._line_original
-
         return locals()
 
     line_original = property(**line_original())
 
     def line_string():
         doc = "The line_string property."
-
         def fget(self):
             return self._line_string
-
         def fset(self, line):
             self._line_string = line
         
             # Search for line ending
             match = line_break_re.search(line)
             if match:
-                self.line_break = match.group(1)
+                self._line_break = match.group(1)
             else:
-                self.line_break = ""
+                self._line_break = ""
                 
             # Delete line ending from line
             line = line_break_re.sub("", line)
@@ -201,22 +195,22 @@ class ToolboxLine:
             # Search for tier marker
             match = tier_marker_re.search(line)
             if match:
-                self.tier_marker = match.group(1)
+                self._tier_marker = match.group(1)
             else:
-                self.tier_marker = ""
+                self._tier_marker = ""
                 
             # Delete tier marker from line
             line = tier_marker_re.sub("", line)
                 
             # Rest of the line is the line contents proper
-            self.line_contents = line
+            self._line_contents = line
                 
             # Determine the whitespace in the original version
             # of the line
-            self.line_whitespace = re.findall(r"\s+", line)
+            self._line_whitespace = re.findall(r"\s+", line)
                 
             # Tokenized version of line (split at whitespace)
-            self.line_tokenized = line.strip().split()
+            self._line_tokenized = line.strip().split()
             
             # Set dirty flag to true if line_original is not
             # equal to the new line_string
@@ -224,13 +218,104 @@ class ToolboxLine:
                 self.dirty = True
             else:
                 self.dirty = False
-
         def fdel(self):
             del self._line_string
-
         return locals()
-
     line_string = property(**line_string())
+
+    def tier_marker():
+        doc = "The tier_marker property."
+        def fget(self):
+            return self._tier_marker
+        def fset(self, value):
+            # Update the attributes containing the whole line
+            self.line_string = value + self.line_contents + \
+                self.line_break
+        def fdel(self):
+            del self._tier_marker
+        return locals()
+    tier_marker = property(**tier_marker())
+
+    def line_contents():
+        doc = "The line_contents property."
+        def fget(self):
+            return self._line_contents
+        def fset(self, value):
+            self.line_string = self.tier_marker + value + \
+                self.line_break
+        def fdel(self):
+            del self._line_contents
+        return locals()
+    line_contents = property(**line_contents())
+
+    def line_break():
+        doc = "The line_break property."
+        def fget(self):
+            return self._line_break
+        def fset(self, value):
+            self.line_string = self.tier_marker + self.line_contents + \
+                value
+        def fdel(self):
+            del self._line_break
+        return locals()
+    line_break = property(**line_break())
+
+    def line_tokenized():
+        doc = "The line_tokenized property."
+        def fget(self):
+            return self._line_tokenized
+        def fset(self, value):
+            # Reconstruct the line contents
+            self.line_whitespace = [" "] * len(value)
+            new_line_contents = " " + " ".join(value)
+
+            # Reconstruct the whole line string
+            self.line_string = self.tier_marker + new_line_contents + \
+                self.line_break
+        def fdel(self):
+            del self._line_tokenized
+        return locals()
+    line_tokenized = property(**line_tokenized())
+
+    def line_whitespace():
+        doc = "The line_whitespace property."
+        def fget(self):
+            return self._line_whitespace
+        def fset(self, value):
+            # If whitespace is provided as one string
+            # use it to join the tokens together
+            if type(value) == "str":
+                # Make sure that it is valid whitespace
+                if not re.search(r"^\s+$", value):
+                    raise RuntimeError(
+                        "Cannot use non-whitespace string as a token separator"
+                        "in a ToolboxLine.")
+                
+                self._line_whitespace = [value] * len(self.line_tokenized)
+            
+            elif type(value) == "list":
+                # Make sure the list of whitespace separators has
+                # the correct length (equals the number of tokens)
+                if len(value) != len(self.line_tokenized):
+                    raise RuntimeError("The ToolboxLine has {0} tokens. "
+                        "You only provided {1} whitespace separators.".format(
+                            len(self.line_tokenized), len(value)))
+                
+                # Check that list elements are valid whitespace separators
+                for w in value:
+                    if not re.search(r"^\s+$", w):
+                        raise RuntimeError(
+                            "The list of whitespace separators for ToolboxLine"
+                            " does not only contain whitespace elements.")
+                
+                # Build line contents
+                new_line_contents = " " + whitespace.join(self.line_tokenized)                
+                self.line_string = self.tier_marker + new_line_contents + \
+                    self.line_break
+        def fdel(self):
+            del self._line_whitespace
+        return locals()
+    line_whitespace = property(**line_whitespace())
 
     ############################################ Methods
 
