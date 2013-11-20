@@ -24,7 +24,7 @@ else:
     string_type = basestring
 
 # File types
-(EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TREEPICKLE, TYPECRAFT) = range(6)
+(EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TOOLBOXXML, TREEPICKLE, TYPECRAFT) = range(7)
 
 # Data structure types
 (GLOSS, WORDS, GRAID, GRAIDDIANA) = range(4)

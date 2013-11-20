@@ -20,7 +20,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import poioapi.io.elan
 import poioapi.io.graf
 import poioapi.io.pickle
-import poioapi.io.toolbox
+import poioapi.io.toolboxxml
 import poioapi.io.typecraft
 
 from poioapi import data
@@ -277,8 +277,8 @@ class AnnotationGraph():
             parser = poioapi.io.typecraft.Parser(stream)
         elif stream_type == poioapi.data.TREEPICKLE:
             parser = poioapi.io.pickle.Parser(stream)
-        elif stream_type == poioapi.data.TOOLBOX:
-            parser = poioapi.io.toolbox.Parser(stream)
+        elif stream_type == poioapi.data.TOOLBOXXML:
+            parser = poioapi.io.toolboxxml.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.parse()

@@ -92,4 +92,7 @@ class TestWriter:
         tolines = open(testfile, 'U').readlines()
  
         diff = difflib.unified_diff(fromlines, tolines)
-        assert ''.join(diff) == ""
+        for line in diff:
+            if not line.startswith("---") and not line.startswith("+++") and \
+                    (line.startswith("+") or line.startswith("-")):
+                assert "ed:phoneticsegmentation" in line
