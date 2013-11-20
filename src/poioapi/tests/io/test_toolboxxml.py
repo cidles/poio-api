@@ -13,7 +13,7 @@ import poioapi.io.toolboxxml
 import poioapi.io.graf
 
 
-class TestToolbox:
+class TestParser:
     """
     This class contain the test methods to the
     class io.toolboxxml.py.

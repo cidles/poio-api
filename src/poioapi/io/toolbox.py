@@ -15,6 +15,7 @@ from __future__ import absolute_import
 
 import unicodedata
 import re
+import codecs
 
 import poioapi.io.graf
 
@@ -619,9 +620,9 @@ class ToolboxLine:
 
     def __repr__(self):
         # Construct a readable representation of the Toolbox line
-        ret = ("Original:\t{0}\nTier marker:\t{1}\nContents:\t{2}\n"
+        ret = ("\nOriginal:\t{0}\nTier marker:\t{1}\nContents:\t{2}\n"
             "Line break:\t{3}\nTokenized:\t{4}\nWhitespace:\t{5}\n"
-            "Line changed?\t{6}").format(
+            "Line changed?\t{6}\n").format(
                 self.line_original, self.tier_marker, self. line_contents,
                 self.line_break, self.line_tokenized, self.line_whitespace,
                 self.dirty)
@@ -644,6 +645,139 @@ class ToolboxLine:
         """
         hash_string = self.line_string + self.line_original 
         return hash(hash_string)
+
+class Toolbox:
+
+    def __init__(self, filepath):
+        """
+        Constructor of the Toolbox object.
+
+        Parameters
+        ----------
+        filepath : str
+            Path to the input file.
+
+        """
+        self.filepath = filepath
+
+    def lines(self):
+        # Open input file
+        input_file = open(self.filepath, "rb")
+        
+        # Collect ToolboxLine objects into a list
+        toolbox_lines = []
+        
+        cur_line = ""
+        cur_empty_line = ""
+        
+        # Go through lines in the input file
+        for line in input_file:
+            line = line.decode("utf-8", 'ignore')
+            
+            if line.strip() == "":
+                
+                cur_empty_line += line
+            
+            elif re.search(r"^\\", line):
+                
+                # Save preceding line
+                if cur_line != "":
+                    toolbox_lines.append(ToolboxLine(cur_line))
+                    
+                if cur_empty_line != "":
+                    toolbox_lines.append(ToolboxLine(cur_empty_line))
+                    
+                cur_empty_line = ""
+                cur_line = line
+            
+            else:
+                
+                if cur_empty_line != "":
+                    cur_line += cur_empty_line
+                    cur_empty_line = ""
+                
+                cur_line += line
+        
+        # Process last line
+        if cur_line != "":
+            toolbox_lines.append(ToolboxLine(cur_line))
+            
+        if cur_empty_line != "":
+            toolbox_lines.append(ToolboxLine(cur_empty_line))
+        
+        return toolbox_lines
+
+    def records(self, record_marker):
+        toolbox_lines = self.lines()
+
+        # List of Toolbox records    
+        records = []
+        
+        # Material before the first record
+        header = []
+        
+        # Record that is currently being assembled
+        cur_record = []
+        
+        # Flag indicating whether the first record has been found
+        found_first_record = False
+        
+        # Go through list of Toolbox lines
+        for toolbox_line in toolbox_lines:
+            
+            # Look for record marker
+            if toolbox_line.tier_marker == record_marker:
+                
+                # If this is the first record, save the previous lines,
+                # as header
+                if found_first_record is False:
+                    records.append(header)
+                    header = []
+                
+                # Otherwise save the current record
+                else:
+                    if len(cur_record) > 0:   
+                        # Save the old record
+                        records.append(cur_record)
+
+                # Start a new record
+                cur_record = []
+                cur_record.append(toolbox_line)
+                
+                # Set flag to true
+                found_first_record = True
+            
+            # Found line without record marker
+            else:
+                # Found a header line
+                if found_first_record is False:   
+                    header.append(toolbox_line)
+                
+                # Found a record line
+                else:
+                    
+                    # Make sure a record marker has been found already
+                    if len(cur_record) == 0:
+                        raise RuntimeError(
+                            "Record line found: {0}."
+                            "But no preceding record marker line.".format(
+                                toolbox_line))
+                        return None
+                    
+                    else:                        
+                        # Add current line to current record
+                        cur_record.append(toolbox_line)
+        
+        # Make sure at least one record has been found
+        if found_first_record is False:
+            raise RuntimeError("Did not find any records.")
+        
+        # If the last record has not been added to the list of records,
+        # do it now
+        if len(cur_record) > 0:            
+            records.append(cur_record)
+
+        return records
 
 class Parser(poioapi.io.graf.BaseParser):
 

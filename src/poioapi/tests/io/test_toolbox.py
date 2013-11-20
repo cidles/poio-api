@@ -33,6 +33,21 @@ class TestToolboxLine:
     	assert "Original" and "Contents" in repr(self.toolbox_line)
 
 class TestToolbox:
+
+    def setup(self):
+        self.filename = os.path.join(os.path.dirname(__file__), "..",
+            "sample_files", "toolbox_graf", "toolbox.txt")
+        self.toolbox = poioapi.io.toolbox.Toolbox(self.filename)
+
+    def test_lines(self):
+        lines = self.toolbox.lines()
+        assert len(lines) == 2539
+
+    def test_records(self):
+        records = self.toolbox.records('ref')
+        assert len(records) == 296
+
+class TestParser:
     """
     This class contain the test methods to the
     class io.toolbox.py.
