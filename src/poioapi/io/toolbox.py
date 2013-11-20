@@ -7,12 +7,9 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
-"""
+from __future__ import unicode_literals
 
-"""
-
-from __future__ import absolute_import
-
+import sys
 import unicodedata
 import re
 import codecs
@@ -30,7 +27,13 @@ header_marker_re = re.compile(r"^\\_sh\s+")
 date_stamp_marker_re = re.compile(r"^\\_DateStampHasFourDigitYear")
 id_marker_re = re.compile(r"^\\id\s+")
 
-class ToolboxLine:
+# Set the type of string
+if sys.version_info[:2] >= (3, 0):
+    string_type = str
+else:
+    string_type = basestring
+
+class ToolboxLine(object):
 
     ############################################ Static methods
 
@@ -86,11 +89,12 @@ class ToolboxLine:
         self._line_break = ""
         self._line_tokenized = []
         self._line_whitespace = []
+        self.dirty = False
 
         # Check which constructor is to be used
         
         # Construct line object from line str
-        if len(args) == 1 and type(args[0]) == str:
+        if len(args) == 1 and isinstance(args[0], string_type):
             line = args[0]
             
             # Keep original version of line
@@ -109,7 +113,7 @@ class ToolboxLine:
             # If a single whitespace string is provided instead
             # of a list of whitespace separators, use it between
             # all tokens
-            if type(self.line_whitespace) == "str":
+            if isinstance(self.line_whitespace, string_type):
                 
                 # Make sure that the whitespace is a valid whitespace
                 # separator
@@ -284,7 +288,7 @@ class ToolboxLine:
         def fset(self, value):
             # If whitespace is provided as one string
             # use it to join the tokens together
-            if type(value) == "str":
+            if isinstance(value, string_type):
                 # Make sure that it is valid whitespace
                 if not re.search(r"^\s+$", value):
                     raise RuntimeError(
@@ -293,7 +297,7 @@ class ToolboxLine:
                 
                 self._line_whitespace = [value] * len(self.line_tokenized)
             
-            elif type(value) == "list":
+            elif type(value) == list:
                 # Make sure the list of whitespace separators has
                 # the correct length (equals the number of tokens)
                 if len(value) != len(self.line_tokenized):
@@ -328,7 +332,7 @@ class ToolboxLine:
 
         # Line ending has to be a string and should only consist
         # of the characters \r and \n or alternatively the empty string
-        if not type(self.line_ending) != "str":
+        if not isinstance(self.line_ending, string_type):
             raise RuntimeError("Line ending has to be a string.")
             
         if self.line_ending != "" and not line_break_re.search(
@@ -338,7 +342,7 @@ class ToolboxLine:
 
         # Tier marker has to be a nonempty string starting
         # with a "\" that does not contain whitespace
-        if not type(self.tier_marker) != "str":
+        if not isinstance(self.tier_marker, string_type):
             raise RuntimeError("Tier marker has to be a string.")
             
         if not tier_marker_re.search(self.tier_marker):
@@ -351,12 +355,12 @@ class ToolboxLine:
             
         # line_tokenized has to be a list of strings in which
         # each element must not contain whitespace
-        if type(self.line_tokenized) != "list":
+        if type(self.line_tokenized) != list:
             raise RuntimeError("Tokenized line has to be a list of strings.")
             
         for token in self.line_tokenized:
                 
-            if type(token) != "str":
+            if not isinstance(token, string_type):
                 raise RuntimeError(
                     "List of tokens has to be a list of strings.")
                 
@@ -367,13 +371,13 @@ class ToolboxLine:
 
         # line_whitespace has to be a list of strings in which
         # each element has to consists of only whitespace
-        if type(self.line_whitespace) != "list":
+        if type(self.line_whitespace) != list:
             raise RuntimeError(
                 "Whitespace separator list has to be a list of strings.")
             
         for token in self.line_whitespace:
                 
-            if type(token) != "str":
+            if not isinstance(token, string_type):
                 raise RuntimeError(
                     "Whitespace separator list has to be a list of strings.")
                 
@@ -571,7 +575,7 @@ class ToolboxLine:
                 return False
         
         # Compare ToolboxLine to str
-        elif type(other) == str:
+        elif isinstance(other, string_type):
             
             # Compare the original string of the ToolboxLine
             # to the other string
@@ -604,7 +608,7 @@ class ToolboxLine:
                 return False
         
         # Compare ToolboxLine to str
-        elif type(other) == str:
+        elif isinstance(other, string_type):
             
             # Compare the original string of the ToolboxLine
             # to the other string
@@ -631,7 +635,7 @@ class ToolboxLine:
                 return False
         
         # Compare ToolboxLine to str
-        elif type(other) == str:
+        elif isinstance(other, string_type):
             
             # Compare the original string of the ToolboxLine
             # to the other string
@@ -659,7 +663,7 @@ class ToolboxLine:
                 return False
         
         # Compare ToolboxLine to str
-        elif type(other) == str:
+        elif isinstance(other, string_type):
             
             # Compare the original string of the ToolboxLine
             # to the other string
@@ -687,7 +691,7 @@ class ToolboxLine:
                 return False
         
         # Compare ToolboxLine to str
-        elif type(other) == str:
+        elif isinstance(other, string_type):
             
             # Compare the original string of the ToolboxLine
             # to the other string
@@ -705,9 +709,9 @@ class ToolboxLine:
 
     def __repr__(self):
         # Construct a readable representation of the Toolbox line
-        ret = ("\nOriginal:\t{0}\nTier marker:\t{1}\nContents:\t{2}\n"
-            "Line break:\t{3}\nTokenized:\t{4}\nWhitespace:\t{5}\n"
-            "Line changed?\t{6}\n").format(
+        ret = "\nOriginal:\t{0}\nTier marker:\t{1}\nContents:\t{2}\n" + \
+            "Line break:\t{3}\nTokenized:\t{4}\nWhitespace:\t{5}\n" + \
+            "Line changed?\t{6}\n".format(
                 self.line_original, self.tier_marker, self. line_contents,
                 self.line_break, self.line_tokenized, self.line_whitespace,
                 self.dirty)

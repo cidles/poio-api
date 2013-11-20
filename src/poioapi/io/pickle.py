@@ -21,12 +21,6 @@ import poioapi.annotationtree
 import poioapi.data
 import poioapi.io.graf
 
-# Set the type of string
-if sys.version_info[:2] >= (3, 0):
-    string_type = str
-else:
-    string_type = basestring
-
 
 class Parser(poioapi.io.graf.BaseParser):
     """
