@@ -449,8 +449,6 @@ class ToolboxLine(object):
                 else:
                     # If the compound marker is preceded by anything other
                     # than a stem, raise an error
-                    print(last_element)
-                    print(cur_token)
                     raise RuntimeError(
                         "Toolbox line cannot be parsed into words (Yoho!): " + \
                         self.line_string)
@@ -765,7 +763,9 @@ class Toolbox:
 
     def lines(self):
         # Open input file
-        input_file = open(self.filepath, "rb")
+        input_file = self.filepath
+        if not hasattr(input_file, 'read'):
+            input_file = open(self.filepath, "rb")
         
         # Collect ToolboxLine objects into a list
         toolbox_lines = []

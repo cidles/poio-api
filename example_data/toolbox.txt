@@ -1,0 +1,2548 @@
+\_sh v3.0  1801 Text
+
+\id Pear.Madi
+\dt aufgenommen: 27/Aug/2006
+\dt glossiert: 29/Aug/2006
+
+\nt Пахрудинова Мадина Шейховна (1993, 13 Jahre)
+\sen ungeeignet
+
+\ref Pear_Madi.001
+\tx diž yikes         .     diž bikes         čeq  čeqi         rekʼe
+\mb diž y-   ike -s   .     diž b-   ike -s   čeq  čeq  -i      rekʼe
+\ge I.DAT II-  see -PST 1sec  I.DAT III- see -PST forest forest -ESS.II person
+\ps pn    aff- v   -aff break pn    aff- v   -aff n      n      -aff    n
+
+\ft I saw . I saw a forest, a person in the forest
+\rt
+
+\ref Pear_Madi.002
+\tx rekʼe bakʼarzi bakʼarziruho            zoqʼes     ....                          bakʼarziruho            zoqʼes
+\mb rekʼe bakʼarzi bakʼarziru         -ho  zoqʼe -s   .     - .     - .     - .     bakʼarziru         -ho  zoqʼe -s
+\ge person collect   collect.III/IV/V.PL -PRS be     -PST 1sec  - 1sec  - 1sec  - 1sec  collect.III/IV/V.PL -PRS be     -PST
+\ps n      v         v                   -aff v      -aff break - break - break - break v                   -aff v      -aff
+
+\ft The person collected (them).
+\rt
+
+\nt 17 sec Pause, Madina überlegt, was Birne auf Ginukh heisst
+
+\ref Pear_Madi.003
+\tx rikes         ɡruša i      haɬoy      haw  sobiratno     bun                tohobito          aqʼes     kʼonkʼaʎʼo     rekʼe uži
+\mb r-   ike -s   ɡruša *i     haɬo  -y   haw  *sobirat -no  b-   u        -n   tohobito          aqʼe -s   kʼonkʼa -ʎʼo   rekʼe uži
+\ge V?-  see -PST pear(r)  ***    he.OBL -ERG that ***      -and III- do, make -PFT on.the.other.side come  -PST bike      -ESS.III person boy
+\ps aff- v   -aff n        *** pn        -aff pn   ***      -aff aff- v        -aff adv               v     -aff n         -aff     n      n
+
+\ft (I? / He?) saw the pear and he collected it, from the other side came a person, a boy on the bicycle.
+\rt
+
+\ref Pear_Madi.004
+\tx haɬoy        haw  bikʼekʼiš       ..            karzina
+\mb haɬo    -y   haw  b-   ikʼekʼ -iš .     - .     karžina
+\ge this.OBL -ERG this III- steal    -PST  1sec  - 1sec  basket(r)
+\ps pn       -aff pn   aff- v        -aff  break - break n
+
+\ft He stole this .. basket.
+\rt
+
+\ref Pear_Madi.005 ######## 51.5
+\tx bikʼekʼno         oxes       oxeya  ɡamačʼ keziyiqno
+\mb b-   ikʼekʼ -no   ox    -es         ɡamačʼ keziyiq -no
+\ge III- steal    -PFT? leave -PST        stone      meet.II -PFT?
+\ps aff- v        -aff  v     -aff        n          v       -aff
+
+\ft
+\ref Pear_Madi.006 ###########
+\tx ɡamačʼlis                  kʼonkʼaʎʼo     ?   bekin             haɡo rede neʎin
+\mb ɡamačʼ - *l  -i      -s    kʼonkʼa -ʎʼo   *?  b-       *ek -in  haɡo rede neʎ -in
+\ge stone      - *** -ESS.II -GEN1 bike      -ESS.III *** I/II.PL- *** -PFT this  wood give -PFT
+\ps n          - *** -aff    -aff  n         -aff     *** aff-     *** -aff pn    n    v    -aff
+
+\ft
+\ref Pear_Madi.007
+\tx hezodoy haw  ɡrušan      sadaq bosiš
+\mb hezodoy haw  ɡruša -n    sadaq b-   os   -iš
+\ge then    this pear(r)  -and  all   III- fall -PST
+\ps adv     pn   n        -clit adv   aff- v    -aff
+
+\ft
+\ref Pear_Madi.008
+\tx hezodoy ?   haɬoz      ɬono uži zoqʼes
+\mb hezodoy *?  haɬo  -z   ɬono uži zoqʼe -s
+\ge then    *** he.OBL -DAT three boy   be     -PST
+\ps adv     *** pn     -aff num   n     v      -aff
+
+\ft
+\ref Pear_Madi.009 ########## 1.15
+\tx ɬono uži haɡo haɡo iken     qʼidir   ??  i           ..            hayɬoz     kumak bun
+\mb ɬono uži haɡo haɡo ike -n   qʼidir   *?? *   -i      .     - .     hayɬo -z   kumak b-   u        -n
+\ge three boy   he    he    see -PFT downwards *** *** -ESS.II 1sec  - 1sec  he.OBL -DAT help  III- do, make -PFT
+\ps num   n     pn    pn    v   -aff adv       *** *** -aff    break - break pn     -aff n     aff- v        -aff
+
+\ft
+\ref Pear_Madi.010
+\tx bacʼadno     un            haɡo .     i           haw  ɡrušan      sobirat  bun                ɡorno     kʼonkʼaʎʼo
+\mb bacʼad -no   u        -n   haɡo .     *   -i      haw  ɡruša -n    *sobirat b-   u        -n   ɡor -no   kʼonkʼa -ʎʼo
+\ge clean   -and  do, make -PFT this  1sec  *** -ESS.II this pear(r)  -and  ***      III- do, make -PFT put  -PFT? bike      -ESS.III
+\ps adv     -clit v        -aff pn    break *** -aff    pn   n        -clit ***      aff- v        -aff v    -aff  n         -aff
+
+\ft
+\ref Pear_Madi.011 ########## 1.31 
+\tx hezodoy ??  bižin        oxeya ?? uži bašin        ??        šapka ʎʼoqʼon?
+\mb hezodoy *?? b-   iž -in           uži b-   aš -in  ked -d -i šapka ʎʼoqʼon
+\ge then    *** III- take -PFT          boy   III- find -PFT           hat     hat
+\ps adv     *** aff- v    -aff          n     aff- v    -aff           n       n
+
+\ft
+\ref Pear_Madi.012 ############
+\tx hezodoy haw  ʎʼoqʼon ?   hayɬuy užiqor
+\mb hezodoy haw  ʎʼoqʼon *?  hayɬuy uži -qor
+\ge then    this hat        *** she.ERG boy   -SRLAT
+\ps adv     pn   n          *** pn      n     -aff
+
+\ft
+\ref Pear_Madi.013 ############
+\tx hayɬoy       uži hayɬoqorno         buxno           .     i           .     ɬono ɡrušan      tʼotʼerno     kekirno
+\mb hayɬo   -y   uži hayɬo -qor   -no   b-   ux   -no   .     *   -i      .     ɬono ɡruša -n    tʼotʼer -no   kekir -no
+\ge this.OBL -ERG boy   he.OBL -SRLAT -and  III- take -and  1sec  *** -ESS.II 1sec  three pear(r)  -and  count     -PFT? bring -PFT?
+\ps pn       -aff n     pn     -aff   -clit aff- v    -clit break *** -aff    break num   n        -clit v         -aff  v     -aff
+
+\ft
+\ref Pear_Madi.014 ###########
+\tx hezodoy hayɬo   uži ?   aqʼenos
+\mb hezodoy hayɬo   uži *?  aqʼe -nos
+\ge then    this.OBL boy   *** come  -SEQ.II
+\ps adv     pn       n     *** v     -aff
+
+\ft
+\nt 12 sec Pause, es kommt jemand rein
+
+\ref Pear_Madi.015
+\tx šapkan      toʎno     haɬoy        užiz     ɡošaban      toʎno     kekirno
+\mb šapka -n    toʎ -no   haɬo    -y   uži -z   *ɡošab -an   toʎ -no   kekir -no
+\ge hat     -and  give -PFT? this.OBL -ERG boy   -DAT ***       -FUT1 give -PFT? bring -PFT?
+\ps n       -clit v    -aff  pn       -aff n     -aff ***       -aff  v    -aff  v     -aff
+
+\ft
+\ref Pear_Madi.016
+\tx hayɬo   uži aqʼenos      ɡruša ??  toʎno     qʼono ?   ?   bacino
+\mb hayɬo   uži aqʼe -nos    ɡruša *?? toʎ -no   qʼono *?  *?
+\ge this.OBL boy   come  -SEQ.II pear(r)  *** give -PFT? two    *** ***
+\ps pn       n     v     -aff    n        *** v    -aff  num    *** ***
+
+\ft
+\ref Pear_Madi.017
+\tx hezodoy baqʼeno             biʎʼino           uži hayɬo   karzina   rekʼe ???
+\mb hezodoy b-       aqʼe -no   b-       iʎʼ -ino uži hayɬo   karžina rekʼe *???
+\ge then    I/II.PL- come  -PFT? I/II.PL- go    -PFT boy   this.OBL basket(r) person ***
+\ps adv     aff-     v     -aff  aff-     v     -aff n     pn       n         n      ***
+
+\ft
+\ref Pear_Madi.018
+\tx hezodoy haɡo rekʼe ??
+\mb hezodoy haɡo rekʼe *??
+\ge then    this  person ***
+\ps adv     pn    n      ***
+
+\id Pear.Madinat
+\dt aufgenommen 28/Aug/2006
+\dt glossiert 29/Aug/2006
+
+\nt Закаряева Мадинат Магомедовна; 15 Jahre
+\nt sie spricht sehr schnell, die Aufnahme ist nicht ideal
+\nt Tape2 GinuxI
+
+\ref Pear_Madinat.001��
+\tx čeqi         zoqʼes     rekʼe
+\mb čeq   -i     zoqʼe -s   rekʼe
+\ge forest -INESS be     -PST person
+\ps n      -aff   v      -aff n
+
+\ft In the forest there was a person.
+
+\ref Pear_Madinat.002
+\tx hezodoy hay   zoqʼes     geniš     ažey
+\mb hezodoy hay   zoqʼe -s   geni -š   ažey
+\ge then    there be     -PST pear -GEN1 tree
+\ps adv     pn    v      -aff n    -aff  n
+
+\ft Then there was a pear tree.
+
+\ref Pear_Madinat.003
+\tx hayłoy hayš       .        hayłoy hayš       butʼo            zoqʼes,
+\mb hayłoy hay   -š   .{break} hayłoy hay   -š   b-   utʼ    -o   zoqʼe -s
+\ge he.ERG  there -GEN1 1sec     he.ERG  there -GEN1 III- collect -PRS be     -PST
+\ps pn      pn    -aff  ***      pn      pn    -aff  aff- v       -aff v      -aff
+
+\ft He . he from it collected (pears). 
+
+\ref Pear_Madinat.004
+\tx ƛemon         gorno    butʼo            zoqʼes
+\mb ƛemo    -n    gor -no  b-   utʼ    -o   zoqʼe -s
+\ge stairway -and  put -CVB III- collect -PRS be     -PST
+\ps n        -clit v   -aff aff- v       -aff v      -aff
+\ft After putting (CVB) a stairway, (he) collected (pears).
+
+\ref Pear_Madinat.005
+\tx butʼen,          weł  qʼogmano               butʼen,          bižin         buxiriš           karžinamado
+\mb b-   utʼe   -n   weł  qʼog      -ma    -no   b-   utʼe   -n   b-   iži -n   b-   uxir     -iš karžina  -ma    -do
+\ge III- collect -CVB thing a.handfull -INESS -and  III- collect -CVB III- take -CVB III- pour.out -PST basket(r) -INESS -DIR
+\ps aff- v       -aff n     n          -aff   -clit aff- v       -aff aff- v    -aff aff- v        -aff n         -aff   -aff
+
+\ft (He) collected a handfull (pears) and took (them) and put (them) into the basket.
+\rt Он понес груши на руках и положил в карзину.
+
+\ref Pear_Madinat.006
+\tx hezodoy ƛʼerer ixnos,      purełbito     iƛʼiš    uži kʼonkʼaƛʼo
+\mb hezodoy ƛʼerer ix     -nos pureł -bito   iƛʼi -š  uži kʼonkʼa -ƛʼo
+\ge then    up       get.up -SEQ near   -TRANSL go     -PST boy  bike      -SRESS
+\ps adv     adv      v      -aff adv    -clit   v      -aff n    n         -aff
+
+\ft Then while (he) stood up, a boy on a bike went near by.
+\rt Koгда он поднялся на дерево, около него мимо проходил мальчик на велосипеде.
+
+\ref Pear_Madinat.007 
+\tx qʼidir ičin     san  zoqʼes     hestow-hes buxanƛen
+\mb qʼidir iči -n   san  zoqʼe -s   hestow-hes b-   ux   -an   -ƛen
+\ge down    sit  -CVB once be     -PST one        III- take -FUT2 -QUOT
+\ps adv     v    -aff adv  v      -aff adj?       aff- v    -aff  -clit
+
+\ft (The boy) sat down 
+\rt сидя хотел что-то брать 
+\rf сан зокъес - сперва
+\nt tlen complementation
+
+\rf сан зокъес чехъидо икьанл1ен, гьезо бех кика икьиш.
+\rt сперва он хотел в лес идти, но потом сено косить пошел.
+\ref Pear_Madinat.008
+\tx hezodoy celyj  karžinano      ruxiš,        kʼonkʼahon             goriš,  kʼonkʼan      bixerno,          weł  karžinan       kʼonkʼaƛʼon        gorno,   oxes
+\mb hezodoy *celyj karžina  -no   r-   ux   -iš kʼonkʼa -ho      -n    gor -iš kʼonkʼa -n    b-   ixer    -no  weł  karžina  -n    kʼonkʼa -ƛʼo -n    gor -no  oxe   -s
+\ge then    ***    basket(r) -and  V-   take -PST bike      -APUDESS -and  put -PST bike      -and  III- lift.up -CVB thing basket(r) -and  bike      -SRESS -and  put -CVB leave -PST
+\ps adv     ***    n         -clit aff- v    -aff n         -aff     -clit v   -aff n         -clit aff- v       -aff n     n         -clit n         -aff   -clit v   -aff v     -aff
+
+\ft Then (he) took the whole basket near to the bike and put (it) on the bike and left.
+\rt целую карзину взял и около велосипеда поставил, поднял велосипед, поставил карзину и уехал.   
+
+\ref Pear_Madinat.009
+\tx iƛʼiyo    ičin,    ked  keziyiqiš   hayłoz     .    purełbito     zoqʼes     yiƛʼiyo
+\mb iƛʼi -yo  iči -n   ked  keziyiq -iš hayło -z   .{-} pureł -bito   zoqʼe -s   y-   iƛʼi -yo
+\ge go     -PRS be   -CVB girl meet.II -PST he.OBL -DAT 1sec near   -TRANSL be     -PST II-  go     -PRS
+\ps v      -aff v    -aff n    v       -aff pn     -aff -    adv    -clit   v      -aff aff- v      -aff
+
+\ft When (he) went away, he met a girl that went near by. 
+\rf когда он ехал, он девочку встретил, которая мимо проехала.
+
+\ref Pear_Madinat.010
+\tx ked  keziyiqnos   xemuƛʼon         cʼaqʼin       qʼidir iƛʼiš
+\mb ked  keziyiq -nos xemu  -ƛʼo -n    cʼaqʼi   -n   qʼidir iƛʼi -š
+\ge girl meet.II -SEQ stone -SRESS -and  impinge.on -CVB down    fall   -PST
+\ps n    v       -aff n     -aff   -clit v          -aff adv     v      -aff
+
+\ft After (he) met the girl, he stossen against a stone and fell down.
+\rt Когда он видел девушку, он ударился под камень и упал.
+
+\ref Pear_Madinat.011
+\tx hezodoy sadaq geni bičʼiłiš       qʼidir
+\mb hezodoy sadaq geni b-   ičʼił -iš qʼidir
+\ge then    all   pear III- pour.out -PST down
+\ps adv     adv   n    aff- v        -aff adv
+
+\ft The all the pears were poured out.
+\rt Потом все груши вылились.
+
+\ref Pear_Madinat.012
+\tx hezodoy haygon     zoqʼes     užibe
+\mb hezodoy hay   -gon zoqʼe -s   uži -be
+\ge then    there -??  be     -PST boy  -PL
+\ps adv     pn    -aff v      -aff n    -aff
+
+\ft Then there were these boys.
+\rt
+
+\ref Pear_Madinat.013
+\tx hazey         kumakno     bus,               bacʼadno     us,           geni bakʼarzinbun,    kʼonkʼaƛʼon        qʼerekno    iƛʼiš
+\mb haze     -y   kumak -no   b-   u        -s   bacʼad -no   u        -s   geni bakʼarzinbu -n   kʼonkʼa -ƛʼo -n    qʼerek -no  iƛʼi -š
+\ge they.OBL -ERG help  -and  III- do, make -PST clean   -and  do, make -PST pear collect.III  -CVB bike      -SRESS -and  sit.on  -CVB go     -PST
+\ps pn       -aff n     -clit aff- v        -aff adv     -clit v        -aff n    v            -aff n         -aff   -clit v       -aff v      -aff
+
+\ft They helped (him), clean (him) and to collect the pears and (then he) sat on the bike.
+\rt Потом они помогли 
+
+\ref Pear_Madinat.014
+\tx šapka šuƛʼen     uži hezor utin      šapka toƛiš   hayłoqor
+\mb šapka šuƛʼe -n   uži hezor uti  -n   šapka toƛ -iš hayło -qor
+\ge hat    forget   -CVB boy  back  turn -CVB hat    give -PST he.OBL -SRLAT
+\ps n      v        -aff n    adv   v    -aff n      v    -aff pn     -aff
+
+\ft (He) forgot his head and a boy went back to collet (it) and gave the hat back to him.
+\rt
+
+\ref Pear_Madinat.015
+\tx hayłoygon   hazo      každomu  łono geni toƛiš
+\mb hayłoy -gon hazo      *každomu łono geni toƛ -iš
+\ge he.ERG  -??  these.OBL ***       three pear give -PST
+\ps pn      -aff pn        ***       num   n    v    -aff
+
+\ft He gave three pears to each of them.
+\rt
+
+\ref Pear_Madinat.016
+\tx hezodoy mimo  hag   užibe    zoqʼes     biƛʼiyo
+\mb hezodoy *mimo hag   uži -be  zoqʼe -s   b-       iƛʼi -yo
+\ge then    ***   those boy  -PL  be     -PST I/II.PL- go     -PRS
+\ps adv     ***   pn    n    -aff v      -aff aff-     v      -aff
+
+\ft Then these boys went by.
+\rt
+
+\ref Pear_Madinat.017
+\tx hayło   rekʼe qʼidir ułinos,     hayłoz     bikesme
+\mb hayło   rekʼe qʼidir ułi    -nos hayło -z   b-       ike -s   -me
+\ge this.OBL person down    go.down -SEQ he.OBL -DAT I/II.PL- see -PST -NEG
+\ps pn       n      adv     v       -aff pn     -aff aff-     v   -aff -aff
+
+\ft There while the person came down (from the tree), he did not see (them).
+\rt
+
+\ref Pear_Madinat.018
+\tx łuy     se   ruxiš         karzina  rašišme
+\mb łu -y   se   r-   ux   -iš karzina  r-   aši -š  -me
+\ge who -ERG what V-   take -PST basket(r)V-   find -PST -NEG
+\ps pn  -aff pn   aff- v    -aff n        aff- v    -aff -aff
+
+\ft Who had taken the basket that (he) didn't find.
+\rt
+
+\id Pear.Xadizhat
+\dt aufgenommen 27/Sept/2006
+\dt transkribiert 28/Sept/2006
+\nt Абдулмуслимова Хадижат Магомедовна (16 Jahre)
+\nt die Informantin ist eigentlich Tzez Sprecherin und wohnt erst seit einer Weile in Ginukh (und sie hat sicher mindestens ein Hinuq Elternteil,  die Geschichte ist mittelmaessig, ein paar saetze byw. woerter sind unklar 
+\nt ein Fehler, den sie immer wieder macht, ist haw statt hago zu sagen, und ebenfalls die falsche oblique Form zu verwenden, aber da agreement ist richtig
+\nt sie nutzt SEHR vieel clefts mit auxiliaries
+
+\ref Pear_Xadzhat.001
+\tx hes zoqʼen     rekʼwe
+\mb hes zoqʼe -n   rekʼwe
+\ge one be     -PFT man
+\ps num v      -aff n
+
+\rf гьес зокъен рек1ве
+
+\ref Pear_Xadzhat.002
+\tx haw zoqʼen     cʼodoraw
+\mb haw zoqʼe -n   cʼodoraw
+\ge she be     -PFT responsive
+\ps pn  v      -aff adj
+
+\rf гь аго зокъвен ц1одорав
+
+\ref Pear_Xadzhat.003
+\tx hayłuy zoqʼen     butʼo            geni
+\mb hayłuy zoqʼe -n   b-   utʼ    -o   geni
+\ge she.ERG be     -PFT III- collect -PRS pear
+\ps pn      v      -aff aff- v       -aff n
+
+\rf гьайлъой зокъен бут1о гени
+
+\ref Pear_Xadzhat.004
+\tx hes karzinka  ričʼo         zoqʼen,    qʼono karʼ,        qʼono ʔeƛali         karzinka  ričʼayaz,      dahaw žo   zoqʼen     ƛoxes
+\mb hes karzinka  r-   ičʼ -o   zoqʼe -n   qʼono *karʼ        qʼono ʔeƛ -a   -li   karzinka  r-   ičʼ -ayaz dahaw žo   zoqʼe -n   ƛoxe  -s
+\ge one basket(r) V-   fill  -PRS be     -PFT two    ***           two    say   -INF -NMZ1 basket(r) V-   fill  -PURP few   thing be     -PFT remain -PTCP.PST
+\ps num n         aff- v     -aff v      -aff num    ***           num    v     -aff -aff  n         aff- v     -aff  adv   n     v      -aff v      -aff
+
+\rf гь ес карзинка рич1и зокъен, къоно кар, къоно элълъани карзинка рич1аяз дагьав жо зокъен лълъохвес
+
+\ref Pear_Xadzhat.005
+\tx hezodoy hayłoy ričʼeran            ričʼerno,           hayłoqos      ažeyƛʼos     hes geni biƛʼin
+\mb hezodoy hayłoy r-   ičʼer     -an  r-   ičʼer     -no  hayło -qos    ažey -ƛʼos   hes geni b-   iƛʼi -n
+\ge then    he.ERG  V-   fill<TRANS> -RED V-   fill<TRANS> -CVB he.OBL -SRABL2 tree  -PTCP.PRS one pear III- fall   -PFT
+\ps adv     pn      aff- v           -aff aff- v           -aff pn     -aff    n     -aff      num n    aff- v      -aff
+
+\rf гь езодой гь айлъой рич1еран рич1ерно гь айлъохъос ажейкьос гь ес гени бикьин
+
+\ref Pear_Xadzhat.006
+\tx hibače   cʼodoraw  iqoƛʼo,      haw  geniqen   biƛʼiš             qʼidir, hayłoy buxan          buxno          platokno              rixin            gorno
+\mb hibače   cʼodoraw  iq     -oƛʼo haw  geni -qen b-   iƛʼi -š       qʼidir  hayłoy b-   ux   -an  b-   ux   -no  *plat -o   -k    -no  r-   ixi    -n   gor -no
+\ge like.this responsive happen -SIM    that pear -NEG III- fall   -PTCP.PST down     he.ERG  III- take -RED III- take -CVB ***   -PRS -CAUS -PFT V-   spread -CVB put -PFT
+\ps pn        adj        v      -aff    pn   n    -aff aff- v      -aff      adv      pn      aff- v    -aff aff- v    -aff ***   -aff -aff  -aff aff- v      -aff v   -aff
+
+\rf гьибаче ц1одорав ихъокьо гьав генихъен бикьиш къидир гь айлъой бухан бухно платокно рихин горно
+\nt das ist nicht ganz das, was sie sagt, glaube ich
+
+\ref Pear_Xadzhat.007
+\tx hezodoy haybito       iƛʼin     hes rekʼe, hayłode         qʼocʼe zoqʼen     hes cani, hagbe aldoɣobito      biƛʼin             (hayłus)
+\mb hezodoy hay   -bito   iƛʼi -n   hes rekʼe  hayło -de       qʼocʼe zoqʼe -n   hes can   hagbe aldoɣo  -bito   b-       iƛʼi -n   hayłu  -s
+\ge then    there -TRANSL go     -PFT one man     he.OBL -APUDESS2 together be     -PFT one goat  they  in.front -TRANSL I/II.PL- go     -PFT she.OBL -GEN1
+\ps adv     pn    -clit   v      -aff num n       pn     -aff      postp    v      -aff num n     pn    adv      -clit   aff-     v      -aff pn      -aff
+
+\rf гьезодой гьай бито икьин гьес рек1ве гь айлъоде къоц1е зокъен гь ес цани, гьагбе алдогъобито бикьин (гьайлъос)
+
+\ref Pear_Xadzhat.008
+\tx hezodoy zoqʼen     hes uži, hago zoqʼen     kʼonkʼaƛʼo,  kʼonkʼaƛʼo   iƛʼiyo
+\mb hezodoy zoqʼe -n   hes uži  hago zoqʼe -n   kʼonkʼa -ƛʼo kʼonkʼa -ƛʼo iƛʼi -yo
+\ge then    be     -PFT one boy   that be     -PFT bike      -SRESS bike      -SRESS go     -PRS
+\ps adv     v      -aff num n     pn   v      -aff n         -aff   n         -aff   v      -aff
+
+\rf гь езодой зокъен гь ес ужи, гь аго зокъен к1онк1а, к1онк1акьо икьиё
+
+\ref Pear_Xadzhat.009
+\tx hezodoy hayłoy buxno          hes geni, hayłuz      hes geni buxno          iƛʼa     etimeƛʼo,      hayłuy sadaq karzinkan       ruxno,         iƛʼin
+\mb hezodoy hayłoy b-   ux   -no  hes geni  hayłu  -z   hes geni b-   ux   -no  iƛʼ -a   eti  -me  -ƛʼo hayłuy sadaq karzinka  -n    r-   ux   -no  iƛʼi -n
+\ge then    he.ERG  III- take -PFT one pear  she.OBL -DAT one pear III- take -CVB go    -INF want -NEG -SRESS she.ERG all   basket(r) -and  V-   take -CVB go     -PFT
+\ps adv     pn      aff- v    -aff num n     pn      -aff num n    aff- v    -aff v     -aff v    -aff -aff   pn      adv   n         -clit aff- v    -aff v      -aff
+
+\rf гь езодой гьайлъой бухно гь ес гени, гь айлъос гь ес гени бухно икьаэтимекьо, гь айлъой садахъ карзинка рухно икьин,
+
+\ref Pear_Xadzhat.010
+\tx kʼonkʼaƛʼon        gorno,   hayło   karzinka  iƛʼiyo    goła,  kʼonkʼaƛʼo,  hay   keziyiqno       hayłuz      ked, hawno     zoqʼen     kʼonkʼaƛʼotow
+\mb kʼonkʼa -ƛʼo -n    gor -no  hayło   karzinka  iƛʼi -yo  goła   kʼonkʼa -ƛʼo hay   keziyiq    -no  hayłu  -z   ked  haw -no   zoqʼe -n   kʼonkʼa -ƛʼo -tow
+\ge bike      -SRESS -and  put -PFT that.OBL basket(r) go     -PRS be.PTCP bike      -SRESS there meet.II/IV -PFT she.OBL -DAT girl she -and  be     -PFT bike      -SRESS -EMPH
+\ps n         -aff   -clit v   -aff pn       n         v      -aff v       n         -aff   pn    v          -aff pn      -aff n    pn  -clit v      -aff n         -aff   -clit
+
+\rf к1онк1акьон горно гь айлъо карзинка икьиё голъа, к1онк1акьо гьай кези йихъно гьайлъоз кед, гьавно зокъен к1онк1акьо
+
+\nt nicht gany klar, das yweite Verb koennte auch etliyo golchla sein
+
+\ref Pear_Xadzhat.011
+\tx hezodoy hayłuqo        hezobitorno              ezen      ičin,    haw  xemuqon             cʼaqʼin,      iƛʼin     qʼidir
+\mb hezodoy hayłu  -qo     hezo  -bito   -r   -no   eze  -n   iči -n   haw  xemu  -qo     -n    cʼaqʼi   -n   iƛʼi -n   qʼidir
+\ge then    she.OBL -SRESS2 after -TRANSL -LAT -and  look -CVB be   -CVB that stone -SRESS2 -and  impinge.on -CVB go     -PFT down
+\ps adv     pn      -aff    adv   -clit   -aff -clit v    -aff v    -aff pn   n     -aff    -clit v          -aff v      -aff adv
+
+\rf гь езодой гь айлъохъо гьезобитон эзен ичин гь ав хемухъон ц1акъин икьин къидир 
+
+\ref Pear_Xadzhat.012
+\tx qʼidir iƛʼinos,  hayłuqos        bosnos         sadaq geni
+\mb qʼidir iƛʼi -nos hayłu   -qos    b-   os   -nos sadaq geni
+\ge down    go     -SEQ that.OBL -SRABL2 III- fall -SEQ all   pear
+\ps adv     v      -aff pn       -aff    aff- v    -aff adv   n
+
+\rf къидир икьинос гь айлъохъос боснос садахъ гени
+
+\ref Pear_Xadzhat.013
+\tx bosnos         hezodoy haydo      baqʼen             łono uži, hagzey        haw  ixeranno           ixerno,      bacʼadno     un,           hayłus        karzinkamar           genin      gorno,   haw  kekirno
+\mb b-   os   -nos hezodoy hay   -do  b-       aqʼe -n   łono uži  hagze    -y   haw  ixer    -an  -no   ixer    -no  bacʼad -no   u        -n   hayłu   -s    karzinka  -ma    -r   geni -n    gor -no  haw  kekir -no
+\ge III- fall -SEQ then    there -DIR I/II.PL- come  -PFT three boy   they.OBL -ERG that lift.up -RED -and  lift.up -CVB clean   -and  do, make -CVB that.OBL -GEN1 basket(r) -INESS -LAT pear -and  put -CVB that send  -PFT
+\ps aff- v    -aff adv     pn    -aff aff-     v     -aff num   n     pn       -aff pn   v       -aff -clit v       -aff adv     -clit v        -aff pn       -aff  n         -aff   -aff n    -clit v   -aff pn   v     -aff
+
+\rf боснос гь езодой гь айдо бакъен лъоно ужи, гьагзе гьав ихеран ихерно бац1адно ун гьайлъос карзинкама генин горно гьав кекирно
+
+\ref Pear_Xadzhat.014
+\tx iƛʼiyo    goła,  biƛʼiyo            goła   hagbe, hayłus,      hagzez,       hayłus       šljapa yiken
+\mb iƛʼi -yo  goła   b-       iƛʼi -yo  goła   hagbe  hayłu  -s    hagze    -z   hayłu  -s    šljapa y-   ike -n
+\ge go     -PRS be.PTCP I/II.PL- go     -PRS be.PTCP they   she.OBL -GEN1 they.OBL -DAT she.OBL -GEN1 hat(r)  IV-  see -PFT
+\ps v      -aff v       aff-     v      -aff v       pn     pn      -aff  pn       -aff pn      -aff  n       aff- v   -aff
+
+\rf икьиё голъа, бикьиё голъа гьагбе гь айлъуз, гь агзез, гь айлъос шляпа йикен
+
+\ref Pear_Xadzhat.015
+\tx hagzey        šoroʼn      qaƛen     hayłuqor,       šaƛun       qaƛen     hayłoqor,       haw  šljapan      yuxno          toƛno    hayłuqor,       hayłuygon    łono geni buxno          toƛno    hagzeqor
+\mb hagze    -y   *šoroʼ -n   qaƛe -n   hayłu   -qor    šaƛu  -n    qaƛe -n   hayło   -qor    haw  šljapa -n    y-   ux   -no  toƛ -no  hayłu   -qor    hayłuy -gon  łono geni b-   ux   -no  toƛ -no  hagze    -qor
+\ge they.OBL -ERG ***      -PFT call  -CVB that.OBL -SRLAT2 whistle -and  call  -CVB that.OBL -SRLAT2 that hat(r)  -and  IV-  take -CVB give -PFT that.OBL -SRLAT2 she.ERG -??   three pear III- take -CVB give -PFT they.OBL -SRLAT2
+\ps pn       -aff ***      -aff v     -aff pn       -aff    n       -clit v     -aff pn       -aff    pn   n       -clit aff- v    -aff v    -aff pn       -aff    pn      -clit num   n    aff- v    -aff v    -aff pn       -aff
+
+\rf гьагзей шорон хъалълъен гьайлъохъор, шалълъун хъалълъен гьайлъохъор, гьав шляпан юхно толълъно гьайлъохъор, гь айлъой гон лъоно гени бухно толълъно гь агзехъор
+\nt laut Tsez Dictionary ist šaru das Tsez Wort fuer Pfiff 
+\nt sie wird von jemandem korregiert
+
+\ref Pear_Xadzhat.016
+\tx hagbe biƛʼiyo            goła,  hibaw rekʼude          aldoɣobito      zoqʼen     hagbe biƛʼiyo
+\mb hagbe b-       iƛʼi -yo  goła   hibaw rekʼu  -de       aldoɣo  -bito   zoqʼe -n   hagbe b-       iƛʼi -yo
+\ge they  I/II.PL- go     -PRS be.PTCP that  man.OBL -APUDESS2 in.front -TRANSL be     -PFT they  I/II.PL- go     -PRS
+\ps pn    aff-     v      -aff v       pn    n       -aff      adv      -clit   v      -aff pn    aff-     v      -aff
+
+\rf гь агбе бикьиё голъа гьибав рек1уде алдогъобито зокъен гь агбе бикьиё  
+
+\ref Pear_Xadzhat.017
+\tx hezodoy hayłuy rekʼugon     qʼidir iqno,       qʼidir   iqnos       haw, hayłuz       hes karzinka  riken         gom,   haw  ʕažaʕib iqno        ƛexen
+\mb hezodoy hayłuy rekʼu  -gon  qʼidir iq     -no  qʼidir   iq     -nos haw  hayłu   -z   hes karzinka  r-   ike -n   gom    haw  ʕažaib   iq     -no  ƛexwe -n
+\ge then    she.ERG man.OBL -??   down    happen -PFT downwards happen -SEQ that that.OBL -DAT one basket(r) V-   see -PFT be.NEG that wonder(aw) happen -CVB remain -PFT
+\ps adv     pn      n       -clit adv     v      -aff adv       v      -aff pn   pn       -aff num n         aff- v   -aff v      pn   adv        v      -aff v      -aff
+
+\rf гь езодой гь айлъой рек1угон къидир ихъно, къидир ихънос гьав, гь айлъоз гь ес карзинка рикен гом, гь ав ажайб ихъно лълъохвен
+\nt was soll hayłuy ??
+
+\ref Pear_Xadzhat.018
+\tx hezodoy hagzez        hayłus        aldoɣobito      biƛʼin             hagbe, hagzeqo          geniben         zoqʼen
+\mb hezodoy hagze    -z   hayłu   -s    aldoɣo  -bito   b-       iƛʼi -n   hagbe  hagze    -qo     geni -be  -n    zoqʼe -n
+\ge then    they.OBL -DAT that.OBL -GEN1 in.front -TRANSL I/II.PL- go     -PFT those  they.OBL -SRESS2 pear -PL  -and  be     -PFT
+\ps adv     pn       -aff pn       -aff  adv      -clit   aff-     v      -aff pn     pn       -aff    n    -aff -clit v      -aff
+
+\rf гь езодой гь агзез гь айлъос алдогъобито бикьин гь агбе, гь агзехъо генибен зокъен
+
+\ref Pear_Xadzhat.019
+\tx hoboži hawno      ezen      ƛoxen
+\mb hoboži haw  -no   eze  -n   ƛoxe  -n
+\ge now     that -and  look -CVB remain -PFT
+\ps adv     pn   -clit v    -aff v      -aff
+
+\rf гь обожи гь авно эзен лълъохен
+
+\id Pear.Sakinat
+\dt aufgenommen 30/Sept/2006
+\dt transkribiert 01/Okt/2006
+\nt Гамидова Сакинат Алиевна (13 Jahre )
+\nt nicht so sehr geeignet
+\nt Tape 5, Ginux 4
+
+\ref Pear_Sakinat.001
+\tx hes zoqʼen     rekʼwe, hayłos      zoqʼen     ogoroddo
+\mb hes zoqʼe -n   rekʼwe  hayło -s    zoqʼe -n   ogorod    -do
+\ge one be     -PFT person   he.OBL -GEN1 be     -PFT garden(r) -DIR
+\ps num v      -aff n        pn     -aff  v      -aff n         -aff
+
+\rf гьес зокъен рек1ве, гьайлъос зокъен огород
+
+\ref Pear_Sakinat.002
+\tx hago iƛʼin     ogorodmado            iši  butʼayaz
+\mb hago iƛʼi -n   ogorod    -ma    -do  iši  b-   utʼ    -ayaz
+\ge he   go     -PFT garden(r) -INESS -DIR apple III- collect -PURP
+\ps pn   v      -aff n         -aff   -aff n     aff- v       -aff
+
+\rf гьаго икьин огородмадо иши бут1аяз
+
+\ref Pear_Sakinat.003
+\tx iši  butʼo            zoqʼen,    karzinabe      zoqʼen,    hayłoy ričʼeriš                   łono qʼocʼe
+\mb iši  b-   utʼ    -o   zoqʼe -n   karzina   -be  zoqʼe -n   hayłoy r-           ičʼer     -iš łono qʼocʼe
+\ge apple III- collect -PRS be     -PFT basket(r) -PL  be     -PFT he.ERG  III/IV/V.PL- fill<TRANS> -PST three together
+\ps n     aff- v       -aff v      -aff n         -aff v      -aff pn      aff-         v           -aff num   adv
+
+\rf иши бут1о зокъен, карзинабе зокъен гьайлъой рич1ериш лъоно къоц1е гени
+\nt es ruft jemand geni rein, deshalb verbessert sie sich am Ende, aber im Prinzip kann geni raus
+
+\ref Pear_Sakinat.004
+\tx hoboy hestow-hes iƛʼin     rekʼu, hayłoy buxno          gome
+\mb hoboy hestow-hes iƛʼi -n   rekʼu  hayłoy b-   ux   -no  gome
+\ge then  one        go     -PFT person  he.ERG  III- keep -PFT be.NEG
+\ps adv   adj?       v      -aff n       pn      aff- v    -aff v
+
+\rf гьобой гьестов-гьес икьин рек1ве, гьайлъой бухно гоме
+
+\ref Pear_Sakinat.005
+\tx hezo hesgozon   zoqʼen     rekʼu, hago kʼonkʼaƛʼo,  hago iƛʼiyo    goła,  hayłoy buxno          karzinan        kʼonkʼaƛʼon        gorno    iƛʼiyo    zoqʼen,    iƛʼiyo    goła   purełbito     kedno      yiƛʼin
+\mb hezo hes -gozon zoqʼe -n   rekʼu  hago kʼonkʼa -ƛʼo hago iƛʼi -yo  goła   hayłoy b-   ux   -no  karzina   -n    kʼonkʼa -ƛʼo -n    gor -no  iƛʼi -yo  zoqʼe -n   iƛʼi -yo  goła   pureł -bito   ked  -no   y-   iƛʼi -n
+\ge then one -??    be     -PFT person  he   bike      -SRESS he   go     -PRS be.PTCP he.ERG  III- take -CVB basket(r) -and  bike      -SRESS -and  put -CVB go     -PRS be     -PFT go     -PRS be.PTCP near   -TRANSL girl -and  II-  go     -CVB
+\ps adv  num -clit  v      -aff n       pn   n         -aff   pn   v      -aff v       pn      aff- v    -aff n         -clit n         -aff   -clit v   -aff v      -aff v      -aff v      -aff v       adv    -clit   n    -clit aff- v      -aff
+
+\rf гь езо гь есгозон зокъен рек1ве, гь аго к1онк1акьо,  гь аго икьиё голъа гь айлъой бухно карзинан к1онк1акьон горно иькиё зокъен, икьиё голъа пурелъбито кедно йикьин
+
+\ref Pear_Sakinat.006
+\tx hayłoqo      šlyapan       yiƛʼin         i      gamačʼqon            cʼoxno    qʼidir iƛʼin     hago
+\mb hayło -qo    *šlyapa -n    y-   iƛʼi -n   i      gamačʼ -qo     -n    cʼox -no  qʼidir iƛʼi -n   hago
+\ge he.OBL -SRESS ***      -and  IV-  fall   -CVB and(r) stone    -SRESS2 -and  enter -CVB down    fall   -PFT he
+\ps pn     -aff   ***      -aff  aff- v      -aff conj   n        -aff    -clit v     -aff adv     v      -aff pn
+
+\rf гьайлъохъо шляпан йикьин и гамач1хъон ц1охно къидир икьин гь аго, 
+
+\ref Pear_Sakinat.007
+\tx zoqʼen     hay   łono rekʼu
+\mb zoqʼe -n   hay   łono rekʼu
+\ge be     -PFT there three person
+\ps v      -aff pn    num   n
+
+\rf зокъен гьай лъоно рек1у, 
+
+\ref Pear_Sakinat.008
+\tx hoboy haze     pomogatʼ  run                hazez,        hayłos     karzinamar      hawno      butʼen,          kekirno    hado
+\mb hoboy haze     *pomogatʼ r-   u        -n   haze     -z   hayło -s   karzina   -mar  haw  -no   b-   utʼe   -n   kekir -no  hado
+\ge then  they.OBL ***        V-   do, make -CVB they.OBL -DAT he.OBL -GEN1basket(r) -INLATthis -and  III- collect -CVB send  -PFT he
+\ps adv   pn       ***        aff- v        -aff pn       -aff pn     -aff n         -aff  pn   -clit aff- v       -aff v     -aff pn
+
+\rf гь обой гьазе помогать рун гь агзез, гь айлъос карзинамар гьавно бут1ен, кекирно гьадо
+
+\ref Pear_Sakinat.009
+\tx hoboy hago oxo        goła   yašin         hazez         qʼidi šljapa
+\mb hoboy hago ox    -o   goła   y-   aši -n   haze     -z   qʼidi šljapa
+\ge then  he   leave -PRS be.PTCP IV-  find -CVB they.OBL -DAT down   hat(r)
+\ps adv   pn   v     -aff v       aff- v    -aff pn       -aff adv    n
+
+\rf гь обой гь адо охоголъа яшин гь агзез къиди шляпа
+
+\ref Pear_Sakinat.010
+\tx šljapa yuxno,         hezo gozon šaƛun      peƛen     ičirno    hagon     iƛʼin     šljapa toƛno
+\mb šljapa y-   ux   -no  hezo gozon šaƛu  -n   peƛe -n   ičir -no  hago -n   iƛʼi -n   šljapa toƛ -no
+\ge hat(r)  IV-  take -CVB then ??    whistle -and blow  -CVB stop  -CVB he   -and go     -CVB hat(r)  give -PFT
+\ps n       aff- v    -aff adv  part? n       -clitv     -aff v     -aff pn   -clitv      -aff n       v    -aff
+
+\rf шляпа юхно, гьезогозон шалълъун пелълъен ичирно гь агон икьин шляпа толълъно  
+
+\ref Pear_Sakinat.011
+\tx hayłoz     šljapa toƛoƛʼo   hayłoy łono išin,      geni toƛno    hazeqor,        hayłoy žiw-žiwližaz               biƛʼizi  bun
+\mb hayło -z   šljapa toƛ -oƛʼo hayłoy łono iši  -n    geni toƛ -no  haze     -qor   hayłoy žiw-žiw   -li  -ža    -z   biƛʼizi  b-   u        -n
+\ge he.OBL -DAT hat(r)  give -SIM    he.ERG  three apple -and  pear give -CVB they.OBL -SRLAT he.ERG  every, each -OBL -OBL.PL -DAT divide(aw) III- do, make -PFT
+\ps pn     -aff n       v    -aff    pn      num   n     -clit n    v    -aff pn       -aff   pn      pn          -aff -aff    -aff v          aff- v        -aff
+
+\rf гьайлъоз шляпа толълъокьо гь айлъой лъоно ишин, гени толълъно гь азехъор, гь айлъой жив-живлизаз бикьзи бун
+\nt Madina hat ihr, glaube ich, an der Stelle zugerufen, dass es Birnen und keine �Aepfel waren
+
+\ref Pear_Sakinat.012
+\tx hoboy hado ogorodmasƛani              rekʼu qʼidir ułin,       geni karzinamado           goranƛen
+\mb hoboy hado ogorod    -mas   -ƛa  -ni  rekʼu qʼidir ułi    -n   geni karzina   -ma    -do  gor -an   -ƛen
+\ge then  this garden(r) -INABL -??   -??  person down    go.down -CVB pear basket(r) -INESS -DIR put -FUT2 -QUOT
+\ps adv   pn   n         -aff   -clit -aff n      adv     v       -aff n    n         -aff   -aff v   -aff  -clit
+
+\rf гьобой гьадо огородмаслълъани рек1у къидир улъин гени карзинамадо горанлълъен
+
+\ref Pear_Sakinat.013
+\tx hay   gozon hestow-hes karzina   bašin         gome
+\mb hay   gozon hestow-hes karzina   b-   aši -n   gome
+\ge there ??    one        basket(r) III- find -PFT be.NEG
+\ps pn    part? adj?       n         aff- v    -aff v
+
+\rf гь ай гозон гь естов-гь ес карзина башингом
+
+\ref Pear_Sakinat.014
+\tx hadbe łonon      biƛʼin            purełbito,    hagon      ƛoxen
+\mb hadbe łono -n    b-       iƛʼ -in  pureł -bito   hago -n    ƛoxe  -n
+\ge these three -and  I/II.PL- go    -PFT near   -TRANSL he   -and  remain -PFT
+\ps pn    num   -clit aff-     v     -aff adv    -clit   pn   -clit v      -aff
+
+\rf гь агбе лъонон бикьин пурелъбито гьагон лълъохен
+
+\id Pear.Patimat
+\nt Давидова Патимат Ибрагимова (57 Jahre)
+
+\dt aufgenommen 11/Sept/2006
+\dt transkribiert 22/Sept/2006
+\nt 4. satzː schones Bsp. fuer nounphraseǃǃǃǃ, uberhaupt schone nounphrases mit participles
+\nt Tape4, GinuxIII
+
+\ref Pear_Patimat.001
+\tx hayło   rekʼuy         ƛemoƛʼono          ixno        butʼo            zoqʼes     geni, ažeyƛʼos
+\mb hayło   rekʼu     -y   ƛemo    -ƛʼo -no   ix     -no  b-   utʼ    -o   zoqʼe -s   geni  ažey -ƛʼos
+\ge this.OBL person.OBL -ERG stairway -SRESS -and  get.up -CVB III- collect -PRS be     -PST pear  tree  -SRABL
+\ps pn       n          -aff n        -aff   -clit v      -aff aff- v       -aff v      -aff n     n     -aff
+
+\rf гьайлъо рек1уй кьемокьоно ихно бут1о зокъес гени ажейкьос
+\rt
+
+\ref Pear_Patimat.002
+\tx butʼen           karzinkabe     ričʼiš               hayłoy
+\mb b-   utʼe   -n   karzinka  -be  r-           ičʼ -iš hayłoy
+\ge III- collect -CVB basket(r) -PL  III/IV/V.PL- fill  -PST he.ERG
+\ps aff- v       -aff n         -aff aff-         v     -aff pn
+
+\rf бут1ен карзинкабе рич1иш гьайлъой
+\rt
+
+\ref Pear_Patimat.003
+\tx hezo aqʼes     welosipedƛʼon         ƛʼerekno uži, kʼonkʼaƛʼo   ƛʼerekno koroče
+\mb hezo aqʼe -s   welosiped  -ƛʼo -n    ƛʼerekno uži  kʼonkʼa -ƛʼo ƛʼerekno *koroče
+\ge then come  -PST bicycle(r) -SRESS -and  astride    boy   bike      -SRESS astride    ***
+\ps adv  v     -aff n          -aff   -clit adv        n     n         -aff   adv        ***
+
+\rf гьезо акъес велосипедкьон кьерекно ужи, к1онк1акьо кьерекно короче 
+\rt
+
+\ref Pear_Patimat.004
+\tx hoboy hayło   kʼonkʼaƛʼo   ƛʼerekno aqʼo     goła  uži bikʼekʼno        bižiš        hayłos      kwid
+\mb hoboy hayło   kʼonkʼa -ƛʼo ƛʼerekno aqʼ -o   goła  uži b-   ikʼekʼ -no  b-   iži -š  hayło -s    kwid
+\ge then  this.OBL bike      -SRESS astride    come -PRS be.PTCPboy  III- steal    -CVB III- take -PST he.OBL -GEN1 basket
+\ps adv   pn       n         -aff   adv        v    -aff v      n    aff- v        -aff aff- v    -aff pn     -aff  n
+
+\rf гьобой гьайлъо к1онк1акьо кьерекно aкъоголъа ужи бик1ек1но бижиш гьайлъос квид
+\rt
+
+\ref Pear_Patimat.005
+\tx huni iƛʼiya           kʼonkʼan      qʼidir gamačʼqo       cʼaqʼin       qʼidirno     biƛʼin         bičʼiłiš       hayłos      haw
+\mb hune iƛʼi -ya         kʼonkʼa -n    qʼidir gamačʼ -qo     cʼaqʼi   -n   qʼidir -no   b-   iƛʼi -n   b-   ičʼił -iš hayło -s    haw
+\ge way  go     -PTCP.PRS?? bike      -and  down    stone    -SRESS2 impinge.on -CVB down    -and  III- fall   -CVB III- pour.out -PST he.OBL -GEN1 this
+\ps n    v      -aff        n         -clit adv     n        -aff    v          -aff adv     -clit aff- v      -aff aff- v        -aff pn     -aff  pn
+
+\rf гьуниикьия к1онк1ан къидир гамач1охъо ц1акъин къидирно бикьин бич1илъиш гьайлъос гьав
+\rt
+
+\ref Pear_Patimat.006 
+\tx hezo haw  bičʼiłoƛʼo       ƛʼerer baqʼes             xexbe,   łonon      uži
+\mb hezo haw  b-   ičʼił -oƛʼo ƛʼerer b-       aqʼe -s   xexbe    łono -n    uži
+\ge then this III- pour.out -SIM    upwards  I/II.PL- come  -PST children three -and  boy
+\ps adv  pn   aff- v        -aff    adv      aff-     v     -aff n        num   -clit n
+
+\rf гьезо гьав буч1илъокьо кьерер бакъес хехбе, лъонон ужи
+\rt
+
+\ref Pear_Patimat.007
+\tx hayłoy hagzey        qʼidiš     butʼan            butʼen           karzinkan       hag     ričʼno,       hezoqʼimur kʼonkʼaƛʼon        gorno,   kekiriš   hago uži
+\mb hayłoy hagze    -y   qʼidi -š   b-   utʼ    -an   b-   utʼe   -n   karzinka  -n    hag     r-   ičʼ -no  hezoqʼimur kʼonkʼa -ƛʼo -n    gor -no  kekir -iš hago uži
+\ge he.ERG  they.OBL -ERG down   -GEN1 III- collect -FUT2 III- collect -CVB basket(r) -and  this.IV V-   fill  -CVB back        bike      -SRESS -and  put -CVB bring -PST this boy
+\ps pn      pn       -aff adv    -aff  aff- v       -aff  aff- v       -aff n         -clit pn      aff- v     -aff adv         n         -aff   -clit v   -aff v     -aff pn   n
+
+\rf гьайлъуй гьагзей къидиш бут1ан бут1ен карзинкан гьаг рич1но, гьезоркъимур к1онк1акьон горно, кекириш гьаго ужи
+\rt
+
+\ref Pear_Patimat.008
+\tx hayłos      yiƛʼiš        zoqʼes     qʼimurmoƛʼos      šljapa qʼidir
+\mb hayło -s    y-   iƛʼi -š  zoqʼe -s   qʼimur -mo  -ƛʼos šljapa qʼidir
+\ge he.OBL -GEN1 IV-  fall   -PST be     -PST head    -OBL -SRABL  hat(r)  down
+\ps pn     -aff  aff- v      -aff v      -aff n       -aff -aff    n       adv
+
+\rf гьайлъос йикьиш зокъес къимурмокьос шляпа къидир
+\rt
+
+\ref Pear_Patimat.009
+\tx hezoqʼimur utirno          hagze     xexzay              yaširan         yaširno        toƛiš   hayłoqor     hag
+\mb hezoqʼimur utir       -no  hagze     xex    -za     -y   y-   ašir -an   y-   ašir -no  toƛ -iš hayło -qor   hag
+\ge back        turn<CAUS> -CVB those.OBL child- -OBL.PL -ERG IV-  catch -FUT2 IV-  catch -CVB give -PST he.OBL -SRLAT that
+\ps adv         v          -aff pn        n      -aff    -aff aff- v     -aff  aff- v     -aff v    -aff pn     -aff   pn
+
+\rf гьезокъимурно утирно гьагзе хехзай яширан яширно толълъиш гьайлъохъор гьаг
+\rt
+
+\ref Pear_Patimat.010
+\tx hago uži iƛʼiš    kʼonkʼan      bižin
+\mb hago uži iƛʼi -š  kʼonkʼa -n    b-   iži -n
+\ge this boy  go     -PST bike      -and  III- take -CVB
+\ps pn   n    v      -aff n         -clit aff- v    -aff
+
+\rf гьаго ужи икьиш к1онк1ан бижин
+\rt
+
+\ref Pear_Patimat.011
+\tx hezoxa    xexbe    baqʼes             hayło   rekʼude
+\mb hezo -xa  xexbe    b-       aqʼe -s   hayło   rekʼu     -de
+\ge then -??  children I/II.PL- come  -PST this.OBL person.OBL -APUDESS2
+\ps adv  -aff n        aff-     v     -aff pn       n          -aff
+
+\rf гьезоха хехбе бакъес гьайлъо рек1уде
+\rt
+
+\ref Pear_Patimat.012
+\tx ažeyƛʼos   qʼidir ułiƛʼo      hes kamura  rašiš        hayłoz,    qʼidido    bakʼarzi ruho               goła   hag     karzinka
+\mb ažey -ƛʼos qʼidir ułi    -ƛʼo hes *kamura r-   aši -š  hayło -z   qʼidi -do  bakʼarzi r-   u        -ho  goła   hag     karzinka
+\ge tree  -SRABL  down    go.down -SIM   one ***     V-   find -PST he.OBL -DAT down   -DIR collect   V-   do, make -PRS be.PTCP this.IV basket(r)
+\ps n     -aff    adv     v       -aff   num ***     aff- v    -aff pn     -aff adv    -aff v         aff- v        -aff v       pn      n
+
+\rf ажейкьос къидир улъикьо гьес камура рашиш гьайлъоз къидидо бак1арзи ругьо голъа гьаг карзинка
+\rt
+
+\ref Pear_Patimat.013
+\tx ezen      ƛexwes     hago, xexbe    buqʼoƛʼo         baqʼeyƛʼo           xexzayno                  roži riɣišme
+\mb eze  -n   ƛexwe -s   hago  xexbe    b-       uqʼoƛʼo b-       aqʼe -yƛʼo xex    -za     -y   -no   roži r-   iɣ       -iš -me
+\ge look -CVB remain -PST he    children I/II.PL- direct     I/II.PL- come  -SIM    child- -OBL.PL -ERG -and  word  V-   bring.out -PST -NEG
+\ps v    -aff v      -aff pn    n        aff-     adj        aff-     v     -aff    n      -aff    -aff -clit n     aff- v         -aff -aff
+
+\rf эзен лълъохес гьаго, хехбе букокьо бакъейкьо хехзайно рожи ригъишме
+\rt
+
+\ref Pear_Patimat.014
+\tx hayło   užiygon       hazeqor         hesso geni toƛiš   kwa
+\mb hayło   uži -y   -gon haze     -qor   hesso geni toƛ -iš kwa
+\ge this.OBL boy  -ERG -??  they.OBL -SRLAT some  pear give -PST in.the.hands
+\ps pn       n    -aff -aff pn       -aff   pn?   n    v    -aff adv
+
+\rf гьайлъо ужи гон гьазехъор гени толълъиш квар
+\rt
+
+\ref Pear_Patimat.015
+\tx tʼokʼaw hagben      biƛʼiš            buqʼoƛʼo         hago rekʼwen      ezen      ƛexwes     ažeyƛʼos   qʼidirno     ułin
+\mb tʼokʼaw hagbe -n    b-       iƛʼi -š  b-       uqʼoƛʼo hago rekʼwe -n    eze  -n   ƛexwe -s   ažey -ƛʼos qʼidir -no   ułi    -n
+\ge more      they  -and  I/II.PL- go     -PST I/II.PL- direct     this person  -and  look -CVB remain -PST tree  -SRABL  down    -and  go.down -CVB
+\ps adj       pn    -clit aff-     v      -aff aff-     adj        pn   n       -clit v    -aff v      -aff n     -aff    adv     -clit v       -aff
+
+\rf т1укав гьагбен бикьиш букъокьо гьаго рек1вен эзен лълъохвес ажейкьос къидирно улъин
+\rt
+
+\id Pear.Patja
+\nt Закаряева Патимат Идрисова (27 Jahre)
+
+\dt aufgenommen 15/Sept/2007
+\dt transkribiert 16/Sept/2007
+
+\ref Pear_Patja.001
+\tx zoqʼes     qaħłiqos      zaman
+\mb zoqʼe -s   qaħłi -qos    zaman
+\ge be     -PST dawn    -SRABL2 time
+\ps v      -aff n       -aff    n
+
+\rf зокъес хъах1лъихъос заман
+
+\ref Pear_Patja.002
+\tx gulučiyay        rixxo               zoqʼes     akbar
+\mb guluči -ya  -y   r-   iɣ       -o   zoqʼe -s   akbar
+\ge rooster -OBL -ERG V-   bring.out -PRS be     -PST Adhan
+\ps n       -aff -aff aff- v         -aff v      -aff n
+
+\rf гулучияй ригъхо зокъес акбар
+
+\ref Pear_Patja.003
+\tx hes rekʼwe ažeyƛʼorno       ixno        butʼo            zoqʼes     geni aldiyu fartukno     gexen      hayłu   fartukmar
+\mb hes rekʼwe ažey -ƛʼor -no   ix     -no  b-   utʼ    -o   zoqʼe -s   geni aldiyu *fartuk -no  gexe  -n   hayłu   *fartuk -mar
+\ge one person  tree  -SRLAT  -and  get.up -CVB III- collect -PRS be     -PST pear white  ***     -and dress -CVB this.OBL ***     -INLAT
+\ps num n       n     -aff    -clit v      -aff aff- v       -aff v      -aff n    adj    ***     -aff v     -aff pn       ***     -aff
+
+\rf гьес рек1ве ажейкьорно ихно бут1о зокъес гени алдию фартукно гехен гьайлъу фартукмар
+
+\ref Pear_Patja.004
+\tx ričʼno        fartukno     qʼidirno     ułiš,      karzinado      hawno      buxiriš
+\mb r-   ičʼ -no  *fartuk -no  qʼidir -no   ułi    -š  karzina   -do  haw  -no   b-   uxir     -iš
+\ge V-   fill  -CVB ***     -and down    -and  go.down -PST basket(r) -DIR this -and  III- pour.out -PST
+\ps aff- v     -aff ***     -aff adv     -clit v       -aff n         -aff pn   -clit aff- v        -aff
+
+\rf рич1но фартукно къидирно улъиш карзинадо гьавно бухириш 
+
+\ref Pear_Patja.005
+\tx riɣno               mocʼoqos          karzinkan,      bacʼadno     bus                hayłoy haw  geni
+\mb r-   iɣ        -no  mocʼ -o   -qos    karzinka  -n    bacʼad -no   b-   u        -s   hayłoy haw  geni
+\ge V-   take(away) -CVB neck  -OBL -SRABL2 basket(r) -and  clean   -and  III- do, make -PST he.ERG  this pear
+\ps aff- v          -aff n     -aff -aff    n         -clit adv     -clit aff- v        -aff pn      pn   n
+
+\rf ригъно моц1охъос карсинкан бац1ад бус гьайлъой гьав гени
+
+\ref Pear_Patja.006
+\tx hawno      cadaq    geni buxirno            sangon    ixiš       hago ažeyƛʼodo
+\mb haw  -no   cadaq    geni b-   uxir     -no  san  -gon ix     -iš hago ažey -ƛʼodo
+\ge this -and  together pear III- pour.out -CVB once -??  get.up -PST he   tree  -SRDIR
+\ps pn   -clit adv      n    aff- v        -aff adv  -aff v      -aff pn   n     -aff
+
+\rf гьавно цадахъ гени бухирно сан гон (once more) ихиш гьаго ажейкьодо
+
+\ref Pear_Patja.007
+\tx hago ažeyƛʼodo       ixnos       purełbito     cekʼen      bižin         iƛʼiš    hes rekʼwe
+\mb hago aže -y   -ƛʼodo ix     -nos pureł -bito   cekʼe -n    b-   iži -n   iƛʼi -š  hes rekʼwe
+\ge he   tree -OBL -SRDIR   get.up -SEQ near   -TRANSL kid    -and  III- take -CVB go     -PST one person
+\ps pn   n    -aff -aff     v      -aff adv    -clit   n      -clit aff- v    -aff v      -aff num n
+
+\rf гьаго ажейкьодо ихнос пурелъбито цек1ен бижин икьиш гьес рек1ве
+
+\ref Pear_Patja.008
+\tx hezo hibay ƛʼere hago butʼo            ičiš    goła,  welosipedƛʼo    oƛexiš    uži
+\mb hezo hibay ƛʼere hago b-   utʼ    -o   iči -š  goła   welosiped  -ƛʼo oƛex  -iš uži
+\ge then there upwards he   III- collect -PRS be   -PST be.PTCP bicycle(r) -SRESS appear -PST boy
+\ps adv  adv   adv     pn   aff- v       -aff v    -aff v       n          -aff   v      -aff n
+
+\rf гьезо гьибай кьере гьаго бут1о ичиш голъа, велосипедкьо ол1ехиш ужи
+
+\ref Pear_Patja.009
+\tx hayłoz     beqʼimez,           hago tohodo     utin      butʼo            geni ičiš    goła,  hayłoy karzinan        ruxiš,        hayłu   welosipedƛʼon         goriš,  iƛʼiš
+\mb hayło -z   b-   eqʼi -mez      hago toho  -do  uti  -n   b-   utʼ    -o   geni iči -š  goła   hayłoy karzina   -n    r-   ux   -iš hayłu   welosiped  -ƛʼo -n    gor -iš iƛʼi -š
+\ge he.OBL -DAT III- know  -PURP.NEG he   there -DIR turn -CVB III- collect -PRS pear stop -PST be.PTCP he.ERG  basket(r) -and  V-   take -PST this.OBL bicycle(r) -SRESS -and  put -PST go     -PST
+\ps pn     -aff aff- v     -aff      pn   adv   -aff v    -aff aff- v       -aff n    v    -aff v       pn      n         -clit aff- v    -aff pn       n          -aff   -clit v   -aff v      -aff
+
+\rf гьайлъоз бекъирмез гьаго тогьодо утин бут1о гени ичиш голъа   гьайлъой карзинан рухиш, гьайлъу велосипедкьон гориш, икьиш
+
+\ref Pear_Patja.010
+\tx huni        iƛʼiyo    goła   hayłoz     keziyiqiš      ked
+\mb hun  -i     iƛʼi -yo  goła   hayło -z   keziyiq    -iš ked
+\ge way- -INESS go     -PRS be.PTCP he.OBL -DAT meet.II/IV -PST girl
+\ps n    -aff   v      -aff v       pn     -aff v          -aff n
+
+\rf гьуни икьийо голъа гьайлъоз кезийихъиш кед
+
+\ref Pear_Patja.011
+\tx hayłuy gozon yiɣiš              hayłoqos      qʼimuƛʼos   ƛʼoqʼon
+\mb hayłuy gozon y-   iɣ        -iš hayło -qos    qʼimu -ƛʼos ƛʼoqʼon
+\ge she.ERG ??    IV-  take(away) -PST he.OBL -SRABL2 head   -SRABL  hat
+\ps pn      part? aff- v          -aff pn     -aff    n      -aff    n
+
+\rf гьайлъуй гозон йигъиш гьайлъохъос къимукьос кьокъон
+
+\ref Pear_Patja.012
+\tx haw  biɣnos,             hayłozgon       xemun       aldoɣobito      yikemez           iƛʼiš    qʼidir
+\mb haw  b-   iɣ        -nos hayło -z   -gon xemu  -n    aldoɣo  -bito   y-   ike -mez     iƛʼi -š  qʼidir
+\ge this III- take(away) -SEQ he.OBL -DAT -??  stone -and  in.front -TRANSL IV-  see -CVB.NEG fall   -PST down
+\ps pn   aff- v          -aff pn     -aff -aff n     -clit adv      -clit   aff- v   -aff     v      -aff adv
+
+\rf гьав бигънос гьайлъоз гон хемун алдогъобито йикемез икьиш къидир
+
+\ref Pear_Patja.013
+\tx qʼidir iƛʼinos   baqʼen             łono xexben
+\mb qʼidir iƛʼi -nos b-       aqʼe -n   łono xexbe    -n
+\ge down    go     -SEQ I/II.PL- come  -CVB three children -and
+\ps adv     v      -aff aff-     v     -aff num   n        -clit
+
+\rf къидир икьинос бакъес лъоно хехбе
+
+\ref Pear_Patja.014
+\tx haze      xexzay              bakʼarzi bus                hayłos      qʼidiš     geni bacʼad šeƛʼun      rus                kekiriš
+\mb haze      xex    -za     -y   bakʼarzi b-   u        -s   hayło -s    qʼidi -š   geni bacʼad šeƛʼu -n    r-   u        -s   kekir -iš
+\ge these.OBL child- -OBL.PL -ERG collect   III- do, make -PST he.OBL -GEN1 down   -GEN1 pear clean   clothes  -and  V-   do, make -PST send  -PST
+\ps pn        n      -aff    -aff v         aff- v        -aff pn     -aff  adv    -aff  n    adv     n        -clit aff- v        -aff v     -aff
+
+\rf гьазе хехзай бак1арзи бус гьайлъос къидиш гени бац1ад  шекьун рус кекириш
+
+\ref Pear_Patja.015
+\tx hezogon   iƛʼiyo    goła   hayło   užiž    sedez             yašiš        šapka
+\mb hezo -gon iƛʼi -yo  goła   hayło   uži -ž  sed     -e   -z   y-   aš  -iš šapka
+\ge then -??  go     -PRS be.PTCP this.OBL boy  -DAT one.OBL -OBL -DAT IV-  find -PST hat
+\ps adv  -aff v      -aff v       pn       n    -aff num     -aff -aff aff- v    -aff n
+
+\rf гьезогон икьийо голъа гьайлъо ужиж седез яшиш шапка
+
+\ref Pear_Patja.016
+\tx hag  yašinos       hezo hałoy      šarukʼan      yikʼno        hezorno     utiriš,        toƛiš   hayłos      šapka
+\mb hag  y-   aši -nos hezo hało  -y   šarukʼa -n    y-   ikʼ -no  hezor -no   utir       -iš toƛ -iš hayło -s    šapka
+\ge this IV-  find -SEQ then he.OBL -ERG whistle   -and  IV-  beat -CVB back  -and  turn<CAUS> -PST give -PST he.OBL -GEN1 hat
+\ps pn   aff- v    -aff adv  pn     -aff n         -clit aff- v    -aff adv   -clit v          -aff v    -aff pn     -aff  n
+
+\rf гьаг яшинос гьезо гьалъой шарук1ан йик1но гьезорно утириш, тол1иш гьайлъос шапка
+
+\ref Pear_Patja.017
+\tx hezo hayłoy hazez         žiw-žiw   hessotʼa   geni toƛiš
+\mb hezo hayłoy haze     -z   žiw-žiw   hesso -tʼa geni toƛ -iš
+\ge then he.ERG  they.OBL -DAT every, each some  -DIST pear give -PST
+\ps adv  pn      pn       -aff pn          pn    -aff  n    v    -aff
+
+\rf гьезо гьайлъой гьазез жив-жилиж гьессот1а гени тол1иш
+
+\ref Pear_Patja.018
+\tx hibayru buxno          genin      hagbe biƛʼiyo            goła   baqʼes             hayłu   ažeyhor
+\mb hibayru b-   ux   -no  geni -n    hagbe b-       iƛʼi -yo  goła   b-       aqʼe -s   hayłu   aže -y   -hor
+\ge so      III- take -CVB pear -and  they  I/II.PL- go     -PRS be.PTCP I/II.PL- come  -PST this.OBL tree -OBL -APUDLAT
+\ps adv     aff- v    -aff n    -clit pn    aff-     v      -aff v       aff-     v     -aff pn       n    -aff -aff
+
+\rf гьибайру бухно генин гьагбе бикьийо голъа бакъес гьайлъу ажейгьор
+
+\ref Pear_Patja.019
+\tx hay   geni butʼeƛʼosƛani                 rekʼwe qʼidir ułinos      hayłoz     rikes
+\mb hay   geni b-   utʼe   -ƛʼos   -ƛa  -ni  rekʼwe qʼidir ułi    -nos hayło -z   r-   ike -s
+\ge there pear III- collect -PTCP.PRS -??   -??  person  down    go.down -SEQ he.OBL -DAT V-   see -PST
+\ps pn    n    aff- v       -aff      -clit -aff n       adv     v       -aff pn     -aff aff- v   -aff
+
+\rf гьай гени бут1екьосл1ани рек1ве къидир улъинос гьайлъоз рикес 
+
+\ref Pear_Patja.020
+\tx hayš       karzina   genimos         ričʼo         goła   rikʼekʼišłi
+\mb hay   -š   karzina   geni -mo  -s    r-   ičʼ -o   goła   r-   ikʼekʼ -iš -łi
+\ge there -GEN1 basket(r) pear -OBL -GEN1 V-   fill  -PRS be.PTCP V-   steal    -PST -MSD
+\ps pn    -aff  n         n    -aff -aff  aff- v     -aff v       aff- v        -aff -clit
+
+\rf гьайш карзина генимос ричо голъа рик1ек1ишлъи
+
+\ref Pear_Patja.021
+\tx hezo had   xexbe    purełbito     biƛʼinos           hazeqor          ezen      hagon      ƛexwes
+\mb hezo had   xexbe    pureł -bito   b-       iƛʼi -nos haze     -qor    eze  -n   hago -n    ƛexwe -s
+\ge then these children near   -TRANSL I/II.PL- go     -SEQ they.OBL -SRLAT2 look -CVB he   -and  remain -PST
+\ps adv  pn    n        adv    -clit   aff-     v      -aff pn       -aff    v    -aff pn   -clit v      -aff
+
+\rf гьезо гьад хехбе пурелъбито бикьинос гьазехъор эзен гьагон л1ехвес
+
+\id Pear.Xava
+\dt aufgenommen 12/Sept/2006
+\dt transkribiert 12/Sept/2006
+\nt Abarkarova Xava Magomedovna, 16 Jahre
+\nt Tape4, GinuxIII
+
+\ref Pear_Xava.001
+\tx hes zoqʼen     rekʼwe
+\mb hes zoqʼe -n   rekʼwe
+\ge one be     -PFT person
+\ps num v      -aff n
+
+\ft
+\ref Pear_Xava.002
+\tx hago zoqʼen     geni butʼoxa
+\mb hago zoqʼe -n   geni b-   utʼ    -o   -xa
+\ge he   be     -PFT pear III- collect -PRS -??
+\ps pn   v      -aff n    aff- v       -aff -aff
+
+\rf
+
+\ref Pear_Xava.003
+\tx hoboži hałoqor      zoqʼen     qʼono wedra     ričʼiš
+\mb hoboži hało  -qor   zoqʼe -n   qʼono wedra     r-   ičʼ -iš
+\ge now     he.OBL -SRLAT be     -PFT two    bucket(r) V-   fill  -PST
+\ps adv     pn     -aff   v      -aff num    n         aff- v     -aff
+
+\rf
+
+\ref Pear_Xava.004
+\tx hoboy hesgon   wedra     ruxno          iƛʼiyo    zoqʼen     hado butʼayaz          ažeyƛʼor
+\mb hoboy hes -gon wedra     r-   ux   -no  iƛʼi -yo  zoqʼe -n   hado b-   utʼ    -ayaz ažey -ƛʼor
+\ge then  one -??  bucket(r) V-   take -CVB go     -PRS be     -PFT he   III- collect -PURP tree  -SRLAT
+\ps adv   num -aff n         aff- v    -aff v      -aff v      -aff pn   aff- v       -aff  n     -aff
+
+\rf
+
+\ref Pear_Xava.005
+\tx hoboži aqʼo     zoqʼen     cekʼen      buxno          hes rekʼwe tohobito
+\mb hoboži aqʼ -o   zoqʼe -n   cekʼe -n    b-   ux   -no  hes rekʼwe tohobito
+\ge now     come -PRS be     -PFT kid    -and  III- take -CVB one person  on.the.other.side
+\ps adv     v    -aff v      -aff n      -clit aff- v    -aff num n       adv
+
+\rf
+
+\ref Pear_Xava.006
+\tx hoboy hago oxen       hoboygon   iƛʼin     hado butʼayaz          geni
+\mb hoboy hago oxe   -n   hoboy -gon iƛʼi -n   hado b-   utʼ    -ayaz geni
+\ge then  he   leave -CVB then  -??  go     -PFT he   III- collect -PURP pear
+\ps adv   pn   v     -aff adv   -aff v      -aff pn   aff- v       -aff  n
+
+\rf
+
+\ref Pear_Xava.007
+\tx hezodoygon   aqʼo     zoqʼen     kʼonkʼaƛʼo   hesgon   uži
+\mb hezodoy -gon aqʼ -o   zoqʼe -n   kʼonkʼa -ƛʼo hes -gon uži
+\ge then    -??  come -PRS be     -PFT bike      -SRESS one -??  boy
+\ps adv     -aff v    -aff v      -aff n         -aff   num -aff n
+
+\rf гьезодой акъо зокъен к1онк1акьо гьесгон ужи.
+
+\ref Pear_Xava.008
+\tx hoboži aqʼanon         aqʼen,    koroče, hado qʼidin      ičin      hestow-hes genin      buxno,         hezodoy wedran          buxno,         iƛʼin     hezoqʼimur
+\mb hoboži aqʼ -an   -on   aqʼe -n   *koroče hado qʼidi -n    iči  -n   hestow-hes geni -n    b-   ux   -no  hezodoy wedra     -n    b-   ux   -no  iƛʼi -n   hezoqʼimur
+\ge now     come -FUT2 -CONC come  -PFT ***      he   down   -and  stand -CVB one        pear -and  III- take -CVB then    bucket(r) -and  III- take -CVB go     -PFT back
+\ps adv     v    -aff  -aff  v     -aff ***      pn   adv    -clit v     -aff adj?       n    -clit aff- v    -aff adv     n         -clit aff- v    -aff v      -aff adv
+
+\rf
+\ref Pear_Xava.009
+\tx hoboy iƛʼiyo    ičin,    kedi noxo      zoqʼen     kʼonkʼaƛʼo,  hału    hałoqos      šapka yiɣno               izadƛen,  hoboy hago qʼidir iƛʼiš
+\mb hoboy iƛʼi -yo  iči -n   ked  nox  -o   zoqʼe -n   kʼonkʼa -ƛʼo hału    hało  -qos   šapka y-   iɣ        -no  izad -ƛen hoboy hago qʼidir iƛʼi -š
+\ge then  go     -PRS be   -CVB girl come -PRS be     -PFT bike      -SRESS this.OBL he.OBL -SRABL hat    IV-  take(away) -CVB this -QUOT then  he   down    fall   -PST
+\ps adv   v      -aff v    -aff n    v    -aff v      -aff n         -aff   pn       pn     -aff   n      aff- v          -aff pn   -clit adv   pn   adv     v      -aff
+
+\rf
+
+\ref Pear_Xava.010
+\tx gamačʼqo      cʼaqʼiš
+\mb gamačʼ -qo    cʼaqʼi   -š
+\ge stone    -SRESS impinge.on -PST
+\ps n        -aff   v          -aff
+
+\rf
+
+\ref Pear_Xava.011
+\tx hezo baqʼes             łonon      užibe
+\mb hezo b-       aqʼe -s   łono -n    uži -be
+\ge then I/II.PL- come  -PST three -and  boy   -PL
+\ps adv  aff-     v     -aff num   -clit n     -aff
+
+\rf
+
+\ref Pear_Xava.012
+\tx hoboži łonon      užiben         baqʼen             hago qʼidišno         ixerno     sadaq genin      žon        butʼen,          wedran          toƛno,   sadaq žon        toƛno,   bičin,             hezodoy hagbe
+\mb hoboži łono -n    uži -be  -n    b-       aqʼe -n   hago qʼidi -š   -no   ixer  -no  sadaq geni -n    žo   -n    b-   utʼe   -n   wedra     -n    toƛ -no  sadaq žo   -n    toƛ -no  b-       iči  -n   hezodoy hagbe
+\ge now     three -and  boy  -PL  -and  I/II.PL- come  -CVB he   down   -GEN1 -and  raise -CVB all   pear -and  thing -and  III- collect -CVB bucket(r) -and  give -CVB all   thing -and  give -CVB I/II.PL- stand -CVB then    they
+\ps adv     num   -clit n    -aff -clit aff-     v     -aff pn   adv    -aff  -clit v     -aff adv   n    -clit n     -clit aff- v       -aff n         -clit v    -aff adv   n     -clit v    -aff aff-     v     -aff adv     pn
+
+\tx boxo                zoqʼen
+\mb b-       ox    -o   zoqʼe -n
+\ge I/II.PL- leave -PRS be     -PFT
+\ps aff-     v     -aff v      -aff
+
+\rf
+
+\ref Pear_Xava.013
+\tx boxeyƛʼo             qʼidi hazoqo          yašin         šapkan
+\mb b-       oxe   -yƛʼo qʼidi hazo     -qo    y-   aši -n   šapka -n
+\ge I/II.PL- leave -SIM    down   they.OBL -SRESS IV-  find -PFT hat    -and
+\ps aff-     v     -aff    adv    pn       -aff   aff- v    -aff n      -clit
+
+\rf
+
+\ref Pear_Xava.014
+\tx šapka hezoqʼimur šaƛun       qaƛen     toƛiš
+\mb šapka hezoqʼimur šaƛu  -n    qaƛe -n   toƛ -iš
+\ge hat    back        whistle -and  call  -CVB give -PST
+\ps n      adv         n       -clit v     -aff v    -aff
+
+\rf
+
+\ref Pear_Xava.015
+\tx hoboži .    .    .    hoboži hado oxen
+\mb hoboži .{-} .{-} .{-} hoboži hado oxe   -n
+\ge now     1sec 1sec 1sec now     he   leave -PFT
+\ps adv     -    -    -    adv     pn   v     -aff
+
+\rf
+
+\nt 11 sec Pause, Xava ueberlegt, Elmira hilft
+
+\ref Pear_Xava.016
+\tx hay   i        hagbe hezor hezoqʼimur biƛʼiyo            hago rekʼe ezen      ičiyo
+\mb hay   *   -i   hagbe hezor hezoqʼimur b-       iƛʼi -yo  hago rekʼe eze  -n   iči  -yo
+\ge there *** -OBL they  back  back        I/II.PL- go     -PRS this person look -CVB stand -PRS
+\ps pn    *** -aff pn    adv   adv         aff-     v      -aff pn   n      v    -aff v     -aff
+
+\rf
+
+\id Pear.Rayginat
+\nt Джахпарова Райганат Хасбулаевна (40 Jahre)
+\nt GinuxIV Tape5
+\nt dislocation, many split GEN phrases
+\dt aufgenommen 22/Sept/2006
+\dt transkribiert 22/Sept/2006
+
+\ref Pear_Rayginat.001
+\tx ičiyo    hes rekʼwe
+\mb iči -yo  hes rekʼwe
+\ge be   -PRS one person
+\ps v    -aff num n
+
+\rf
+
+\ref Pear_Rayginat.002
+\tx hasaqo         ixno        iƛʼiyo    hago iši  butʼayaz          zones ogorodmas
+\mb hasaqo         ix     -no  iƛʼi -yo  hago iši  b-   utʼ    -ayaz zones ogorod    -mas
+\ge in.the.morning get.up -CVB go     -PRS he   apple III- collect -PURP his   garden(r) -INABL
+\ps adv            v      -aff v      -aff pn   n     aff- v       -aff  pn    n         -aff
+
+\rf
+
+\ref Pear_Rayginat.003
+\tx hoboži butʼo            hayłoy bičʼo         hayłoy kwid   išiš
+\mb hoboži b-   utʼ    -o   hayłoy b-   ičʼ -o   hayłoy kwid   iši  -š
+\ge now     III- collect -PRS he.ERG  III- fill  -PRS he.ERG  basket apple -GEN1
+\ps adv     aff- v       -aff pn      aff- v     -aff pn      n      n     -aff
+
+\rf
+
+\ref Pear_Rayginat.004
+\tx hawno      bičʼno        hes bičʼo         hayłoy, hesƛa gozon bičʼa         ƛʼere hago ixoƛʼo       aqʼo     hesgon   rekʼwe hayłode
+\mb haw  -no   b-   ičʼ -no  hes b-   ičʼ -o   hayłoy  hesƛa gozon b-   ičʼ -a   ƛʼere hago ix     -oƛʼo aqʼ -o   hes -gon rekʼwe hayło -de
+\ge this -and  III- fill  -CVB one III- fill  -PRS he.ERG   next   ??    III- fill  -INF upwards he   get.up -SIM    come -PRS one -??  person  he.OBL -APUDESS2
+\ps pn   -clit aff- v     -aff num aff- v     -aff pn       adj    part? aff- v     -aff adv     pn   v      -aff    v    -aff num -aff n       pn     -aff
+
+\rf
+
+\ref Pear_Rayginat.005
+\tx iči hago hayłos      maduhal,  canno      baqʼeno
+\mb iči hago hayło -s    maduhal   can  -no   b-   aqʼe -no
+\ge be   he   he.OBL -GEN1 neighbour goat -and  III- come  -CVB
+\ps v    pn   pn     -aff  n         n    -clit aff- v     -aff
+
+\rf
+
+\ref Pear_Rayginat.006
+\tx hawno      bižin         hago iƛʼiyo
+\mb haw  -no   b-   iži -n   hago iƛʼi -yo
+\ge this -and  III- take -CVB he   go     -PRS
+\ps pn   -clit aff- v    -aff pn   v      -aff
+
+\rf гьавно бижин гьаго икьиё
+
+\ref Pear_Rayginat.007
+\tx hoboži hago iƛʼiyo,   hado ƛʼere ažeyƛʼodo      ixnos       qʼuya iši  butʼayaz
+\mb hoboži hago iƛʼi -yo  hado ƛʼere ažey -ƛʼo -do  ix     -nos qʼuya iši  b-   utʼ    -ayaz
+\ge now     he   go     -PRS he   upwards tree  -SRESS -DIR get.up -SEQ other  apple III- collect -PURP
+\ps adv     pn   v      -aff pn   adv     n     -aff   -aff v      -aff adj    n     aff- v       -aff
+
+\rf гьобожи гьаго икьиё гьадо кьере ажейкьодо ихнос къуя г1иши бут1аяз
+
+\ref Pear_Rayginat.008
+\tx hayłoder        aqʼo     egwey xexbe, hayłu   kʼonkʼaƛʼon        ƛʼerekno
+\mb hayło -der      aqʼ -o   egwey xexbe  hayłu   kʼonkʼa -ƛʼo -n    ƛʼerek -no
+\ge he.OBL -APUDLAT2 come -PRS small child  this.OBL bike      -SRESS -and  sit.on   -CVB
+\ps pn     -aff      v    -aff adj   n      pn       n         -aff   -clit v        -aff
+
+\rf гьайлъодер акъо егвей хехбе
+
+\ref Pear_Rayginat.009
+\tx kʼonkʼaƛʼon        ƛʼerekno    aqʼan     aqʼen     hayło   užiy     ƛʼeredon         ezen,     ɣeɣe bičin         hayłos      kwidno       kʼonkʼaƛʼon        gorno    bikʼekʼno        hawno      oxo
+\mb kʼonkʼa -ƛʼo -n    ƛʼerek -no  aqʼ -an   aqʼe -n   hayło   uži -y   ƛʼere -do  -n    eze  -n   ɣeɣe b-   iči -n   hayło -s    kwid   -no   kʼonkʼa -ƛʼo -n    gor -no  b-   ikʼekʼ -no  haw  -no   ox    -o
+\ge bike      -SRESS -and  sit.on   -CVB come -FUT2 come  -CVB this.OBL boy  -ERG upwards -DIR -and  look -CVB slowly III- be   -CVB he.OBL -GEN1 basket -and  bike      -SRESS -and  put -CVB III- steal    -CVB this -and  leave -PRS
+\ps n         -aff   -clit v        -aff v    -aff  v     -aff pn       n    -aff adv     -aff -clit v    -aff adv    aff- v    -aff pn     -aff  n      -clit n         -aff   -clit v   -aff aff- v        -aff pn   -clit v     -aff
+
+\rf к1онк1акьон кьерекно акъен гьайлъо ужи кьередон эзен, гъегъебичин гьайлъос квидно к1онк1акьон горно бик1ек1но гьавно охо
+
+\ref Pear_Rayginat.010
+\tx hoboži oxeya       hayłode         dandir  yaqʼo         hes gozon ked, ƛʼerekno    kʼonkʼaƛʼon
+\mb hoboži oxe   -ya   hayło -de       dandir  y-   aqʼ -o   hes gozon ked  ƛʼerek -no  kʼonkʼa -ƛʼo -n
+\ge now     leave -PTCP he.OBL -APUDESS2 towards II-  come -PRS one ??    girl sit.on   -CVB bike      -SRESS -and
+\ps adv     v     -aff  pn     -aff      adv     aff- v    -aff num part? n    v        -aff n         -aff   -clit
+
+\rf гьобожи охея гьайлъоде дандер якъо гьесгозон кед, кьерекно к1онк1акьон
+
+\ref Pear_Rayginat.011
+\tx cʼoxo     hagbe sedi-sedqo        yiƛʼiyo        hayłos      qʼimuƛʼos   šapka qʼidir
+\mb cʼox -o   hagbe sedi-sed   -qo    y-   iƛʼi -yo  hayło -s    qʼimu -ƛʼos šapka qʼidir
+\ge enter -PRS they  each.other -SRESS IV-  fall   -PRS he.OBL -GEN1 head   -SRABL  hat    down
+\ps v     -aff pn    adv        -aff   aff- v      -aff pn     -aff  n      -aff    n      adv
+
+\rf ц1охо гьадбе седи седхъо икьиё гьайлъозо къимукьос шапка къидир
+
+\ref Pear_Rayginat.012
+\tx cʼoxno    sedi-sedqon             hałoz      tohodo     yiƛʼin         xemuqon            cʼoxno    bičʼiło         kwid   qʼidir išiš
+\mb cʼox -no  sedi-sed   -qo    -n    hało  -z   toho  -do  y-   iƛʼi -n   xemu  -qo    -n    cʼox -no  b-   ičʼił -o   kwid   qʼidir iši  -š
+\ge fall  -CVB each.other -SRESS -and  he.OBL -DAT there -DIR IV-  fall   -CVB stone -SRESS -and  enter -CVB III- pour.out -PRS basket down    apple -GEN1
+\ps v     -aff adv        -aff   -clit pn     -aff adv   -aff aff- v      -aff n     -aff   -clit v     -aff aff- v        -aff n      adv     n     -aff
+
+\rf ц1охно седи седхъон гьалъоз тогьодо икьин хемухъон ц1охно буч1илъо квид къидир г1ишиш
+
+\ref Pear_Rayginat.013
+\tx hawno      bičʼiłno        hoboži baqʼo             hayłoder        xexbe,   ked  yoxo
+\mb haw  -no   b-   ičʼił -no  hoboži b-       aqʼ -o   hayło -der      xexbe    ked  y-   ox    -o
+\ge this -and  III- pour.out -CVB now     I/II.PL- come -PRS he.OBL -APUDLAT2 children girl II-  leave -PRS
+\ps pn   -clit aff- v        -aff adv     aff-     v    -aff pn     -aff      n        n    aff- v     -aff
+
+\rf гьавно буч1илъно гьобожи бакъо гьайлъодер хехбе, кед ёхо
+
+\ref Pear_Rayginat.014
+\tx xexzay                 kumakno     bun                bičʼo         obratno  hezoqʼimur hayłos      sumka išiš
+\mb xex       -za     -y   kumak -no   b-   u        -n   b-   ičʼ -o   *obratno hezoqʼimur hayło -s    sumka iši  -š
+\ge children- -OBL.PL -ERG help  -and  III- do, make -CVB III- fill  -PRS ***      back        he.OBL -GEN1 bag   apple -GEN1
+\ps n         -aff    -aff n     -clit aff- v        -aff aff- v     -aff ***      adv         pn     -aff  n     n     -aff
+
+\rf хехзай кумакно бун бичо обратно гьезокъимур гьайлъос сумка г1ишиш
+\nt two Genitives combined
+
+\ref Pear_Rayginat.015
+\tx hawno      bičʼno        hoboži xexzay              hayłos,     hawno      bičʼno        oxo        hago, hago uži šuqariyaho,       qʼidi cʼoxno    kʼoncʼun
+\mb haw  -no   b-   ičʼ -no  hoboži xex    -za     -y   hayło -s    haw  -no   b-   ičʼ -no  ox    -o   hago  hago uži šuqariya     -ho  qʼidi cʼox -no  kʼoncʼu -n
+\ge this -and  III- fill  -CVB now     child- -OBL.PL -ERG he.OBL -GEN1 this -and  III- fill  -CVB leave -PRS he    this boy  limp.a.little -PRS down   fall  -CVB leg       -and
+\ps pn   -clit aff- v     -aff adv     n      -aff    -aff pn     -aff  pn   -clit aff- v     -aff v     -aff pn    pn   n    v             -aff adv    v     -aff n         -clit
+
+\rf гьавно бич1но гьобожи хехзай гьайлъос, гьавно бич1но охо гьаго, гьаго ужи шухъарягьо, къиди ц1охно к1онц1ун
+
+\ref Pear_Rayginat.016
+\tx šuqariyaho        iči hago iƛʼiyo    ičin     hezoqʼimur šaƛun       šaƛen      ezerho          xexzay,             hayłos      qʼidir yiƛʼiš        yičiyo        šljapa
+\mb šuqariya     -ho  iči hago iƛʼi -yo  iči -n   hezoqʼimur šaƛu  -n    šaƛe  -n   ezer       -ho  xex    -za     -y   hayło -s    qʼidir y-   iƛʼi -š  y-   iči -yo  šljapa
+\ge limp.a.little -PRS be   he   go     -PRS be   -CVB back        whistle -and  whistle -CVB look<CAUS> -PRS child- -OBL.PL -ERG he.OBL -GEN1 down    IV-  fall   -PST IV-  be   -PRS hat(r)
+\ps v             -aff v    pn   v      -aff v    -aff adv         n       -clit v       -aff v          -aff n      -aff    -aff pn     -aff  adv     aff- v      -aff aff- v    -aff n
+
+\rf шухъаргьо ичи гьаго икьиё ичин гьезо къимур шалълъун шалълъен эзергьо хехзай, гьайлъос къидир йикьиш йичиё шляпа
+
+\ref Pear_Rayginat.017
+\tx šljapa hezoqʼimur toƛoƛʼo,  hayłoy haze     xexzaz              toƛo     qʼono iši, łono
+\mb šljapa hezoqʼimur toƛ -oƛʼo hayłoy haze     xex    -za     -z   toƛ -o   qʼono iši  łono
+\ge hat(r)  back        give -SIM    he.ERG  these.OBLchild- -OBL.PL -DAT give -PRS two    apple three
+\ps n       adv         v    -aff    pn      pn       n      -aff    -aff v    -aff num    n     num
+
+\rf шляпа гьезокъимур толълъокьо, гьайлъой гьазе хехзас толълъо къоно г1иши, лъоно
+\nt Ayshat berichtigt sie, deshalb fuegt sie łono ein
+
+\ref Pear_Rayginat.018
+\tx hoboži hazey         haw  biƛʼizi  buho,              žiw-žiwez           xexzay
+\mb hoboži haze     -y   haw  biƛʼizi  b-   u        -ho  žiw-žiw   -e   -z   xex    -za     -y
+\ge now     they.OBL -ERG this divide(aw) III- do, make -PRS every, each -OBL -DAT child- -OBL.PL -ERG
+\ps adv     pn       -aff pn   v          aff- v        -aff pn          -aff -aff n      -aff    -aff
+
+\rf гьобожи гьазей гьав биц1ц1и бугьо, жив-живез хехзай
+\rt biƛʼizi klingt eher nach биц1ц1и = разделили, aber im aw. WB steht es als biƛʼizi
+\nt right dislocation
+
+\ref Pear_Rayginat.019
+\tx hoboži hawno      bun                hadbe biƛʼiyo,           hago užin      iƛʼiyo
+\mb hoboži haw  -no   b-   u        -n   hadbe b-       iƛʼi -yo  hago uži -n    iƛʼi -yo
+\ge now     this -and  III- do, make -CVB these I/II.PL- go     -PRS this boy  -and  go     -PRS
+\ps adv     pn   -clit aff- v        -aff pn    aff-     v      -aff pn   n    -clit v      -aff
+
+\rf гьобожи гьавно бун гьадбе бикьиё, гьаго ужин икьиё
+
+\ref Pear_Rayginat.020
+\tx hadbe biƛʼiyo        baqʼo             hayło   rekʼude             ažeyƛʼor
+\mb hadbe b-   iƛʼi -yo  b-       aqʼ -o   hayło   rekʼu     -de       ažey -ƛʼor
+\ge they  III- go     -PRS I/II.PL- come -PRS this.OBL person.OBL -APUDESS2 tree  -SRLAT
+\ps pn    aff- v      -aff aff-     v    -aff pn       n          -aff      n     -aff
+
+\rf гьадбе бикьиё бакъо гьайлъо рек1уде ажейкьер
+
+\ref Pear_Rayginat.021
+\tx hago rekʼwe ažeyƛʼos   qʼidirno     ułin        ičiyo     ezeyƛʼo    bašiyo        gom    hayłoqo,     bašiyo        hayłoqo      qʼoqʼoru kwid   zones, hayłoqo      bašiyo        gom    hay   teł   haw
+\mb hago rekʼwe ažey -ƛʼos qʼidir -no   ułi    -n   iči  -yo  eze  -yƛʼo b-   aši -yo  gom    hayło -qo    b-   aši -yo  hayło -qo    qʼoqʼoru kwid   zones  hayło -qo    b-   aši -yo  gom    hay   teł   haw
+\ge this person  tree  -SRABL  down    -and  go.down -CVB stand -PRS look -SIM    III- find -PRS be.NEG he.OBL -SRESS III- find -PRS he.OBL -SRESS empty      basket his    he.OBL -SRESS III- find -PRS be.NEG there inside this
+\ps pn   n       n     -aff    adv     -clit v       -aff v     -aff v    -aff    aff- v    -aff v      pn     -aff   aff- v    -aff pn     -aff   adj        n      pn     pn     -aff   aff- v    -aff v      pn    adv    pn
+
+\rf гьаго рек1ве ажейкьос къидирно улъин ичиё эзейкьо башиёгом гьайлъохъо, башиё гьайлъохъо къокъору квид зонес, гьайлъохъо башиё гом гьайтелъ гьав
+
+\nt left dislocation
+
+\ref Pear_Rayginat.022
+\tx baqʼo             xexbe    roži riɣmez                 biƛʼiyo        tohodo
+\mb b-       aqʼ -o   xexbe    roži r-   iɣ        -mez    b-   iƛʼi -yo  toho  -do
+\ge I/II.PL- come -PRS children word  V-   take(away) -CVB.NEGIII- go     -PRS there -DIR
+\ps aff-     v    -aff n        n     aff- v          -aff    aff- v      -aff adv   -aff
+
+\rf бакъо хехбе рожи ригъмез бикьииё тогьодо
+\rt пришли ребята, они ничего не сказали и ушли
+
+\ref Pear_Rayginat.023
+\tx ičiyo     hado ezen,     se  ruwan               reqʼimez
+\mb iči  -yo  hado eze  -n   se  r-   uw       -an   r-   eqʼi -mez
+\ge stand -PRS he   look -CVB whatV-   do, make -FUT2 V-   know  -CVB.NEG
+\ps v     -aff pn   v    -aff pn  aff- v        -aff  aff- v     -aff
+
+\rf ичиё гьадо эзен, се руван рекъимез 
+
+\ref Pear_Rayginat.024
+\tx aqʼo     haybitogon         hesƛa rekʼwe
+\mb aqʼ -o   hay   -bito   -gon hesƛa rekʼwe
+\ge come -PRS there -TRANSL -??  other  person
+\ps v    -aff pn    -clit   -aff adj    n
+
+\rf акъо гьайбитогон гьеслълъа рек1ве 
+
+\ref Pear_Rayginat.025
+\tx tʼokʼaw ƛexwo      hado se   ruwan               reqʼimez           sotʼir ezen      hes qʼoqʼoru hes bičʼiš       išiš      kwidno       hadon
+\mb tʼokʼaw ƛexw  -o   hado se   r-   uw       -an   r-   eqʼi -mez     sotʼir eze  -n   hes qʼoqʼoru hes b-   ičʼ -iš iši  -š   kwid   -no   hado -n
+\ge more      remain -PRS he   what V-   do, make -FUT2 V-   know  -CVB.NEG turn    look -CVB one empty      one III- fill  -PST apple -GEN1 basket -and  he   -and
+\ps adj       v      -aff pn   pn   aff- v        -aff  aff- v     -aff     v       v    -aff num adj        num aff- v     -aff n     -aff  n      -clit pn   -clit
+
+\rf т1ок1ав лълъехво гьадо се руван рекъимез сот1ир эзен гьес къокъору гьес бич1иш г1ишиш квидно гьадон
+
+\id Pear.Magomed
+\dt aufgenommen 14/Sept/2006
+\dt transkribiert 15/Sept/2006
+\nt Юсупов Магомед Магомедович (1966)
+\nt Tape 5, Ginux 4
+
+\ref Pear_Magomed.001 
+\tx zonzo         ogorodmas        seda    rekʼuy         bakʼarzi buho               zoqʼen     zonzo         buho               zoqʼes     geni .    ažeyƛʼos
+\mb zon     -zo   ogorod    -mas   seda    rekʼu     -y   bakʼarzi b-   u        -ho  zoqʼe -n   zon     -zo   b-   u        -ho  zoqʼe -s   geni .{-} ažey -ƛʼos
+\ge his.OBL -GEN2 garden(r) -INABL one.OBL person.OBL -ERG collect   III- do, make -PRS be     -PFT his.OBL -GEN2 III- do, make -PRS be     -PST pear 1sec tree  -SRABL
+\ps pn      -aff  n         -aff   num     n          -aff v         aff- v        -aff v      -aff pn      -aff  aff- v        -aff v      -aff n    -    n     -aff
+
+\ft
+\ref Pear_Magomed.002
+\tx ƛʼerer ixoƛʼo       ałnar           butʼo            hayłoy karzinamado           buxirho            zoqʼes
+\mb ƛʼerer ix     -oƛʼo ałna     -r     b-   utʼ    -o   hayłoy karzina   -ma    -do  b-   uxir     -ho  zoqʼe -s
+\ge up       get.up -SIM    apron.OBL -INLAT III- collect -PRS he.ERG  basket(r) -INESS -DIR III- pour.out -PRS be     -PST
+\ps adv      v      -aff    n         -aff   aff- v       -aff pn      n         -aff   -aff aff- v        -aff v      -aff
+
+\ft
+\ref Pear_Magomed.003
+\tx hay   zoqʼes     łono karzina
+\mb hay   zoqʼe -s   łono karzina
+\ge there be     -PST three basket(r)
+\ps pn    v      -aff num   n
+
+\ft
+\ref Pear_Magomed.004
+\tx hoboy qʼono karzina   bičʼiš,      hoboy łono ʔeƛa     bičʼayaz       ƛʼere ixiš       zoqʼes     hago
+\mb hoboy qʼono karzina   b-   ičʼ -iš hoboy łono ʔeƛ -a   b-   ičʼ -ayaz ƛʼere ix     -iš zoqʼe -s   hago
+\ge then  two    basket(r) III- fill  -PST then  three speak -INF III- fill  -PURP upwards get.up -PST be     -PST he
+\ps adv   num    n         aff- v     -aff adv   num   v     -aff aff- v     -aff  adv     v      -aff v      -aff pn
+
+\ft
+\ref Pear_Magomed.005
+\tx tohobito          oƛexo      tʼekan      becen                ƛešo     boxen           hesgon   rekʼwe
+\mb tohobito          oƛex  -o   tʼeka -n    b-   ece        -n   ƛeš -o   b-   oxe   -n   hes -gon rekʼwe
+\ge on.the.other.side appear -PRS goat   -and  III- tie(round) -CVB tear  -PRS III- leave -PFT one -??  person
+\ps adv               v      -aff n      -clit aff- v          -aff v     -aff aff- v     -aff num -aff n
+
+\ft
+\ref Pear_Magomed.006
+\tx hayłoy hesqen  łinqoqen             itimez         iƛʼiyo    hago purełbito
+\mb hayłoy hesqen  łin     -qo     -qen iti   -mez     iƛʼi -yo  hago pureł -bito
+\ge he.ERG  nothing what.OBL -SRESS2 -NEG touch -CVB.NEG go     -PRS he   near   -TRANSL
+\ps pn      pn      pn       -aff    -aff v     -aff     v      -aff pn   adv    -clit
+
+\ft
+\ref Pear_Magomed.007
+\tx seda    mixƛʼo    oƛexo      tohobito          kʼonkʼaƛʼo   egwey xexbe
+\mb seda    mix  -ƛʼo oƛex  -o   tohobito          kʼonkʼa -ƛʼo egwey xexbe
+\ge one.OBL hour -SRESS appear -PRS on.the.other.side bike      -SRESS small child
+\ps num     n    -aff   v      -aff adv               n         -aff   adj   n
+
+\ft
+\ref Pear_Magomed.008
+\tx hago ƛʼere ažeyƛʼo   ičiyo    butʼo            geni, aqʼen     ezan       ezen      egwenu  uži, buxno          gorho    haw  kʼonkʼaƛʼo,  hes karzina   bičʼiš       geniš
+\mb hago ƛʼere ažey -ƛʼo iči -yo  b-   utʼ    -o   geni  aqʼe -n   ez   -an   eze  -n   egwennu uži  b-   ux   -no  gor -ho  haw  kʼonkʼa -ƛʼo hes karzina   b-   ičʼ -iš geni -š
+\ge he   on      tree  -SRESS be   -PRS III- collect -PRS pear  come  -CVB look -FUT2 look -CVB small   boy   III- keep -CVB put -PRS this bike      -SRESS one basket(r) III- fill   -PST  pear  -PST
+\ps pn   postp   n     -aff   v    -aff aff- v       -aff n     v     -aff v    -aff  v    -aff adj     n     aff- v    -aff v   -aff pn   n         -aff   num n         aff- v      -aff  n     -aff
+
+\ft
+\ref Pear_Magomed.009 
+\tx šum  žo   gosme   quy   gosme   ułiyo      hayš       hago kʼonkʼaƛʼon        ƛʼerekno    huneho
+\mb *šum žo   gosme   quy   gosme   ułi   -yo  hay   -š   hago kʼonkʼa -ƛʼo -n    ƛʼerek -no  huneho
+\ge ***   thing without noise without go.out -PRS there -GEN1 he   bike      -SRESS -and  sit.on   -CVB on.the.way
+\ps ***   n     postp   n     postp   v      -aff pn    -aff  pn   n         -aff   -clit v        -aff adv
+
+\ft
+\ref Pear_Magomed.010
+\tx iƛʼiyo    ičin     hayłoz     ƛʼoqʼar keziyiqo        ked
+\mb iƛʼi -yo  iči -n   hayło -z   ƛʼoqʼar keziyiq    -o   ked
+\ge go     -PRS be   -CVB he.OBL -DAT towards    meet.II/IV -PRS girl
+\ps v      -aff v    -aff pn     -aff adv        v          -aff n
+
+\ft
+\ref Pear_Magomed.011
+\tx hoboy hayłu   kedqor      ezen      iƛʼiyo    ičin     hado yiɣeło           hałos       hayłuqon             itin       šljapa qʼidir iƛʼiyo
+\mb hoboy hayłu   ked  -qor   eze  -n   iƛʼi -yo  iči -n   hado y-   iɣeł   -o   hało  -s    hayłu  -qo     -n    iti   -n   šljapa qʼidir iƛʼi -yo
+\ge then  this.OBL girl -SRLAT look -CVB fall   -PRS be   -CVB he   IV-  come.off -PRS he.OBL -GEN1 she.OBL -SRESS2 -and  touch -CVB hat(r)  down    fall   -PRS
+\ps adv   pn       n    -aff   v    -aff v      -aff v    -aff pn   aff- v        -aff pn     -aff  pn      -aff    -clit v     -aff n       adv     v      -aff
+
+\ft
+\rf гьалъос гь айлъухъо
+
+\ref Pear_Magomed.012
+\tx hadon      ezen      hayłuqor      ezen      iƛʼiyo    ičin     aldoɣodo xemqo           cʼoxno    kʼonkʼan      biƛʼiyo        qʼidir, hagon      iƛʼiyo    qʼidir i    karzinan        sadaq genimos         buxirho
+\mb hado -n    eze  -n   hayłu  -qor   eze  -n   iƛʼi -yo  iči -n   aldoɣodo xem       -qo   cʼox -no  kʼonkʼa -n    b-   iƛʼi -yo  qʼidir  hago -n    iƛʼi -yo  qʼidir *i   karzina   -n    sadaq geni -mo  -s    b-   uxir     -ho
+\ge he   -and  look -CVB she.OBL -SRLAT look -CVB fall   -PRS be   -CVB forward   stone.OBL -SRESSenter -CVB bike      -and  III- fall   -PRS down     he   -and  fall   -PRS down    ***  basket(r) -and  all   pear -OBL -GEN1 III- pour.out -PRS
+\ps pn   -clit v    -aff pn      -aff   v    -aff v      -aff v    -aff adv       n         -aff  v     -aff n         -clit aff- v      -aff adv      pn   -clit v      -aff adv     ***  n         -clit adv   n    -aff -aff  aff- v        -aff
+
+\tx qʼidido,   raƛʼmoƛʼodo
+\mb qʼidi -do  raƛʼ -mo  -ƛʼodo
+\ge down   -DIR earth  -OBL -SRDIR
+\ps adv    -aff n      -aff -aff
+
+\ft
+\ref Pear_Magomed.013
+\tx hay   qʼidir iƛʼin     bakʼarzi buho               ułiya            baqʼo         qʼono łonogon   xexbe    ƛʼerer
+\mb hay   qʼidir iƛʼi -n   bakʼarzi b-   u        -ho  ułi  -ya         b-   aqʼ -o   qʼono łono -gon xexbe    ƛʼerer
+\ge there down    fall   -CVB collect   III- do, make -PRS begin -PTCP.PRS?? III- come -PRS two    three -??  children upwards
+\ps pn    adv     v      -aff v         aff- v        -aff v     -aff        aff- v    -aff num    num   -aff n        adv
+
+\ft
+\ref Pear_Magomed.014 
+\tx hagzey        kumakno     buho               hałoz      bakʼarzin      bun                geni žon        hesqen   žo   ruxmez,            gorno    hado kekirho    tohodo     iƛʼiyo    ičingon       hazez         yašiyo
+\mb hagze    -y   kumak -no   b-   u        -ho  hało  -z   bakʼarzi -n    b-   u        -n   geni žo   -n    hesqen   žo   r-   ux   -mez     gor -no  hado kekir -ho  toho  -do  iƛʼi -yo  iči -n   -gon haze     -z   y-   aši -yo
+\ge they.OBL -ERG help  -and  III- do, make -PRS he.OBL -DAT collect   -and  III- do, make -CVB pear thing -and  anything thing VI-  take -CVB.NEG put -CVB he   send  -PRS there -DIR go     -PRS be   -CVB -??  they.OBL -DAT IV-  find -PRS
+\ps pn       -aff n     -clit aff- v        -aff pn     -aff v         -clit aff- v        -aff n    n     -clit pn       n     aff- v    -aff     v   -aff pn   v     -aff adv   -aff v      -aff v    -aff -aff pn       -aff aff- v    -aff
+
+\tx hałos       iƛʼiyo    goła   qʼidir šljapa
+\mb hało  -s    iƛʼi -yo  goła   qʼidir šljapa
+\ge he.OBL -GEN1 fall   -PRS be.PTCP down    hat(r)
+\ps pn     -aff  v      -aff v       adv     n
+
+\ft
+\ref Pear_Magomed.015
+\tx šaƛun       rikʼno        ičirno    hagon      yuxno          toƛno    hezo šljapa hayłoqor
+\mb šaƛu  -n    r-   ikʼ -no  ičir -no  hago -n    y-   ux   -no  toƛ -no  hezo šljapa hayło -qor
+\ge whistle -and  V-   beat -CVB stop  -CVB he   -and  IV-  take -CVB give -PFT then hat(r)  he.OBL -SRLAT
+\ps n       -clit aff- v    -aff v     -aff pn   -clit aff- v    -aff v    -aff adv  n       pn     -aff
+
+\ft
+\ref Pear_Magomed.016 
+\tx hayłoqor     šljapa hezo yaqʼeyƛʼo       hałoygon        buxan           buxno          žiw-žiwliž         hessotʼa   geni toƛno,   łoran          rekʼuz         łono geni
+\mb hayło -qor   šljapa hezo y-   aqʼe -yƛʼo hało  -y   -gon b-   ux   -an   b-   ux   -no  žiw-žiw   -li  -ž  hesso -tʼa geni toƛ -no  łora     -n    rekʼu     -z   łono geni
+\ge he.OBL -SRLAT hat(r)  then IV-  come  -SIM    he.OBL -ERG -??  III- take -FUT2 III- take -CVB every, each -OBL -DAT some  -DIST pear give -PFT three.OBL -and  person.OBL -DAT three pear
+\ps pn     -aff   n       adv  aff- v     -aff    pn     -aff -aff aff- v    -aff  aff- v    -aff pn          -aff -aff pn    -aff  n    v    -aff num       -clit n          -aff num   n
+
+\ft
+\ref Pear_Magomed.017 
+\tx hoboy hado iƛʼiyo    zonzo         huni hoboy hado ikʼeło       hado ƛʼere ažeyƛʼo   goła   xozyayn  hayłu   wełmos          genimos
+\mb hoboy hado iƛʼi -yo  zon     -zo   hune hoboy hado ikʼeł   -o   hado ƛʼere ažey -ƛʼo goła   xozyayn  hayłu   weł  -mo  -s    geni -mo  -s
+\ge then  he   go     -PRS his.OBL -GEN2 way  then  he   disappear -PRS he   on      tree  -SRESS be.PTCP owner(r) this.OBL thing -OBL -GEN1 pear  -OBL -GEN1
+\ps adv   pn   v      -aff pn      -aff  n    adv   pn   v         -aff pn   postp   n     -aff   v       n        pn       n     -aff -aff  n     -aff -aff
+
+\ref Pear_Magomed.018 
+\tx ałnu yičʼno        qʼidir ułiyo       hago karzinado      buxiranƛen               ʔeƛin
+\mb ałnu y-   ičʼ -no  qʼidir ułi    -yo  hago karzina   -do  b-   uxir     -an   -ƛen ʔeƛi -n
+\ge apron IV-  fill  -CVB down    go.down -PRS he   basket(r) -DIR III- pour.out -FUT2 -QUOT speak  -CVB
+\ps n     aff- v     -aff adv     v       -aff pn   n         -aff aff- v        -aff  -clit v      -aff
+
+\ft
+\ref Pear_Magomed.019
+\tx qʼidir aqʼenos   qʼono taraw   karzina   bašiyo        gom    hesƛa karzina   biko          gom    hałoz,     gom    hay
+\mb qʼidir aqʼe -nos qʼono taraw   karzina   b-   aši -yo  gom    hesƛa karzina   b-   ik  -o   gom    hało  -z   gom    hay
+\ge down    come  -SEQ two    besides basket(r) III- find -PRS be.NEG other  basket(r) III- see -PRS be.NEG he.OBL -DAT be.NEG there
+\ps adv     v     -aff num    post    n         aff- v    -aff v      adj    n         aff- v   -aff v      pn     -aff v      pn
+
+\ref Pear_Magomed.020 
+\tx hoboy tʼotʼerho    hałoy      łono zoqʼen,    hałoy      hoboy boži  iqmez           tʼotʼerho,   hes qʼonoƛen   ʔeƛin
+\mb hoboy tʼotʼer -ho  hało  -y   łono zoqʼe -n   hało  -y   hoboy boži  iq     -mez     tʼotʼer -ho  hes qʼono -ƛen ʔeƛi -n
+\ge then  count     -PRS he.OBL -ERG three be     -PFT he.OBL -ERG then  belief happen -CVB.NEG count     -PRS one two    -QUOT speak  -CVB
+\ps adv   v         -aff pn     -aff num   v      -aff pn     -aff adv   n      v      -aff     v         -aff num num    -clit v      -aff
+
+\ft
+\ref Pear_Magomed.021 
+\tx hibayru goła   ʕadaliqno           uže       zoni          zonez        bičʼi           iqmez           goła   had   xexbe    baqʼo             tohobito          kwa          geniben         hadben,     hałode
+\mb hibayru goła   ʕadaliq        -no  uže       zon      -i   zone    -z   bičʼi           iq     -mez     goła   had   xexbe    b-       aqʼ -o   tohobito          kwa          geni -be  -n    hadbe -n    hało  -de
+\ge so      be.PTCP become.stupid.I -CVB already(r) self.OBL -ERG REFL.SG -DAT understanding(aw) happen -CVB.NEG be.PTCP these children I/II.PL- come -PRS on.the.other.side in.the.hands pear -PL  -and  these -and  he.OBL -APUDESS2
+\ps adv     v       v               -aff adv        pn       -aff pn      -aff MSD               v      -aff     v       pn    n        aff-     v    -aff adv               adv          n    -aff -clit pn    -clit pn     -aff
+
+\tx aldoɣobito      biƛʼiyo            hagbe tohodo     boxo
+\mb aldoɣo  -bito   b-       iƛʼi -yo  hagbe toho  -do  b-       ox    -o
+\ge in.front -TRANSL I/II.PL- go     -PRS they  there -DIR I/II.PL- leave -PRS
+\ps postp    -clit   aff-     v      -aff pn    adv   -aff aff-     v     -aff
+
+\nt coordination bz juxaposition
+
+\ft
+\ref Pear_Magomed.022 
+\tx hadon      ƛexwo      hesqen  žo   reqʼimez,          łeyƛʼo         ʕomokil iłi
+\mb hado -n    ƛexw  -o   hesqen  žo   r-   eqʼi -mez     łe   -y   -ƛʼo ʕomokil iłi
+\ge he   -and  remain -PRS nothing thing V-   know  -CVB.NEG water -OBL -SRESS camel-   similar
+\ps pn   -clit v      -aff pn      n     aff- v     -aff     n     -aff -aff   v        adj?
+
+\rf гьадон лълъехво гьесхъен жо рекъимез
+
+\id Pear.Shamil
+\dt aufgenommen 15/Sept/2007
+\dt transkribiert 16/Sept/2007
+\nt Исаев Шамил Алиевич(1983)
+
+\ref Pear_Shamil.001 
+\tx hasaqo         gulučibe    rixnos                   rekʼuy         geni butʼo,           geni butʼiyo
+\mb hasaqo         guluči -be  r-           ix     -nos rekʼu     -y   geni b-   utʼ    -o   geni b-   utʼ    -iyo
+\ge in.the.morning rooster -PL  III/IV/V.PL- get.up -SEQ person.OBL -ERG pear III- collect -PRS pear III- collect -??
+\ps adv            n       -aff aff-         v      -aff n          -aff n    aff- v       -aff n    aff- v       -aff
+
+\rf гьасахъо гулучибе рихнос рек1уй гени бут1о, гени бут1ийо
+\nt die richtige PRS Form von but'/a ist but'o, 
+
+\ref Pear_Shamil.002
+\tx geni butʼo            goła   karzinan        ričʼno        geƛedo        wed    runos              oƛexo      tohobito
+\mb geni b-   utʼ    -o   goła   karzina   -n    r-   ičʼ -no  geƛ -e   -do  wed    r-   u        -nos oƛex  -o   tohobito
+\ge pear III- collect -PRS be.PTCP basket(r) -and  V-   fill  -CVB down -OBL -DIR matter V-   do, make -SEQ appear -PRS on.the.other.side
+\ps n    aff- v       -aff v       n         -clit aff- v     -aff adv  -aff -aff n      aff- v        -aff v      -aff adv
+
+\rf гени бут1о голъа карзинан рич1но гел1едо вед рунос ол1ехо тогьобито
+
+\ref Pear_Shamil.003
+\tx karzina   geƛerno             kekirno,   qʼidin      gorno,   ruxirno            hesƛa režinu      karzinamadon,          hado rekʼwe ixo         ažeyƛʼodo       obratno  geni butʼayaz
+\mb karzina   geƛ -e   -r   -no   kekir -no  qʼidi -n    gor -no  r-   uxir     -no  hesƛa r-   ežinnu karzina   -mado  -n    hado rekʼwe ix     -o   aže -y   -ƛʼodo *obratno geni b-   utʼ    -ayaz
+\ge basket(r) down -OBL -LAT -and  bring -CVB down   -and  put -CVB V-   pour.out -CVB other  V-   big     basket(r) -INDIR -and  this person  get.up -PRS tree -OBL -SRDIR   ***      pear III- collect -PURP
+\ps n         adv  -aff -aff -clit v     -aff adv    -clit v   -aff aff- v        -aff adj    aff- adj     n         -aff   -clit pn   n       v      -aff n    -aff -aff     ***      n    aff- v       -aff
+
+\rf карзина гел1ерно кекирно, къидин горно, рухирно гьесл1а режину  карзинамадон, гьадо рек1у ихо ажейкьодо обратно гени бут1аяз
+\nt er sagt рихургьо, das ist Tsez, auf Hinuq heisst es ruxirno
+
+\ref Pear_Shamil.004
+\tx hago ixnos       tohobito          oƛexo      cannin          boƛekʼno        hes rekʼwe
+\mb hago ix     -nos tohobito          oƛex  -o   can  -ni  -n    b-   oƛekʼ -no  hes rekʼwe
+\ge he   get.up -SEQ on.the.other.side appear -PRS goat -??  -and  III- put.out -CVB one person
+\ps pn   v      -aff adv               v      -aff n    -aff -clit aff- v       -aff num n
+
+\rf гьадо ихнос тогьобито ол1ехо цаннин бол1ек1но гьес рек1ве 
+
+\ref Pear_Shamil.005
+\tx hago oƛexno     purełbito,    hago tohodo     oxo
+\mb hago oƛex  -no  pureł -bito   hago toho  -do  ox    -o
+\ge he   appear -CVB near   -TRANSL he   there -DIR leave -PRS
+\ps pn   v      -aff adv    -clit   pn   adv   -aff v     -aff
+
+\rf гьадо ол1ехно пурелъбито гьаго тогьодо охо
+
+\ref Pear_Shamil.006
+\tx tohobitogon            welikƛʼo    oƛexo      egwenu  uži
+\mb tohobito          -gon *welik -ƛʼo oƛex  -o   egwennu uži
+\ge on.the.other.side -??  ***    -SRESS appear -PRS small   boy
+\ps adv               -aff ***    -aff   v      -aff adj     n
+
+\rf тогьобитогон великкьо ол1ехо эгену ужи
+
+\ref Pear_Shamil.007
+\tx egennu uži aqʼan    aqʼen     geni bikʼekʼa         ułiyo
+\mb egennu uži aqʼ -an  aqʼe -n   geni b-   ikʼekʼ -a   ułi  -yo
+\ge young  boy  come -RED come  -CVB pear III- steal    -INF begin -PRS
+\ps adj    n    v    -aff v     -aff n    aff- v        -aff v     -aff
+
+\rf эгену ужи акъан акъен гени бик1ек1а улъийо
+
+\ref Pear_Shamil.008
+\tx genin,     genimos         režinu      karzinan        ruxno          welosipedƛʼon         gorno    hado uži oxo
+\mb geni -n    geni -mo  -s    r-   ežinnu karzina   -n    r-   ux   -no  welosiped  -ƛʼo -n    gor -no  hado uži ox    -o
+\ge pear -and  pear -OBL -GEN1 V-   big     basket(r) -and  V-   take -CVB bicycle(r) -SRESS -and  put -CVB this boy  leave -PRS
+\ps n    -clit n    -aff -aff  aff- adj     n         -clit aff- v    -aff n          -aff   -clit v   -aff pn   n    v     -aff
+
+\rf гени, генимос режину карзинан рухно велосипедкьон горно гьадо  ужи охо
+\nt GEN1 NP 
+
+\ref Pear_Shamil.009 
+\tx hoboy hado uži oxenos,    ƛʼoqʼar keziyiqo        egweygon   hes ked, hayłočetow
+\mb hoboy hado uži oxe   -nos ƛʼoqʼar keziyiq    -o   egwey -gon hes ked  hayło -če   -tow
+\ge then  this boy  leave -SEQ towards    meet.II/IV -PRS small -??  one girl he.OBL -about -??
+\ps adv   pn   n    v     -aff adv        v          -aff adj   -aff num n    pn     -aff   -clit
+
+\rf гьобой гьадо ужи охенос, кьокъар кезийихъо егвейгон гьес кед, гьайлъочетов (его же роста)
+\nt schones Beispiel f�uer NP, die Aehnlichkeit ausdrueckt
+
+\ref Pear_Shamil.010
+\tx hayłuqo        ezo       goła,  xemuqon             welikno     cʼaqʼin,      hado uži qʼidir iƛʼiyo
+\mb hayłu  -qo     ez   -o   goła   xemu  -qo     -n    *welik -no  cʼaqʼi   -n   hado uži qʼidir iƛʼi -yo
+\ge she.OBL -SRESS2 look -PRS be.PTCP stone -SRESS2 -and  ***    -and impinge.on -CVB this boy  down    go     -PRS
+\ps pn      -aff    v    -aff v       n     -aff    -clit ***    -aff v          -aff pn   n    adv     v      -aff
+
+\rf гьайлъукьор эзо голъа, хемухъор великно цакъин, гьадо ужи къидир икьийо
+
+\ref Pear_Shamil.011
+\tx karzinamas       goła   čʼekʼu geni qʼidir boso
+\mb karzina   -mas   goła   čʼekʼu geni qʼidir b-   os   -o
+\ge basket(r) -INABL be.PTCP all       pear down    III- fall -PRS
+\ps n         -aff   v       pn        n    adv     aff- v    -aff
+
+\rf карзинамас голъа  ч1ек1у гени къидир боссо
+
+\ref Pear_Shamil.012
+\tx qʼidir iƛʼiyo    goła   ked  yoxo            hayłigon   kezibiqo          łonogon   uži
+\mb qʼidir iƛʼi -yo  goła   ked  y-   ox    -o   hayłi -gon kezibiq      -o   łono -gon uži
+\ge down    go     -PRS be.PTCP girl II-  leave -PRS there  -??  meet.I/II.PL -PRS three -??  boy
+\ps adv     v      -aff v       n    aff- v     -aff adv    -aff v            -aff num   -aff n
+
+\rf къидир икьийо голъа кед йохо гьайлъигон кезибихъо лъоногон ужи
+
+\ref Pear_Shamil.013
+\tx hazey         genin      bakʼarzi bun,               karzinan        welikƛʼon        gorno,   hado uži kekirho
+\mb haze     -y   geni -n    bakʼarzi b-   u        -n   karzina   -n    *welik -ƛʼo -n   gor -no  hado uži kekir -ho
+\ge they.OBL -ERG pear -and  collect   III- do, make -CVB basket(r) -and  ***    -SRESS -and put -CVB this boy  send  -PRS
+\ps pn       -aff n    -clit v         aff- v        -aff n         -clit ***    -aff   -aff v   -aff pn   n    v     -aff
+
+\rf гьазей генин бак1арзи бун, карзинан великкьон горно, гьадо ужи кекиргьо 
+
+\ref Pear_Shamil.014
+\tx oxo        goła   haze      łora     užiqo       yašiyo        šljapa
+\mb ox    -o   goła   haze      łora     uži -qo     y-   aši -yo  šljapa
+\ge leave -PRS be.PTCP these.OBL three.OBL boy  -SRESS2 IV-  find -PRS hat(r)
+\ps v     -aff v       pn        num       n    -aff    aff- v    -aff n
+
+\rf охо голъа гьазе лъора ужихъо яшийо шляпа
+
+\ref Pear_Shamil.015
+\tx hagno,      šaƛun       qaƛen     hagon      ičirno,   hag  šljapan toƛno    hazeqos
+\mb hag   -no   šaƛu  -n    qaƛe -n   hago -n    ičir -no  hag  šljapan toƛ -no  haze     -qos
+\ge those -and  whistle -and  call  -CVB he   -and  stop  -CVB this hat(r)   give -CVB they.OBL -SRABL2
+\ps pn    -clit n       -clit v     -aff pn   -clit v     -aff pn   n        v    -aff pn       -aff
+
+\rf гьагно, шал1ун хъал1ен гьагон ичирно, гьаг шляпан тол1о гьазехъос 
+
+\ref Pear_Shamil.016
+\tx hayło   užiqo       łono genin      buxo,          hadbe boxo,               boxo                goła   keziiqo     hayłi butʼo            goła   rekʼuder
+\mb hayło   uži -qo     łono geni -n    b-   ux   -o   hadbe b-       ox    -o   b-       ox    -o   goła   keziiq -o   hayłi b-   utʼ    -o   goła   rekʼu     -der
+\ge this.OBL boy  -SRESS2 three pear -and  III- take -PRS they  I/II.PL- leave -PRS I/II.PL- leave -PRS be.PTCP meet.I -PRS there  III- collect -PRS be.PTCP person.OBL -APUDLAT2
+\ps pn       n    -aff    num   n    -clit aff- v    -aff pn    aff-     v     -aff aff-     v     -aff v       v      -aff adv    aff- v       -aff v       n          -aff
+
+\rf гьайлъо ужихъо лъоно генин бухо, гьадбе бохо, бохо голъа кези ихъо гьайлъи бут1о голъа рек1удер
+
+\ref Pear_Shamil.017
+\tx hayłi haze     hayłino     kezibiqno         hayłi bitogon,   tohodo     biƛʼiyo            hadbe
+\mb hayłi haze     hayłi -no   kezibiq      -no  hayłi bito  -gon toho  -do  b-       iƛʼi -yo  hadbe
+\ge there  they.OBL there  -and  meet.I/II.PL -CVB there  there -??  there -DIR I/II.PL- go     -PRS they
+\ps adv    pn       adv    -clit v            -aff adv    adv   -aff adv   -aff aff-     v      -aff pn
+
+\rf гьайлъи гьазез гьайлъино кези бихъно гьайлъи битогон тогьодо бикьийо гьадбе
+\nt das erste Pronomen ist nicht richtig verstaendlich, Dzavgarat transkribiert hazez
+
+\id Pear.Sheikh
+\dt aufgenommen 29/Aug/2006
+\dt transkibiert 30/Aug/2006
+\nt Пахрудинов, Шайих Ахмедович (1967)
+\nt lange Pausen zwischen den Saetzen, viele Russ. Woerter, nur bedingst geeignet
+\nt Tape2 GinuxI
+
+\ref Pear_Sheikh.001
+\tx očordiyu rekʼuy         .    geni butʼo            ogorodmas        ažeyƛʼos
+\mb očordiyu rekʼu     -y   .{-} geni b-   utʼ    -o   ogorod    -mas   ažey -ƛʼos
+\ge old       person.OBL -ERG 1sec pear III- collect -PRS garden(r) -INABL tree  -SRABL
+\ps adj       n          -aff -    n    aff- v       -aff n         -aff   n     -aff
+
+\ft An old man collects pear(s) from in a garden, from a tree
+\rt Старый человек собирает груши в огороде от дерева.
+
+\ref Pear_Sheikh.002
+\tx łono qʼocʼe karzina   bičʼerho
+\mb łono qʼocʼe karzina   b-   ičʼer     -ho
+\ge three together basket(r) III- fill<TRANS> -PRS
+\ps num   adv      n         aff- v           -aff
+
+\ft (He) filled alltogether three baskets.
+\rt все три карзины заполнил
+
+\ref Pear_Sheikh.003
+\tx geni butʼo            goła   zamanał             .    .    proxiditʼ  iqo         .    .    .    canno      buxno          rekʼwe iƛʼiyo    goł .    .    igobito
+\mb geni b-   utʼ    -o   goła   zaman -a   -ł       .{-} .{-} *proxiditʼ iq     -o   .{-} .{-} .{-} can  -no   b-   ux   -no  rekʼwe iƛʼi -yo  goł .{-} .{-} igo           -bito
+\ge pear III- collect -PRS be.PTCP time  -OBL -INTERESS 1sec 1sec ***         become -PRS 1sec 1sec 1sec goat -and  III- keep -CVB person  go     -PRS be   1sec 1sec near, next.to -TRANSL
+\ps n    aff- v       -aff v       n     -aff -aff      -    -    ***         v      -aff -    -    -    n    -clit aff- v    -aff n       v      -aff v    -    -    adv           -clit
+
+\ft During the time when (he) collected pears, goes (somebody) that keeps a goat, a person went by.
+\rt Когда груши собирали, мимо проходил, баран на руках поднес. 
+\rf гени бут1о голъа заманалъ цанно бухно рек1ве икьиё голъ.
+
+\ref Pear_Sheikh.004
+\tx hibayłu zamanał             gozon aqʼo     uži welosipedƛʼo,   welosipedno      buxno,         welosipedƛʼo
+\mb hibayłu zaman -a   -ł       gozon aqʼ -o   uži welosiped  -ƛʼo welosiped  -no   b-   ux   -no  welosiped  -ƛʼo
+\ge this.OBL time  -OBL -INTERESS ??    come -PRS boy  bicycle(r) -SRESS bicycle(r) -and  III- keep -CVB bicycle(r) -SRESS
+\ps pn       n     -aff -aff      part? v    -aff n    n          -aff   n          -clit aff- v    -aff n          -aff
+
+\ft At the same time comes a boy on a bicycle, (he) keeps a bicycle.
+\rf гьибайлъу заманалъ гозон акъо (зокъен) ужи велосипедкьо, велосипедно бухно, велосипедкьо
+\rt в етоже время пришел мальчик на велосипеде, взял велосипед, на велосипеде
+
+\ref Pear_Sheikh.005
+\tx proxoditʼ  iqo         obratno  storonu, to   estʼ, nu  .    .    purełbito     exnaho
+\mb *proxoditʼ iq     -o   *obratno *storonu *to  *estʼ *nu .{-} .{-} pureł -bito   exna -ho
+\ge ***         happen -PRS ***      ***      ***  ***    *** 1sec 1sec near   -TRANSL go   -PRS
+\ps ***         v      -aff ***      ***      ***  ***    *** -    -    adv    -clit   v    -aff
+
+\ft (He) goes to the other side, he goes by.
+\rf проходить ихъо обратно сторону . то есть, ну, пурелъбито ехнагьо (зокъен)
+\rt он проходил обратную сторону, то естъ, ну, мимо проходил мальчик.
+
+\ref Pear_Sheikh.006
+\tx hayło   užiy     ezen      hayłoƛʼorno,       .    .     bikʼekʼo         .        qʼidir welosipedno      gorno,   welosipedmoƛʼosno           ułin,       bikʼekʼo         celij                                                          karzina,  .. karzina
+\mb hayło   uži -y   eze  -n   hayło -ƛʼor -no    .{-} .{-}  b-   ikʼekʼ -o   .{-}     qʼidir welosiped  -no   gor -no  welosiped  -mo  -ƛʼos -no   ułi    -n   b-   ikʼekʼ -o   *celij                                                         karzina      karzina
+\ge this.OBL boy  -ERG look -CVB he.OBL -SRLAT  -and   1sec 1sec  III- steal    -PRS 1sec     down    bicycle(r) -and  put -CVB bicycle(r) -OBL -SRABL  -and  go.down -CVB III- steal    -PRS ***                                                            basket(r)    basket(r)
+\ps pn       n    -aff v    -aff pn     -aff    -clit  -    -     aff- v        -aff -        adv     n          -clit v   -aff n          -aff -aff    -clit v       -aff aff- v        -aff ***                                                        n                n
+
+\ft This boy looked at him.
+\rf гьайлъо ужий езен гьайлъокьорно 
+\rt етот мальчик посмотрел на него.
+
+\ft (He) steals (it) . (he) puts the bike, (he) absteigen from the bike, (he) steals a whole basket.
+\rf бик1еко къиди велосипедно горно, велосипедмокьосно улъин, бик1еко целый корзина
+\rt он остановил велосипед, он с велосипеда слезал, он целую корзину украл.
+
+\ref Pear_Sheikh.007
+\tx iši  bakʼarzi bus,               celij  karzina   bikʼekʼo         hayłoy
+\mb iši  bakʼarzi b-   u        -s   *celij karzina   b-   ikʼekʼ -o   hayłoy
+\ge apple collect   III- do, make -PST ***    basket(r) III- steal    -PRS he.ERG
+\ps n     v         aff- v        -aff ***    n         aff- v        -aff pn
+
+\ft The basket ... colleceted apples, (he) steals the whole basket.
+\rf карзина, гени бак1арзи бус, целый корзина бик1еко гьайлъой
+\rt корзина, груши собрал, он целую корзину украл
+
+\ref Pear_Sheikh.008
+\tx hayš       iƛʼiyo    ičin,    očordiyu rekʼe ƛʼere ažeyƛʼor   butʼotow
+\mb hay   -š   iƛʼi -yo  iči -n   očordiyu rekʼe ƛʼere ažey -ƛʼor b-   utʼ    -o   -tow
+\ge there -GEN1 go     -PRS be   -CVB old       person on      tree  -SRLAT  III- collect -PRS -??
+\ps pn    -aff  v      -aff v    -aff adj       n      postp   n     -aff    aff- v       -aff -clit
+
+\ref Pear_Sheikh.009
+\tx hayš       bito iƛʼiyo    ičin     hago egwennu uži welosipedmoƛʼos,      qʼidir iƛʼiyo    xemun       keziyiqno       aldoɣobito
+\mb hay   -š   bito iƛʼi -yo  iči -n   hago egwennu uži welosiped  -mo  -ƛʼos qʼidir iƛʼi -yo  xemu  -n    keziyiq    -no  aldoɣo  -bito
+\ge there -GEN1 far  go     -PRS be   -CVB this small   boy  bicycle(r) -OBL -SRABL  down    fall   -PRS stone -and  meet.II/IV -CVB in.front -TRANSL
+\ps pn    -aff  adv  v      -aff v    -aff pn   adj     n    n          -aff -aff    adv     v      -aff n     -clit v          -aff adv      -clit
+
+\ft (He) went away from that place, the old man on the tree ..., (he) went away from there this boy, fell from the bike when (he) met a stone 
+\rf гьайш икьиё ичин, очордию рек1е кьере ажейкьо бут1отов, гьайш бито икьиё ичин гьаго ужи велосипедмокьос, къидир икьиё хемун кезиихъно алдогъобито
+\rt отсюда он пошел, старый человек еще собирал груши, далше он пошел (мальчик) и он подскалснулся и случайно упал на землю 
+
+\ref Pear_Sheikh.010
+\tx to  estʼ,  .    san  ked  keziyiqo,       ƛʼoqʼar, welosipedmoƛʼotow
+\mb *to *estʼ  .{-} san  ked  keziyiq    -o   ƛʼoqʼar  welosiped  -mo  -ƛʼo -tow
+\ge *** ***     1sec once girl meet.II/IV -PRS towards     bicycle(r) -OBL -SRESS -??
+\ps *** ***     -    adv  n    v          -aff adv         n          -aff -aff   -clit
+
+\ft That is, first (he) meets a girl, that (comes) towards (him) by bike.
+\rf то есть, сан кед кезийихъо кьокъар велосипедмокьо.
+\rt то есть, сначала он встретил девочку на велосипеде.
+
+\ref Pear_Sheikh.011
+\tx dahaw hezo iłi,   xemun       keziiqno     qʼidir iƛʼiyo    hago welosiped
+\mb dahaw hezo iłi    xemu  -n    keziiq -no   qʼidir iƛʼi -yo  hago welosiped
+\ge few   then similar stone -and  meet.I -PFT? down    fall   -PRS he   bicycle(r)
+\ps adv   adv  adj?    n     -clit v      -aff  adv     v      -aff pn   n
+
+\ft then .. (he) stossen against a stone and (he) falls down from the bike, the same basket with apples, that is, pears.
+\rf дагьав гьезо(дой) илъи хемун кезиихъно къидир икьиё велосипедмокьос, гьагонтов корзинан ишиш бичоголъа, то есть гениш
+\rt потом он упал на землю с велосипеда, он же с корзиной упал.
+\nt Elmira sagt, dass iɬi = he
+
+\ref Pear_Sheikh.012
+\tx hagontow karzinan        išiš      bičʼo         goła,  genimos         to   estʼ
+\mb hagontow karzina   -n    iši  -š   b-   ičʼ -o   goła   geni -mo  -s    *to  *estʼ
+\ge the.same basket(r) -and  apple -GEN1 III- fill  -PRS be.PTCP pear -OBL -GEN1 ***  ***
+\ps pn       n         -clit n     -aff  aff- v     -aff v       n    -aff -aff  ***  ***
+
+\ref Pear_Sheikh.013
+\tx xexbe    baqʼo             hay   bitongozon, ƛʼoqʼar hayłozo,    kumak bun                sobratʼno      buho
+\mb xexbe    b-       aqʼ -o   hay   bitongozon  ƛʼoqʼar hayło -zo   kumak b-   u        -n   *sobratʼ -no   b-   u        -ho
+\ge children I/II.PL- come -PRS there again       towards    he.OBL -GEN2 help  III- do, make -CVB ***       -and  III- do, make -PRS
+\ps n        aff-     v    -aff pn    adv         adv        pn     -aff  n     aff- v        -aff ***       -clit aff- v        -aff
+
+\ref Pear_Sheikh.014
+\tx butʼen,          karzinan        bičʼerno            obratno, ƛʼere welosipedmoƛʼon            gorno    kekirho    hago
+\mb b-   utʼe   -n   karzina   -n    b-   ičʼer     -no  *obratno ƛʼere welosiped  -mo  -ƛʼo -n    gor -no  kekir -ho  hago
+\ge III- collect -CVB basket(r) -and  III- fill<TRANS> -CVB ***      on      bicycle(r) -OBL -SRESS -and  put -CVB bring -PRS he
+\ps aff- v       -aff n         -clit aff- v           -aff ***      adv     n          -aff -aff   -clit v   -aff v     -aff pn
+
+\ft Children come towards him, (they) help (him) to collect (the pears), fill the basket and put (it) back on the bike, he goes away. 
+\rf хехбе бакъо гьайжо битогон, кьокъар гьайлъозо кумакнобун собратнобугьо бут1ен карзинан бич1ерно обратно, кьере велосипедмокьон горно кекиргьо гьаго
+\rt  дети пришли ему на встречу, потом они помогли собирать груши, поставили корзину на велосипеде и мальчик пошел дальше.
+
+
+
+\ref Pear_Sheikh.015
+\tx hayłoqos     qʼidir yiƛʼiyo        zoqʼen     šljapa, yiƛʼiš        zoqʼen,
+\mb hayło -qos   qʼidir y-   iƛʼi -yo  zoqʼe -n   šljapa  y-   iƛʼi -š  zoqʼe -n
+\ge he.OBL -SRABL down    IV-  fall   -PRS be     -PFT hat(r)   IV-  fall   -PST be     -PFT
+\ps pn     -aff   adv     aff- v      -aff v      -aff n        aff- v      -aff v      -aff
+
+\ft From him fall down the hat, went down, on child brought the hat back, gave (it) back to him.
+\rf гьайлъохъос къидир икьиё (бикьиш) зокъен, шляпа икьиш (das Verb muss raus) зокъен, шляпа хехзай юхан юхно токьно гьайлъохъорно, 
+\rt с него упала шапка, потом один мальчик поднес ему шапку.
+\nt iƛʼi- koennte auch yiƛʼi- sein
+
+\ref Pear_Sheikh.016
+\tx šljapa xexzay              yuxan           yuxno          toƛno    hayłoqorno
+\mb šljapa xex    -za     -y   y-   ux   -an   y-   ux   -no  toƛ -no  hayło -qor   -no
+\ge hat(r)  child- -OBL.PL -ERG IV-  take -FUT2 IV-  take -CVB give -CVB he.OBL -SRLAT -and
+\ps n       n      -aff    -aff aff- v    -aff  aff- v    -aff v    -aff pn     -aff   -clit
+
+\ref Pear_Sheikh.017
+\tx hayło   užiy     gozon išiben          toƛo,    geniben         toƛo     hazez,        každyjmoz         hessohotʼa        łono geni, łono xexbe    zoqʼen     hagbe
+\mb hayło   uži -y   gozon iši  -be  -n    toƛ -o   geni -be  -n    toƛ -o   haze     -z   *každyj -mo  -z   hessoho      -tʼa łono geni  łono xexbe    zoqʼe -n   hagbe
+\ge that.OBL boy  -ERG ??    apple -PL  -and  give -PRS pear -PL  -and  give -PRS they.OBL -DAT ***      -OBL -DAT one.by.one   -??   three pear  three children be     -PFT they
+\ps pn       n    -aff part? n     -aff -clit v    -aff n    -aff -clit v    -aff pn       -aff ***      -aff -aff adv          -aff  num   n     num   n        v      -aff pn
+
+\ft This boy gives apples, gives pears to them, everone jeweils, three pears, these were three children.
+\rf гьайлъо ужийгозон ишибен толълъо, генибен толълъо гьазез, каждымоз гьесогьот1а лъоно гени, лъоно хехбе зокъен гьагбе
+\rt потом етот мальчик дал каждому по одному груш, там были три мальчика.
+
+\ref Pear_Sheikh.018
+\tx hagon      oxo        iduddo po   moemu
+\mb hago -n    ox    -o   iduddo *po  *moemu
+\ge he   -and  leave -PRS home   ***  ***
+\ps pn   -clit v     -aff adv    ***  ***
+
+\ft And he goes home, in my opinion, probably he goes home.
+\rf гьагон охен идуддо по моему, идуддо икьиё гьагон 
+\rt етот мальчик пошел домой, , никто не знает, куда они пошли.
+
+\ref Pear_Sheikh.019
+\tx iduddo ese      iƛʼiyo    hagon,    xexben        starikdebito              bułiyo,              tohoddo puƛʼor,
+\mb iduddo ese      iƛʼi -yo  hago -n   xexbe    -n   *starik -de       -bito   b-       ułi    -yo  tohoddo puƛʼor
+\ge home   probably go     -PRS he   -and children -and ***     -APUDESS2 -TRANSL I/II.PL- go.down -PRS further on.the.side
+\ps adv    adv      v      -aff pn   -clitn        -clit***     -aff      -clit   aff-     v       -aff adv     adv
+
+\ft The children go away there, weiter to the other side.
+\rf хехбен старикде бито бикьиё зокъен булъиё тогьоддо пукьо
+\rt ети мальчики трое тоже пошли на другую сторону
+
+\ref Pear_Sheikh.020
+\tx łinez        ni    beqʼiyo        beqʼiyo       gom   hoboy nido  se   biƛʼiyos
+\mb łine    -z   ni    b-   eqʼi -yo  b-   eqʼ -iyo gom   hoboy nido  se   b-       iƛʼ -iyo -s
+\ge what.OBL -DAT where III- know  -PRS III- know -PRS be.NEG then  where what I/II.PL- go    -PRS -PST
+\ps pn       -aff pn    aff- v     -aff aff- v    -aff v      adv   pn    pn   aff-     v     -aff -aff
+
+\ft
+\rt зачем, куда пошли не знает, и откуда вернется не знает
+\nt der letzte Satz ist extrem allgero, sodass sowhl Elmira als auch Madina nicht alles verstanden haben
+
+\id Pear.Siadat
+\dt aufgenommen 8/Sept/2006
+\dt transkribiert
+\nt Tagirova Siadat
+\nt Tape4, GinuxIII
+
+\ref Pear_Siadat.001
+\tx čeqi         hes rekʼwe goł geni butʼo,           ƛʼere ažeyƛʼorno       ixno
+\mb čeq   -i     hes rekʼwe goł geni b-   utʼ    -o   ƛʼere ažey -ƛʼor -no   ix     -no
+\ge forest -INESS one person  be   pear III- collect -PRS on      tree  -SRLAT  -and  get.up -CVB
+\ps n      -aff   num n       v    n    aff- v       -aff postp   n     -aff    -clit v      -aff
+\graid # np:l np:S cop
+
+\ft
+\ref Pear_Siadat.002
+\tx butʼes           hayłoy haw  gełer         raqʼeriš               karzinamar
+\mb b-   utʼe   -s   hayłoy haw  geł -e   -r   r-           aqʼer -iš karzina   -mar
+\ge III- collect -PST he.ERG  that down -OBL -LAT III/IV/V.PL- bring  -PST basket(r) -INLAT
+\ps aff- v       -aff pn      pn   adv  -aff -aff aff-         v      -aff n         -aff
+
+\ft
+\ref Pear_Siadat.003
+\tx ixiš       obratno  ƛʼere
+\mb ix     -iš *obratno ƛʼere
+\ge get.up -PST ***      upwards
+\ps v      -aff ***      adv
+
+\ft
+\ref Pear_Siadat.004
+\tx butʼo            ičin     aqʼes     kʼonkʼaƛʼo   hes uži
+\mb b-   utʼ    -o   iči -n   aqʼe -s   kʼonkʼa -ƛʼo hes uži
+\ge III- collect -PRS be   -CVB come  -PST bike      -SRESS one boy
+\ps aff- v       -aff v    -aff v     -aff n         -aff   num n
+
+\ft
+\ref Pear_Siadat.005
+\tx buxno          kar  karzinan        iƛʼiyo    zoqʼes     hago huni hune
+\mb b-   ux   -no  *kar karzina   -n    iƛʼi -yo  zoqʼe -s   hago hune hune
+\ge III- take -CVB ***  basket(r) -and  go     -PRS be     -PST he   way  way
+\ps aff- v    -aff ***  n         -clit v      -aff v      -aff pn   n    n
+
+\ft
+\ref Pear_Siadat.006 
+\tx kezibiqiš    hes gozon kʼonkʼa, qʼonosno          cʼoxiš   sedi-sedqo
+\mb kezibiq  -iš hes gozon kʼonkʼa  qʼono -s    -no   cʼox -iš sedi-sed   -qo
+\ge meet.III -PST one ??    bike       two    -GEN1 -and  enter -PST each.other -SRESS
+\ps v        -aff num part? n          num    -aff  -clit v     -aff adv        -aff
+
+\rt qʼonesno: два
+\nt interestin reciprocal construction
+
+\ref Pear_Siadat.007
+\tx iƛʼiš    qʼidir
+\mb iƛʼi -š  qʼidir
+\ge fall   -PST down
+\ps v      -aff adv
+
+\ft
+\ref Pear_Siadat.008
+\tx qʼidir iƛʼiyo    hayłoqos     sadaq geni qʼidir   bičʼiłiš
+\mb qʼidir iƛʼi -yo  hayło -qos   sadaq geni qʼidir   b-   ičʼił -iš
+\ge down    fall   -PRS he.OBL -SRABL all   pear downwards III- pour.out -PST
+\ps adv     v      -aff pn     -aff   adv   n    adv       aff- v        -aff
+
+\ft
+\nt es klingt als wuerde zwischen iƛʼiyo und hayłoqos noch so was wie hayłi stehen
+
+\ref Pear_Siadat.009
+\tx hes sedi    xexben         baqʼen             łono uqʼinon hawno      butʼes            bakʼar  kezinbus      kekir ixiš       hago
+\mb hes sedi    xexbe    -n    b-       aqʼe -n   łono uqʼinon haw  -no   b-   utʼe   -s    *bakʼar kezinbu  -s   kekir ix     -iš hago
+\ge one one.OBL children -and  I/II.PL- come  -CVB three four     this -and  III- collect -GEN1 ***      meet.III -PST bring get.up -PST he
+\ps num num     n        -clit aff-     v     -aff num   num      pn   -clit aff- v       -aff  ***      v        -aff v     v      -aff pn
+
+\ft
+\nt bakʼar  kezinbus ist vielleicht eine ungenaue Variante von bakʼarzi bus
+
+\ref Pear_Siadat.010
+\tx hagbe łonon      biƛʼiyo            zoqʼes     huni, biƛʼin         hayłoqos     qʼidir šljapa
+\mb hagbe łono -n    b-       iƛʼi -yo  zoqʼe -s   hune  b-   iƛʼi -n   hayło -qos   qʼidir šljapa
+\ge these three -and  I/II.PL- go     -PRS be     -PST way   III- fall   -CVB he.OBL -SRABL down    hat(r)
+\ps pn    num   -clit aff-     v      -aff v      -aff n     aff- v      -aff pn     -aff   adv     n
+
+\ft
+\ref Pear_Siadat.011 
+\tx šaƛun       qaƛen     ičiriš   hago iƛʼiyas
+\mb šaƛu  -n    qaƛe -n   ičir -iš hago iƛʼi -ya   -s
+\ge whistle -and  call  -CVB stop  -PST he   go     -PTCP -GEN1
+\ps n       -clit v     -aff v     -aff pn   v      -aff  -aff
+
+\ft
+\ref Pear_Siadat.012
+\tx hezodoy hago iƛʼiš    uqʼoƛʼo, hago rekʼwe ažeyƛʼo   geni butʼo            ičin     łaqʼen         genin      gełer         aqʼes     ažeyƛʼos
+\mb hezodoy hago iƛʼi -š  uqʼoƛʼo  hago rekʼwe ažey -ƛʼo geni b-   utʼ    -o   iči -n   łaqʼe     -n   geni -n    geł -e   -r   aqʼe -s   ažey -ƛʼos
+\ge then    he   go     -PST direct      this person  tree  -SRESS pear III- collect -PRS be   -CVB finish, end -CVB pear -and  down -OBL -LAT come  -PST tree  -SRABL
+\ps adv     pn   v      -aff adj         pn   n       n     -aff   n    aff- v       -aff v    -aff v           -aff n    -clit adv  -aff -aff v     -aff n     -aff
+
+\ft
+\ref Pear_Siadat.013 
+\tx ezeyƛʼor    gom    hayłoqor     biko          hesqen   geni, hesƛani    karzina   biko          gom    qʼidi
+\mb eze  -yƛʼor gom    hayło -qor   b-   ik  -o   hesqen   geni  hesƛa -ni  karzina   b-   ik  -o   gom    qʼidi
+\ge look -CULM    be.NEG he.OBL -SRLAT III- see -PRS anything pear  other  -??  basket(r) III- see -PRS be.NEG down
+\ps v    -aff     v      pn     -aff   aff- v   -aff pn       n     adj    -aff n         aff- v   -aff v      adv
+
+\ft
+\ref Pear_Siadat.014
+\tx baqʼo             hagbe łonon      xexbe    tohobito,     geni bacʼotow
+\mb b-       aqʼ -o   hagbe łono -n    xexbe    toho  -bito   geni b-   acʼ -o   -tow
+\ge I/II.PL- come -PRS these three -and  children there -TRANSL pear III- eat  -PRS -??
+\ps aff-     v    -aff pn    num   -clit n        adv   -clit   n    aff- v    -aff -clit
+
+\ft
+\ref Pear_Siadat.015
+\tx buqʼer         hazeƛʼorno           ezen      ičiš     hago oqondełno,   bašimeƛʼo          geni
+\mb b-       uqʼer haze     -ƛʼor -no   eze  -n   ič   -iš hago oqondeł -no  b-   aši -me  -ƛʼo geni
+\ge I/II.PL- direct they.OBL -SRLAT  -and  look -CVB stand -PST he   wonder   -CVB III- find -NEG -SIM   pear
+\ps aff-     adj    pn       -aff    -clit v    -aff v     -aff pn   v        -aff aff- v    -aff -aff   n
+
+\id Pear.Elmira
+\dt aufgenommen 30/Aug/2006
+\dt transkribiert 07/Sep/2006
+\nt Пахрудинова, Эльмира Шейховна (16.8. 1991, 15 Jahre)
+\nt Tape2 GinuxI
+
+\ref Pear_Elmira.001�
+\tx zoqʼen     sasaqos, zoqʼen     sasaqos zamana     hesso rekʼe zoqʼen     sasaqoƛʼo           nu  ažeyƛʼo   čeq   ažeyƛʼo   čeqiš       geni butʼayaz
+\mb zoqʼe -n   sasaqos  zoqʼe -n   sasaqos zaman -a   hesso rekʼe zoqʼe -n   sasaqo         -ƛʼo *nu ažey -ƛʼo čeq   ažey -ƛʼo čeq   -iš   geni b-   utʼ    -ayaz
+\ge be     -PFT morning  be     -PFT morning time  -INF some  person be     -PFT in.the.morning -SRESS *** tree  -SRESS forest tree  -SRESS forest -INABL pear III- collect -PURP
+\ps v      -aff adj      v      -aff adj     n     -aff pn?   n      v      -aff adv            -aff   *** n     -aff   n      n     -aff   n      -aff   n    aff- v       -aff
+
+\ft It was morning, in the morning, a person climbed on a tree in the forest in order to collect pears.
+
+
+\ref Pear_Elmira.002
+\tx hayłoy ažeyƛʼon        ixno        geni butʼo            zoqʼen
+\mb hayłoy ažey -ƛʼo -n    ix     -no  geni b-   utʼ    -o   zoqʼe -n
+\ge he.ERG  tree  -SRESS -and  get.up -CVB pear III- collect -PRS be     -PFT
+\ps pn      n     -aff   -clit v      -aff n    aff- v       -aff v      -aff
+
+\ft He climbed on the tree and collected pears.
+\rt
+
+\ref Pear_Elmira.003
+\tx hezodoy .    purełbitotow        iƛʼin     hes rekʼwe canin,    nu, canin     bižin         purełbito     iƛʼin
+\mb hezodoy .{-} pureł -bito   -tow  iƛʼi -n   hes rekʼwe can  -in  *nu can  -in  b-   iži -n   pureł -bito   iƛʼi -n
+\ge then    1sec near   -TRANSL -??   go     -PFT one person  goat -??  *** goat -??  III- take -CVB near   -TRANSL go     -PFT
+\ps adv     -    adv    -clit   -clit v      -aff num n       n    -aff *** n    -aff aff- v    -aff adv    -clit   v      -aff
+
+\nt цанни ist der PL von can, viellleicht weiss sie das nicht
+\ft Then went a person by, taking a goat (he) went by.
+\rt
+
+\ref Pear_Elmira.004 ##########
+\tx hezo haw  cani       biƛʼimez           ??          hezo hayłoy ƛešen     haw bižin
+\mb hezo haw  can  -no   b-   iƛʼi -mez     zoqʼe -n   hezo hayłoy ƛeše -n   haw b-   iži -n
+\ge then this goat -and  III- go     -CVB.NEG be     -PFT then he.ERG  tear   -CVB she III- take -PFT
+\ps adv  pn   n    -clit aff- v      -aff     v      -aff adv  pn      v      -aff pn  aff- v    -aff
+
+\nt
+\ft
+
+
+\ref Pear_Elmira.005
+\tx hayłoy butʼo            butʼo            ičin     hez-hezo gozon tohobito          aqʼo     zoqʼen     hes uži kʼonkʼaƛʼo   ƛʼerekno
+\mb hayłoy b-   utʼ    -o   b-   utʼ    -o   iči -n   hez-hezo gozon tohobito          aqʼ -o   zoqʼe -n   hes uži kʼonkʼa -ƛʼo ƛʼerek -no
+\ge he.ERG  III- collect -PRS III- collect -PRS be   -PFT then     ??    on.the.other.side come -PRS be     -PFT one boy  bike      -SRESS sit.on   -CVB
+\ps pn      aff- v       -aff aff- v       -aff v    -aff adv      part? adv               v    -aff v      -aff num n    n         -aff   v        -aff
+
+\ft
+
+
+\ref Pear_Elmira.006
+\tx hezodoy qʼidirno     ułin        hayłoy san  buxan           hes geniƛen
+\mb hezodoy qʼidir -no   ułi    -n   hayłoy san  b-   ux   -an   hes geni -ƛen
+\ge then    down    -and  go.down -CVB he.ERG  once III- take -FUT2 one pear -QUOT
+\ps adv     adv     -clit v       -aff pn      adv  aff- v    -aff  num n    -clit
+
+\ft
+\ref Pear_Elmira.007
+\tx hezodoy genin      buxno          gom,   zelij  karzina   buxno          hag     welosiped  kʼonkʼaƛʼon        gorno    hago iƛʼiyo    zoqʼen
+\mb hezodoy geni -n    b-   ux   -no  gom    *zelij karzina   b-   ux   -no  hag     welosiped  kʼonkʼa -ƛʼo -n    gor -no  hago iƛʼi -yo  zoqʼe -n
+\ge then    pear -and  III- take -PFT be.NEG ***    basket(r) III- take -PFT this.IV bicycle(r) bike      -SRESS -and  put -CVB he   go     -PRS be     -PFT
+\ps adv     n    -clit aff- v    -aff v      ***    n         aff- v    -aff pn      n          n         -aff   -clit v   -aff pn   v      -aff v      -aff
+
+\ft
+\ref Pear_Elmira.008
+\tx seda    zamanał             hałoz      keziyiqno       hes ked  pureł .    nawstreču  noxo      zoqʼen     hes gozo ked
+\mb seda    zaman -a   -ł       hało  -z   keziyiq    -no  hes ked  pureł .{-} *nawstreču nox  -o   zoqʼe -n   hes gozo ked
+\ge one.OBL time  -OBL -INTERESS he.OBL -DAT meet.II/IV -PFT one girl near   1sec ***         come -PRS be     -PFT one ??   girl
+\ps num     n     -aff -aff      pn     -aff v          -aff num n    adv    -    ***         v    -aff v      -aff num clit n
+
+\ft
+\ref Pear_Elmira.009
+\tx hoboy hayłuqo       ezo       goła   hago uži qʼidir iƛʼin
+\mb hoboy hayłu  -qo    ez   -o   goła   hago uži qʼidir iƛʼi -n
+\ge then  she.OBL -SRESS look -PRS be.PTCP this boy  down    fall   -PFT
+\ps adv   pn      -aff   v    -aff v       pn   n    adv     v      -aff
+
+\ft
+\ref Pear_Elmira.010
+\tx qʼidirno     iƛʼin     hoboy pureł haytow      gozon zoqʼen     łono uži ičiš
+\mb qʼidir -no   iƛʼi -n   hoboy pureł hay   -tow  gozon zoqʼe -n   łono uži iči  -š
+\ge down    -and  fall   -CVB then  near   there -??   ??    be     -PFT three boy  stand -PST
+\ps adv     -clit v      -aff adv   adv    pn    -clit part? v      -aff num   n    v     -aff
+
+\ft
+\ref Pear_Elmira.011
+\tx hezodoy hayło   łora, łora  užiy     hago ixeran        ixerno       kumakno     bun,               bakʼarzin      bun                haw  geni, kʼonkʼaƛʼon        gorno    kekirno
+\mb hezodoy hayło   łora  łora  uži -y   hago ixer    -an   ixer    -no  kumak -no   b-   u        -n   bakʼarzi -n    b-   u        -n   haw  geni  kʼonkʼa -ƛʼo -n    gor -no  kekir -no
+\ge then    this.OBL three- three- boy  -ERG he   lift.up -FUT2 lift.up -CVB help  -and  III- do, make -CVB collect   -and  III- do, make -CVB this pear  bike      -SRESS -and  put -CVB send  -PFT
+\ps adv     pn       num    num    n    -aff pn   v       -aff  v       -aff n     -clit aff- v        -aff v         -clit aff- v        -aff pn   n     n         -aff   -clit v   -aff v     -aff
+
+\ft
+\ref Pear_Elmira.012
+\tx hezogozon   šaƛun       qaƛen     haze      łora  užiy,
+\mb hezo -gozon šaƛu  -n    qaƛe -n   haze      łora  uži -y
+\ge then -??    whistle -and  call  -PFT these.OBL three- boy  -ERG
+\ps adv  -clit  n       -clit v     -aff pn        num    n    -aff
+
+\ft
+\ref Pear_Elmira.013
+\tx seda    užiy     šaƛun       qaƛen     hałoqor      .    šapka neƛno
+\mb seda    uži -y   šaƛu  -n    qaƛe -n   hało  -qor   .{-} šapka neƛ -no
+\ge one.OBL boy  -ERG whistle -and  call  -CVB he.OBL -SRLAT 1sec hat    give -PFT
+\ps num     n    -aff n       -clit v     -aff pn     -aff   -    n      v    -aff
+
+\ref Pear_Elmira.014
+\tx seda    užiy     hazez          łorazno          genibe    neƛno,   hago uži iduddo iƛʼiyo    zoqʼen
+\mb seda    uži -y   haze      -z   łora  -z   -no   geni -be  neƛ -no  hago uži iduddo iƛʼi -yo  zoqʼe -n
+\ge one.OBL boy  -ERG these.OBL -DAT three- -DAT -and  pear -PL  give -PFT this boy  home   go     -PRS be     -PFT
+\ps num     n    -aff pn        -aff num    -aff -clit n    -aff v    -aff pn   n    adv    v      -aff v      -aff
+
+\ft
+\ref Pear_Elmira.015
+\tx hezodoy hagben      kʼošiliho      iduddo biƛʼin,            hayłu   ažeyhono            baqʼen,            ažeyho        puƛʼor    biƛʼiyo            zoqʼen     hag     xalqʼi
+\mb hezodoy hagbe -n    kʼošili   -ho  iduddo b-       iƛʼi -n   hayłu   ažey -ho      -no   b-       aqʼe -n   ažey -ho      puƛʼor    b-       iƛʼi -yo  zoqʼe -n   hag     xalqʼi
+\ge then    they  -and  play<ANTIP> -PRS home   I/II.PL- go     -CVB this.OBL tree  -APUDESS -and  I/II.PL- come  -CVB tree  -APUDESS on.the.side I/II.PL- go     -PRS be     -PFT this.IV folk, people
+\ps adv     pn    -clit v           -aff adv    aff-     v      -aff pn       n     -aff     -clit aff-     v     -aff n     -aff     adv         aff-     v      -aff v      -aff pn      n
+
+\ft
+\ref Pear_Elmira.016
+\tx nu  hag     užibe    hago rekʼwe qʼidirno     ułin       hago karzina   biqʼeymeƛʼo       ħayran    iqno
+\mb *nu hag     uži -be  hago rekʼwe qʼidir -no   ułi   -n   hago karzina   b-   iqʼe -ymeƛʼo ħayran    iq     -no
+\ge *** this.IV boy  -PL  this person  down    -and  go.out -CVB this basket(r) III- bring -SIM.NEG  bewildered happen -CVB
+\ps *** pn      n    -aff pn   n       adv     -clit v      -aff pn   n         aff- v     -aff      adv        v      -aff
+
+\ft
+\ref Pear_Elmira.017
+\tx ni    hadiš     karzinaƛen     qʼidin     ičin,     ičin      hag   łonon      užibe    tohoddo biƛʼin
+\mb ni    hadi -š   karzina   -ƛen qʼidi -n   iči  -n   iči  -n   hag   łono -n    uži -be  tohoddo b-       iƛʼi -n
+\ge where here -GEN1 basket(r) -QUOT down   -CVB stand -CVB stand -CVB these three -and  boy  -PL  further I/II.PL- go     -PFT
+\ps pn    adv  -aff  n         -clit adv    -aff v     -aff v     -aff pn    num   -clit n    -aff adv     aff-     v      -aff
+
+\id Pear.Rukiyat
+\dt aufgenommen 11/Sept/2006
+\dt transkribiert 12/Sept/2006
+\nt Džaxparova Rukiyat Abudaliovna (27 Jahre)
+\nt eher ungeeignet
+\nt Tape4, GinuxIII
+
+\ref Pear_Rukiyat.001
+\tx qaħłi kekirnos
+\mb qaħłi kekir -nos
+\ge dawn    let   -SEQ
+\ps n       v     -aff
+
+\rf
+
+\nt 10 sec Pause, Rukiyat fragt, wie sie den Birnenpflücker bezeichnen soll
+
+\ref Pear_Rukiyat.002
+\tx rekʼwe, rekʼwe bakʼarzi buho               zoqʼen     geni ažeyƛʼos
+\mb rekʼwe  rekʼwe bakʼarzi b-   u        -ho  zoqʼe -n   geni ažey -ƛʼos
+\ge person   person  collect   III- do, make -PRS be     -PFT pear tree  -SRABL
+\ps n        n       v         aff- v        -aff v      -aff n    n     -aff
+
+\rf
+
+\nt 8 sec Pause, Rukiyat erklaert Woerter
+
+\ref Pear_Rukiyat.003
+\tx hoboži hayłoy qʼono karzinan        bakʼarzi bun                .    .    .    .    qʼono kwid
+\mb hoboži hayłoy qʼono karzina   -n    bakʼarzi b-   u        -n   .{-} .{-} .{-} .{-} qʼono kwid
+\ge now     he.ERG  two    basket(r) -and  collect   III- do, make -CVB 1sec 1sec 1sec 1sec two    basket
+\ps adv     pn      num    n         -clit v         aff- v        -aff -    -    -    -    num    n
+
+\rf
+
+\nt sie ueberlegt in der Pause, was Korb auf Ginukh heisst
+
+\ref Pear_Rukiyat.004
+\tx qʼono kwid   bakʼarzi bus,               bun
+\mb qʼono kwid   bakʼarzi b-   u        -s   b-   u        -n
+\ge two    basket collect   III- do, make -PST III- do, make -PFT
+\ps num    n      v         aff- v        -aff aff- v        -aff
+
+\rf
+
+\ref Pear_Rukiyat.005
+\tx hoboy hago ƛʼerer ixiš       goła   łono ʔeƛa     bakʼarzi buwayaz             hay   teł   proxoditʼ  biqo,            nu  .    .
+\mb hoboy hago ƛʼerer ix     -iš goła   łono ʔeƛ -a   bakʼarzi b-   uw       -ayaz hay   teł   *proxoditʼ b-   iq     -o   *nu .{-} .{-}
+\ge then  he   up       get.up -PST be.PTCP three speak -INF collect   III- do, make -PURP there inside ***         III- happen -PRS *** 1sec 1sec
+\ps adv   pn   adv      v      -aff v       num   v     -aff v         aff- v        -aff  pn    adv    ***         aff- v      -aff *** -    -
+
+\rf
+
+\ref Pear_Rukiyat.006
+\tx hayłodebito             buqʼoƛʼo     biƛʼiyo        .    .    .    .    .    canno      bižin         rekʼwe
+\mb hayło -de       -bito   b-   uqʼoƛʼo b-   iƛʼi -yo  .{-} .{-} .{-} .{-} .{-} can  -no   b-   iži -n   rekʼwe
+\ge he.OBL -APUDESS2 -TRANSL III- direct     III- go     -PRS 1sec 1sec 1sec 1sec 1sec goat -and  III- take -CVB person
+\ps pn     -aff      -clit   aff- adj        aff- v      -aff -    -    -    -    -    n    -clit aff- v    -aff n
+
+\ref Pear_Rukiyat.007
+\tx tohobitogon            kʼonkʼaƛʼo   aqʼo     uži, aqʼo     zoqʼee
+\mb tohobito          -gon kʼonkʼa -ƛʼo aqʼ -o   uži  aqʼ -o   zoqʼe -e
+\ge on.the.other.side -??  bike      -SRESS come -PRS boy   come -PRS be     -Q
+\ps adv               -aff n         -aff   v    -aff n     v    -aff v      -clit
+
+\rf
+
+\nt der letzte clause ist eine Frage an ihren Sohn, der den Film mit gesehen hat
+
+\ref Pear_Rukiyat.008
+\tx hoboži hayłodebito             buqʼoƛʼo     iƛʼiya,          uqʼoƛʼo iƛʼiya
+\mb hoboži hayło -de       -bito   b-   uqʼoƛʼo iƛʼi -ya         uqʼoƛʼo iƛʼi -ya
+\ge now     he.OBL -APUDESS2 -TRANSL III- direct     go     -PTCP.PRS?? direct     go     -PTCP.PRS??
+\ps adv     pn     -aff      -clit   aff- adj        v      -aff        adj        v      -aff
+
+\nt der zweite clause klingt wie die Verbesserung eines Versprechers
+\rf
+
+\ref Pear_Rukiyat.009
+\tx hayłoy hay   tełes hes genis      bičʼiš       kwid   bikʼekʼno        gorno    welosipedƛʼon         bižiyo
+\mb hayłoy hay   tełes hes geni -s    b-   ičʼ -iš kwid   b-   ikʼekʼ -no  gor -no  welosiped  -ƛʼo -n    b-   iži -yo
+\ge he.ERG  there inner  one pear -GEN1 III- fill  -PST basket III- steal    -CVB put -CVB bicycle(r) -SRESS -and  III- take -PRS
+\ps pn      pn    adv    num n    -aff  aff- v     -aff n      aff- v        -aff v   -aff n          -aff   -clit aff- v    -aff
+
+\rf
+
+\ref Pear_Rukiyat.010 
+\tx hayło   rekʼuz         beqʼimez
+\mb hayło   rekʼu     -z   b-   eqʼi -mez
+\ge this.OBL person.OBL -DAT III- know  -PURP.NEG
+\ps pn       n          -aff aff- v     -aff
+
+\nt das erste pn koennte auch hayłoy sein, das Verb klingt nach bikʼermez
+\rt бекъирмез
+\rf етот человек незаметно
+
+\ref Pear_Rukiyat.011
+\tx hoboži hayłoder        ƛʼoqʼar kezibiqo          ked  kʼonkʼaƛʼo   noxo
+\mb hoboži hayło -der      ƛʼoqʼar kezibiq      -o   ked  kʼonkʼa -ƛʼo nox  -o
+\ge now     he.OBL -APUDLAT2 towards    meet.I/II.PL -PRS girl bike      -SRESS come -PRS
+\ps adv     pn     -aff      adv        v            -aff n    n         -aff   v    -aff
+
+\rf
+
+\ref Pear_Rukiyat.012
+\tx hoboy hayłuy qʼimuƛʼos   ƛʼoqʼonno     biƛʼin         mešatʼno  bun,               gamačʼƛʼo   cʼoxno,   kʼonkʼan      hago qʼidir iƛʼiyo
+\mb hoboy hayłuy qʼimu -ƛʼos ƛʼoqʼon -no   b-   iƛʼi -n   *mešatʼno b-   u        -n   gamačʼ -ƛʼo cʼox -no  kʼonkʼa -n    hago qʼidir iƛʼi -yo
+\ge then  she.ERG head   -SRABL  hat        -and  III- fall   -CVB ***         III- do, make -CVB stone    -SRESS enter -CVB bike      -and  he   down    fall   -PRS
+\ps adv   pn      n      -aff    n          -clit aff- v      -aff ***         aff- v        -aff n        -aff   v     -aff n         -clit pn   adv     v      -aff
+
+\nt eventuell hayɬu statt hayɬuy mit Refernz auf Hut
+
+\ref Pear_Rukiyat.013
+\tx i    haw  kwidno       biƛʼin         geni qʼidido    boso
+\mb *i   haw  kwid   -no   b-   iƛʼi -n   geni qʼidi -do  b-   os   -o
+\ge ***  this basket -and  III- fall   -CVB pear down   -DIR III- fall -PRS
+\ps ***  pn   n      -clit aff- v      -aff n    adv    -aff aff- v    -aff
+\rf
+
+\ref Pear_Rukiyat.014
+\tx hoboy hago qʼidiš     ixa         łono užin      aqʼen
+\mb hoboy hago qʼidi -š   ix     -a   łono uži -n    aqʼe -n
+\ge then  he   down   -GEN1 get.up -INF three boy  -and  come  -PFT
+\ps adv   pn   adv    -aff  v      -aff num   n    -clit v     -aff
+
+\rt гьобой къидиш гьаго иха, 
+\nt auch nicht so genau verstanden
+
+\ref Pear_Rukiyat.015 
+\tx łoran       uži bakʼarzin      buho,              kwidno       bičʼno,       biɣno,              hayłu   kʼonkʼaƛʼon        gorho    hayłoz     kumakno     bun                kekirho    hago
+\mb łora  -n    uži bakʼarzi -n    b-   u        -ho  kwid   -no   b-   ičʼ -no  b-   iɣ        -no  hayłu   kʼonkʼa -ƛʼo -n    gor -ho  hayło -z   kumak -no   b-   u        -n   kekir -ho  hago
+\ge three- -and  boy  collect   -and  III- do, make -PRS basket -and  III- fill  -CVB III- take(away) -CVB this.OBL bike      -SRESS -and  put -PRS he.OBL -DAT help  -and  III- do, make -CVB bring -PRS he
+\ps num    -clit n    v         -clit aff- v        -aff n      -clit aff- v     -aff aff- v          -aff pn       n         -aff   -clit v   -aff pn     -aff n     -clit aff- v        -aff v     -aff pn
+
+\rf лъоран ужи бак1арзи бугьо, квидно бич1но, бигъно гьайлъу
+\rf
+\ref Pear_Rukiyat.016
+\tx tohotow     iƛʼinos,  hay   tohotow     haze      užizaz           kezibiqo      hayłos      ƛʼoqʼon
+\mb toho  -tow  iƛʼi -nos hay   toho  -tow  haze      uži -za     -z   kezibiq  -o   hayło -s    ƛʼoqʼon
+\ge there -??   fall   -SEQ there there -??   these.OBL boy  -OBL.PL -DAT meet.III -PRS he.OBL -GEN1 hat
+\ps adv   -clit v      -aff pn    adv   -clit pn        n    -aff    -aff v        -aff pn     -aff  n
+
+\rf
+
+\ref Pear_Rukiyat.017
+\tx i   šaƛun       peƛen     ezerno          hagon
+\mb *i  šaƛu  -n    peƛe -n   ezer       -no  hago -n
+\ge *** whistle -and  blow  -CVB look<CAUS> -CVB he   -and
+\ps *** n       -clit v     -aff v          -aff pn   -clit
+
+\rf
+
+\ref Pear_Rukiyat.018
+\tx haw  ƛʼoqʼon bižin            toƛo     hayło   uži, łoran       užiłes
+\mb haw  ƛʼoqʼon b-   iži    -n   toƛ -o   hayło   uži  łora  -n    uži -łes
+\ge this hat        III- collect -CVB give -PRS this.OBL boy   three- -and  boy  -INTERABL
+\ps pn   n          aff- v       -aff v    -aff pn       n     num    -clit n    -aff
+
+\rf
+
+\ref Pear_Rukiyat.019
+\tx hayłoy kwidmas       buxno          geni, łono geni hazez         toƛo
+\mb hayłoy kwid   -mas   b-   ux   -no  geni  łono geni haze     -z   toƛ -o
+\ge he.ERG  basket -INABL III- take -CVB pear  three pear they.OBL -DAT give -PRS
+\ps pn      n      -aff   aff- v    -aff n     num   n    pn       -aff v    -aff
+
+\rf
+
+\ref Pear_Rukiyat.020
+\tx haw  ƛʼoqʼon baqʼeroƛʼo
+\mb haw  ƛʼoqʼon b-   aqʼer -oƛʼo
+\ge this hat        III- bring  -SIM
+\ps pn   n          aff- v      -aff
+
+\rf
+
+\ref Pear_Rukiyat.021 
+\tx hoboy haw  kʼonkʼan      bižin         kwidno       bižin         kʼonkʼaƛʼo   hago uži oxo,       hay   łonon      uži .    hayło   rekʼudebito                 .    buqʼoƛʼo         biƛʼiyo
+\mb hoboy haw  kʼonkʼa -n    b-   iži -n   kwid   -no   b-   iži -n   kʼonkʼa -ƛʼo hago uži ox    -o   hay   łono -n    uži .{-} hayło   rekʼu     -de       -bito   .{-} b-       uqʼoƛʼo b-       iƛʼi -yo
+\ge then  this bike      -and  III- take -CVB basket -and  III- take -CVB bike      -SRESS this boy  leave -PRS there three -and  boy  1sec this.OBL person.OBL -APUDESS2 -TRANSL 1sec I/II.PL- direct     I/II.PL- go     -PRS
+\ps adv   pn   n         -clit aff- v    -aff n      -clit aff- v    -aff n         -aff   pn   n    v     -aff pn    num   -clit n    -    pn       n          -aff      -clit   -    aff-     adj        aff-     v      -aff
+
+\rf гьобой гьав к1онк1ан бижин, квидно бижин к1онк1акьо гьаго ужи охо
+
+\ref Pear_Rukiyat.022
+\tx hago rekʼwe kak  raz  .    .    .    qʼidirno     ułino       haw  geni hesƛa nimado            buxeranƛen                      ułiya,       haw  bikʼekʼišłi          biko,         kwidbe      bašiyo        gom,   ezo
+\mb hago rekʼwe *kak *raz .{-} .{-} .{-} qʼidir -no   ułi    -no  haw  geni hesƛa ni    -ma    -do  b-   uxer       -a   -n    -ƛen ułi    -ya   haw  b-   ikʼekʼ -iš -łi  b-   ik  -o   kwid   -be  b-   aši -yo  gom    ez   -o
+\ge this person  ***  ***  1sec 1sec 1sec down    -and  go.down -CVB this pear other  where -INESS -DIR III- take<CAUS> -INF -and  -QUOT go.down -PTCP this III- steal    -PST -MSD  III- see -PRS basket -PL  III- find -PRS be.NEG look -PRS
+\ps pn   n       ***  ***  -    -    -    adv     -clit v       -aff pn   n    adj    pn    -aff   -aff aff- v          -aff -clit -clit v       -aff  pn   aff- v        -aff -clit aff- v   -aff n      -aff aff- v    -aff v      v    -aff
+
+\tx biko          gom    niqen
+\mb b-   ik  -o   gom    ni    -qen
+\ge III- see -PRS be.NEG where -NEG
+\ps aff- v   -aff v      pn    -aff
+
+\rf
+
+\ref Pear_Rukiyat.023
+\tx hibayłu zamanał             łonon      uži uqʼoƛʼo iƛʼiyo,   geni bacʼo
+\mb hibayłu zaman -a   -ł       łono -n    uži uqʼoƛʼo iƛʼi -yo  geni b-   acʼ -o
+\ge this.OBL time  -OBL -INTERESS three -and  boy  direct     go     -PRS pear III- eat  -PRS
+\ps pn       n     -aff -aff      num   -clit n    adj        v      -aff n    aff- v    -aff
+
+\rf
+
+\ref Pear_Rukiyat.026 
+\tx hayłoqorno           bezemez            hago qʼidin      ičin     ezen      ƛoxo,      urɣeziiqo     nido  haw  biƛʼy
+\mb hayło   -qor   -no   b-   eze  -mez     hago qʼidi -n    iči -n   eze  -n   ƛox   -o   urɣeziiq -o   nido  haw  b-   iƛʼ -y
+\ge this.OBL -SRLAT -and  III- look -CVB.NEG he   down   -and  sit  -CVB look -CVB remain -PRS think.I   -PRS where this III- go    -Q
+\ps pn       -aff   -clit aff- v    -aff     pn   adv    -clit v    -aff v    -aff v      -aff v         -aff pn    pn   aff- v     -clit
+
+\rf
+
+\id Pear.Ayshat
+\dt aufgenommen 6/Sept/2006
+\dt transkribiert
+\nt Айшат Ахмедов(45 Jahre
+\nt GinuxII, Tape 3
+
+\ref Pear_Ayshat.001
+\tx hes zoqʼen     rekʼwe
+\mb hes zoqʼe -n   rekʼwe
+\ge one be     -PFT person
+\ps num v      -aff n
+
+\ft There was a man.
+
+\ref Pear_Ayshat.002
+\tx hoboži hayłoy butʼo            zoqʼwen     geni, ažeyƛʼono       ixno,       ƛemoƛʼono          ixno
+\mb hoboži hayłoy b-   utʼ    -o   zoqʼwe -n   geni  ažey -ƛʼo -no   ix     -no  ƛemo    -ƛʼo -no   ix     -no
+\ge now     he.ERG  III- collect -PRS be      -PFT pear  tree  -SRESS -and  get.up -CVB stairway -SRESS -and  get.up -CVB
+\ps adv     pn      aff- v       -aff v       -aff n     n     -aff   -clit v      -aff n        -aff   -clit v      -aff
+
+\ft Standing on a tree he collected pears, standing on a stairway.
+
+\ft
+\ref Pear_Ayshat.003
+\tx hoboži qʼidirno     geni butʼen           qʼidido    ułin,       ričʼno                hagben      karzinabe,     ʔeƛiyo    gomečo,       se   ʔeƛiyo    ʔeluhor,            kwidbe      .    kwidbe
+\mb hoboži qʼidir -no   geni b-   utʼe   -n   qʼidi -do  ułi    -n   r-           ičʼ -no  hagbe -n    karzina   -be  ʔeƛi -yo  gome     -čo  se   ʔeƛi -yo  ʔelu  -ho      -r   kwid   -be  .{-} kwid   -be
+\ge now     down    -and  pear III- collect -CVB down   -DIR go.down -CVB III/IV/V.PL- fill  -CVB these -and  basket(r) -PL  speak  -PRS be.NEG.Q -??   what speak  -PRS we.OBL -APUDESS -LAT basket -PL  1sec basket -PL
+\ps adv     adv     -clit n    aff- v       -aff adv    -aff v       -aff aff-         v     -aff pn    -clit n         -aff v      -aff v        -clit pn   v      -aff pn     -aff     -aff n      -aff -    n      -aff
+
+\ft Then having collected pears (he) came down, (there) stood these baskets (we don't say so), basket, basket.
+\nt jemand anders sagt ihr /kwid/ vor
+
+\ref Pear_Ayshat.004
+\tx hoboži aqʼen     hayłir     rekʼwe, uži
+\mb hoboži aqʼe -n   hayłi -r   rekʼwe  uži
+\ge now     come  -PFT there  -LAT person   boy
+\ps adv     v     -aff adv    -aff n        n
+
+\ft Then came this person, boy.
+
+
+\ref Pear_Ayshat.005
+\tx uži aqʼen,    uži hayłiš   hes kwidno       genimos         bikʼekʼno        oxes       hago
+\mb uži aqʼe -n   uži hayłiš   hes kwid   -no   geni -mo  -s    b-   ikʼekʼ -no  oxe   -s   hago
+\ge boy  come  -PFT boy  from.there one basket -and  pear -OBL -GEN1 III- steal    -CVB leave -PST he
+\ps n    v     -aff n    adv        num n      -clit n    -aff -aff  aff- v        -aff v     -aff pn
+
+\ft The boy came, the boy from over there after having stolen a basket full of pears (he) left.
+\nt das letzte pn ist sehr fragwuerdig, kaum bis gar nicht zu hoeren
+
+\ref Pear_Ayshat.006
+\tx hoboži hayłiš   .    .    .    hayłoy geni butʼo            ƛʼereno     ixno        qʼuyagozo   kwidbe      ričʼa                 łono kwid   goł hayteł
+\mb hoboži hayłiš   .{-} .{-} .{-} hayłoy geni b-   utʼ    -o   ƛʼere -no   ix     -no  qʼuya -gozo kwid   -be  r-           ičʼ -a   łono kwid   goł hayteł
+\ge now     from.there 1sec 1sec 1sec he.ERG  pear III- collect -PRS upwards -and  get.up -CVB other  -??   basket -PL  III/IV/V.PL- fill  -INF three basket be   ??
+\ps adv     adv        -    -    -    pn      n    aff- v       -aff adv     -clit v      -aff adj    -clit n      -aff aff-         v     -aff num   n      v    adv?
+
+\ft Then from over there ... he (the old man) standing upwards (on the tree) he collects pears, another basket, three baskets are there. 
+
+
+\ref Pear_Ayshat.007
+\tx hoboži haw  gozon qʼidir biƛʼiyo        kedno      yike,    welosipedƛʼo    tohobito          kedno      noxo      yiken
+\mb hoboži haw  gozon qʼidir b-   iƛʼi -yo  ked  -no   y-   ike welosiped  -ƛʼo tohobito          ked  -no   nox  -o   y-   ike -n
+\ge now     this ??    down    III- fall   -PRS girl -and  II-  see bicycle(r) -SRESS on.the.other.side girl -and  come -PRS II-  see -CVB
+\ps adv     pn   part? adv     aff- v      -aff n    -clit aff- v   n          -aff   adv               n    -clit v    -aff aff- v   -aff
+
+\ft Then it (the basket) falls down after having seen a girl that comes on a bike from the other side.
+
+
+\ref Pear_Ayshat.008
+\tx hoboži qʼidir biƛʼiš        hayłoqos     haw  genimos         kwid   bičʼiłiš       qʼidido
+\mb hoboži qʼidir b-   iƛʼi -š  hayło -qos   haw  geni -mo  -s    kwid   b-   ičʼił -iš qʼidi -do
+\ge now     down    III- fall   -PST he.OBL -SRABL this pear -OBL -GEN1 basket III- pour.out -PST down   -DIR
+\ps adv     adv     aff- v      -aff pn     -aff   pn   n    -aff -aff  n      aff- v        -aff adv    -aff
+
+\ft Then
+
+
+\ref Pear_Ayshat.009
+\tx hoboži baqʼo             łono uži tohobito
+\mb hoboži b-       aqʼ -o   łono uži tohobito
+\ge now     I/II.PL- come -PRS three boy  on.the.other.side
+\ps adv     aff-     v    -aff num   n    adv
+
+\ft
+\ref Pear_Ayshat.010
+\tx hayło   łoran       uži haw  bakʼarzi bun,               kwid  hayłos     bičʼno        hezoqʼimur toƛno    kekirno,   hayłoqos     yiƛʼiyo        qʼidir šljapa
+\mb hayło   łora  -n    uži haw  bakʼarzi b-   u        -n   kwid  hayło -s   b-   ičʼ -no  hezoqʼimur toƛ -no  kekir -no  hayło -qos   y-   iƛʼi -yo  qʼidir šljapa
+\ge this.OBL three- -and  boy  this collect   III- do, make -CVB baskethe.OBL -GEN1III- fill  -CVB back        give -CVB let   -CVB he.OBL -SRABL IV-  fall   -PRS down    hat(r)
+\ps pn       num    -clit n    pn   v         aff- v        -aff n     pn     -aff aff- v     -aff adv         v    -aff v     -aff pn     -aff   aff- v      -aff adv     n
+
+\ft
+\ref Pear_Ayshat.011
+\tx šljapa neƛin,         hezodoy hayło   łora  uži šljapa yašiyo        hezoqʼimur gozon
+\mb šljapa neƛ -i    -n   hezodoy hayło   łora  uži šljapa y-   aši -yo  hezoqʼimur gozon
+\ge hat(r)  give -Q    -CVB then    this.OBL three- boy  hat(r)  IV-  find -PRS back        ??
+\ps n       v    -clit -aff adv     pn       num    n    n       aff- v    -aff adv         part?
+
+\ft
+\nt neƛin sollte laut Paradigma neƛno sein, aber vielleicht gibt es da eine gewissen Variabilitaet
+
+\ref Pear_Ayshat.012
+\tx hag     šljapa toƛayaz   welosipedno      bičirno        hago ičiyo    łono geni toƛo     haze      łoran          hesso geni
+\mb hag     šljapa toƛ -ayaz welosiped  -no   b-   ičir -no  hago iči -yo  łono geni toƛ -o   haze      łora     -n    hesso geni
+\ge this.IV hat(r)  give -PURP bicycle(r) -and  III- put   -CVB he   stop -PRS three pear give -PRS these.OBL three.OBL -and  some  pear
+\ps pn      n       v    -aff  n          -clit aff- v     -aff pn   v    -aff num   n    v    -aff pn        num       -clit pn?   n
+
+\ft
+\nt haze koennte eher hade oder had sein
+
+\ref Pear_Ayshat.013
+\tx hoboži haw  geni bacʼo         noxo      hag     užibe    łonon      užibe    biƛʼiyo
+\mb hoboži haw  geni b-   acʼ -o   nox  -o   hag     uži -be  łono -n    uži -be  b-       iƛʼi -yo
+\ge now     this pear III- eat  -PRS come -PRS this.IV boy  -PL  three -and  boy  -PL  I/II.PL- go     -PRS
+\ps adv     pn   n    aff- v    -aff v    -aff pn      n    -aff num   -clit n    -aff aff-     v      -aff
+
+\ft
+\ref Pear_Ayshat.014
+\tx seda    zamanał             haw  geni butʼen           qʼidir ułiyo       hago deduška, eži rekʼwe
+\mb seda    zaman -a   -ł       haw  geni b-   utʼe   -n   qʼidir ułi    -yo  hago *deduška eži rekʼwe
+\ge one.OBL time  -OBL -INTERESS this pear III- collect -CVB down    go.down -PRS this ***       old  person
+\ps num     n     -aff -aff      pn   n    aff- v       -aff adv     v       -aff pn   ***       adj  n
+
+\ft
+\ref Pear_Ayshat.015
+\tx hoboži qʼidi aqʼeyƛʼo   hag  zones kwid   bašiyo        gom,   geniš     bičʼo         gołani, hacikʼno
+\mb hoboži qʼidi aqʼe -yƛʼo hag  zones kwid   b-   aši -yo  gom    geni -š   b-   ičʼ -o   gołani  hacikʼ -no
+\ge now     down   come  -SIM    that his   basket III- find -PRS be.NEG pear -GEN1 III- fill  -PRS be.PTPC  search  -CVB
+\ps adv     adv    v     -aff    pn   pn    n      aff- v    -aff v      n    -aff  aff- v     -aff v        v       -aff
+\nt postponed relative clause
+
+\id Pear.Dzhavgarat
+\nt Исаева, Джавгарат Набиева (17 Jahre)
+\nt tape5 Ginux IV
+\dt aufgenommen 23/Sept/2006
+\dt transkribiert 23/Sept/2006
+
+\ref Pear_Dzhavgarat.001
+\tx hes zoqʼen     rekʼu
+\mb hes zoqʼe -n   rekʼu
+\ge one be     -PFT person
+\ps num v      -aff n
+
+\rf гь ес зокъен рек1ве
+
+\ref Pear_Dzhavgarat.002
+\tx hayłoy zoqʼen     butʼo            geni, ažeyƛʼos
+\mb hayłoy zoqʼe -n   b-   utʼ    -o   geni  ažey -ƛʼos
+\ge he.ERG  be     -PFT III- collect -PRS pear  tree  -SRABL
+\ps pn      v      -aff aff- v       -aff n     n     -aff
+
+\rf гь айлъой бут1о зокъен гени, ажейкьос
+
+\ref Pear_Dzhavgarat.003
+\tx hayteł zoqʼen     łono, karzina
+\mb hayteł zoqʼe -n   łono  karzina
+\ge ??      be     -PFT three  basket(r)
+\ps adv?    v      -aff num    n
+
+\rf гь ай телъ зокъен лъоно, карзина
+\nt sie ueberlegt, ihr faellt das Wort fuer Korb nicht ein
+
+\ref Pear_Dzhavgarat.004
+\tx qʼono ričʼerno            hałoy      łono ʔeƛa     ričʼerayaz           ixno,       ƛemoƛʼo      ažeyaƛʼos       butʼayaz
+\mb qʼono r-   ičʼer     -no  hało  -y   łono ʔeƛ -a   r-   ičʼer     -ayaz ix     -no  ƛemo    -ƛʼo ažey -a   -ƛʼos b-   utʼ    -ayaz
+\ge two    V-   fill<TRANS> -CVB he.OBL -ERG three speak -INF V-   fill<TRANS> -PURP get.up -CVB stairway -SRESS tree  -OBL -SRABL  III- collect -PURP
+\ps num    aff- v           -aff pn     -aff num   v     -aff aff- v           -aff  v      -aff n        -aff   n     -aff -aff    aff- v       -aff
+
+\rf къоно рич1ерно гь алъой лъоно элълъа рич1ераяз ихно,  кьемокьо ажейякьос бут1аяз
+
+\ref Pear_Dzhavgarat.005
+\tx hayteł gozon kʼonkʼaƛʼo   iƛʼin     hes uži
+\mb hayteł gozon kʼonkʼa -ƛʼo iƛʼi -n   hes uži
+\ge there   ??    bike      -SRESS go     -PFT one boy
+\ps adv     part? n         -aff   v      -aff num n
+
+\rf гь ай телъ гозон к1онк1акьо икьин гь ес ужи 
+
+\ref Pear_Dzhavgarat.006
+\tx kʼonkʼaƛʼo   iƛʼiya     hałoy      zoqʼen     buxanƛen             hes geni
+\mb kʼonkʼa -ƛʼo iƛʼi -ya   hało  -y   zoqʼe -n   b-   ux   -an   -ƛen hes geni
+\ge bike      -SRESS go     -PTCP he.OBL -ERG be     -PFT III- take -FUT2 -QUOT one pear
+\ps n         -aff   v      -aff  pn     -aff v      -aff aff- v    -aff  -clit num n
+
+\rf к1онк1акь о икьия гь алъой буханл1ен зокъен гь ес гени
+\nt tlen complementation
+
+\ref Pear_Dzhavgarat.007
+\tx hezodoy hago ezes      iqomeƛʼo       hałoy      karzinatow      ruxno          oxen
+\mb hezodoy hago eze  -s   iq     -omeƛʼo hało  -y   karzina   -tow  r-   ux   -no  oxe   -n
+\ge then    he   look -PST happen -SIM.NEG  he.OBL -ERG basket(r) -??   V-   take -CVB leave -PFT
+\ps adv     pn   v    -aff v      -aff      pn     -aff n         -clit aff- v    -aff v     -aff
+
+\rf гь езодой гь аго эзес икъомекьо гь алъой карзинатов рухно охен
+
+\ref Pear_Dzhavgarat.008
+\tx oxenos     hado uži iƛʼiyo    goła   keziyiqno       hes ked
+\mb oxe   -nos hado uži iƛʼi -yo  goła   keziyiq    -no  hes ked
+\ge leave -SEQ this boy  go     -PRS be.PTCP meet.II/IV -PFT one girl
+\ps v     -aff pn   n    v      -aff v       v          -aff num n
+
+\rf охенос гь алъоз кези йихъно гь ес кед, 
+
+\ref Pear_Dzhavgarat.009
+\tx kedqor      ezałi          hałoqos      šapkan      biƛʼirho         łacinay        i   hadotow    xemuqon             cʼoxno    qʼidir iƛʼiyo
+\mb ked  -qor   ez   -a   -łi  hało  -qos   šapka -n    b-   iƛʼir  -ho  łaci -na  -y   *i  hado -tow  xemu  -qo     -n    cʼox -no  qʼidir iƛʼi -yo
+\ge girl -SRLAT look -INF -MSD  he.OBL -SRABL hat    -and  III- go<CAUS> -PRS wind  -OBL -ERG *** he   -??   stone -SRESS2 -and  enter -CVB down    fall   -PRS
+\ps n    -aff   v    -aff -clit pn     -aff   n      -clit aff- v        -aff n     -aff -aff *** pn   -clit n     -aff    -clit v     -aff adv     v      -aff
+
+\rf кедхъор эзалъи гь алъохъос шапкан бикьиргьо лъацинай и гь адотов хемухъон ц1охно къидир икьиё 
+
+\ref Pear_Dzhavgarat.010
+\tx hezodoy qʼidir iƛʼinos   hałoy      butʼanƛen              ułałi            baqʼo             łono uži
+\mb hezodoy qʼidir iƛʼi -nos hało  -y   b-   utʼ    -an   -ƛen uł     -a   -łi  b-       aqʼ -o   łono uži
+\ge then    down    fall   -SEQ he.OBL -ERG III- collect -FUT2 -QUOT go.down -OBL -MSD  I/II.PL- come -PRS three boy
+\ps adv     adv     v      -aff pn     -aff aff- v       -aff  -clit v       -aff -clit aff-     v    -aff num   n
+
+\rf гьезодой къидир икьинос гь алъой бут1анл1ен улъилъи  бакъо лъоно ужи
+
+\ref Pear_Dzhavgarat.011
+\tx hazey         hałoz      kumakno     buho               geni butʼayaz          i    kekirho
+\mb haze     -y   hało  -z   kumak -no   b-   u        -ho  geni b-   utʼ    -ayaz *i   kekir -ho
+\ge they.OBL -ERG he.OBL -DAT help  -and  III- do, make -PRS pear III- collect -PURP ***  send  -PRS
+\ps pn       -aff pn     -aff n     -clit aff- v        -aff n    aff- v       -aff  ***  v     -aff
+
+\rf гь азей гь алъоз кумакно бугьо гени бут1аяз и кекригьо
+
+\ref Pear_Dzhavgarat.012
+\tx hoboži hado genin      bižin            hesqen  toƛmez       oxo        hado uži
+\mb hoboži hado geni -n    b-   iži    -n   hesqen  toƛ -mez     ox    -o   hado uži
+\ge now     he   pear -and  III- collect -CVB nothing give -CVB.NEG leave -PRS this boy
+\ps adv     pn   n    -clit aff- v       -aff pn      v    -aff     v     -aff pn   n
+
+\rf гь обожи гьадо генин бижин гь есхъен тол1мез охо гь адо ужи 
+
+\ref Pear_Dzhavgarat.013
+\tx oxałi           haze      łonon      užiqogon        bašiyo        hayłos      ƛʼoqʼon łacinay        bižiyo        goła
+\mb ox    -a   -łi  haze      łono -n    uži -qo    -gon b-   aši -yo  hayło -s    ƛʼoqʼon łaci -na  -y   b-   iži -yo  goła
+\ge leave -INF -MSD  these.OBL three -and  boy  -SRESS -??  III- find -PRS he.OBL -GEN1 hat        wind  -OBL -ERG III- take -PRS be.PTCP
+\ps v     -aff -clit pn        num   -clit n    -aff   -aff aff- v    -aff pn     -aff  n          n     -aff -aff aff- v    -aff v
+
+\rf бохал1и гь азе лъонон ужихъогон башиё гь алъос кьокъон лъацинай бижиё голъа 
+\nt postposed relative clause RC
+
+\ref Pear_Dzhavgarat.014
+\tx bižinos       hezo haze      užizay           šaƛun       qaƛen     ičirho    hago ƛʼoqʼon toƛayaz
+\mb b-   iži -nos hezo haze      uži -za     -y   šaƛu  -n    qaƛe -n   ičir -ho  hago ƛʼoqʼon toƛ -ayaz
+\ge III- take -SEQ then these.OBL boy  -OBL.PL -ERG whistle -and  call  -CVB stop  -PRS he   hat        give -PURP
+\ps aff- v    -aff adv  pn        n    -aff    -aff n       -clit v     -aff v     -aff pn   n          v    -aff
+
+\rf бижинос гьезо гь азе ужизай шал1ун хъал1ен ичиргьо гь аго кь окъон тол1аяз
+
+\ref Pear_Dzhavgarat.015
+\tx ičałi        ƛʼoqʼon toƛo,    hezodoy hało   užiy     łono geni toƛo,    haze      užizaz,          i,  boxo                hadbe
+\mb ič -a   -łi  ƛʼoqʼon toƛ -o   hezodoy hało   uži -y   łono geni toƛ -o   haze      uži -za     -z   *i  b-       ox    -o   hadbe
+\ge be  -INF -MSD  hat        give -PRS then    this.OBLboy  -ERG three pear give -PRS these.OBL boy  -OBL.PL -DAT *** I/II.PL- leave -PRS these
+\ps v   -aff -clit n          v    -aff adv     pn      n    -aff num   n    v    -aff pn        n    -aff    -aff *** aff-     v     -aff pn
+
+\rf ичалъи кь окъоно тол1о, г` езодой гь алъо ужи лъоно гени тол1о, гь азе ужизаз, и, бохо гь адбе
+
+\ref Pear_Dzhavgarat.016
+\tx boxałi                   hayteł geni butʼo            goła   užiž    rekʼuz         biko          had   xexbe,   geni baco
+\mb b-       ox    -a   -łi  hayteł geni b-   utʼ    -o   goła   uži -ž  rekʼu     -z   b-   ik  -o   had   xexbe    geni b-   acʼ -o
+\ge I/II.PL- leave -INF -MSD  there   pear III- collect -PRS be.PTCP boy  -DAT person.OBL -DAT III- see -PRS these children pear III- eat  -PRS
+\ps aff-     v     -aff -clit adv     n    aff- v       -aff v       n    -aff n          -aff aff- v   -aff pn    n        n    aff- v    -aff
+
+\rf бохалъи гь ай телъ гени бут1о голъа ужиж рек1уз бико гь ад хехбе гени бацо
+
+\ref Pear_Dzhavgarat.017
+\tx ułano             ułin        hałoy      tʼotʼerho,   hes qʼonoƛen   ʔeƛin
+\mb uł     -a   -no   ułi    -n   hało  -y   tʼotʼer -ho  hes qʼono -ƛen ʔeƛi -n
+\ge go.down -INF -and  go.down -CVB he.OBL -ERG count     -PRS one two    -QUOT speak  -CVB
+\ps v       -aff -clit v       -aff pn     -aff v         -aff num num    -clit v      -aff
+
+\rf улъано улъин гь алъо т1от1ергьо гь ес къонол1ен эл1ин
+
+\ref Pear_Dzhavgarat.018
+\tx allah, hesƛa nido  riƛʼin,        kʼoxƛʼo   tʼotʼerho
+\mb allah  hesƛa nido  r-   iƛʼi -n   kʼox -ƛʼo tʼotʼer -ho
+\ge Allah  other  where V-   go     -PFT twice -SRESS count     -PRS
+\ps n      adj    pn    aff- v      -aff num   -aff   v         -aff
+
+\rf Аллагь, гь есл1а нидо рикьин
+
+\ref Pear_Dzhavgarat.019
+\tx hezodoy hazeqor         ezen      ƛexwo      hag    užibe    biƛʼiƛʼo           geni baco
+\mb hezodoy haze     -qor   eze  -n   ƛexw  -o   hag    uži -be  b-       iƛʼi -ƛʼo geni b-   acʼ -o
+\ge then    they.OBL -SRLAT look -CVB remain -PRS this.IVboy  -PL  I/II.PL- go     -SIM   pear III- eat  -PRS
+\ps adv     pn       -aff   v    -aff v      -aff pn     n    -aff aff-     v      -aff   n    aff- v    -aff
+
+\rf гь езодой гь азехъор эзен л1ехо гь аг ужибе бикьикьо гени бацо

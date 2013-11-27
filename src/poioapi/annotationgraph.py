@@ -20,6 +20,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import poioapi.io.elan
 import poioapi.io.graf
 import poioapi.io.pickle
+import poioapi.io.toolbox
 import poioapi.io.toolboxxml
 import poioapi.io.typecraft
 
@@ -266,9 +267,11 @@ class AnnotationGraph():
 
         return codecs.open(filename, "r", "utf-8")
 
-    def _from_file(self, stream, stream_type):
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
+    def _from_file(self, stream, stream_type, **kwargs):
+        # TODO: move the stream opening to the parser classes
+        if stream_type != poioapi.data.TOOLBOX:
+            if not hasattr(stream, 'read'):
+                stream = self._open_file_(stream)
 
         parser = None
         if stream_type == poioapi.data.EAF:
@@ -279,6 +282,12 @@ class AnnotationGraph():
             parser = poioapi.io.pickle.Parser(stream)
         elif stream_type == poioapi.data.TOOLBOXXML:
             parser = poioapi.io.toolboxxml.Parser(stream)
+        elif stream_type == poioapi.data.TOOLBOX:
+            if not hasattr(stream, 'read'):
+                stream = codecs.open(stream, "rb")
+            parser = poioapi.io.toolbox.Parser(stream)
+            parser.record_marker = kwargs['record_marker']
+            parser.parse()
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.parse()
@@ -310,12 +319,19 @@ class AnnotationGraph():
         """
         self._from_file(stream, poioapi.data.TREEPICKLE)
 
-    def from_toolbox(self, stream):
+    def from_toolboxxml(self, stream):
         """This method generates a GrAF object
         from a xml toolbox file.
 
         """
-        self._from_file(stream, poioapi.data.TOOLBOX)
+        self._from_file(stream, poioapi.data.TOOLBOXXML)
+
+    def from_toolbox(self, stream, record_marker = 'ref'):
+        """This method generates a GrAF object
+        from a xml toolbox file.
+
+        """
+        self._from_file(stream, poioapi.data.TOOLBOX, record_marker=record_marker)
 
     def from_graf(self, stream):
         """Load the project annotation graph from a GrAF/XML file or stream.
