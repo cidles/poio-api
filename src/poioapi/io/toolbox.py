@@ -433,7 +433,12 @@ class ToolboxLine(object):
                     cur_word += self.line_whitespace[index]
                     cur_word += cur_token
                 
-                elif last_element == "" and allow_orphans is True:
+                # TODO: @Jan: when das cur_token nur ein compund_marker ist
+                # (also z.B. hat der Benutzer nur ein "-" eingetragen),
+                # dann ging das hier schief; deswegen habe ich das "or"
+                # eingefügt. Kann das Probleme machen?
+                elif (last_element == "" and allow_orphans) or \
+                    cur_token == compound_marker:
                     
                     # Start assembling the next word
                     cur_word = cur_token
@@ -441,6 +446,8 @@ class ToolboxLine(object):
                 else:
                     # If the compound marker is preceded by anything other
                     # than a stem, raise an error
+                    print(last_element)
+                    print(cur_token)
                     raise RuntimeError(
                         "Toolbox line cannot be parsed into words (Yoho!): " + \
                         self.line_string)
@@ -748,6 +755,7 @@ class Toolbox:
 
         """
         self.filepath = filepath
+        self.tiers = set()
 
     def lines(self):
         # Open input file
@@ -835,6 +843,9 @@ class Toolbox:
                 
                 # Set flag to true
                 found_first_record = True
+
+                # add record_marker to tier list
+                self.tiers.add(record_marker)
             
             # Found line without record marker
             else:
@@ -843,8 +854,7 @@ class Toolbox:
                     header.append(toolbox_line)
                 
                 # Found a record line
-                else:
-                    
+                else:                    
                     # Make sure a record marker has been found already
                     if len(cur_record) == 0:
                         raise RuntimeError(
@@ -856,6 +866,10 @@ class Toolbox:
                     else:                        
                         # Add current line to current record
                         cur_record.append(toolbox_line)
+
+                        # add marker to tier list
+                        if toolbox_line.tier_marker != "":
+                            self.tiers.add(toolbox_line.tier_marker)
         
         # Make sure at least one record has been found
         if found_first_record is False:
@@ -881,11 +895,78 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
-        self.parse()
+        self.record_marker = None
+        self._record_ids = []
+        self._record_dict = dict()
 
     def parse(self):
         """This method will parse the input file.
 
         """
+        if not self.record_marker:
+            raise(RuntimeError, "No record marker specified. For Toolbox files"
+                " you have to set the Toolbox.record_marker (e.g. 'ref').")
 
-        pass
+        self.toolbox = Toolbox(self.filepath)
+        self.records = self.toolbox.records(self.record_marker)
+        self.header = self.records.pop(0)
+        self._create_records_dict()
+
+    def get_root_tiers(self):
+        return [poioapi.io.graf.Tier(self.record_marker)]
+
+    def get_child_tiers_for_tier(self, tier):
+        if tier.name == self.record_marker:
+            tiers = []
+            for t in self.toolbox.tiers:
+                if t != self.record_marker:
+                    tiers.append(poioapi.io.graf.Tier(t))
+            return tiers
+
+    def get_annotations_for_tier(self, tier, annotation_parent=None):
+        if tier.name == self.record_marker:
+            return [poioapi.io.graf.Annotation(rec_id,
+                self._record_dict[rec_id][self.record_marker])
+                    for rec_id in self._record_ids]
+
+        elif annotation_parent:
+            if tier.name in self._record_dict[annotation_parent.id]:
+                return [poioapi.io.graf.Annotation(i, word)
+                    for i, word in enumerate(self._record_dict[
+                        annotation_parent.id][tier.name])]
+        return []
+
+    def tier_has_regions(self, tier):
+        return False
+
+    def region_for_annotation(self, annotation):
+        return None
+
+
+    def get_primary_data(self):
+        """This method returns the primary data of the Toolbox file.
+
+        Returns
+        -------
+        primary_data : object
+            PrimaryData object.
+
+        """
+
+        primary_data = poioapi.io.graf.PrimaryData()
+        primary_data.type = poioapi.io.graf.NONE
+        primary_data.filename = "unknown"
+
+        return primary_data
+
+    def _create_records_dict(self):
+        for r in self.records:
+            record_id = None
+            cur_record_dict = dict()
+            for line in r:
+                if line.tier_marker == self.record_marker:
+                    record_id = line.line_contents
+                    self._record_ids.append(record_id)
+                cur_record_dict[line.tier_marker] = line.words(
+                    allow_orphans=True)
+            self._record_dict[record_id] = cur_record_dict
