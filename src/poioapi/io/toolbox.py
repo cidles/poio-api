@@ -165,6 +165,9 @@ class ToolboxLine(object):
 
     ############################################ Properties
 
+    # TODO: @Jan: Ich hab alle getter/setter in properties umgewandelt.
+    # Einige davon sind nicht getestet. Falls möglich, könntest du deine
+    # Skripte mit diesem Code testen?
     def line_original():
         doc = "The line_original property."
         def fget(self):
@@ -569,6 +572,9 @@ class ToolboxLine(object):
             require_stem=require_stem, allow_orphans=allow_orphans)
         return len(words)
 
+    # TODO: @Jan: Die ganzen "hooks" habe ich einfach so übernommen, sind nicht
+    # getestet. Nur "repr" habe ich bisserl geändert, damits schöner aussieht.
+
     # Define useful hooks
     def __eq__(self, other):
         
@@ -769,6 +775,10 @@ class Toolbox:
         
         # Go through lines in the input file
         for line in input_file:
+            # TODO: @Jan: Hier hatte unsere Beispieldatei auf Github (s. auch
+            # die Tests) Probleme, da wohl nicht-UTF-8-Zeichen in der Datei
+            # vorkamen. Diese ignoriere ich jetzt. Hattest du schon ähnliche
+            # Probleme?
             line = line.decode("utf-8", 'ignore')
             
             if line.strip() == "":
