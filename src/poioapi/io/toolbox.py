@@ -934,17 +934,19 @@ class Parser(poioapi.io.graf.BaseParser):
             return tiers
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
+        annotations = []
         if tier.name == self.record_marker:
-            return [poioapi.io.graf.Annotation(rec_id,
-                self._record_dict[rec_id][self.record_marker])
-                    for rec_id in self._record_ids]
+            for rec_id in self._record_ids:
+                for rec in self._record_dict[rec_id][self.record_marker]:
+                    annotations.append(poioapi.io.graf.Annotation(rec_id, rec))
 
         elif annotation_parent:
             if tier.name in self._record_dict[annotation_parent.id]:
                 return [poioapi.io.graf.Annotation(i, word)
                     for i, word in enumerate(self._record_dict[
                         annotation_parent.id][tier.name])]
-        return []
+
+        return annotations
 
     def tier_has_regions(self, tier):
         return False
