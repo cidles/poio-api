@@ -942,7 +942,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         elif annotation_parent:
             if tier.name in self._record_dict[annotation_parent.id]:
-                return [poioapi.io.graf.Annotation(i, word)
+                return [poioapi.io.graf.Annotation(str(i), word)
                     for i, word in enumerate(self._record_dict[
                         annotation_parent.id][tier.name])]
 
