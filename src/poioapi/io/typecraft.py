@@ -14,8 +14,9 @@ Typecraf files and generate GrAF files.
 from __future__ import absolute_import
 
 import re
-
-import xml.etree.ElementTree as ET
+from unittest.case import _Outcome
+from xml.etree import ElementTree
+import xml.etree.cElementTree as ET
 
 import poioapi.io.graf
 
@@ -167,3 +168,79 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def tier_has_regions(self, tier):
         pass
+
+class Writer(poioapi.io.graf.BaseWriter):
+    """
+
+    """
+
+    def write(self, outputfile, converter):
+
+        nodes = converter.graf.nodes
+
+        phrases = self._get_phrases(nodes)
+
+        attribs = {"xsi:schemaLocation":"http://typecraft.org/typecraft.xsd",
+                   "xmlns":"http://typecraft.org/typecraft",
+                   "xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance"}
+
+        root = ET.Element("typecraft", attribs)
+
+        # The language must be set as und
+        text = ET.SubElement(root, "text", {"id":"1", "lang":"und"})
+        ET.SubElement(text, "title").text = converter.meta_information
+        ET.SubElement(text, "titleTranslation")
+        ET.SubElement(text, "body").text = self._get_body(phrases)
+
+        for p in phrases:
+            phrase = ET.SubElement(text, "phrase", {"id":p.id, "valid":"VALID"})
+            ET.SubElement(phrase, "original").text = p.annotations._elements[0].features["annotation_value"]
+            ET.SubElement(phrase, "translation")
+            ET.SubElement(phrase, "description")
+            ET.SubElement(phrase, "globaltags", {"id":"1","tagset":"Default"})
+
+            for w in self._get_words(nodes, p.id):
+                value = w.annotations._elements[0].features["annotation_value"]
+                word = ET.SubElement(phrase, "word", {"word":value, "head":value})
+                ET.SubElement(word, "pos").text = self._get_pos(nodes, w.id)
+                for m in self._get_words(nodes, w.id):
+                    value = m.annotations._elements[0].features["annotation_value"]
+                    morpheme = ET.SubElement(word, "morpheme", {"text":value, "baseform":value})
+                    for g in self._get_glosses(nodes, m.id):
+                        value = g.annotations._elements[0].features["annotation_value"]
+                        ET.SubElement(morpheme, "gloss").text = value
+
+
+        tree = ET.ElementTree(root)
+        tree.write(outputfile)
+
+        return
+
+    def _get_phrases(self, nodes):
+        return [node for node in nodes if node.id.startswith("ref")]
+
+    def _get_body(self, phrases, body=""):
+        for n in phrases:
+            body += n.annotations._elements[0].features["annotation_value"]
+
+        return body
+
+    def _get_words(self, nodes, parent_id):
+         return [node for node in nodes
+                 if node.id.startswith("t") and
+                    node.parent.id == parent_id]
+
+    def _get_pos(self, nodes, parent_id):
+        for node in nodes:
+            if node.id.startswith("p") and node.parent.id == parent_id:
+                return node.annotations._elements[0].features["annotation_value"]
+
+    def _get_morphemes(self, nodes, parent_id):
+        return [node for node in nodes
+                 if node.id.startswith("m") and
+                    node.parent.id == parent_id]
+
+    def _get_glosses(self, nodes, parent_id):
+        return [node for node in nodes
+                 if node.id.startswith("g") and
+                    node.parent.id == parent_id]
