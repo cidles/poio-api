@@ -22,6 +22,7 @@ import poioapi.io.graf
 import poioapi.io.pickle
 import poioapi.io.toolbox
 import poioapi.io.toolboxxml
+import poioapi.io.shoebox
 import poioapi.io.typecraft
 
 from poioapi import data
@@ -282,6 +283,8 @@ class AnnotationGraph():
             parser = poioapi.io.pickle.Parser(stream)
         elif stream_type == poioapi.data.TOOLBOXXML:
             parser = poioapi.io.toolboxxml.Parser(stream)
+        elif stream_type == poioapi.data.SHOEBOX:
+            parser = poioapi.io.shoebox.Parser(stream)
         elif stream_type == poioapi.data.TOOLBOX:
             if not hasattr(stream, 'read'):
                 stream = codecs.open(stream, "rb")
@@ -318,6 +321,13 @@ class AnnotationGraph():
 
         """
         self._from_file(stream, poioapi.data.TREEPICKLE)
+
+    def from_shoebox(self, stream):
+        """This method generates a GrAF object
+        from a shoebox file.
+
+        """
+        self._from_file(stream, poioapi.data.SHOEBOX)
 
     def from_toolboxxml(self, stream):
         """This method generates a GrAF object
