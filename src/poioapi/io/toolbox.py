@@ -214,10 +214,15 @@ class ToolboxLine(object):
                 
             # Determine the whitespace in the original version
             # of the line
-            self._line_whitespace = re.findall(r"\s+", line)
-                
-            # Tokenized version of line (split at whitespace)
-            self._line_tokenized = line.strip().split()
+            # Workaround for morpheme lines: do not split at commas
+            if self._tier_marker == "ge":
+                self._line_whitespace = re.findall("(?<!,)\s+", line)   
+                # Tokenized version of line (split at whitespace)
+                self._line_tokenized = re.split("(?<!,)\s+", line.strip())
+            else:
+                self._line_whitespace = re.findall("\s+", line)   
+                # Tokenized version of line (split at whitespace)
+                self._line_tokenized = re.split("\s+", line.strip())
             
             # Set dirty flag to true if line_original is not
             # equal to the new line_string
@@ -397,6 +402,17 @@ class ToolboxLine(object):
                 """have the same length.""")
         
         return True
+
+    def is_empty(self):
+        """
+        Check whether the line is totally empty.
+
+        """
+        # Both the tier marker and the line contents must be empty
+        if self.tier_marker == "" and self.line_contents == "":
+            return True
+        else:
+            return False
 
     def words(self, affixes="-=", compound_marker="-", require_stem=False,
         allow_orphans=True):
@@ -892,9 +908,475 @@ class Toolbox:
 
         return records
 
+    def aligned_records(self, record_marker, record_level_markers,
+        word_level_markers, morpheme_level_markers, morphemic_parse_marker):
+        records = self.records(record_marker)
+
+        aligned_records = []
+
+        # Parse the structure of each record
+        for record in records:
+            
+            record_lines, record_header, record_level_content, blocks = \
+                self._parse_record(record, record_marker,
+                    record_level_markers, word_level_markers,
+                    morpheme_level_markers)
+
+            if record_header is not None:                
+                # Process blocks
+                for block_index, block in enumerate(blocks):
+                    # Check the structure of the block and determine the types
+                    # of morphemes
+                    morphemes, types_of_morphemes = self._process_block(
+                        block, word_level_markers, morpheme_level_markers, 
+                        morphemic_parse_marker)
+                    
+                    output_lines = self._align_block(block, morphemes,
+                        types_of_morphemes, word_level_markers,
+                        morpheme_level_markers, skip_invisibles=False,
+                        use_bytes=True)
+
+                    aligned_records.append(output_lines)
+                
+            #         # Produce a mapping from input to output lines
+            #         # based on object identity
+            #         # TODO: Is that safe?
+            #         #for line_index in range(len(block)):
+                    
+            #             input_line_id = id(block[line_index])
+            #             line_mapping[input_line_id] = output_lines[line_index]
+                
+            # # Go through lines in original record
+            # for line in record:
+                            
+            #     # Test whether there is a mapping from the current
+            #     # line to a modified output line
+            #     if id(line) in line_mapping:
+                    
+            #         # Output modified line
+            #         print(line_mapping[id(line)], file=output_file)
+                
+            #     else:
+                    
+            #         # Otherwise output original line
+            #         print(line.get_line_string(), file=output_file, end="")
+
+        return aligned_records
+
+    ############################# private methods
+
+    def _parse_record(self, toolbox_record, record_marker, record_level_markers,
+        word_level_markers, morpheme_level_markers):
+        
+        # Parts of a record
+        record_lines = toolbox_record    
+        record_header = None
+        record_level_content = []
+        record_blocks = []
+        found_words = False
+        found_morphemes = False
+        found_tiers = set()
+        found_tiers_in_block = set()
+        
+        record_header = record_lines.pop(0)
+
+        # Make sure the first line of the record contains the record_marker
+        if record_header.tier_marker != record_marker:
+            # Header record
+            return (record_lines, record_header, record_level_content,
+                record_blocks)
+        
+        # Real record
+        else:
+            # Save record header
+            cur_block = []
+            
+            # Go through the remaining lines
+            for line in record_lines:
+                # Found a record-level marker?
+                if line.tier_marker in record_level_markers:
+                    # Warn if the same tier has already been found
+                    # in the current record
+                    if line.tier_marker in found_tiers:
+                        print("Warning: Tier with marker", line.tier_marker,
+                            "found more than once in record",
+                            record_header.line_contents)
+                    
+                    found_tiers.add(line.tier_marker)
+                    
+                    # Add line to record-level content
+                    record_level_content.append(line)
+                    
+                    # If the current block is non-empty, add it
+                    # to the list of blocks and start a new one
+                    if len(cur_block) > 0:
+                        # Issue a warning if no morphemes have been found
+                        if found_morphemes is False:
+                            print("Warning: No morphemes found in block", cur_block)
+
+                        # Issue a warning if no words have been found
+                        if found_words is False:
+                            print("Warning: No words found in block", cur_block)
+                        
+                        record_blocks.append(cur_block)
+                        cur_block = []
+                        found_tiers_in_block = set()
+                        found_words = False
+                        found_morphemes = False
+                
+                # Found a word-level marker?
+                elif line.tier_marker in word_level_markers or \
+                    line.tier_marker in morpheme_level_markers:
+
+                    # Current tier already found in current block
+                    if line.tier_marker in found_tiers_in_block:
+                        
+                        # If the current block is non-empty, add it
+                        # to the list of blocks and start a new one
+                        if len(cur_block) > 0:
+                            # Issue a warning if no morphemes have been found
+                            if found_morphemes is False:
+                                print("Warning: No morphemes found in block",
+                                    cur_block)
+
+                            # Issue a warning if no words have been found
+                            if found_words is False:  
+                                print("Warning: No words found in block", cur_block)
+                        
+                            record_blocks.append(cur_block)
+                            cur_block = []
+                            found_tiers_in_block = set()
+                            found_words = False
+                            found_morphemes = False
+                    
+                    # Add line to current block
+                    cur_block.append(line)
+                    found_tiers_in_block.add(line.tier_marker)
+
+                    if line.tier_marker in word_level_markers:
+                        found_words = True
+                    else:
+                        found_morphemes = True
+                    
+                
+                # Found an empty line, possibly a block division
+                elif line.is_empty() or line.line_original.strip() == "":
+                    # Add line to record-level content
+                    record_level_content.append(line)
+                            
+                else:
+                    raise RuntimeError(
+                        "Found a line I couldn't classify: {0}".format(
+                            line.line_original))
+
+            # Process the last block
+            if len(cur_block) > 0:
+                # Issue a warning if no morphemes have been found
+                if found_morphemes is False:
+                    print("Warning: No morphemes found in block", cur_block)
+
+                # Issue a warning if no words have been found
+                if found_words is False:
+                    print("Warning: No words found in block", cur_block)
+                        
+                # Add block to list of blocks
+                record_blocks.append(cur_block)
+        
+        return record_lines, record_header, record_level_content, record_blocks
+
+    def _parse_morphemes(self, line):
+        # List of morphemes
+        morphemes = []
+        # Get sequence of words
+        words = line.words()
+        
+        # Go through words
+        for word in words:
+            morphemes_of_cur_word = []
+            # Split word at whitespace or split characters
+            morphemes_of_cur_word = word.split()
+            # Append morphemes of current word to list of morphemes
+            morphemes.append(morphemes_of_cur_word)
+        
+        return morphemes
+
+    def _process_block(self, block, word_level_markers, morpheme_level_markers,
+        morphemic_parse_marker):
+        
+        markers = set()
+        
+        # Check for duplicate tiers
+        for line in block:
+            # Extract tier marker
+            marker = line.tier_marker
+            
+            # Has it already been seen in the current block
+            if marker in markers:
+                raise RuntimeError(
+                    "Duplicate tiers in block: {0}".format(block))
+
+            markers.add(marker)
+        
+        # Number of words
+        number_of_words = 0
+        word_difference = False
+        words_maximum = 0
+        
+        # Process lines
+        for line in block:
+            words = []
+            if line.tier_marker in word_level_markers:
+                words = line.line_tokenized
+
+                if len(words) != number_of_words and number_of_words > 0:
+                    word_difference = True
+
+                number_of_words = len(words)
+            
+            elif line.tier_marker in morpheme_level_markers:
+                words = line.words()
+
+                if len(words) != number_of_words and number_of_words > 0 and \
+                        len(words) > 0:
+                    word_difference = True
+                
+                if len(words) != 0:
+                    number_of_words = len(words)
+            
+            else:
+                raise RuntimeError(
+                    "Line in block is neither word nor morpheme tier: {0}"\
+                        .format(line))
+
+            # count the maximum number of words for tiers
+            if len(words) > words_maximum:
+                words_maximum = len(words)
+        
+        # Add words so that all lines contain the same number of words
+        if word_difference:
+            for line_index, line in enumerate(block):
+                words = []
+                if line.tier_marker in word_level_markers:
+                    words = line.line_tokenized
+                else:
+                    words = line.words()
+
+                if len(words) > 0 and len(words) < words_maximum:
+                    word_padding = " ***" * (words_maximum - len(words))
+                    block[line_index] = ToolboxLine("\\" + line.tier_marker + \
+                        line.line_contents + word_padding + "\r\n")
+
+        #     raise RuntimeError(
+        #         "Unequal number of words found in block:\n{0}".format(
+        #             "\n".join([line.line_original for line in block])))
+        
+        # Number of morphemes
+        number_of_morphemes = 0
+        morpheme_difference = False
+
+        # Get morphemes for morpheme tiers
+        for line in block:
+            if line.tier_marker in morpheme_level_markers:
+                morphemes = self._parse_morphemes(line)
+                
+                if len(morphemes) != number_of_morphemes and \
+                        number_of_morphemes > 0:
+                    morpheme_difference = True
+                    
+                number_of_morphemes = len(morphemes)
+        
+        # All morpheme lines have to contain the same number of morphemes
+        if morpheme_difference:
+            raise RuntimeError(
+                "Unequal number of morphemes found in block:\n{0}".format(
+                    "\n".join(block)))
+        
+        # If a block is missing morphemes
+        # Add dummy morphemes
+        if number_of_morphemes == 0:
+            morpheme_padding = " ***" * number_of_words
+
+            # Get morphemes for morpheme tiers
+            for line_index, line in enumerate(block):
+                if line.tier_marker in morpheme_level_markers:
+                    block[line_index] = ToolboxLine("\\" + line.tier_marker + \
+                        morpheme_padding + "\r\n")
+
+        # List of morpheme types for all tiers in block
+        types_of_morphemes = []
+        
+        # Get morphemes for morpheme tiers
+        for line in block:
+            if line.tier_marker in morpheme_level_markers and \
+                    line.tier_marker == morphemic_parse_marker:
+                cur_morphemes = self._parse_morphemes(line)
+
+                for word in cur_morphemes:
+                    cur_types_of_morphemes = []                
+                            
+                    # Go through all morphemes in the current word        
+                    for morpheme in word:
+                        # Determine the type of morpheme
+                        if re.search(r"^[-=]\S+$", morpheme):
+                            cur_types_of_morphemes.append("suffix")
+                        
+                        elif re.search(r"^\S+[-=]$", morpheme):
+                            cur_types_of_morphemes.append("prefix")
+                        
+                        elif re.search(r"^[-]$", morpheme):
+                            cur_types_of_morphemes.append("compound_marker")
+                        
+                        elif not re.search(r"[-=]", morpheme):
+                            cur_types_of_morphemes.append("root")
+                        
+                        else:
+                            cur_types_of_morphemes.append("unknown")
+                    
+                    # Append the types of morphemes for the current word
+                    # to the list for the whole line
+                    types_of_morphemes.append(cur_types_of_morphemes)
+
+        # Collect resulting lists of morphemes together
+        morphemes = []
+        
+        for line in block:
+            if line.tier_marker in word_level_markers:
+                words = line.line_contents.strip().split()
+                words = [[word] for word in words]
+                morphemes.append(words)
+            
+            else:
+                morphemes.append(self._parse_morphemes(line))
+        
+        # Return the morphemes for each line, the types of morphemes, and the
+        # parts-of-speech
+        return morphemes, types_of_morphemes
+
+    def _align_block(self, block, morphemes, types_of_morphemes,
+        word_level_markers, morpheme_level_markers, skip_invisibles=True,
+        use_bytes=True):
+        
+        output_lines = [""] * len(block)
+
+        # Add tier markers to output lines
+        for line_index, line in enumerate(block):
+            output_lines[line_index] = "\\" + line.tier_marker
+
+        # Process line contents
+        number_of_words = len(morphemes[0])
+        
+        # Process each word
+        for word_index in range(number_of_words):
+            # Last type of morpheme encountered
+            last_type_of_morpheme = None
+            # The output of the current word on the different tiers
+            cur_word = [""] * len(block)
+            
+            # Go through all lines and output the current word on word-level
+            # tiers
+            for line_index, line in enumerate(block):
+                # Is it a word-level tier?
+                if line.tier_marker in word_level_markers:                    
+                    # Add the current word to the output
+                    cur_word[line_index] += " " + \
+                        morphemes[line_index][word_index][0]
+            
+            # Find the first morpheme-level tier
+            first_morpheme_level_tier = None
+            for line_index, line in enumerate(block):
+                
+                if line.tier_marker in morpheme_level_markers:                    
+                    first_morpheme_level_tier = line_index
+                    break
+            
+            # Test whether there are any non-empty morpheme-level tiers
+            if first_morpheme_level_tier is not None:
+            
+                # Go through all morphemes of the current word
+                for morpheme_index in range(len(
+                        morphemes[first_morpheme_level_tier][word_index])):
+                    # The output of the current morpheme on the different tiers
+                    cur_morpheme = [""] * len(block)
+                
+                    # Determine the type of morpheme
+                    type_of_morpheme = types_of_morphemes[word_index][
+                        morpheme_index]
+                
+                    # Go through all lines and output the current morpheme on
+                    # the morpheme-level tiers
+                    for line_index, line in enumerate(block):
+                        # Is it a morpheme-level tier?
+                        if line.tier_marker in morpheme_level_markers:                        
+                            cur_morpheme[line_index] += \
+                                morphemes[line_index][word_index][
+                                    morpheme_index]
+
+                    # Determine the maximal length of all morphemes
+                    max_morpheme_length = 0
+                
+                    for index, morpheme in enumerate(cur_morpheme):
+                        if ToolboxLine.char_len(
+                                morpheme, skip_invisibles, use_bytes) > \
+                                max_morpheme_length:
+                        
+                            max_morpheme_length = ToolboxLine.char_len(
+                                cur_morpheme[index], skip_invisibles, use_bytes)
+                
+                    # Add spaces to all morphemes that are shorter
+                    for index, morpheme in enumerate(cur_morpheme):
+                        if ToolboxLine.char_len(
+                                morpheme, skip_invisibles, use_bytes) < \
+                                max_morpheme_length:
+
+                            cur_morpheme[index] += " " * (
+                                max_morpheme_length - ToolboxLine.char_len(
+                                    cur_morpheme[index], skip_invisibles,
+                                    use_bytes))
+                
+                    # Add current morpheme to current word on all morpheme-level
+                    # tiers
+                    for line_index, line in enumerate(block):
+                        # Is it a morpheme-level tier?
+                        if line.tier_marker in morpheme_level_markers:
+                            # Add current morpheme to current word
+                            cur_word[line_index] += " " + \
+                                cur_morpheme[line_index]
+                
+            # Determine the maximal length of the current word on the different
+            # tiers
+            max_word_length = 0
+            
+            for index, word in enumerate(cur_word):
+                if ToolboxLine.char_len(
+                        word, skip_invisibles, use_bytes) > max_word_length:
+                    
+                    max_word_length = ToolboxLine.char_len(
+                        word, skip_invisibles, use_bytes)
+            
+            # Add spaces to all words that are shorter
+            for index, word in enumerate(cur_word):
+                if ToolboxLine.char_len(
+                        word, skip_invisibles, use_bytes) < max_word_length:
+                    
+                    cur_word[index] += " " * (
+                        max_word_length - ToolboxLine.char_len(
+                            word, skip_invisibles, use_bytes))
+            
+            # Append current word to output lines
+            for index in range(len(cur_word)):
+                output_lines[index] += cur_word[index]
+            
+        # Remove superfluous trailing whitespace
+        # and add line breaks to the output lines
+        for line_index in range(len(block)):
+            output_lines[line_index] = output_lines[line_index].rstrip()
+        
+        return output_lines
+
+
 class Parser(poioapi.io.graf.BaseParser):
 
-    def __init__(self, filepath):
+    def __init__(self, filepath, record_marker = 'ref'):
         """Class's constructor.
 
         Parameters
@@ -905,7 +1387,7 @@ class Parser(poioapi.io.graf.BaseParser):
         """
 
         self.filepath = filepath
-        self.record_marker = None
+        self.record_marker = record_marker
         self._record_ids = []
         self._record_dict = dict()
 
@@ -913,9 +1395,7 @@ class Parser(poioapi.io.graf.BaseParser):
         """This method will parse the input file.
 
         """
-        if not self.record_marker:
-            raise(RuntimeError, "No record marker specified. For Toolbox files"
-                " you have to set the Toolbox.record_marker (e.g. 'ref').")
+        assert self.record_marker is not None
 
         self.toolbox = Toolbox(self.filepath)
         self.records = self.toolbox.records(self.record_marker)
