@@ -53,6 +53,15 @@ class TestToolbox:
             'ref', 'ge', 'id', 'ps', 'tx', 'dt', 'nt', 'rt', 'rf', 'ft', 'mb',
             'graid'])
 
+    def test_aligned_records(self):
+        records = self.toolbox.aligned_records('ref',
+            ['ref', 'ft', 'nt', 'rf', 'rt', 'id', 'dt'],
+            ['tx'],
+            ['mb', 'ge', 'ps'],
+            'mb')
+        print(records)
+        assert len(records) == 296
+
 
 class TestParser:
     """
