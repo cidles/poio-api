@@ -176,7 +176,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     """
 
-    def write(self, outputfile, converter):
+    def write(self, outputfile, converter, pretty_print=False):
 
         nodes = converter.graf.nodes
         phrases = self._get_phrases(nodes)
@@ -214,7 +214,7 @@ class Writer(poioapi.io.graf.BaseWriter):
                             value = g.annotations._elements[0].features["annotation_value"]
                             ET.SubElement(morpheme, "gloss").text = value
 
-        self.write_xml(root, outputfile, False)
+        self.write_xml(root, outputfile, pretty_print)
 
     def write_xml(self, root, outputfile, pretty_print=True):
         if pretty_print:
