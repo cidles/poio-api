@@ -220,8 +220,11 @@ class Writer(poioapi.io.graf.BaseWriter):
         if pretty_print:
             doc = minidom.parseString(tostring(root))
 
+            text_re = re.compile(r'>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
+            prettyXml = text_re.sub(r'>\g<1></', doc.toprettyxml(indent='  '))
+
             file = open(outputfile, 'wb')
-            file.write(doc.toprettyxml(encoding='UTF-8'))
+            file.write(prettyXml)
             file.close()
         else:
             tree = ET.ElementTree(root)
