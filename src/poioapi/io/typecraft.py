@@ -203,18 +203,21 @@ class Writer(poioapi.io.graf.BaseWriter):
             ET.SubElement(phrase, "globaltags", {"id": "1", "tagset": "Default"})
 
             for w in self._get_words(nodes, p.id):
-                value = w.annotations._elements[0].features["annotation_value"]
-                word = ET.SubElement(phrase, "word", {"text": value, "head": value})
+                w_value = w.annotations._elements[0].features["annotation_value"]
+                word = ET.SubElement(phrase, "word", {"text": w_value, "head": w_value})
                 for m in self._get_morphemes(nodes, w.id):
-                    value = m.annotations._elements[0].features["annotation_value"]
+                    m_value = m.annotations._elements[0].features["annotation_value"]
                     ET.SubElement(word, "pos").text = self._get_pos_value(nodes, m.id)
-                    morpheme = ET.SubElement(word, "morpheme", {"text": value, "baseform": value})
+                    morpheme = ET.SubElement(word, "morpheme", {"text": m_value, "baseform": m_value})
                     for g in self._get_glosses(nodes, m.id):
                         if g.annotations._elements[0].features:
-                            value = g.annotations._elements[0].features["annotation_value"]
-                            ET.SubElement(morpheme, "gloss").text = value
+                            g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
+                            if self._validate_gloss(g_value):
+                                ET.SubElement(morpheme, "gloss").text = g_value
+                            else:
+                                morpheme.set("meaning", g_value)
 
-        self.write_xml(root, outputfile, pretty_print)
+        self.write_xml(root, outputfile)
 
     def write_xml(self, root, outputfile, pretty_print=True):
         if pretty_print:
@@ -248,7 +251,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         for node in nodes:
             if node.id.startswith("p") and node.parent.id == parent_id:
                 if node.annotations._elements[0].features:
-                    return node.annotations._elements[0].features["annotation_value"]
+                    value = node.annotations._elements[0].features["annotation_value"]
+                    return value.replace("-","")
                 return ""
 
     def _get_morphemes(self, nodes, parent_id):
@@ -266,3 +270,41 @@ class Writer(poioapi.io.graf.BaseWriter):
         self._current_id = current_id
 
         return str(current_id)
+
+    def _validate_gloss(self, gloss_value):
+        gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
+                      "ASP", "CESSIVE", "CMPL", "CON", "CONT", "CUST", "DUR", "DYN", "EGR",
+                      "FREQ", "HAB", "INCEP", "INCH", "INCOMPL", "INGR", "INTS", "IPFV", "ITER",
+                      "PFV", "PNCT", "PROG", "PRSTV", "REP", "RESLT", "SEMF", "STAT",
+                      "NCOMPL", "PRF", "FV", "IV", "ABES", "ABL", "ABS", "ACC", "ADES", "ALL", "BEN",
+                      "case marker - underspecified", "COMIT", "CONTL", "DAT", "DEL", "DEST", "ELAT", "EQT", "ERG",
+                      "ESS", "GEN", "ILL", "INESS", "INSTR", "LAT", "MALF", "NOM", "OBL", "PERL", "POSS", "PRTV", "TER",
+                      "VIAL", "VOC", "ORN",
+                      "CLITcomp", "CLITadv", "CLITdet", "CLITn", "CLITp", "CLITpron", "CLITv", "ATV", "FAM", "INFOC",
+                      "RFTL", "TPID", "UNID", "APPROX",
+                      "DIST", "DIST2", "DXS", "MEDIAL", "PROX", "AD", "ADJ>ADV", "ADJ>N", "ADJ>V", "AUG", "DIM",
+                      "INCORP", "KIN", "N>ADJ", "N>ADV", "NMLZ", "N>N",
+                      "NUM>N", "N>V", "PTCP>ADJ", "QUAL", "V>ADJ", "V>ADV", "vbl", ">Vitr", "V>N", ">Vtr", "V>Nagt",
+                      "V>Ninstr", "ACAUS", "APASS", "APPL", "CAUS", "PASS", "ASRT", "DECL", "EXCL", "IMP", "IMP1",
+                      "IMP2", "IND", "INTR", "MAVM", "PROH", "Q", "RPS", "COMM", "FEM", "MASC", "NEUT", "COMPL", "DO",
+                      "ICV", "OBJ", "OBJ2", "objcogn", "OBJind", "OM", "SBJ", "SC", "SM", "AFFMT", "CNTV", "COND",
+                      "CONJ", "CONTP", "EVID", "IRR", "JUSS", "MOD", "OPT", "RLS", "SBJV", "OBLIG", "POT", "MNR", "MO",
+                      "CL", "CL1", "CL10", "CL11", "CL12", "CL13", "CL14", "CL15", "CL16", "CL17", "CL18", "CL2",
+                      "CL20", "CL21", "CL22", "CL23", "CL3", "CL4", "CL5", "CL6", "CL7", "CL8", "CL9", "Npref",
+                      "landmark", "DU", "PL", "SG", "x", "DISTRIB", "1", "1excl", "1incl", "1PL", "1SG", "2", "2PL",
+                      "2SG", "3", "3B", "3PL", "3Pobv", "3Pprox", "3SG", "3Y", "4", "AREAL", "PLassc", "FT", "H", "!H",
+                      "L", "MT", "RT", "NEGPOL", "POSPOL", "DEF", "INDEF", "SGbare", "SPECF", "PART", "2HML", "2HON",
+                      "HON", "TTL", "AGT", "EXP", "GOAL", "PSSEE", "PSSOR", "PT", "SRC", "TH", "CIRCM", "CTed", "DIR",
+                      "ENDPNT", "EXT", "INT", "LINE", "LOC", "PATH", "PRL", "SPTL", "STARTPNT", "VIAPNT", "DM", "MU",
+                      "PS", "ANT", "AOR", "AUX", "FUT", "FUTclose", "FUTim", "FUTnear", "FUTrel", "FUTrm", "NF", "NFUT",
+                      "NPAST", "PAST", "PASThst", "PASTim", "PASTpast", "PASTrel", "PASTrm", "PRES", "PRET", "FOC",
+                      "TOP", "CNJ", "CLF", "CV", "GER", "GERDV", "INF", "itr", "PRED", "PTCP", "SUPN", "Vstem", "ACTV",
+                      "?", "ABB", "ABSTR", "ADJstem", "ADV>ADJ", "ASS", "ASSOC", "ATT", "CMPR", "CO-EV", "CONSEC",
+                      "CONTR", "COP", "DEG", "DEM", "DIR-SP", "EMPH", "EXPLET", "GNR", "IND-SP", "K1", "K2", "LOCREL",
+                      "NEG", "Nstem", "oBEN", "PPOSTstem", "PRIV", "QUOT", "RECP", "REDP", "REFL", "REL", "RP-SP",
+                      "sBEN", "SLCT", "SUP"]
+
+        if gloss_value in gloss_list:
+            return True
+        else:
+            return False
