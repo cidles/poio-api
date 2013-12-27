@@ -13,6 +13,8 @@ import codecs
 
 import poioapi.annotationgraph
 import poioapi.data
+import poioapi.io.typecraft
+
 
 def main(argv):
     usage = "usage: %prog [options] inputfile outputfile"
@@ -29,11 +31,11 @@ def main(argv):
         parser.print_usage()
         sys.exit(0)
 
-    if options.inputtype not in ['toolbox', 'elan']:
+    if options.inputtype not in ['toolbox', 'elan', 'shoebox']:
         parser.print_usage()
         sys.exit(0)
 
-    if options.outputtype not in ['html']:        
+    if options.outputtype not in ['html', 'graf', 'typecraft']:
         parser.print_usage()
         sys.exit(0)
 
@@ -43,6 +45,8 @@ def main(argv):
     # Load the data from EAF file
     if options.inputtype == "elan":
         ag.from_elan(files[0])
+    elif options.inputtype == "shoebox":
+        ag.from_shoebox(files[0])
     elif options.inputtype == "toolbox":
         if not options.roottier:
             print("No root tier/record marker specified (argument \"-r\"). Cannot parse the file.")
@@ -63,11 +67,17 @@ def main(argv):
         print("Could not find root tier in file or root tier was not specified. Will use the first tier hierarchy.")
         ag.structure_type_handler = poioapi.data.DataStructureType(ag.tier_hierarchies[0])
 
-    # Output as html
-    f = codecs.open(files[1], "w", "utf-8")
-    f.write(ag.as_html_table(False, True))
-    f.close()
-
+    if options.outputtype == "htlm":
+        # Output as html
+        f = codecs.open(files[1], "w", "utf-8")
+        f.write(ag.as_html_table(False, True))
+        f.close()
+    elif options.outputtype == "graf":
+        writer = poioapi.io.graf.Writer()
+        writer.write(files[1], ag)
+    elif options.outputtype == "typecraft":
+        typecraft = poioapi.io.typecraft.Writer()
+        typecraft.write(files[1], ag)
 
 if __name__ == "__main__":
     main(sys.argv)
