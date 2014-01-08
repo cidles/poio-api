@@ -176,12 +176,17 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     """
 
-    def write(self, outputfile, converter, pretty_print=False):
+    def write(self, outputfile, converter, pretty_print=False, ids=None):
 
         nodes = converter.graf.nodes
         phrases = self._get_phrases(nodes)
 
-        self._current_id = 0
+        if ids:
+            self._current_text_id = ids[0]
+            self._current_phrase_id = ids[1]
+        else:
+            self._current_text_id = 0
+            self._current_phrase_id = 0
 
         attribs = {"xsi:schemaLocation": "http://typecraft.org/typecraft.xsd",
                    "xmlns": "http://typecraft.org/typecraft",
@@ -190,13 +195,13 @@ class Writer(poioapi.io.graf.BaseWriter):
         root = ET.Element("typecraft", attribs)
 
         # The language must be set as und
-        text = ET.SubElement(root, "text", {"id": self._next_id(), "lang": "und"})
+        text = ET.SubElement(root, "text", {"id": self._next_text_id(), "lang": "und"})
         ET.SubElement(text, "title").text = converter.meta_information
         ET.SubElement(text, "titleTranslation")
         ET.SubElement(text, "body").text = self._get_body(phrases)
 
         for p in phrases:
-            phrase = ET.SubElement(text, "phrase", {"id": self._next_id(), "valid": "VALID"})
+            phrase = ET.SubElement(text, "phrase", {"id": self._next_phrase_id(), "valid": "VALID"})
             ET.SubElement(phrase, "original").text = p.annotations._elements[0].features["annotation_value"]
             ET.SubElement(phrase, "translation")
             ET.SubElement(phrase, "description")
@@ -205,13 +210,21 @@ class Writer(poioapi.io.graf.BaseWriter):
             for w in self._get_words(nodes, p.id):
                 w_value = w.annotations._elements[0].features["annotation_value"]
                 word = ET.SubElement(phrase, "word", {"text": w_value, "head": w_value})
+
                 for m in self._get_morphemes(nodes, w.id):
                     m_value = m.annotations._elements[0].features["annotation_value"]
-                    ET.SubElement(word, "pos").text = self._get_pos_value(nodes, m.id)
+
+                    if self._validate_pos(self._get_pos_value(nodes, m.id)):
+                        ET.SubElement(word, "pos").text = self._get_pos_value(nodes, m.id)
+                    else:
+                        ET.SubElement(word, "pos")
+
                     morpheme = ET.SubElement(word, "morpheme", {"text": m_value, "baseform": m_value})
+
                     for g in self._get_glosses(nodes, m.id):
                         if g.annotations._elements[0].features:
                             g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
+
                             if self._validate_gloss(g_value):
                                 ET.SubElement(morpheme, "gloss").text = g_value
                             else:
@@ -265,13 +278,24 @@ class Writer(poioapi.io.graf.BaseWriter):
                 if node.id.startswith("g") and
                    node.parent.id == parent_id]
 
-    def _next_id(self):
-        current_id = str(int(self._current_id) + 1)
-        self._current_id = current_id
+    def _next_text_id(self):
+        current_id = str(int(self._current_text_id) + 1)
+        self._current_text_id = current_id
+
+        return str(current_id)
+
+    def _next_phrase_id(self):
+        current_id = str(int(self._current_phrase_id) + 1)
+        self._current_phrase_id = current_id
 
         return str(current_id)
 
     def _validate_gloss(self, gloss_value):
+        """
+        This function validates the gloss value
+        in a gloss list from the TC gloss list.
+        """
+
         gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
                       "ASP", "CESSIVE", "CMPL", "CON", "CONT", "CUST", "DUR", "DYN", "EGR",
                       "FREQ", "HAB", "INCEP", "INCH", "INCOMPL", "INGR", "INTS", "IPFV", "ITER",
@@ -305,6 +329,26 @@ class Writer(poioapi.io.graf.BaseWriter):
                       "sBEN", "SLCT", "SUP"]
 
         if gloss_value in gloss_list:
+            return True
+        else:
+            return False
+
+    def _validate_pos(self, pos_value):
+        """
+        This function validates the pos value
+        in a pos list from the TC pos list.
+        """
+
+        pos_list = ["PNposs", "N", "V", "PN", "ADVm", "Np", "PREP", "CN", "PRT", "COMP", "AUX", "CONJS", "QUANT",
+                    "NMASC", "NNO", "NNEUT", "COP", "ART", "MOD", "PPOST", "ADJ", "DEM", "ADJC", "PNrefl", "DET", "Wh",
+                    "Vtr", "Vitr", "PROposs", "P", "Vdtr", "CARD", "NDV", "CL", "ADVplc", "V3", "PRTposs", "V4",
+                    "ADVtemp", "V2", "NUM", "REL", "EXPL", "CONJC", "Vmod", "Vlght", "PNana", "PROint", "PNrel",
+                    "VtrOBL", "COPident", "PRTpred", "Nspat", "ORD", "PTCP", "CONJ", "PRTint", "Vneg", "PREPtemp",
+                    "PREPdir", "NFEM", "PRtinf", "Ncomm", "Nbare", "Vcon", "PRTv", "PRTn", "ADVneg", "Vpre", "NUMpart",
+                    "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
+                    "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
+
+        if pos_value in pos_list:
             return True
         else:
             return False
