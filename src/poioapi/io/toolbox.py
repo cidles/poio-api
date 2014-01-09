@@ -29,6 +29,28 @@ if sys.version_info[:2] >= (3, 0):
 else:
     string_type = basestring
 
+def char_len(string):
+    """
+    Method to calculate string length for Toolbox alignment.
+    Based on Taras Zakharko's method.
+
+    """
+    length = 0
+    
+    # Go through Unicode characters in the string
+    for character in string:
+        # Get the length of the current character
+        num_bytes = len(character.encode("utf-8"))
+        
+        # Get the unicode property for the current character
+        category = unicodedata.category(character)
+        
+        # Do we want to skip invisibles?
+        if category not in [ "Mn", "Mc","Me" ]:
+            length += num_bytes
+
+    return length
+
 class Parser(poioapi.io.graf.BaseParser):
 
     def __init__(self, input_stream, record_marker = 'ref',
@@ -167,8 +189,9 @@ class Parser(poioapi.io.graf.BaseParser):
                     tier_marker in self.morpheme_level_markers or \
                     tier_marker in self.tag_level_markers:
                 for j, match in enumerate(re_word.finditer(line)):
-                    elements[tier_marker][match.start(1)] = match.group(1)
-                    ids[tier_marker][match.start(1)] = "a{0}".format(current_id)
+                    pos = char_len(line[:match.start(1)])
+                    elements[tier_marker][pos] = match.group(1)
+                    ids[tier_marker][pos] = "a{0}".format(current_id)
                     current_id += 1
             else:
                 content = re_tier_marker.sub("", line)
