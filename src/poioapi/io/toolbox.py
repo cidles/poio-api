@@ -34,7 +34,8 @@ class Parser(poioapi.io.graf.BaseParser):
     def __init__(self, input_stream, record_marker = 'ref',
         record_level_markers = ['ref', 'ft', 'nt', 'rf', 'rt', 'id', 'dt'],
         word_level_markers = ['tx'],
-        morpheme_level_markers = ['mb', 'ge', 'ps']):
+        morpheme_level_markers = ['mb'],
+        tag_level_markers = ['ge', 'ps']):
         """Class's constructor.
 
         Parameters
@@ -56,6 +57,7 @@ class Parser(poioapi.io.graf.BaseParser):
         self.record_level_markers = record_level_markers
         self.word_level_markers = word_level_markers
         self.morpheme_level_markers = morpheme_level_markers
+        self.tag_level_markers = tag_level_markers
 
         self.parse()
 
@@ -89,6 +91,9 @@ class Parser(poioapi.io.graf.BaseParser):
                 t for t in self.word_level_markers if t in self._tiers]
             morpheme_tiers = [
                 t for t in self.morpheme_level_markers if t in self._tiers]
+            tag_tiers = [
+                t for t in self.tag_level_markers if t in self._tiers]
+            morpheme_tiers.append(tag_tiers)
             word_tiers.append(morpheme_tiers)
             new_tier_hierarchy.append(word_tiers)
 
@@ -159,15 +164,17 @@ class Parser(poioapi.io.graf.BaseParser):
                 ids[tier_marker] = dict()
 
             if tier_marker in self.word_level_markers or \
-                    tier_marker in self.morpheme_level_markers:
+                    tier_marker in self.morpheme_level_markers or \
+                    tier_marker in self.tag_level_markers:
                 for j, match in enumerate(re_word.finditer(line)):
                     elements[tier_marker][match.start(1)] = match.group(1)
-                    ids[tier_marker][match.start(1)] = current_id
+                    ids[tier_marker][match.start(1)] = "a{0}".format(current_id)
                     current_id += 1
             else:
                 content = re_tier_marker.sub("", line)
                 elements[tier_marker][len(match_tier_marker.group(0))] = content
-                ids[tier_marker][len(match_tier_marker.group(0))] = current_id
+                ids[tier_marker][len(match_tier_marker.group(0))] = \
+                    "a{0}".format(current_id)
                 current_id += 1
 
 

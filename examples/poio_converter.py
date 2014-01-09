@@ -20,9 +20,9 @@ def main(argv):
     usage = "usage: %prog [options] inputfile outputfile"
     parser = optparse.OptionParser(usage=usage)
     parser.add_option("-i", "--inputtype", dest="inputtype",
-        help="Type of the input file (elan|toolbox)")
+        help="Type of the input file (elan|toolbox|shoebox)")
     parser.add_option("-o", "--outputtype", dest="outputtype",
-        help="Type of the output file (html)")
+        help="Type of the output file (html|graf|typecraft)")
     parser.add_option("-r", "--roottier", dest="roottier",
         help="Root tier for html output, is the record marker in Toolbox")
     parser.add_option("-m", "--more", dest="more",
@@ -66,9 +66,8 @@ def main(argv):
     if not root_found:
         print("Could not find root tier in file or root tier was not specified. Will use the first tier hierarchy.")
         ag.structure_type_handler = poioapi.data.DataStructureType(ag.tier_hierarchies[0])
-        print(ag.tier_hierarchies[0])
 
-    if options.outputtype == "htlm":
+    if options.outputtype == "html":
         # Output as html
         f = codecs.open(files[1], "w", "utf-8")
         f.write(ag.as_html_table(False, True))

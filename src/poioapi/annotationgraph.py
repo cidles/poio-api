@@ -70,14 +70,12 @@ class AnnotationGraph():
 
         res = list()
         base_tier_name = self.structure_type_handler.flat_data_hierarchy[0]
-        for (node_id, node) in self.graf.nodes.items():
-            if node_id.startswith(base_tier_name):
-                res.append(node)
+        res = self.nodes_for_tier(base_tier_name)
 
         try:
             return sorted(res, key=lambda node: node.links[0][0].start)
         except IndexError as indexError:
-            return sorted(res)
+            return res
 
     def nodes_for_tier(self, tier_name, parent_node = None):
         """Retreive all nodes for a given tier name. The parameter
