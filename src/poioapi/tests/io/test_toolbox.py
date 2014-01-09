@@ -14,55 +14,6 @@ import os
 import poioapi.io.toolbox
 import poioapi.io.graf
 
-class TestToolboxLine:
-
-    def setup(self):
-        self.line = "\mb diž y-   ike -s   .     diž b-   ike -s   čeq  čeq  -i      rekʼe"
-        self.toolbox_line = poioapi.io.toolbox.ToolboxLine(self.line)
-
-    def test_char_len(self):
-     	assert poioapi.io.toolbox.ToolboxLine.char_len(self.line) == 70
-
-    def test_line_string(self):
-     	assert self.toolbox_line.line_original == self.toolbox_line.line_string
-
-    def test_words(self):
-        assert self.toolbox_line.words() == \
-            ['diž', 'y-   ike -s', '.', 'diž', 'b-   ike -s', 'čeq',
-            'čeq  -i', 'rekʼe']
-
-    def test_repr(self):
-    	assert "Original" and "Contents" in repr(self.toolbox_line)
-
-
-class TestToolbox:
-
-    def setup(self):
-        self.filename = os.path.join(os.path.dirname(__file__), "..",
-            "sample_files", "toolbox_graf", "toolbox.txt")
-        self.toolbox = poioapi.io.toolbox.Toolbox(self.filename)
-
-    def test_lines(self):
-        lines = self.toolbox.lines()
-        assert len(lines) == 2539
-
-    def test_records(self):
-        records = self.toolbox.records('ref')
-        assert len(records) == 296
-        assert self.toolbox.tiers == set([
-            'ref', 'ge', 'id', 'ps', 'tx', 'dt', 'nt', 'rt', 'rf', 'ft', 'mb',
-            'graid'])
-
-    def test_aligned_records(self):
-        records = self.toolbox.aligned_records('ref',
-            ['ref', 'ft', 'nt', 'rf', 'rt', 'id', 'dt'],
-            ['tx'],
-            ['mb', 'ge', 'ps'],
-            'mb')
-        print(records)
-        assert len(records) == 296
-
-
 class TestParser:
     """
     This class contain the test methods to the
@@ -73,9 +24,12 @@ class TestParser:
     def setup(self):
         self.filename = os.path.join(os.path.dirname(__file__), "..",
         	"sample_files", "toolbox_graf", "toolbox.txt")
-        self.parser = poioapi.io.toolbox.Parser(self.filename)
-        self.parser.record_marker = "ref"
-        self.parser.parse()
+        self.parser = poioapi.io.toolbox.Parser(self.filename, "ref")
+
+    def test_tier_hierachy(self):
+        assert self.parser.tier_hierarchy.data_hierarchy == \
+            ['ref', ['tx', ['mb', 'ge', 'ps']],
+                ['ft', 'nt', 'rf', 'rt', 'id', 'dt']]
 
     def test_get_root_tiers(self):
         root_tiers = self.parser.get_root_tiers()
@@ -83,9 +37,14 @@ class TestParser:
 
     def test_get_child_tiers_for_tier(self):
         root_tiers = self.parser.get_root_tiers()
-        child_tiers = self.parser.get_child_tiers_for_tier(root_tiers[0])
 
-        assert len(child_tiers) == 11
+        child_tiers = self.parser.get_child_tiers_for_tier(root_tiers[0])
+        assert len(child_tiers) == 7
+
+        child_tiers = self.parser.get_child_tiers_for_tier(
+            poioapi.io.graf.Tier('tx'))
+        assert len(child_tiers) == 3
+
 
     def test_get_annotations_for_tier(self):
         root_tiers = self.parser.get_root_tiers()
@@ -93,9 +52,13 @@ class TestParser:
 
         assert len(root_annotations) == 295
 
-        tier = poioapi.io.graf.Tier("mb")
-        annoation_parent = root_annotations[0]
+        for r in root_annotations:
+            print(r.value)
 
-        tier_annotations = self.parser.get_annotations_for_tier(tier, annoation_parent)
+        tier = poioapi.io.graf.Tier("tx")
+        annotation_parent = root_annotations[0]
+
+        tier_annotations = self.parser.get_annotations_for_tier(
+            tier, annotation_parent)
 
         assert len(tier_annotations) == 8

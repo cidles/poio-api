@@ -289,8 +289,6 @@ class AnnotationGraph():
             if not hasattr(stream, 'read'):
                 stream = codecs.open(stream, "rb")
             parser = poioapi.io.toolbox.Parser(stream)
-            parser.record_marker = kwargs['record_marker']
-            parser.parse()
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.parse()
@@ -336,12 +334,12 @@ class AnnotationGraph():
         """
         self._from_file(stream, poioapi.data.TOOLBOXXML)
 
-    def from_toolbox(self, stream, record_marker = 'ref'):
+    def from_toolbox(self, stream):
         """This method generates a GrAF object
         from a xml toolbox file.
 
         """
-        self._from_file(stream, poioapi.data.TOOLBOX, record_marker=record_marker)
+        self._from_file(stream, poioapi.data.TOOLBOX)
 
     def from_graf(self, stream):
         """Load the project annotation graph from a GrAF/XML file or stream.

@@ -51,11 +51,9 @@ def main(argv):
         ag.from_shoebox(files[0])
     elif options.inputtype == "toolbox":
         if not options.roottier:
-            print("No root tier/record marker specified (argument \"-r\"). Cannot parse the file.")
-            parser.print_usage()
-            sys.exit(0)
+            print("No record marker specified (argument \"-r\"). Assuming \"ref\" as record marker.")
 
-        ag.from_toolbox(files[0], options.roottier)
+        ag.from_toolbox(files[0])
 
     # Set the structure type for hierarchical/interlinear output
     root_found = False
@@ -68,6 +66,7 @@ def main(argv):
     if not root_found:
         print("Could not find root tier in file or root tier was not specified. Will use the first tier hierarchy.")
         ag.structure_type_handler = poioapi.data.DataStructureType(ag.tier_hierarchies[0])
+        print(ag.tier_hierarchies[0])
 
     if options.outputtype == "htlm":
         # Output as html
