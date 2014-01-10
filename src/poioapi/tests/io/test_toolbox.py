@@ -28,7 +28,7 @@ class TestParser:
 
     def test_tier_hierachy(self):
         assert self.parser.tier_hierarchy.data_hierarchy == \
-            ['ref', ['tx', ['mb', ['ge', 'ps']]],
+            ['ref', [ 'utterance_gen', ['tx', ['mb', ['ge', 'ps']]]],
                 ['ft', 'nt', 'rf', 'rt', 'id', 'dt']]
 
     def test_get_root_tiers(self):
@@ -52,8 +52,19 @@ class TestParser:
 
         assert len(root_annotations) == 295
 
-        tier = poioapi.io.graf.Tier("tx")
+        tier = poioapi.io.graf.Tier("utterance_gen")
         annotation_parent = root_annotations[0]
+        assert annotation_parent.value == "Pear_Madi.001"
+        assert annotation_parent.id == "a1"
+
+        tier_annotations = self.parser.get_annotations_for_tier(
+            tier, annotation_parent)
+
+        assert len(tier_annotations) == 1
+
+        tier = poioapi.io.graf.Tier("tx")
+        annotation_parent = tier_annotations[0]
+        assert annotation_parent.value == "diž yikes . diž bikes čeq čeqi rekʼe"
 
         tier_annotations = self.parser.get_annotations_for_tier(
             tier, annotation_parent)

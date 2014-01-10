@@ -25,6 +25,7 @@ class TestDataStructureType:
 
     def setup(self):
         self.data_structure_type = data.DataStructureType()
+        self.data_structure_type_graid = data.DataStructureTypeGraid()
 
     # def test_get_siblings_of_type(self):
     #     """Raise an assertion if there's no siblings to return.
@@ -71,6 +72,7 @@ class TestDataStructureType:
         expected_result = ['utterance', 'translation']
         assert(self.data_structure_type.get_parents_of_type(
             ann_type) == expected_result)
+
 
     def test__get_parents_of_type_helper(self):
         """Raise an assertion if there's no elements to return.

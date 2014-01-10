@@ -19,9 +19,10 @@ import poioapi.io.graf
 import poioapi.data
 
 # Compile necessary regular expression
-re_tier_marker = re.compile("^" + r"\\(\S+)(?=($|\s+))")
+re_tier_marker = re.compile("^" + r"\\(\S+)(?=($|\s+))", re.UNICODE)
 re_line_break = re.compile(r"(\r\n|\n|\r)+$")
 re_word = re.compile(r"(?<=\s)(\S+)(?:\s|$)", re.UNICODE)
+BOMLEN = len(codecs.BOM_UTF8)
 
 # Set the type of string
 if sys.version_info[:2] >= (3, 0):
@@ -35,29 +36,15 @@ def char_len(string):
     Based on Taras Zakharko's method.
 
     """
-    length = 0
-    
-    # Go through Unicode characters in the string
-    for character in string:
-        # Get the length of the current character
-        num_bytes = len(character.encode("utf-8"))
-        
-        # Get the unicode property for the current character
-        category = unicodedata.category(character)
-        
-        # Do we want to skip invisibles?
-        if category not in [ "Mn", "Mc","Me" ]:
-            length += num_bytes
-
-    return length
+    return(len(string.encode("utf-8")))
 
 class Parser(poioapi.io.graf.BaseParser):
 
     def __init__(self, input_stream, record_marker = 'ref',
-        record_level_markers = ['ref', 'ft', 'nt', 'rf', 'rt', 'id', 'dt'],
-        word_level_markers = ['tx'],
-        morpheme_level_markers = ['mb'],
-        tag_level_markers = ['ge', 'ps']):
+        record_level_markers = ['ref', 'ft', 'nt', 'rf', 'rt', 'id', 'dt', 'f'],
+        word_level_markers = ['tx', 't'],
+        morpheme_level_markers = ['mb', 'm'],
+        tag_level_markers = ['ge', 'ps', 'g', 'p']):
         """Class's constructor.
 
         Parameters
@@ -102,6 +89,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
         self._tiers = list()
+        self._content = list()
         self._annotations_for_parent = collections.defaultdict(list)
         self._get_tiers()
 
@@ -117,7 +105,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 t for t in self.tag_level_markers if t in self._tiers]
             morpheme_tiers.append(tag_tiers)
             word_tiers.append(morpheme_tiers)
-            new_tier_hierarchy.append(word_tiers)
+            new_tier_hierarchy.append([ 'utterance_gen', word_tiers ])
 
             record_tiers = [t for t in self.record_level_markers \
                 if t in self._tiers and t != self.record_marker]
@@ -136,8 +124,8 @@ class Parser(poioapi.io.graf.BaseParser):
             match_tier_marker = re_tier_marker.search(line)
             if match_tier_marker:
                 tier_marker = match_tier_marker.group(1)
-            if tier_marker not in self._tiers:
-                self._tiers.append(tier_marker)
+                if tier_marker not in self._tiers:
+                    self._tiers.append(tier_marker)
         self.input_stream.seek(0)
 
     def _build_annotations(self):
@@ -149,80 +137,157 @@ class Parser(poioapi.io.graf.BaseParser):
  
         elements = dict()
         ids = dict()
-        current_id = 0
+
+        current_record_id = 0
+        current_utterance_id = 0
+        current_id = 1
 
         first_marker_found = False
-       
+        tier_marker = None
+
+        current_utterance = ""
+
         # Go through lines in the input file
-        for line in self.input_stream:
-            # Hack: sometimes there are characters that we cannot decode
+        for line_number, line in enumerate(self.input_stream):
+            # remove BOM
+            if line_number == 0:
+                if line.startswith(codecs.BOM_UTF8):
+                    line = line[BOMLEN:]
             line = line.decode("utf-8", 'ignore')
             line = line.strip()
             if line == "":
+                if len(elements) > 0:
+                    self._process_record(elements, ids, current_utterance_id)
+                    elements = dict()
+                    ids = dict()
                 continue
 
+            # parse line
+            last_tier_marker = tier_marker
             tier_marker = None
+            line_content = None
             match_tier_marker = re_tier_marker.search(line)
             if match_tier_marker:
                 tier_marker = match_tier_marker.group(1)
+                line_content = re_tier_marker.sub("", line)
+                line_content = line_content.lstrip()
             else:
+                # append to last annotation´s content
+                self._annotations_for_parent[
+                    ("a{0}".format(current_record_id),
+                        last_tier_marker)][-1].value += " " + \
+                        line
+                tier_marker = last_tier_marker
                 continue
 
+            # skip all lines before first record marker
             if not first_marker_found:
                 if tier_marker != self.record_marker:
                     continue
                 else:
                     first_marker_found = True
 
-            if tier_marker == self.record_marker:
-                if len(elements) > 0:
-                    self._process_record(elements, ids)
-                    elements = dict()
-                    ids = dict()
-
-            if tier_marker not in elements:
-                elements[tier_marker] = dict()
-            if tier_marker not in ids:
-                ids[tier_marker] = dict()
+            if tier_marker in self.word_level_markers:
+                current_utterance += re.sub("\s+", " ", line_content) + " "
 
             if tier_marker in self.word_level_markers or \
                     tier_marker in self.morpheme_level_markers or \
                     tier_marker in self.tag_level_markers:
+
+                if tier_marker not in elements:
+                    elements[tier_marker] = dict()
+                if tier_marker not in ids:
+                    ids[tier_marker] = dict()
+
                 for j, match in enumerate(re_word.finditer(line)):
                     pos = char_len(line[:match.start(1)])
                     elements[tier_marker][pos] = match.group(1)
                     ids[tier_marker][pos] = "a{0}".format(current_id)
                     current_id += 1
-            else:
-                content = re_tier_marker.sub("", line)
-                elements[tier_marker][len(match_tier_marker.group(0))] = content
-                ids[tier_marker][len(match_tier_marker.group(0))] = \
-                    "a{0}".format(current_id)
+
+            elif tier_marker in self.record_level_markers:
+
+                if current_utterance != "":
+                    current_utterance = current_utterance.rstrip()
+                    self._annotations_for_parent[
+                        ("a{0}".format(current_record_id),
+                            "utterance_gen")].append(poioapi.io.graf.Annotation(
+                                "a{0}".format(
+                                    current_utterance_id), current_utterance))
+                    current_utterance = ""
+                    current_utterance_id = current_id
+                    current_id += 1
+
+                if tier_marker == self.record_marker:
+                    self._annotations_for_parent[
+                        (None, tier_marker)].append(
+                            poioapi.io.graf.Annotation(
+                                "a{0}".format(current_id), line_content))
+                    current_record_id = current_id
+                else:
+                    self._annotations_for_parent[
+                        ("a{0}".format(current_record_id), tier_marker)].append(
+                            poioapi.io.graf.Annotation(
+                                "a{0}".format(current_id), line_content))
+
                 current_id += 1
-
-
-        # process last record
-        if len(elements) > 0:
-            self._process_record(elements, ids)
 
         self.input_stream.seek(0)
         
-    def _process_record(self, elements, ids):
-        for tier in self.tier_hierarchy.flat_data_hierarchy:
-            parent_tiers = [t for t in self.tier_hierarchy.get_parents_of_type(
-                tier) if t in self._tiers]
+    def _process_record(self, elements, ids, utterance_id):
+        for tier in self.word_level_markers:
 
             if not tier in elements:
                 continue
 
             for start_pos in sorted(elements[tier].keys()):
-                parent_id = None
+                self._annotations_for_parent[("a{0}".format(
+                    utterance_id), tier)].append(poioapi.io.graf.Annotation(
+                        ids[tier][start_pos],
+                        elements[tier][start_pos]))
 
-                for parent_tier in parent_tiers:
-                    for parent_start_pos in sorted(
-                            elements[parent_tier].keys()):
-                        if parent_start_pos <= start_pos:
-                            parent_id = ids[parent_tier][parent_start_pos]
+        for tier in self.morpheme_level_markers:
+
+            if not tier in elements:
+                continue
+
+            parent_tiers = [
+                t for t in self.word_level_markers if t in self._tiers]
+            assert len(parent_tiers) == 1
+            parent_tier = parent_tiers[0]
+
+            for start_pos in sorted(elements[tier].keys()):
+                parent_id = None
+                for parent_start_pos in sorted(
+                        elements[parent_tier].keys()):
+                    if parent_start_pos <= start_pos:
+                        parent_id = ids[parent_tier][parent_start_pos]
+
+                assert parent_id != None
+
+                self._annotations_for_parent[(parent_id, tier)].append(
+                    poioapi.io.graf.Annotation(
+                        ids[tier][start_pos],
+                        elements[tier][start_pos]))
+
+        for tier in self.tag_level_markers:
+
+            if not tier in elements:
+                continue
+
+            parent_tiers = [
+                t for t in self.morpheme_level_markers if t in self._tiers]
+            assert len(parent_tiers) == 1
+            parent_tier = parent_tiers[0]
+
+            for start_pos in sorted(elements[tier].keys()):
+                parent_id = None
+                for parent_start_pos in sorted(
+                        elements[parent_tier].keys()):
+                    if parent_start_pos <= start_pos:
+                        parent_id = ids[parent_tier][parent_start_pos]
+
+                assert parent_id != None
 
                 self._annotations_for_parent[(parent_id, tier)].append(
                     poioapi.io.graf.Annotation(
