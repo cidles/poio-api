@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<shoebox type="Text">
+
+<name value="mjs1 The hyena and the rabbit">
+  <ref value="mjs3001revised">
+    <interlinear-block>
+      <t value="Baho">
+        <m value="baho">
+          <g>DEM</g>
+          <p>prn</p>
+        </m>
+      </t>
+      <t value="katali">
+        <m value="katali">
+          <g>long</g>
+          <g>time</g>
+          <g>ago</g>
+          <p>adv</p>
+        </m>
+      </t>
+      <t value="difisi">
+        <m value="di-">
+          <g>5-</g>
+          <p>ncp-</p>
+        </m>
+        <m value="fisi">
+          <g>hyena:5/6</g>
+          <p>n</p>
+        </m>
+      </t>
+      <t value="na">
+        <m value="na">
+          <g>CONJ</g>
+          <p>conj</p>
+        </m>
+      </t>
+      <t value="sungula">
+        <m value="sungula">
+          <g>hare:9/10</g>
+          <p>n</p>
+        </m>
+      </t>
+      <t value="hawowa">
+        <m value="ha-">
+          <g>PAST-</g>
+          <p>tm-</p>
+        </m>
+        <m value="wa-">
+          <g>2-</g>
+          <p>ncp-</p>
+        </m>
+        <m value="uw">
+          <g>be</g>
+          <p>v</p>
+        </m>
+        <m value="-a">
+          <g>-FV</g>
+          <p>-fv</p>
+        </m>
+      </t>
+      <t value="mbuya">
+        <m value="mbuya">
+          <g>friend:1a,9/2,10</g>
+          <p>n</p>
+        </m>
+      </t>
+      <t value="kamei">
+        <m value="kamei">
+          <g>then</g>
+          <p>adv</p>
+        </m>
+      </t>
+      <t value="sungula">
+        <m value="sungula">
+          <g>hare:9/10</g>
+          <p>n</p>
+        </m>
+      </t>
+      <t value="kamgamba,">
+        <m value="ka-">
+          <g>1.PAST-</g>
+          <p>sm-</p>
+        </m>
+        <m value="m-">
+          <g>1-</g>
+          <p>ncp-</p>
+        </m>
+        <m value="gamb">
+          <g>speak</g>
+          <p>v</p>
+        </m>
+        <m value="-a">
+          <g>-FV7-</g>
+          <p>-fvacp-</p>
+        </m>
+      </t>
+      <t value="chigende">
+        <m value="chi-">
+          <g/>
+          <p/>
+        </m>
+        <m value="gend">
+          <g>go</g>
+          <p>v</p>
+        </m>
+        <m value="-e">
+          <g>-FV</g>
+          <p>-fv</p>
+        </m>
+      </t>
+      <t value="nhambo.">
+        <m value="N-">
+          <g>9/10-</g>
+          <p>ncp-</p>
+        </m>
+        <m value="tambo">
+          <g>journey:9/10</g>
+          <p>n</p>
+        </m>
+      </t>
+    </interlinear-block>
+    <f>They stayed there for many days</f>
+  </ref>
+</name>
+
+</shoebox>
