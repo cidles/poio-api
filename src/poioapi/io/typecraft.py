@@ -214,18 +214,16 @@ class Writer(poioapi.io.graf.BaseWriter):
                 for m in self._get_morphemes(nodes, w.id):
                     m_value = m.annotations._elements[0].features["annotation_value"]
 
-                    if self._validate_pos(self._get_pos_value(nodes, m.id)):
-                        ET.SubElement(word, "pos").text = self._get_pos_value(nodes, m.id)
-                    else:
-                        ET.SubElement(word, "pos")
+                    ET.SubElement(word, "pos").text = self._validate_pos(self._get_pos_value(nodes, m.id))
 
                     morpheme = ET.SubElement(word, "morpheme", {"text": m_value, "baseform": m_value})
 
                     for g in self._get_glosses(nodes, m.id):
                         if g.annotations._elements[0].features:
                             g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
+                            gloss = self._validate_gloss(g_value)
 
-                            if self._validate_gloss(g_value):
+                            if gloss:
                                 ET.SubElement(morpheme, "gloss").text = g_value
                             else:
                                 morpheme.set("meaning", g_value)
@@ -328,10 +326,11 @@ class Writer(poioapi.io.graf.BaseWriter):
                       "NEG", "Nstem", "oBEN", "PPOSTstem", "PRIV", "QUOT", "RECP", "REDP", "REFL", "REL", "RP-SP",
                       "sBEN", "SLCT", "SUP"]
 
-        if gloss_value in gloss_list:
-            return True
-        else:
-            return False
+        for gloss in gloss_list:
+            if gloss_value.upper() == gloss.upper():
+                return gloss
+
+        return None
 
     def _validate_pos(self, pos_value):
         """
@@ -348,7 +347,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                     "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
                     "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
 
-        if pos_value in pos_list:
-            return True
-        else:
-            return False
+        for pos in pos_list:
+            if pos_value.upper() == pos.upper():
+                return pos
+
+        return None
