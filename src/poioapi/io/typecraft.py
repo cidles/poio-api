@@ -209,7 +209,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
             for w in self._get_words(nodes, p.id):
                 w_value = w.annotations._elements[0].features["annotation_value"]
-                word = ET.SubElement(phrase, "word", {"text": w_value, "head": w_value})
+                word = ET.SubElement(phrase, "word", {"text": w_value, "head": "false"})
 
                 for m in self._get_morphemes(nodes, w.id):
                     m_value = m.annotations._elements[0].features["annotation_value"]
