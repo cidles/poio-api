@@ -41,7 +41,9 @@ def char_len(string):
 class Parser(poioapi.io.graf.BaseParser):
 
     def __init__(self, input_stream, record_marker = 'ref',
-        record_level_markers = ['ref', 'ft', 'nt', 'rf', 'rt', 'id', 'dt', 'f'],
+        record_level_markers = ['ref', 'id', 'dt', 'ELANBegin', 'ELANEnd',
+            'ELANParticipant' ],
+        utterance_level_markers = ['ft', 'nt', 'rf', 'rt', 'f', 'graid', 'pr'],
         word_level_markers = ['tx', 't'],
         morpheme_level_markers = ['mb', 'm'],
         tag_level_markers = ['ge', 'ps', 'g', 'p']):
@@ -64,6 +66,7 @@ class Parser(poioapi.io.graf.BaseParser):
         self.record_marker = record_marker
 
         self.record_level_markers = record_level_markers
+        self.utterance_level_markers = utterance_level_markers
         self.word_level_markers = word_level_markers
         self.morpheme_level_markers = morpheme_level_markers
         self.tag_level_markers = tag_level_markers
@@ -103,9 +106,12 @@ class Parser(poioapi.io.graf.BaseParser):
                 t for t in self.morpheme_level_markers if t in self._tiers]
             tag_tiers = [
                 t for t in self.tag_level_markers if t in self._tiers]
+            utterance_tiers = [
+                t for t in self.utterance_level_markers if t in self._tiers]
             morpheme_tiers.append(tag_tiers)
             word_tiers.append(morpheme_tiers)
-            new_tier_hierarchy.append([ 'utterance_gen', word_tiers ])
+            new_tier_hierarchy.append([ 'utterance_gen', word_tiers,
+                utterance_tiers ])
 
             record_tiers = [t for t in self.record_level_markers \
                 if t in self._tiers and t != self.record_marker]
@@ -140,12 +146,12 @@ class Parser(poioapi.io.graf.BaseParser):
 
         current_record_id = 0
         current_utterance_id = 0
-        current_id = 1
+        current_id = 0
 
         first_marker_found = False
         tier_marker = None
 
-        current_utterance = ""
+        current_utterance = None
 
         # Go through lines in the input file
         for line_number, line in enumerate(self.input_stream):
@@ -173,8 +179,11 @@ class Parser(poioapi.io.graf.BaseParser):
                 line_content = line_content.lstrip()
             else:
                 # append to last annotation´s content
+                id_to_add = current_record_id
+                if last_tier_marker in self.utterance_level_markers:
+                    id_to_add = current_utterance_id
                 self._annotations_for_parent[
-                    ("a{0}".format(current_record_id),
+                    ("a{0}".format(id_to_add),
                         last_tier_marker)][-1].value += " " + \
                         line
                 tier_marker = last_tier_marker
@@ -188,6 +197,14 @@ class Parser(poioapi.io.graf.BaseParser):
                     first_marker_found = True
 
             if tier_marker in self.word_level_markers:
+                # Is it a new utterance? Then create a new ID.
+                if current_utterance is None:
+                    current_utterance = ""
+
+                if current_utterance == "":
+                    current_utterance_id = current_id
+                    current_id += 1
+
                 current_utterance += re.sub("\s+", " ", line_content) + " "
 
             if tier_marker in self.word_level_markers or \
@@ -205,18 +222,45 @@ class Parser(poioapi.io.graf.BaseParser):
                     ids[tier_marker][pos] = "a{0}".format(current_id)
                     current_id += 1
 
-            elif tier_marker in self.record_level_markers:
+            # utterance level markers
+            elif tier_marker in self.utterance_level_markers:
 
-                if current_utterance != "":
+                # we left the utterance tiers, so create an utterance
+                # annotation based on the content and make it the current
+                # utterance
+                if current_utterance is not None and current_utterance != "":
                     current_utterance = current_utterance.rstrip()
+
                     self._annotations_for_parent[
                         ("a{0}".format(current_record_id),
-                            "utterance_gen")].append(poioapi.io.graf.Annotation(
-                                "a{0}".format(
-                                    current_utterance_id), current_utterance))
+                            "utterance_gen")].append(
+                                poioapi.io.graf.Annotation("a{0}".format(
+                                    current_utterance_id), 
+                                    current_utterance))
+
                     current_utterance = ""
+
+                elif current_utterance is None:
                     current_utterance_id = current_id
                     current_id += 1
+                    self._annotations_for_parent[
+                        ("a{0}".format(current_record_id),
+                            "utterance_gen")].append(
+                                poioapi.io.graf.Annotation("a{0}".format(
+                                    current_utterance_id), 
+                                    ""))
+
+                    current_utterance = ""
+
+                # add the annotation to the current utterance
+                self._annotations_for_parent[
+                    ("a{0}".format(current_utterance_id), tier_marker)].append(
+                        poioapi.io.graf.Annotation(
+                            "a{0}".format(current_id), line_content))
+                current_id += 1
+
+            # record level markers
+            elif tier_marker in self.record_level_markers:
 
                 if tier_marker == self.record_marker:
                     self._annotations_for_parent[
@@ -224,13 +268,16 @@ class Parser(poioapi.io.graf.BaseParser):
                             poioapi.io.graf.Annotation(
                                 "a{0}".format(current_id), line_content))
                     current_record_id = current_id
+                    current_id += 1
+                    current_utterance = None
+
                 else:
                     self._annotations_for_parent[
                         ("a{0}".format(current_record_id), tier_marker)].append(
                             poioapi.io.graf.Annotation(
                                 "a{0}".format(current_id), line_content))
 
-                current_id += 1
+                    current_id += 1
 
         self.input_stream.seek(0)
         
