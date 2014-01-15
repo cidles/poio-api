@@ -64,12 +64,17 @@ class Parser(poioapi.io.graf.BaseParser):
                                              t.attrib['value'])
                 self._add_phrase(t.attrib['value'])
 
+            elif t.tag == "p":
+                if t.text and "-" not in t.text:
+                    self._add_elment_to_elements(t, self._next_id(), self._current_t,
+                                                 t.text)
+
             elif t.tag == "m":
                 self._current_m = self._next_id()
                 self._add_elment_to_elements(t, self._current_m, self._current_t,
                                              t.attrib['value'])
 
-            elif t.tag == "g" or t.tag == "p":
+            elif t.tag == "g":
                 self._add_elment_to_elements(t, self._next_id(), self._current_m, t.text)
 
             elif t.tag == "name":
@@ -100,10 +105,10 @@ class Parser(poioapi.io.graf.BaseParser):
         if tier.name == "ref":
             return [poioapi.io.graf.Tier("t")]
         if tier.name == "t":
-            return [poioapi.io.graf.Tier("m")]
+            return [poioapi.io.graf.Tier("p"),
+                    poioapi.io.graf.Tier("m")]
         if tier.name == "m":
-            return [poioapi.io.graf.Tier("g"),
-                    poioapi.io.graf.Tier("p")]
+            return [poioapi.io.graf.Tier("g")]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         if tier.name == "ref":
