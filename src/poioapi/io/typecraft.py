@@ -179,7 +179,12 @@ class Writer(poioapi.io.graf.BaseWriter):
     def write(self, outputfile, converter, pretty_print=False, ids=None):
 
         nodes = converter.graf.nodes
-        phrases = self._get_phrases(nodes)
+        phrases = self._get_phrases(nodes, converter)
+        word_nodes = self._get_tag_nodes(nodes, "t")
+        pos_nodes = self._get_tag_nodes(nodes, "p")
+        morph_nodes = self._get_tag_nodes(nodes, "m")
+        gloss_nodes = self._get_tag_nodes(nodes, "g")
+        trans_nodes = self._get_tag_nodes(nodes, "f")
 
         if ids:
             self._current_text_id = ids[0]
@@ -203,30 +208,39 @@ class Writer(poioapi.io.graf.BaseWriter):
         for p in phrases:
             phrase = ET.SubElement(text, "phrase", {"id": self._next_phrase_id(), "valid": "VALID"})
             ET.SubElement(phrase, "original").text = p.annotations._elements[0].features["annotation_value"]
-            ET.SubElement(phrase, "translation")
+
+            t = self._get_nodes_by_parent(trans_nodes, p.id)
+            if t:
+                ET.SubElement(phrase, "translation").text = t[0].annotations._elements[0].features["annotation_value"]
+            else:
+                ET.SubElement(phrase, "translation")
+
             ET.SubElement(phrase, "description")
             ET.SubElement(phrase, "globaltags", {"id": "1", "tagset": "Default"})
 
-            for w in self._get_words(nodes, p.id):
+            for w in self._get_nodes_by_parent(word_nodes, p.id):
                 w_value = w.annotations._elements[0].features["annotation_value"]
                 word = ET.SubElement(phrase, "word", {"text": w_value, "head": "false"})
 
-                for m in self._get_morphemes(nodes, w.id):
-                    m_value = m.annotations._elements[0].features["annotation_value"]
+                ET.SubElement(word, "pos").text = self._validate_pos(self._get_pos_value(pos_nodes, w.id))
 
-                    ET.SubElement(word, "pos").text = self._validate_pos(self._get_pos_value(nodes, m.id))
+                for m in self._get_nodes_by_parent(morph_nodes, w.id):
+                    m_value = m.annotations._elements[0].features["annotation_value"].replace("-","")
 
                     morpheme = ET.SubElement(word, "morpheme", {"text": m_value, "baseform": m_value})
 
-                    for g in self._get_glosses(nodes, m.id):
+                    for g in self._get_nodes_by_parent(gloss_nodes, m.id):
                         if g.annotations._elements[0].features:
                             g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
-                            gloss = self._validate_gloss(g_value)
+                            gloss_list = self._validate_gloss(g_value)
 
-                            if gloss:
-                                ET.SubElement(morpheme, "gloss").text = g_value
+                            if gloss_list:
+                                for gloss in gloss_list:
+                                    ET.SubElement(morpheme, "gloss").text = gloss
                             else:
-                                morpheme.set("meaning", g_value)
+                                morpheme.set("meaning", self._set_meaning(g_value))
+
+
 
         self.write_xml(root, outputfile)
 
@@ -244,8 +258,11 @@ class Writer(poioapi.io.graf.BaseWriter):
             tree = ET.ElementTree(root)
             tree.write(outputfile)
 
-    def _get_phrases(self, nodes):
-        return [node for node in nodes if node.id.startswith("ref")]
+    def _get_phrases(self, nodes, converter):
+        if "utterance_gen" in self._flatten_hierarchy_elements(converter.tier_hierarchies):
+            return [node for node in nodes if node.id.startswith("utterance_gen")]
+        else:
+            return [node for node in nodes if node.id.startswith("ref")]
 
     def _get_body(self, phrases, body=""):
         for n in phrases:
@@ -253,28 +270,22 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         return body
 
-    def _get_words(self, nodes, parent_id):
-        return [node for node in nodes
-                if node.id.startswith("t") and
-                   node.parent.id == parent_id]
-
-    def _get_pos_value(self, nodes, parent_id):
-        for node in nodes:
-            if node.id.startswith("p") and node.parent.id == parent_id:
+    def _get_pos_value(self, pos_nodes, parent_id):
+        for node in pos_nodes:
+            if node.parent.id == parent_id or node.parent.parent.id == parent_id:
                 if node.annotations._elements[0].features:
-                    value = node.annotations._elements[0].features["annotation_value"]
-                    return value.replace("-","")
-                return ""
+                    pos_value = node.annotations._elements[0].features["annotation_value"]
 
-    def _get_morphemes(self, nodes, parent_id):
-        return [node for node in nodes
-                if node.id.startswith("m") and
-                   node.parent.id == parent_id]
+                    if "-" not in pos_value:
+                        return pos_value
 
-    def _get_glosses(self, nodes, parent_id):
-        return [node for node in nodes
-                if node.id.startswith("g") and
-                   node.parent.id == parent_id]
+        return ""
+
+    def _get_tag_nodes(self, nodes, tag):
+        return [node for node in nodes if node.id.startswith(tag)]
+
+    def _get_nodes_by_parent(self, nodes, parent_id):
+        return [node for node in nodes if node.parent.id == parent_id]
 
     def _next_text_id(self):
         current_id = str(int(self._current_text_id) + 1)
@@ -282,11 +293,46 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         return str(current_id)
 
+    def _set_meaning(self, value):
+        result = value
+
+        if ":" in value:
+            result = value.split(":")[0]
+        elif "-" in value:
+            result = value.split("-")[0]
+        elif "/" in value:
+            result = value.split("/")[0]
+
+        return result
+
     def _next_phrase_id(self):
         current_id = str(int(self._current_phrase_id) + 1)
         self._current_phrase_id = current_id
 
         return str(current_id)
+
+    def _flatten_hierarchy_elements(self, elements):
+        """Flat the elements appended to a new list of elements.
+
+        Parameters
+        ----------
+        elements : array_like
+            An array of string values.
+
+        Returns
+        -------
+        flat_elements : array_like
+            An array of flattened `elements`.
+
+        """
+
+        flat_elements = []
+        for e in elements:
+            if type(e) is list:
+                flat_elements.extend(self._flatten_hierarchy_elements(e))
+            else:
+                flat_elements.append(e)
+        return flat_elements
 
     def _validate_gloss(self, gloss_value):
         """
@@ -294,6 +340,7 @@ class Writer(poioapi.io.graf.BaseWriter):
         in a gloss list from the TC gloss list.
         """
 
+        valid_glosses = []
         gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
                       "ASP", "CESSIVE", "CMPL", "CON", "CONT", "CUST", "DUR", "DYN", "EGR",
                       "FREQ", "HAB", "INCEP", "INCH", "INCOMPL", "INGR", "INTS", "IPFV", "ITER",
@@ -326,11 +373,16 @@ class Writer(poioapi.io.graf.BaseWriter):
                       "NEG", "Nstem", "oBEN", "PPOSTstem", "PRIV", "QUOT", "RECP", "REDP", "REFL", "REL", "RP-SP",
                       "sBEN", "SLCT", "SUP"]
 
-        for gloss in gloss_list:
-            if gloss_value.upper() == gloss.upper():
-                return gloss
+        # split gloss values
+        for gl in gloss_value.split("."):
+            for gloss in gloss_list:
+                if gl.upper() == gloss.upper():
+                    valid_glosses.append(gloss)
 
-        return None
+        if valid_glosses:
+            return valid_glosses
+        else:
+            return None
 
     def _validate_pos(self, pos_value):
         """
