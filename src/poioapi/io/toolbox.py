@@ -157,8 +157,12 @@ class Parser(poioapi.io.graf.BaseParser):
         for line_number, line in enumerate(self.input_stream):
             # remove BOM
             if line_number == 0:
+
+                self.meta_information = line.split(None,2)[2]
+
                 if line.startswith(codecs.BOM_UTF8):
                     line = line[BOMLEN:]
+                    
             line = line.decode("utf-8", 'ignore')
             line = line.strip()
             if line == "":
