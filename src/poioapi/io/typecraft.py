@@ -260,9 +260,19 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     def _get_phrases(self, nodes, converter):
         if "utterance_gen" in self._flatten_hierarchy_elements(converter.tier_hierarchies):
-            return [node for node in nodes if node.id.startswith("utterance_gen")]
+            result_nodes = [node for node in nodes if node.id.startswith("utterance_gen")]
         else:
-            return [node for node in nodes if node.id.startswith("ref")]
+            result_nodes = [node for node in nodes if node.id.startswith("ref")]
+
+        return sorted(result_nodes, key=lambda node:int(node.id.split("..na")[1]))
+
+    def _get_tag_nodes(self, nodes, tag):
+        result_nodes = [node for node in nodes if node.id.startswith(tag)]
+
+        return sorted(result_nodes, key=lambda node:int(node.id.split("..na")[1]))
+
+    def _get_nodes_by_parent(self, nodes, parent_id):
+        return [node for node in nodes if node.parent.id == parent_id]
 
     def _get_body(self, phrases, body=""):
         for n in phrases:
@@ -280,12 +290,6 @@ class Writer(poioapi.io.graf.BaseWriter):
                         return pos_value
 
         return ""
-
-    def _get_tag_nodes(self, nodes, tag):
-        return [node for node in nodes if node.id.startswith(tag)]
-
-    def _get_nodes_by_parent(self, nodes, parent_id):
-        return [node for node in nodes if node.parent.id == parent_id]
 
     def _next_text_id(self):
         current_id = str(int(self._current_text_id) + 1)
@@ -344,24 +348,24 @@ class Writer(poioapi.io.graf.BaseWriter):
         gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
                       "ASP", "CESSIVE", "CMPL", "CON", "CONT", "CUST", "DUR", "DYN", "EGR",
                       "FREQ", "HAB", "INCEP", "INCH", "INCOMPL", "INGR", "INTS", "IPFV", "ITER",
-                      "PFV", "PNCT", "PROG", "PRSTV", "REP", "RESLT", "SEMF", "STAT",
-                      "NCOMPL", "PRF", "FV", "IV", "ABES", "ABL", "ABS", "ACC", "ADES", "ALL", "BEN",
-                      "case marker - underspecified", "COMIT", "CONTL", "DAT", "DEL", "DEST", "ELAT", "EQT", "ERG",
-                      "ESS", "GEN", "ILL", "INESS", "INSTR", "LAT", "MALF", "NOM", "OBL", "PERL", "POSS", "PRTV", "TER",
-                      "VIAL", "VOC", "ORN",
-                      "CLITcomp", "CLITadv", "CLITdet", "CLITn", "CLITp", "CLITpron", "CLITv", "ATV", "FAM", "INFOC",
-                      "RFTL", "TPID", "UNID", "APPROX",
-                      "DIST", "DIST2", "DXS", "MEDIAL", "PROX", "AD", "ADJ>ADV", "ADJ>N", "ADJ>V", "AUG", "DIM",
-                      "INCORP", "KIN", "N>ADJ", "N>ADV", "NMLZ", "N>N",
-                      "NUM>N", "N>V", "PTCP>ADJ", "QUAL", "V>ADJ", "V>ADV", "vbl", ">Vitr", "V>N", ">Vtr", "V>Nagt",
-                      "V>Ninstr", "ACAUS", "APASS", "APPL", "CAUS", "PASS", "ASRT", "DECL", "EXCL", "IMP", "IMP1",
-                      "IMP2", "IND", "INTR", "MAVM", "PROH", "Q", "RPS", "COMM", "FEM", "MASC", "NEUT", "COMPL", "DO",
-                      "ICV", "OBJ", "OBJ2", "objcogn", "OBJind", "OM", "SBJ", "SC", "SM", "AFFMT", "CNTV", "COND",
-                      "CONJ", "CONTP", "EVID", "IRR", "JUSS", "MOD", "OPT", "RLS", "SBJV", "OBLIG", "POT", "MNR", "MO",
-                      "CL", "CL1", "CL10", "CL11", "CL12", "CL13", "CL14", "CL15", "CL16", "CL17", "CL18", "CL2",
-                      "CL20", "CL21", "CL22", "CL23", "CL3", "CL4", "CL5", "CL6", "CL7", "CL8", "CL9", "Npref",
-                      "landmark", "DU", "PL", "SG", "x", "DISTRIB", "1", "1excl", "1incl", "1PL", "1SG", "2", "2PL",
-                      "2SG", "3", "3B", "3PL", "3Pobv", "3Pprox", "3SG", "3Y", "4", "AREAL", "PLassc", "FT", "H", "!H",
+                      "PFV", "PNCT", "PROG", "PRSTV", "REP", "RESLT", "SEMF", "STAT", "NCOMPL",
+                      "PRF", "FV", "IV", "ABES", "ABL", "ABS", "ACC", "ADES", "ALL", "BEN",
+                      "case marker - underspecified", "COMIT", "CONTL", "DAT", "DEL", "DEST",
+                      "ELAT", "EQT", "ERG", "ESS", "GEN", "ILL", "INESS", "INSTR", "LAT", "MALF",
+                      "NOM", "OBL", "PERL", "POSS", "PRTV", "TER", "VIAL", "VOC", "ORN", "CLITcomp",
+                      "CLITadv", "CLITdet", "CLITn", "CLITp", "CLITpron", "CLITv", "ATV", "FAM", "INFOC",
+                      "RFTL", "TPID", "UNID", "APPROX", "DIST", "DIST2", "DXS", "MEDIAL", "PROX", "AD",
+                      "ADJ>ADV", "ADJ>N", "ADJ>V", "AUG", "DIM", "INCORP", "KIN", "N>ADJ", "N>ADV", "NMLZ",
+                      "N>N", "NUM>N", "N>V", "PTCP>ADJ", "QUAL", "V>ADJ", "V>ADV", "vbl", ">Vitr", "V>N",
+                      ">Vtr", "V>Nagt", "V>Ninstr", "ACAUS", "APASS", "APPL", "CAUS", "PASS", "ASRT",
+                      "DECL", "EXCL", "IMP", "IMP1", "IMP2", "IND", "INTR", "MAVM", "PROH", "Q", "RPS",
+                      "COMM", "FEM", "MASC", "NEUT", "COMPL", "DO", "ICV", "OBJ", "OBJ2", "objcogn", "OBJind",
+                      "OM", "SBJ", "SC", "SM", "AFFMT", "CNTV", "COND", "CONJ", "CONTP", "EVID", "IRR", "JUSS",
+                      "MOD", "OPT", "RLS", "SBJV", "OBLIG", "POT", "MNR", "MO", "CL", "CL1", "CL10", "CL11",
+                      "CL12", "CL13", "CL14", "CL15", "CL16", "CL17", "CL18", "CL2", "CL20", "CL21", "CL22",
+                      "CL23", "CL3", "CL4", "CL5", "CL6", "CL7", "CL8", "CL9", "Npref", "landmark", "DU",
+                      "PL", "SG", "x", "DISTRIB", "1", "1excl", "1incl", "1PL", "1SG", "2", "2PL", "2SG",
+                      "3", "3B", "3PL", "3Pobv", "3Pprox", "3SG", "3Y", "4", "AREAL", "PLassc", "FT", "H", "!H",
                       "L", "MT", "RT", "NEGPOL", "POSPOL", "DEF", "INDEF", "SGbare", "SPECF", "PART", "2HML", "2HON",
                       "HON", "TTL", "AGT", "EXP", "GOAL", "PSSEE", "PSSOR", "PT", "SRC", "TH", "CIRCM", "CTed", "DIR",
                       "ENDPNT", "EXT", "INT", "LINE", "LOC", "PATH", "PRL", "SPTL", "STARTPNT", "VIAPNT", "DM", "MU",
@@ -373,11 +377,18 @@ class Writer(poioapi.io.graf.BaseWriter):
                       "NEG", "Nstem", "oBEN", "PPOSTstem", "PRIV", "QUOT", "RECP", "REDP", "REFL", "REL", "RP-SP",
                       "sBEN", "SLCT", "SUP"]
 
+        extra_gloss_map = {"1": "CL1", "2": "CL2", "3": "CL3", "5": "CL5", "6": "CL6", "7": "CL7",
+                           "8": "CL8", "9": "CL9", "14": "CL14", "15": "CL15", "16": "CL16",
+                           "17": "CL17", "18": "CL18"}
+
         # split gloss values
         for gl in gloss_value.split("."):
             for gloss in gloss_list:
                 if gl.upper() == gloss.upper():
                     valid_glosses.append(gloss)
+
+            if gl in extra_gloss_map.keys():
+                valid_glosses.append(extra_gloss_map[gl])
 
         if valid_glosses:
             return valid_glosses
@@ -399,8 +410,15 @@ class Writer(poioapi.io.graf.BaseWriter):
                     "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
                     "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
 
+        extra_pos_map = {"prn": "PN", "interj": "INTRJCT"}
+
+        value = None
+
         for pos in pos_list:
             if pos_value.upper() == pos.upper():
-                return pos
+                value = pos
 
-        return None
+        if pos_value in extra_pos_map.keys():
+                value = extra_pos_map[pos_value]
+
+        return value
