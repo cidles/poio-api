@@ -158,13 +158,15 @@ class Parser(poioapi.io.graf.BaseParser):
             # remove BOM
             if line_number == 0:
 
-                self.meta_information = line.split(None,2)[2]
-
                 if line.startswith(codecs.BOM_UTF8):
                     line = line[BOMLEN:]
                     
             line = line.decode("utf-8", 'ignore')
             line = line.strip()
+
+            if "\name" in line:
+                self.meta_information = line.split(None,2)[2]
+
             if line == "":
                 if len(elements) > 0:
                     self._process_record(elements, ids, current_utterance_id)
