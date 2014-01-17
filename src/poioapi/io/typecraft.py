@@ -12,6 +12,7 @@ Typecraf files and generate GrAF files.
 """
 
 from __future__ import absolute_import
+import codecs
 
 import re
 
@@ -201,13 +202,23 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         # The language must be set as und
         text = ET.SubElement(root, "text", {"id": self._next_text_id(), "lang": "und"})
-        ET.SubElement(text, "title").text = converter.meta_information
+        
+        if converter.meta_information:
+            ET.SubElement(text, "title").text = converter.meta_information
+        else:
+            ET.SubElement(text, "title").text = "Empty Title"
+
         ET.SubElement(text, "titleTranslation")
         ET.SubElement(text, "body").text = self._get_body(phrases)
 
         for p in phrases:
+            original = p.annotations._elements[0].features["annotation_value"]
+
+            if original == "":
+                continue
+
             phrase = ET.SubElement(text, "phrase", {"id": self._next_phrase_id(), "valid": "VALID"})
-            ET.SubElement(phrase, "original").text = p.annotations._elements[0].features["annotation_value"]
+            ET.SubElement(phrase, "original").text = original
 
             t = self._get_nodes_by_parent(trans_nodes, p.id)
             if t:
@@ -251,7 +262,7 @@ class Writer(poioapi.io.graf.BaseWriter):
             text_re = re.compile(r'>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)
             prettyXml = text_re.sub(r'>\g<1></', doc.toprettyxml(indent='  '))
 
-            file = open(outputfile, 'wb')
+            file = codecs.open(outputfile, 'wb', encoding='utf-8')
             file.write(prettyXml)
             file.close()
         else:
