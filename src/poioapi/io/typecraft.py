@@ -323,7 +323,7 @@ class Writer(poioapi.io.graf.BaseWriter):
     def _next_phrase_id(self):
         current_id = str(int(self._current_phrase_id) + 1)
         self._current_phrase_id = current_id
-
+7
         return str(current_id)
 
     def _flatten_hierarchy_elements(self, elements):
@@ -390,7 +390,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         extra_gloss_map = {"1": "CL1", "2": "CL2", "3": "CL3", "5": "CL5", "6": "CL6", "7": "CL7",
                            "8": "CL8", "9": "CL9", "14": "CL14", "15": "CL15", "16": "CL16",
-                           "17": "CL17", "18": "CL18"}
+                           "17": "CL17", "18": "CL18", "NPST": "NPAST", "EMP": "EMPH", "EXCLAM": "EXCL",
+                           "COM": "COMIT", "PERF": "PFV", "CLAS": "CLF"}
 
         # split gloss values
         for gl in gloss_value.split("."):
@@ -421,7 +422,7 @@ class Writer(poioapi.io.graf.BaseWriter):
                     "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
                     "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
 
-        extra_pos_map = {"prn": "PN", "interj": "INTRJCT"}
+        extra_pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "V"}
 
         value = None
 
