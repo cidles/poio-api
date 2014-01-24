@@ -39,7 +39,7 @@ class TestParser:
 
         child_tiers = self.parser.get_child_tiers_for_tier(
             poioapi.io.graf.Tier('m'))
-        assert len(child_tiers) == 2
+        assert len(child_tiers) == 1
 
 
     def test_get_annotations_for_tier(self):
@@ -65,4 +65,4 @@ class TestParser:
         tier_annotations = self.parser.get_annotations_for_tier(
             tier, annotation_parent)
 
-        assert len(tier_annotations) == 0
+        assert len(tier_annotations) == 1

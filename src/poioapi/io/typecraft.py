@@ -323,7 +323,7 @@ class Writer(poioapi.io.graf.BaseWriter):
     def _next_phrase_id(self):
         current_id = str(int(self._current_phrase_id) + 1)
         self._current_phrase_id = current_id
-7
+
         return str(current_id)
 
     def _flatten_hierarchy_elements(self, elements):
