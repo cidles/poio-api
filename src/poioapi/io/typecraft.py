@@ -13,7 +13,9 @@ Typecraf files and generate GrAF files.
 
 from __future__ import absolute_import
 import codecs
-
+from datetime import time
+import time
+import datetime
 import re
 
 import xml.etree.cElementTree as ET
@@ -181,6 +183,9 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         nodes = converter.graf.nodes
         phrases = self._get_phrases(nodes, converter)
+        time_start_nodes = self._get_tag_nodes(nodes, "ELANBegin")
+        time_end_nodes = self._get_tag_nodes(nodes, "ELANEnd")
+        participant_nodes = self._get_tag_nodes(nodes, "ELANParticipant")
         word_nodes = self._get_tag_nodes(nodes, "t")
         pos_nodes = self._get_tag_nodes(nodes, "p")
         morph_nodes = self._get_tag_nodes(nodes, "m")
@@ -218,6 +223,24 @@ class Writer(poioapi.io.graf.BaseWriter):
                 continue
 
             phrase = ET.SubElement(text, "phrase", {"id": self._next_phrase_id(), "valid": "VALID"})
+
+            #<phrase duration="2234" offset="6348" speaker="Pavel" valid="VALID" id="9086">
+            offset_node = self._get_time_related_nodes(time_start_nodes, p)
+            duration_node = self._get_time_related_nodes(time_end_nodes, p)
+            participant_node = self._get_time_related_nodes(participant_nodes, p)
+
+            # Get the time
+            if offset_node:
+                offset_value = self._string_to_milliseconds(offset_node)
+                phrase.set("offset", str(offset_value))
+
+                if duration_node:
+                    duration_value = self._string_to_milliseconds(duration_node) - offset_value
+                    phrase.set("duration", str(duration_value))
+
+            if participant_node:
+                phrase.set("speaker", participant_node.annotations._elements[0].features["annotation_value"])
+
             ET.SubElement(phrase, "original").text = original
 
             t = self._get_nodes_by_parent(trans_nodes, p.id)
@@ -301,6 +324,23 @@ class Writer(poioapi.io.graf.BaseWriter):
                         return pos_value
 
         return ""
+
+    def _get_time_related_nodes(self, time_nodes, parent_node):
+        for node in time_nodes:
+            if node.parent.id == parent_node.parent.id:
+                return node
+
+    def _string_to_milliseconds(self, time_node):
+        time_start = time_node.annotations._elements[0].features["annotation_value"].split(".")
+
+        microseconds = int(time_start[1])
+
+        x = time.strptime(time_start[0],'%H:%M:%S')
+
+        offset = int(datetime.timedelta(hours=x.tm_hour,minutes=x.tm_min,seconds=x.tm_sec).seconds
+                     * 1000) + microseconds
+
+        return offset
 
     def _next_text_id(self):
         current_id = str(int(self._current_text_id) + 1)
@@ -422,7 +462,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                     "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
                     "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
 
-        extra_pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "V"}
+        extra_pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "V", "pron": "PN", "part": "PRT", "intj": "INTRJCT",
+                         "name": "Np", "encl": "CL", "pred": "COP"}
 
         value = None
 
