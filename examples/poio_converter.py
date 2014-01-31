@@ -25,7 +25,7 @@ def main(argv):
         help="Type of the output file (html|graf|typecraft)")
     parser.add_option("-r", "--roottier", dest="roottier",
         help="Root tier for html output, is the record marker in Toolbox")
-    parser.add_option("-tags", "--tags", dest="tags",
+    parser.add_option("-t", "--tags", dest="tags",
         help="Tag set")
     parser.add_option("-m", "--more", dest="more",
         help="Add extra information")
@@ -83,8 +83,8 @@ def main(argv):
 
         if options.more:
             ids = options.more.split("-")
-        if options.more:
-            ids = options.tags
+        if options.tags:
+            tags = options.tags
 
         typecraft = poioapi.io.typecraft.Writer()
         typecraft.write(files[1], ag, ids=ids, tags=tags)
