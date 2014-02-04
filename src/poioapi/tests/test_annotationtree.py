@@ -265,12 +265,8 @@ class TestAnnotationTree:
                expected_result.data_hierarchy)
         assert(self.annotationtree.last_filter().structure_type_handler.flat_data_hierarchy ==
                expected_result.flat_data_hierarchy)
-        assert(self.annotationtree.last_filter().structure_type_handler.name ==
-               expected_result.name)
         assert(self.annotationtree.last_filter().structure_type_handler.nr_of_types ==
                expected_result.nr_of_types)
-        assert(self.annotationtree.last_filter().structure_type_handler.types_with_regions ==
-               expected_result.types_with_regions)
 
     def test_pop_filter(self):
         """Raise an assertion if can't remove filter.

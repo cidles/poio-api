@@ -2,8 +2,8 @@
 #
 # Poio Tools for Linguists
 #
-# Copyright (C) 2009-2013 Poio Project
-# Author: António Lopes <alopes@cidles.eu>
+# Copyright (C) 2009-2014 Poio Project
+# Author: Peter Bouda <pbouda@cidles.eu>
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
@@ -24,6 +24,17 @@ re_line_break = re.compile(r"(\r\n|\n|\r)+$")
 re_word = re.compile(r"(?<=\s)(\S+)(?:\s|$)", re.UNICODE)
 BOMLEN = len(codecs.BOM_UTF8)
 
+# Tier map
+tier_map = {
+    poioapi.data.TIER_UTTERANCE: ["utterance_gen"],
+    poioapi.data.TIER_WORD: ["tx", "t"],
+    poioapi.data.TIER_MORPHEME: ["mb", "m"],
+    poioapi.data.TIER_POS: ["ps", "p"],
+    poioapi.data.TIER_GLOSS: ["ge", "g"],
+    poioapi.data.TIER_TRANSLATION: ["ft", "f"],
+    poioapi.data.TIER_COMMENT: ["nt"]
+}
+
 # Set the type of string
 if sys.version_info[:2] >= (3, 0):
     string_type = str
@@ -43,10 +54,12 @@ class Parser(poioapi.io.graf.BaseParser):
     def __init__(self, input_stream, record_marker = 'ref',
         record_level_markers = ['ref', 'id', 'dt', 'ELANBegin', 'ELANEnd',
             'ELANParticipant' ],
-        utterance_level_markers = ['ft', 'nt', 'rf', 'rt', 'f', 'graid', 'pr'],
-        word_level_markers = ['tx', 't'],
-        morpheme_level_markers = ['mb', 'm'],
-        tag_level_markers = ['ge', 'ps', 'g', 'p']):
+        utterance_level_markers = tier_map[poioapi.data.TIER_TRANSLATION] + \
+            tier_map[poioapi.data.TIER_COMMENT] + ['rf', 'rt', 'graid', 'pr'],
+        word_level_markers = tier_map[poioapi.data.TIER_WORD],
+        morpheme_level_markers = tier_map[poioapi.data.TIER_MORPHEME],
+        tag_level_markers = tier_map[poioapi.data.TIER_GLOSS] + \
+            tier_map[poioapi.data.TIER_POS]):
         """Class's constructor.
 
         Parameters
