@@ -208,7 +208,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
             if tags.split("_")[0] != "{EMPTY}":
                 self.extra_gloss_map = ast.literal_eval(tags.split("_")[0])
-            if tags.split("_")[1] != "{EMPTY}":
+            if tags.split("_")[1] != "{\"EMPTY\"}":
                 self.extra_pos_map = ast.literal_eval(tags.split("_")[1])
 
         attribs = {"xsi:schemaLocation": "http://typecraft.org/typecraft.xsd",
@@ -266,9 +266,10 @@ class Writer(poioapi.io.graf.BaseWriter):
             for w in self._get_nodes_by_parent(word_nodes, p.id):
                 w_value = w.annotations._elements[0].features["annotation_value"]
                 word = ET.SubElement(phrase, "word", {"text": w_value, "head": "false"})
+                p_value = self._get_pos_value(pos_nodes, w.id)
 
-                ET.SubElement(word, "pos").text = self._validate_pos(self._get_pos_value(pos_nodes, w.id),
-                                                                     self.extra_pos_map)
+                if p_value is not "":
+                    ET.SubElement(word, "pos").text = self._validate_pos(p_value, self.extra_pos_map)
 
                 for m in self._get_nodes_by_parent(morph_nodes, w.id):
                     m_value = m.annotations._elements[0].features["annotation_value"].replace("-", "")
@@ -278,10 +279,10 @@ class Writer(poioapi.io.graf.BaseWriter):
                     for g in self._get_nodes_by_parent(gloss_nodes, m.id):
                         if g.annotations._elements[0].features:
                             g_value = g.annotations._elements[0].features["annotation_value"]
-                            aux = g_value.split("'- |, |= |:'")
+                            aux = g_value.split("'- |, |= |: |?'")
                             gloss_list = None
 
-                            if len(aux) is 1:
+                            if not any((c in g_value) for c in "-,=:?"):
                                 gloss_list = self._validate_gloss(g_value.replace("-", ""), self.extra_gloss_map)
 
                             if gloss_list:
@@ -302,9 +303,11 @@ class Writer(poioapi.io.graf.BaseWriter):
             wrt += str(self._missing_gloss_list) + "--"
         if self._missing_pos_list:
             if wrt == "":
-                wrt += "--" + str(self._missing_pos_list)
+                wrt += "[]--" + str(self._missing_pos_list)
             else:
                 wrt += str(self._missing_pos_list)
+        else:
+            wrt += "[]"
 
         if wrt != "":
             file = codecs.open(outputfile + ".missing", 'wb', encoding='utf-8')
@@ -353,7 +356,7 @@ class Writer(poioapi.io.graf.BaseWriter):
                 if node.annotations._elements[0].features:
                     pos_value = node.annotations._elements[0].features["annotation_value"]
 
-                    if "-" not in pos_value:
+                    if "'- |, |= |:'" not in pos_value:
                         return pos_value
 
         return ""
@@ -442,7 +445,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         value = None
 
-        if "-" not in pos_value:
+        if not any((c in pos_value) for c in "-?*"):
             for pos in pos_list:
                 if pos_value.upper() == pos.upper():
                     value = pos
@@ -519,6 +522,6 @@ class Writer(poioapi.io.graf.BaseWriter):
         else:
             if gloss_value.isupper():
                 if gloss_value not in self._missing_gloss_list:
-                        self._missing_gloss_list.append(gloss_value)
+                    self._missing_gloss_list.append(gloss_value)
 
             return None
