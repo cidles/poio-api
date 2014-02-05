@@ -24,25 +24,42 @@ else:
     string_type = basestring
 
 # File types
-(EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TOOLBOXXML, SHOEBOX, TREEPICKLE, TYPECRAFT) = range(8)
+(EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TOOLBOXXML, SHOEBOX, TREEPICKLE,
+    TYPECRAFT) = range(8)
+
+# Tier types
+(TIER_UTTERANCE, TIER_WORD, TIER_MORPHEME, TIER_POS, TIER_GLOSS, TIER_GRAID1,
+    TIER_GRAID2, TIER_TRANSLATION, TIER_COMMENT) = range(9)
+
+# Tier labels
+# TODO: this could be the link to the ISOcat later, where we also get the labels
+tier_labels = {
+    TIER_UTTERANCE: "utterance",
+    TIER_WORD: "word",
+    TIER_MORPHEME: "morpheme",
+    TIER_POS: "part of speech",
+    TIER_GLOSS: "gloss",
+    TIER_GRAID1: "graid1",
+    TIER_GRAID2: "graid2",
+    TIER_TRANSLATION: "translation",
+    TIER_COMMENT: "comment"
+}
 
 # Data structure types
-(GLOSS, WORDS, GRAID, GRAIDDIANA) = range(4)
+(DST_WORDS, DST_GRAID, DST_GRAIDDIANA, DST_MORPHSYNT) = range(4)
 
 class UnknownFileFormatError(Exception): pass
 class NoFileSpecifiedError(Exception): pass
-
-# Data structure types
-(WORDS, MORPHSYNT, GRAID) = range(3)
 class UnknownDataStructureTypeError(Exception): pass
 class DataStructureTypeNotSupportedError(Exception): pass
 class DataStructureTypeNotCompatible(Exception): pass
 class UnknownAnnotationTypeError(Exception): pass
 
+
 def data_structure_handler_for_type(data_structure_type):
-    if data_structure_type == GRAID:
+    if data_structure_type == DST_GRAID:
         return DataStructureTypeGraid()
-    elif data_structure_type == GRAIDDIANA:
+    elif data_structure_type == DST_GRAIDDIANA:
         return DataStructureTypeGraidDiana()
 
     else:
@@ -64,10 +81,7 @@ class DataStructureType(object):
 
     """
 
-    name = "WORDS"
-
     data_hierarchy = [ 'utterance', ['word'], 'translation']
-    types_with_regions = [ 'utterance', 'word' ]
 
     def __init__(self, custom_data_hierarchy = None):
         """Class's constructor.....
@@ -80,9 +94,6 @@ class DataStructureType(object):
             self.data_hierarchy)
         self.nr_of_types = len(self.flat_data_hierarchy)
 
-        #for i, e in enumerate(self.data_hierarchy[1:]):
-        #    if isinstance(e, string_type):
-        #        self.data_hierarchy[i+1] = [e]
 
     def type_has_region(self, ann_type):
         """ Checks whether the given type has regions that connect it
@@ -330,17 +341,12 @@ class DataStructureTypeGraid(DataStructureType):
 
     """
 
-    name = "GRAID"
-
     data_hierarchy = \
     [ 'utterance',
         [ 'clause_unit',
             [ 'word', 'wfw', 'graid1' ],
           'graid2' ],
       'translation', 'comment' ]
-
-    types_with_regions = \
-    [ 'utterance', 'clause_unit', 'word' ]
 
 class DataStructureTypeGraidDiana(DataStructureType):
 
@@ -355,8 +361,6 @@ class DataStructureTypeGraidDiana(DataStructureType):
         Structure of the array.
 
     """
-
-    name = "GRAIDDIANA"
 
     data_hierarchy =\
     [ 'utterance',
@@ -375,9 +379,6 @@ class DataStructureTypeGraidDiana(DataStructureType):
       'comment'
     ]
 
-    types_with_regions =\
-    [ 'utterance', 'clause_unit', 'word', 'morpheme' ]
-
 
 class DataStructureTypeMorphsynt(DataStructureType):
 
@@ -393,14 +394,9 @@ class DataStructureTypeMorphsynt(DataStructureType):
 
     """
 
-    name = "MORPHSYNT"
-
     data_hierarchy =\
-    [ 'utterance',
-        [ 'word',
-            [ 'morpheme',
-                [ 'gloss'] ] ],
-        'translation', 'comment' ]
-
-    types_with_regions =\
-    [ 'utterance', 'word', 'morpheme' ]
+    [ TIER_UTTERANCE,
+        [ TIER_WORD,
+            [ TIER_MORPHEME, [ TIER_GLOSS ] ],
+            TIER_POS ],
+        TIER_TRANSLATION, TIER_COMMENT ]

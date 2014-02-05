@@ -260,8 +260,7 @@ class BaseWriter(object):
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def write(self, outputfile, graf_graph, tier_hierarchies,
-              primary_data=None, meta_information=None):
+    def write(self, outputfile, converter):
         """Method that will write the GrAF object into
         a specific format.
 
@@ -270,12 +269,10 @@ class BaseWriter(object):
         outputfile : str
             The filename of the output file. The filename should be the header
             file for GrAF with the extension ".hdr".
-        graf_graph : GrAF
-        tier_hierarchies : array_like
-        primary_data : object
-            This object will contain the information to the dataDesc primaryData.
-        meta_information : ElementTree
-            Element tree contains extra information about a specific object.
+        converter : Converter
+            A converter object. The converter object containes the data that
+            will be use for output. All writers need at least a GrAF graph
+            and the tier hierarchy, some will also need the primary data object.
 
         """
 
@@ -476,12 +473,9 @@ class Writer(BaseWriter):
         outputfile : str
             The filename of the output file. The filename should be the header
             file for GrAF with the extension ".hdr".
-        graf_graph : GrAF
-        tier_hierarchies : array_like
-        primary_data : object
-            This object will contain the information to the dataDesc primaryData.
-        meta_information : ElementTree
-            Element tree contains extra information about a specific object.
+        converter : Converter
+            A converter object. The converter object containes the data that
+            will be use for output.
 
         """
 
