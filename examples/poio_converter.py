@@ -78,16 +78,16 @@ def main(argv):
         writer = poioapi.io.graf.Writer()
         writer.write(files[1], ag)
     elif options.outputtype == "typecraft":
-        ids = None
+        more_info = None
         tags = None
 
         if options.more:
-            ids = options.more.split("-")
+            more_info = options.more
         if options.tags:
             tags = options.tags
 
         typecraft = poioapi.io.typecraft.Writer()
-        typecraft.write(files[1], ag, ids=ids, tags=tags)
+        typecraft.write(files[1], ag, more_info=more_info, tags=tags)
 
 if __name__ == "__main__":
     main(sys.argv)

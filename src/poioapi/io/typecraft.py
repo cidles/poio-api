@@ -184,10 +184,11 @@ class Writer(poioapi.io.graf.BaseWriter):
         self._missing_pos_list = []
         self._current_text_id = 0
         self._current_phrase_id = 0
+        self.language = "und"
         self.extra_gloss_map = None
         self.extra_pos_map = None
 
-    def write(self, outputfile, converter, pretty_print=False, ids=None, tags=None):
+    def write(self, outputfile, converter, pretty_print=False, more_info=None, tags=None):
         nodes = converter.graf.nodes
         phrases = self._get_phrases(nodes, converter)
         time_start_nodes = self._get_tag_nodes(nodes, "ELANBegin")
@@ -199,9 +200,13 @@ class Writer(poioapi.io.graf.BaseWriter):
         gloss_nodes = self._get_tag_nodes(nodes, "g")
         trans_nodes = self._get_tag_nodes(nodes, "f")
 
-        if ids:
-            self._current_text_id = ids[0]
-            self._current_phrase_id = ids[1]
+        if more_info:
+            more_info = more_info.replace(":", "\":\"").replace("/", "\",\"").replace("{", "{\"").replace("}", "\"}")
+            more_info = ast.literal_eval(more_info)
+
+            self._current_text_id = more_info["ids"].split("-")[0]
+            self._current_phrase_id = more_info["ids"].split("-")[1]
+            self.language = more_info["lang"]
 
         if tags and tags != "null":
             tags = tags.replace(":", "\":\"").replace("/", "\",\"").replace("{", "{\"").replace("}", "\"}")
@@ -218,7 +223,7 @@ class Writer(poioapi.io.graf.BaseWriter):
         root = ET.Element("typecraft", attribs)
 
         # The language must be set as und
-        text = ET.SubElement(root, "text", {"id": self._next_text_id(), "lang": "und"})
+        text = ET.SubElement(root, "text", {"id": self._next_text_id(), "lang": self.language})
 
         if converter.meta_information:
             ET.SubElement(text, "title").text = converter.meta_information
@@ -278,18 +283,15 @@ class Writer(poioapi.io.graf.BaseWriter):
 
                     for g in self._get_nodes_by_parent(gloss_nodes, m.id):
                         if g.annotations._elements[0].features:
-                            g_value = g.annotations._elements[0].features["annotation_value"]
-                            aux = g_value.split("'- |, |= |: |?'")
-                            gloss_list = None
+                            g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
 
-                            if not any((c in g_value) for c in "-,=:?"):
-                                gloss_list = self._validate_gloss(g_value.replace("-", ""), self.extra_gloss_map)
+                            gloss_list = self._validate_gloss(g_value.replace("-", ""), self.extra_gloss_map)
 
                             if gloss_list:
                                 for gloss in gloss_list:
                                     ET.SubElement(morpheme, "gloss").text = gloss
                             else:
-                                morpheme.set("meaning", self._set_meaning(aux[0]))
+                                morpheme.set("meaning", self._set_meaning(g_value))
 
         if self._missing_gloss_list or self._missing_pos_list:
             self.write_missing_tags(outputfile)
@@ -464,9 +466,10 @@ class Writer(poioapi.io.graf.BaseWriter):
 
     def _validate_gloss(self, gloss_value, extra_gloss_map=None):
         """
-            This function validates the gloss value
-            in a gloss list from the TC gloss list.
-            """
+        This function validates the gloss value
+        in a gloss list from the TC gloss list.
+        """
+
         gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
                       "ASP", "CESSIVE", "CMPL", "CON", "CONT", "CUST", "DUR", "DYN", "EGR",
                       "FREQ", "HAB", "INCEP", "INCH", "INCOMPL", "INGR", "INTS", "IPFV", "ITER",
@@ -502,7 +505,7 @@ class Writer(poioapi.io.graf.BaseWriter):
         gloss_map = {"1": "CL1", "2": "CL2", "3": "CL3", "5": "CL5", "6": "CL6", "7": "CL7",
                      "8": "CL8", "9": "CL9", "14": "CL14", "15": "CL15", "16": "CL16",
                      "17": "CL17", "18": "CL18", "NPST": "NPAST", "EMP": "EMPH", "EXCLAM": "EXCL",
-                     "COM": "COMIT", "PERF": "PFV", "CLAS": "CLF"}
+                     "COM": "COMIT", "PERF": "PFV", "CLAS": "CLF", "REF": "REFL"}
 
         valid_glosses = []
 
