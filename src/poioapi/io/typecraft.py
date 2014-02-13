@@ -270,6 +270,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
             for w in self._get_nodes_by_parent(word_nodes, p.id):
                 w_value = w.annotations._elements[0].features["annotation_value"]
+                if w_value == "kamgamba,":
+                    print("ok")
                 word = ET.SubElement(phrase, "word", {"text": w_value, "head": "false"})
                 p_value = self._get_pos_value(pos_nodes, w.id)
 
@@ -358,7 +360,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                 if node.annotations._elements[0].features:
                     pos_value = node.annotations._elements[0].features["annotation_value"]
 
-                    if "'- |, |= |:'" not in pos_value:
+                    if not any((c in pos_value) for c in "-,=:?*"):
+                    #if "'- |, |= |:'" not in pos_value:
                         return pos_value
 
         return ""
