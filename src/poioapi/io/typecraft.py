@@ -276,7 +276,9 @@ class Writer(poioapi.io.graf.BaseWriter):
                 p_value = self._get_pos_value(pos_nodes, w.id)
 
                 if p_value is not "":
-                    ET.SubElement(word, "pos").text = self._validate_pos(p_value, self.extra_pos_map)
+                    val = self._validate_pos(p_value, self.extra_pos_map)
+                    if val != "NULL":
+                        ET.SubElement(word, "pos").text = val
 
                 for m in self._get_nodes_by_parent(morph_nodes, w.id):
                     m_value = m.annotations._elements[0].features["annotation_value"].replace("-", "")
@@ -291,7 +293,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
                             if gloss_list:
                                 for gloss in gloss_list:
-                                    ET.SubElement(morpheme, "gloss").text = gloss
+                                    if gloss != "NULL":
+                                        ET.SubElement(morpheme, "gloss").text = gloss
                             else:
                                 morpheme.set("meaning", self._set_meaning(g_value))
 
@@ -361,7 +364,6 @@ class Writer(poioapi.io.graf.BaseWriter):
                     pos_value = node.annotations._elements[0].features["annotation_value"]
 
                     if not any((c in pos_value) for c in "-,=:?*"):
-                    #if "'- |, |= |:'" not in pos_value:
                         return pos_value
 
         return ""
