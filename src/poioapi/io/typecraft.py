@@ -446,7 +446,7 @@ class Writer(poioapi.io.graf.BaseWriter):
                     "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
                     "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
 
-        pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "V", "pron": "PN", "part": "PRT", "intj": "INTRJCT",
+        pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "Vcon", "pron": "PN", "part": "PRT", "intj": "INTRJCT",
                    "name": "Np", "encl": "CL", "pred": "COP"}
 
         value = None
@@ -509,12 +509,19 @@ class Writer(poioapi.io.graf.BaseWriter):
         gloss_map = {"1": "CL1", "2": "CL2", "3": "CL3", "5": "CL5", "6": "CL6", "7": "CL7",
                      "8": "CL8", "9": "CL9", "14": "CL14", "15": "CL15", "16": "CL16",
                      "17": "CL17", "18": "CL18", "NPST": "NPAST", "EMP": "EMPH", "EXCLAM": "EXCL",
-                     "COM": "COMIT", "PERF": "PFV", "CLAS": "CLF", "REF": "REFL"}
+                     "COM": "COMIT", "PERF": "PFV", "CLAS": "CLF", "REF": "REFL", "?IPFV": "IPFV"}
 
         valid_glosses = []
+        splitter = "."
 
         # split gloss values
-        for gl in gloss_value.split("."):
+        if "?" in gloss_value and gloss_value != "?IPFV":
+            return None
+
+        if ":" in gloss_value:
+            splitter = ":"
+
+        for gl in gloss_value.split(splitter):
             for gloss in gloss_list:
                 if gl.upper() == gloss.upper():
                     valid_glosses.append(gloss)
