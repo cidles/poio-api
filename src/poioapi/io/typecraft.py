@@ -8,7 +8,8 @@
 # For license information, see LICENSE.TXT
 
 """This module contains classes to access to
-Typecraf files and generate GrAF files.
+parse and generate Typecraft files from a
+GrAF object.
 """
 
 from __future__ import absolute_import
@@ -46,6 +47,11 @@ class Parser(poioapi.io.graf.BaseParser):
         self.parse()
 
     def parse(self):
+        """This method it will parse the Typecraft
+        file.
+
+        """
+
         self.tree = ET.parse(self.filepath).getroot()
         self.namespace = {'xmlns': re.findall(r"\{(.*?)\}", self.tree.tag)[0]}
         self._current_id = 0
@@ -56,6 +62,13 @@ class Parser(poioapi.io.graf.BaseParser):
         self.parse_element_tree(self.tree)
 
     def parse_element_tree(self, tree):
+        """This method it will parse the XML elements
+        into a map. It also create ids for the child
+        elements since they are not present in the
+        XML.
+
+        """
+
         for element in tree:
             if element.tag == "{" + self.namespace['xmlns'] + "}" + "phrase":
                 self._elements_map["phrase"].append({"id": element.attrib["id"],
@@ -136,7 +149,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
     def get_primary_data(self):
         """This method gets the information about
-        the source data file.
+        the source data file which in this case is
+        going to be always unknown.
 
         Returns
         -------
@@ -152,6 +166,11 @@ class Parser(poioapi.io.graf.BaseParser):
         return primary_data
 
     def _get_features(self, attributes):
+        """This method gets the attribute data from
+        the tag elements.
+
+        """
+
         features = {}
 
         for key, value in attributes.items():
@@ -176,6 +195,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
 class Writer(poioapi.io.graf.BaseWriter):
     """
+    Class that will handle the writer of
+    Typecraft files from a GrAF object.
 
     """
 
@@ -189,6 +210,25 @@ class Writer(poioapi.io.graf.BaseWriter):
         self.extra_pos_map = None
 
     def write(self, outputfile, converter, pretty_print=False, more_info=None, tags=None):
+        """Writer for the Typecraft file. This method evaluate
+        if all the Glosses and POS in the GrAF are validated
+        against two specific Typecraft lists.
+
+        Parameters
+        ----------
+        outputfile : str
+            The output file name.
+        converter : Converter
+            Converter object from Poio API.
+        pretty_print : boolean
+            Boolean to set the XML pretty print.
+        more_info : str
+            This string contains the information about the ids and language.
+        tags = str
+            This string contains the missing glosses or POS the extra maps.
+
+        """
+
         nodes = converter.graf.nodes
         phrases = self._get_phrases(nodes, converter)
         time_start_nodes = self._get_tag_nodes(nodes, "ELANBegin")
@@ -303,6 +343,17 @@ class Writer(poioapi.io.graf.BaseWriter):
             self.write_xml(root, outputfile)
 
     def write_missing_tags(self, outputfile):
+        """Write a file with the missing tags. This
+        method it is called only when there is missing
+        tags.
+
+        Parameters
+        ----------
+        outputfile : str
+            The output file name.
+
+        """
+
         wrt = ""
 
         if self._missing_gloss_list:
@@ -321,6 +372,19 @@ class Writer(poioapi.io.graf.BaseWriter):
             file.close()
 
     def write_xml(self, root, outputfile, pretty_print=True):
+        """Write the final Typecraft XML file.
+
+        Parameters
+        ----------
+        root : ElementTree
+            The root Typecraft element.
+        outputfile : str
+            The output file name.
+        pretty_print : boolean
+            Boolean to set the XML pretty print.
+
+        """
+
         if pretty_print:
             doc = minidom.parseString(tostring(root))
 
@@ -335,6 +399,22 @@ class Writer(poioapi.io.graf.BaseWriter):
             tree.write(outputfile)
 
     def _get_phrases(self, nodes, converter):
+        """Get all the phrases.
+
+        Parameters
+        ----------
+        nodes : list
+            List of the nodes.
+        converter : Converter
+            Converter object.
+
+        Returns
+        -------
+        result_nodes : list
+            A sorted list of nodes.
+
+        """
+
         if "utterance_gen" in self._flatten_hierarchy_elements(converter.tier_hierarchies):
             result_nodes = [node for node in nodes if node.id.startswith("utterance_gen")]
         else:
@@ -343,20 +423,86 @@ class Writer(poioapi.io.graf.BaseWriter):
         return sorted(result_nodes, key=lambda node: int(node.id.split("..na")[1]))
 
     def _get_tag_nodes(self, nodes, tag):
+        """Get the nodes by tag.
+
+        Parameters
+        ----------
+        nodes : list
+            List of the nodes.
+        tag : str
+            Name of the tag to search.
+
+        Returns
+        -------
+        result_nodes : list
+            A sorted list of nodes.
+
+        """
+
         result_nodes = [node for node in nodes if node.id.startswith(tag)]
 
         return sorted(result_nodes, key=lambda node: int(node.id.split("..na")[1]))
 
     def _get_nodes_by_parent(self, nodes, parent_id):
+        """Get the nodes by parent id.
+
+        Parameters
+        ----------
+        nodes : list
+            List of the nodes.
+        parent_id : str
+            Parent node id.
+
+        Returns
+        -------
+        nodes : list
+            List of nodes.
+
+        """
+
         return [node for node in nodes if node.parent.id == parent_id]
 
     def _get_body(self, phrases, body=""):
+        """Get the body texts from the
+        Phrase nodes.
+
+        Parameters
+        ----------
+        phrases : list
+            List of the Phrases Nodes.
+        parent_id : str
+            Parent node id.
+
+        Returns
+        -------
+        body : str
+            Body text.
+
+        """
+
         for n in phrases:
             body += n.annotations._elements[0].features["annotation_value"]
 
         return body
 
     def _get_pos_value(self, pos_nodes, parent_id):
+        """Find the POS value from a node with
+        a specific parent.
+
+        Parameters
+        ----------
+        pos_nodes : list
+            List of the POS Nodes.
+        parent_id : str
+            Parent node id.
+
+        Returns
+        -------
+        pos_value : str
+            POS value.
+
+        """
+
         for node in pos_nodes:
             if node.parent.id == parent_id or node.parent.parent.id == parent_id:
                 if node.annotations._elements[0].features:
@@ -368,11 +514,43 @@ class Writer(poioapi.io.graf.BaseWriter):
         return ""
 
     def _get_time_related_nodes(self, time_nodes, parent_node):
+        """Find the node with time values in
+        the time_nodes for a specific parent node.
+
+        Parameters
+        ----------
+        time_nodes : list
+            List of the Time Nodes.
+        parent_node : Node
+            Parent node.
+
+        Returns
+        -------
+        node : Node
+            Time node with the specific parent node.
+
+        """
+
         for node in time_nodes:
             if node.parent.id == parent_node.parent.id:
                 return node
 
     def _string_to_milliseconds(self, time_node):
+        """Convert a string to milliseconds. Time unit
+        for the time values in Typecaft.
+
+        Parameters
+        ----------
+        time_node : Node
+            Time node from GrAF object.
+
+        Returns
+        -------
+        offset : str
+            The offset value.
+
+        """
+
         time_start = time_node.annotations._elements[0].features["annotation_value"].split(".")
 
         microseconds = int(time_start[1])
@@ -385,12 +563,33 @@ class Writer(poioapi.io.graf.BaseWriter):
         return offset
 
     def _next_text_id(self):
+        """Increment the text id.
+
+        """
+
         current_id = str(int(self._current_text_id) + 1)
         self._current_text_id = current_id
 
         return str(current_id)
 
     def _set_meaning(self, value):
+        """Generate a meaning from a gloss. The
+        meaning is the non-accepted gloss value.
+        The non-alphabetic characters are not
+        allowed.
+
+        Parameters
+        ----------
+        value : str
+            Value of the meaning.
+
+        Returns
+        -------
+        result : str
+            The correct string value.
+
+        """
+
         result = value
 
         if ":" in value:
@@ -403,6 +602,10 @@ class Writer(poioapi.io.graf.BaseWriter):
         return result
 
     def _next_phrase_id(self):
+        """Increment the phrase id.
+
+        """
+
         current_id = str(int(self._current_phrase_id) + 1)
         self._current_phrase_id = current_id
 
@@ -432,9 +635,23 @@ class Writer(poioapi.io.graf.BaseWriter):
         return flat_elements
 
     def _validate_pos(self, pos_value, extra_pos_map=None):
-        """
-        This function validates the pos value
-        in a pos list from the TC pos list.
+        """This function validates the pos value
+        in a pos list from the TC pos list. There is
+        a extra set of values pos_map that contains
+        the external values to be mapped to the Typecraft.
+
+        Parameters
+        ----------
+        pos_value : str
+            POS value.
+        extra_pos_map : dict
+            Dictionary with the extra POS values.
+
+        Returns
+        -------
+        value : str
+            Valid POS value.
+
         """
 
         pos_list = ["PNposs", "N", "V", "PN", "ADVm", "Np", "PREP", "CN", "PRT", "COMP", "AUX", "CONJS", "QUANT",
@@ -469,9 +686,23 @@ class Writer(poioapi.io.graf.BaseWriter):
         return value
 
     def _validate_gloss(self, gloss_value, extra_gloss_map=None):
-        """
-        This function validates the gloss value
-        in a gloss list from the TC gloss list.
+        """This function validates the gloss value
+        in a gloss list from the TC gloss list. There is
+        a extra set of values gloss_map that contains
+        the external values to be mapped to the Typecraft.
+
+        Parameters
+        ----------
+        gloss_value : str
+            Gloss value.
+        extra_gloss_map : dict
+            Dictionary with the extra gloss values.
+
+        Returns
+        -------
+        valid_glosses : list
+            List with valid glosses.
+
         """
 
         gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
@@ -514,10 +745,11 @@ class Writer(poioapi.io.graf.BaseWriter):
         valid_glosses = []
         splitter = "."
 
-        # split gloss values
+        # Special gloss value
         if "?" in gloss_value and gloss_value != "?IPFV":
             return None
 
+        # Select the splitter for the gloss values
         if ":" in gloss_value:
             splitter = ":"
 
