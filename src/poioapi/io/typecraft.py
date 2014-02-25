@@ -451,7 +451,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         value = None
 
-        if not any((c in pos_value) for c in "-?*"):
+        if not any((c in pos_value) for c in "()/\.-?*"):
             for pos in pos_list:
                 if pos_value.upper() == pos.upper():
                     value = pos
