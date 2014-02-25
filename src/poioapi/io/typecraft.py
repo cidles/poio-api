@@ -211,7 +211,7 @@ class Writer(poioapi.io.graf.BaseWriter):
         if tags and tags != "null":
             tags = tags.replace(":", "\":\"").replace("/", "\",\"").replace("{", "{\"").replace("}", "\"}")
 
-            if tags.split("_")[0] != "{EMPTY}":
+            if tags.split("_")[0] != "{\"EMPTY\"}":
                 self.extra_gloss_map = ast.literal_eval(tags.split("_")[0])
             if tags.split("_")[1] != "{\"EMPTY\"}":
                 self.extra_pos_map = ast.literal_eval(tags.split("_")[1])
