@@ -201,10 +201,14 @@ class Parser(poioapi.io.graf.BaseParser):
                 id_to_add = current_record_id
                 if last_tier_marker in self.utterance_level_markers:
                     id_to_add = current_utterance_id
-                self._annotations_for_parent[
-                    ("a{0}".format(id_to_add),
-                        last_tier_marker)][-1].value += " " + \
-                        line
+                try:
+                    self._annotations_for_parent[
+                        ("a{0}".format(id_to_add),
+                            last_tier_marker)][-1].value += " " + \
+                            line
+                except IndexError:
+                    continue
+
                 tier_marker = last_tier_marker
                 continue
 
