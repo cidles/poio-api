@@ -55,7 +55,8 @@ class Parser(poioapi.io.graf.BaseParser):
         record_level_markers = ['ref', 'id', 'dt', 'ELANBegin', 'ELANEnd',
             'ELANParticipant' ],
         utterance_level_markers = tier_map[poioapi.data.TIER_TRANSLATION] + \
-            tier_map[poioapi.data.TIER_COMMENT] + ['rf', 'rt', 'graid', 'pr'],
+            tier_map[poioapi.data.TIER_COMMENT] + \
+            ['rf', 'rt', 'np', 'graid', 'pr'],
         word_level_markers = tier_map[poioapi.data.TIER_WORD],
         morpheme_level_markers = tier_map[poioapi.data.TIER_MORPHEME],
         tag_level_markers = tier_map[poioapi.data.TIER_GLOSS] + \
