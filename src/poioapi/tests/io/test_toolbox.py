@@ -17,7 +17,7 @@ import poioapi.io.graf
 class TestParser:
     """
     This class contain the test methods to the
-    class io.toolbox.py.
+    class io/toolbox.py.
 
     """
 

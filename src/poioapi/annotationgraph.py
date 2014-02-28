@@ -18,6 +18,7 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import poioapi.io.elan
+import poioapi.io.obt
 import poioapi.io.graf
 import poioapi.io.pickle
 import poioapi.io.toolbox
@@ -275,6 +276,8 @@ class AnnotationGraph():
         parser = None
         if stream_type == poioapi.data.EAF:
             parser = poioapi.io.elan.Parser(stream)
+        elif stream_type == poioapi.data.OBT:
+            parser = poioapi.io.obt.Parser(stream)
         elif stream_type == poioapi.data.TYPECRAFT:
             parser = poioapi.io.typecraft.Parser(stream)
         elif stream_type == poioapi.data.TREEPICKLE:
@@ -303,6 +306,13 @@ class AnnotationGraph():
 
         """
         self._from_file(stream, poioapi.data.EAF)
+
+    def from_obt(self, stream):
+        """This method generates a GrAF object
+        from a Elan file.
+
+        """
+        self._from_file(stream, poioapi.data.OBT)
 
     def from_typecraft(self, stream):
         """This method generates a GrAF object

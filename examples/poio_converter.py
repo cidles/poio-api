@@ -35,7 +35,7 @@ def main(argv):
         parser.print_usage()
         sys.exit(0)
 
-    if options.inputtype not in ['toolbox', 'elan', 'shoebox']:
+    if options.inputtype not in ['toolbox', 'elan', 'shoebox', 'obt']:
         parser.print_usage()
         sys.exit(0)
 
@@ -49,6 +49,8 @@ def main(argv):
     # Load the data from EAF file
     if options.inputtype == "elan":
         ag.from_elan(files[0])
+    elif options.inputtype == "obt":
+        ag.from_obt(files[0])
     elif options.inputtype == "shoebox":
         ag.from_shoebox(files[0])
     elif options.inputtype == "toolbox":
