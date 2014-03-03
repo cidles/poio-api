@@ -167,6 +167,25 @@ class AnnotationGraph():
         
         return annotation_value
 
+    def annotation_value_for_node(self, node):
+        """Returns the annotation value for a given node. If the node has
+        more then one annotation, then only the first annotation value is
+        returned.
+
+        Parameters
+        ----------
+        node : graf.Node
+            The node to return the annotation values for.
+
+        Returns
+        -------
+        annotation_value : str
+            The annotation value.
+
+        """
+        return self.annotation_value_for_annotation(
+            node.annotations.get_first())
+
     def as_html_table(self, filtered = False, full_html = True):
         """Return the graph as a HTML table.
 

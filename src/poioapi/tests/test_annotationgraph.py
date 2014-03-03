@@ -66,6 +66,11 @@ class TestAnnotationGraph:
         value = self.annotation_graph.annotation_value_for_annotation(annotations[0])
         assert(value=="REPPAST")
 
+    def test_annotation_value_for_node(self):
+        node = self.annotation_graph.graf.nodes["Glosse..P-Gloss..na262"]
+        value = self.annotation_graph.annotation_value_for_node(node)
+        assert(value=="REPPAST")
+
     def test_as_html_table(self):
         html = self.annotation_graph.as_html_table()
         assert(len(html) > 0)
