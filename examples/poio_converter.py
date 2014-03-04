@@ -43,21 +43,19 @@ def main(argv):
         parser.print_usage()
         sys.exit(0)
 
-    # Create an empty annotation graph
-    ag = poioapi.annotationgraph.AnnotationGraph(None)
-
-    # Load the data from EAF file
+    # Load the data from files
+    ag = None
     if options.inputtype == "elan":
-        ag.from_elan(files[0])
+        ag = poioapi.annotationgraph.AnnotationGraph.from_elan(files[0])
     elif options.inputtype == "obt":
-        ag.from_obt(files[0])
+        ag = poioapi.annotationgraph.AnnotationGraph.from_obt(files[0])
     elif options.inputtype == "shoebox":
-        ag.from_shoebox(files[0])
+        ag = poioapi.annotationgraph.AnnotationGraph.from_shoebox(files[0])
     elif options.inputtype == "toolbox":
         if not options.roottier:
             print("No record marker specified (argument \"-r\"). Assuming \"ref\" as record marker.")
 
-        ag.from_toolbox(files[0])
+        ag = poioapi.annotationgraph.AnnotationGraph.from_toolbox(files[0])
 
     # Set the structure type for hierarchical/interlinear output
     root_found = False
@@ -69,7 +67,6 @@ def main(argv):
 
     if not root_found:
         print("Could not find root tier in file or root tier was not specified. Will use the first tier hierarchy.")
-        ag.structure_type_handler = poioapi.data.DataStructureType(ag.tier_hierarchies[0])
 
     if options.outputtype == "html":
         # Output as html

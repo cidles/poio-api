@@ -141,6 +141,7 @@ class Parser(poioapi.io.graf.BaseParser):
         for line in self.input_stream:
             # Hack: sometimes there are characters that we cannot decode
             line = line.decode("utf-8", 'ignore')
+
             match_tier_marker = re_tier_marker.search(line)
             if match_tier_marker:
                 tier_marker = match_tier_marker.group(1)
@@ -197,7 +198,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 tier_marker = match_tier_marker.group(1)
                 line_content = re_tier_marker.sub("", line)
                 line_content = line_content.lstrip()
-            else:
+            elif first_marker_found:
                 # append to last annotation´s content
                 id_to_add = current_record_id
                 if last_tier_marker in self.utterance_level_markers:

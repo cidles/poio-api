@@ -26,7 +26,7 @@ import poioapi.io.toolboxxml
 import poioapi.io.shoebox
 import poioapi.io.typecraft
 
-from poioapi import data
+import poioapi.data
 
 import graf
 
@@ -39,22 +39,150 @@ class AnnotationGraph():
     def __init__(self, data_structure_type = None):
         if data_structure_type is None:
             self.structure_type_handler = None
-        elif isinstance(data_structure_type, data.DataStructureType):
+        elif isinstance(data_structure_type, poioapi.data.DataStructureType):
             self.structure_type_handler = data_structure_type
         else:
             raise(
-                data.DataStructureTypeNotSupportedError(
+                poioapi.data.DataStructureTypeNotSupportedError(
                     "Data structure type {0} not supported".format(
                         data_structure_type)))
 
         self.graf = None
-        self.graf_basename = None
-
-        self.filters = []
-        self.filtered_node_ids = []
         self.tier_hierarchies = None
         self.meta_information = None
         self.root_tiers = []
+        self.primary_data = None
+        self.from_file_type = None
+
+        self.filters = []
+        self.filtered_node_ids = []
+
+    @classmethod
+    def from_elan(cls, stream):
+        """This method generates a GrAF object
+        from a Elan file.
+
+        """
+        return cls._from_file(stream, poioapi.data.EAF)
+
+    @classmethod
+    def from_obt(cls, stream):
+        """This method generates a GrAF object
+        from a Elan file.
+
+        """
+        return cls._from_file(stream, poioapi.data.OBT)
+
+    @classmethod
+    def from_typecraft(cls, stream):
+        """This method generates a GrAF object
+        from a Typecraft file.
+
+        """
+        return cls._from_file(stream, poioapi.data.TYPECRAFT)
+
+    @classmethod
+    def from_pickle(cls, stream):
+        """This method generates a GrAF object
+        from a pickle file.
+
+        """
+        return cls._from_file(stream, poioapi.data.TREEPICKLE)
+
+    @classmethod
+    def from_shoebox(cls, stream):
+        """This method generates a GrAF object
+        from a shoebox file.
+
+        """
+        return cls._from_file(stream, poioapi.data.SHOEBOX)
+
+    @classmethod
+    def from_toolboxxml(cls, stream):
+        """This method generates a GrAF object
+        from a xml toolbox file.
+
+        """
+        return cls._from_file(stream, poioapi.data.TOOLBOXXML)
+
+    @classmethod
+    def from_toolbox(cls, stream):
+        """This method generates a GrAF object
+        from a xml toolbox file.
+
+        """
+        return cls._from_file(stream, poioapi.data.TOOLBOX)
+
+    @classmethod
+    def from_graf(cls, stream):
+        """Load the project annotation graph from a GrAF/XML file or stream.
+
+        Parameters
+        ----------
+        stream : str or io.stream
+            The path to a GrAF/XML file.
+
+        """
+        ag = cls()
+        if not hasattr(stream, 'read'):
+            stream = ag._open_file_(stream)
+
+        parser = graf.GraphParser()
+        ag.graf = parser.parse(stream)
+        ag.from_file_type = poioapi.data.GRAF
+
+        return ag
+
+    def _open_file_(self, filename):
+        if sys.version_info[:2] < (3, 0):
+            return codecs.open(filename, "rb")
+
+        return codecs.open(filename, "r", "utf-8")
+
+    @classmethod
+    def _from_file(cls, stream, stream_type, **kwargs):
+        ag = cls()
+        # TODO: move the stream opening to the parser classes
+        if stream_type != poioapi.data.TOOLBOX:
+            if not hasattr(stream, 'read'):
+                stream = ag._open_file_(stream)
+
+        parser = None
+        if stream_type == poioapi.data.EAF:
+            parser = poioapi.io.elan.Parser(stream)
+        elif stream_type == poioapi.data.OBT:
+            parser = poioapi.io.obt.Parser(stream)
+        elif stream_type == poioapi.data.TYPECRAFT:
+            parser = poioapi.io.typecraft.Parser(stream)
+        elif stream_type == poioapi.data.TREEPICKLE:
+            parser = poioapi.io.pickle.Parser(stream)
+        elif stream_type == poioapi.data.TOOLBOXXML:
+            parser = poioapi.io.toolboxxml.Parser(stream)
+        elif stream_type == poioapi.data.SHOEBOX:
+            parser = poioapi.io.shoebox.Parser(stream)
+        elif stream_type == poioapi.data.TOOLBOX:
+            if not hasattr(stream, 'read'):
+                stream = codecs.open(stream, "rb")
+            parser = poioapi.io.toolbox.Parser(stream)
+
+        converter = poioapi.io.graf.GrAFConverter(parser)
+        converter.parse()
+
+        ag.tier_hierarchies = converter.tier_hierarchies
+        ag.meta_information = converter.meta_information
+        ag.root_tiers = converter.root_tiers
+        ag.graf = converter.graf
+        ag.primary_data = converter.primary_data
+        ag.from_file_type = stream_type
+
+        # set the first tier hierarchy as the default data_structure_type
+        ag.structure_type_handler = \
+            poioapi.data.DataStructureType(ag.tier_hierarchies[0])
+
+        return ag
+
+
+    ########################################################## Methods
 
     def root_nodes(self):
         """Retrieve the root nodes from the annotation graph. Root nodes are
@@ -279,110 +407,6 @@ class AnnotationGraph():
         table += "</table>"
         return table
 
-
-    def _open_file_(self, filename):
-        if sys.version_info[:2] < (3, 0):
-            return codecs.open(filename, "rb")
-
-        return codecs.open(filename, "r", "utf-8")
-
-    def _from_file(self, stream, stream_type, **kwargs):
-        # TODO: move the stream opening to the parser classes
-        if stream_type != poioapi.data.TOOLBOX:
-            if not hasattr(stream, 'read'):
-                stream = self._open_file_(stream)
-
-        parser = None
-        if stream_type == poioapi.data.EAF:
-            parser = poioapi.io.elan.Parser(stream)
-        elif stream_type == poioapi.data.OBT:
-            parser = poioapi.io.obt.Parser(stream)
-        elif stream_type == poioapi.data.TYPECRAFT:
-            parser = poioapi.io.typecraft.Parser(stream)
-        elif stream_type == poioapi.data.TREEPICKLE:
-            parser = poioapi.io.pickle.Parser(stream)
-        elif stream_type == poioapi.data.TOOLBOXXML:
-            parser = poioapi.io.toolboxxml.Parser(stream)
-        elif stream_type == poioapi.data.SHOEBOX:
-            parser = poioapi.io.shoebox.Parser(stream)
-        elif stream_type == poioapi.data.TOOLBOX:
-            if not hasattr(stream, 'read'):
-                stream = codecs.open(stream, "rb")
-            parser = poioapi.io.toolbox.Parser(stream)
-
-        converter = poioapi.io.graf.GrAFConverter(parser)
-        converter.parse()
-
-        self.tier_hierarchies = converter.tier_hierarchies
-        self.meta_information = converter.meta_information
-        self.root_tiers = converter.root_tiers
-        self.graf = converter.graf
-        self.primary_data = converter.primary_data
-
-    def from_elan(self, stream):
-        """This method generates a GrAF object
-        from a Elan file.
-
-        """
-        self._from_file(stream, poioapi.data.EAF)
-
-    def from_obt(self, stream):
-        """This method generates a GrAF object
-        from a Elan file.
-
-        """
-        self._from_file(stream, poioapi.data.OBT)
-
-    def from_typecraft(self, stream):
-        """This method generates a GrAF object
-        from a Typecraft file.
-
-        """
-        self._from_file(stream, poioapi.data.TYPECRAFT)
-
-    def from_pickle(self, stream):
-        """This method generates a GrAF object
-        from a pickle file.
-
-        """
-        self._from_file(stream, poioapi.data.TREEPICKLE)
-
-    def from_shoebox(self, stream):
-        """This method generates a GrAF object
-        from a shoebox file.
-
-        """
-        self._from_file(stream, poioapi.data.SHOEBOX)
-
-    def from_toolboxxml(self, stream):
-        """This method generates a GrAF object
-        from a xml toolbox file.
-
-        """
-        self._from_file(stream, poioapi.data.TOOLBOXXML)
-
-    def from_toolbox(self, stream):
-        """This method generates a GrAF object
-        from a xml toolbox file.
-
-        """
-        self._from_file(stream, poioapi.data.TOOLBOX)
-
-    def from_graf(self, stream):
-        """Load the project annotation graph from a GrAF/XML file or stream.
-
-        Parameters
-        ----------
-        stream : str or io.stream
-            The path to a GrAF/XML file.
-
-        """
-        if not hasattr(stream, 'read'):
-            stream = self._open_file_(stream)
-
-        parser = graf.GraphParser()
-        self.graf = parser.parse(stream)
-
     def to_elan(self, outputfile):
         """Write the annotation graph as Elan EAF files.
         """
@@ -600,7 +624,6 @@ class AnnotationGraph():
         return filter
 
 
-
 class AnnotationGraphFilter():
     """
     AnnotationGraphFilter tree-like structure constructor.
@@ -682,7 +705,8 @@ class AnnotationGraphFilter():
             return True
 
         self._passes_filter(
-            result_dict, node, self.annotation_graph.structure_type_handler.data_hierarchy)
+            result_dict, node,
+            self.annotation_graph.structure_type_handler.data_hierarchy)
 
         if self.boolean_operation == self.AND:
             passed = True
