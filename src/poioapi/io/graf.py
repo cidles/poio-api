@@ -83,8 +83,7 @@ class NodeId:
 
 
 class PrimaryData:
-    """This class represents the primary data of a
-    GrAF object.
+    """This class represents the primary data of an AnnotationGraph object.
 
     """
 
@@ -269,7 +268,7 @@ class BaseWriter(object):
         outputfile : str
             The filename of the output file. The filename should be the header
             file for GrAF with the extension ".hdr".
-        converter : Converter
+        converter : Converter or AnnotationGraph
             A converter object. The converter object containes the data that
             will be use for output. All writers need at least a GrAF graph
             and the tier hierarchy, some will also need the primary data object.
@@ -323,7 +322,8 @@ class GrAFConverter:
                 i += 1
                 tiers_hierarchy_map[str(i)] = [t[0]]
             else:
-                self._append_tier_to_hierarchy(tiers_hierarchy_map[str(i)], t[1], t[0])
+                self._append_tier_to_hierarchy(tiers_hierarchy_map[str(i)],
+                    t[1], t[0])
 
         for i, hierarchy in tiers_hierarchy_map.items():
             self.tier_hierarchies.append(hierarchy)
@@ -336,7 +336,8 @@ class GrAFConverter:
                 isinstance(self.parser.filepath, str):
             self.original_file = os.path.abspath(self.parser.filepath)
 
-    def _convert_tier(self, tier, parent_node, parent_annotation, parent_prefix=None):
+    def _convert_tier(self, tier, parent_node, parent_annotation,
+            parent_prefix=None):
         child_tiers = self.parser.get_child_tiers_for_tier(tier)
 
         if tier.annotation_space is None:
@@ -345,7 +346,8 @@ class GrAFConverter:
         else:
             annotation_name = tier.annotation_space.replace(' ', '_')
 
-            prefix = "{0}{1}{2}".format(annotation_name, GRAFSEPARATOR, tier.name)
+            prefix = "{0}{1}{2}".format(annotation_name, GRAFSEPARATOR,
+                tier.name)
 
         has_regions = False
 
@@ -354,7 +356,8 @@ class GrAFConverter:
 
         self._add_tier_in_hierarchy_list(prefix, parent_prefix)
 
-        annotations = self.parser.get_annotations_for_tier(tier, parent_annotation)
+        annotations = self.parser.get_annotations_for_tier(tier,
+            parent_annotation)
 
         for annotation in annotations:
             regions = None
@@ -363,7 +366,8 @@ class GrAFConverter:
                 regions = self.parser.region_for_annotation(annotation)
 
             node_id = NodeId(prefix, annotation.id)
-            self._add_node(node_id, annotation, annotation_name, regions, parent_node)
+            self._add_node(node_id, annotation, annotation_name, regions,
+                parent_node)
             self._add_root_nodes(prefix, node_id)
 
             if child_tiers:
@@ -386,7 +390,8 @@ class GrAFConverter:
                 if t == parent_tier:
                     tiers_list.append([tier])
 
-    def _add_node(self, node_id, annotation, annotation_name, regions, from_node_id):
+    def _add_node(self, node_id, annotation, annotation_name, regions,
+            from_node_id):
         self._add_node_to_graph(node_id, regions, from_node_id)
         self._add_graf_annotation(annotation_name, annotation.id, node_id,
                                   annotation.value, annotation.features)
@@ -396,7 +401,7 @@ class GrAFConverter:
             self.graf.header.roots.append(node_id.to_str())
 
     def _add_graf_annotation(self, annotation_name, annotation_id,
-                             annotation_ref, annotation_value, annotation_features=None):
+            annotation_ref, annotation_value, annotation_features=None):
         annotation = graf.Annotation(annotation_name, annotation_features,
                                      annotation_id)
 
@@ -421,7 +426,8 @@ class GrAFConverter:
 
         if from_node_id is not None:
             edge_id = node_id.str_edge()
-            edge = graf.Edge(edge_id, self.graf.nodes[from_node_id.to_str()], node)
+            edge = graf.Edge(edge_id, self.graf.nodes[from_node_id.to_str()],
+                node)
 
             self.graf.edges.add(edge)
 
@@ -473,7 +479,7 @@ class Writer(BaseWriter):
         outputfile : str
             The filename of the output file. The filename should be the header
             file for GrAF with the extension ".hdr".
-        converter : Converter
+        converter : Converter or AnnotationGraph
             A converter object. The converter object containes the data that
             will be use for output.
 
@@ -575,6 +581,7 @@ class Writer(BaseWriter):
 
         if meta_information is not None:
             out = open("{0}-extinfo.xml".format(basedirname), "wb")
-            doc = minidom.parseString(tostring(meta_information, encoding="utf-8"))
+            doc = minidom.parseString(tostring(meta_information,
+                encoding="utf-8"))
             out.write(doc.toprettyxml(encoding='utf-8'))
             out.close()

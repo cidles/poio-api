@@ -29,15 +29,9 @@ as html table into a file:
 
   # imports
   import poioapi.annotationgraph
-  import poioapi.data
 
-  # Create an empty annotation graph
-  ag = poioapi.annotationgraph.AnnotationGraph(None)
   # Load the data from EAF file
-  ag.from_elan("elan-example3.eaf")
-  # Set the structure type for hierarchical/interlinear output
-  ag.structure_type_handler = poioapi.data.DataStructureType(
-      ag.tier_hierarchies[0])
+  ag = poioapi.annotationgraph.AnnotationGraph.from_elan("elan-example3.eaf")
 
   # Output as html
   import codecs
@@ -118,8 +112,7 @@ file from the Elan homepage
 
   import poioapi.annotationgraph
 
-  ag = poioapi.annotationgraph.AnnotationGraph()
-  ag.from_elan("elan-example3.eaf")
+  ag = poioapi.annotationgraph.AnnotationGraph.from_elan("elan-example3.eaf")
   print(ag.tier_hierarchies)
 
 
@@ -158,13 +151,17 @@ utterances (`utterance..K-Spch` and `utterance..K-Spch`), the other one with
 the root tier for gestures (`gestures..W-RGU` and `gestures..K-RGU`)
 
 The user can now easily create an instance of the class `DataStructureType`
-with one of the hierarchies. This will then be the default hierarchy for all
-subsequent actions on the annotation graph (e.g. queries, HTML output, etc.):
+with one of the hierarchies. 
+
+Per default, the first tier hierarchy from the file is that as the current
+active hierarchy (for example for queries or HTML output). To set another
+tier hierarchy as the default hierarchy you can set the attribute
+`structure_type_handler` to one of the other hierarchies in the data:
 
 .. code-block:: python
 
   ag.structure_type_handler = poioapi.data.DataStructureType(
-      ag.tier_hierarchies[0])
+      ag.tier_hierarchies[1])
 
 
 .. _graf_structure:
@@ -206,12 +203,9 @@ the property `graf`:
 
   # imports
   import poioapi.annotationgraph
-  import poioapi.data
 
-  # Create an empty annotation graph
-  ag = poioapi.annotationgraph.AnnotationGraph(None)
   # Load the data from EAF file
-  ag.from_elan("elan-example3.eaf")
+  ag = poioapi.annotationgraph.AnnotationGraph.from_elan("elan-example3.eaf")
 
   my_graf_object = ag.graf
 
@@ -230,8 +224,8 @@ in the GrAF object:
   # save it
   ag.to_graf("my_graf_object.hdr")
 
-  # load agian
-  ag.from_graf("my_graf_object.hdr")
+  # load again
+  ag = poioapi.annotationgraph.AnnotationGraph.from_graf("my_graf_object.hdr")
 
 Other file formats might only store a subset of the content of `ag.graf`.
 

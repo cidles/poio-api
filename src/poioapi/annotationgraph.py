@@ -173,6 +173,7 @@ class AnnotationGraph():
         ag.root_tiers = converter.root_tiers
         ag.graf = converter.graf
         ag.primary_data = converter.primary_data
+
         ag.from_file_type = stream_type
 
         # set the first tier hierarchy as the default data_structure_type
