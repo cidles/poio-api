@@ -186,7 +186,7 @@ def main(argv):
             for t in tags:
                 last_used_id = add_ner_node(ag.graf, [word], t, last_used_id)
 
-            # if no tags where found than add default tag
+            # if no tags were found than add default tag
             if len(tags) == 0 and is_prop:
                 last_used_id = add_ner_node(ag.graf, [word], "proper",
                     last_used_id)

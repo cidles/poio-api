@@ -138,7 +138,7 @@ class Parser(poioapi.io.graf.BaseParser):
                     features = self._get_features(e["attrib"])
                     value = e["attrib"]["text"]
                     annotations.append(poioapi.io.graf.Annotation(e["id"],
-                                                                  value, features))
+                        value, features))
 
             return annotations
 
@@ -195,8 +195,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
 class Writer(poioapi.io.graf.BaseWriter):
     """
-    Class that will handle the writer of
-    Typecraft files from a GrAF object.
+    A writer for Typecraft XML.
 
     """
 
@@ -209,7 +208,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         self.extra_gloss_map = None
         self.extra_pos_map = None
 
-    def write(self, outputfile, converter, pretty_print=False, more_info=None, tags=None):
+    def write(self, outputfile, converter, pretty_print=False, more_info=None,
+            tags=None):
         """Writer for the Typecraft file. This method evaluate
         if all the Glosses and POS in the GrAF are validated
         against two specific Typecraft lists.
@@ -241,7 +241,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         trans_nodes = self._get_tag_nodes(nodes, "f")
 
         if more_info:
-            more_info = more_info.replace(":", "\":\"").replace("/", "\",\"").replace("{", "{\"").replace("}", "\"}")
+            more_info = more_info.replace(":", "\":\"").replace(
+                "/", "\",\"").replace("{", "{\"").replace("}", "\"}")
             more_info = ast.literal_eval(more_info)
 
             self._current_text_id = more_info["ids"].split("-")[0]
@@ -249,7 +250,8 @@ class Writer(poioapi.io.graf.BaseWriter):
             self.language = more_info["lang"]
 
         if tags and tags != "null":
-            tags = tags.replace(":", "\":\"").replace("/", "\",\"").replace("{", "{\"").replace("}", "\"}")
+            tags = tags.replace(":", "\":\"").replace("/", "\",\"").replace(
+                "{", "{\"").replace("}", "\"}")
 
             if tags.split("_")[0] != "{\"EMPTY\"}":
                 self.extra_gloss_map = ast.literal_eval(tags.split("_")[0])
@@ -263,7 +265,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         root = ET.Element("typecraft", attribs)
 
         # The language must be set as und
-        text = ET.SubElement(root, "text", {"id": self._next_text_id(), "lang": self.language})
+        text = ET.SubElement(root, "text", {"id": self._next_text_id(),
+            "lang": self.language})
 
         if converter.meta_information:
             ET.SubElement(text, "title").text = converter.meta_information
@@ -279,7 +282,8 @@ class Writer(poioapi.io.graf.BaseWriter):
             if original == "":
                 continue
 
-            phrase = ET.SubElement(text, "phrase", {"id": self._next_phrase_id(), "valid": "VALID"})
+            phrase = ET.SubElement(text, "phrase",
+                {"id": self._next_phrase_id(), "valid": "VALID"})
 
             offset_node = self._get_time_related_nodes(time_start_nodes, p)
             duration_node = self._get_time_related_nodes(time_end_nodes, p)
@@ -291,27 +295,33 @@ class Writer(poioapi.io.graf.BaseWriter):
                 phrase.set("offset", str(offset_value))
 
                 if duration_node:
-                    duration_value = self._string_to_milliseconds(duration_node) - offset_value
+                    duration_value = \
+                        self._string_to_milliseconds(duration_node) - \
+                        offset_value
                     phrase.set("duration", str(duration_value))
 
             if participant_node:
-                phrase.set("speaker", participant_node.annotations._elements[0].features["annotation_value"])
+                phrase.set("speaker", 
+                    participant_node.annotations._elements[0].features["annotation_value"])
 
             ET.SubElement(phrase, "original").text = original
 
             t = self._get_nodes_by_parent(trans_nodes, p.id)
             if t:
-                ET.SubElement(phrase, "translation").text = t[0].annotations._elements[0].features["annotation_value"]
+                ET.SubElement(phrase, "translation").text = \
+                    t[0].annotations._elements[0].features["annotation_value"]
             else:
                 ET.SubElement(phrase, "translation")
 
             ET.SubElement(phrase, "description")
-            ET.SubElement(phrase, "globaltags", {"id": "1", "tagset": "Default"})
+            ET.SubElement(phrase, "globaltags",
+                {"id": "1","tagset": "Default"})
 
             for w in self._get_nodes_by_parent(word_nodes, p.id):
                 w_value = w.annotations._elements[0].features["annotation_value"]
                 
-                word = ET.SubElement(phrase, "word", {"text": w_value, "head": "false"})
+                word = ET.SubElement(phrase, "word",
+                    {"text": w_value, "head": "false"})
                 p_value = self._get_pos_value(pos_nodes, w.id)
 
                 if p_value is not "":
@@ -322,20 +332,24 @@ class Writer(poioapi.io.graf.BaseWriter):
                 for m in self._get_nodes_by_parent(morph_nodes, w.id):
                     m_value = m.annotations._elements[0].features["annotation_value"].replace("-", "")
 
-                    morpheme = ET.SubElement(word, "morpheme", {"text": m_value, "baseform": m_value})
+                    morpheme = ET.SubElement(word, "morpheme",
+                        {"text": m_value, "baseform": m_value})
 
                     for g in self._get_nodes_by_parent(gloss_nodes, m.id):
                         if g.annotations._elements[0].features:
                             g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
 
-                            gloss_list = self._validate_gloss(g_value.replace("-", ""), self.extra_gloss_map)
+                            gloss_list = self._validate_gloss(
+                                g_value.replace("-", ""), self.extra_gloss_map)
 
                             if gloss_list:
                                 for gloss in gloss_list:
                                     if gloss != "NULL":
-                                        ET.SubElement(morpheme, "gloss").text = gloss
+                                        ET.SubElement(
+                                            morpheme, "gloss").text = gloss
                             else:
-                                morpheme.set("meaning", self._set_meaning(g_value))
+                                morpheme.set(
+                                    "meaning", self._set_meaning(g_value))
 
         if self._missing_gloss_list or self._missing_pos_list:
             self.write_missing_tags(outputfile)
@@ -415,12 +429,16 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         """
 
-        if "utterance_gen" in self._flatten_hierarchy_elements(converter.tier_hierarchies):
-            result_nodes = [node for node in nodes if node.id.startswith("utterance_gen")]
+        if "utterance_gen" in self._flatten_hierarchy_elements(
+                converter.tier_hierarchies):
+            result_nodes = \
+                [node for node in nodes if node.id.startswith("utterance_gen")]
         else:
-            result_nodes = [node for node in nodes if node.id.startswith("ref")]
+            result_nodes = \
+                [node for node in nodes if node.id.startswith("ref")]
 
-        return sorted(result_nodes, key=lambda node: int(node.id.split("..na")[1]))
+        return sorted(result_nodes,
+            key=lambda node: int(node.id.split("..na")[1]))
 
     def _get_tag_nodes(self, nodes, tag):
         """Get the nodes by tag.
@@ -441,7 +459,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         result_nodes = [node for node in nodes if node.id.startswith(tag)]
 
-        return sorted(result_nodes, key=lambda node: int(node.id.split("..na")[1]))
+        return sorted(result_nodes,
+            key=lambda node: int(node.id.split("..na")[1]))
 
     def _get_nodes_by_parent(self, nodes, parent_id):
         """Get the nodes by parent id.
@@ -504,9 +523,11 @@ class Writer(poioapi.io.graf.BaseWriter):
         """
 
         for node in pos_nodes:
-            if node.parent.id == parent_id or node.parent.parent.id == parent_id:
+            if node.parent.id == parent_id or \
+                    node.parent.parent.id == parent_id:
                 if node.annotations._elements[0].features:
-                    pos_value = node.annotations._elements[0].features["annotation_value"]
+                    pos_value = \
+                        node.annotations._elements[0].features["annotation_value"]
 
                     if not any((c in pos_value) for c in "-,=:?*"):
                         return pos_value
@@ -557,8 +578,8 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         x = time.strptime(time_start[0], '%H:%M:%S')
 
-        offset = int(datetime.timedelta(hours=x.tm_hour, minutes=x.tm_min, seconds=x.tm_sec).seconds
-                     * 1000) + microseconds
+        offset = int(datetime.timedelta(hours=x.tm_hour, minutes=x.tm_min,
+            seconds=x.tm_sec).seconds * 1000) + microseconds
 
         return offset
 
@@ -654,16 +675,25 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         """
 
-        pos_list = ["PNposs", "N", "V", "PN", "ADVm", "Np", "PREP", "CN", "PRT", "COMP", "AUX", "CONJS", "QUANT",
-                    "NMASC", "NNO", "NNEUT", "COP", "ART", "MOD", "PPOST", "ADJ", "DEM", "ADJC", "PNrefl", "DET", "Wh",
-                    "Vtr", "Vitr", "PROposs", "P", "Vdtr", "CARD", "NDV", "CL", "ADVplc", "V3", "PRTposs", "V4",
-                    "ADVtemp", "V2", "NUM", "REL", "EXPL", "CONJC", "Vmod", "Vlght", "PNana", "PROint", "PNrel",
-                    "VtrOBL", "COPident", "PRTpred", "Nspat", "ORD", "PTCP", "CONJ", "PRTint", "Vneg", "PREPtemp",
-                    "PREPdir", "NFEM", "PRtinf", "Ncomm", "Nbare", "Vcon", "PRTv", "PRTn", "ADVneg", "Vpre", "NUMpart",
-                    "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1", "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
-                    "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl", "PNabs", "Vbid", "Vvec", "INTRJCT"]
+        pos_list = ["PNposs", "N", "V", "PN", "ADVm", "Np", "PREP", "CN",
+                    "PRT", "COMP", "AUX", "CONJS", "QUANT",
+                    "NMASC", "NNO", "NNEUT", "COP", "ART", "MOD", "PPOST",
+                    "ADJ", "DEM", "ADJC", "PNrefl", "DET", "Wh",
+                    "Vtr", "Vitr", "PROposs", "P", "Vdtr", "CARD", "NDV",
+                    "CL", "ADVplc", "V3", "PRTposs", "V4",
+                    "ADVtemp", "V2", "NUM", "REL", "EXPL", "CONJC", "Vmod",
+                    "Vlght", "PNana", "PROint", "PNrel",
+                    "VtrOBL", "COPident", "PRTpred", "Nspat", "ORD", "PTCP",
+                    "CONJ", "PRTint", "Vneg", "PREPtemp",
+                    "PREPdir", "NFEM", "PRtinf", "Ncomm", "Nbare", "Vcon",
+                    "PRTv", "PRTn", "ADVneg", "Vpre", "NUMpart",
+                    "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1",
+                    "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
+                    "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl",
+                    "PNabs", "Vbid", "Vvec", "INTRJCT"]
 
-        pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "Vcon", "pron": "PN", "part": "PRT", "intj": "INTRJCT",
+        pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "Vcon",
+                   "pron": "PN", "part": "PRT", "intj": "INTRJCT",
                    "name": "Np", "encl": "CL", "pred": "COP"}
 
         value = None
