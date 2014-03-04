@@ -85,6 +85,26 @@ def tags_for_tuple(ner_dict, variant_tuple):
             tags.add(ner_tag)
     return tags
 
+def node_ngrams_for_tier(ag, tier, parent, ngram_size):
+    current_ngram = list()
+    ngrams = list()
+    nodes = ag.nodes_for_tier(tier, parent)
+
+    for i in range(ngram_size - 1):
+        if i >= len(nodes):
+            break
+        current_ngram.append(nodes[i])
+
+    i = ngram_size - 1
+    while i < len(nodes):
+        current_ngram.append(nodes[i])
+        ngrams.append(list(current_ngram))
+        current_ngram.pop(0)
+        i += 1
+
+    return ngrams
+
+######################################################### Main
 
 def main(argv):
     if len(argv) != 3:
@@ -120,57 +140,56 @@ def main(argv):
     last_used_id = last_used_id_in_graf(ag.graf)
 
     for phrase in ag.root_nodes():
-        mwe_nodes = list()
-        mwe_words = list()
-        for word in ag.nodes_for_tier("word", phrase):
-            variants = list()
-            is_prop = False
-            for variant in ag.nodes_for_tier("variant", word):
-                for tag in ag.nodes_for_tier("tag", variant):
-                    # are we in a name?
-                    if ag.annotation_value_for_node(tag) == "prop":
-                        is_prop = True
-                        variants.append(
+        # tag multi-word expressions (MWE) by comparing to lists only
+        # does not depend on any OBT tags, as OBT does not support MWEs
+        for ngram_size in range(2, max_ngram+1):
+            ngrams = node_ngrams_for_tier(ag, "word", phrase, ngram_size)
+            for ngram in ngrams:
+                mwe_words = list()
+                # collect all the variants
+                for word in ngram:
+                    variants = set()
+                    variants.add(ag.annotation_value_for_node(word).lower())
+                    for variant in ag.nodes_for_tier("variant", word):
+                        variants.add(
                             ag.annotation_value_for_node(variant).lower())
+                    mwe_words.append(variants)
 
-            if is_prop:
-                mwe_words.append(variants)
-                mwe_nodes.append(word)
-
-            # did we leave the prop/MWE?
-            elif len(mwe_words) > 0:
-                found_mwe = False
+                # get any tags for this MWE
                 tags = set()
                 # check if this is a MWE
                 for variant in itertools.product(*mwe_words):
                     tags = tags.union(tags_for_tuple(ner_dict, tuple(variant)))
 
+                # add tags to GrAF
                 for t in tags:
-                    last_used_id = add_ner_node(ag.graf, mwe_nodes,
-                        ner_tag, last_used_id)
-                    found_mwe = True
+                    last_used_id = add_ner_node(ag.graf, ngram, t, last_used_id)
 
-                if not found_mwe:
-                    for i, word in enumerate(mwe_words):
-                        tags = set()
-                        found_ner = False
-                        for variant in word:
-                            tags = tags.union(
-                                tags_for_tuple(ner_dict, tuple([variant])))
-    
-                        for t in tags:
-                            last_used_id = add_ner_node(ag.graf, [mwe_nodes[i]],
-                                ner_tag, last_used_id)
-                            found_ner = True
+        # now find tags for single words based on "prop" tags from OBT
+        for word in ag.nodes_for_tier("word", phrase):
+            tags = set()
+            is_prop = False
+            variants = set()
+            variants.add(ag.annotation_value_for_node(word).lower())
+            for variant in ag.nodes_for_tier("variant", word):
+                variants.add(ag.annotation_value_for_node(variant).lower())
+                for tag in ag.nodes_for_tier("tag", variant):
+                    # are we in a name?
+                    if ag.annotation_value_for_node(tag) == "prop":
+                        is_prop = True
 
-                        if not found_ner:
-                            # set default tag "proper_name"
-                            last_used_id = add_ner_node(ag.graf,
-                                [mwe_nodes[i]], "proper", last_used_id)
+            if is_prop:
+                for variant in variants:
+                    tags = tags.union(
+                        tags_for_tuple(ner_dict, tuple([variant])))
 
-                mwe_words = list()
-                mwe_nodes = list()
+            for t in tags:
+                last_used_id = add_ner_node(ag.graf, [word], t, last_used_id)
 
+            # if no tags where found than add default tag
+            if len(tags) == 0 and is_prop:
+                last_used_id = add_ner_node(ag.graf, [word], "proper",
+                    last_used_id)
 
     writer = poioapi.io.graf.Writer()
     writer.write(outputfile, ag)
