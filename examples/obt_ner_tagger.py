@@ -75,7 +75,7 @@ def add_ner_node(graf_graph, parent_nodes, ner_tag, last_used_id):
     ner_node.annotations.add(ann)
     graf_graph.nodes.add(ner_node)
     for n in parent_nodes:
-        graf_graph.create_edge(n, ner_node)
+        graf_graph.create_edge(ner_node, n)
     return last_used_id + 1
 
 def tags_for_tuple(ner_dict, variant_tuple):
@@ -103,6 +103,29 @@ def node_ngrams_for_tier(ag, tier, parent, ngram_size):
         i += 1
 
     return ngrams
+
+def nes_from_ag(ag):
+    ners = ag.nodes_for_tier("named_entity")
+    ner_dict = dict()
+    for ner in ners:
+        words = ag.nodes_for_tier("word", ner)
+        ner_dict[tuple(words)] = ner
+    return ner_dict
+
+def is_start_of_ne(word, ne_dict):
+    nes = list()
+    for words in ne_dict:
+        if words[0] == word:
+            nes.append(ne_dict[words])
+    return nes
+
+def is_end_of_ne(word, ne_dict):
+    nes = list()
+    for words in ne_dict:
+        if words[-1] == word:
+            nes.append(ne_dict[words])
+    return nes
+
 
 ######################################################### Main
 
@@ -132,11 +155,10 @@ def main(argv):
     # get the OBT tagger output
     obt_out = obt_tagger(inputfile)
     # Create an empty annotation graph
-    ag = poioapi.annotationgraph.AnnotationGraph(None)
-    ag.from_obt(io.StringIO(obt_out))
-    hierarchy = ag.tier_hierarchies[0]
-    hierarchy[1].append('named_entity') 
-    ag.structure_type_handler = poioapi.data.DataStructureType(hierarchy)
+    ag = poioapi.annotationgraph.AnnotationGraph.from_obt(io.StringIO(obt_out))
+    #hierarchy = ag.tier_hierarchies[0]
+    #hierarchy[1].append('named_entity') 
+    #ag.structure_type_handler = poioapi.data.DataStructureType(hierarchy)
     last_used_id = last_used_id_in_graf(ag.graf)
 
     for phrase in ag.root_nodes():
@@ -191,8 +213,23 @@ def main(argv):
                 last_used_id = add_ner_node(ag.graf, [word], "proper",
                     last_used_id)
 
-    writer = poioapi.io.graf.Writer()
-    writer.write(outputfile, ag)
+    # write output xml
+    with codecs.open(outputfile, "w", "utf-8") as f:
+        f.write("<xml>\n")
+        ner_dict = nes_from_ag(ag)
+        for phrase in ag.root_nodes():
+            for word in ag.nodes_for_tier("word", phrase):
+                for ne in is_start_of_ne(word, ner_dict):
+                    f.write("<ner type=\"{0}\">".format(
+                        ag.annotation_value_for_node(ne)))
+                f.write(ag.annotation_value_for_node(word))
+                for ne in is_end_of_ne(word, ner_dict):
+                    f.write("</ner>")
+                f.write(" ")
+        f.write("\n</xml>\n")
+
+    #writer = poioapi.io.graf.Writer()
+    #writer.write(outputfile, ag)
 
 
 if __name__ == "__main__":
