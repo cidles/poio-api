@@ -35,7 +35,7 @@ def main(argv):
         parser.print_usage()
         sys.exit(0)
 
-    if options.inputtype not in ['toolbox', 'elan', 'shoebox', 'obt']:
+    if options.inputtype not in ['toolbox', 'elan', 'shoebox', 'obt', 'mandinka']:
         parser.print_usage()
         sys.exit(0)
 
@@ -47,6 +47,8 @@ def main(argv):
     ag = None
     if options.inputtype == "elan":
         ag = poioapi.annotationgraph.AnnotationGraph.from_elan(files[0])
+    elif options.inputtype == "mandinka":
+        ag = poioapi.annotationgraph.AnnotationGraph.from_mandinka(files[0])
     elif options.inputtype == "obt":
         ag = poioapi.annotationgraph.AnnotationGraph.from_obt(files[0])
     elif options.inputtype == "shoebox":

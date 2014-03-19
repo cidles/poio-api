@@ -18,6 +18,7 @@ from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import poioapi.io.elan
+import poioapi.io.mandinka
 import poioapi.io.obt
 import poioapi.io.graf
 import poioapi.io.pickle
@@ -64,6 +65,14 @@ class AnnotationGraph():
 
         """
         return cls._from_file(stream, poioapi.data.EAF)
+
+    @classmethod
+    def from_mandinka(cls, stream):
+        """This method generates a GrAF object
+        from a Elan file.
+
+        """
+        return cls._from_file(stream, poioapi.data.MANDINKA)
 
     @classmethod
     def from_obt(cls, stream):
@@ -150,6 +159,8 @@ class AnnotationGraph():
         parser = None
         if stream_type == poioapi.data.EAF:
             parser = poioapi.io.elan.Parser(stream)
+        elif stream_type == poioapi.data.MANDINKA:
+            parser = poioapi.io.mandinka.Parser(stream)
         elif stream_type == poioapi.data.OBT:
             parser = poioapi.io.obt.Parser(stream)
         elif stream_type == poioapi.data.TYPECRAFT:

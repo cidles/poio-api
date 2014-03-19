@@ -174,7 +174,8 @@ class Parser(poioapi.io.graf.BaseParser):
                             self.time_order[ts1],
                             self.time_order[ts2])
 
-                        parent_annotation_id = parent.attrib['ANNOTATION_ID']
+                        if parent is not None:
+                            parent_annotation_id = parent.attrib['ANNOTATION_ID']
                 else:
                     parent_annotation_id = a.attrib["ANNOTATION_REF"]
                     for attribute in a.attrib:

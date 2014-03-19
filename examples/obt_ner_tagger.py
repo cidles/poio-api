@@ -7,6 +7,8 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import codecs
@@ -15,6 +17,7 @@ import glob
 import subprocess
 import itertools
 import io
+import collections
 
 import poioapi.annotationgraph
 import poioapi.data
@@ -22,6 +25,143 @@ import poioapi.io.graf
 
 import graf
 
+############################################## Typecraft mapping
+
+# OBT unclear: fork, ukjent
+
+# what to do with "verb perf-part"? Is it a "verb" or a "participle" in
+# Typcraft?
+
+pos_1 = {
+    "adj" : "ADJ",
+    "adv" : "ADV",
+    "det" : "DET",
+    "inf-merke" : "PRtinf",
+    "interj" : "INTRJCT",
+    "konj" : "CONJ",
+    "prep" : "P",
+    "pron" : "PN",
+    "subst" : "N",
+    "sbu" : "CONJS",
+    "verb" : "V"
+}
+
+pos_2 = {
+    ("adj", "sup") : "ADJS",
+    ("adj", "komp") : "ADJC",
+    ("pron", "poss") : "PNposs",
+    ("pron", "refl") : "PNrefl",
+    ("subst", "fem") : "NFEM",
+    ("subst", "mask") : "NMASC",
+    ("subst", "nøyt") : "NNEUT",
+    ("subst", "prop") : "Np",
+    ("subst", "ub") : "Ncomm"
+}
+
+def map_pos(node_tags):
+    tc_pos = ""
+
+    for k in pos_2:
+        if set(k) < set(node_tags):
+            tc_pos = pos_2[k]
+            break
+
+    if tc_pos == "":
+        for k in pos_1:
+            if k in node_tags:
+                tc_pos = pos_1[k]
+                break
+
+    return tc_pos
+
+def add_pos_node(graf_graph, node, pos, last_used_id):
+    node_id = "pos_typecraft..na{0}".format(last_used_id)
+    pos_node = graf.Node(node_id)
+    ann = graf.Annotation("pos_typecraft",
+        {"annotation_value": pos}, "a{0}".format(last_used_id))
+    pos_node.annotations.add(ann)
+    graf_graph.nodes.add(pos_node)
+    graf_graph.create_edge(node, pos_node)
+    return last_used_id + 1
+
+def word_as_typecraft(ag, word, pos_in_phrase):
+    XML = """<word head="false" text="{word}" pos_in_phrase="{pos_in_phrase}">
+            <pos>{pos}</pos>
+            <morpheme meaning="" baseform="" text="{word}"/>
+        </word>
+        """
+
+    word_str = ag.annotation_value_for_node(word)
+    poses = list()
+    for pos in ag.nodes_for_tier("pos_typecraft", word):
+        poses.append(ag.annotation_value_for_node(pos))
+
+    pos_str = ""
+    if len(poses) > 0:
+        pos_str = poses[0]
+
+    return XML.format(word=word_str, pos_in_phrase=pos_in_phrase, pos=pos_str)
+
+def ne_as_typecraft(ag, phrase):
+    XML = """<namedEntities>
+{nes}        </namedEntities>"""
+
+    XML_NE = """            <entity class="{ne_type}" tokenIDs="{word_ids}"/>
+"""
+
+    nes = collections.defaultdict(list)
+    for pos_in_phrase, word in enumerate(ag.nodes_for_tier("word", phrase)):
+        for ne in ag.nodes_for_tier("named_entity", word):
+            nes[ne].append("{0}".format(pos_in_phrase))
+
+    if len(nes) == 0:
+        return ""
+
+    ne_xml = ""
+    for ne in nes:
+        word_ids = " ".join(nes[ne])
+        ne_type = ag.annotation_value_for_node(ne)
+        ne_xml += XML_NE.format(ne_type=ne_type, word_ids=word_ids)
+
+    return XML.format(nes=ne_xml)
+
+def phrase_as_typecraft(ag, phrase):
+    XML = """<phrase valid="VALID" id="">
+        <original>{phrase}</original>
+        <translation></translation>
+        <description></description>
+        <globaltags tagset="Default" id="1"/>
+        {words}
+        {nes}
+    </phrase>
+    """
+
+    words_xml = ""
+    words = list()
+    for i, word in enumerate(ag.nodes_for_tier("word", phrase)):
+        words.append(ag.annotation_value_for_node(word))
+        words_xml += word_as_typecraft(ag, word, i)
+
+    nes_xml = ne_as_typecraft(ag, phrase)
+
+    phrase_xml = XML.format(phrase=" ".join(words), words=words_xml,
+        nes=nes_xml)
+
+    return phrase_xml
+
+def ag_as_typecraft(ag):
+    XML = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<typecraft xsi:schemaLocation="http://typecraft.org/typecraft.xsd" xmlns="http://typecraft.org/typecraft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+{phrases}
+</typcraft>"""
+
+    phrases_xml = ""
+    for phrase in ag.root_nodes():
+        phrases_xml += phrase_as_typecraft(ag, phrase)
+
+    return XML.format(phrases=phrases_xml)
+
+############################################## Helpers
 
 obt_tagger_command = \
     "/Users/pbouda/Projects/git-github/The-Oslo-Bergen-Tagger/tag-nostat-bm.sh"
@@ -55,7 +195,8 @@ def parse_ner_list(filename):
 
 def obt_tagger(inputfile):
     proc = subprocess.Popen([obt_tagger_command, inputfile],
-        cwd=os.path.dirname(obt_tagger_command), stdout=subprocess.PIPE)
+        cwd=os.path.dirname(obt_tagger_command), stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE)
     (out, err) = proc.communicate()
     return out.decode("utf-8")
 
@@ -75,7 +216,7 @@ def add_ner_node(graf_graph, parent_nodes, ner_tag, last_used_id):
     ner_node.annotations.add(ann)
     graf_graph.nodes.add(ner_node)
     for n in parent_nodes:
-        graf_graph.create_edge(ner_node, n)
+        graf_graph.create_edge(n, ner_node)
     return last_used_id + 1
 
 def tags_for_tuple(ner_dict, variant_tuple):
@@ -104,27 +245,27 @@ def node_ngrams_for_tier(ag, tier, parent, ngram_size):
 
     return ngrams
 
-def nes_from_ag(ag):
-    ners = ag.nodes_for_tier("named_entity")
-    ner_dict = dict()
-    for ner in ners:
-        words = ag.nodes_for_tier("word", ner)
-        ner_dict[tuple(words)] = ner
-    return ner_dict
+# def nes_from_ag(ag):
+#     ners = ag.nodes_for_tier("named_entity")
+#     ner_dict = dict()
+#     for ner in ners:
+#         words = ag.nodes_for_tier("word", ner)
+#         ner_dict[tuple(words)] = ner
+#     return ner_dict
 
-def is_start_of_ne(word, ne_dict):
-    nes = list()
-    for words in ne_dict:
-        if words[0] == word:
-            nes.append(ne_dict[words])
-    return nes
+# def is_start_of_ne(word, ne_dict):
+#     nes = list()
+#     for words in ne_dict:
+#         if words[0] == word:
+#             nes.append(ne_dict[words])
+#     return nes
 
-def is_end_of_ne(word, ne_dict):
-    nes = list()
-    for words in ne_dict:
-        if words[-1] == word:
-            nes.append(ne_dict[words])
-    return nes
+# def is_end_of_ne(word, ne_dict):
+#     nes = list()
+#     for words in ne_dict:
+#         if words[-1] == word:
+#             nes.append(ne_dict[words])
+#     return nes
 
 
 ######################################################### Main
@@ -161,6 +302,8 @@ def main(argv):
     #ag.structure_type_handler = poioapi.data.DataStructureType(hierarchy)
     last_used_id = last_used_id_in_graf(ag.graf)
 
+    pos_dict = dict()
+
     for phrase in ag.root_nodes():
         # tag multi-word expressions (MWE) by comparing to lists only
         # does not depend on any OBT tags, as OBT does not support MWEs
@@ -188,18 +331,31 @@ def main(argv):
                     last_used_id = add_ner_node(ag.graf, ngram, t, last_used_id)
 
         # now find tags for single words based on "prop" tags from OBT
+        # also map POS from OBT to Typecraft
         for word in ag.nodes_for_tier("word", phrase):
             tags = set()
             is_prop = False
             variants = set()
+            pos_found = False
             variants.add(ag.annotation_value_for_node(word).lower())
             for variant in ag.nodes_for_tier("variant", word):
                 variants.add(ag.annotation_value_for_node(variant).lower())
+                variant_tags = list()
                 for tag in ag.nodes_for_tier("tag", variant):
                     # are we in a name?
-                    if ag.annotation_value_for_node(tag) == "prop":
+                    t = ag.annotation_value_for_node(tag)
+                    variant_tags.append(t)
+                    if t == "prop":
                         is_prop = True
 
+                # map POS
+                tc_pos = map_pos(variant_tags)
+                if tc_pos != "" and not pos_found:
+                    last_used_id = add_pos_node(ag.graf, word, tc_pos,
+                        last_used_id)
+                    pos_found = True
+
+            # was it a proper name?
             if is_prop:
                 for variant in variants:
                     tags = tags.union(
@@ -214,19 +370,23 @@ def main(argv):
                     last_used_id)
 
     # write output xml
+    # with codecs.open(outputfile, "w", "utf-8") as f:
+    #     f.write("<xml>\n")
+    #     ne_dict = nes_from_ag(ag)
+    #     for phrase in ag.root_nodes():
+    #         for word in ag.nodes_for_tier("word", phrase):
+    #             for ne in is_start_of_ne(word, ne_dict):
+    #                 f.write("<ner type=\"{0}\">".format(
+    #                     ag.annotation_value_for_node(ne)))
+    #             f.write(ag.annotation_value_for_node(word))
+    #             for ne in is_end_of_ne(word, ne_dict):
+    #                 f.write("</ner>")
+    #             f.write(" ")
+    #     f.write("\n</xml>\n")
+
+    xml_out = ag_as_typecraft(ag)
     with codecs.open(outputfile, "w", "utf-8") as f:
-        f.write("<xml>\n")
-        ner_dict = nes_from_ag(ag)
-        for phrase in ag.root_nodes():
-            for word in ag.nodes_for_tier("word", phrase):
-                for ne in is_start_of_ne(word, ner_dict):
-                    f.write("<ner type=\"{0}\">".format(
-                        ag.annotation_value_for_node(ne)))
-                f.write(ag.annotation_value_for_node(word))
-                for ne in is_end_of_ne(word, ner_dict):
-                    f.write("</ner>")
-                f.write(" ")
-        f.write("\n</xml>\n")
+        f.write(xml_out)
 
     #writer = poioapi.io.graf.Writer()
     #writer.write(outputfile, ag)
