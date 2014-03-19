@@ -33,7 +33,7 @@ import graf
 # what to do with "verb perf-part"? Is it a "verb" or a "participle" in
 # Typcraft?
 
-pos_1 = {
+pos_1 = collections.OrderedDict({
     "adj" : "ADJ",
     "adv" : "ADV",
     "det" : "DET",
@@ -45,19 +45,19 @@ pos_1 = {
     "subst" : "N",
     "sbu" : "CONJS",
     "verb" : "V"
-}
+})
 
-pos_2 = {
+pos_2 = collections.OrderedDict({
     ("adj", "sup") : "ADJS",
     ("adj", "komp") : "ADJC",
     ("pron", "poss") : "PNposs",
     ("pron", "refl") : "PNrefl",
+    ("subst", "prop") : "Np",
     ("subst", "fem") : "NFEM",
     ("subst", "mask") : "NMASC",
     ("subst", "nøyt") : "NNEUT",
-    ("subst", "prop") : "Np",
     ("subst", "ub") : "Ncomm"
-}
+})
 
 def map_pos(node_tags):
     tc_pos = ""
