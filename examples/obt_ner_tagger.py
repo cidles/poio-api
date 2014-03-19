@@ -33,44 +33,44 @@ import graf
 # what to do with "verb perf-part"? Is it a "verb" or a "participle" in
 # Typcraft?
 
-pos_1 = collections.OrderedDict({
-    "adj" : "ADJ",
-    "adv" : "ADV",
-    "det" : "DET",
-    "inf-merke" : "PRtinf",
-    "interj" : "INTRJCT",
-    "konj" : "CONJ",
-    "prep" : "P",
-    "pron" : "PN",
-    "subst" : "N",
-    "sbu" : "CONJS",
-    "verb" : "V"
-})
+pos_1 = [
+    ("adj", "ADJ"),
+    ("adv", "ADV"),
+    ("det", "DET"),
+    ("inf-merke", "PRtinf"),
+    ("interj", "INTRJCT"),
+    ("konj", "CONJ"),
+    ("prep", "P"),
+    ("pron", "PN"),
+    ("subst", "N"),
+    ("sbu", "CONJS"),
+    ("verb", "V")
+]
 
-pos_2 = collections.OrderedDict({
-    ("adj", "sup") : "ADJS",
-    ("adj", "komp") : "ADJC",
-    ("pron", "poss") : "PNposs",
-    ("pron", "refl") : "PNrefl",
-    ("subst", "prop") : "Np",
-    ("subst", "fem") : "NFEM",
-    ("subst", "mask") : "NMASC",
-    ("subst", "nøyt") : "NNEUT",
-    ("subst", "ub") : "Ncomm"
-})
+pos_2 = [
+    (("adj", "sup"), "ADJS"),
+    (("adj", "komp"), "ADJC"),
+    (("pron", "poss"), "PNposs"),
+    (("pron", "refl"), "PNrefl"),
+    (("subst", "prop"), "Np"),
+    (("subst", "fem"), "NFEM"),
+    (("subst", "mask"), "NMASC"),
+    (("subst", "nøyt"), "NNEUT"),
+    (("subst", "ub"), "Ncomm")
+]
 
 def map_pos(node_tags):
     tc_pos = ""
 
-    for k in pos_2:
+    for k, v in pos_2:
         if set(k) < set(node_tags):
-            tc_pos = pos_2[k]
+            tc_pos = v
             break
 
     if tc_pos == "":
-        for k in pos_1:
+        for k, v in pos_1:
             if k in node_tags:
-                tc_pos = pos_1[k]
+                tc_pos = v
                 break
 
     return tc_pos
