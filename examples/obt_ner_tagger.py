@@ -18,6 +18,7 @@ import subprocess
 import itertools
 import io
 import collections
+import tempfile
 
 import poioapi.annotationgraph
 import poioapi.data
@@ -143,8 +144,10 @@ def phrase_as_typecraft(ag, phrase):
         words_xml += word_as_typecraft(ag, word, i)
 
     nes_xml = ne_as_typecraft(ag, phrase)
-
-    phrase_xml = XML.format(phrase=" ".join(words), words=words_xml,
+    # create the phrase string
+    phrase_str = " ".join(words)
+    phrase_str = re.sub(" (?=[.,;!?])", "", phrase_str)
+    phrase_xml = XML.format(phrase=phrase_str, words=words_xml,
         nes=nes_xml)
 
     return phrase_xml
@@ -194,10 +197,20 @@ def parse_ner_list(filename):
     return mwes
 
 def obt_tagger(inputfile):
-    proc = subprocess.Popen([obt_tagger_command, inputfile],
-        cwd=os.path.dirname(obt_tagger_command), stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE)
-    (out, err) = proc.communicate()
+    # pre-process file: OBT crashes when there are three newlines
+    with codecs.open(inputfile, "r", "utf-8") as f:
+        content = f.read()
+    re_newlines = re.compile("[\n]+", re.MULTILINE)
+    content = re_newlines.sub("\n", content)
+
+    out = ""
+    with tempfile.NamedTemporaryFile() as temp:
+        temp.write(content.encode("utf-8"))
+        temp.flush()
+        proc = subprocess.Popen([obt_tagger_command, temp.name],
+            cwd=os.path.dirname(obt_tagger_command), stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE)
+        (out, _) = proc.communicate()
     return out.decode("utf-8")
 
 def last_used_id_in_graf(graf):
@@ -244,29 +257,6 @@ def node_ngrams_for_tier(ag, tier, parent, ngram_size):
         i += 1
 
     return ngrams
-
-# def nes_from_ag(ag):
-#     ners = ag.nodes_for_tier("named_entity")
-#     ner_dict = dict()
-#     for ner in ners:
-#         words = ag.nodes_for_tier("word", ner)
-#         ner_dict[tuple(words)] = ner
-#     return ner_dict
-
-# def is_start_of_ne(word, ne_dict):
-#     nes = list()
-#     for words in ne_dict:
-#         if words[0] == word:
-#             nes.append(ne_dict[words])
-#     return nes
-
-# def is_end_of_ne(word, ne_dict):
-#     nes = list()
-#     for words in ne_dict:
-#         if words[-1] == word:
-#             nes.append(ne_dict[words])
-#     return nes
-
 
 ######################################################### Main
 
@@ -369,27 +359,9 @@ def main(argv):
                 last_used_id = add_ner_node(ag.graf, [word], "proper",
                     last_used_id)
 
-    # write output xml
-    # with codecs.open(outputfile, "w", "utf-8") as f:
-    #     f.write("<xml>\n")
-    #     ne_dict = nes_from_ag(ag)
-    #     for phrase in ag.root_nodes():
-    #         for word in ag.nodes_for_tier("word", phrase):
-    #             for ne in is_start_of_ne(word, ne_dict):
-    #                 f.write("<ner type=\"{0}\">".format(
-    #                     ag.annotation_value_for_node(ne)))
-    #             f.write(ag.annotation_value_for_node(word))
-    #             for ne in is_end_of_ne(word, ne_dict):
-    #                 f.write("</ner>")
-    #             f.write(" ")
-    #     f.write("\n</xml>\n")
-
     xml_out = ag_as_typecraft(ag)
     with codecs.open(outputfile, "w", "utf-8") as f:
         f.write(xml_out)
-
-    #writer = poioapi.io.graf.Writer()
-    #writer.write(outputfile, ag)
 
 
 if __name__ == "__main__":
