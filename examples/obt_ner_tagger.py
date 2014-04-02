@@ -26,6 +26,25 @@ import poioapi.io.graf
 
 import graf
 
+
+############################################### Globals
+
+obt_tagger_command = \
+    "/Users/pbouda/Projects/git-github/The-Oslo-Bergen-Tagger/tag-nostat-bm.sh"
+
+ner_tag_for_type = {
+    "by_navn" : "city",
+    "etternavn" : "family_name",
+    "fylkesnavn" : "county",
+    "guttenavn" : "boy_name",
+    "jentenavn" : "girl_name",
+    "kommune_navn" : "district",
+    "land_navn" : "country"
+}
+
+re_ner_type = re.compile("([^.]*)\.txt$")
+
+
 ############################################## Typecraft mapping
 
 # OBT unclear: fork, ukjent
@@ -85,8 +104,8 @@ def add_pos_node(graf_graph, node, pos, last_used_id):
     graf_graph.create_edge(node, pos_node)
     return last_used_id + 1
 
-def word_as_typecraft(ag, word, pos_in_phrase):
-    XML = """<word head="false" text="{word}" pos_in_phrase="{pos_in_phrase}">
+def word_as_typecraft(ag, word, pos_in_phrase, phrase_id):
+    XML = """<word head="false" text="{word}" id="{phrase_id}-{pos_in_phrase}">
             <pos>{pos}</pos>
             <morpheme meaning="" baseform="" text="{word}"/>
         </word>
@@ -101,14 +120,15 @@ def word_as_typecraft(ag, word, pos_in_phrase):
     if len(poses) > 0:
         pos_str = poses[0]
 
-    return XML.format(word=word_str, pos_in_phrase=pos_in_phrase, pos=pos_str)
+    return XML.format(word=word_str, phrase_id=phrase_id,
+        pos_in_phrase=pos_in_phrase, pos=pos_str)
 
-def ne_as_typecraft(ag, phrase):
-    XML = """<namedEntities>
-{nes}        </namedEntities>"""
-
-    XML_NE = """            <entity class="{ne_type}" tokenIDs="{word_ids}"/>
-"""
+def ne_as_typecraft(ag, phrase, phrase_id):
+    XML_NE = """<multiword type="NE">
+            <mwtag>{ne_type}<mwtag>
+            {word_ids}
+        </multiword>
+        """
 
     nes = collections.defaultdict(list)
     for pos_in_phrase, word in enumerate(ag.nodes_for_tier("word", phrase)):
@@ -120,14 +140,16 @@ def ne_as_typecraft(ag, phrase):
 
     ne_xml = ""
     for ne in nes:
-        word_ids = " ".join(nes[ne])
+        word_ids = ""
+        for word_id in nes[ne]:
+            word_ids += "<word id=\"{0}-{1}\"/>".format(phrase_id, word_id)
         ne_type = ag.annotation_value_for_node(ne)
         ne_xml += XML_NE.format(ne_type=ne_type, word_ids=word_ids)
 
-    return XML.format(nes=ne_xml)
+    return ne_xml
 
-def phrase_as_typecraft(ag, phrase):
-    XML = """<phrase valid="VALID" id="">
+def phrase_as_typecraft(ag, phrase, phrase_id):
+    XML = """<phrase valid="VALID" id="{id}">
         <original>{phrase}</original>
         <translation></translation>
         <description></description>
@@ -141,14 +163,14 @@ def phrase_as_typecraft(ag, phrase):
     words = list()
     for i, word in enumerate(ag.nodes_for_tier("word", phrase)):
         words.append(ag.annotation_value_for_node(word))
-        words_xml += word_as_typecraft(ag, word, i)
+        words_xml += word_as_typecraft(ag, word, i, phrase_id)
 
-    nes_xml = ne_as_typecraft(ag, phrase)
+    nes_xml = ne_as_typecraft(ag, phrase, phrase_id)
     # create the phrase string
     phrase_str = " ".join(words)
     phrase_str = re.sub(" (?=[.,;!?])", "", phrase_str)
     phrase_xml = XML.format(phrase=phrase_str, words=words_xml,
-        nes=nes_xml)
+        nes=nes_xml, id=phrase_id)
 
     return phrase_xml
 
@@ -159,27 +181,12 @@ def ag_as_typecraft(ag):
 </typcraft>"""
 
     phrases_xml = ""
-    for phrase in ag.root_nodes():
-        phrases_xml += phrase_as_typecraft(ag, phrase)
+    for i, phrase in enumerate(ag.root_nodes()):
+        phrases_xml += phrase_as_typecraft(ag, phrase, i)
 
     return XML.format(phrases=phrases_xml)
 
 ############################################## Helpers
-
-obt_tagger_command = \
-    "/Users/pbouda/Projects/git-github/The-Oslo-Bergen-Tagger/tag-nostat-bm.sh"
-
-ner_tag_for_type = {
-    "by_navn" : "city",
-    "etternavn" : "family_name",
-    "fylkesnavn" : "county",
-    "guttenavn" : "boy_name",
-    "jentenavn" : "girl_name",
-    "kommune_navn" : "district",
-    "land_navn" : "country"
-}
-
-re_ner_type = re.compile("([^.]*)\.txt$")
 
 def parse_ner_list(filename):
     mwes = set()
