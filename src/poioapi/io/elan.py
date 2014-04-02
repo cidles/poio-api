@@ -175,15 +175,19 @@ class Parser(poioapi.io.graf.BaseParser):
                             self.time_order[ts2])
 
                         if parent is not None:
-                            parent_annotation_id = parent.attrib['ANNOTATION_ID']
+                            parent_annotation_id = \
+                                parent.attrib['ANNOTATION_ID']
                 else:
                     parent_annotation_id = a.attrib["ANNOTATION_REF"]
-                    for attribute in a.attrib:
-                        if attribute != 'ANNOTATION_REF' and \
-                                attribute != 'ANNOTATION_ID' and \
-                                attribute != 'ANNOTATION_VALUE' and \
-                                attribute != 'PREVIOUS_ANNOTATION':
-                            features[attribute] = annotation.attrib[attribute]
+                    if "PREVIOUS_ANNOTATION" in a.attrib:
+                        prefix = "{0}{1}{2}".format(
+                            t.attrib['LINGUISTIC_TYPE_REF'],
+                            poioapi.io.graf.GRAFSEPARATOR,
+                            t.attrib['TIER_ID']
+                        )
+                        prev_node = poioapi.io.graf.NodeId(prefix,
+                            a.attrib["PREVIOUS_ANNOTATION"])
+                        features["previous_node"] = prev_node.to_str()
 
                 self._annotations_for_parent[(
                     parent_annotation_id, t.attrib['TIER_ID'])].\
