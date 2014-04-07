@@ -426,10 +426,8 @@ class GrAFConverter:
 
         if from_node_id is not None:
             edge_id = node_id.str_edge()
-            edge = graf.Edge(edge_id, self.graf.nodes[from_node_id.to_str()],
-                node)
-
-            self.graf.edges.add(edge)
+            self.graf.create_edge(self.graf.nodes[from_node_id.to_str()], node,
+                edge_id)
 
         if regions is not None:
             region_id = node_id.str_region()
@@ -471,45 +469,45 @@ class Writer(BaseWriter):
                 flat_elements.append(e)
         return flat_elements
 
-    def write(self, outputfile, converter):
-        """Writes the converter object as GrAF files.
+    def write(self, outputfile, ag):
+        """Writes an AnnotationGraph object as GrAF files.
 
         Parameters
         ----------
         outputfile : str
             The filename of the output file. The filename should be the header
             file for GrAF with the extension ".hdr".
-        converter : Converter or AnnotationGraph
-            A converter object. The converter object containes the data that
+        ag : poioapi.annotationgraph.AnnotationGraph
+            An AnnotationGraph object. The AG object containes the data that
             will be use for output.
 
         """
 
         (basedirname, _) = os.path.splitext(outputfile)
 
-        self._get_parents(converter.tier_hierarchies)
+        self._get_parents(ag.tier_hierarchies)
 
         standoffrenderer = graf.StandoffHeaderRenderer("{0}.hdr".format(
             basedirname))
 
         for tier_name in self._flatten_hierarchy_elements(
-                converter.tier_hierarchies):
+                ag.tier_hierarchies):
             annotation_space = tier_name.split(GRAFSEPARATOR)[0]
             out_graf = graf.Graph()
             renderer = graf.GrafRenderer("{0}-{1}.xml".format(
                 basedirname, annotation_space
             ))
-            out_graf.nodes = [n for n in converter.graf.nodes
+            out_graf.nodes = [n for n in ag.graf.nodes
                               if n.id.startswith(tier_name)]
-            out_graf.edges = [e for e in converter.graf.edges
+            out_graf.edges = [e for e in ag.graf.edges
                               if e.to_node.id.startswith(tier_name)]
-            out_graf.regions = [r for r in converter.graf.regions
+            out_graf.regions = [r for r in ag.graf.regions
                                 if r.id.startswith(tier_name)]
             out_graf.annotation_spaces.add(graf.AnnotationSpace(
                 annotation_space))
             out_graf.header.add_dependency(self._parent[tier_name])
 
-            out_graf = self._add_root_nodes(converter.graf, annotation_space,
+            out_graf = self._add_root_nodes(ag.graf, annotation_space,
                 out_graf)
 
             renderer.render(out_graf)
@@ -519,9 +517,9 @@ class Writer(BaseWriter):
                 "{0}-{1}.xml".format(basename, annotation_space),
                 annotation_space)
 
-        self._add_primary_data(converter.primary_data, basedirname)
+        self._add_primary_data(ag.primary_data, basedirname)
         standoffrenderer.render(self.standoffheader)
-        self._generate_metafile(basedirname, converter.meta_information)
+        self._generate_metafile(basedirname, ag.meta_information)
 
     def _add_root_nodes(self, graph, annotation_space, out_graf):
         for root in graph.header.roots:
