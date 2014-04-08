@@ -1,0 +1,11 @@
+{
+	"tier_mapping": {
+		"gloss": ["gloss"],
+		"part of speech": ["pos"]
+	},
+	"gloss": {
+		"1SG": "1SG",
+		"SINGLE": "ANNOTATION",
+		"MULTI, TAG": "TEST"
+	}
+}

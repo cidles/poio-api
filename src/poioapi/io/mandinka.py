@@ -12,6 +12,8 @@ import codecs
 import collections
 
 import poioapi.io.graf
+import poioapi.data
+import poioapi.mapper
 
 re_last_quote = re.compile("[^\"]*$")
 
@@ -65,13 +67,26 @@ ignore_these = ['^\sMmm...\s',
                 '^«\s+Bisímilláahí ',
                 '^[\r\n]']
 
+
+def tier_mapping():
+    mapping = poioapi.mapper.TierMapper()
+    mapping.append_to_tier_labels(poioapi.data.TIER_UTTERANCE, ['phrase'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_WORD, ['word'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_TRANSLATION, ['translation'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_MORPHEME, ['morpheme'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_GLOSS, ['gloss'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_POS, ['pos'])
+
+    return mapping
+
+
 class Parser(poioapi.io.graf.BaseParser):
     """
     Class that will handle the parsing of Mandinka data.
 
     """
 
-    def __init__(self, input_stream):
+    def __init__(self, input_stream, tier_label_map):
         """Class's constructor.
 
         Parameters
@@ -81,6 +96,17 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
         self._input_stream = None
+
+        if tier_label_map is None:
+            self._tier_labels = tier_mapping()
+        else:
+            self._tier_labels = tier_label_map
+
+        # self._utterance_label = self._mapper.tier_label(poioapi.data.TIER_UTTERANCE)
+        # self._word_label = self._mapper.tier_label(poioapi.data.TIER_WORD)
+        # self._morpheme_label = self._mapper.tier_label(poioapi.data.TIER_MORPHEME)
+        # self._gloss_label = self._mapper.tier_label(poioapi.data.TIER_GLOSS)
+        # self._translation_label = self._mapper.tier_label(poioapi.data.TIER_TRANSLATION)
 
         self.input_stream = input_stream
         self.parse()
@@ -118,9 +144,6 @@ class Parser(poioapi.io.graf.BaseParser):
         block = {}
         line_count = 0
         phrase_ended = False
-
-        #blocks = self.load_annotation_blocks()
-        #blocks = self.normalize_blocks(blocks)
 
         #compile all regexes structures defined
         separate = re.compile(r'\b(?:%s)\b' % '|'.join(word_line_separators))
@@ -163,7 +186,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 if phrase_ended:
                     #adding the annotations for phrase
                     current_phrase_id = current_id
-                    self._annotations_for_parent[(None, 'phrase')].append(
+                    self._annotations_for_parent[(None, poioapi.data.tier_labels[poioapi.data.TIER_UTTERANCE])].append(
                         poioapi.io.graf.Annotation('a{0}'.format(current_phrase_id),
                                                    re.sub('[-]+', '', block['phrase'])))
 
@@ -176,7 +199,8 @@ class Parser(poioapi.io.graf.BaseParser):
                         current_id += 1
                         current_word_id = current_id
                         #add the word tier annotations
-                        self._annotations_for_parent[('a{0}'.format(current_phrase_id), 'word')].append(
+                        self._annotations_for_parent[('a{0}'.format(current_phrase_id),
+                                                      poioapi.data.tier_labels[poioapi.data.TIER_WORD])].append(
                             poioapi.io.graf.Annotation('a{0}'.format(current_word_id),
                                                        re.sub('[-]+', '', word_tokens[i].strip())))
                         morphemes_for_word = word_tokens[i].split('-')
@@ -189,7 +213,8 @@ class Parser(poioapi.io.graf.BaseParser):
                             gloss_word = glosses_for_word.pop(0)
                             current_id += 1
                             current_morpheme_id = current_id
-                            self._annotations_for_parent['a{0}'.format(current_word_id), 'morpheme'].append(
+                            self._annotations_for_parent[('a{0}'.format(current_word_id),
+                                                          poioapi.data.tier_labels[poioapi.data.TIER_MORPHEME])].append(
                                 poioapi.io.graf.Annotation('a{0}'.format(current_morpheme_id), morpheme.strip()))
 
                             #if the morpheme and gloss counts for this word don't match,
@@ -202,13 +227,15 @@ class Parser(poioapi.io.graf.BaseParser):
                             for gloss in glosses_for_morpheme:
                                 current_id += 1
                                 current_gloss_id = current_id
-                                self._annotations_for_parent['a{0}'.format(current_morpheme_id), 'gloss'].append(
+                                self._annotations_for_parent[('a{0}'.format(current_morpheme_id),
+                                                              poioapi.data.tier_labels[poioapi.data.TIER_GLOSS])].append(
                                     poioapi.io.graf.Annotation('a{0}'.format(current_gloss_id), gloss.strip()))
 
                     #finally, add the translation annotation
                     current_id += 1
                     current_translation_id = current_id
-                    self._annotations_for_parent[('a{0}'.format(current_phrase_id), 'translation')].append(
+                    self._annotations_for_parent[('a{0}'.format(current_phrase_id),
+                                                  poioapi.data.tier_labels[poioapi.data.TIER_TRANSLATION])].append(
                             poioapi.io.graf.Annotation('a{0}'.format(current_translation_id), block['translation']))
 
                     #increment the current annotation id for the next phrase
@@ -219,7 +246,7 @@ class Parser(poioapi.io.graf.BaseParser):
                     block['gloss'] = ''
                     block['translation'] = ''
 
-        print('Total processed blocks: {0}'.format(current_block))
+        # print('Total processed blocks: {0}'.format(current_block))
 
     def sanitize_line(self, line):
         """ Function to remove unwanted character(s) from the line.
@@ -251,7 +278,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        return [poioapi.io.graf.Tier("phrase")]
+        return [poioapi.io.graf.Tier(poioapi.data.tier_labels[poioapi.data.TIER_UTTERANCE])]
 
     def get_child_tiers_for_tier(self, tier):
         """This method retrieves all the child tiers
@@ -269,12 +296,13 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        if tier.name == "phrase":
-            return [poioapi.io.graf.Tier("word"), poioapi.io.graf.Tier("translation")]
-        elif tier.name == "word":
-            return [poioapi.io.graf.Tier("morpheme")]
-        elif tier.name == "morpheme":
-            return [poioapi.io.graf.Tier("gloss")]
+        if tier.name == poioapi.data.tier_labels[poioapi.data.TIER_UTTERANCE]:
+            return [poioapi.io.graf.Tier(poioapi.data.tier_labels[poioapi.data.TIER_WORD]),
+                    poioapi.io.graf.Tier(poioapi.data.tier_labels[poioapi.data.TIER_TRANSLATION])]
+        elif tier.name == poioapi.data.tier_labels[poioapi.data.TIER_WORD]:
+            return [poioapi.io.graf.Tier(poioapi.data.tier_labels[poioapi.data.TIER_MORPHEME])]
+        elif tier.name == poioapi.data.tier_labels[poioapi.data.TIER_MORPHEME]:
+            return [poioapi.io.graf.Tier(poioapi.data.tier_labels[poioapi.data.TIER_GLOSS])]
 
     def get_annotations_for_tier(self, tier, annotation_parent=None):
         """This method retrieves all the child tiers

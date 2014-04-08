@@ -28,6 +28,7 @@ import poioapi.io.shoebox
 import poioapi.io.typecraft
 
 import poioapi.data
+import poioapi.mapper
 
 import graf
 
@@ -53,10 +54,12 @@ class AnnotationGraph():
         self.meta_information = None
         self.root_tiers = []
         self.primary_data = None
-        self.from_file_type = None
+        self.source_type = None
 
         self.filters = []
         self.filtered_node_ids = []
+
+        self.tier_mapper = poioapi.mapper.TierMapper()
 
     @classmethod
     def from_elan(cls, stream):
@@ -67,12 +70,13 @@ class AnnotationGraph():
         return cls._from_file(stream, poioapi.data.EAF)
 
     @classmethod
-    def from_mandinka(cls, stream):
+    def from_mandinka(cls, stream, tier_map_file_path=''):
         """This method generates a GrAF object
         from a Elan file.
 
         """
-        return cls._from_file(stream, poioapi.data.MANDINKA)
+        cls.tier_mapper = poioapi.io.mandinka.tier_mapping()
+        return cls._from_file(stream, poioapi.data.MANDINKA, tier_map_file_path=tier_map_file_path)
 
     @classmethod
     def from_obt(cls, stream):
@@ -115,12 +119,13 @@ class AnnotationGraph():
         return cls._from_file(stream, poioapi.data.TOOLBOXXML)
 
     @classmethod
-    def from_toolbox(cls, stream):
+    def from_toolbox(cls, stream, tier_map_file_path=''):
         """This method generates a GrAF object
         from a xml toolbox file.
 
         """
-        return cls._from_file(stream, poioapi.data.TOOLBOX)
+        cls.tier_mapper = poioapi.io.toolbox.tier_mapping()
+        return cls._from_file(stream, poioapi.data.TOOLBOX, tier_map_file_path=tier_map_file_path)
 
     @classmethod
     def from_graf(cls, stream):
@@ -149,8 +154,13 @@ class AnnotationGraph():
         return codecs.open(filename, "r", "utf-8")
 
     @classmethod
-    def _from_file(cls, stream, stream_type, **kwargs):
+    def _from_file(cls, stream, stream_type, tier_labels_file_path='', **kwargs):
         ag = cls()
+
+        #load aditional tier labels if supplied
+        if tier_labels_file_path != '' and tier_labels_file_path is not None:
+            ag.tier_mapper.load_mapping(tier_labels_file_path)
+
         # TODO: move the stream opening to the parser classes
         if stream_type != poioapi.data.TOOLBOX:
             if not hasattr(stream, 'read'):
@@ -160,7 +170,7 @@ class AnnotationGraph():
         if stream_type == poioapi.data.EAF:
             parser = poioapi.io.elan.Parser(stream)
         elif stream_type == poioapi.data.MANDINKA:
-            parser = poioapi.io.mandinka.Parser(stream)
+            parser = poioapi.io.mandinka.Parser(stream, tier_label_map=ag.tier_mapper)
         elif stream_type == poioapi.data.OBT:
             parser = poioapi.io.obt.Parser(stream)
         elif stream_type == poioapi.data.TYPECRAFT:
@@ -174,7 +184,7 @@ class AnnotationGraph():
         elif stream_type == poioapi.data.TOOLBOX:
             if not hasattr(stream, 'read'):
                 stream = codecs.open(stream, "rb")
-            parser = poioapi.io.toolbox.Parser(stream)
+            parser = poioapi.io.toolbox.Parser(stream, mapper=ag.tier_mapper)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.parse()
@@ -185,7 +195,7 @@ class AnnotationGraph():
         ag.graf = converter.graf
         ag.primary_data = converter.primary_data
 
-        ag.from_file_type = stream_type
+        ag.source_type = stream_type
 
         # set the first tier hierarchy as the default data_structure_type
         ag.structure_type_handler = \
@@ -220,7 +230,7 @@ class AnnotationGraph():
 
     def nodes_for_tier(self, tier_name, parent_node = None):
         """Retreive all nodes for a given tier name. The parameter
-        tier_name specifies the type if the neigbours. For example if
+        tier_name specifies the type if the neighbours. For example if
         the parent node is an utterance the tier name "word" specifies that
         all "word" nodes that are connected to the utterance node should
         be returned. The tier name must be a children of the parent node's

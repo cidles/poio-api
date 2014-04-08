@@ -16,6 +16,7 @@ import codecs
 import collections
 
 import poioapi.io.graf
+import poioapi.mapper
 import poioapi.data
 
 # Compile necessary regular expression
@@ -25,15 +26,15 @@ re_word = re.compile(r"(?<=\s)(\S+)(?:\s|$)", re.UNICODE)
 BOMLEN = len(codecs.BOM_UTF8)
 
 # Tier map
-tier_map = {
-    poioapi.data.TIER_UTTERANCE: ["utterance_gen"],
-    poioapi.data.TIER_WORD: ["tx", "t"],
-    poioapi.data.TIER_MORPHEME: ["mb", "m"],
-    poioapi.data.TIER_POS: ["ps", "p"],
-    poioapi.data.TIER_GLOSS: ["ge", "g"],
-    poioapi.data.TIER_TRANSLATION: ["ft", "f"],
-    poioapi.data.TIER_COMMENT: ["nt"]
-}
+# tier_map = {
+#     poioapi.data.TIER_UTTERANCE: ["utterance_gen"],
+#     poioapi.data.TIER_WORD: ["tx", "t"],
+#     poioapi.data.TIER_MORPHEME: ["mb", "m"],
+#     poioapi.data.TIER_POS: ["ps", "p"],
+#     poioapi.data.TIER_GLOSS: ["ge", "g"],
+#     poioapi.data.TIER_TRANSLATION: ["ft", "f"],
+#     poioapi.data.TIER_COMMENT: ["nt"]
+# }
 
 # Set the type of string
 if sys.version_info[:2] >= (3, 0):
@@ -49,18 +50,33 @@ def char_len(string):
     """
     return(len(string.encode("utf-8")))
 
+
+def tier_mapping():
+    mapping = poioapi.mapper.TierMapper()
+    mapping.append_to_tier_labels(poioapi.data.TIER_UTTERANCE, ['utterance_gen'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_WORD, ['tx', 't'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_TRANSLATION, ['translation', 'f'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_MORPHEME, ['mb', 'm'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_GLOSS, ['ge', 'g'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_POS, ['ps', 'p']),
+    mapping.append_to_tier_labels(poioapi.data.TIER_COMMENT, ['nt'])
+
+    return mapping
+
+
 class Parser(poioapi.io.graf.BaseParser):
 
     def __init__(self, input_stream, record_marker = 'ref',
         record_level_markers = ['ref', 'id', 'dt', 'ELANBegin', 'ELANEnd',
             'ELANParticipant' ],
-        utterance_level_markers = tier_map[poioapi.data.TIER_TRANSLATION] + \
-            tier_map[poioapi.data.TIER_COMMENT] + \
+        utterance_level_markers=  # tier_map[poioapi.data.TIER_TRANSLATION] + \
+            #tier_map[poioapi.data.TIER_COMMENT] + \
             ['rf', 'rt', 'np', 'graid', 'pr'],
-        word_level_markers = tier_map[poioapi.data.TIER_WORD],
-        morpheme_level_markers = tier_map[poioapi.data.TIER_MORPHEME],
-        tag_level_markers = tier_map[poioapi.data.TIER_GLOSS] + \
-            tier_map[poioapi.data.TIER_POS]):
+        #word_level_markers = tier_map[poioapi.data.TIER_WORD],
+        #morpheme_level_markers = tier_map[poioapi.data.TIER_MORPHEME],
+        #tag_level_markers = tier_map[poioapi.data.TIER_GLOSS] + \
+        #    tier_map[poioapi.data.TIER_POS],
+        mapper=None):
         """Class's constructor.
 
         Parameters
@@ -79,11 +95,20 @@ class Parser(poioapi.io.graf.BaseParser):
         self.input_stream = input_stream
         self.record_marker = record_marker
 
+        if mapper is None:
+            self._tier_labels = tier_mapping()
+        else:
+            self._tier_labels = mapper
+
         self.record_level_markers = record_level_markers
         self.utterance_level_markers = utterance_level_markers
-        self.word_level_markers = word_level_markers
-        self.morpheme_level_markers = morpheme_level_markers
-        self.tag_level_markers = tag_level_markers
+        self.utterance_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_TRANSLATION))
+        self.utterance_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_COMMENT))
+
+        self.word_level_markers = self._tier_labels.tier_labels(poioapi.data.TIER_WORD)
+        self.morpheme_level_markers = self._tier_labels.tier_labels(poioapi.data.TIER_MORPHEME)
+        self.tag_level_markers = self._tier_labels.tier_labels(poioapi.data.TIER_GLOSS)
+        self.tag_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_POS))
 
         self.parse()
 
@@ -203,6 +228,7 @@ class Parser(poioapi.io.graf.BaseParser):
                 id_to_add = current_record_id
                 if last_tier_marker in self.utterance_level_markers:
                     id_to_add = current_utterance_id
+
                 self._annotations_for_parent[
                     ("a{0}".format(id_to_add),
                         last_tier_marker)][-1].value += " " + \

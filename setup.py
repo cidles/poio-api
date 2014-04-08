@@ -57,7 +57,7 @@ setup(
     ],
     packages = [ 'poioapi', 'poioapi.io' ],
     package_dir = { '': 'src' },
-    package_data = { 'poioapi': ['VERSION'] },
+    package_data = { 'poioapi': ['VERSION', 'mappings/*.json'] },
     #install_requires=['PyYAML>=3.09'],
     #test_suite = 'graf.test.simple',
 )

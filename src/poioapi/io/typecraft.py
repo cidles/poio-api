@@ -17,14 +17,26 @@ import codecs
 import time
 import datetime
 import re
-import ast
-
-import xml.etree.cElementTree as ET
+import json
+import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring
 from xml.dom import minidom
 
 import poioapi.io.graf
+import poioapi.annotationgraph
+import poioapi.data
+import poioapi.mapper
 
+# Tier map
+tier_map = {
+    poioapi.data.TIER_UTTERANCE: ['phrase', 'utterance_gen'],
+    poioapi.data.TIER_WORD: ['word', 't'],
+    poioapi.data.TIER_MORPHEME: ['morpheme', 'm'],
+    poioapi.data.TIER_POS: ['pos', 'p'],
+    poioapi.data.TIER_GLOSS: ['gloss', 'g'],
+    poioapi.data.TIER_TRANSLATION: ['translation', 'f'],
+    poioapi.data.TIER_COMMENT: ['comment', 'nt']
+}
 
 class Parser(poioapi.io.graf.BaseParser):
     """
@@ -52,7 +64,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
         """
 
-        self.tree = ET.parse(self.filepath).getroot()
+        self.nodetree = ET.parse(self.filepath)
+        self.tree = self.nodetree.getroot()
         self.namespace = {'xmlns': re.findall(r"\{(.*?)\}", self.tree.tag)[0]}
         self._current_id = 0
         self._elements_map = {"phrase": [], "word": [], "translation": [],
@@ -192,24 +205,64 @@ class Parser(poioapi.io.graf.BaseParser):
     def tier_has_regions(self, tier):
         pass
 
-
 class Writer(poioapi.io.graf.BaseWriter):
     """
     A writer for Typecraft XML.
 
     """
 
+
     def __init__(self):
-        self._missing_gloss_list = []
-        self._missing_pos_list = []
+        self._phrases = []
+
+        self._missing_glosses = {}
+        self._missing_poses = {}
         self._current_text_id = 0
         self._current_phrase_id = 0
-        self.language = "und"
-        self.extra_gloss_map = None
-        self.extra_pos_map = None
+        self.extra_gloss_map = []
+        self.extra_pos_map = []
+        #The path of the JSON file containing the extra maps
+        self._additional_maps_file = ''
+        #the XML nodes
+        self._root = None
+        self._text = None
+        self._phrase_element = None
+        self._word_element = None
+        self._pos_element = None
+        self._morpheme_element = None
+        self._annotation_mapper = None
+        self._source_tier_names = None
 
-    def write(self, outputfile, converter, pretty_print=False, more_info=None,
-            tags=None):
+    def _init_root_node(self):
+        """ Method to initialize the root node to which add all the subelements.
+        """
+        self._root = ET.Element("typecraft", {"xsi:schemaLocation": "http://typecraft.org/typecraft.xsd",
+                   "xmlns": "http://typecraft.org/typecraft",
+                   "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"})
+
+    def _create_text_node(self, language='und', original_title='Empty Title', translation_title=''):
+        """ Method to create the 'text' node and set some information about the node.
+            Assumes that the 'root' node is already initiated.
+
+            Parameters
+            ----------
+            language : str
+            the language in which the original text is written.
+
+            original_title : str
+            The title of the text in the original language
+
+            translation_title : str
+            The title of the text in the translation language
+        """
+
+        self._text = ET.SubElement(self._root, "text", {"id": self._next_text_id(),
+            "lang": language})
+
+        ET.SubElement(self._text, "title").text = original_title
+        ET.SubElement(self._text, "titleTranslation").text = translation_title
+
+    def write(self, outputfile, converter, pretty_print=False, extra_tag_map='', language='und'):
         """Writer for the Typecraft file. This method evaluate
         if all the Glosses and POS in the GrAF are validated
         against two specific Typecraft lists.
@@ -222,168 +275,168 @@ class Writer(poioapi.io.graf.BaseWriter):
             Converter object from Poio API.
         pretty_print : boolean
             Boolean to set the XML pretty print.
-        more_info : str
-            This string contains the information about the ids and language.
-        tags = str
-            This string contains the missing glosses or POS the extra maps.
+        missing : boolean
+            Whether to output the missing tags or not.
+        extra_tag_map : str
+            The path of the JSON file containing the extra maps
+        language : str
+            The ISO 639-3 code of the source's language
 
         """
 
-        nodes = converter.graf.nodes
-        phrases = self._get_phrases(nodes, converter)
-        time_start_nodes = self._get_tag_nodes(nodes, "ELANBegin")
-        time_end_nodes = self._get_tag_nodes(nodes, "ELANEnd")
-        participant_nodes = self._get_tag_nodes(nodes, "ELANParticipant")
-        word_nodes = self._get_tag_nodes(nodes, "t")
-        pos_nodes = self._get_tag_nodes(nodes, "p")
-        morph_nodes = self._get_tag_nodes(nodes, "m")
-        gloss_nodes = self._get_tag_nodes(nodes, "g")
-        trans_nodes = self._get_tag_nodes(nodes, "f")
+        self._additional_maps_file = extra_tag_map
 
-        if more_info:
-            more_info = more_info.replace(":", "\":\"").replace(
-                "/", "\",\"").replace("{", "{\"").replace("}", "\"}")
-            more_info = ast.literal_eval(more_info)
+        self._annotation_mapper = poioapi.mapper.AnnotationMapper(converter.source_type, poioapi.data.TYPECRAFT)
+        self._annotation_mapper.load_mappings(extra_tag_map)
 
-            self._current_text_id = more_info["ids"].split("-")[0]
-            self._current_phrase_id = more_info["ids"].split("-")[1]
-            self.language = more_info["lang"]
+        phrase_nodes = converter.nodes_for_tier(poioapi.data.tier_labels[poioapi.data.TIER_UTTERANCE])
+        self._init_root_node()
+        self._create_text_node(language=language)
 
-        if tags and tags != "null":
-            tags = tags.replace(":", "\":\"").replace("/", "\",\"").replace(
-                "{", "{\"").replace("}", "\"}")
+        ET.SubElement(self._text, 'body').text = ' '.join([converter.annotation_value_for_node(phrase)
+                                                           for phrase in phrase_nodes])
+        for phrase in phrase_nodes:
 
-            if tags.split("_")[0] != "{\"EMPTY\"}":
-                self.extra_gloss_map = ast.literal_eval(tags.split("_")[0])
-            if tags.split("_")[1] != "{\"EMPTY\"}":
-                self.extra_pos_map = ast.literal_eval(tags.split("_")[1])
-
-        attribs = {"xsi:schemaLocation": "http://typecraft.org/typecraft.xsd",
-                   "xmlns": "http://typecraft.org/typecraft",
-                   "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"}
-
-        root = ET.Element("typecraft", attribs)
-
-        # The language must be set as und
-        text = ET.SubElement(root, "text", {"id": self._next_text_id(),
-            "lang": self.language})
-
-        if converter.meta_information:
-            ET.SubElement(text, "title").text = converter.meta_information
-        else:
-            ET.SubElement(text, "title").text = "Empty Title"
-
-        ET.SubElement(text, "titleTranslation")
-        ET.SubElement(text, "body").text = self._get_body(phrases)
-
-        for p in phrases:
-            original = p.annotations._elements[0].features["annotation_value"]
-
-            if original == "":
+            annotation = converter.annotation_value_for_node(phrase)
+            if annotation == '':
                 continue
 
-            phrase = ET.SubElement(text, "phrase",
-                {"id": self._next_phrase_id(), "valid": "VALID"})
+            self._phrase_element = ET.SubElement(self._text, 'phrase', {'id': self._next_phrase_id(), 'valid': 'VALID'})
 
-            offset_node = self._get_time_related_nodes(time_start_nodes, p)
-            duration_node = self._get_time_related_nodes(time_end_nodes, p)
-            participant_node = self._get_time_related_nodes(participant_nodes, p)
+            #TODO: handle the time values from ELAN
+            ET.SubElement(self._phrase_element, 'original').text = annotation
 
-            # Get the time
-            if offset_node:
-                offset_value = self._string_to_milliseconds(offset_node)
-                phrase.set("offset", str(offset_value))
+            #add the translation, description and globaltags subelements
+            self._write_translations(converter, phrase)
 
-                if duration_node:
-                    duration_value = \
-                        self._string_to_milliseconds(duration_node) - \
-                        offset_value
-                    phrase.set("duration", str(duration_value))
+            ET.SubElement(self._phrase_element, 'description')
+            ET.SubElement(self._phrase_element, 'globaltags', {'id': '1', 'tagset': 'Default'})
 
-            if participant_node:
-                phrase.set("speaker", 
-                    participant_node.annotations._elements[0].features["annotation_value"])
+            #get the word nodes for the current phrase
+            self._write_words(converter, phrase)
 
-            ET.SubElement(phrase, "original").text = original
+        self.write_xml(self._root, outputfile)
 
-            t = self._get_nodes_by_parent(trans_nodes, p.id)
-            if t:
-                ET.SubElement(phrase, "translation").text = \
-                    t[0].annotations._elements[0].features["annotation_value"]
-            else:
-                ET.SubElement(phrase, "translation")
+    def _write_words(self, converter, phrase):
+        """ Method to build the word nodes of the XML.
 
-            ET.SubElement(phrase, "description")
-            ET.SubElement(phrase, "globaltags",
-                {"id": "1","tagset": "Default"})
-
-            for w in self._get_nodes_by_parent(word_nodes, p.id):
-                w_value = w.annotations._elements[0].features["annotation_value"]
-                
-                word = ET.SubElement(phrase, "word",
-                    {"text": w_value, "head": "false"})
-                p_value = self._get_pos_value(pos_nodes, w.id)
-
-                if p_value is not "":
-                    val = self._validate_pos(p_value, self.extra_pos_map)
-                    if val != "NULL":
-                        ET.SubElement(word, "pos").text = val
-
-                for m in self._get_nodes_by_parent(morph_nodes, w.id):
-                    m_value = m.annotations._elements[0].features["annotation_value"].replace("-", "")
-
-                    morpheme = ET.SubElement(word, "morpheme",
-                        {"text": m_value, "baseform": m_value})
-
-                    for g in self._get_nodes_by_parent(gloss_nodes, m.id):
-                        if g.annotations._elements[0].features:
-                            g_value = g.annotations._elements[0].features["annotation_value"].replace("-","")
-
-                            gloss_list = self._validate_gloss(
-                                g_value.replace("-", ""), self.extra_gloss_map)
-
-                            if gloss_list:
-                                for gloss in gloss_list:
-                                    if gloss != "NULL":
-                                        ET.SubElement(
-                                            morpheme, "gloss").text = gloss
-                            else:
-                                morpheme.set(
-                                    "meaning", self._set_meaning(g_value))
-
-        if self._missing_gloss_list or self._missing_pos_list:
-            self.write_missing_tags(outputfile)
-        else:
-            self.write_xml(root, outputfile)
-
-    def write_missing_tags(self, outputfile):
-        """Write a file with the missing tags. This
-        method it is called only when there is missing
-        tags.
-
-        Parameters
-        ----------
-        outputfile : str
-            The output file name.
-
+            Parameters
+            ----------
+            converter : poioapi.annotationgraph.AnnotationGraph
+                Converter object from Poio API.
+            phrase : graf.Node
+                The parent node of the words
         """
+        word_tier_markers = converter.tier_mapper.tier_labels(poioapi.data.TIER_WORD)
+        word_nodes = []
+        for marker in word_tier_markers:
+            word_nodes.extend(converter.nodes_for_tier(marker, phrase))
 
-        wrt = ""
+        for word in word_nodes:
+            annotation = converter.annotation_value_for_node(word)
+            annotation = annotation.replace('-', '')
+            self._word_element = ET.SubElement(self._phrase_element, 'word', {'text': annotation, 'head': 'false'})
 
-        if self._missing_gloss_list:
-            wrt += str(self._missing_gloss_list) + "--"
-        if self._missing_pos_list:
-            if wrt == "":
-                wrt += "[]--" + str(self._missing_pos_list)
+            #adding the part-of-speech (pos) element
+            self._write_pos(converter, word)
+
+            #extract the morpheme nodes for the current word
+            self._write_morphemes(converter, word)
+
+    def _write_pos(self, converter, word):
+        """ Method to build the word nodes of the XML.
+
+            Parameters
+            ----------
+            converter : poioapi.annotationgraph.AnnotationGraph
+                Converter object from Poio API.
+            word : graf.Node
+                The parent node of the words
+        """
+        self._pos_element = ET.SubElement(self._word_element, 'pos')
+        pos_annotations = []
+        for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_POS):
+            pos_annotations.extend(converter.annotations_for_tier(marker, word))
+
+        if len(pos_annotations) == 1:
+            annotation = converter.annotation_value_for_annotation(pos_annotations[0])
+            if self._annotation_mapper.validate_tag(poioapi.data.TIER_POS, annotation) is None:
+                self._annotation_mapper.add_to_missing(poioapi.data.TIER_POS, annotation)
             else:
-                wrt += str(self._missing_pos_list)
+                self._pos_element.text = annotation
         else:
-            wrt += "[]"
+            self._pos_element.text = ''
 
-        if wrt != "":
-            file = codecs.open(outputfile + ".missing", 'wb', encoding='utf-8')
-            file.write(wrt)
-            file.close()
+    def _write_morphemes(self, converter, word):
+        """ Method to build the word nodes of the XML.
+
+            Parameters
+            ----------
+            converter : poioapi.annotationgraph.AnnotationGraph
+                Converter object from Poio API.
+            word : graf.Node
+                The parent node of the words
+        """
+        morpheme_nodes = []
+        for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_MORPHEME):
+            morpheme_nodes.extend(converter.nodes_for_tier(marker, word))
+
+        for morpheme in morpheme_nodes:
+            annotation = converter.annotation_value_for_node(morpheme)
+            annotation = annotation.replace('-', '')
+
+            self._morpheme_element = ET.SubElement(self._word_element, 'morpheme',
+                                             {'text': annotation, 'baseform': annotation})
+            self._write_gloss(converter, morpheme)
+
+    def _write_gloss(self, converter, morpheme):
+        """ Method to build the word nodes of the XML.
+
+            Parameters
+            ----------
+            converter : poioapi.annotationgraph.AnnotationGraph
+                Converter object from Poio API.
+            morpheme : graf.Node
+                The parent node of the words
+        """
+        gloss_annotations = []
+        for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_GLOSS):
+            gloss_annotations.extend(converter.annotations_for_tier(marker, morpheme))
+
+        for gloss in gloss_annotations:
+            annotation = converter.annotation_value_for_annotation(gloss)
+            annotation = annotation.replace('-', '')
+            gloss_list = self._annotation_mapper.validate_tag(poioapi.data.TIER_GLOSS, annotation)
+            if gloss_list is not None:
+                #if the tag is in the wrong tier, then put it in the correct tier. For now only detects POS
+                if isinstance(gloss_list, tuple) and len(gloss_list) == 2:
+                    if gloss_list[0] in converter.tier_mapper.tier_labels(poioapi.data.TIER_POS):
+                        self._pos_element.text = gloss_list[1]
+                else:
+                    ET.SubElement(self._morpheme_element, 'gloss').text = gloss_list
+            else:
+                if not annotation.isupper():
+                    self._morpheme_element.set("meaning", annotation)
+                else:
+                    self._annotation_mapper.add_to_missing(poioapi.data.TIER_GLOSS, annotation)
+
+    def _write_translations(self, converter, phrase):
+        """ Method to build the word nodes of the XML.
+
+            Parameters
+            ----------
+            converter : poioapi.annotationgraph.AnnotationGraph
+                Converter object from Poio API.
+            phrase : graf.Node
+                The parent node of the words
+        """
+        translation_annotations = converter.annotations_for_tier(poioapi.data.tier_labels[poioapi.data.TIER_TRANSLATION], phrase)
+
+        if len(translation_annotations) == 1:
+            ET.SubElement(self._phrase_element, 'translation').text = \
+                converter.annotation_value_for_annotation(translation_annotations[0])
+        else:
+            ET.SubElement(self._phrase_element, 'translation')
 
     def write_xml(self, root, outputfile, pretty_print=True):
         """Write the final Typecraft XML file.
@@ -411,128 +464,6 @@ class Writer(poioapi.io.graf.BaseWriter):
         else:
             tree = ET.ElementTree(root)
             tree.write(outputfile)
-
-    def _get_phrases(self, nodes, converter):
-        """Get all the phrases.
-
-        Parameters
-        ----------
-        nodes : list
-            List of the nodes.
-        converter : Converter
-            Converter object.
-
-        Returns
-        -------
-        result_nodes : list
-            A sorted list of nodes.
-
-        """
-
-        if "utterance_gen" in self._flatten_hierarchy_elements(
-                converter.tier_hierarchies):
-            result_nodes = \
-                [node for node in nodes if node.id.startswith("utterance_gen")]
-        else:
-            result_nodes = \
-                [node for node in nodes if node.id.startswith("ref")]
-
-        return sorted(result_nodes,
-            key=lambda node: int(node.id.split("..na")[1]))
-
-    def _get_tag_nodes(self, nodes, tag):
-        """Get the nodes by tag.
-
-        Parameters
-        ----------
-        nodes : list
-            List of the nodes.
-        tag : str
-            Name of the tag to search.
-
-        Returns
-        -------
-        result_nodes : list
-            A sorted list of nodes.
-
-        """
-
-        result_nodes = [node for node in nodes if node.id.startswith(tag)]
-
-        return sorted(result_nodes,
-            key=lambda node: int(node.id.split("..na")[1]))
-
-    def _get_nodes_by_parent(self, nodes, parent_id):
-        """Get the nodes by parent id.
-
-        Parameters
-        ----------
-        nodes : list
-            List of the nodes.
-        parent_id : str
-            Parent node id.
-
-        Returns
-        -------
-        nodes : list
-            List of nodes.
-
-        """
-
-        return [node for node in nodes if node.parent.id == parent_id]
-
-    def _get_body(self, phrases, body=""):
-        """Get the body texts from the
-        Phrase nodes.
-
-        Parameters
-        ----------
-        phrases : list
-            List of the Phrases Nodes.
-        parent_id : str
-            Parent node id.
-
-        Returns
-        -------
-        body : str
-            Body text.
-
-        """
-
-        for n in phrases:
-            body += n.annotations._elements[0].features["annotation_value"]
-
-        return body
-
-    def _get_pos_value(self, pos_nodes, parent_id):
-        """Find the POS value from a node with
-        a specific parent.
-
-        Parameters
-        ----------
-        pos_nodes : list
-            List of the POS Nodes.
-        parent_id : str
-            Parent node id.
-
-        Returns
-        -------
-        pos_value : str
-            POS value.
-
-        """
-
-        for node in pos_nodes:
-            if node.parent.id == parent_id or \
-                    node.parent.parent.id == parent_id:
-                if node.annotations._elements[0].features:
-                    pos_value = \
-                        node.annotations._elements[0].features["annotation_value"]
-
-                    if not any((c in pos_value) for c in "-,=:?*"):
-                        return pos_value
-
-        return ""
 
     def _get_time_related_nodes(self, time_nodes, parent_node):
         """Find the node with time values in
@@ -593,35 +524,6 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         return str(current_id)
 
-    def _set_meaning(self, value):
-        """Generate a meaning from a gloss. The
-        meaning is the non-accepted gloss value.
-        The non-alphabetic characters are not
-        allowed.
-
-        Parameters
-        ----------
-        value : str
-            Value of the meaning.
-
-        Returns
-        -------
-        result : str
-            The correct string value.
-
-        """
-
-        result = value
-
-        if ":" in value:
-            result = value.split(":")[0]
-        elif "-" in value:
-            result = value.split("-")[0]
-        elif "/" in value:
-            result = value.split("/")[0]
-
-        return result
-
     def _next_phrase_id(self):
         """Increment the phrase id.
 
@@ -632,30 +534,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         return str(current_id)
 
-    def _flatten_hierarchy_elements(self, elements):
-        """Flat the elements appended to a new list of elements.
-
-        Parameters
-        ----------
-        elements : array_like
-            An array of string values.
-
-        Returns
-        -------
-        flat_elements : array_like
-            An array of flattened `elements`.
-
-        """
-
-        flat_elements = []
-        for e in elements:
-            if type(e) is list:
-                flat_elements.extend(self._flatten_hierarchy_elements(e))
-            else:
-                flat_elements.append(e)
-        return flat_elements
-
-    def _validate_pos(self, pos_value, extra_pos_map=None):
+    def _validate_pos(self, pos_value):
         """This function validates the pos value
         in a pos list from the TC pos list. There is
         a extra set of values pos_map that contains
@@ -665,8 +544,6 @@ class Writer(poioapi.io.graf.BaseWriter):
         ----------
         pos_value : str
             POS value.
-        extra_pos_map : dict
-            Dictionary with the extra POS values.
 
         Returns
         -------
@@ -675,47 +552,60 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         """
 
-        pos_list = ["PNposs", "N", "V", "PN", "ADVm", "Np", "PREP", "CN",
-                    "PRT", "COMP", "AUX", "CONJS", "QUANT",
-                    "NMASC", "NNO", "NNEUT", "COP", "ART", "MOD", "PPOST",
-                    "ADJ", "DEM", "ADJC", "PNrefl", "DET", "Wh",
-                    "Vtr", "Vitr", "PROposs", "P", "Vdtr", "CARD", "NDV",
-                    "CL", "ADVplc", "V3", "PRTposs", "V4",
-                    "ADVtemp", "V2", "NUM", "REL", "EXPL", "CONJC", "Vmod",
-                    "Vlght", "PNana", "PROint", "PNrel",
-                    "VtrOBL", "COPident", "PRTpred", "Nspat", "ORD", "PTCP",
-                    "CONJ", "PRTint", "Vneg", "PREPtemp",
-                    "PREPdir", "NFEM", "PRtinf", "Ncomm", "Nbare", "Vcon",
-                    "PRTv", "PRTn", "ADVneg", "Vpre", "NUMpart",
-                    "ADJS", "PRTexist", "CLFnum", "CLFnom", "CIRCP", "V1",
-                    "PREP/PROspt", "PRTprst", "Vvector", "PNdem",
-                    "Nrel", "IPHON", "ADV", "VitrOBL", "Vimprs", "Vrefl",
-                    "PNabs", "Vbid", "Vvec", "INTRJCT"]
-
-        pos_map = {"prn": "PN", "interj": "INTRJCT", "CVB": "Vcon",
-                   "pron": "PN", "part": "PRT", "intj": "INTRJCT",
-                   "name": "Np", "encl": "CL", "pred": "COP"}
-
         value = None
+        extra_pos_map = None
+
+        # this means that an additional map was specified
+        if self._additional_maps_file is not None and self._additional_maps_file != '':
+            extra_pos_map = self._load_additional_map_from_json(self._additional_maps_file, 'pos')
 
         if not any((c in pos_value) for c in "()/\.-?*"):
-            for pos in pos_list:
+            for pos in self._pos_list:
                 if pos_value.upper() == pos.upper():
                     value = pos
-                    continue
-
-            if pos_value in pos_map.keys():
-                value = pos_map[pos_value]
-            elif extra_pos_map and pos_value in extra_pos_map.keys():
-                value = extra_pos_map[pos_value]
-
+                    break
             if value is None:
-                if pos_value not in self._missing_pos_list:
-                    self._missing_pos_list.append(pos_value)
+                if pos_value in self._pos_map.keys():
+                    value = self._pos_map[pos_value]
+                elif extra_pos_map:
+                    value = self._validate_against_json_list(extra_pos_map, pos_value)
 
         return value
 
-    def _validate_gloss(self, gloss_value, extra_gloss_map=None):
+    def _validate_against_json_list(self, json_list, tag_to_validate):
+        """ This function validates if a tag is present in an additional mapping.
+            This additional mapping must have been pre-loaded with self._load_additional_maps_from_json or
+            self._load_additional_map_from_json.
+
+            Parameters
+            ----------
+            json_list : list
+                The list loaded via self._load_additional_maps_from_json or self._load_additional_map_from_json.
+            tag_to_validate : str
+                The value for which to perform the check.
+
+            Return
+            ------
+            value : str
+                The corresponding tag mapping for tag_to_validate if it is present. Else returns 'None'.
+        """
+
+        value = None
+        if json_list is not None:
+            for key, val in json_list:
+                #handling the N-1 tag correspondence
+                if isinstance(key, tuple):
+                    if tag_to_validate.upper() in key:
+                        value = val
+                        break
+                else:
+                    if tag_to_validate.upper() == key.upper():
+                        value = val
+                        break
+
+        return value
+
+    def _validate_gloss(self, gloss_value):
         """This function validates the gloss value
         in a gloss list from the TC gloss list. There is
         a extra set of values gloss_map that contains
@@ -735,45 +625,14 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         """
 
-        gloss_list = ["AGR", "ST", "STR", "W", "CONS", "ANIM", "HUM", "INANIM", "ADD",
-                      "ASP", "CESSIVE", "CMPL", "CON", "CONT", "CUST", "DUR", "DYN", "EGR",
-                      "FREQ", "HAB", "INCEP", "INCH", "INCOMPL", "INGR", "INTS", "IPFV", "ITER",
-                      "PFV", "PNCT", "PROG", "PRSTV", "REP", "RESLT", "SEMF", "STAT", "NCOMPL",
-                      "PRF", "FV", "IV", "ABES", "ABL", "ABS", "ACC", "ADES", "ALL", "BEN",
-                      "case marker - underspecified", "COMIT", "CONTL", "DAT", "DEL", "DEST",
-                      "ELAT", "EQT", "ERG", "ESS", "GEN", "ILL", "INESS", "INSTR", "LAT", "MALF",
-                      "NOM", "OBL", "PERL", "POSS", "PRTV", "TER", "VIAL", "VOC", "ORN", "CLITcomp",
-                      "CLITadv", "CLITdet", "CLITn", "CLITp", "CLITpron", "CLITv", "ATV", "FAM", "INFOC",
-                      "RFTL", "TPID", "UNID", "APPROX", "DIST", "DIST2", "DXS", "MEDIAL", "PROX", "AD",
-                      "ADJ>ADV", "ADJ>N", "ADJ>V", "AUG", "DIM", "INCORP", "KIN", "N>ADJ", "N>ADV", "NMLZ",
-                      "N>N", "NUM>N", "N>V", "PTCP>ADJ", "QUAL", "V>ADJ", "V>ADV", "vbl", ">Vitr", "V>N",
-                      ">Vtr", "V>Nagt", "V>Ninstr", "ACAUS", "APASS", "APPL", "CAUS", "PASS", "ASRT",
-                      "DECL", "EXCL", "IMP", "IMP1", "IMP2", "IND", "INTR", "MAVM", "PROH", "Q", "RPS",
-                      "COMM", "FEM", "MASC", "NEUT", "COMPL", "DO", "ICV", "OBJ", "OBJ2", "objcogn", "OBJind",
-                      "OM", "SBJ", "SC", "SM", "AFFMT", "CNTV", "COND", "CONJ", "CONTP", "EVID", "IRR", "JUSS",
-                      "MOD", "OPT", "RLS", "SBJV", "OBLIG", "POT", "MNR", "MO", "CL", "CL1", "CL10", "CL11",
-                      "CL12", "CL13", "CL14", "CL15", "CL16", "CL17", "CL18", "CL2", "CL20", "CL21", "CL22",
-                      "CL23", "CL3", "CL4", "CL5", "CL6", "CL7", "CL8", "CL9", "Npref", "landmark", "DU",
-                      "PL", "SG", "x", "DISTRIB", "1excl", "1incl", "1PL", "1SG", "2PL", "2SG",
-                      "3B", "3PL", "3Pobv", "3Pprox", "3SG", "3Y", "4", "AREAL", "PLassc", "FT", "H", "!H",
-                      "L", "MT", "RT", "NEGPOL", "POSPOL", "DEF", "INDEF", "SGbare", "SPECF", "PART", "2HML", "2HON",
-                      "HON", "TTL", "AGT", "EXP", "GOAL", "PSSEE", "PSSOR", "PT", "SRC", "TH", "CIRCM", "CTed", "DIR",
-                      "ENDPNT", "EXT", "INT", "LINE", "LOC", "PATH", "PRL", "SPTL", "STARTPNT", "VIAPNT", "DM", "MU",
-                      "PS", "ANT", "AOR", "AUX", "FUT", "FUTclose", "FUTim", "FUTnear", "FUTrel", "FUTrm", "NF", "NFUT",
-                      "NPAST", "PAST", "PASThst", "PASTim", "PASTpast", "PASTrel", "PASTrm", "PRES", "PRET", "FOC",
-                      "TOP", "CNJ", "CLF", "CV", "GER", "GERDV", "INF", "itr", "PRED", "PTCP", "SUPN", "Vstem", "ACTV",
-                      "?", "ABB", "ABSTR", "ADJstem", "ADV>ADJ", "ASS", "ASSOC", "ATT", "CMPR", "CO-EV", "CONSEC",
-                      "CONTR", "COP", "DEG", "DEM", "DIR-SP", "EMPH", "EXPLET", "GNR", "IND-SP", "K1", "K2", "LOCREL",
-                      "NEG", "Nstem", "oBEN", "PPOSTstem", "PRIV", "QUOT", "RECP", "REDP", "REFL", "REL", "RP-SP",
-                      "sBEN", "SLCT", "SUP"]
-
-        gloss_map = {"1": "CL1", "2": "CL2", "3": "CL3", "5": "CL5", "6": "CL6", "7": "CL7",
-                     "8": "CL8", "9": "CL9", "14": "CL14", "15": "CL15", "16": "CL16",
-                     "17": "CL17", "18": "CL18", "NPST": "NPAST", "EMP": "EMPH", "EXCLAM": "EXCL",
-                     "COM": "COMIT", "PERF": "PFV", "CLAS": "CLF", "REF": "REFL", "?IPFV": "IPFV"}
-
-        valid_glosses = []
+        valid_glosses = None
         splitter = "."
+
+        # this means that an additional map was specified
+        if self._additional_maps_file is not None and self._additional_maps_file != '':
+            extra_gloss_map = self._load_additional_map_from_json(self._additional_maps_file, 'gloss')
+        else:
+            extra_gloss_map = None
 
         # Special gloss value
         if "?" in gloss_value and gloss_value != "?IPFV":
@@ -784,20 +643,147 @@ class Writer(poioapi.io.graf.BaseWriter):
             splitter = ":"
 
         for gl in gloss_value.split(splitter):
-            for gloss in gloss_list:
+            for gloss in self._gloss_list:
                 if gl.upper() == gloss.upper():
-                    valid_glosses.append(gloss)
+                    valid_glosses = gloss
 
-            if gl in gloss_map.keys():
-                valid_glosses.append(gloss_map[gl])
-            elif extra_gloss_map and gl in extra_gloss_map:
-                valid_glosses.append(extra_gloss_map[gl])
+            if gl in self._gloss_map.keys():
+                valid_glosses = self._gloss_map[gl]
+            elif extra_gloss_map:
+                value = self._validate_against_json_list(extra_gloss_map, gl)
+                valid_glosses = value
 
-        if valid_glosses:
-            return valid_glosses
-        else:
-            if gloss_value.isupper():
-                if gloss_value not in self._missing_gloss_list:
-                    self._missing_gloss_list.append(gloss_value)
+        return valid_glosses
 
+
+    def _load_additional_maps_from_json(self, input_file):
+        """ This function loads the additional tag mappings from a json file
+            The JSON file must contain a dictionary with the various mappings for the different tiers.
+            Those mappings are, in turn, also dictionaries. Each key/value pair of the mapping is converted in list
+            whose items are tuples, which can have nested tuples of their own.
+            This function should work with any JSON file, as long as it adheres to the specified structure.
+
+            Parameters
+            ----------
+            input_file : str
+                The path to the JSON file.
+
+            Return
+            ------
+            additional_maps : list
+                The list of the additional maps loaded from input_file
+        """
+
+        additional_maps = None
+
+        #load the entire object
+        json_file = open(input_file, 'r')
+        mappings = json.load(json_file)
+        json_file.close()
+
+        #cycle through the items of the master dictionary
+        for master_key in mappings.keys():
+            additional_maps.append(self._list_from_json_dict(mappings[master_key]))
+
+        return additional_maps
+
+    def _load_additional_map_from_json(self, input_file, tier_name):
+        """ This function loads a specific additional tag mapping from a json file, if the supplied name exists.
+            The JSON file must contain a dictionary with the various mappings for the different tiers.
+            Those mappings are, in turn, also dictionaries. Each key/value pair of the mapping is converted in list
+            whose items are tuples, which can have nested tuples of their own.
+            This function should work with any JSON file, as long as it adheres to the specified structure.
+
+            Parameters
+            ----------
+            input_file : str
+                The path to the JSON file.
+            tier_name : str
+                The tier name for which the mapping is stored.
+
+            Return
+            ------
+            additional_maps : list
+                The mapping loaded from input_file
+        """
+        #bailout if the input_file parameter is invalid
+        if input_file is None or input_file == '':
             return None
+
+        additional_maps = None
+
+        #load the entire object
+        json_file = open(input_file, 'r')
+        mappings = json.load(json_file)
+        json_file.close()
+
+        if tier_name in mappings.keys():
+            additional_maps = self._list_from_json_dict(mappings[tier_name])
+
+        return additional_maps
+
+    def _list_from_json_dict(self, json_dict):
+        """ This function converts a dictionary to a list by transforming each key/value pair of the dictionary
+            into a tuple. This tuple is in the format: (dictionary_key, dictionary_value). If one of the dictionary
+            keys has multiple tags, then we split them and create a tuple with the result.
+
+            Parameters
+            ----------
+            json_dict : dictionary
+            This is one of the dictionaries loaded from a JSON file containing the mapping rules.
+
+             Return
+             ------
+             extra_mapping : list
+             A list containing the tuples created from the json_dict's key/value pairs
+        """
+        extra_mapping = []
+        for key in json_dict.keys():
+            extra_mapping_key = key
+            split = key.split(',')
+
+            if len(split) > 1:
+                extra_mapping_key = tuple(split)
+            extra_mapping.append((extra_mapping_key, json_dict[key]))
+
+        return extra_mapping
+
+    def missing_tags(self, outputfile, annotation_graph, additional_map_path):
+        """ Method to check if all the poses and glosses are mapped in the external mapping provided.
+            Any non-mapped gloss and/or pos tags are stored for outputting the JSON file.
+            If no missing tags are found, the objects in the output file will be empty.
+            If no tag mapping is passed (e.g. running the converter without the -t flag) then the result will
+            contain all the tags.
+        """
+
+        #load the nodes to be validated
+        pos_nodes = []
+        for marker in annotation_graph.tier_mapper.tier_labels(poioapi.data.TIER_POS):
+            pos_nodes.extend(annotation_graph.nodes_for_tier(marker))
+
+        gloss_nodes = []
+        for marker in annotation_graph.tier_mapper.tier_labels(poioapi.data.TIER_GLOSS):
+            gloss_nodes.extend(annotation_graph.nodes_for_tier(marker))
+
+        if self._annotation_mapper is None:
+            self._annotation_mapper = \
+                poioapi.mapper.AnnotationMapper(annotation_graph.source_type, poioapi.data.TYPECRAFT)
+
+        # load the additional mappings if any
+        self._annotation_mapper.load_mappings(additional_map_path)
+
+        # done loading, now validate the tags
+        # pos
+        for node in pos_nodes:
+            av = annotation_graph.annotation_value_for_node(node)
+            av = av.strip('-')
+            if self._annotation_mapper.validate_tag(poioapi.data.TIER_POS, av) is None and av.isupper():
+                self._annotation_mapper.add_to_missing(poioapi.data.TIER_POS, av.upper())
+
+        for node in gloss_nodes:
+            av = annotation_graph.annotation_value_for_node(node)
+            av = av.strip('-')
+            if self._annotation_mapper.validate_tag(poioapi.data.TIER_GLOSS, av) is None and av.isupper():
+                self._annotation_mapper.add_to_missing(poioapi.data.TIER_GLOSS, av.upper())
+
+        self._annotation_mapper.export_missing_tags(outputfile)

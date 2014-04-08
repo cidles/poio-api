@@ -16,6 +16,8 @@ Elan's .eaf files, Kura's .xml file, Toolbox's .txt files etc.
 from __future__ import unicode_literals
 
 import sys
+import json
+import os.path
 
 # Set the type of string
 if sys.version_info[:2] >= (3, 0):
@@ -26,6 +28,20 @@ else:
 # File types
 (EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TOOLBOXXML, SHOEBOX, TREEPICKLE,
     TYPECRAFT, OBT, GRAF, MANDINKA) = range(11)
+
+type_names = {
+    EAF: 'EAF',
+    EAFFROMTOOLBOX: 'EAFFROMTOOLBOX',
+    KURA: 'KURA',
+    TOOLBOX: 'TOOLBOX',
+    TOOLBOXXML: 'TOOLBOXXML',
+    SHOEBOX: 'SHOEBOX',
+    TREEPICKLE: 'TREEPICKLE',
+    TYPECRAFT: 'TYPECRAFT',
+    OBT: 'OBT',
+    GRAF: 'GRAF',
+    MANDINKA: 'MANDINKA'
+}
 
 # Tier types
 (TIER_UTTERANCE, TIER_WORD, TIER_MORPHEME, TIER_POS, TIER_GLOSS, TIER_GRAID1,
@@ -400,3 +416,4 @@ class DataStructureTypeMorphsynt(DataStructureType):
             [ TIER_MORPHEME, [ TIER_GLOSS ] ],
             TIER_POS ],
         TIER_TRANSLATION, TIER_COMMENT ]
+

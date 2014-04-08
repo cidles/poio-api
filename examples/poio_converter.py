@@ -10,6 +10,7 @@
 import sys
 import optparse
 import codecs
+import os
 
 import poioapi.annotationgraph
 import poioapi.data
@@ -20,15 +21,19 @@ def main(argv):
     usage = "usage: %prog [options] inputfile outputfile"
     parser = optparse.OptionParser(usage=usage)
     parser.add_option("-i", "--inputtype", dest="inputtype",
-        help="Type of the input file (elan|toolbox|shoebox)")
+        help="Type of the input file (elan|toolbox|shoebox|mandinka)")
     parser.add_option("-o", "--outputtype", dest="outputtype",
         help="Type of the output file (html|graf|typecraft)")
     parser.add_option("-r", "--roottier", dest="roottier",
         help="Root tier for html output, is the record marker in Toolbox")
-    parser.add_option("-t", "--tags", dest="tags",
-        help="Tag set")
-    parser.add_option("-m", "--more", dest="more",
-        help="Add extra information")
+    parser.add_option("-t", "--map-file", dest="mapping",
+                      help="A JSON file containing the tier and tag mapping.")
+    parser.add_option("-m", "--missing-tags", action='store_true', dest="missing_tags", default=False,
+                      help="If any missing tags are found, writes them to the output file, in JSON format. "
+                           "If this flag is omitted, but missing tags are found, they are ignored.")
+    parser.add_option('-l', '--language-code', dest='language_code', default='und',
+                      help='The language of the source text. Use the ISO 639-3 code for the language as the value'
+                           ' of this parameter.')
     (options, files) = parser.parse_args()
 
     if len(files) != 2:
@@ -42,6 +47,14 @@ def main(argv):
     if options.outputtype not in ['html', 'graf', 'typecraft']:
         parser.print_usage()
         sys.exit(0)
+    mapping = None
+    if options.mapping:
+            if os.path.exists(options.mapping):
+                mapping = options.mapping
+            else:
+                print('The file {0} does not exist.'.format(options.mapping))
+                parser.print_help()
+                sys.exit(0)
 
     # Load the data from files
     ag = None
@@ -79,16 +92,13 @@ def main(argv):
         writer = poioapi.io.graf.Writer()
         writer.write(files[1], ag)
     elif options.outputtype == "typecraft":
-        more_info = None
-        tags = None
-
-        if options.more:
-            more_info = options.more
-        if options.tags:
-            tags = options.tags
+        missing_tags = options.missing_tags
 
         typecraft = poioapi.io.typecraft.Writer()
-        typecraft.write(files[1], ag, more_info=more_info, tags=tags)
+        if missing_tags:
+            typecraft.missing_tags(files[1], ag, additional_map_path=mapping)
+        else:
+            typecraft.write(files[1], ag, extra_tag_map=mapping, language=options.language_code)
 
 if __name__ == "__main__":
     main(sys.argv)

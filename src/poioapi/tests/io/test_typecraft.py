@@ -8,14 +8,17 @@
 # For license information, see LICENSE.TXT
 
 import os
+import os.path
 import re
+import filecmp
 
 import xml.etree.ElementTree as ET
 
 import poioapi.io.typecraft
 import poioapi.io.graf
+import poioapi.annotationgraph
 
-class TestTypecraft:
+class TestParser:
     """
     This class contain the test methods to the
     class io.typecraft.py.
@@ -47,7 +50,7 @@ class TestTypecraft:
 
         for nodes in self.graph.nodes:
             if "phrase" in nodes.id:
-                expected_nodes_number+=1
+                expected_nodes_number += 1
 
         assert(nodes_number == expected_nodes_number)
 
@@ -59,7 +62,7 @@ class TestTypecraft:
         for elements in node_phrase:
             key = str(elements.tag).split(self.xml_namespace)
             if key[1] != "word" and key[1] != "globaltags":
-                expected_features_number+=1
+                expected_features_number += 1
 
         node = self.graph.nodes["phrase..n9764"]
 
@@ -88,3 +91,11 @@ class TestTypecraft:
         child_tier_annotations = self.parser.get_annotations_for_tier(root_tiers[0])
 
         assert len(child_tier_annotations) == 10
+
+class TestWriter:
+
+    def setup(self):
+        self._inputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "typecraft_graf", "typecraft_example.xml")
+        self._outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "typecraft_graf", "typecraft_example_writer.xml")

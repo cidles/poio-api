@@ -15,6 +15,9 @@ the class DataStructureType in data.py.
 """
 
 from poioapi import data
+import os
+import filecmp
+import nose.tools
 
 class TestDataStructureType:
     """
@@ -65,12 +68,12 @@ class TestDataStructureType:
 
         ann_type = 'utterance'
         expected_result = []
-        assert(self.data_structure_type.get_parents_of_type(
+        assert (self.data_structure_type.get_parents_of_type(
             ann_type) == expected_result)
 
         ann_type = 'word'
         expected_result = ['utterance', 'translation']
-        assert(self.data_structure_type.get_parents_of_type(
+        assert (self.data_structure_type.get_parents_of_type(
             ann_type) == expected_result)
 
 
@@ -88,17 +91,17 @@ class TestDataStructureType:
 
         # If the ann_type and hierarchy values equal like this
         ann_type = 'clause unit'
-        hierarchy =\
-                  [ 'utterance',
-                   [ 'clause unit',
-                       [ 'word', 'wfw', 'graid1' ],
-                   'graid2' ],
-                   'translation', 'comment' ]
+        hierarchy = \
+            ['utterance',
+             ['clause unit',
+              ['word', 'wfw', 'graid1'],
+              'graid2'],
+             'translation', 'comment']
 
         # The result expected should be a {tuple}
         expected_result = (True, ['utterance', 'translation', 'comment'])
 
-        assert(self.data_structure_type._get_parents_of_type_helper(
+        assert (self.data_structure_type._get_parents_of_type_helper(
             ann_type, hierarchy) == expected_result)
 
     def test_get_children_of_type(self):
@@ -116,13 +119,13 @@ class TestDataStructureType:
 
         ann_type = 'utterance'
         expected_result = ['word', 'translation']
-        assert(self.data_structure_type.get_children_of_type(
+        assert (self.data_structure_type.get_children_of_type(
             ann_type) == expected_result)
 
         data_structure_type = data.DataStructureTypeGraid()
         ann_type = 'utterance'
         expected_result = ['clause_unit', 'graid2', 'translation', 'comment']
-        assert(data_structure_type.get_children_of_type(
+        assert (data_structure_type.get_children_of_type(
             ann_type) == expected_result)
 
 
@@ -140,10 +143,10 @@ class TestDataStructureType:
 
         # The expected result to the define data hierarchy
         expected_result = [{'id': None, 'annotation': ''},
-                            [[{'id': None, 'annotation': ''}]],
-                              {'id': None, 'annotation': ''}]
+                           [[{'id': None, 'annotation': ''}]],
+                           {'id': None, 'annotation': ''}]
 
-        assert(self.data_structure_type.empty_element() == expected_result)
+        assert (self.data_structure_type.empty_element() == expected_result)
 
     def test__append_list(self):
         """Raise an assertion if the elements list is invalid.
@@ -162,10 +165,10 @@ class TestDataStructureType:
 
         # The result expected should be
         expected_result = [{'id': None, 'annotation': ''},
-                {'id': None, 'annotation': ''},
-                {'id': None, 'annotation': ''}]
+                           {'id': None, 'annotation': ''},
+                           {'id': None, 'annotation': ''}]
 
-        assert(self.data_structure_type._append_list(
+        assert (self.data_structure_type._append_list(
             element) == expected_result)
 
     def test_test_flatten_hierarchy_elements(self):
@@ -181,12 +184,12 @@ class TestDataStructureType:
         """
 
         # If the elements value equal like this
-        elements =\
-           [ 'utterance',
-               [ 'clause unit',
-                   [ 'word', 'wfw', 'graid1' ],
-                 'graid2' ],
-             'translation', 'comment' ]
+        elements = \
+            ['utterance',
+             ['clause unit',
+              ['word', 'wfw', 'graid1'],
+              'graid2'],
+             'translation', 'comment']
 
         # The result expected should be
         expected_result = ['utterance',
@@ -196,5 +199,5 @@ class TestDataStructureType:
                            'translation',
                            'comment']
 
-        assert(self.data_structure_type._flatten_hierarchy_elements(
+        assert (self.data_structure_type._flatten_hierarchy_elements(
             elements) == expected_result)
