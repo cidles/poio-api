@@ -256,7 +256,7 @@ class AnnotationGraph():
                         res.append(target_node)
         return res
 
-    def annotations_for_tier(self, tier_name, node):
+    def annotations_for_tier(self, tier_name, node=None):
         """Return all annotations of the given node that belong to the given
         tier name. The tier name is matched with the `label` of the
         annotations.
@@ -275,7 +275,7 @@ class AnnotationGraph():
         """
         res = []
 
-        if node.id.startswith(tier_name):
+        if node is not None and node.id.startswith(tier_name):
             for a in node.annotations:
                 res.append(a)
         else:
