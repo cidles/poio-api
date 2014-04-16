@@ -1,0 +1,714 @@
+<?xml version="1.0" ?>
+<typecraft xmlns="http://typecraft.org/typecraft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://typecraft.org/typecraft.xsd">
+  <text id="1" lang="und">
+    <title>Empty Title</title>
+    <titleTranslation/>
+    <body>Musukéebâa níŋ a lá maañóo le táatá lóoñínóo la. Kabíríŋ i yé i la lôo lándi, saa míníntá maañóo la lóosítóo la, barí wo máŋ a lóŋ. Moo wó moo ye lóosítôo cíká a yé a láa a kuŋó to, i be súwo wálínna. Maañôo kó musukéebáa ye kó, «Níŋ ŋ futata, ŋ ŋa ŋ́ kuu fólóo janníŋ ŋ be dómórôo kéla.» Musukeebaamâa ñáa be sǎa kaŋ, míŋ be míníndiŋ a la lóosítôo bála, a yé a fó a ye kó, «Níŋ yunduyóndóo sonta, ŋ si ŋ́ kuu janníŋ ŋ be tábírôo kéla.» I táatá wǒ le ñáama fő... súwo kóno, i bée ye i la lóosítóo boyindi. Saa míŋ be maañóo la lóosítóo kaŋ, a murummuruntá naŋ, a yé musukeebaamáa kiŋ, ca̋pa̋t, wǒ faata.</body>
+    <phrase id="1" valid="VALID">
+      <original>Musukéebâa níŋ a lá maañóo le táatá lóoñínóo la.</original>
+      <translation>Une vieille femme et sa jeune co-épouse étaient allées chercher du bois.</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="Musukéebâa">
+        <pos>DET</pos>
+        <morpheme baseform="Musu" meaning="femme" text="Musu"/>
+        <morpheme baseform="kéebâa" meaning="âgé" text="kéebâa"/>
+      </word>
+      <word head="false" text="níŋ">
+        <pos/>
+        <morpheme baseform="níŋ" meaning="avec" text="níŋ"/>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>GEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="maañóo">
+        <pos>DET</pos>
+        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo"/>
+      </word>
+      <word head="false" text="le">
+        <pos/>
+        <morpheme baseform="le" text="le">
+          <gloss>FOC</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="táata">
+        <pos/>
+        <morpheme baseform="táa" meaning="aller" text="táa"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lóoñínóo">
+        <pos>DET</pos>
+        <morpheme baseform="lóo" meaning="bois" text="lóo"/>
+        <morpheme baseform="ñín" meaning="chercher" text="ñín"/>
+        <morpheme baseform="óo" text="óo"/>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>OBL</gloss>
+        </morpheme>
+      </word>
+    </phrase>
+    <phrase id="2" valid="VALID">
+      <original>Kabíríŋ i yé i la lôo lándi, saa míníntá maañóo la lóosítóo la, barí wo máŋ a lóŋ.</original>
+      <translation>Quand elles ont posé leur bois [avant de le charger], un serpent s’est enroulé autour du fagot de la jeune épouse, mais celle-ci ne s’en est pas aperçue.</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="Kabíríŋ">
+        <pos/>
+        <morpheme baseform="Kabíríŋ" meaning="quand" text="Kabíríŋ"/>
+      </word>
+      <word head="false" text="i">
+        <pos/>
+        <morpheme baseform="i" text="i">
+          <gloss>3PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="i">
+        <pos/>
+        <morpheme baseform="i" text="i">
+          <gloss>3PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>GEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lôo">
+        <pos>DET</pos>
+        <morpheme baseform="lôo" meaning="bois" text="lôo"/>
+      </word>
+      <word head="false" text="lándi">
+        <pos/>
+        <morpheme baseform="lá" meaning="être_posé" text="lá"/>
+        <morpheme baseform="ndi" text="ndi">
+          <gloss>CAUS</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="saa">
+        <pos>DET</pos>
+        <morpheme baseform="saa" meaning="serpent" text="saa"/>
+      </word>
+      <word head="false" text="mínínta">
+        <pos/>
+        <morpheme baseform="mínín" meaning="s’enrouler" text="mínín"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="maañóo">
+        <pos>DET</pos>
+        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo"/>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>GEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lóosítóo">
+        <pos>DET</pos>
+        <morpheme baseform="lóo" meaning="bois" text="lóo"/>
+        <morpheme baseform="sít" meaning="attacher" text="sít"/>
+        <morpheme baseform="óo" text="óo"/>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>OBL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="bari">
+        <pos/>
+        <morpheme baseform="bari" meaning="mais" text="bari"/>
+      </word>
+      <word head="false" text="wo">
+        <pos/>
+        <morpheme baseform="wo" text="wo">
+          <gloss>DEM</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="máŋ">
+        <pos/>
+        <morpheme baseform="máŋ" text="máŋ">
+          <gloss>CMPL.NEG</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="lóŋ">
+        <pos/>
+        <morpheme baseform="lóŋ" meaning="savoir" text="lóŋ"/>
+      </word>
+    </phrase>
+    <phrase id="3" valid="VALID">
+      <original>Moo wó moo ye lóosítôo cíká a yé a láa a kuŋó to, i be súwo wálínna.</original>
+      <translation>Chacune des deux a soulevé son fagot de bois et l’a mis sur sa tête, et les voilà qui se dirigent vers la maison.</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="Moo">
+        <pos/>
+        <morpheme baseform="Moo" meaning="personne" text="Moo"/>
+      </word>
+      <word head="false" text="wo">
+        <pos/>
+        <morpheme baseform="wo" text="wo">
+          <gloss>INDEF</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="moo">
+        <pos/>
+        <morpheme baseform="moo" meaning="personne" text="moo"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lóosítôo">
+        <pos>DET</pos>
+        <morpheme baseform="lóo" meaning="bois" text="lóo"/>
+        <morpheme baseform="sít" meaning="attacher" text="sít"/>
+        <morpheme baseform="ôo" text="ôo"/>
+      </word>
+      <word head="false" text="cíka">
+        <pos/>
+        <morpheme baseform="cíka" meaning="soulever" text="cíka"/>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="láa">
+        <pos/>
+        <morpheme baseform="láa" meaning="poser" text="láa"/>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="kuŋo">
+        <pos>DET</pos>
+        <morpheme baseform="kuŋ" meaning="tête" text="kuŋ"/>
+        <morpheme baseform="o" text="o"/>
+      </word>
+      <word head="false" text="to">
+        <pos/>
+        <morpheme baseform="to" text="to"/>
+      </word>
+      <word head="false" text="i">
+        <pos/>
+        <morpheme baseform="i" text="i">
+          <gloss>3PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="be">
+        <pos>COPloc</pos>
+        <morpheme baseform="be" text="be"/>
+      </word>
+      <word head="false" text="súwo">
+        <pos>DET</pos>
+        <morpheme baseform="súw" meaning="maison" text="súw"/>
+        <morpheme baseform="o" text="o"/>
+      </word>
+      <word head="false" text="wálínna">
+        <pos/>
+        <morpheme baseform="wálín" meaning="se_diriger_vers" text="wálín"/>
+        <morpheme baseform="na" text="na">
+          <gloss>INF</gloss>
+        </morpheme>
+      </word>
+    </phrase>
+    <phrase id="4" valid="VALID">
+      <original>Maañôo kó musukéebáa ye kó, «Níŋ ŋ futata, ŋ ŋa ŋ́ kuu fólóo janníŋ ŋ be dómórôo kéla.»</original>
+      <translation>La jeune co-épouse a dit à la vieille, «En arrivant, il faudra d’abord nous laver avant de manger.»</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="Maañôo">
+        <pos>DET</pos>
+        <morpheme baseform="Maañôo" meaning="jeune_épouse" text="Maañôo"/>
+      </word>
+      <word head="false" text="ko">
+        <pos/>
+        <morpheme baseform="ko" text="ko">
+          <gloss>QUOT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="musukéebáa">
+        <pos>DET</pos>
+        <morpheme baseform="musu" meaning="femme" text="musu"/>
+        <morpheme baseform="kéebáa" meaning="âgé" text="kéebáa"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>BEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ko">
+        <pos/>
+        <morpheme baseform="ko" text="ko">
+          <gloss>QUOT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="Níŋ">
+        <pos/>
+        <morpheme baseform="Níŋ" meaning="si" text="Níŋ"/>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>1PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="futata">
+        <pos/>
+        <morpheme baseform="futa" meaning="arriver" text="futa"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>1PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ŋa">
+        <pos/>
+        <morpheme baseform="ŋa" text="ŋa">
+          <gloss>SBJV</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>REFL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="kuu">
+        <pos/>
+        <morpheme baseform="kuu" meaning="laver" text="kuu"/>
+      </word>
+      <word head="false" text="fólóo">
+        <pos/>
+        <morpheme baseform="fólóo" meaning="d’abord" text="fólóo"/>
+      </word>
+      <word head="false" text="janníŋ">
+        <pos/>
+        <morpheme baseform="janníŋ" meaning="avant_que" text="janníŋ"/>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>1PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="be">
+        <pos>COPloc</pos>
+        <morpheme baseform="be" text="be"/>
+      </word>
+      <word head="false" text="dómórôo">
+        <pos>DET</pos>
+        <morpheme baseform="dómó" meaning="manger" text="dómó"/>
+        <morpheme baseform="r" text="r">
+          <gloss>APASS</gloss>
+        </morpheme>
+        <morpheme baseform="ôo" text="ôo"/>
+      </word>
+      <word head="false" text="kéla">
+        <pos/>
+        <morpheme baseform="ké" meaning="faire" text="ké"/>
+        <morpheme baseform="la" text="la">
+          <gloss>INF</gloss>
+        </morpheme>
+      </word>
+    </phrase>
+    <phrase id="5" valid="VALID">
+      <original>Musukeebaamâa ñáa be sǎa kaŋ, míŋ be míníndiŋ a la lóosítôo bála, a yé a fó a ye kó, «Níŋ yunduyóndóo sonta, ŋ si ŋ́ kuu janníŋ ŋ be tábírôo kéla.»</original>
+      <translation>La vieille avait son regard fixé sur le serpent qui était enroulé au fagot de la jeune co-épouse, elle lui a répondu, «Si le youndouyondo est d’accord, nous pourrons nous laver avant de faire à manger.»</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="Musukeebaamâa">
+        <pos>DET</pos>
+        <morpheme baseform="Musu" meaning="femme" text="Musu"/>
+        <morpheme baseform="keebaa" meaning="âgé" text="keebaa"/>
+        <morpheme baseform="mâa" text="mâa">
+          <gloss>SLCT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ñáa">
+        <pos>DET</pos>
+        <morpheme baseform="ñáa" meaning="œil" text="ñáa"/>
+      </word>
+      <word head="false" text="be">
+        <pos>COPloc</pos>
+        <morpheme baseform="be" text="be"/>
+      </word>
+      <word head="false" text="sǎa">
+        <pos>DET</pos>
+        <morpheme baseform="sǎa" meaning="serpent" text="sǎa"/>
+      </word>
+      <word head="false" text="kaŋ">
+        <pos/>
+        <morpheme baseform="kaŋ" meaning="sur" text="kaŋ"/>
+      </word>
+      <word head="false" text="míŋ">
+        <pos/>
+        <morpheme baseform="míŋ" text="míŋ">
+          <gloss>REL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="be">
+        <pos>COPloc</pos>
+        <morpheme baseform="be" text="be"/>
+      </word>
+      <word head="false" text="míníndiŋ">
+        <pos/>
+        <morpheme baseform="mínín" meaning="s’enrouler" text="mínín"/>
+        <morpheme baseform="diŋ" text="diŋ">
+          <gloss>RESLT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>GEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lóosítôo">
+        <pos>DET</pos>
+        <morpheme baseform="lóo" meaning="bois" text="lóo"/>
+        <morpheme baseform="sít" meaning="attacher" text="sít"/>
+        <morpheme baseform="ôo" text="ôo"/>
+      </word>
+      <word head="false" text="bála">
+        <pos/>
+        <morpheme baseform="bála" text="bála">
+          <gloss/>
+        </morpheme>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="fo">
+        <pos/>
+        <morpheme baseform="fo" meaning="dire" text="fo"/>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>BEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ko">
+        <pos/>
+        <morpheme baseform="ko" text="ko">
+          <gloss>QUOT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="Níŋ">
+        <pos/>
+        <morpheme baseform="Níŋ" meaning="si" text="Níŋ"/>
+      </word>
+      <word head="false" text="yunduyóndóo">
+        <pos>DET</pos>
+        <morpheme baseform="yunduyónd" meaning="youndouyondo" text="yunduyónd"/>
+        <morpheme baseform="óo" text="óo"/>
+      </word>
+      <word head="false" text="sonta">
+        <pos/>
+        <morpheme baseform="son" meaning="être_d’accord" text="son"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>1PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="si">
+        <pos/>
+        <morpheme baseform="si" text="si">
+          <gloss>POT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>REFL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="kuu">
+        <pos/>
+        <morpheme baseform="kuu" meaning="laver" text="kuu"/>
+      </word>
+      <word head="false" text="janníŋ">
+        <pos/>
+        <morpheme baseform="janníŋ" meaning="avant_que" text="janníŋ"/>
+      </word>
+      <word head="false" text="ŋ">
+        <pos/>
+        <morpheme baseform="ŋ" text="ŋ">
+          <gloss>1PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="be">
+        <pos>COPloc</pos>
+        <morpheme baseform="be" text="be"/>
+      </word>
+      <word head="false" text="tábírôo">
+        <pos>DET</pos>
+        <morpheme baseform="tábí" meaning="cuire" text="tábí"/>
+        <morpheme baseform="r" text="r">
+          <gloss>APASS</gloss>
+        </morpheme>
+        <morpheme baseform="ôo" text="ôo"/>
+      </word>
+      <word head="false" text="kéla">
+        <pos/>
+        <morpheme baseform="ké" meaning="faire" text="ké"/>
+        <morpheme baseform="la" text="la">
+          <gloss>INF</gloss>
+        </morpheme>
+      </word>
+    </phrase>
+    <phrase id="6" valid="VALID">
+      <original>I táatá wǒ le ñáama fő... súwo kóno, i bée ye i la lóosítóo boyindi.</original>
+      <translation>Elles sont allées comme ça jusqu’à la maison, et toutes les deux ont déposé leur fagot de bois.</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="I">
+        <pos/>
+        <morpheme baseform="I" text="I">
+          <gloss>3PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="táata">
+        <pos/>
+        <morpheme baseform="táa" meaning="aller" text="táa"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="wo">
+        <pos/>
+        <morpheme baseform="wo" text="wo">
+          <gloss>DEM</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="le">
+        <pos/>
+        <morpheme baseform="le" text="le">
+          <gloss>FOC</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="ñáama">
+        <pos/>
+        <morpheme baseform="ñáama" meaning="à_la_façon" text="ñáama"/>
+      </word>
+      <word head="false" text="fo">
+        <pos/>
+        <morpheme baseform="fo" meaning="jusqu’à" text="fo"/>
+      </word>
+      <word head="false" text="súwo">
+        <pos>DET</pos>
+        <morpheme baseform="súw" meaning="maison" text="súw"/>
+        <morpheme baseform="o" text="o"/>
+      </word>
+      <word head="false" text="kóno">
+        <pos/>
+        <morpheme baseform="kóno" meaning="dans" text="kóno"/>
+      </word>
+      <word head="false" text="i">
+        <pos/>
+        <morpheme baseform="i" text="i">
+          <gloss>3PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="bée">
+        <pos/>
+        <morpheme baseform="bée" meaning="tous" text="bée"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="i">
+        <pos/>
+        <morpheme baseform="i" text="i">
+          <gloss>3PL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>GEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lóosítóo">
+        <pos>DET</pos>
+        <morpheme baseform="lóo" meaning="bois" text="lóo"/>
+        <morpheme baseform="sít" meaning="attacher" text="sít"/>
+        <morpheme baseform="óo" text="óo"/>
+      </word>
+      <word head="false" text="boyindi">
+        <pos/>
+        <morpheme baseform="boyi" meaning="tomber" text="boyi"/>
+        <morpheme baseform="ndi" text="ndi">
+          <gloss>CAUS</gloss>
+        </morpheme>
+      </word>
+    </phrase>
+    <phrase id="7" valid="VALID">
+      <original>Saa míŋ be maañóo la lóosítóo kaŋ, a murummuruntá naŋ, a yé musukeebaamáa kiŋ, ca̋pa̋t, wǒ faata.</original>
+      <translation>Alors le serpent qui était sur le fagot de la jeune co-épouse s’est retourné, il a piqué la vieille, et celle-ci est morte.</translation>
+      <description/>
+      <globaltags id="1" tagset="Default"/>
+      <word head="false" text="Saa">
+        <pos>DET</pos>
+        <morpheme baseform="Saa" meaning="serpent" text="Saa"/>
+      </word>
+      <word head="false" text="míŋ">
+        <pos/>
+        <morpheme baseform="míŋ" text="míŋ">
+          <gloss>REL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="be">
+        <pos>COPloc</pos>
+        <morpheme baseform="be" text="be"/>
+      </word>
+      <word head="false" text="maañóo">
+        <pos>DET</pos>
+        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo"/>
+      </word>
+      <word head="false" text="la">
+        <pos/>
+        <morpheme baseform="la" text="la">
+          <gloss>GEN</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="lóosítóo">
+        <pos>DET</pos>
+        <morpheme baseform="lóo" meaning="bois" text="lóo"/>
+        <morpheme baseform="sít" meaning="attacher" text="sít"/>
+        <morpheme baseform="óo" text="óo"/>
+      </word>
+      <word head="false" text="kaŋ">
+        <pos/>
+        <morpheme baseform="kaŋ" meaning="sur" text="kaŋ"/>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="murummurunta">
+        <pos/>
+        <morpheme baseform="murum" meaning="tourner" text="murum"/>
+        <morpheme baseform="murun" meaning="tourner" text="murun"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="naŋ">
+        <pos/>
+        <morpheme baseform="naŋ" text="naŋ">
+          <gloss/>
+        </morpheme>
+      </word>
+      <word head="false" text="a">
+        <pos/>
+        <morpheme baseform="a" text="a"/>
+      </word>
+      <word head="false" text="ye">
+        <pos/>
+        <morpheme baseform="ye" text="ye">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="musukeebaamáa">
+        <pos>DET</pos>
+        <morpheme baseform="musu" meaning="femme" text="musu"/>
+        <morpheme baseform="keebaa" meaning="âgé" text="keebaa"/>
+        <morpheme baseform="máa" text="máa">
+          <gloss>SLCT</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="kiŋ">
+        <pos/>
+        <morpheme baseform="kiŋ" meaning="mordre" text="kiŋ"/>
+      </word>
+      <word head="false" text="ca̋pa̋t">
+        <pos>ADV</pos>
+        <morpheme baseform="ca̋pa̋t" text="ca̋pa̋t"/>
+      </word>
+      <word head="false" text="wo">
+        <pos/>
+        <morpheme baseform="wo" text="wo">
+          <gloss>DEM</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="faata">
+        <pos/>
+        <morpheme baseform="faa" meaning="mourir" text="faa"/>
+        <morpheme baseform="ta" text="ta">
+          <gloss>CMPL</gloss>
+        </morpheme>
+      </word>
+    </phrase>
+  </text>
+</typecraft>

@@ -55,7 +55,7 @@ def tier_mapping():
     mapping = poioapi.mapper.TierMapper()
     mapping.append_to_tier_labels(poioapi.data.TIER_UTTERANCE, ['utterance_gen'])
     mapping.append_to_tier_labels(poioapi.data.TIER_WORD, ['tx', 't'])
-    mapping.append_to_tier_labels(poioapi.data.TIER_TRANSLATION, ['translation', 'f'])
+    mapping.append_to_tier_labels(poioapi.data.TIER_TRANSLATION, ['ft', 'f'])
     mapping.append_to_tier_labels(poioapi.data.TIER_MORPHEME, ['mb', 'm'])
     mapping.append_to_tier_labels(poioapi.data.TIER_GLOSS, ['ge', 'g'])
     mapping.append_to_tier_labels(poioapi.data.TIER_POS, ['ps', 'p']),
@@ -101,13 +101,17 @@ class Parser(poioapi.io.graf.BaseParser):
             self._tier_labels = mapper
 
         self.record_level_markers = record_level_markers
-        self.utterance_level_markers = utterance_level_markers
+        self.utterance_level_markers = []
+        self.utterance_level_markers.extend(utterance_level_markers)
         self.utterance_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_TRANSLATION))
         self.utterance_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_COMMENT))
 
-        self.word_level_markers = self._tier_labels.tier_labels(poioapi.data.TIER_WORD)
-        self.morpheme_level_markers = self._tier_labels.tier_labels(poioapi.data.TIER_MORPHEME)
-        self.tag_level_markers = self._tier_labels.tier_labels(poioapi.data.TIER_GLOSS)
+        self.word_level_markers = []
+        self.word_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_WORD))
+        self.morpheme_level_markers = []
+        self.morpheme_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_MORPHEME))
+        self.tag_level_markers = []
+        self.tag_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_GLOSS))
         self.tag_level_markers.extend(self._tier_labels.tier_labels(poioapi.data.TIER_POS))
 
         self.parse()
@@ -348,7 +352,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
             parent_tiers = [
                 t for t in self.word_level_markers if t in self._tiers]
-            assert len(parent_tiers) == 1
+            # assert len(parent_tiers) == 1
             parent_tier = parent_tiers[0]
 
             for start_pos in sorted(elements[tier].keys()):
@@ -372,7 +376,7 @@ class Parser(poioapi.io.graf.BaseParser):
 
             parent_tiers = [
                 t for t in self.morpheme_level_markers if t in self._tiers]
-            assert len(parent_tiers) == 1
+            # assert len(parent_tiers) == 1
             parent_tier = parent_tiers[0]
 
             for start_pos in sorted(elements[tier].keys()):
@@ -382,7 +386,7 @@ class Parser(poioapi.io.graf.BaseParser):
                     if parent_start_pos <= start_pos:
                         parent_id = ids[parent_tier][parent_start_pos]
 
-                assert parent_id != None
+                # assert parent_id != None
 
                 self._annotations_for_parent[(parent_id, tier)].append(
                     poioapi.io.graf.Annotation(

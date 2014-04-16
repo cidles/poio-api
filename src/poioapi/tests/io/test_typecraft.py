@@ -92,10 +92,24 @@ class TestParser:
 
         assert len(child_tier_annotations) == 10
 
+
 class TestWriter:
 
     def setup(self):
         self._inputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
             "typecraft_graf", "typecraft_example.xml")
         self._outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-            "typecraft_graf", "typecraft_example_writer.xml")
+            "mandinka", "mandinka_typecraft.xml")
+
+    def test_conversion(self):
+        inputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "mandinka", "mandinka.txt")
+        outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "mandinka", "mandinka_typecraft.xml")
+        originalfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
+            "mandinka", "mandinka_typecraft_original.xml")
+        ag = poioapi.annotationgraph.AnnotationGraph.from_mandinka(inputfile)
+        writer = poioapi.io.typecraft.Writer()
+        writer.write(outputfile, ag)
+        assert os.path.getsize(outputfile) == os.path.getsize(originalfile)
+        assert filecmp.cmp(outputfile, originalfile, shallow=False)

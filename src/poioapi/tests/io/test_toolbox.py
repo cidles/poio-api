@@ -29,7 +29,7 @@ class TestParser:
     def test_tier_hierachy(self):
         assert self.parser.tier_hierarchy.data_hierarchy == \
             ['ref', [ 'utterance_gen', ['tx', ['mb', ['ge', 'ps']]],
-                ['ft', 'nt', 'rf', 'rt', 'graid']],
+                ['rf', 'rt', 'graid', 'ft', 'nt']],
                 ['id', 'dt']]
 
     def test_get_root_tiers(self):

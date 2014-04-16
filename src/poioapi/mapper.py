@@ -148,7 +148,9 @@ class TierMapper(object):
         if tier_identifier not in self._tier_mapping.keys() or self._tier_mapping[tier_identifier] is None:
             self._tier_mapping[tier_identifier] = []
 
-        self._tier_mapping[tier_identifier].extend(new_value)
+        for val in new_value:
+            if val not in self._tier_mapping[tier_identifier]:
+                self._tier_mapping[tier_identifier].append(val)
 
 
 class AnnotationMapper(object):
@@ -227,26 +229,25 @@ class AnnotationMapper(object):
         if tier_label is None or tier_label == '':  # or tier_label not in self.tier_mapping.keys():
             raise ValueError('Incorrect tier label')
 
-        if tag_to_validate is None or tag_to_validate == '':
-            raise ValueError('The tag_to_validate parameter must not be None or an empty string')
+        if tag_to_validate is not None or tag_to_validate != '':
 
-        #if the tag is already missing there is no point in re-checking
-        if tier_label in self.missing_tags.keys() and tag_to_validate in self.missing_tags[tier_label].keys():
-            return None
+            #if the tag is already missing there is no point in re-checking
+            if tier_label in self.missing_tags.keys() and tag_to_validate in self.missing_tags[tier_label].keys():
+                return None
 
-        #perform the validation
-        value = None
-        if tier_label in self._annotation_mappings.keys() and self._annotation_mappings[tier_label] is not None:
-            for key, val in self._annotation_mappings[tier_label]:
-                #handling the N-1 tag correspondence
-                if isinstance(key, tuple):
-                    if tag_to_validate.upper() in key:
-                        value = val
-                        break
-                else:
-                    if tag_to_validate.upper() == key.upper():
-                        value = val
-                        break
+            #perform the validation
+            value = None
+            if tier_label in self._annotation_mappings.keys() and self._annotation_mappings[tier_label] is not None:
+                for key, val in self._annotation_mappings[tier_label]:
+                    #handling the N-1 tag correspondence
+                    if isinstance(key, tuple):
+                        if tag_to_validate.upper() in key:
+                            value = val
+                            break
+                    else:
+                        if tag_to_validate.upper() == key.upper():
+                            value = val
+                            break
 
         return value
 
@@ -291,109 +292,3 @@ class AnnotationMapper(object):
         file = open(output_file, 'w')
         json.dump(output, file, ensure_ascii=False, indent='\t', separators=(',', ': '), sort_keys=True)
         file.close()
-
-
-class Mapper(object):
-
-    def __init__(self, mapping_file_path=''):
-        self.tier_mapping = {
-            poioapi.data.TIER_UTTERANCE: ["utterance"],
-            poioapi.data.TIER_WORD: ["word"],
-            poioapi.data.TIER_MORPHEME: ["morpheme"],
-            poioapi.data.TIER_POS: ["pos"],
-            poioapi.data.TIER_GLOSS: ["gloss"],
-            poioapi.data.TIER_GRAID1: ["graid1"],
-            poioapi.data.TIER_GRAID2: ["graid2"],
-            poioapi.data.TIER_TRANSLATION: ["translation"],
-            poioapi.data.TIER_COMMENT: ["comment"]
-        }
-        self._load_mappings(mapping_file_path)
-
-    def validate_tag(self, tier_label, tag_to_validate):
-        """ This function validates if a tag is present in the specified tier tag mapping.
-
-            Parameters
-            ----------
-            tier_to_validate : str
-                The tier label as defined in the tier mapping
-            tag_to_validate : str
-                The value for which to perform the check.
-
-            Return
-            ------
-            value : str or list
-                The corresponding tag mapping for tag_to_validate if it is present. Else returns 'None'.
-                If the mapping is for other tier the return wil be a list
-        """
-        #some validations on incorrect parameter definition
-        if tier_label is None or tier_label == '' or tier_label not in self.tier_mapping.keys():
-            raise ValueError('Incorrect tier label')
-
-        if tag_to_validate is None or tag_to_validate == '':
-            raise ValueError('The tag_to_validate parameter must not be None or an empty string')
-
-        #if the tag is already missing there is no point in re-checking
-        if tier_label in self.missing_tags.keys() and tag_to_validate in self.missing_tags[tier_label].keys():
-            return None
-
-        #perform the validation
-        value = None
-        if tier_label in self.tag_mappings.keys() and self.tag_mappings[tier_label] is not None:
-            for key, val in self.tag_mappings[tier_label]:
-                #handling the N-1 tag correspondence
-                if isinstance(key, tuple):
-                    if tag_to_validate.upper() in key:
-                        value = val
-                        break
-                else:
-                    if tag_to_validate.upper() == key.upper():
-                        value = val
-                        break
-
-        return value
-
-
-
-    def tier_label(self, tier_identifier, label_index=0):
-        """ This function return a specific label from the tag mapping.
-
-            Parameters
-            ----------
-            tier_identifier : int
-                The tier from which to extract the tag. Must be one of the keys of tier_labels
-            label_index : int
-                The label index inside the list of labels for the desired tier. If this parameter is ommited,
-                the returned label is the first in the list
-
-            Return
-            ------
-            label : str
-                The desired label
-        """
-        if tier_identifier is None or not isinstance(tier_identifier, int):
-            raise ValueError('The tier_identifier must be an integer.')
-
-        if tier_identifier not in self.tier_mapping.keys():
-            raise ValueError('The specified tier does not exist.')
-
-        label = self.tier_mapping[tier_identifier][label_index]
-        return label
-
-    def tier_labels(self, tier_identifier):
-        """ Function to return all the mapped labels for a given tier.
-
-            Parameter
-            ---------
-            tier_identifiers : int
-                The tier from which to extract the tag. Must be one of the keys of tier_labels
-
-            Return
-            ------
-            labels : list
-                The labels mapped to the specified tier
-        """
-        if tier_identifier is None or not isinstance(tier_identifier, int):
-            raise ValueError('The tier_identifier must be an integer.')
-
-        labels = self.tier_mapping[tier_identifier]
-        return labels
