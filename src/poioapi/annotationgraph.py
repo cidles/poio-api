@@ -162,7 +162,8 @@ class AnnotationGraph():
             ag.tier_mapper.load_mapping(tier_labels_file_path)
 
         # TODO: move the stream opening to the parser classes
-        if stream_type != poioapi.data.TOOLBOX:
+        if stream_type != poioapi.data.TOOLBOX and \
+                stream_type != poioapi.data.MANDINKA:
             if not hasattr(stream, 'read'):
                 stream = ag._open_file_(stream)
 
@@ -170,6 +171,8 @@ class AnnotationGraph():
         if stream_type == poioapi.data.EAF:
             parser = poioapi.io.elan.Parser(stream)
         elif stream_type == poioapi.data.MANDINKA:
+            if not hasattr(stream, 'read'):
+                stream = codecs.open(stream, "r", "utf-8")
             parser = poioapi.io.mandinka.Parser(stream, tier_label_map=ag.tier_mapper)
         elif stream_type == poioapi.data.OBT:
             parser = poioapi.io.obt.Parser(stream)

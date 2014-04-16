@@ -7,8 +7,9 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
-import os
+from __future__ import unicode_literals
 
+import os
 import poioapi.io.obt
 
 class TestParser:

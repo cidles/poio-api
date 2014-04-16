@@ -7,9 +7,12 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+from __future__ import unicode_literals
+
 import poioapi.data
 import os.path
 import json
+import sys
 
 
 def list_from_json_dict(json_dict):
@@ -290,5 +293,8 @@ class AnnotationMapper(object):
 
         #export the JSON file
         file = open(output_file, 'w')
-        json.dump(output, file, ensure_ascii=False, indent='\t', separators=(',', ': '), sort_keys=True)
+        if sys.version_info[:2] >= (3, 0):
+            json.dump(output, file, ensure_ascii=False, indent='\t', separators=(',', ': '), sort_keys=True)
+        else:
+            json.dump(output, file, ensure_ascii=False, indent=4, separators=(',', ': '), sort_keys=True)
         file.close()

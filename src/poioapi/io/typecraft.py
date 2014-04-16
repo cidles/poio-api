@@ -13,11 +13,12 @@ GrAF object.
 """
 
 from __future__ import absolute_import
+from __future__ import unicode_literals
+
 import codecs
 import time
 import datetime
 import re
-import json
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring
 from xml.dom import minidom

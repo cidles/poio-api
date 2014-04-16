@@ -7,8 +7,9 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+from __future__ import unicode_literals
+
 import os
-import codecs
 
 import poioapi.io.mandinka
 import poioapi.data
@@ -59,9 +60,9 @@ class TestParser:
         tier = poioapi.io.graf.Tier(poioapi.data.tier_labels[poioapi.data.TIER_WORD])
         annotation_parent = root_annotations[0]
         result = 'Musukéebâa níŋ a lá maañóo le táatá lóoñínóo la.'
-        result = codecs.encode(result)
+        #result = codecs.encode(result)
 
-        assert codecs.encode(annotation_parent.value) == result
+        assert annotation_parent.value == result
         assert annotation_parent.id == "a0"
 
         tier_annotations = self.parser.get_annotations_for_tier(
