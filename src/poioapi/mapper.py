@@ -293,8 +293,5 @@ class AnnotationMapper(object):
 
         #export the JSON file
         file = open(output_file, 'w')
-        if sys.version_info[:2] >= (3, 0):
-            json.dump(output, file, ensure_ascii=False, indent='\t', separators=(',', ': '), sort_keys=True)
-        else:
-            json.dump(output, file, ensure_ascii=False, indent=4, separators=(',', ': '), sort_keys=True)
+        json.dump(output, file, ensure_ascii=False, indent=4, separators=(',', ': '), sort_keys=True)
         file.close()
