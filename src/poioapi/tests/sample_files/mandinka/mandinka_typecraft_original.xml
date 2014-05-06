@@ -433,9 +433,7 @@
       </word>
       <word head="false" text="bála">
         <pos/>
-        <morpheme baseform="bála" text="bála">
-          <gloss/>
-        </morpheme>
+        <morpheme baseform="bála" text="bála"/>
       </word>
       <word head="false" text="a">
         <pos/>
@@ -689,9 +687,7 @@
       </word>
       <word head="false" text="naŋ">
         <pos/>
-        <morpheme baseform="naŋ" text="naŋ">
-          <gloss/>
-        </morpheme>
+        <morpheme baseform="naŋ" text="naŋ"/>
       </word>
       <word head="false" text="a">
         <pos/>
