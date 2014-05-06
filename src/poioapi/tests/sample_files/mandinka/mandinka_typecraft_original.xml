@@ -20,7 +20,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="la">
         <pos/>
@@ -148,12 +150,15 @@
       <word head="false" text="máŋ">
         <pos/>
         <morpheme baseform="máŋ" text="máŋ">
-          <gloss>CMPL.NEG</gloss>
+          <gloss>CMPL</gloss>
+          <gloss>NEG</gloss>
         </morpheme>
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="lóŋ">
         <pos/>
@@ -197,7 +202,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="ye">
         <pos/>
@@ -207,7 +214,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="láa">
         <pos/>
@@ -215,7 +224,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="kuŋo">
         <pos>DET</pos>
@@ -224,7 +235,9 @@
       </word>
       <word head="false" text="to">
         <pos/>
-        <morpheme baseform="to" text="to"/>
+        <morpheme baseform="to" text="to">
+          <gloss>LOC</gloss>
+        </morpheme>
       </word>
       <word head="false" text="i">
         <pos/>
@@ -402,7 +415,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="la">
         <pos/>
@@ -424,7 +439,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="ye">
         <pos/>
@@ -434,7 +451,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="fo">
         <pos/>
@@ -442,7 +461,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="ye">
         <pos/>
@@ -654,7 +675,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="murummurunta">
         <pos/>
@@ -672,7 +695,9 @@
       </word>
       <word head="false" text="a">
         <pos/>
-        <morpheme baseform="a" text="a"/>
+        <morpheme baseform="a" text="a">
+          <gloss>3SG</gloss>
+        </morpheme>
       </word>
       <word head="false" text="ye">
         <pos/>

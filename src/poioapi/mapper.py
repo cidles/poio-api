@@ -44,6 +44,7 @@ def list_from_json_dict(json_dict):
 
     return mapping
 
+tag_separators = '[\.,]'
 
 class MalformedJsonFile(Exception):
     pass
@@ -162,9 +163,11 @@ class AnnotationMapper(object):
         self._annotation_mappings = dict()
         self.missing_tags = dict()
         file_name = '{0}_{1}.json'.format(poioapi.data.type_names[source_type],
-                                          poioapi.data.type_names[destination_type])
+                                          poioapi.data.type_names
+                                          [destination_type])
 
-        file_name = os.path.join(os.path.dirname(__file__), "mappings", file_name)
+        file_name = os.path.join(os.path.dirname(__file__), "mappings",
+                                 file_name)
 
         self.load_mappings(file_name)
 
@@ -186,7 +189,8 @@ class AnnotationMapper(object):
     annotation_mappings = property(**annotation_mappings())
 
     def load_mappings(self, file_path):
-        """ This function loads the mappings defined in the file passed as parameter.
+        """ This function loads the mappings defined in the file passed as
+        parameter.
 
             Parameter
             ---------
@@ -202,10 +206,13 @@ class AnnotationMapper(object):
 
                 for key in poioapi.data.tier_labels.keys():
                     if poioapi.data.tier_labels[key] in mappings.keys():
-                        for k, v in list_from_json_dict(mappings[poioapi.data.tier_labels[key]]):
+                        for k, v in list_from_json_dict(mappings[poioapi.data.
+                                tier_labels[key]]):
                             if key in self._annotation_mappings.keys():
-                                if k not in [k1 for k1, v1 in self._annotation_mappings[key]]:
-                                    self._annotation_mappings[key].append((k, v))
+                                if k not in [k1 for k1, v1 in
+                                             self._annotation_mappings[key]]:
+                                    self._annotation_mappings[key].append((k,
+                                                                           v))
                             else:
                                 self._annotation_mappings[key] = []
                                 self._annotation_mappings[key].append((k, v))
@@ -213,7 +220,8 @@ class AnnotationMapper(object):
                 raise IOError('File was not found')
 
     def validate_tag(self, tier_label, tag_to_validate):
-        """ This function validates if a tag is present in the specified tier tag mapping.
+        """ This function validates if a tag is present in the specified tier
+            tag mapping.
 
             Parameters
             ----------
@@ -225,22 +233,25 @@ class AnnotationMapper(object):
             Return
             ------
             value : str or list
-                The corresponding tag mapping for tag_to_validate if it is present. Else returns 'None'.
-                If the mapping is for other tier the return wil be a list
+                The corresponding tag mapping for tag_to_validate if it is
+                present. Else returns 'None'. If the mapping is for other tier
+                the return wil be a list
         """
         #some validations on incorrect parameter definition
-        if tier_label is None or tier_label == '':  # or tier_label not in self.tier_mapping.keys():
+        if tier_label is None or tier_label == '':
             raise ValueError('Incorrect tier label')
 
         if tag_to_validate is not None or tag_to_validate != '':
 
             #if the tag is already missing there is no point in re-checking
-            if tier_label in self.missing_tags.keys() and tag_to_validate in self.missing_tags[tier_label].keys():
+            if tier_label in self.missing_tags.keys() and tag_to_validate in \
+                    self.missing_tags[tier_label].keys():
                 return None
 
             #perform the validation
             value = None
-            if tier_label in self._annotation_mappings.keys() and self._annotation_mappings[tier_label] is not None:
+            if tier_label in self._annotation_mappings.keys() and \
+                            self._annotation_mappings[tier_label] is not None:
                 for key, val in self._annotation_mappings[tier_label]:
                     #handling the N-1 tag correspondence
                     if isinstance(key, tuple):
@@ -255,7 +266,8 @@ class AnnotationMapper(object):
         return value
 
     def add_to_missing(self, tier_label, tag):
-        """ This method adds a tag to the missing dictionary for the corresponding tier_label.
+        """ This method adds a tag to the missing dictionary for the
+            corresponding tier_label.
 
             Parameters
             ----------
@@ -265,7 +277,8 @@ class AnnotationMapper(object):
                 The tag value that is missing.
         """
 
-        if tier_label is None or tier_label == '' or tier_label not in poioapi.data.tier_labels.keys():
+        if tier_label is None or tier_label == '' or tier_label not \
+                in poioapi.data.tier_labels.keys():
             raise ValueError('Incorrect tier label')
 
         if tag is not None and tag != '':
@@ -273,12 +286,14 @@ class AnnotationMapper(object):
                 self.missing_tags[tier_label] = {}
             self.missing_tags[tier_label][tag] = ''
         else:
-            raise ValueError('The tag parameter must not be None or an empty string')
+            raise ValueError(
+                'The tag parameter must not be None or an empty string')
 
     def export_missing_tags(self, output_file):
-        """ This method exports the tier mapping and the missing tags dictionaries to a JSON file.
-            After filling in the result file, the user should use it as the parameter for the
-            instantiation of this class.
+        """ This method exports the tier mapping and the missing tags
+            dictionaries to a JSON file. After filling in the result file, the
+            user should use it as the parameter for the instantiation of this
+            class.
 
             Parameters
             ----------

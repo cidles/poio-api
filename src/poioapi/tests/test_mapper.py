@@ -25,13 +25,13 @@ class TestAnnotationMapper:
     def test_load_default(self):
         self._am = poioapi.mapper.AnnotationMapper(poioapi.data.MANDINKA, poioapi.data.TYPECRAFT)
         assert(len(self._am.annotation_mappings) == 1)
-        assert(len(self._am.annotation_mappings[poioapi.data.TIER_GLOSS]) == 61)
+        assert(len(self._am.annotation_mappings[poioapi.data.TIER_GLOSS]) == 63)
 
     def test_load_user_mapping(self):
         self._am = poioapi.mapper.AnnotationMapper(poioapi.data.MANDINKA, poioapi.data.TYPECRAFT)
         self._am.load_mappings(self._sample_file)
 
-        assert(len(self._am.annotation_mappings[poioapi.data.TIER_GLOSS]) == 63)
+        assert(len(self._am.annotation_mappings[poioapi.data.TIER_GLOSS]) == 65)
 
     def test_validate_tag(self):
         tag_to_succeed = '1SG'

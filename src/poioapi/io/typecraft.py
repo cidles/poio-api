@@ -263,7 +263,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         ET.SubElement(self._text, "title").text = original_title
         ET.SubElement(self._text, "titleTranslation").text = translation_title
 
-    def write(self, outputfile, converter, pretty_print=False, extra_tag_map='', language='und'):
+    def write(self, outputfile, converter, pretty_print=False,
+              extra_tag_map='', language='und'):
         """Writer for the Typecraft file. This method evaluate
         if all the Glosses and POS in the GrAF are validated
         against two specific Typecraft lists.
@@ -287,30 +288,36 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         self._additional_maps_file = extra_tag_map
 
-        self._annotation_mapper = poioapi.mapper.AnnotationMapper(converter.source_type, poioapi.data.TYPECRAFT)
+        self._annotation_mapper = poioapi.mapper.AnnotationMapper(
+            converter.source_type, poioapi.data.TYPECRAFT)
         self._annotation_mapper.load_mappings(extra_tag_map)
 
         phrase_nodes = []
         if converter.source_type == poioapi.data.TOOLBOX:
             ref_nodes = converter.nodes_for_tier('ref')
             for ref in ref_nodes:
-                for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_UTTERANCE):
+                for marker in converter.tier_mapper.tier_labels(
+                        poioapi.data.TIER_UTTERANCE):
                     phrase_nodes.extend(converter.nodes_for_tier(marker, ref))
         else:
-            for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_UTTERANCE):
+            for marker in converter.tier_mapper.tier_labels(
+                    poioapi.data.TIER_UTTERANCE):
                 phrase_nodes.extend(converter.nodes_for_tier(marker, None))
         self._init_root_node()
         self._create_text_node(language=language)
 
-        ET.SubElement(self._text, 'body').text = ' '.join([converter.annotation_value_for_node(phrase)
-                                                           for phrase in phrase_nodes])
+        ET.SubElement(self._text, 'body').text = ' '.join(
+            [converter.annotation_value_for_node(phrase) for phrase in
+             phrase_nodes])
         for phrase in phrase_nodes:
 
             annotation = converter.annotation_value_for_node(phrase)
             if annotation == '':
                 continue
 
-            self._phrase_element = ET.SubElement(self._text, 'phrase', {'id': self._next_phrase_id(), 'valid': 'VALID'})
+            self._phrase_element = ET.SubElement(self._text, 'phrase',
+                                                 {'id': self._next_phrase_id(),
+                                                  'valid': 'VALID'})
 
             #TODO: handle the time values from ELAN
             ET.SubElement(self._phrase_element, 'original').text = annotation
@@ -319,7 +326,8 @@ class Writer(poioapi.io.graf.BaseWriter):
             self._write_translations(converter, phrase)
 
             ET.SubElement(self._phrase_element, 'description')
-            ET.SubElement(self._phrase_element, 'globaltags', {'id': '1', 'tagset': 'Default'})
+            ET.SubElement(self._phrase_element, 'globaltags',
+                          {'id': '1', 'tagset': 'Default'})
 
             #get the word nodes for the current phrase
             self._write_words(converter, phrase)
@@ -337,7 +345,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                 The parent node of the words
         """
 
-        word_tier_markers = converter.tier_mapper.tier_labels(poioapi.data.TIER_WORD)
+        word_tier_markers = converter.tier_mapper.tier_labels(
+            poioapi.data.TIER_WORD)
         word_nodes = []
         for marker in word_tier_markers:
             word_nodes.extend(converter.nodes_for_tier(marker, phrase))
@@ -345,7 +354,9 @@ class Writer(poioapi.io.graf.BaseWriter):
         for word in word_nodes:
             annotation = converter.annotation_value_for_node(word)
             annotation = annotation.replace('-', '')
-            self._word_element = ET.SubElement(self._phrase_element, 'word', {'text': annotation, 'head': 'false'})
+            self._word_element = ET.SubElement(self._phrase_element, 'word',
+                                               {'text': annotation,
+                                                'head': 'false'})
 
             #adding the part-of-speech (pos) element
             self._pos_element = ET.SubElement(self._word_element, 'pos')
@@ -371,20 +382,24 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         pos_annotations = []
         for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_POS):
-            pos_annotations.extend(converter.annotations_for_tier(marker, parent_node))
+            pos_annotations.extend(converter.annotations_for_tier(marker,
+                                                                  parent_node))
 
         if len(pos_annotations) == 1:
-            annotation = converter.annotation_value_for_annotation(pos_annotations[0])
+            annotation = converter.annotation_value_for_annotation(
+                pos_annotations[0])
             if not any((c in annotation) for c in "()/\.-?*"):
-                mapping = self._annotation_mapper.validate_tag(poioapi.data.TIER_POS, annotation)
+                mapping = self._annotation_mapper.validate_tag(
+                    poioapi.data.TIER_POS, annotation)
                 if mapping is None:
-                    self._annotation_mapper.add_to_missing(poioapi.data.TIER_POS, annotation)
+                    self._annotation_mapper.add_to_missing(
+                        poioapi.data.TIER_POS, annotation)
                 else:
                     self._pos_element.text = mapping
         else:
             self._pos_element.text = ''
 
-    def _write_morphemes(self, converter, word, check_for_pos = False):
+    def _write_morphemes(self, converter, word, check_for_pos=False):
         """ Method to build the word nodes of the XML.
 
             Parameters
@@ -395,7 +410,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                 The parent node of the words
         """
         morpheme_nodes = []
-        for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_MORPHEME):
+        for marker in converter.tier_mapper.tier_labels(
+                poioapi.data.TIER_MORPHEME):
             morpheme_nodes.extend(converter.nodes_for_tier(marker, word))
 
         for morpheme in morpheme_nodes:
@@ -405,8 +421,10 @@ class Writer(poioapi.io.graf.BaseWriter):
             if check_for_pos is True:
                 self._write_pos(converter, morpheme)
 
-            self._morpheme_element = ET.SubElement(self._word_element, 'morpheme',
-                                             {'text': annotation, 'baseform': annotation})
+            self._morpheme_element = ET.SubElement(self._word_element,
+                                                   'morpheme',
+                                                   {'text': annotation,
+                                                    'baseform': annotation})
             self._write_gloss(converter, morpheme)
 
     def _write_gloss(self, converter, morpheme):
@@ -421,7 +439,8 @@ class Writer(poioapi.io.graf.BaseWriter):
         """
         gloss_annotations = []
         for marker in converter.tier_mapper.tier_labels(poioapi.data.TIER_GLOSS):
-            gloss_annotations.extend(converter.annotations_for_tier(marker, morpheme))
+            gloss_annotations.extend(converter.annotations_for_tier(marker,
+                                                                    morpheme))
 
         for gloss in gloss_annotations:
             annotation = converter.annotation_value_for_annotation(gloss)
@@ -437,15 +456,19 @@ class Writer(poioapi.io.graf.BaseWriter):
                 splitter = ":"
 
             for token in annotation.split(splitter):
-                gloss_list = self._annotation_mapper.validate_tag(poioapi.data.TIER_GLOSS, token)
+                gloss_list = self._annotation_mapper.validate_tag(
+                    poioapi.data.TIER_GLOSS, token)
 
                 if gloss_list is not None:
-                    #if the tag is in the wrong tier, then put it in the correct tier. For now only detects POS
+                    #if the tag is in the wrong tier, then put it in the
+                    # correct tier. For now only detects POS
                     if isinstance(gloss_list, tuple) and len(gloss_list) == 2:
-                        if gloss_list[0] in converter.tier_mapper.tier_labels(poioapi.data.TIER_POS):
+                        if gloss_list[0] in converter.tier_mapper.tier_labels(
+                                poioapi.data.TIER_POS):
                             self._pos_element.text = gloss_list[1]
                     else:
-                        ET.SubElement(self._morpheme_element, 'gloss').text = gloss_list
+                        self._split_destination_tags(gloss_list)
+
                 else:
                     if not annotation.isupper():
                         if ":" in annotation:
@@ -456,7 +479,13 @@ class Writer(poioapi.io.graf.BaseWriter):
                             annotation = annotation.split("/")[0]
                         self._morpheme_element.set("meaning", annotation)
                     else:
-                        self._annotation_mapper.add_to_missing(poioapi.data.TIER_GLOSS, token)
+                        self._annotation_mapper.add_to_missing(
+                            poioapi.data.TIER_GLOSS, token)
+
+    def _split_destination_tags(self, tags):
+        tokens = re.split(poioapi.mapper.tag_separators, tags)
+        for token in tokens:
+            ET.SubElement(self._morpheme_element, 'gloss').text = token
 
     def _write_translations(self, converter, phrase):
         """ Method to build the word nodes of the XML.
