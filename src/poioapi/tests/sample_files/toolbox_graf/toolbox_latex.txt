@@ -1,0 +1,68 @@
+\_sh v3.0  1801 Text
+
+\id Pear.Madi
+\dt aufgenommen: 27/Aug/2006
+\dt glossiert: 29/Aug/2006
+
+\nt Пахрудинова Мадина Шейховна (1993, 13 Jahre)
+\sen ungeeignet
+
+\ref Pear_Madi.001
+\tx diž yikes         .     diž bikes         čeq  čeqi         rekʼe
+\mb diž y-   ike -s   .     diž b-   ike -s   čeq  čeq  -i      rekʼe
+\ge I.DAT II-  see -PST 1sec  I.DAT III- see -PST forest forest -ESS.II person
+\ps pn    aff- v   -aff break pn    aff- v   -aff n      n      -aff    n
+
+\ft I saw . I saw a forest, a person in the forest
+\rt
+
+\ref Pear_Madi.002
+\tx rekʼe bakʼarzi bakʼarziruho            zoqʼes     ....                          bakʼarziruho            zoqʼes
+\mb rekʼe bakʼarzi bakʼarziru         -ho  zoqʼe -s   .     - .     - .     - .     bakʼarziru         -ho  zoqʼe -s
+\ge person collect   collect.III/IV/V.PL -PRS be     -PST 1sec  - 1sec  - 1sec  - 1sec  collect.III/IV/V.PL -PRS be     -PST
+\ps n      v         v                   -aff v      -aff break - break - break - break v                   -aff v      -aff
+
+\ft The person collected (them).
+\rt
+
+\nt 17 sec Pause, Madina überlegt, was Birne auf Ginukh heisst
+
+\ref Pear_Madi.003
+\tx rikes         ɡruša i      haɬoy      haw  sobiratno     bun                tohobito          aqʼes     kʼonkʼaʎʼo     rekʼe uži
+\mb r-   ike -s   ɡruša *i     haɬo  -y   haw  *sobirat -no  b-   u        -n   tohobito          aqʼe -s   kʼonkʼa -ʎʼo   rekʼe uži
+\ge V?-  see -PST pear(r)  ***    he.OBL -ERG that ***      -and III- do, make -PFT on.the.other.side come  -PST bike      -ESS.III person boy
+\ps aff- v   -aff n        *** pn        -aff pn   ***      -aff aff- v        -aff adv               v     -aff n         -aff     n      n
+
+\ft (I? / He?) saw the pear and he collected it, from the other side came a person, a boy on the bicycle.
+\rt
+
+\ref Pear_Madi.004
+\tx haɬoy        haw  bikʼekʼiš       ..            karzina
+\mb haɬo    -y   haw  b-   ikʼekʼ -iš .     - .     karžina
+\ge this.OBL -ERG this III- steal    -PST  1sec  - 1sec  basket(r)
+\ps pn       -aff pn   aff- v        -aff  break - break n
+
+\ft He stole this .. basket.
+\rt
+
+\ref Pear_Madi.005 ######## 51.5
+\tx bikʼekʼno         oxes       oxeya  ɡamačʼ keziyiqno
+\mb b-   ikʼekʼ -no   ox    -es         ɡamačʼ keziyiq -no
+\ge III- steal    -PFT? leave -PST        stone      meet.II -PFT?
+\ps aff- v        -aff  v     -aff        n          v       -aff
+
+\ft
+\ref Pear_Madi.006 ###########
+\tx ɡamačʼlis                  kʼonkʼaʎʼo     ?   bekin             haɡo rede neʎin
+\mb ɡamačʼ - *l  -i      -s    kʼonkʼa -ʎʼo   *?  b-       *ek -in  haɡo rede neʎ -in
+\ge stone      - *** -ESS.II -GEN1 bike      -ESS.III *** I/II.PL- *** -PFT this  wood give -PFT
+\ps n          - *** -aff    -aff  n         -aff     *** aff-     *** -aff pn    n    v    -aff
+
+\ft
+\ref Pear_Madi.007
+\tx hezodoy haw  ɡrušan      sadaq bosiš
+\mb hezodoy haw  ɡruša -n    sadaq b-   os   -iš
+\ge then    this pear(r)  -and  all   III- fall -PST
+\ps adv     pn   n        -clit adv   aff- v    -aff
+
+\ft
