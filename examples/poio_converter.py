@@ -15,6 +15,7 @@ import os
 import poioapi.annotationgraph
 import poioapi.data
 import poioapi.io.typecraft
+import poioapi.io.latex
 
 
 def main(argv):
@@ -23,7 +24,7 @@ def main(argv):
     parser.add_option("-i", "--inputtype", dest="inputtype",
         help="Type of the input file (elan|toolbox|shoebox|mandinka)")
     parser.add_option("-o", "--outputtype", dest="outputtype",
-        help="Type of the output file (html|graf|typecraft)")
+        help="Type of the output file (html|graf|typecraft|latex)")
     parser.add_option("-r", "--roottier", dest="roottier",
         help="Root tier for html output, is the record marker in Toolbox")
     parser.add_option("-t", "--map-file", dest="mapping",
@@ -44,7 +45,7 @@ def main(argv):
         parser.print_usage()
         sys.exit(0)
 
-    if options.outputtype not in ['html', 'graf', 'typecraft']:
+    if options.outputtype not in ['html', 'graf', 'typecraft', 'latex']:
         parser.print_usage()
         sys.exit(0)
     mapping = None
@@ -99,6 +100,9 @@ def main(argv):
             typecraft.missing_tags(files[1], ag, additional_map_path=mapping)
         else:
             typecraft.write(files[1], ag, extra_tag_map=mapping, language=options.language_code)
+    elif options.outputtype == 'latex':
+        latex = poioapi.io.latex.Writer()
+        latex.write(files[1], ag)
 
 if __name__ == "__main__":
     main(sys.argv)
