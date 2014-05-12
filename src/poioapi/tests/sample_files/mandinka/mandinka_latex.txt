@@ -1,27 +1,9 @@
-Musu-kéebâa níŋ 	a 	  lá 	 maañóo 			le 	  táa-tá 		 lóo-ñín-óo 		la. 
-femme-âgé.D	avec	3SG  GEN	 jeune_épouse.D	FOC  aller-ACPP bois-chercher-D	OBL 
-Une vieille femme et sa jeune co-épouse étaient allées chercher du bois. 
-Kabíríŋ  i 		yé 	i 		la 		lôo 		lá-ndi, 
-quand	 3PL	ACPP	3PL	GEN	bois.D	être_posé-CAUS 
-Quand elles ont posé leur bois [avant de le charger],
-saa 			mínín-tá 			maañóo 			la 		lóo-sít-óo 			la, 
-serpent.D	s’enrouler-ACPP	jeune_épouse.D	GEN	bois-attacher-D	OBL 
-un serpent s’est enroulé autour du fagot de la jeune épouse,
-barí 	 wo 	máŋ 	 a 		lóŋ. 
-mais	 DEM	ACPN	 3SG	savoir
-mais celle-ci ne s’en est pas aperçue.
-Musu-keebaa-mâa  ñáa 	 be 		sǎa 			kaŋ,
-femme-âgé-SELECT.D	 œil.D  COPLOC	serpent.D	sur
-La vieille avait son regard fixé sur le serpent 
-míŋ 	be 		mínín-diŋ 		 a 		la 		lóo-sít-ôo 			bála, 	 
-REL	COPLOC	s’enrouler-RES	 3SG	GEN	bois-attacher-D	CONT	
-qui était enroulé au fagot de la jeune co-épouse, 
-a 		yé 	a 		fó 		a 		ye 	kó,
-3SG	ACPP	3SG	dire	3SG	BEN	QUOT 
-elle lui a répondu, 
-« Níŋ 	yunduyónd-óo 		son-ta, 				 
-   si		youndouyondo-D		être_d’accord-ACPP	
- « Si le youndouyondo  est d’accord, 
-ŋ 		si 		ŋ́ 		kuu 	janníŋ 		ŋ 		be 		tábí-r-ôo 		ké-la. »
-1PL	POT	REFL	laver	avant_que	1PL	COPLOC	cuire-ANTIP-D	faire-INF 
-nous pourrons nous laver avant de faire à manger. »
+Saa 			míŋ 	be 		maañóo 			la 		lóo-sít-óo 			kaŋ,
+serpent.D	REL	COPLOC	jeune_épouse.D	GEN	bois-attacher-D	sur
+Alors le serpent qui était sur le fagot de la jeune co-épouse
+a 		murum-murun-tá		naŋ,	 a 		yé 	musu-keebaa-máa 	 kiŋ, 		 ca̋pa̋t,
+3SG	tourner-tourner-ACPP	CTRP	 3SG	ACPP	femme-âgé-SELECT.D	 mordre	 ADVCL
+s’est retourné, il a piqué la vieille,
+wǒ 	faa-ta.
+DEM	mourir-ACPP
+et celle-ci est morte.

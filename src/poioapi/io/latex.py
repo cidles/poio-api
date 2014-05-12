@@ -7,6 +7,9 @@
 # URL: <http://media.cidles.eu/poio/>
 # For license information, see LICENSE.TXT
 
+from __future__ import absolute_import
+from __future__ import unicode_literals
+
 import poioapi.io.graf
 import poioapi.annotationgraph
 import poioapi.data
@@ -14,10 +17,11 @@ import poioapi.mapper
 
 import unicodedata
 import os
+import codecs
 
 #the key is the result of calling ord() on the char
 special_char_mapping = {
-    '779': '\\H{{{0}}}',
+    779: '\\H{{{0}}}',
     '_': '\\_',
     'ʼ': '\'',
     'ƛ': ['tipa', '', '\\textcrlambda '],
@@ -26,8 +30,8 @@ special_char_mapping = {
     'ħ': ['tipa', '', '\\textcrh '],
     'ɡ': 'g',
     'ɬ': 'ł',
-    'ʔ': '?',
-    'ʕ': '?',
+    'ʔ': ['tipa', '', '\\textglotstop '],
+    'ʕ': ['tipa', '', '\\textinvglotstop '],
     '#': '\\#'
 }
 
@@ -253,7 +257,7 @@ class Writer(poioapi.io.graf.BaseWriter):
                 name = unicodedata.name(c, None)
                 codepoint = ord(next_char)
                 if codepoint in special_char_mapping.keys():
-                    latex_command = special_char_mapping[codepoint].format(c)
+                    latex_command = special_char_mapping[codepoint]
                     correct_line += self._build_latex_replacement(latex_command, c)
                 elif c in special_char_mapping.keys():
                     latex_command = special_char_mapping[c]
@@ -313,7 +317,7 @@ class Writer(poioapi.io.graf.BaseWriter):
             temp_file_name : str
                 The temporary file name.
         """
-        temp_file = open(temp_file_name, 'w', encoding='utf8')
+        temp_file = codecs.open(temp_file_name, 'w', encoding='utf8')
 
         root_nodes = converter.root_nodes()
 
@@ -366,7 +370,7 @@ class Writer(poioapi.io.graf.BaseWriter):
             converter : poioapi.annotationgraph.AnnotationGraph
                 The node storage.
         """
-        self._output_stream = open(outputfile, 'w', encoding='utf8')
+        self._output_stream = codecs.open(outputfile, 'w', encoding='utf8')
 
         #build the document body
         temp_file = outputfile + '.tmp'
@@ -377,7 +381,7 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         self._output_stream.write('\\begin{document}\n')
 
-        for line in open(temp_file, 'r', encoding='utf8'):
+        for line in codecs.open(temp_file, 'r', encoding='utf8'):
             self._output_stream.write(line)
 
         os.remove(temp_file)
