@@ -158,8 +158,8 @@ class Parser(poioapi.io.graf.BaseParser):
 
 		for line in self.input_stream:
 			#ignoring BOM
-			if line.startswith(codecs.BOM_UTF8):
-				line = line[BOMLEN:]
+			# if line.startswith(codecs.BOM_UTF8):
+			# 	line = line[BOMLEN:]
 			#ignoring garbage and blank lines
 			if not(ignore_lines.match(line) or len(line) == 0):
 				line = self.sanitize_line(line)
