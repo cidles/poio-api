@@ -1,5 +1,5 @@
-Conversion of file format on the command line
-*********************************************
+Conversion of file formats and annotation mapping
+*************************************************
 
 From the user's perspective the conversion of file formats with mapping of annotations (within or across tiers) consists of three steps:
 
