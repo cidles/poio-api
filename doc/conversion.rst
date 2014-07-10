@@ -1,9 +1,6 @@
 Conversion of file format on the command line
 *********************************************
 
-Workflow from the user's perspective
-====================================
-
 From the user's perspective the conversion of file formats with mapping of annotations (within or across tiers) consists of three steps:
 
 * Generate an empty mapping file. This file will contain all annotation labels that could not be mapped to the output file format. The mapping file is a JSON file.
