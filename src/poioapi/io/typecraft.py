@@ -234,6 +234,11 @@ class Writer(poioapi.io.graf.BaseWriter):
         self._annotation_mapper = None
         self._source_tier_names = None
 
+        self._elan_begin_nodes = None
+        self._elan_end_nodes = None
+        self._elan_participant_nodes = None
+
+
     def _init_root_node(self):
         """ Method to initialize the root node to which add all the subelements.
         """
@@ -296,9 +301,15 @@ class Writer(poioapi.io.graf.BaseWriter):
         if converter.source_type == poioapi.data.TOOLBOX:
             ref_nodes = converter.nodes_for_tier('ref')
             for ref in ref_nodes:
+
                 for marker in converter.tier_mapper.tier_labels(
                         poioapi.data.TIER_UTTERANCE):
                     phrase_nodes.extend(converter.nodes_for_tier(marker, ref))
+
+                # get the ELAN  specific nodes. assuming that only toolbox has them
+                self._elan_begin_nodes = converter.nodes_for_tier('ELANBegin', ref)
+                self._elan_end_nodes = converter.nodes_for_tier('ELANEnd', ref)
+                self._elan_participant_nodes = converter.nodes_for_tier('ELANParticipant', ref)
         else:
             for marker in converter.tier_mapper.tier_labels(
                     poioapi.data.TIER_UTTERANCE):
@@ -319,7 +330,10 @@ class Writer(poioapi.io.graf.BaseWriter):
                                                  {'id': self._next_phrase_id(),
                                                   'valid': 'VALID'})
 
-            #TODO: handle the time values from ELAN
+            # handle ELAN data
+
+            self._write_elan_attributes(converter)
+
             ET.SubElement(self._phrase_element, 'original').text = annotation
 
             #add the translation, description and globaltags subelements
@@ -368,6 +382,30 @@ class Writer(poioapi.io.graf.BaseWriter):
 
             #extract the morpheme nodes for the current word
             self._write_morphemes(converter, word, check_pos_in_morphemes)
+
+    def _write_elan_attributes(self, converter):
+        """ Writes the ELAN information for toolbox files.
+
+            Parameters
+            ----------
+            :param converter: str
+                The source for the attributes
+        """
+        begin_node = self._elan_begin_nodes[0]
+        end_node = self._elan_end_nodes[0]
+        participant_node = self._elan_participant_nodes[0]
+        begin_annotation = converter.annotation_value_for_node(begin_node)
+        end_annotation = converter.annotation_value_for_node(end_node)
+        participant_annotation = converter.annotation_value_for_node(participant_node)
+
+        begin_time = self._string_to_milliseconds(begin_annotation)
+        end_time = self._string_to_milliseconds(end_annotation)
+
+        duration = end_time - begin_time
+
+        self._phrase_element.set('offset', str(begin_time))
+        self._phrase_element.set('duration', str(duration))
+        self._phrase_element.set('speaker', participant_annotation)
 
     def _write_pos(self, converter, parent_node):
         """ Method to build the word nodes of the XML.
@@ -537,52 +575,32 @@ class Writer(poioapi.io.graf.BaseWriter):
             tree = ET.ElementTree(root)
             tree.write(outputfile)
 
-    def _get_time_related_nodes(self, time_nodes, parent_node):
-        """Find the node with time values in
-        the time_nodes for a specific parent node.
-
-        Parameters
-        ----------
-        time_nodes : list
-            List of the Time Nodes.
-        parent_node : Node
-            Parent node.
-
-        Returns
-        -------
-        node : Node
-            Time node with the specific parent node.
-
-        """
-
-        for node in time_nodes:
-            if node.parent.id == parent_node.parent.id:
-                return node
-
-    def _string_to_milliseconds(self, time_node):
+    def _string_to_milliseconds(self, value):
         """Convert a string to milliseconds. Time unit
         for the time values in Typecaft.
 
         Parameters
         ----------
-        time_node : Node
-            Time node from GrAF object.
+        time_node : str
+            The value to convert.
 
         Returns
         -------
-        offset : str
+        offset : int
             The offset value.
 
         """
 
-        time_start = time_node.annotations._elements[0].features["annotation_value"].split(".")
+        time_start = value.split(".")
 
         microseconds = int(time_start[1])
+        try:
+            x = time.strptime(time_start[0], '%H:%M:%S')
 
-        x = time.strptime(time_start[0], '%H:%M:%S')
-
-        offset = int(datetime.timedelta(hours=x.tm_hour, minutes=x.tm_min,
-            seconds=x.tm_sec).seconds * 1000) + microseconds
+            offset = int(datetime.timedelta(hours=x.tm_hour, minutes=x.tm_min,
+                seconds=x.tm_sec).seconds * 1000) + microseconds
+        except ValueError:
+            offset = (int(time_start[0]) * 1000) + microseconds
 
         return offset
 
