@@ -400,7 +400,7 @@ class Writer(poioapi.io.graf.BaseWriter):
             self._pos_element.text = ''
 
     def _write_morphemes(self, converter, word, check_for_pos=False):
-        """ Method to build the word nodes of the XML.
+        """ Method to build the morpheme nodes of the XML.
 
             Parameters
             ----------
@@ -426,6 +426,9 @@ class Writer(poioapi.io.graf.BaseWriter):
                                                    {'text': annotation,
                                                     'baseform': annotation})
             self._write_gloss(converter, morpheme)
+
+        if self._word_element.find('morpheme') is None:
+            ET.SubElement(self._word_element, 'morpheme')
 
     def _write_gloss(self, converter, morpheme):
         """ Method to build the word nodes of the XML.

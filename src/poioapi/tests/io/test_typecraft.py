@@ -96,10 +96,12 @@ class TestParser:
 class TestWriter:
 
     def setup(self):
-        self._inputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-            "typecraft_graf", "typecraft_example.xml")
-        self._outputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",
-            "mandinka", "mandinka_typecraft.xml")
+        self._inputfile = os.path.join(os.path.dirname(__file__), "..",
+                                       "sample_files", "typecraft_graf",
+                                       "typecraft_example.xml")
+        self._outputfile = os.path.join(os.path.dirname(__file__), "..",
+                                        "sample_files", "mandinka",
+                                        "mandinka_typecraft.xml")
 
     def test_conversion(self):
         inputfile = os.path.join(os.path.dirname(__file__), "..", "sample_files",

@@ -66,7 +66,7 @@ def tier_mapping():
 
 class Parser(poioapi.io.graf.BaseParser):
 
-    def __init__(self, input_stream, record_marker = 'ref',
+    def __init__(self, input_stream, record_marker='ref',
         record_level_markers = ['ref', 'id', 'dt', 'ELANBegin', 'ELANEnd',
             'ELANParticipant' ],
         utterance_level_markers=  # tier_map[poioapi.data.TIER_TRANSLATION] + \
@@ -282,25 +282,17 @@ class Parser(poioapi.io.graf.BaseParser):
                 # utterance
                 if current_utterance is not None and current_utterance != "":
                     current_utterance = current_utterance.rstrip()
-
-                    self._annotations_for_parent[
-                        ("a{0}".format(current_record_id),
-                            "utterance_gen")].append(
-                                poioapi.io.graf.Annotation("a{0}".format(
-                                    current_utterance_id), 
-                                    current_utterance))
+                    self._annotate_utterance(current_record_id,
+                                             current_utterance_id,
+                                             current_utterance)
 
                     current_utterance = ""
 
                 elif current_utterance is None:
                     current_utterance_id = current_id
                     current_id += 1
-                    self._annotations_for_parent[
-                        ("a{0}".format(current_record_id),
-                            "utterance_gen")].append(
-                                poioapi.io.graf.Annotation("a{0}".format(
-                                    current_utterance_id), 
-                                    ""))
+                    self._annotate_utterance(current_record_id,
+                                             current_utterance_id, "")
 
                     current_utterance = ""
 
@@ -315,6 +307,14 @@ class Parser(poioapi.io.graf.BaseParser):
             elif tier_marker in self.record_level_markers:
 
                 if tier_marker == self.record_marker:
+                    # this is to ensure that the utterance get annotated even
+                    # if there were no other utterance_level_markers to cause
+                    # it to be
+                    if current_utterance is not None and current_utterance != '':
+                        self._annotate_utterance(current_record_id,
+                                                 current_utterance_id,
+                                                 current_utterance)
+
                     self._annotations_for_parent[
                         (None, tier_marker)].append(
                             poioapi.io.graf.Annotation(
@@ -392,6 +392,13 @@ class Parser(poioapi.io.graf.BaseParser):
                     poioapi.io.graf.Annotation(
                         ids[tier][start_pos],
                         elements[tier][start_pos]))
+
+    def _annotate_utterance(self, record_id, utterance_id, text):
+        self._annotations_for_parent[("a{0}".format(record_id),
+                                      "utterance_gen")].append(
+            poioapi.io.graf.Annotation("a{0}".format(utterance_id), text))
+
+        pass
 
     def get_root_tiers(self):
         return [poioapi.io.graf.Tier(self.record_marker)]
