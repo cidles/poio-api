@@ -324,6 +324,14 @@ class Parser(poioapi.io.graf.BaseParser):
                     current_utterance = None
 
                 else:
+                    # this is to ensure that the utterance get annotated even
+                    # if there were no other utterance_level_markers to cause
+                    # it to be
+                    if current_utterance is not None and current_utterance != '':
+                        self._annotate_utterance(current_record_id,
+                                                 current_utterance_id,
+                                                 current_utterance)
+
                     self._annotations_for_parent[
                         ("a{0}".format(current_record_id), tier_marker)].append(
                             poioapi.io.graf.Annotation(

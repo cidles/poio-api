@@ -255,17 +255,17 @@ class AnnotationGraph():
         res = []
         if parent_node:
             for target_node in parent_node.iter_children():
-                if target_node.id.startswith(tier_name):
+                if target_node.id.startswith(tier_name + poioapi.io.graf.GRAFSEPARATOR):
                     res.append(target_node)
         else:
             if tier_name in self.root_tiers:
                 for target_node_id in self.graf.header.roots:
                     n = self.graf.nodes[target_node_id]
-                    if n.id.startswith(tier_name):
+                    if n.id.startswith(tier_name + poioapi.io.graf.GRAFSEPARATOR):
                         res.append(self.graf.nodes[target_node_id])
             if len(res) == 0:
                 for target_node in self.graf.nodes:
-                    if target_node.id.startswith(tier_name):
+                    if target_node.id.startswith(tier_name + poioapi.io.graf.GRAFSEPARATOR):
                         res.append(target_node)
         return res
 

@@ -90,6 +90,21 @@ class TestAnnotationGraph:
         assert self.annotation_graph.filtered_node_ids[-1] == \
             ['Äußerung..P-Spch..na1']
 
+    # there was a bug where, for any type of tier, when one of the possible
+    # names was a subset of another name of the same tier, duplicates
+    # were being created in the AnnotationGraph.
+    def test_for_node_duplicates(self):
+        inputfile = os.path.join(os.path.dirname(__file__), 'sample_files',
+            'toolbox_graf', 'toolbox.txt')
+        ag = poioapi.annotationgraph.AnnotationGraph.from_toolbox(inputfile)
+        for tier_type in data.tier_labels.keys():
+            original = []
+            for marker in ag.tier_mapper.tier_labels(tier_type):
+                original.extend(ag.nodes_for_tier(marker))
+
+            trimmed = set(original)
+            assert len(original) == len(trimmed)
+
 class TestAnnotationGraphFilter:
 
     def setup(self):

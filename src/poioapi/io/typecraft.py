@@ -330,9 +330,9 @@ class Writer(poioapi.io.graf.BaseWriter):
                                                  {'id': self._next_phrase_id(),
                                                   'valid': 'VALID'})
 
-            # handle ELAN data
-
-            self._write_elan_attributes(converter)
+            # handle ELAN data, only when converting from toolbox
+            if converter.source_type == poioapi.data.TOOLBOX:
+                self._write_elan_attributes(converter)
 
             ET.SubElement(self._phrase_element, 'original').text = annotation
 
@@ -391,6 +391,10 @@ class Writer(poioapi.io.graf.BaseWriter):
             :param converter: str
                 The source for the attributes
         """
+        if len(self._elan_begin_nodes) == 0 \
+                and len(self._elan_end_nodes) == 0 \
+                and len(self._elan_participant_nodes) == 0:
+            return
         begin_node = self._elan_begin_nodes[0]
         end_node = self._elan_end_nodes[0]
         participant_node = self._elan_participant_nodes[0]
