@@ -16,19 +16,23 @@ import sys
 
 
 def list_from_json_dict(json_dict):
-    """ This function converts a dictionary to a list by transforming each key/value pair of the dictionary
-        into a tuple. This tuple is in the format: (dictionary_key, dictionary_value). If one of the dictionary
-        keys has multiple tags, then we split them and create a tuple with the result.
+    """ This function converts a dictionary to a list by transforming each
+        key/value pair of the dictionary into a tuple. This tuple is in the
+        format: (dictionary_key, dictionary_value). If one of the dictionary
+        keys has multiple tags, then we split them and create a tuple with the
+        result.
 
         Parameters
         ----------
         json_dict : dictionary
-        This is one of the dictionaries loaded from a JSON file containing the mapping rules.
+        This is one of the dictionaries loaded from a JSON file containing the
+        mapping rules.
 
          Return
          ------
          mapping : list
-         A list containing the tuples created from the json_dict's key/value pairs
+         A list containing the tuples created from the json_dict's key/value
+         pairs
     """
     mapping = []
     for key in json_dict.keys():
@@ -46,13 +50,14 @@ def list_from_json_dict(json_dict):
 
 tag_separators = '[\.,]'
 
+
 class MalformedJsonFile(Exception):
     pass
 
 
 class TierMapper(object):
 
-    _tier_mapping_name = 'tier_names'
+    _tier_mapping_name = 'tier_mapping'
     _tier_mapping = {}
 
     def __init__(self):
@@ -83,7 +88,8 @@ class TierMapper(object):
                     self._tier_mapping = dict()
                     mapping = mappings[self._tier_mapping_name]
                     if isinstance(mapping, dict):
-            #this cycle is to ignore any tier mapping whose key is not defined in the tier_labels dictionary
+            # this cycle is to ignore any tier mapping whose key is not defined
+            # in the tier_labels dictionary
                         for key in poioapi.data.tier_labels.keys():
                             try:
                                 if isinstance(mapping[poioapi.data.tier_labels[key]], list):
@@ -102,9 +108,11 @@ class TierMapper(object):
             Parameters
             ----------
             tier_identifier : int
-                The tier from which to extract the tag. Must be one of the keys of tier_labels
+                The tier from which to extract the tag. Must be one of the
+                keys of tier_labels
             label_index : int
-                The label index inside the list of labels for the desired tier. If this parameter is ommited,
+                The label index inside the list of labels for the desired tier.
+                 If this parameter is omitted,
                 the returned label is the first in the list
 
             Return
@@ -127,7 +135,8 @@ class TierMapper(object):
             Parameter
             ---------
             tier_identifiers : int
-                The tier from which to extract the tag. Must be one of the keys of tier_labels
+                The tier from which to extract the tag. Must be one of the keys
+                of tier_labels
 
             Return
             ------
@@ -144,6 +153,12 @@ class TierMapper(object):
         return labels
 
     def append_to_tier_labels(self, tier_identifier, new_value):
+        """ Method to add a new label to a level
+        :param tier_identifier: int
+            The tier type of the new label
+        :param new_value: str
+            The tier label to add
+        """
         if tier_identifier is None or not isinstance(tier_identifier, int):
             raise ValueError('The tier_identifier parameter must be an integer.')
         if not isinstance(new_value, list):
@@ -155,6 +170,18 @@ class TierMapper(object):
         for val in new_value:
             if val not in self._tier_mapping[tier_identifier]:
                 self._tier_mapping[tier_identifier].append(val)
+
+    def tier_label_exists(self, label):
+        """ Function to check whether a label exists on the mapping.
+        :param label: str
+            The label to verify
+        :return: True if the label exists, False otherwise.
+        """
+        for type in self._tier_mapping.keys():
+            if label in self.tier_labels(type):
+                return True
+        else:
+            return False
 
 
 class AnnotationMapper(object):

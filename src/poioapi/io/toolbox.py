@@ -233,10 +233,11 @@ class Parser(poioapi.io.graf.BaseParser):
                 if last_tier_marker in self.utterance_level_markers:
                     id_to_add = current_utterance_id
 
-                self._annotations_for_parent[
-                    ("a{0}".format(id_to_add),
-                        last_tier_marker)][-1].value += " " + \
-                        line
+                if self._tier_labels.tier_label_exists(last_tier_marker):
+                    self._annotations_for_parent[
+                        ("a{0}".format(id_to_add),
+                            last_tier_marker)][-1].value += " " + \
+                            line
 
                 tier_marker = last_tier_marker
                 continue

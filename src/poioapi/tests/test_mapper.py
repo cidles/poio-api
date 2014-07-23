@@ -14,13 +14,81 @@ import poioapi.mapper
 import poioapi.data
 
 
+class TestTierMapper:
+
+    _tm = None
+    _sample_file = ''
+
+    def setup(self):
+        self._sample_file = os.path.join(os.path.dirname(__file__),
+                                         'sample_files', 'mapper',
+                                         'example.json')
+
+    def test_load_mapping(self):
+        self._tm = poioapi.mapper.TierMapper()
+        self._tm.load_mapping(self._sample_file)
+
+        assert len(self._tm._tier_mapping) == 2
+
+        gloss_tier_labels = self._tm.tier_labels(poioapi.data.TIER_GLOSS)
+        pos_tier_labels = self._tm.tier_labels(poioapi.data.TIER_POS)
+
+        assert len(gloss_tier_labels) == 1
+        assert len(pos_tier_labels) == 1
+
+    def test_tier_labels(self):
+        self._tm = poioapi.mapper.TierMapper()
+        self._tm.load_mapping(self._sample_file)
+
+        tiers_to_succeed = ['gloss']
+        tiers_to_test = self._tm.tier_labels(poioapi.data.TIER_GLOSS)
+
+        assert set(tiers_to_succeed) == set(tiers_to_test)
+
+        no_tier_type = []
+        no_type_to_test = self._tm.tier_labels(poioapi.data.TIER_TRANSLATION)
+
+        assert no_tier_type == no_type_to_test
+
+    def test_tier_label(self):
+        self._tm = poioapi.mapper.TierMapper()
+        self._tm.load_mapping(self._sample_file)
+
+        tier_to_succeed = 'pos'
+        tier_to_test = self._tm.tier_label(poioapi.data.TIER_POS, 0)
+
+        assert tier_to_succeed == tier_to_test
+
+    def test_append(self):
+        self._tm = poioapi.mapper.TierMapper()
+        self._tm.load_mapping(self._sample_file)
+
+        expected = ['gloss', 'test']
+        self._tm.append_to_tier_labels(poioapi.data.TIER_GLOSS, ['test'])
+        to_test = self._tm.tier_labels(poioapi.data.TIER_GLOSS)
+
+        assert expected == to_test
+
+    def test_exists(self):
+        self._tm = poioapi.mapper.TierMapper()
+        self._tm.load_mapping(self._sample_file)
+        tag_exists = self._tm.tier_label_exists('pos')
+        tag_not_exists = self._tm.tier_label_exists('test')
+
+        assert tag_exists is True
+        assert tag_not_exists is False
+
+
+
 class TestAnnotationMapper:
 
     _am = None
-    _sample_files = ''
+    _sample_file = ''
 
     def setup(self):
-        self._sample_file = os.path.join(os.path.dirname(__file__), "sample_files", "mapper", "example.json")
+        self._sample_file = os.path.join(os.path.dirname(__file__),
+                                         "sample_files", "mapper",
+                                         "example.json")
 
     def test_load_default(self):
         self._am = poioapi.mapper.AnnotationMapper(poioapi.data.MANDINKA, poioapi.data.TYPECRAFT)
