@@ -30,7 +30,7 @@ import graf
 ############################################### Globals
 
 obt_tagger_command = \
-    "/Users/pbouda/Projects/git-github/The-Oslo-Bergen-Tagger/tag-nostat-bm.sh"
+    "/home/rfilipe/Projects/The-Oslo-Bergen-Tagger/tag-nostat-bm.sh"
 
 ner_tag_for_type = {
     "by_navn" : "city",
@@ -178,7 +178,7 @@ def ag_as_typecraft(ag):
     XML = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <typecraft xsi:schemaLocation="http://typecraft.org/typecraft.xsd" xmlns="http://typecraft.org/typecraft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 {phrases}
-</typcraft>"""
+</typecraft>"""
 
     phrases_xml = ""
     for i, phrase in enumerate(ag.root_nodes()):
