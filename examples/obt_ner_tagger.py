@@ -125,7 +125,7 @@ def word_as_typecraft(ag, word, pos_in_phrase, phrase_id):
 
 def ne_as_typecraft(ag, phrase, phrase_id):
     XML_NE = """<multiword type="NE">
-            <mwtag>{ne_type}<mwtag>
+            <mwtag>{ne_type}</mwtag>
             {word_ids}
         </multiword>
         """
