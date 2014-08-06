@@ -177,7 +177,11 @@ def phrase_as_typecraft(ag, phrase, phrase_id):
 def ag_as_typecraft(ag):
     XML = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <typecraft xsi:schemaLocation="http://typecraft.org/typecraft.xsd" xmlns="http://typecraft.org/typecraft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<text id="0" lang="und">
+<title>Empty Title</title>
+<titleTranslation></titleTranslation>
 {phrases}
+</text>
 </typecraft>"""
 
     phrases_xml = ""
