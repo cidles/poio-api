@@ -174,12 +174,15 @@ def phrase_as_typecraft(ag, phrase, phrase_id):
 
     return phrase_xml
 
-def ag_as_typecraft(ag):
+def ag_as_typecraft(ag, inputfile):
     XML = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <typecraft xsi:schemaLocation="http://typecraft.org/typecraft.xsd" xmlns="http://typecraft.org/typecraft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <text id="0" lang="und">
 <title>Empty Title</title>
 <titleTranslation></titleTranslation>
+<body> 
+{plaintext}
+</body>
 {phrases}
 </text>
 </typecraft>"""
@@ -188,7 +191,11 @@ def ag_as_typecraft(ag):
     for i, phrase in enumerate(ag.root_nodes()):
         phrases_xml += phrase_as_typecraft(ag, phrase, i)
 
-    return XML.format(phrases=phrases_xml)
+    plaintext = ""
+    with codecs.open(inputfile, "r", "utf-8") as f:
+        plaintext = f.read()
+
+    return XML.format(phrases=phrases_xml, plaintext=plaintext)
 
 ############################################## Helpers
 
@@ -370,7 +377,7 @@ def main(argv):
                 last_used_id = add_ner_node(ag.graf, [word], "proper",
                     last_used_id)
 
-    xml_out = ag_as_typecraft(ag)
+    xml_out = ag_as_typecraft(ag, inputfile)
     with codecs.open(outputfile, "w", "utf-8") as f:
         f.write(xml_out)
 
