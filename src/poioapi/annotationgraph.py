@@ -172,7 +172,7 @@ class AnnotationGraph():
             parser = poioapi.io.elan.Parser(stream)
         elif stream_type == poioapi.data.MANDINKA:
             if not hasattr(stream, 'read'):
-                stream = codecs.open(stream, "r", "utf-8")
+                stream = codecs.open(stream, "rb")
             parser = poioapi.io.mandinka.Parser(stream, tier_label_map=ag.tier_mapper)
         elif stream_type == poioapi.data.OBT:
             parser = poioapi.io.obt.Parser(stream)

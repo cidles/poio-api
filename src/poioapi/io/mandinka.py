@@ -26,9 +26,10 @@ glosses = ['2SG', '1SG', '3SG', '1PL', '2PL', '3PL', 'ABSTR', 'ACPN', 'ACPP', 'A
 			  'NMAG', 'NMINS', 'OBL', 'OBLIG', 'OPT', 'ORD', 'ORN', 'PAS', 'PL', 'PLASS', 'POT', 'PREDS', 'PROG',
 			  'PRIV', 'Q', 'QUOT', 'RECIP', 'REFL', 'REL', 'RES', 'RESID', 'SELECT', 'SPHP', 'SUBJN', 'SUBJP']
 
-#list of regexes to separate the words line. Add items as they are needed, but DON'T add them after the last regex (\S+)
+#list of regexes to separate the words line. Add items as they are needed, but
+# DON'T add them after the last regex ([^\s «»,\.]+)
 #This is to account for words that are separated but must be considered as one.
-word_line_separators = ['Áŋ aŋ', '\S+']
+word_line_separators = ['Áŋ aŋ', '[^\s «»,\.]+']
 
 #The regular expressions to use in line sanitation, and the corresponding substitutes
 sanitation_tokens = {
@@ -38,7 +39,7 @@ sanitation_tokens = {
 	'\s\.\.\.': '...',
 	'\s!': '!',
 	'\s\?': '?',
-	'^\W\s': '',
+	'^[^\wŋ]\s': '',
 	'[ \t]+': ' '
 }
 
@@ -68,7 +69,9 @@ ignore_these = ['^\sMmm...\s',
 				'^Ce récit évoque un épisode crucial',
 				'\s+\(formule en arabe\)',
 				'^«\s+Bisímilláahí ',
-				'^[\r\n]']
+				'^[\r\n]',
+                '^[  ]+$'  # character class is composed of normal space, followed by no-break space
+				]
 
 BOMLEN = len(codecs.BOM_UTF8)
 
@@ -116,7 +119,7 @@ class Parser(poioapi.io.graf.BaseParser):
 			return self._input_stream
 		def fset(self, value):
 			if not hasattr(value, 'read'):
-				self._input_stream = codecs.open(value, "r", "utf-8")
+				self._input_stream = codecs.open(value, "rb")
 			else:
 				self._input_stream = value
 		def fdel(self):
@@ -146,7 +149,7 @@ class Parser(poioapi.io.graf.BaseParser):
 		block_line_count = 3
 
 		#compile all regexes structures defined
-		self.separate = re.compile(r'\b(?:%s)\b' % '|'.join(word_line_separators))
+		self.separate = re.compile(r'(?:%s)' % '|'.join(word_line_separators))
 		ignore_lines = re.compile('|'.join(ignore_these))
 		terminators = re.compile('|'.join(phrase_terminators))
 
@@ -156,10 +159,13 @@ class Parser(poioapi.io.graf.BaseParser):
 		self.block['gloss'] = ''
 		self.block['translation'] = ''
 
-		for line in self.input_stream:
+		for line_number, line in enumerate(self.input_stream):
 			#ignoring BOM
-			# if line.startswith(codecs.BOM_UTF8):
-			# 	line = line[BOMLEN:]
+			if line_number == 0:
+				if line.startswith(codecs.BOM_UTF8):
+					line = line[BOMLEN:]
+
+			line = line.decode('utf-8', 'ignore')
 			#ignoring garbage and blank lines
 			if not(ignore_lines.match(line) or len(line) == 0):
 				line = self.sanitize_line(line)

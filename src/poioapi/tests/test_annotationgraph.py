@@ -100,7 +100,8 @@ class TestAnnotationGraph:
         for tier_type in data.tier_labels.keys():
             original = []
             for marker in ag.tier_mapper.tier_labels(tier_type):
-                original.extend(ag.nodes_for_tier(marker))
+                ids = [n.id for n in ag.nodes_for_tier(marker)]
+                original.extend(ids)
 
             trimmed = set(original)
             assert len(original) == len(trimmed)
