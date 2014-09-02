@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--ODIN - The Online Database of Interlinear Text-->
+<!--The results presented here represent data found on the Web that contain suspected instances of Interlinear Glossed Text (IGT).  Misidentifications are possible.-->
+<!--For those results that indicate Verified as 'Highest' or 'High', all instances of IGT in the document have been manually verified both to be IGT and to be in the language specified. Highest verification indicates that the results suffered no corruption in the extraction process. 'Auto' indicates that these data were added through an automated process without supervision. 'Low' indicates that the language was not verified, although the instances discovered are IGT.-->
+<!--Funding for ODIN has been provided by the Data-Driven Linguistics Ontology grant (NSF BCS #0411348), the EMELD grant (NSF ITR #0094934), and the California State University, Fresno.-->
+<language name="Portuguese" code="por" createdAt="2010-03-11">
+ <sources>
+  <source verified="High">
+   <url>http://www.ub.uni-konstanz.de/kops/volltexte/2003/1103/pdf/ap114.pdf</url>
+   <odin>http://odin.linguistlist.org/igt_raw.php?id=1052&amp;langcode=por</odin>
+   <citation> (2002). . &lt;/p&gt;</citation>
+   <igt>
+    <example>
+     <line>(1)         O Paulo trabalhou mais do que        ninguém.</line>
+     <line>the Paulo worked more than_what nobody</line>
+     <line>`Paulo has worked harder than anybody (else).'</line>
+    </example>
+    <example>
+     <line>(2)         O Paulo não trabalhou mais do que         ninguém.</line>
+     <line>the Paulo not worked more than_what nobody</line>
+     <line>`Paulo has not worked harder than anybody (else).'</line>
+    </example>
+    <example>
+     <line>(3)         Desta vez, o Paulo correu menos do que          nunca.</line>
+     <line>on_thistime, the Paulo ran       less than_what never</line>
+     <line>`This time, Paulo ran less than ever.'</line>
+    </example>
+    <example>
+     <line>(1)      O Paulo trabalhou mais do que           ninguém.</line>
+     <line>the Paulo worked more than_what nobody</line>
+     <line>`Paulo has worked harder than anybody.'</line>
+    </example>
+    <example>
+     <line>(13)     Todos os lugares onde ninguém esteve foram ignorados.</line>
+     <line>all     the places where nobody was were ignored</line>
+     <line>`All the places where nobody was were ignored.'</line>
+    </example>
+    <example>
+     <line>(16)    A montanha mais alta que o Paulo nunca escalou é o Monte Everest.</line>
+     <line>the mountain more high that the Paulo never climbed is the Mount Everest</line>
+     <line>`The highest mountain that Paulo never climbed is Mount Everest.'</line>
+    </example>
+    <example>
+     <line>(24)     O Paulo correu mais do que           nunca.</line>
+     <line>the Paulo ran        more than_ what never</line>
+     <line>`Paulo has run faster than ever.'</line>
+    </example>
+    <example>
+     <line>(25)     O Paulo correu menos do que         nunca.</line>
+     <line>the Paulo ran        less than_what never</line>
+     <line>`Paulo has run less than ever.'</line>
+    </example>
+    <example>
+     <line>(26)      O Paulo é (muito) mais alto do que      é a Ana.</line>
+     <line>the Paulo is (much) more tall than_what is the Ana</line>
+     <line>`Paulo is (much) taller than Ana is'</line>
+    </example>
+    <example>
+     <line>(27)      O Paulo é (muito) mais alto do que      a Ana.</line>
+     <line>the Paulo is (much) more tall than_what the Ana</line>
+     <line>`Paulo is (much) taller than Ana'</line>
+    </example>
+    <example>
+     <line>(37)      O Paulo é tão alto como a Ana.</line>
+     <line>the Paulo is as tall as    the Ana.</line>
+     <line>`Paulo is as tall as Ana.'</line>
+    </example>
+    <example>
+     <line>(41)     O Paulo trabalhou mais do que        ninguém.</line>
+     <line>the Paulo worked more than_what nobody</line>
+     <line>`Paulo has worked harder than anybody.'</line>
+    </example>
+    <example>
+     <line>(42)     O Paulo correu menos do que            nunca.</line>
+     <line>the Paulo ran        less than_what never</line>
+     <line>`This time, Paulo ran less than ever.'</line>
+    </example>
+    <example>
+     <line>(43)     *O Paulo correu tanto        como nunca.</line>
+     <line>the Paulo ran       as-much as    never</line>
+     <line>`Paulo ran as fast as ever.'</line>
+    </example>
+    <example>
+     <line>(44)     O Paulo é mais alto do que               a maioria dos seus colegas.</line>
+     <line>the Paulo is more tall than_what the majority of_his        colleagues</line>
+     <line>`Paulo is taller that most of his colleagues.'</line>
+    </example>
+    <example>
+     <line>(57)     O Paulo trabalhou mais do que        ninguém.</line>
+     <line>the Paulo worked more than_what nobody</line>
+     <line>`Paulo has worked harder than anybody.'</line>
+    </example>
+    <example>
+     <line>(58)     O Paulo não trabalhou mais do que         ninguém.</line>
+     <line>the Paulo not worked more than_what nobody</line>
+     <line>`Paulo has not worked harder than anybody.'</line>
+    </example>
+    <example>
+     <line>(62)     Ninguém viu nada.</line>
+     <line>nobody saw nothing</line>
+     <line>`Nobody saw anything.'</line>
+    </example>
+   </igt>
+  </source>
+ </sources>
+</language>
