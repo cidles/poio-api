@@ -530,7 +530,8 @@ class Writer(poioapi.io.graf.BaseWriter):
     def _split_destination_tags(self, tags):
         tokens = re.split(poioapi.mapper.tag_separators, tags)
         for token in tokens:
-            ET.SubElement(self._morpheme_element, 'gloss').text = token
+            if token != '':
+                ET.SubElement(self._morpheme_element, 'gloss').text = token
 
     def _write_translations(self, converter, phrase):
         """ Method to build the word nodes of the XML.
