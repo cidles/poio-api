@@ -21,7 +21,6 @@ import poioapi.io.elan
 import poioapi.io.mandinka
 import poioapi.io.obt
 import poioapi.io.graf
-import poioapi.io.pickle
 import poioapi.io.toolbox
 import poioapi.io.toolboxxml
 import poioapi.io.shoebox
@@ -93,14 +92,6 @@ class AnnotationGraph():
 
         """
         return cls._from_file(stream, poioapi.data.TYPECRAFT)
-
-    @classmethod
-    def from_pickle(cls, stream):
-        """This method generates a GrAF object
-        from a pickle file.
-
-        """
-        return cls._from_file(stream, poioapi.data.TREEPICKLE)
 
     @classmethod
     def from_shoebox(cls, stream):
@@ -178,8 +169,6 @@ class AnnotationGraph():
             parser = poioapi.io.obt.Parser(stream)
         elif stream_type == poioapi.data.TYPECRAFT:
             parser = poioapi.io.typecraft.Parser(stream)
-        elif stream_type == poioapi.data.TREEPICKLE:
-            parser = poioapi.io.pickle.Parser(stream)
         elif stream_type == poioapi.data.TOOLBOXXML:
             parser = poioapi.io.toolboxxml.Parser(stream)
         elif stream_type == poioapi.data.SHOEBOX:

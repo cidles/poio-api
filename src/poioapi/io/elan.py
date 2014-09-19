@@ -68,7 +68,7 @@ class Parser(poioapi.io.graf.BaseParser):
         self.root = ET.parse(self.filepath)
         self.tree = self.root.getroot()
         self.time_order = self._map_time_slots()
-        self._annotations_for_parent = collections.defaultdict(list)
+        self.annotations_for_parent = collections.defaultdict(list)
         self.regions_map = {}
         self.regions_cache = {}
         self.meta_information = self._retrieve_aditional_information()
@@ -143,7 +143,7 @@ class Parser(poioapi.io.graf.BaseParser):
         parent_id = None
         if annotation_parent:
             parent_id = annotation_parent.id
-        return self._annotations_for_parent[(parent_id, tier.name)]
+        return self.annotations_for_parent[(parent_id, tier.name)]
 
 
     def _build_annotations(self):
@@ -189,7 +189,7 @@ class Parser(poioapi.io.graf.BaseParser):
                             a.attrib["PREVIOUS_ANNOTATION"])
                         features["previous_node"] = prev_node.to_str()
 
-                self._annotations_for_parent[(
+                self.annotations_for_parent[(
                     parent_annotation_id, t.attrib['TIER_ID'])].\
                     append(poioapi.io.graf.Annotation(
                         annotation_id, annotation_value, features))
