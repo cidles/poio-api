@@ -289,6 +289,8 @@ class AnnotationMapper(object):
                         if tag_to_validate.upper() == key.upper():
                             value = val
                             break
+        else:
+            raise ValueError('You must specify a tag to validate.')
 
         return value
 
@@ -313,14 +315,14 @@ class AnnotationMapper(object):
                 self.missing_tags[tier_label] = {}
             self.missing_tags[tier_label][tag] = ''
         else:
-            raise ValueError(
-                'The tag parameter must not be None or an empty string')
+            return None
+            # raise ValueError(
+            #     'The tag parameter must not be None or an empty string')
 
     def export_missing_tags(self, output_file):
-        """ This method exports the tier mapping and the missing tags
-            dictionaries to a JSON file. After filling in the result file, the
-            user should use it as the parameter for the instantiation of this
-            class.
+        """ This method exports the missing tags dictionaries to a JSON file.
+            After filling in the result file, the user should use it as the
+            parameter for the instantiation of this class.
 
             Parameters
             ----------
@@ -334,6 +336,11 @@ class AnnotationMapper(object):
             output[poioapi.data.tier_labels[key]] = self.missing_tags[key]
 
         #export the JSON file
-        file = open(output_file, 'w')
-        json.dump(output, file, ensure_ascii=False, indent=4, separators=(',', ': '), sort_keys=True)
-        file.close()
+        outfile = open(output_file, 'w')
+        # dump = json.dumps(output, indent=4, separators=(',', ': '),
+        #                   sort_keys=True)
+        json.dump(output, outfile, indent=4, separators=(',', ': '),
+                  sort_keys=True)
+
+        # outfile.write(dump)
+        outfile.close()

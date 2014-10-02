@@ -354,7 +354,7 @@ class Writer(poioapi.io.graf.BaseWriter):
     def _write_phrases(self, phrase_nodes, converter):
         for phrase in phrase_nodes:
             annotation = converter.annotation_value_for_node(phrase)
-            if annotation == '':
+            if annotation == '' or re.match(r'^\s+$', annotation):
                 continue
 
             self._phrase_element = ET.SubElement(self._text, 'phrase',
@@ -394,6 +394,13 @@ class Writer(poioapi.io.graf.BaseWriter):
         for marker in word_tier_markers:
             word_nodes.extend(converter.nodes_for_tier(marker, phrase))
 
+        if len(word_nodes) == 0:
+            self._word_element = ET.SubElement(self._phrase_element, 'word',
+                                               {'text': '',
+                                                'head': 'false'})
+            ET.SubElement(self._word_element, 'pos')
+            ET.SubElement(self._word_element, 'morpheme', {'text': '',
+                                                    'baseform': ''})
         for word in word_nodes:
             annotation = converter.annotation_value_for_node(word)
             # annotation = annotation.replace('-', '')

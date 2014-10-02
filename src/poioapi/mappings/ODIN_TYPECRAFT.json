@@ -1,0 +1,22 @@
+{
+	"tier_mapping": {
+		 "utterance": [
+            "phrase"
+        ],
+        "word": [
+            "word"
+        ],
+        "morpheme": [
+            "morpheme"
+        ],
+        "gloss": [
+            "gloss"
+        ],
+        "translation": [
+            "translation"
+        ]
+	},
+	"gloss": {
+
+	}
+}

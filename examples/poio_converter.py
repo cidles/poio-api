@@ -22,7 +22,7 @@ def main(argv):
     usage = "usage: %prog [options] inputfile outputfile"
     parser = optparse.OptionParser(usage=usage)
     parser.add_option("-i", "--inputtype", dest="inputtype",
-        help="Type of the input file (elan|toolbox|shoebox|mandinka)")
+        help="Type of the input file (elan|toolbox|shoebox|mandinka|odin)")
     parser.add_option("-o", "--outputtype", dest="outputtype",
         help="Type of the output file (html|graf|typecraft|latex)")
     parser.add_option("-r", "--roottier", dest="roottier",
@@ -41,7 +41,8 @@ def main(argv):
         parser.print_usage()
         sys.exit(0)
 
-    if options.inputtype not in ['toolbox', 'elan', 'shoebox', 'obt', 'mandinka']:
+    if options.inputtype not in ['toolbox', 'elan', 'shoebox', 'obt',
+                                 'mandinka', 'odin']:
         parser.print_usage()
         sys.exit(0)
 
@@ -72,6 +73,9 @@ def main(argv):
             print("No record marker specified (argument \"-r\"). Assuming \"ref\" as record marker.")
 
         ag = poioapi.annotationgraph.AnnotationGraph.from_toolbox(files[0])
+    elif options.inputtype == 'odin':
+        ag = poioapi.annotationgraph.AnnotationGraph.from_odin(files[0])
+
 
     # Set the structure type for hierarchical/interlinear output
     root_found = False

@@ -27,7 +27,7 @@ else:
 
 # File types
 (EAF, EAFFROMTOOLBOX, KURA, TOOLBOX, TOOLBOXXML, SHOEBOX,
-    TYPECRAFT, OBT, GRAF, MANDINKA, LATEX) = range(11)
+    TYPECRAFT, OBT, GRAF, MANDINKA, LATEX, ODIN) = range(12)
 
 type_names = {
     EAF: 'EAF',
@@ -40,7 +40,8 @@ type_names = {
     OBT: 'OBT',
     GRAF: 'GRAF',
     MANDINKA: 'MANDINKA',
-    LATEX: 'LATEX'
+    LATEX: 'LATEX',
+    ODIN: 'ODIN'
 }
 
 # Tier types

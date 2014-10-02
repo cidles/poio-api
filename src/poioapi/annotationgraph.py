@@ -25,6 +25,7 @@ import poioapi.io.toolbox
 import poioapi.io.toolboxxml
 import poioapi.io.shoebox
 import poioapi.io.typecraft
+import poioapi.io.odin
 
 import poioapi.data
 import poioapi.mapper
@@ -138,6 +139,15 @@ class AnnotationGraph():
 
         return ag
 
+    @classmethod
+    def from_odin(cls, stream, tier_map_file_path=''):
+        """This method generates a GrAF object
+        from a xml ODIN file.
+
+        """
+        return cls._from_file(stream, poioapi.data.ODIN,
+                              tier_map_file_path=tier_map_file_path)
+
     def _open_file_(self, filename):
         if sys.version_info[:2] < (3, 0):
             return codecs.open(filename, "rb")
@@ -177,9 +187,13 @@ class AnnotationGraph():
             if not hasattr(stream, 'read'):
                 stream = codecs.open(stream, "rb")
             parser = poioapi.io.toolbox.Parser(stream, mapper=ag.tier_mapper)
+        elif stream_type == poioapi.data.ODIN:
+            parser = poioapi.io.odin.Parser(stream)
 
         converter = poioapi.io.graf.GrAFConverter(parser)
         converter.parse()
+        if stream_type == poioapi.data.ODIN:
+            converter.meta_information = parser.metadata
 
         ag.tier_hierarchies = converter.tier_hierarchies
         ag.meta_information = converter.meta_information

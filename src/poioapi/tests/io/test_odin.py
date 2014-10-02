@@ -32,17 +32,20 @@ class TestParser:
         self._inputfile = os.path.join(self._samples_dir, 'odin_test.xml')
         self._parser = poioapi.io.odin.Parser(self._inputfile, None)
 
-        self._root_tier = poioapi.io.graf.Tier(self._parser.tier_labels.tier_label(
-            poioapi.data.TIER_UTTERANCE))
+        self._root_tier = poioapi.io.graf.Tier('source')
 
     def test_get_root_tiers(self):
         root_tiers = self._parser.get_root_tiers()
         assert len(root_tiers) == 1
+        assert root_tiers[0].name == 'source'
 
     def test_get_child_tiers_for_tier(self):
         root_tiers = self._parser.get_root_tiers()
 
-        child_tiers = self._parser.get_child_tiers_for_tier(root_tiers[0])
+        phrase_tiers = self._parser.get_child_tiers_for_tier(root_tiers[0])
+        assert len(phrase_tiers) == 1
+
+        child_tiers = self._parser.get_child_tiers_for_tier(phrase_tiers[0])
         assert len(child_tiers) == 2
         ct_name_list = [a.name for a in child_tiers]
         assert self._parser.tier_labels.tier_label(poioapi.data.TIER_WORD) in ct_name_list
@@ -55,10 +58,17 @@ class TestParser:
             poioapi.data.TIER_MORPHEME)
 
     def test_get_annotations_for_tier(self):
-        root_tiers = self._parser.get_annotations_for_tier(self._root_tier)
-        assert len(root_tiers) == 18
+        root_annot = self._parser.get_annotations_for_tier(self._root_tier)
+        utter = poioapi.io.graf.Tier(self._parser.tier_labels.tier_label(
+            poioapi.data.TIER_UTTERANCE))
+
+        utter_annots = self._parser.get_annotations_for_tier(utter, root_annot[0])
+
+        assert len(utter_annots) == 18
 
     def test_gloss_special_case(self):
+        utter_tier = poioapi.io.graf.Tier(self._parser.tier_labels.tier_label(
+            poioapi.data.TIER_UTTERANCE))
         word_tier = poioapi.io.graf.Tier(self._parser.tier_labels.tier_label(
             poioapi.data.TIER_WORD))
         m_tier = poioapi.io.graf.Tier(self._parser.tier_labels.tier_label(
@@ -67,7 +77,8 @@ class TestParser:
             poioapi.data.TIER_GLOSS))
 
         root = self._parser.get_annotations_for_tier(self._root_tier)[0]
-        words = self._parser.get_annotations_for_tier(word_tier, root)
+        utter = self._parser.get_annotations_for_tier(utter_tier, root)[0]
+        words = self._parser.get_annotations_for_tier(word_tier, utter)
         morphemes = []
 
         for w in words:
