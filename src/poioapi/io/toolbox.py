@@ -403,9 +403,12 @@ class Parser(poioapi.io.graf.BaseParser):
                         elements[tier][start_pos]))
 
     def _annotate_utterance(self, record_id, utterance_id, text):
-        self._annotations_for_parent[("a{0}".format(record_id),
-                                      "utterance_gen")].append(
-            poioapi.io.graf.Annotation("a{0}".format(utterance_id), text))
+        parent_id = 'a{0}'.format(record_id)
+        annot = poioapi.io.graf.Annotation("a{0}".format(utterance_id), text)
+        for a in self._annotations_for_parent[(parent_id, 'utterance_gen')]:
+            if a.id == annot.id and a.value == annot.value:
+                return
+        self._annotations_for_parent[(parent_id, 'utterance_gen')].append(annot)
 
         pass
 
