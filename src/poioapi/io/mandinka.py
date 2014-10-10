@@ -19,13 +19,6 @@ import poioapi.mapper
 
 re_last_quote = re.compile("[^\"]*$")
 
-#helpful in detecting the gloss tier
-glosses = ['2SG', '1SG', '3SG', '1PL', '2PL', '3PL', 'ABSTR', 'ACPN', 'ACPP', 'ADVCL', 'ANTIP', 'APPART', 'ASSOC',
-			  'BEN', 'CAUS', 'CONT', 'CONTR', 'COPID', 'COPLOC', 'COPN', 'CTRP', 'D', 'DEF', 'DEM', 'DEST', 'EMPH',
-			  'FOC', 'GEN', 'GER', 'HAB', 'INACN', 'INACP', 'INDEF', 'INF', 'INT', 'INTERJ', 'LOC', 'MAN', 'MTV',
-			  'NMAG', 'NMINS', 'OBL', 'OBLIG', 'OPT', 'ORD', 'ORN', 'PAS', 'PL', 'PLASS', 'POT', 'PREDS', 'PROG',
-			  'PRIV', 'Q', 'QUOT', 'RECIP', 'REFL', 'REL', 'RES', 'RESID', 'SELECT', 'SPHP', 'SUBJN', 'SUBJP']
-
 #list of regexes to separate the words line. Add items as they are needed, but
 # DON'T add them after the last regex ([^\s «»,\.]+)
 #This is to account for words that are separated but must be considered as one.
@@ -39,7 +32,7 @@ sanitation_tokens = {
 	'\s\.\.\.': '...',
 	'\s!': '!',
 	'\s\?': '?',
-	'^[^\wŋ]\s': '',
+	'^[^\wŋ«]\s': '',
 	'[ \t]+': ' '
 }
 

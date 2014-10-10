@@ -8,7 +8,6 @@
 # For license information, see LICENSE.TXT
 import re
 import xml.etree.ElementTree as ET
-import codecs
 import collections
 import unicodedata
 
@@ -114,7 +113,6 @@ class Parser(poioapi.io.graf.BaseParser):
 
         sources = root.findall('sources/source')
         for source in sources:
-            self._source_count += 1
 
             # incrementing record record_id
             self._current_ids['record'] = self._current_ids['seq']
@@ -134,7 +132,6 @@ class Parser(poioapi.io.graf.BaseParser):
             examples = source.findall('igt/example')
             for example in examples:
                 if self._build_tier_block(example):
-                    self._phrase_count += 1  # debug
                     self._handle_example_element(record_id)
                     self._init_tier_block()
 

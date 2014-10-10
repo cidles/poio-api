@@ -10,9 +10,11 @@
       <description/>
       <globaltags id="1" tagset="Default"/>
       <word head="false" text="Musukéebâa">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="Musu" meaning="femme" text="Musu"/>
-        <morpheme baseform="kéebâa" meaning="âgé" text="kéebâa"/>
+        <morpheme baseform="kéebâa" meaning="âgé" text="kéebâa">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="níŋ">
         <pos/>
@@ -24,15 +26,17 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="la">
+      <word head="false" text="lá">
         <pos/>
-        <morpheme baseform="la" text="la">
+        <morpheme baseform="lá" text="lá">
           <gloss>GEN</gloss>
         </morpheme>
       </word>
       <word head="false" text="maañóo">
-        <pos>DET</pos>
-        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo"/>
+        <pos/>
+        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="le">
         <pos/>
@@ -40,18 +44,20 @@
           <gloss>FOC</gloss>
         </morpheme>
       </word>
-      <word head="false" text="táata">
+      <word head="false" text="táatá">
         <pos/>
         <morpheme baseform="táa" meaning="aller" text="táa"/>
-        <morpheme baseform="ta" text="ta">
+        <morpheme baseform="tá" text="tá">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
       <word head="false" text="lóoñínóo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="lóo" meaning="bois" text="lóo"/>
         <morpheme baseform="ñín" meaning="chercher" text="ñín"/>
-        <morpheme baseform="óo" text="óo"/>
+        <morpheme baseform="óo" text="óo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="la">
         <pos/>
@@ -75,9 +81,9 @@
           <gloss>3PL</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ye">
+      <word head="false" text="yé">
         <pos/>
-        <morpheme baseform="ye" text="ye">
+        <morpheme baseform="yé" text="yé">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
@@ -94,8 +100,10 @@
         </morpheme>
       </word>
       <word head="false" text="lôo">
-        <pos>DET</pos>
-        <morpheme baseform="lôo" meaning="bois" text="lôo"/>
+        <pos/>
+        <morpheme baseform="lôo" meaning="bois" text="lôo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="lándi">
         <pos/>
@@ -105,19 +113,23 @@
         </morpheme>
       </word>
       <word head="false" text="saa">
-        <pos>DET</pos>
-        <morpheme baseform="saa" meaning="serpent" text="saa"/>
+        <pos/>
+        <morpheme baseform="saa" meaning="serpent" text="saa">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
-      <word head="false" text="mínínta">
+      <word head="false" text="míníntá">
         <pos/>
         <morpheme baseform="mínín" meaning="s’enrouler" text="mínín"/>
-        <morpheme baseform="ta" text="ta">
+        <morpheme baseform="tá" text="tá">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
       <word head="false" text="maañóo">
-        <pos>DET</pos>
-        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo"/>
+        <pos/>
+        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="la">
         <pos/>
@@ -126,10 +138,12 @@
         </morpheme>
       </word>
       <word head="false" text="lóosítóo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="lóo" meaning="bois" text="lóo"/>
         <morpheme baseform="sít" meaning="attacher" text="sít"/>
-        <morpheme baseform="óo" text="óo"/>
+        <morpheme baseform="óo" text="óo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="la">
         <pos/>
@@ -137,9 +151,9 @@
           <gloss>OBL</gloss>
         </morpheme>
       </word>
-      <word head="false" text="bari">
+      <word head="false" text="barí">
         <pos/>
-        <morpheme baseform="bari" meaning="mais" text="bari"/>
+        <morpheme baseform="barí" meaning="mais" text="barí"/>
       </word>
       <word head="false" text="wo">
         <pos/>
@@ -174,9 +188,9 @@
         <pos/>
         <morpheme baseform="Moo" meaning="personne" text="Moo"/>
       </word>
-      <word head="false" text="wo">
+      <word head="false" text="wó">
         <pos/>
-        <morpheme baseform="wo" text="wo">
+        <morpheme baseform="wó" text="wó">
           <gloss>INDEF</gloss>
         </morpheme>
       </word>
@@ -191,14 +205,16 @@
         </morpheme>
       </word>
       <word head="false" text="lóosítôo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="lóo" meaning="bois" text="lóo"/>
         <morpheme baseform="sít" meaning="attacher" text="sít"/>
-        <morpheme baseform="ôo" text="ôo"/>
+        <morpheme baseform="ôo" text="ôo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
-      <word head="false" text="cíka">
+      <word head="false" text="cíká">
         <pos/>
-        <morpheme baseform="cíka" meaning="soulever" text="cíka"/>
+        <morpheme baseform="cíká" meaning="soulever" text="cíká"/>
       </word>
       <word head="false" text="a">
         <pos/>
@@ -206,9 +222,9 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ye">
+      <word head="false" text="yé">
         <pos/>
-        <morpheme baseform="ye" text="ye">
+        <morpheme baseform="yé" text="yé">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
@@ -228,10 +244,12 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="kuŋo">
-        <pos>DET</pos>
+      <word head="false" text="kuŋó">
+        <pos/>
         <morpheme baseform="kuŋ" meaning="tête" text="kuŋ"/>
-        <morpheme baseform="o" text="o"/>
+        <morpheme baseform="ó" text="ó">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="to">
         <pos/>
@@ -250,9 +268,11 @@
         <morpheme baseform="be" text="be"/>
       </word>
       <word head="false" text="súwo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="súw" meaning="maison" text="súw"/>
-        <morpheme baseform="o" text="o"/>
+        <morpheme baseform="o" text="o">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="wálínna">
         <pos/>
@@ -268,19 +288,23 @@
       <description/>
       <globaltags id="1" tagset="Default"/>
       <word head="false" text="Maañôo">
-        <pos>DET</pos>
-        <morpheme baseform="Maañôo" meaning="jeune_épouse" text="Maañôo"/>
-      </word>
-      <word head="false" text="ko">
         <pos/>
-        <morpheme baseform="ko" text="ko">
+        <morpheme baseform="Maañôo" meaning="jeune_épouse" text="Maañôo">
+          <gloss>DEF</gloss>
+        </morpheme>
+      </word>
+      <word head="false" text="kó">
+        <pos/>
+        <morpheme baseform="kó" text="kó">
           <gloss>QUOT</gloss>
         </morpheme>
       </word>
       <word head="false" text="musukéebáa">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="musu" meaning="femme" text="musu"/>
-        <morpheme baseform="kéebáa" meaning="âgé" text="kéebáa"/>
+        <morpheme baseform="kéebáa" meaning="âgé" text="kéebáa">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="ye">
         <pos/>
@@ -288,9 +312,9 @@
           <gloss>BEN</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ko">
+      <word head="false" text="kó">
         <pos/>
-        <morpheme baseform="ko" text="ko">
+        <morpheme baseform="kó" text="kó">
           <gloss>QUOT</gloss>
         </morpheme>
       </word>
@@ -323,9 +347,9 @@
           <gloss>SBJV</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ŋ">
+      <word head="false" text="ŋ́">
         <pos/>
-        <morpheme baseform="ŋ" text="ŋ">
+        <morpheme baseform="ŋ́" text="ŋ́">
           <gloss>REFL</gloss>
         </morpheme>
       </word>
@@ -352,12 +376,14 @@
         <morpheme baseform="be" text="be"/>
       </word>
       <word head="false" text="dómórôo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="dómó" meaning="manger" text="dómó"/>
         <morpheme baseform="r" text="r">
           <gloss>APASS</gloss>
         </morpheme>
-        <morpheme baseform="ôo" text="ôo"/>
+        <morpheme baseform="ôo" text="ôo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="kéla">
         <pos/>
@@ -373,24 +399,29 @@
       <description/>
       <globaltags id="1" tagset="Default"/>
       <word head="false" text="Musukeebaamâa">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="Musu" meaning="femme" text="Musu"/>
         <morpheme baseform="keebaa" meaning="âgé" text="keebaa"/>
         <morpheme baseform="mâa" text="mâa">
           <gloss>SLCT</gloss>
+          <gloss>DEF</gloss>
         </morpheme>
       </word>
       <word head="false" text="ñáa">
-        <pos>DET</pos>
-        <morpheme baseform="ñáa" meaning="œil" text="ñáa"/>
+        <pos/>
+        <morpheme baseform="ñáa" meaning="œil" text="ñáa">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="be">
         <pos>COPloc</pos>
         <morpheme baseform="be" text="be"/>
       </word>
       <word head="false" text="sǎa">
-        <pos>DET</pos>
-        <morpheme baseform="sǎa" meaning="serpent" text="sǎa"/>
+        <pos/>
+        <morpheme baseform="sǎa" meaning="serpent" text="sǎa">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="kaŋ">
         <pos/>
@@ -426,10 +457,12 @@
         </morpheme>
       </word>
       <word head="false" text="lóosítôo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="lóo" meaning="bois" text="lóo"/>
         <morpheme baseform="sít" meaning="attacher" text="sít"/>
-        <morpheme baseform="ôo" text="ôo"/>
+        <morpheme baseform="ôo" text="ôo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="bála">
         <pos/>
@@ -441,9 +474,9 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ye">
+      <word head="false" text="yé">
         <pos/>
-        <morpheme baseform="ye" text="ye">
+        <morpheme baseform="yé" text="yé">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
@@ -453,9 +486,9 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="fo">
+      <word head="false" text="fó">
         <pos/>
-        <morpheme baseform="fo" meaning="dire" text="fo"/>
+        <morpheme baseform="fó" meaning="dire" text="fó"/>
       </word>
       <word head="false" text="a">
         <pos/>
@@ -469,9 +502,9 @@
           <gloss>BEN</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ko">
+      <word head="false" text="kó">
         <pos/>
-        <morpheme baseform="ko" text="ko">
+        <morpheme baseform="kó" text="kó">
           <gloss>QUOT</gloss>
         </morpheme>
       </word>
@@ -480,9 +513,11 @@
         <morpheme baseform="Níŋ" meaning="si" text="Níŋ"/>
       </word>
       <word head="false" text="yunduyóndóo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="yunduyónd" meaning="youndouyondo" text="yunduyónd"/>
-        <morpheme baseform="óo" text="óo"/>
+        <morpheme baseform="óo" text="óo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="sonta">
         <pos/>
@@ -503,9 +538,9 @@
           <gloss>POT</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ŋ">
+      <word head="false" text="ŋ́">
         <pos/>
-        <morpheme baseform="ŋ" text="ŋ">
+        <morpheme baseform="ŋ́" text="ŋ́">
           <gloss>REFL</gloss>
         </morpheme>
       </word>
@@ -528,12 +563,14 @@
         <morpheme baseform="be" text="be"/>
       </word>
       <word head="false" text="tábírôo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="tábí" meaning="cuire" text="tábí"/>
         <morpheme baseform="r" text="r">
           <gloss>APASS</gloss>
         </morpheme>
-        <morpheme baseform="ôo" text="ôo"/>
+        <morpheme baseform="ôo" text="ôo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="kéla">
         <pos/>
@@ -554,16 +591,16 @@
           <gloss>3PL</gloss>
         </morpheme>
       </word>
-      <word head="false" text="táata">
+      <word head="false" text="táatá">
         <pos/>
         <morpheme baseform="táa" meaning="aller" text="táa"/>
-        <morpheme baseform="ta" text="ta">
+        <morpheme baseform="tá" text="tá">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
-      <word head="false" text="wo">
+      <word head="false" text="wǒ">
         <pos/>
-        <morpheme baseform="wo" text="wo">
+        <morpheme baseform="wǒ" text="wǒ">
           <gloss>DEM</gloss>
         </morpheme>
       </word>
@@ -577,14 +614,16 @@
         <pos/>
         <morpheme baseform="ñáama" meaning="à_la_façon" text="ñáama"/>
       </word>
-      <word head="false" text="fo">
+      <word head="false" text="fő">
         <pos/>
-        <morpheme baseform="fo" meaning="jusqu’à" text="fo"/>
+        <morpheme baseform="fő" meaning="jusqu’à" text="fő"/>
       </word>
       <word head="false" text="súwo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="súw" meaning="maison" text="súw"/>
-        <morpheme baseform="o" text="o"/>
+        <morpheme baseform="o" text="o">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="kóno">
         <pos/>
@@ -619,10 +658,12 @@
         </morpheme>
       </word>
       <word head="false" text="lóosítóo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="lóo" meaning="bois" text="lóo"/>
         <morpheme baseform="sít" meaning="attacher" text="sít"/>
-        <morpheme baseform="óo" text="óo"/>
+        <morpheme baseform="óo" text="óo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="boyindi">
         <pos/>
@@ -638,8 +679,10 @@
       <description/>
       <globaltags id="1" tagset="Default"/>
       <word head="false" text="Saa">
-        <pos>DET</pos>
-        <morpheme baseform="Saa" meaning="serpent" text="Saa"/>
+        <pos/>
+        <morpheme baseform="Saa" meaning="serpent" text="Saa">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="míŋ">
         <pos/>
@@ -652,8 +695,10 @@
         <morpheme baseform="be" text="be"/>
       </word>
       <word head="false" text="maañóo">
-        <pos>DET</pos>
-        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo"/>
+        <pos/>
+        <morpheme baseform="maañóo" meaning="jeune_épouse" text="maañóo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="la">
         <pos/>
@@ -662,10 +707,12 @@
         </morpheme>
       </word>
       <word head="false" text="lóosítóo">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="lóo" meaning="bois" text="lóo"/>
         <morpheme baseform="sít" meaning="attacher" text="sít"/>
-        <morpheme baseform="óo" text="óo"/>
+        <morpheme baseform="óo" text="óo">
+          <gloss>DEF</gloss>
+        </morpheme>
       </word>
       <word head="false" text="kaŋ">
         <pos/>
@@ -677,11 +724,11 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="murummurunta">
+      <word head="false" text="murummuruntá">
         <pos/>
         <morpheme baseform="murum" meaning="tourner" text="murum"/>
         <morpheme baseform="murun" meaning="tourner" text="murun"/>
-        <morpheme baseform="ta" text="ta">
+        <morpheme baseform="tá" text="tá">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
@@ -695,18 +742,19 @@
           <gloss>3SG</gloss>
         </morpheme>
       </word>
-      <word head="false" text="ye">
+      <word head="false" text="yé">
         <pos/>
-        <morpheme baseform="ye" text="ye">
+        <morpheme baseform="yé" text="yé">
           <gloss>CMPL</gloss>
         </morpheme>
       </word>
       <word head="false" text="musukeebaamáa">
-        <pos>DET</pos>
+        <pos/>
         <morpheme baseform="musu" meaning="femme" text="musu"/>
         <morpheme baseform="keebaa" meaning="âgé" text="keebaa"/>
         <morpheme baseform="máa" text="máa">
           <gloss>SLCT</gloss>
+          <gloss>DEF</gloss>
         </morpheme>
       </word>
       <word head="false" text="kiŋ">
@@ -717,9 +765,9 @@
         <pos>ADV</pos>
         <morpheme baseform="ca̋pa̋t" text="ca̋pa̋t"/>
       </word>
-      <word head="false" text="wo">
+      <word head="false" text="wǒ">
         <pos/>
-        <morpheme baseform="wo" text="wo">
+        <morpheme baseform="wǒ" text="wǒ">
           <gloss>DEM</gloss>
         </morpheme>
       </word>
