@@ -239,7 +239,7 @@ class Writer(poioapi.io.graf.BaseWriter):
                    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"})
 
     def _create_text_node(self, language='und', original_title='Empty Title',
-                          translation_title='', additional=None):
+                          translation_title=''):
         """ Method to create the 'text' node and set some information about the node.
             Assumes that the 'root' node is already initiated.
 
@@ -257,13 +257,26 @@ class Writer(poioapi.io.graf.BaseWriter):
 
         attribs = {'id': self._next_text_id(), 'lang': language}
 
-        if additional is not None:
-            attribs.update(additional)
-
         self._text = ET.SubElement(self._root, "text", attribs)
 
         ET.SubElement(self._text, "title").text = original_title
         ET.SubElement(self._text, "titleTranslation").text = translation_title
+
+    def _create_metadata_elements(self, metadata, set_name):
+        """ Method to create the metadata element and its children.
+
+            Parameters
+            ----------
+            :param metadata: dict
+                The dictionary that contains the metadata to output.
+            :param set_name: str
+                The name of the metadata set to use.
+        """
+        meta_elem = ET.SubElement(self._text, 'extraMetadata',
+                                 {'setName': set_name})
+        for meta in metadata:
+            ET.SubElement(meta_elem, 'metadata',
+                          {'name': meta}).text = metadata[meta]
 
     def write(self, outputfile, converter, pretty_print=False,
               extra_tag_map='', language='und'):
@@ -287,7 +300,6 @@ class Writer(poioapi.io.graf.BaseWriter):
             The ISO 639-3 code of the source's language
 
         """
-
         self._additional_maps_file = extra_tag_map
 
         self._annotation_mapper = poioapi.mapper.AnnotationMapper(
@@ -306,7 +318,8 @@ class Writer(poioapi.io.graf.BaseWriter):
                 phrase_nodes = []
                 annot = text.annotations.get_first()
                 text_md = converter.meta_information[annot.id]
-                self._create_text_node(language, additional=text_md)
+                self._create_text_node(language)
+                self._create_metadata_elements(text_md, 'Default')
 
                 for marker in converter.tier_mapper.tier_labels(
                         poioapi.data.TIER_UTTERANCE):

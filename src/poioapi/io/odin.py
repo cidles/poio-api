@@ -188,27 +188,12 @@ class Parser(poioapi.io.graf.BaseParser):
 
         if url_element is not None:
             metadata['source_link'] = url_element.text
-        # else:
-        #     msg = 'No url present:\n' + ET.tostring(source_element)
-        #     print('----- PARSING ERROR -----')
-        #     print(msg)
-        #     print('-------------------------')
 
         if odin_url_element is not None:
             metadata['source_archive_link'] = odin_url_element.text
-        # else:
-        #     msg = 'No odin url present:\n' + ET.tostring(source_element)
-        #     print('----- PARSING ERROR -----')
-        #     print(msg)
-        #     print('-------------------------')
 
         if citation_element is not None:
-            metadata['source_description'] = url_element.text
-        # else:
-        #     msg = 'No citation present:\n' + ET.tostring(source_element)
-        #     print('----- PARSING ERROR -----')
-        #     print(msg)
-        #     print('-------------------------')
+            metadata['source_description'] = citation_element.text
 
         return metadata
 
