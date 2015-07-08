@@ -730,7 +730,7 @@ class Writer(poioapi.io.graf.BaseWriter):
             splitter = '.'
             # Special gloss value
             if "?" in annotation and annotation != "?IPFV":
-                return None
+                continue
 
             # Select the splitter for the gloss values
             if ":" in annotation:
