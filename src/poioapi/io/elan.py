@@ -91,6 +91,20 @@ class Parser(poioapi.io.graf.BaseParser):
                 for tier in self.tree.findall('TIER')
                 if not 'PARENT_REF' in tier.attrib]
 
+    def get_tier_by_name(self, name):
+        """This method retrieves a tier by it's name.
+
+        Returns
+        -------
+        tier : object
+            The tier with the given name.
+
+        """
+        for tier in self.tree.findall('TIER'):
+            if tier.attrib['TIER_ID'] == name:
+                return ElanTier(
+                    tier.attrib['TIER_ID'], tier.attrib['LINGUISTIC_TYPE_REF'])
+
     def get_child_tiers_for_tier(self, tier):
         """This method retrieves all the child tiers
         of a specific tier. The children of a tier
@@ -398,12 +412,15 @@ class Parser(poioapi.io.graf.BaseParser):
                             annotation[0].attrib['TIME_SLOT_REF1'])
 
         time_slot_value = 0
-
+        range_time_slots = list(set(range_time_slots))
+        count_values = 0
         for time_slot in range_time_slots:
-            time_slot_value += time_order_dict[time_slot]
+            if time_order_dict[time_slot] != None:
+                time_slot_value += time_order_dict[time_slot]
+                count_values = 0
 
-        if len(range_time_slots) is not 0:
-            time_slot_value = (time_slot_value / len(range_time_slots))
+        if count_values != 0:
+            time_slot_value = (time_slot_value / count_values)
 
         return time_slot_value
 
